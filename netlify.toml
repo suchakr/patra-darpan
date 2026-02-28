@@ -1,7 +1,6 @@
 [build]
-  base = "ijhs-darpan/web"
-  publish = "."
+  publish = "web"
   command = "# no build command needed for static site"
 
 [functions]
-  directory = "netlify/functions"
+  directory = "web/netlify/functions"

@@ -16,3 +16,6 @@ ops/gcs-key.json
 !.cache/ijhs-classified.md
 *~*
 _agent/
+
+# Local Netlify folder
+.netlify

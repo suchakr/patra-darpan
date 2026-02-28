@@ -418,12 +418,12 @@ function renderGrid() {
         const isLocalMode = (State.env === 'localhost' || State.env === 'file' || (State.env === 'netlify_dev' && State.devMode === 'local'));
 
         if (isLocalMode) {
-            // Local Mode: Priortize local copy for "Read", remote for "Archive/Backup"
+            // Local Mode: Prioritize local copy for "Read", remote for "Archive/Backup"
             primaryLink = paper.localPath || paper.remoteUrl;
             backupLink = paper.remoteUrl;
         } else {
-            // Simulation/Remote: Remote for "Read", GCS for "Archive/Backup"
-            primaryLink = paper.remoteUrl;
+            // Simulation/Remote: JU Mirror (if available) > Remote (INSA) for "Read", GCS for "Archive/Backup"
+            primaryLink = paper.juUrl || paper.remoteUrl;
             backupLink = getArchivedLink(paper);
         }
 
@@ -491,7 +491,14 @@ function renderGrid() {
             `;
         }
 
-        const juBadge = paper.juUrl ? `<span class="badge ju">JU</span>` : "";
+        const juBadge = paper.juUrl ? `
+            <a href="${paper.juUrl}" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="badge ju" 
+               title="Open Jain University Mirror"
+               onclick="event.stopPropagation();">JU</a>
+        ` : "";
         card.innerHTML = `
             <div class="paper-meta">
                 <span class="paper-year">${yearHtml}${juBadge}</span>

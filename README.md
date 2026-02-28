@@ -22,141 +22,195 @@ This project has been refactored (Jan 2026) into the following components:
 - **`.cache/`**: Local data store.
   - Contains `ijhs.tsv` (Source of Truth), `ijhs-classified.tsv`, and intermediate artifacts.
 
+## External Dependencies
+
+Patra Darpan is designed as a **Companion Engine** to an external asset repository. To function fully, it relies on the following external dependencies:
+
+1. **Sibling Asset Repository (`cahcblr.github.io`)**:
+   - **Why**: This project does not store PDF files directly to keep the repository lightweight. It relies on a sibling repository located at `~/projects/cahcblr.github.io`.
+   - **What it does**: The scraper (`01-scrape.py`) downloads PDFs into `assets/ijhs_potentials` within this sibling repo. The web app uses a symlink to serve these PDFs locally.
+2. **Google Cloud Storage (GCS) Credentials**:
+   - **Why**: Required by `ops/sync_pdfs.py` to mirror the local PDFs to the private GCS bucket for production serving.
+   - **What it does**: Uses your local ADC (Application Default Credentials) via `gcloud`.
+3. **Chrome Browser & Selenium**:
+   - **Why**: The INSA portal requires JavaScript execution for navigation. `pipeline/01-scrape.py` uses Selenium to automate Chrome for scraping metadata.
+
 ## Data Flow Architecture
+
+### 1. High-Level View
+
+```mermaid
+graph LR
+    subgraph INSA_Ext ["INSA Portal"]
+        INSA["insa.nic.in"]
+    end
+
+    subgraph Sibling_Ext ["cahcblr.github.io"]
+        Sibling[("Sibling Repo<br>+ Live Site")]
+    end
+
+    subgraph PatraDarpan ["Patra Darpan"]
+        Pipeline["Data Pipeline"]
+        Meta[("Metadata Store<br>(.cache/)")]
+        DarpanUI(["Darpan UI<br>(Netlify)"])
+    end
+
+    subgraph Cloud_Arch ["Cloud"]
+        GCS[("GCS Archive")]
+    end
+
+    INSA         -->|"Metadata & PDFs"| Pipeline
+    Sibling      -->|"P60 / P85 metadata"| Pipeline
+    Pipeline     -->|"Downloads PDFs"| Sibling
+    Pipeline    <-->|"Read / Write"| Meta
+    Meta         -->|"Generates data.js"| DarpanUI
+    Sibling      -->|"Sync via ops"| GCS
+
+    DarpanUI -.->|"Production Read<br>(cahc.ju.ac.in)"| Sibling
+    DarpanUI -.->|"Production Archive<br>(signed URL)"| GCS
+    DarpanUI -.->|"Local Dev Read<br>(local symlink)"| Sibling
+
+    style INSA_Ext    fill:#fce4ec,stroke:#e91e63
+    style Sibling_Ext fill:#e8f5e9,stroke:#66bb6a
+    style PatraDarpan fill:#fff3e0,stroke:#ffa726
+    style Cloud_Arch  fill:#e3f2fd,stroke:#29b6f6
+```
+
+### 2. Detailed View
+
+_Each color zone is a zoom-in of the corresponding box in the High-Level View above. Every node maps to a real file or script._
 
 ```mermaid
 graph TD
-    %% Define Subgraphs (Order influences layout)
-
-    %% 1. Main Project (Left)
-    subgraph Project ["Project: ijhs-darpan"]
-        subgraph Pipeline
-            S1[01-scrape.py]
-            S5[05-import-cahcblr.py]
-            S2[02-patch.py]
-            S3[03-classify.py]
-        end
-
-        subgraph LocalStore ["Local Store (.cache)"]
-            RawTSV(ijhs.tsv)
-            ClassTSV(ijhs-classified.tsv)
-            ClassMD(ijhs-classified.md)
-        end
-
-        subgraph Ops
-            Build[build_data.py]
-            Sync[sync_pdfs.py]
-            Diag[analyze_tsv.py]
-            Dedup[dedupe_tsv.py]
-        end
-
-        subgraph WebApp ["Web App"]
-            DataJS[data.js]
-            NetFunc[Netlify Auth Function]
-            NetApp[Darpan UI]
-        end
+    subgraph INSA_Ext ["INSA Portal"]
+        INSA["insa.nic.in<br>(HTML + PDFs)"]
     end
 
-    %% 2. Cloud (Right/Top)
-    subgraph Cloud ["Cloud Infrastructure"]
-        INSA[INSA Website]
-        GCS[Private GCS Bucket]
+    subgraph Sibling_Ext ["cahcblr.github.io"]
+        P60["p60_papers.markdown"]
+        P85["p85_search.markdown"]
+        ClassMD["ijhs-classified.md<br>(manual copy target)"]
+        Potentials["assets/ijhs_potentials/"]
+        Cached["assets/cached_papers/rni/"]
+        JUSite(("cahc.ju.ac.in<br>(Live Site)"))
     end
 
-    %% 3. External (Bottom/Side)
-    subgraph External ["External Repo: cahcblr.github.io"]
-        Assets["Assets (ijhs_potentials & rni)"]
-        P60[p60_papers.md]
-        P85[p85_search.md]
-        LiveSite((cahc.ju.ac.in))
+    subgraph PatraDarpan ["Patra Darpan"]
+        S1["01-scrape.py<br>(Selenium)"]
+        S5["05-import-cahcblr.py"]
+        S2["02-patch.py"]
+        S3["03-classify.py<br>(Gemini LLM)"]
+        Build["build_data.py"]
+        Sync["sync_pdfs.py"]
+        TSV[("ijhs.tsv<br>(source of truth)")]
+        CTSV[("ijhs-classified.tsv")]
+        ClassMD_out["ijhs-classified.md"]
+        DataJS["data.js"]
+        DarpanUI(["Darpan UI<br>(Netlify SPA)"])
+        NetFn["Netlify Auth Fn"]
     end
 
-    %% Data Ingestion
-    INSA -->|Scrape Metadata| S1
-    INSA -->|Download PDFs| S1
-    P60 -->|Parse Metadata| S5
-    P85 -->|Parse Metadata| S5
-    S1 -->|Save Files| Assets
-    S1 -->|Write Metadata| RawTSV
-    S5 -->|Merge Metadata| RawTSV
+    subgraph Cloud_Arch ["Cloud"]
+        GCS[("Private GCS Bucket")]
+    end
 
-    %% Metadata Refinement
-    RawTSV -->|Read| S2 -->|Patch| RawTSV
-    RawTSV -->|Read| S3 -->|Classify| ClassTSV
-    S3 -->|Generate Report| ClassMD
-    ClassTSV -->|Read| Build -->|Generate| DataJS
+    %% Ingestion – INSA
+    INSA      -->|"Scrape HTML"| S1
+    S1        -->|"Download PDFs"| Potentials
+    S1        -->|"Write metadata"| TSV
 
-    %% Legacy Workflow (Manual)
-    ClassMD -.->|Manual Copy| P85
-    P85 -.->|Jekyll Build| LiveSite
+    %% Ingestion – Sibling
+    P60       -->|"Parse"| S5
+    P85       -->|"Parse"| S5
+    S5        -->|"Merge new entries<br>(URL-deduped)"| TSV
+    S5        -->|"Enrich juUrl<br>(URL-deduped)"| TSV
 
-    %% Modern Darpan Workflow (Automated)
-    DataJS --> NetApp
+    %% Processing
+    TSV       -->|"Read"| S2
+    S2        -->|"Patch in-place"| TSV
+    TSV       -->|"Read"| S3
+    S3        -->|"Classify"| CTSV
+    S3        -->|"Generate"| ClassMD_out
 
-    %% Asset Sync & Serving
-    Assets -->|Sync Missing| Sync -->|Upload| GCS
-    Assets -.->|Dev Mode Serve| NetApp
-    GCS -.->|Signed URL| NetFunc -.->|Redirect| NetApp
+    %% Controlled enrichment loop
+    ClassMD_out -.->|"Manual copy/append"| ClassMD
+    ClassMD     -.->|"Feeds JU URLs back via P85<br>(URL-deduped guard)"| P85
 
-    %% Subgraph Styles
-    style External fill:#e8f5e9,stroke:#66bb6a,stroke-width:2px
-    style Cloud fill:#e3f2fd,stroke:#29b6f6,stroke-width:2px
-    style Project fill:#fff3e0,stroke:#ffa726,stroke-width:2px
+    %% Ops
+    CTSV      -->|"Read"| Build
+    Build     -->|"Generate"| DataJS
+    DataJS    -->|"Loaded by"| DarpanUI
+    Potentials -->|"Scan"| Sync
+    Cached     -->|"Scan"| Sync
+    Sync      -->|"Upload missing"| GCS
 
-    style Pipeline fill:#fff,stroke:#ccc,stroke-dasharray: 5 5
-    style LocalStore fill:#fffde7,stroke:#ccc,stroke-dasharray: 5 5
-    style Ops fill:#f3e5f5,stroke:#ccc,stroke-dasharray: 5 5
-    style WebApp fill:#e0f2f1,stroke:#ccc,stroke-dasharray: 5 5
+    %% Runtime serving (dotted)
+    DarpanUI  -.->|"Production Read (juUrl)"| JUSite
+    DarpanUI  -.->|"Production Archive"| NetFn
+    NetFn     -.->|"Signed URL"| GCS
+    DarpanUI  -.->|"Local Dev Read<br>(via symlink)"| Potentials
 
-    %% Node Styles
-    style INSA fill:#f8bbd0,stroke:#333
-    style GCS fill:#b39ddb,stroke:#333
-    style LiveSite fill:#69f0ae,stroke:#333
-    style Assets fill:#fff59d,stroke:#333
+    style INSA_Ext    fill:#fce4ec,stroke:#e91e63
+    style Sibling_Ext fill:#e8f5e9,stroke:#66bb6a
+    style PatraDarpan fill:#fff3e0,stroke:#ffa726
+    style Cloud_Arch  fill:#e3f2fd,stroke:#29b6f6
 ```
 
-## Data Lifecycle (Sequence)
+> [!NOTE]
+> **On the apparent data cycle between `ijhs-classified.md` and `p85_search.markdown`**: After `03-classify.py` generates `ijhs-classified.md`, it is manually appended to `p85_search.markdown` in the sibling repo. One might expect this to cause `05-import-cahcblr.py` to re-import those same papers on its next run, causing an ever-growing metadata store. This does not happen. The import script checks every candidate URL against the existing `ijhs.tsv` and skips any paper already present. The only data that flows back through `p85` are **JU mirror URLs** (`juUrl`) for papers discovered there — an intentional enrichment step, not a re-import.
 
-This sequence diagram illustrates the step-by-step flow from data ingestion to user serving.
+### 3. Runtime Sequence
 
 ```mermaid
 sequenceDiagram
-    participant Admin as Developer
-    participant INSA as INSA Website
+    participant Dev as Developer
     participant Pipe as Pipeline Scripts
-    participant Assets as Local PDFs (Ext)
-    participant Cache as .cache (Int)
-    participant Cloud as GCS Bucket
-    participant Web as Web App
+    participant INSA as INSA Portal
+    participant SibRepo as cahcblr.github.io (Repo)
+    participant Meta as .cache/ (Metadata)
+    participant Build as build_data.py
+    participant DarpanUI as Darpan UI
+    participant NetFn as Netlify Auth Fn
+    participant GCS as GCS Archive
+    participant JUSite as cahc.ju.ac.in (Live)
+    participant User as User
 
-    Note over Admin, Cloud: 1. Ingestion Phase
-    Admin->>Pipe: Run 01-scrape / 05-import
-    Pipe->>INSA: Fetch HTML & PDFs
-    Pipe->>Assets: Download New PDFs
-    Pipe->>Cache: Write/Merge ijhs.tsv (Metadata)
+    Note over Dev, SibRepo: Phase 1 — Ingestion
+    Dev      ->>  Pipe:     Run 01-scrape / 05-import
+    Pipe     ->>  INSA:     Fetch HTML & PDFs
+    INSA     -->> Pipe:     HTML + PDF bytes
+    Pipe     ->>  SibRepo:  Download PDFs to assets/
+    Pipe     ->>  Meta:     Write ijhs.tsv
+    Pipe     ->>  SibRepo:  Read p60_papers.markdown, p85_search.markdown
+    Pipe     ->>  Meta:     Merge entries (URL-deduped) + enrich juUrl
 
-    Note over Admin, Cache: 2. Processing Phase
-    Admin->>Pipe: Run 02-patch / 03-classify
-    Pipe->>Cache: Read & Update Metadata
-    Pipe->>Cache: Generate Classified TSV
+    Note over Dev, Meta: Phase 2 — Processing
+    Dev      ->>  Pipe:     Run 02-patch / 03-classify
+    Pipe     <<->> Meta:    Read & update ijhs.tsv → ijhs-classified.tsv
+    Pipe     ->>  SibRepo:  Write ijhs-classified.md (manual copy target)
 
-    Note over Admin, Cloud: 3. Operations Phase
-    Admin->>Pipe: Run sync_pdfs.py
-    Pipe->>Assets: Scan Local Files
-    Pipe->>Cloud: Upload Missing Files
-    Admin->>Pipe: Run build_data.py
-    Pipe->>Cache: Read Classified TSV
-    Pipe->>Web: Generate data.js
+    Note over Dev, GCS: Phase 3 — Build & Sync
+    Dev      ->>  Build:    Run build_data.py
+    Build    ->>  Meta:     Read ijhs-classified.tsv
+    Build    -->> DarpanUI: Write data.js
+    Dev      ->>  Pipe:     Run sync_pdfs.py
+    Pipe     ->>  SibRepo:  Scan local assets/
+    Pipe     ->>  GCS:      Upload missing PDFs
+    Dev      ->>  DarpanUI: netlify deploy --prod
 
-    Note over Admin, Web: 4. Serving Phase
-    Admin->>Web: Deploy to Netlify
-    User->>Web: View Paper
-    alt Production
-        Web->>Cloud: Request Signed URL
-        Cloud-->>Web: Return URL (15m validity)
-        Web-->>User: Redirect to Private PDF
-    else Local Dev
-        Web-->>User: Serve Local PDF directly
+    Note over User, JUSite: Phase 4 — Serving
+    User     ->>  DarpanUI: Click "Read"
+    alt Production Mode (JU Mirror)
+        DarpanUI ->> JUSite: Redirect via juUrl
+        JUSite -->> User:   PDF served
+    else Production Archive (GCS)
+        DarpanUI ->> NetFn:  Request signed URL
+        NetFn    ->> GCS:    Get signed URL
+        GCS     -->> NetFn:  URL (15min validity)
+        NetFn   -->> User:   Redirect to GCS PDF
+    else Local Dev Mode
+        DarpanUI ->> SibRepo: Read via local symlink (assets/pdfs/)
+        SibRepo -->> User:    PDF served directly
     end
 ```
 

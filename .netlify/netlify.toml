@@ -1,16 +1,19 @@
-functionsDirectory = "/Users/sunder/projects/cahc/cahc-utils/ijhs-darpan/web/netlify/functions"
-functionsDirectoryOrigin = "config-v1"
-headersOrigin = "config"
 plugins = []
+functionsDirectory = "/Users/sunder/projects/patra-darpan/web/netlify/functions"
+functionsDirectoryOrigin = "config"
+headers = []
 redirects = []
 
+[functions]
+
+[functions."*"]
+
 [build]
-publish = "/Users/sunder/projects/cahc/cahc-utils/ijhs-darpan/web"
+publish = "/Users/sunder/projects/patra-darpan/web"
 publishOrigin = "config"
-commandOrigin = "ui"
-base = "/Users/sunder/projects/cahc/cahc-utils/ijhs-darpan/web"
-ignore = "exit 1"
-functions = "/Users/sunder/projects/cahc/cahc-utils/ijhs-darpan/web/netlify/functions"
+commandOrigin = "config"
+command = "# no build command needed for static site"
+functions = "/Users/sunder/projects/patra-darpan/web/netlify/functions"
 
 [build.environment]
 
@@ -25,18 +28,3 @@ functions = "/Users/sunder/projects/cahc/cahc-utils/ijhs-darpan/web/netlify/func
 [build.processing.js]
 
 [build.services]
-
-[dev]
-framework = "#static"
-publish = "."
-
-[functions]
-
-[functions."*"]
-
-[[headers]]
-for = "/*"
-
-[headers.values]
-X-Frame-Options = "DENY"
-X-XSS-Protection = "1; mode=block"

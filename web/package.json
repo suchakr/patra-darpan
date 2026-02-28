@@ -1,5 +1,5 @@
 {
-  "name": "ijhs-darpan",
+  "name": "patra-darpan",
   "version": "1.0.0",
   "description": "A high-performance, single-page application for browsing the Indian Journal of History of Science (IJHS) archives.",
   "main": "index.js",
