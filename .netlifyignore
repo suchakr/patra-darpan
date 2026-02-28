@@ -1,0 +1,8 @@
+node_modules/
+.cache/
+.netlify/
+web/node_modules/
+web/.cache/
+web/.netlify/
+/node_modules/
+/web/node_modules/
