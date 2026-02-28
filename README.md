@@ -1,6 +1,6 @@
 # Patra Darpan
 
-Patra Darpan (Mirror of Documents) is a project to index, classify, and serve the archives of the Indian Journal of History of Science (IJHS) and other scholarly collections of the CAHC.
+Patra Darpan (Mirror of Documents) is a platform for indexing, classifying, and serving scholarly collections, research papers, and archival documents curated or referenced by the Centre for Ancient History and Culture (CAHC).
 
 ## Project Structure
 
