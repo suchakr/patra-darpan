@@ -11,11 +11,22 @@ __pycache__/
 # Specifically exclude service account keys
 gcs-key.json
 ops/gcs-key.json
-!.cache/ijhs.tsv
-!.cache/ijhs-classified.tsv
-!.cache/ijhs-classified.md
+# metadata is now in corpus/ and tracked
+#!.cache/ijhs.tsv
+#!.cache/ijhs-classified.tsv
+#!.cache/ijhs-classified.md
 *~*
 _agent/
 
 # Local Netlify folder
 .netlify
+
+# PDF corpus subfolders are local mirrors of GCS; never commit
+corpus/ijhs/
+corpus/other/
+# Specifically track the metadata TSVs
+!corpus/*.tsv
+corpus/*~*
+# Intake staging — processed files and PDFs are transient
+intake/pdfs/
+intake/processed/

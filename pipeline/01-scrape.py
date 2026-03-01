@@ -17,7 +17,7 @@ IJHS Scraper & Downloader
 
 Purpose:
     Mirrors the Indian Journal of History of Science (IJHS) archive from insa.nic.in
-    to the local `cahcblr.github.io` project structure.
+    to the local `patra-darpan/corpus/ijhs/` directory.
 
 Functionality:
     1.  **Stage 1 (Scraping Metadata)**: Uses Selenium (Chrome) to iterate through all volumes/issues 
@@ -30,8 +30,7 @@ Functionality:
         - *Normalization*: Fixes broken INSA URLs and ensures PDF extensions.
 
     3.  **Stage 3 (Interactive Download)**: Diffing engine.
-        - Scans local directories (`assets/ijhs_potentials`, `assets/cached_papers/rni`) 
-          to build an inventory of *already downloaded* papers.
+        - Scans `corpus/ijhs/` to build an inventory of *already downloaded* papers.
         - Identifies new papers available on INSA but missing locally.
         - Automatically downloads new papers and captures their size (KB) into `ijhs.tsv`.
 
@@ -41,7 +40,6 @@ Usage:
 
 Pre-requisites:
     - Chrome Browser installed.
-    - `cahcblr.github.io` project checked out at `~/projects/cahcblr.github.io` (configurable).
 """
 
 from selenium import webdriver
@@ -61,15 +59,14 @@ from glob import glob
 from tqdm import tqdm
 
 # Configuration
-PROJECT_ROOT = os.path.expanduser("~/projects/cahcblr.github.io")
 # Relative path to the project's cache dir (one level up from pipeline/)
 CACHE_DIR = os.path.join(os.path.dirname(__file__), "../.cache")
+CORPUS_DIR = os.path.join(os.path.dirname(__file__), "../corpus")
+CORPUS_IJHS = os.path.join(CORPUS_DIR, "ijhs")
 
-EXISTING_DIRS = [
-    os.path.join(PROJECT_ROOT, "assets/ijhs_potentials"),
-    os.path.join(PROJECT_ROOT, "assets/cached_papers/rni")
-]
-DOWNLOAD_TARGET = os.path.join(PROJECT_ROOT, "assets/ijhs_potentials")
+EXISTING_DIRS = [CACHE_DIR, CORPUS_DIR, CORPUS_IJHS]
+DOWNLOAD_TARGET = CORPUS_IJHS
+TSV_PATH = os.path.join(CORPUS_DIR, "ijhs.tsv")
 
 def get_issue_id(k, val) :
     _,yr, _,vol, _, iss = re.split( r"[\s\,]+", val)
@@ -366,7 +363,6 @@ def download_interactive(insa_df):
             print(f"Failed to download {url}: {e}")
 
     if updates > 0:
-    if updates > 0:
         insa_df.to_csv(os.path.join(CACHE_DIR, 'ijhs.tsv'), index=False, sep='\t')
         print(f"Updated metadata with sizes for {updates} new files.")
 
@@ -379,9 +375,9 @@ if __name__ == "__main__":
     df = update_metadata(df)
     
     # Save metadata
-    os.makedirs(CACHE_DIR, exist_ok=True)
-    df.to_csv(os.path.join(CACHE_DIR, 'ijhs.tsv'), index=False, sep='\t')
-    print(f"Saved metadata to {CACHE_DIR}/ijhs.tsv")
+    os.makedirs(CORPUS_DIR, exist_ok=True)
+    df.to_csv(TSV_PATH, index=False, sep='\t')
+    print(f"Saved metadata to {TSV_PATH}")
     
     print("\n--- Stage 3: Interactive Download ---")
     download_interactive(df)

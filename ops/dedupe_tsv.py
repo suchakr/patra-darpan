@@ -13,8 +13,8 @@ import pandas as pd
 # Configuration
 BASE_DIR = pathlib.Path(__file__).parent.parent
 TSV_FILES = [
-    BASE_DIR / ".cache" / "ijhs.tsv",
-    BASE_DIR / ".cache" / "ijhs-classified.tsv"
+    BASE_DIR / "corpus" / "ijhs.tsv",
+    BASE_DIR / "corpus" / "ijhs-classified.tsv"
 ]
 
 def get_filename(url):
