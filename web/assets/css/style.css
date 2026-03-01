@@ -842,3 +842,44 @@ mark {
     padding: 0;
   }
 }
+
+/* --- Embed Mode --- */
+[data-embed="true"] body {
+  background: transparent !important;
+}
+
+[data-embed="true"] .glass-bg {
+  display: none !important;
+}
+
+[data-embed="true"] .app-container {
+  padding: 0;
+  gap: 12px;
+}
+
+[data-embed="true"] .sidebar {
+  display: none !important;
+}
+
+[data-embed="true"] .logo h1,
+[data-embed="true"] .logo .badge,
+[data-embed="true"] #theme-toggle,
+[data-embed="true"] #menu-toggle {
+  display: none !important;
+}
+
+[data-embed="true"] .header {
+  padding: 8px 0;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+  border: none;
+}
+
+[data-embed="true"] .search-bar {
+  width: 100%;
+}
+
+[data-embed="true"] .main-layout {
+  gap: 0;
+}
