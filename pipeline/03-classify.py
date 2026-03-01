@@ -3,7 +3,7 @@
 # dependencies = [
 #     "pandas",
 #     "tqdm",
-#     "google-generativeai",
+#     "google-genai",
 #     "python-dotenv",
 #     "pydantic",
 # ]
@@ -36,24 +36,22 @@ import pickle
 import pandas as pd
 from tqdm import tqdm
 from time import sleep
-import google.generativeai as genai
-from google.generativeai.types import RequestOptions
+from google import genai
 from google.api_core import retry
 from dotenv import load_dotenv
 
-# Load environment variables
-load_dotenv()
+# Load environment variables, overriding system variables with .env
+load_dotenv(override=True)
 
-# Relative path to cache
+# Paths
+CORPUS_DIR = os.path.join(os.path.dirname(__file__), "../corpus")
 CACHE_DIR = os.path.join(os.path.dirname(__file__), "../.cache")
 
 # --- Caching Utility ---
 class Cache2Disk(): 
   """Simple disk cache using pickle."""
   def __init__(self, *args):
-    # Cache to /tmp or current folder's .cache needed? 
-    # Using local .cache for persistence across runs if /tmp is ephemeral
-    # cache_dir = os.path.join(os.getcwd(), ".cache")
+    # Using local .cache for persistence across runs
     cache_dir = CACHE_DIR
     os.makedirs(cache_dir, exist_ok=True)
     filename = os.path.join(cache_dir, '_'.join(['cache'] + list(map(str, args))) + ".pkl")
@@ -82,16 +80,15 @@ class TextGeminiClassifier():
     if not api_key:
         raise ValueError("GEMINI_API_KEY not found in environment variables.")
     
-    genai.configure(api_key=api_key)
-    self.model = genai.GenerativeModel(
-      model_name="gemini-1.5-flash",
-      generation_config=genai.GenerationConfig(
+    # Initialize the new genai Client
+    self.client = genai.Client(api_key=api_key)
+    self.model_name = "gemini-2.5-flash"
+    self.generation_config = genai.types.GenerateContentConfig(
         temperature=0.0,
         top_p=0.95,
         top_k=5,
         max_output_tokens=8192,
         response_mime_type="text/plain",
-      ),
     )
     self.label = "gemini_classify_text"
 
@@ -150,10 +147,13 @@ class TextGeminiClassifier():
     prompt = f"""{self.model_system_prompt()}
 Papers: {in_df[['journal', 'paper']].to_dict(orient='records')}
 """
-    retry_policy = RequestOptions(
-        retry = retry.Retry(predicate=retry.if_transient_error, initial=10, multiplier=1.5, timeout=300)
+    # Note: retry.Retry isn't strictly part of the new Client API in the same way,
+    # so we'll construct the basic call first. If needed, the new SDK handles retries internally.
+    return self.client.models.generate_content(
+        model=self.model_name,
+        contents=prompt,
+        config=self.generation_config
     )
-    return self.model.generate_content(prompt, request_options=retry_policy)
 
   def classify_df(self, df, batch_size=15):
     results = []
@@ -201,18 +201,20 @@ Papers: {in_df[['journal', 'paper']].to_dict(orient='records')}
 # --- Main Flow ---
 
 def main():
-    # 1. Load Source
-    source_path = os.path.join(CACHE_DIR, 'ijhs.tsv')
+    # 1. Load Source (from clean corpus)
+    source_path = os.path.join(CORPUS_DIR, 'ijhs.tsv')
     if not os.path.exists(source_path):
         print(f"{source_path} not found.")
         return
     source_df = pd.read_csv(source_path, sep='\t')
     source_df['paper'] = source_df['paper'].str.strip()
-    # Deduplicate source by URL
-    source_df = source_df.drop_duplicates(subset=['url'])
-    
-    # 2. Load Existing Classifications
-    classified_file = os.path.join(CACHE_DIR, 'ijhs-classified.tsv')
+    # Deduplicate source by URL (but safely ignore rows missing a URL)
+    has_url = source_df['url'].notna() & (source_df['url'].astype(str).str.strip() != '')
+    df_with_url = source_df[has_url].drop_duplicates(subset=['url'])
+    df_without_url = source_df[~has_url]
+    source_df = pd.concat([df_with_url, df_without_url], ignore_index=True)
+    # 2. Load Existing Classifications (from clean corpus)
+    classified_file = os.path.join(CORPUS_DIR, 'ijhs-classified.tsv')
     if os.path.exists(classified_file):
         classified_df = pd.read_csv(classified_file, sep='\t')
         classified_df['paper'] = classified_df['paper'].str.strip()
@@ -323,6 +325,7 @@ def main():
 
 def generate_markdown(df, output_path=None):
     if output_path is None:
+        # Report goes to .cache to keep corpus clean
         output_path = os.path.join(CACHE_DIR, "ijhs-classified.md")
     """Generates a searchable HTML/Markdown report."""
     
@@ -424,7 +427,7 @@ var cells = tr[i].getElementsByTagName("td");
 for (var c = 0; c < cells.length; c++) {
 var cell = cells[c];
 if (cell.innerHTML.indexOf('span class="highlight"') !== -1) {
-cell.innerHTML = cell.innerHTML.replace(/<span class="highlight">([^<]*)<\/span>/g, '$1');
+cell.innerHTML = cell.innerHTML.replace(/<span class="highlight">([^<]*)<\\/span>/g, '$1');
 }
 }
 var showRow = true;

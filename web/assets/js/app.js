@@ -12,6 +12,7 @@
 const State = {
     papers: [], // Source data
     filtered: [], // Current view
+    isEmbedded: false,
     filters: {
         search: "",
         useRegex: false,
@@ -47,6 +48,9 @@ const Elements = {
 // --- Logic ---
 
 function init() {
+    // 0. Parse Params (must be before Setup UI)
+    parseQueryParams();
+
     // 1. Detect Env
     detectEnvironment();
 
@@ -136,6 +140,43 @@ function init() {
     });
 }
 
+function parseQueryParams() {
+    const params = new URLSearchParams(window.location.search);
+
+    if (params.get('embed') === '1') {
+        State.isEmbedded = true;
+        document.documentElement.setAttribute('data-embed', 'true');
+    }
+
+    const themeParam = params.get('theme');
+    if (themeParam === 'light' || themeParam === 'dark') {
+        State.theme = themeParam;
+    }
+
+    if (params.get('search')) {
+        State.filters.search = params.get('search');
+        // Note: Elements.searchInput might not be ready if we call too early, 
+        // but it's defined at top level.
+        if (Elements.searchInput) {
+            Elements.searchInput.value = State.filters.search;
+        }
+    }
+
+    const cat = params.get('category');
+    if (cat) {
+        cat.split(',').forEach(c => {
+            if (c.trim()) State.filters.categories.add(c.trim());
+        });
+    }
+
+    const sub = params.get('subject');
+    if (sub) {
+        sub.split(',').forEach(s => {
+            if (s.trim()) State.filters.subjects.add(s.trim());
+        });
+    }
+}
+
 // ... helper functions (environment, theme) unchanged ... 
 // (For brevity in this tool call, assuming environment/theme helpers are outside the replaced block or I will be careful not to overwrite them if they are within range. 
 // Wait, I am replacing a huge chunk. I must include the helpers if they fall within lines 12-246.
@@ -181,11 +222,17 @@ function updateModeBadge() {
  */
 function getArchivedLink(paper) {
     if (State.env === 'netlify' || (State.env === 'netlify_dev' && State.devMode === 'simulation')) {
-        const filename = paper.remoteUrl.split('/').pop().split('?')[0];
-        return `/.netlify/functions/authorize-pdf?file=${encodeURIComponent('assets/ijhs/' + filename)}`;
+        // Use gcsKey if available (e.g. "ijhs/Vol01_1.pdf" or "other/ajpem_2022.pdf")
+        if (paper.gcsKey) {
+            return `/.netlify/functions/authorize-pdf?file=${encodeURIComponent('assets/' + paper.gcsKey)}`;
+        }
+        // Fallback: derive from remoteUrl (legacy INSA papers)
+        const filename = paper.remoteUrl ? paper.remoteUrl.split('/').pop().split('?')[0] : '';
+        if (filename) {
+            return `/.netlify/functions/authorize-pdf?file=${encodeURIComponent('assets/ijhs/' + filename)}`;
+        }
+        return paper.remoteUrl || '#';
     }
-    // If we are in local mode, the archive link is redundant if we already have localPath,
-    // but we can return the remoteUrl as a backup.
     return paper.remoteUrl;
 }
 
@@ -261,6 +308,12 @@ function renderCheckboxList(container, items, filterKey) {
         const input = document.createElement('input');
         input.type = 'checkbox';
         input.value = item;
+        
+        // Initial state from query params
+        if (State.filters[filterKey].has(item)) {
+            input.checked = true;
+        }
+
         input.addEventListener('change', (e) => {
             if (e.target.checked) {
                 State.filters[filterKey].add(item);

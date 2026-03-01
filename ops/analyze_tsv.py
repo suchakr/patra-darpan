@@ -12,7 +12,7 @@ import pathlib
 
 # Configuration
 BASE_DIR = pathlib.Path(__file__).parent.parent
-TSV_PATH = BASE_DIR / ".cache" / "ijhs.tsv"
+TSV_PATH = BASE_DIR / "corpus" / "ijhs.tsv"
 
 if not TSV_PATH.exists():
     print(f"TSV not found at {TSV_PATH}")

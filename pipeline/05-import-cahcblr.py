@@ -12,9 +12,9 @@ import unicodedata
 
 # Paths
 BASE_DIR = pathlib.Path(__file__).parent.parent
-CACHE_DIR = BASE_DIR / ".cache"
-TSV_PATH = CACHE_DIR / "ijhs.tsv"
-CLASSIFIED_PATH = CACHE_DIR / "ijhs-classified.tsv"
+CORPUS_DIR = BASE_DIR / "corpus"
+TSV_PATH = CORPUS_DIR / "ijhs.tsv"
+CLASSIFIED_PATH = CORPUS_DIR / "ijhs-classified.tsv"
 P60_PATH = pathlib.Path(os.path.expanduser("~/projects/cahcblr.github.io/p60_papers.markdown"))
 P85_PATH = pathlib.Path(os.path.expanduser("~/projects/cahcblr.github.io/p85_search.markdown"))
 

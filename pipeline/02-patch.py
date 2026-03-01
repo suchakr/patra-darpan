@@ -10,7 +10,7 @@ import pandas as pd
 import os
 
 # Relative path to cache
-CACHE_DIR = os.path.join(os.path.dirname(__file__), "../.cache")
+CACHE_DIR = os.path.join(os.path.dirname(__file__), "../corpus")
 tsv_path = os.path.join(CACHE_DIR, 'ijhs.tsv')
 print(f"Reading {tsv_path}...")
 df = pd.read_csv(tsv_path, sep='\t')
@@ -34,6 +34,17 @@ author_corrections = [
     ('Vol46_1_2_RNIyenger.pdf', 'R N Iyengar'),
 ]
 
+# Manual Authorship Tagging from persistent registry
+registry_path = os.path.join(CACHE_DIR, 'cahc_authored_registry.txt')
+cahc_authored_patterns = []
+if os.path.exists(registry_path):
+    with open(registry_path, 'r', encoding='utf-8') as f:
+        for line in f:
+            line = line.strip()
+            # Ignore comments and blank lines
+            if line and not line.startswith('#'):
+                cahc_authored_patterns.append(line)
+
 count = 0
 for wrong_journal, url_pattern, correct_journal in corrections:
     try:
@@ -55,8 +66,23 @@ for url_pattern, correct_author in author_corrections:
         df.loc[mask, 'author'] = correct_author
         author_count += matches
 
-if count > 0 or author_count > 0:
+tag_count = 0
+for url_pattern in cahc_authored_patterns:
+    # Ensure exact filename matching to prevent '1.pdf' from matching 'Vol11.pdf'
+    mask_url = df['url'].str.endswith('/' + url_pattern, na=False) | (df['url'] == url_pattern)
+    mask_ju = df['ju_url'].str.endswith('/' + url_pattern, na=False) | (df['ju_url'] == url_pattern) if 'ju_url' in df.columns else False
+    
+    mask = mask_url | mask_ju
+    matches = mask.sum()
+    
+    if matches > 0:
+        df.loc[mask, 'cahc_authored'] = True
+        tag_count += matches
+
+print(f"Applied CAHC authorship tags to {tag_count} rows from registry.")
+
+if count > 0 or author_count > 0 or tag_count > 0:
     df.to_csv(tsv_path, sep='\t', index=False)
-    print(f"Total patched: {count} journals, {author_count} authors.")
+    print(f"Total patched: {count} journals, {author_count} authors, {tag_count} authorship tags.")
 else:
     print("No rows found to patch.")
