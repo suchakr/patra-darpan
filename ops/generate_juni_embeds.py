@@ -90,7 +90,7 @@ def generate(url_base):
         },
         "p60": {
             "name": "darpan_p60.html",
-            "url": f"{url_base}/?embed=1&theme=light&search=Iyengar",
+            "url": f"{url_base}/?embed=1&theme=light&cahc=1",
             "id": "darpan-p60-frame",
             "title": "Patra Darpan RNI Collection"
         }

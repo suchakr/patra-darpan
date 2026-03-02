@@ -94,9 +94,10 @@ def main():
             "remoteUrl": row.get("url", ""),
             "juUrl": clean_num(row.get("ju_url", "")),
             "size": row.get("size_in_kb", 0),
-            "cahcAuthored": str(row.get("cahc_authored", "false")).lower() == "true",
+            "cahc_authored": str(row.get("cahc_authored", "false")).lower() == "true",
+            "entry_type": clean_num(row.get("entry_type", "pdf")),
             "source": clean_num(row.get("source", "insa")),
-            "gcsKey": clean_num(row.get("gcs_key", "")),
+            "gcs_key": clean_num(row.get("gcs_key", "")),
         }
 
         # Normalization: If primary is JU but secondary is empty, use primary for JU features

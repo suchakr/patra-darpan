@@ -249,6 +249,18 @@ body {
   color: #92400e;
 }
 
+.badge.web {
+  background: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+  font-size: 0.65rem;
+  padding: 2px 6px;
+}
+
+[data-theme="light"] .badge.web {
+  background: rgba(16, 185, 129, 0.15);
+  color: #059669;
+}
+
 /* Search Bar Layout */
 .search-bar {
   position: relative;

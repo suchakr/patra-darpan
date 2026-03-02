@@ -16,10 +16,11 @@ const State = {
     filters: {
         search: "",
         useRegex: false,
-        sort: "newest", // New
+        sort: "newest", 
         categories: new Set(),
         subjects: new Set(),
-        decades: new Set()
+        decades: new Set(),
+        isCahcOnly: false // New: Handles ?cahc=1 or ?juni=1
     },
     // We will compute env strictly in a helper
     env: 'netlify', // 'file', 'localhost', 'netlify', 'netlify_dev'
@@ -175,6 +176,11 @@ function parseQueryParams() {
             if (s.trim()) State.filters.subjects.add(s.trim());
         });
     }
+
+    // Institutional Filters (Interchangeable)
+    if (params.get('cahc') === '1' || params.get('juni') === '1') {
+        State.filters.isCahcOnly = true;
+    }
 }
 
 // ... helper functions (environment, theme) unchanged ... 
@@ -221,6 +227,12 @@ function updateModeBadge() {
  * Gets the "Mirror" or "Archive" link (GCS via Netlify Function).
  */
 function getArchivedLink(paper) {
+    // 1. External Links: No Archive/Mirror, point to original source
+    if (paper.entry_type === 'link') {
+        return paper.remoteUrl || '#';
+    }
+
+    // 2. Local/Dev Mode
     if (State.env === 'netlify' || (State.env === 'netlify_dev' && State.devMode === 'simulation')) {
         // Use gcsKey if available (e.g. "ijhs/Vol01_1.pdf" or "other/ajpem_2022.pdf")
         if (paper.gcsKey) {
@@ -357,8 +369,9 @@ function applyFilters() {
     State.filtered = State.papers.filter(p => {
         // 1. Search Filter (Expanded Scope: Title, Author, Subject, Year, Journal)
         if (term) {
-            const juKeywords = p.juUrl ? "JU Jain University juni" : "";
-            const content = `${p.title} ${p.author} ${p.subject} ${p.year} ${p.journal} ${juKeywords}`;
+            const isCahc = (p.cahc_authored === true || p.cahc_authored === 'true');
+            const instKeywords = isCahc ? "cahc juni jain university" : (p.juUrl ? "juni jain university" : "");
+            const content = `${p.title} ${p.author} ${p.subject} ${p.year} ${p.journal} ${instKeywords}`;
 
             if (useRegex) {
                 if (!regex || !regex.test(content)) return false;
@@ -382,6 +395,11 @@ function applyFilters() {
             const year = parseInt(p.year);
             const decade = isNaN(year) ? 'Unknown' : `${Math.floor(year / 10) * 10}s`;
             if (!decs.has(decade)) return false;
+        }
+
+        // 5. Institutional Filter (?cahc=1 or ?juni=1)
+        if (State.filters.isCahcOnly && p.cahc_authored !== true && p.cahc_authored !== 'true') {
+            return false;
         }
 
         return true;
@@ -465,6 +483,7 @@ function renderGrid() {
     slice.forEach(paper => {
         const cat = SafeCat(paper.category);
         const sub = SafeSub(paper.subject);
+        const isLink = paper.entry_type === 'link';
 
         // Determine Links based on Mode
         let primaryLink, backupLink;
@@ -480,17 +499,15 @@ function renderGrid() {
             backupLink = getArchivedLink(paper);
         }
 
-        const isExternal = true; 
-
         // Use DIV instead of A to support nested interactive elements (Backup Button)
         const card = document.createElement('div');
         const catClass = `cat-${cat.replace(/[^a-zA-Z0-9]/g, '-')}`;
 
         card.className = `paper-card ${catClass}`;
+        if (isLink) card.classList.add('is-link');
 
         // Make the whole card clickable for Primary Link
         card.onclick = (e) => {
-            // Check if text validation was selected text, if so don't click
             if (window.getSelection().toString().length > 0) return;
             window.open(primaryLink, '_blank', 'noopener,noreferrer');
         };
@@ -499,51 +516,43 @@ function renderGrid() {
         const authorHtml = highlightText(paper.author, term, useRegex);
         const yearHtml = highlightText(String(paper.year), term, useRegex);
 
-        // Primary Read Button (Bold)
-        // Note: Card click also goes here, but this is the visual CTA
+        // Primary Read Button
+        const readBtnLabel = isLink ? "Open" : "Read";
         const readBtn = `
              <a href="${primaryLink}" 
                class="read-link" 
                target="_blank" 
                rel="noopener noreferrer"
                onclick="event.stopPropagation();">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
-                <span>Read</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    ${isLink 
+                        ? '<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>'
+                        : '<path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>'
+                    }
+                </svg>
+                <span>${readBtnLabel}</span>
             </a>
         `;
 
-        // Backup Button (Subtle Archive Icon)
+        // Secondary Button (Archive vs Source Website)
+        const secondaryIcon = isLink 
+            ? '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>'
+            : '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>';
+        
+        const secondaryTooltip = isLink ? "Visit Publisher Website" : "View Archived Copy (Mirror)";
+
         const backupBtn = `
             <a href="${backupLink}" 
                class="backup-link" 
                target="_blank" 
                rel="noopener noreferrer"
-               title="View Archived Copy (Mirror)"
+               title="${secondaryTooltip}"
                onclick="event.stopPropagation();">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                    <polyline points="15 3 21 3 21 9"></polyline>
-                    <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
+                ${secondaryIcon}
             </a>
         `;
 
-        // High Speed Mirror (JU) if available (and if not already primary/backup)
-        let juBtn = "";
-        if (paper.juUrl && paper.juUrl !== primaryLink && paper.juUrl !== backupLink) {
-            juBtn = `
-                <div class="vr-sep"></div>
-                <a href="${paper.juUrl}" 
-                   class="backup-link" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   title="High Speed Mirror (JU)"
-                   onclick="event.stopPropagation();">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg>
-                </a>
-            `;
-        }
-
+        // Badges
         const juBadge = paper.juUrl ? `
             <a href="${paper.juUrl}" 
                target="_blank" 
@@ -552,9 +561,12 @@ function renderGrid() {
                title="Open Jain University Mirror"
                onclick="event.stopPropagation();">JU</a>
         ` : "";
+        
+        const webBadge = isLink ? `<span class="badge web">Web</span>` : "";
+
         card.innerHTML = `
             <div class="paper-meta">
-                <span class="paper-year">${yearHtml}${juBadge}</span>
+                <span class="paper-year">${yearHtml}${juBadge}${webBadge}</span>
                 <span class="paper-category">${cat} / ${sub}</span>
             </div>
             <h3 class="paper-title">${titleHtml}</h3>
@@ -562,11 +574,10 @@ function renderGrid() {
             <div class="paper-footer">
                 <span>${paper.journal}</span>
                 <div class="footer-right">
-                    <span class="size-info">${Math.round(paper.size / 1024 * 10) / 10} MB</span>
+                    <span class="size-info">${isLink ? 'Link' : Math.round(paper.size / 1024 * 10) / 10 + ' MB'}</span>
                     ${readBtn}
                     <div class="vr-sep"></div>
                     ${backupBtn}
-                    ${juBtn}
                 </div>
             </div>
         `;

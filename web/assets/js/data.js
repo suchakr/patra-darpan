@@ -9,9 +9,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol01_1_1_PRay.pdf",
     "juUrl": "",
     "size": 272.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol01_1_1_PRay.pdf",
+    "gcs_key": "ijhs/Vol01_1_1_PRay.pdf",
     "localPath": "assets/pdfs/ijhs/Vol01_1_1_PRay.pdf"
   },
   {
@@ -24,9 +25,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol01_1_2_JRRavetz.pdf",
     "juUrl": "",
     "size": 133.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol01_1_2_JRRavetz.pdf",
+    "gcs_key": "ijhs/Vol01_1_2_JRRavetz.pdf",
     "localPath": "assets/pdfs/ijhs/Vol01_1_2_JRRavetz.pdf"
   },
   {
@@ -39,9 +41,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol01_1_3_MHoskin.pdf",
     "juUrl": "",
     "size": 189.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol01_1_3_MHoskin.pdf",
+    "gcs_key": "ijhs/Vol01_1_3_MHoskin.pdf",
     "localPath": "assets/pdfs/ijhs/Vol01_1_3_MHoskin.pdf"
   },
   {
@@ -54,9 +57,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol01_1_4_DJDSPrice.pdf",
     "juUrl": "",
     "size": 80.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol01_1_4_DJDSPrice.pdf",
+    "gcs_key": "ijhs/Vol01_1_4_DJDSPrice.pdf",
     "localPath": "assets/pdfs/ijhs/Vol01_1_4_DJDSPrice.pdf"
   },
   {
@@ -69,9 +73,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol01_1_5_SNSen.pdf",
     "juUrl": "",
     "size": 261.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol01_1_5_SNSen.pdf",
+    "gcs_key": "ijhs/Vol01_1_5_SNSen.pdf",
     "localPath": "assets/pdfs/ijhs/Vol01_1_5_SNSen.pdf"
   },
   {
@@ -84,9 +89,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol01_1_6_VRonchi.pdf",
     "juUrl": "",
     "size": 275.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol01_1_6_VRonchi.pdf",
+    "gcs_key": "ijhs/Vol01_1_6_VRonchi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol01_1_6_VRonchi.pdf"
   },
   {
@@ -99,9 +105,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol01_1_7_VSubbarayappa.pdf",
     "juUrl": "",
     "size": 174.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol01_1_7_VSubbarayappa.pdf",
+    "gcs_key": "ijhs/Vol01_1_7_VSubbarayappa.pdf",
     "localPath": "assets/pdfs/ijhs/Vol01_1_7_VSubbarayappa.pdf"
   },
   {
@@ -114,9 +121,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol01_1_8_AKBag.pdf",
     "juUrl": "",
     "size": 134.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol01_1_8_AKBag.pdf",
+    "gcs_key": "ijhs/Vol01_1_8_AKBag.pdf",
     "localPath": "assets/pdfs/ijhs/Vol01_1_8_AKBag.pdf"
   },
   {
@@ -129,9 +137,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol01_1_9_BRensch.pdf",
     "juUrl": "",
     "size": 147.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol01_1_9_BRensch.pdf",
+    "gcs_key": "ijhs/Vol01_1_9_BRensch.pdf",
     "localPath": "assets/pdfs/ijhs/Vol01_1_9_BRensch.pdf"
   },
   {
@@ -144,9 +153,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol01_2_1_WPetri.pdf",
     "juUrl": "",
     "size": 187.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol01_2_1_WPetri.pdf",
+    "gcs_key": "ijhs/Vol01_2_1_WPetri.pdf",
     "localPath": "assets/pdfs/ijhs/Vol01_2_1_WPetri.pdf"
   },
   {
@@ -159,9 +169,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol01_2_2_MRoy.pdf",
     "juUrl": "",
     "size": 171.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol01_2_2_MRoy.pdf",
+    "gcs_key": "ijhs/Vol01_2_2_MRoy.pdf",
     "localPath": "assets/pdfs/ijhs/Vol01_2_2_MRoy.pdf"
   },
   {
@@ -174,9 +185,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol01_2_3_AKBag.pdf",
     "juUrl": "",
     "size": 174.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol01_2_3_AKBag.pdf",
+    "gcs_key": "ijhs/Vol01_2_3_AKBag.pdf",
     "localPath": "assets/pdfs/ijhs/Vol01_2_3_AKBag.pdf"
   },
   {
@@ -189,9 +201,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol01_2_4_SPRaychaudhuri.pdf",
     "juUrl": "",
     "size": 117.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol01_2_4_SPRaychaudhuri.pdf",
+    "gcs_key": "ijhs/Vol01_2_4_SPRaychaudhuri.pdf",
     "localPath": "assets/pdfs/ijhs/Vol01_2_4_SPRaychaudhuri.pdf"
   },
   {
@@ -204,9 +217,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol01_2_5_SNSen.pdf",
     "juUrl": "",
     "size": 284.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol01_2_5_SNSen.pdf",
+    "gcs_key": "ijhs/Vol01_2_5_SNSen.pdf",
     "localPath": "assets/pdfs/ijhs/Vol01_2_5_SNSen.pdf"
   },
   {
@@ -219,9 +233,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol01_2_6_MTanaka.pdf",
     "juUrl": "",
     "size": 245.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol01_2_6_MTanaka.pdf",
+    "gcs_key": "ijhs/Vol01_2_6_MTanaka.pdf",
     "localPath": "assets/pdfs/ijhs/Vol01_2_6_MTanaka.pdf"
   },
   {
@@ -234,9 +249,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol01_2_7_SAKGhori.pdf",
     "juUrl": "",
     "size": 314.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol01_2_7_SAKGhori.pdf",
+    "gcs_key": "ijhs/Vol01_2_7_SAKGhori.pdf",
     "localPath": "assets/pdfs/ijhs/Vol01_2_7_SAKGhori.pdf"
   },
   {
@@ -249,9 +265,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol01_2_8_RKGupta.pdf",
     "juUrl": "",
     "size": 239.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol01_2_8_RKGupta.pdf",
+    "gcs_key": "ijhs/Vol01_2_8_RKGupta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol01_2_8_RKGupta.pdf"
   },
   {
@@ -264,9 +281,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol01_2_9_Notes.pdf",
     "juUrl": "",
     "size": 84.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol01_2_9_Notes.pdf",
+    "gcs_key": "ijhs/Vol01_2_9_Notes.pdf",
     "localPath": "assets/pdfs/ijhs/Vol01_2_9_Notes.pdf"
   },
   {
@@ -279,9 +297,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol02_1_1_PRay.pdf",
     "juUrl": "",
     "size": 426.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol02_1_1_PRay.pdf",
+    "gcs_key": "ijhs/Vol02_1_1_PRay.pdf",
     "localPath": "assets/pdfs/ijhs/Vol02_1_1_PRay.pdf"
   },
   {
@@ -294,9 +313,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol02_1_2_BVSubbarayappa.pdf",
     "juUrl": "",
     "size": 286.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol02_1_2_BVSubbarayappa.pdf",
+    "gcs_key": "ijhs/Vol02_1_2_BVSubbarayappa.pdf",
     "localPath": "assets/pdfs/ijhs/Vol02_1_2_BVSubbarayappa.pdf"
   },
   {
@@ -309,9 +329,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol02_1_3_MRoy.pdf",
     "juUrl": "",
     "size": 263.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol02_1_3_MRoy.pdf",
+    "gcs_key": "ijhs/Vol02_1_3_MRoy.pdf",
     "localPath": "assets/pdfs/ijhs/Vol02_1_3_MRoy.pdf"
   },
   {
@@ -324,9 +345,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol02_1_4_BMohan.pdf",
     "juUrl": "",
     "size": 108.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol02_1_4_BMohan.pdf",
+    "gcs_key": "ijhs/Vol02_1_4_BMohan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol02_1_4_BMohan.pdf"
   },
   {
@@ -339,9 +361,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol02_1_5_MChowdhury.pdf",
     "juUrl": "",
     "size": 176.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol02_1_5_MChowdhury.pdf",
+    "gcs_key": "ijhs/Vol02_1_5_MChowdhury.pdf",
     "localPath": "assets/pdfs/ijhs/Vol02_1_5_MChowdhury.pdf"
   },
   {
@@ -354,9 +377,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol02_1_6_Reviews.pdf",
     "juUrl": "",
     "size": 207.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol02_1_6_Reviews.pdf",
+    "gcs_key": "ijhs/Vol02_1_6_Reviews.pdf",
     "localPath": "assets/pdfs/ijhs/Vol02_1_6_Reviews.pdf"
   },
   {
@@ -369,9 +393,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol02_2_1_VDMarza.pdf",
     "juUrl": "",
     "size": 841.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol02_2_1_VDMarza.pdf",
+    "gcs_key": "ijhs/Vol02_2_1_VDMarza.pdf",
     "localPath": "assets/pdfs/ijhs/Vol02_2_1_VDMarza.pdf"
   },
   {
@@ -384,9 +409,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol02_2_2_HIJhala.pdf",
     "juUrl": "",
     "size": 394.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol02_2_2_HIJhala.pdf",
+    "gcs_key": "ijhs/Vol02_2_2_HIJhala.pdf",
     "localPath": "assets/pdfs/ijhs/Vol02_2_2_HIJhala.pdf"
   },
   {
@@ -399,9 +425,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol02_2_3_RCGupta.pdf",
     "juUrl": "",
     "size": 246.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol02_2_3_RCGupta.pdf",
+    "gcs_key": "ijhs/Vol02_2_3_RCGupta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol02_2_3_RCGupta.pdf"
   },
   {
@@ -414,9 +441,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol02_2_4_Notes.pdf",
     "juUrl": "",
     "size": 99.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol02_2_4_Notes.pdf",
+    "gcs_key": "ijhs/Vol02_2_4_Notes.pdf",
     "localPath": "assets/pdfs/ijhs/Vol02_2_4_Notes.pdf"
   },
   {
@@ -429,9 +457,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol02_2_5_News.pdf",
     "juUrl": "",
     "size": 18.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol02_2_5_News.pdf",
+    "gcs_key": "ijhs/Vol02_2_5_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol02_2_5_News.pdf"
   },
   {
@@ -444,9 +473,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol02_2_6_Review.pdf",
     "juUrl": "",
     "size": 51.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol02_2_6_Review.pdf",
+    "gcs_key": "ijhs/Vol02_2_6_Review.pdf",
     "localPath": "assets/pdfs/ijhs/Vol02_2_6_Review.pdf"
   },
   {
@@ -459,9 +489,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol04_1And2_1_AKBag.pdf",
     "juUrl": "",
     "size": 85.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol04_1And2_1_AKBag.pdf",
+    "gcs_key": "ijhs/Vol04_1And2_1_AKBag.pdf",
     "localPath": "assets/pdfs/ijhs/Vol04_1And2_1_AKBag.pdf"
   },
   {
@@ -474,9 +505,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol04_1And2_2_KAChowdhury.pdf",
     "juUrl": "",
     "size": 117.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol04_1And2_2_KAChowdhury.pdf",
+    "gcs_key": "ijhs/Vol04_1And2_2_KAChowdhury.pdf",
     "localPath": "assets/pdfs/ijhs/Vol04_1And2_2_KAChowdhury.pdf"
   },
   {
@@ -489,9 +521,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol04_1And2_3_GSDikshit.pdf",
     "juUrl": "",
     "size": 81.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol04_1And2_3_GSDikshit.pdf",
+    "gcs_key": "ijhs/Vol04_1And2_3_GSDikshit.pdf",
     "localPath": "assets/pdfs/ijhs/Vol04_1And2_3_GSDikshit.pdf"
   },
   {
@@ -504,9 +537,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol04_1And2_4_CGKashikar.pdf",
     "juUrl": "",
     "size": 245.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol04_1And2_4_CGKashikar.pdf",
+    "gcs_key": "ijhs/Vol04_1And2_4_CGKashikar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol04_1And2_4_CGKashikar.pdf"
   },
   {
@@ -519,9 +553,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol04_1And2_5_TMPMahadevan.pdf",
     "juUrl": "",
     "size": 306.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol04_1And2_5_TMPMahadevan.pdf",
+    "gcs_key": "ijhs/Vol04_1And2_5_TMPMahadevan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol04_1And2_5_TMPMahadevan.pdf"
   },
   {
@@ -534,9 +569,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol04_1And2_6_GCPande.pdf",
     "juUrl": "",
     "size": 200.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol04_1And2_6_GCPande.pdf",
+    "gcs_key": "ijhs/Vol04_1And2_6_GCPande.pdf",
     "localPath": "assets/pdfs/ijhs/Vol04_1And2_6_GCPande.pdf"
   },
   {
@@ -549,9 +585,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol04_1And2_7_SGopal.pdf",
     "juUrl": "",
     "size": 158.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol04_1And2_7_SGopal.pdf",
+    "gcs_key": "ijhs/Vol04_1And2_7_SGopal.pdf",
     "localPath": "assets/pdfs/ijhs/Vol04_1And2_7_SGopal.pdf"
   },
   {
@@ -564,9 +601,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol04_1And2_8_TASaraswathi.pdf",
     "juUrl": "",
     "size": 421.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol04_1And2_8_TASaraswathi.pdf",
+    "gcs_key": "ijhs/Vol04_1And2_8_TASaraswathi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol04_1And2_8_TASaraswathi.pdf"
   },
   {
@@ -579,9 +617,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol04_1And2_9_AKBag.pdf",
     "juUrl": "",
     "size": 133.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol04_1And2_9_AKBag.pdf",
+    "gcs_key": "ijhs/Vol04_1And2_9_AKBag.pdf",
     "localPath": "assets/pdfs/ijhs/Vol04_1And2_9_AKBag.pdf"
   },
   {
@@ -594,9 +633,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol04_1And2_10_RCGupta.pdf",
     "juUrl": "",
     "size": 233.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol04_1And2_10_RCGupta.pdf",
+    "gcs_key": "ijhs/Vol04_1And2_10_RCGupta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol04_1And2_10_RCGupta.pdf"
   },
   {
@@ -609,9 +649,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol04_1And2_11_KSShukla.pdf",
     "juUrl": "",
     "size": 146.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol04_1And2_11_KSShukla.pdf",
+    "gcs_key": "ijhs/Vol04_1And2_11_KSShukla.pdf",
     "localPath": "assets/pdfs/ijhs/Vol04_1And2_11_KSShukla.pdf"
   },
   {
@@ -624,9 +665,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol04_1And2_12_TSKShastri.pdf",
     "juUrl": "",
     "size": 482.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol04_1And2_12_TSKShastri.pdf",
+    "gcs_key": "ijhs/Vol04_1And2_12_TSKShastri.pdf",
     "localPath": "assets/pdfs/ijhs/Vol04_1And2_12_TSKShastri.pdf"
   },
   {
@@ -639,9 +681,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol04_1And2_13_TSKShastri.pdf",
     "juUrl": "",
     "size": 189.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol04_1And2_13_TSKShastri.pdf",
+    "gcs_key": "ijhs/Vol04_1And2_13_TSKShastri.pdf",
     "localPath": "assets/pdfs/ijhs/Vol04_1And2_13_TSKShastri.pdf"
   },
   {
@@ -654,9 +697,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol04_1And2_14_SPBhattacharyya.pdf",
     "juUrl": "",
     "size": 221.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol04_1And2_14_SPBhattacharyya.pdf",
+    "gcs_key": "ijhs/Vol04_1And2_14_SPBhattacharyya.pdf",
     "localPath": "assets/pdfs/ijhs/Vol04_1And2_14_SPBhattacharyya.pdf"
   },
   {
@@ -669,9 +713,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol04_1And2_15_News.pdf",
     "juUrl": "",
     "size": 36.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol04_1And2_15_News.pdf",
+    "gcs_key": "ijhs/Vol04_1And2_15_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol04_1And2_15_News.pdf"
   },
   {
@@ -684,9 +729,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol04_1And2_16_Review.pdf",
     "juUrl": "",
     "size": 57.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol04_1And2_16_Review.pdf",
+    "gcs_key": "ijhs/Vol04_1And2_16_Review.pdf",
     "localPath": "assets/pdfs/ijhs/Vol04_1And2_16_Review.pdf"
   },
   {
@@ -699,9 +745,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol05_1_1_CDwarkanath.pdf",
     "juUrl": "",
     "size": 325.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol05_1_1_CDwarkanath.pdf",
+    "gcs_key": "ijhs/Vol05_1_1_CDwarkanath.pdf",
     "localPath": "assets/pdfs/ijhs/Vol05_1_1_CDwarkanath.pdf"
   },
   {
@@ -714,9 +761,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol05_1_2_PJDeshpande.pdf",
     "juUrl": "",
     "size": 525.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol05_1_2_PJDeshpande.pdf",
+    "gcs_key": "ijhs/Vol05_1_2_PJDeshpande.pdf",
     "localPath": "assets/pdfs/ijhs/Vol05_1_2_PJDeshpande.pdf"
   },
   {
@@ -729,9 +777,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol05_1_3_LMSingh.pdf",
     "juUrl": "",
     "size": 366.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol05_1_3_LMSingh.pdf",
+    "gcs_key": "ijhs/Vol05_1_3_LMSingh.pdf",
     "localPath": "assets/pdfs/ijhs/Vol05_1_3_LMSingh.pdf"
   },
   {
@@ -744,9 +793,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol05_1_4_DSGaur.pdf",
     "juUrl": "",
     "size": 422.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol05_1_4_DSGaur.pdf",
+    "gcs_key": "ijhs/Vol05_1_4_DSGaur.pdf",
     "localPath": "assets/pdfs/ijhs/Vol05_1_4_DSGaur.pdf"
   },
   {
@@ -759,9 +809,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol05_1_5_JMitra.pdf",
     "juUrl": "",
     "size": 215.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol05_1_5_JMitra.pdf",
+    "gcs_key": "ijhs/Vol05_1_5_JMitra.pdf",
     "localPath": "assets/pdfs/ijhs/Vol05_1_5_JMitra.pdf"
   },
   {
@@ -774,9 +825,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol05_1_6_SGurumurthy.pdf",
     "juUrl": "",
     "size": 97.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol05_1_6_SGurumurthy.pdf",
+    "gcs_key": "ijhs/Vol05_1_6_SGurumurthy.pdf",
     "localPath": "assets/pdfs/ijhs/Vol05_1_6_SGurumurthy.pdf"
   },
   {
@@ -789,9 +841,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol05_1_7_RSSMurthy.pdf",
     "juUrl": "",
     "size": 116.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol05_1_7_RSSMurthy.pdf",
+    "gcs_key": "ijhs/Vol05_1_7_RSSMurthy.pdf",
     "localPath": "assets/pdfs/ijhs/Vol05_1_7_RSSMurthy.pdf"
   },
   {
@@ -804,9 +857,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol05_1_8_PRay.pdf",
     "juUrl": "",
     "size": 289.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol05_1_8_PRay.pdf",
+    "gcs_key": "ijhs/Vol05_1_8_PRay.pdf",
     "localPath": "assets/pdfs/ijhs/Vol05_1_8_PRay.pdf"
   },
   {
@@ -819,9 +873,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol05_1_9_BBMishra.pdf",
     "juUrl": "",
     "size": 219.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol05_1_9_BBMishra.pdf",
+    "gcs_key": "ijhs/Vol05_1_9_BBMishra.pdf",
     "localPath": "assets/pdfs/ijhs/Vol05_1_9_BBMishra.pdf"
   },
   {
@@ -834,9 +889,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol05_1_10_RCChakravorty.pdf",
     "juUrl": "",
     "size": 109.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol05_1_10_RCChakravorty.pdf",
+    "gcs_key": "ijhs/Vol05_1_10_RCChakravorty.pdf",
     "localPath": "assets/pdfs/ijhs/Vol05_1_10_RCChakravorty.pdf"
   },
   {
@@ -849,9 +905,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol05_1_11_RNKapil.pdf",
     "juUrl": "",
     "size": 463.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol05_1_11_RNKapil.pdf",
+    "gcs_key": "ijhs/Vol05_1_11_RNKapil.pdf",
     "localPath": "assets/pdfs/ijhs/Vol05_1_11_RNKapil.pdf"
   },
   {
@@ -864,9 +921,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol05_1_12_KAChowdhury.pdf",
     "juUrl": "",
     "size": 53.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol05_1_12_KAChowdhury.pdf",
+    "gcs_key": "ijhs/Vol05_1_12_KAChowdhury.pdf",
     "localPath": "assets/pdfs/ijhs/Vol05_1_12_KAChowdhury.pdf"
   },
   {
@@ -879,9 +937,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol05_1_13_VMittre.pdf",
     "juUrl": "",
     "size": 352.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol05_1_13_VMittre.pdf",
+    "gcs_key": "ijhs/Vol05_1_13_VMittre.pdf",
     "localPath": "assets/pdfs/ijhs/Vol05_1_13_VMittre.pdf"
   },
   {
@@ -894,9 +953,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol05_1_14_MRoy.pdf",
     "juUrl": "",
     "size": 351.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol05_1_14_MRoy.pdf",
+    "gcs_key": "ijhs/Vol05_1_14_MRoy.pdf",
     "localPath": "assets/pdfs/ijhs/Vol05_1_14_MRoy.pdf"
   },
   {
@@ -909,9 +969,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol05_1_15_SPRaychaudhuri.pdf",
     "juUrl": "",
     "size": 29.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol05_1_15_SPRaychaudhuri.pdf",
+    "gcs_key": "ijhs/Vol05_1_15_SPRaychaudhuri.pdf",
     "localPath": "assets/pdfs/ijhs/Vol05_1_15_SPRaychaudhuri.pdf"
   },
   {
@@ -924,9 +985,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol05_1_16_MSShukla.pdf",
     "juUrl": "",
     "size": 83.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol05_1_16_MSShukla.pdf",
+    "gcs_key": "ijhs/Vol05_1_16_MSShukla.pdf",
     "localPath": "assets/pdfs/ijhs/Vol05_1_16_MSShukla.pdf"
   },
   {
@@ -939,9 +1001,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol05_2_1_JCSikdar.pdf",
     "juUrl": "",
     "size": 488.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol05_2_1_JCSikdar.pdf",
+    "gcs_key": "ijhs/Vol05_2_1_JCSikdar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol05_2_1_JCSikdar.pdf"
   },
   {
@@ -954,9 +1017,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol05_2_2_GNChakravarthy.pdf",
     "juUrl": "",
     "size": 216.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol05_2_2_GNChakravarthy.pdf",
+    "gcs_key": "ijhs/Vol05_2_2_GNChakravarthy.pdf",
     "localPath": "assets/pdfs/ijhs/Vol05_2_2_GNChakravarthy.pdf"
   },
   {
@@ -969,9 +1033,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol05_2_3_HCBhardwaj.pdf",
     "juUrl": "",
     "size": 180.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol05_2_3_HCBhardwaj.pdf",
+    "gcs_key": "ijhs/Vol05_2_3_HCBhardwaj.pdf",
     "localPath": "assets/pdfs/ijhs/Vol05_2_3_HCBhardwaj.pdf"
   },
   {
@@ -984,9 +1049,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol05_2_4_DPAgrawal.pdf",
     "juUrl": "",
     "size": 236.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol05_2_4_DPAgrawal.pdf",
+    "gcs_key": "ijhs/Vol05_2_4_DPAgrawal.pdf",
     "localPath": "assets/pdfs/ijhs/Vol05_2_4_DPAgrawal.pdf"
   },
   {
@@ -999,9 +1065,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol05_2_5_BKGRao.pdf",
     "juUrl": "",
     "size": 388.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol05_2_5_BKGRao.pdf",
+    "gcs_key": "ijhs/Vol05_2_5_BKGRao.pdf",
     "localPath": "assets/pdfs/ijhs/Vol05_2_5_BKGRao.pdf"
   },
   {
@@ -1014,9 +1081,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol05_2_6_MChoudhury.pdf",
     "juUrl": "",
     "size": 230.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol05_2_6_MChoudhury.pdf",
+    "gcs_key": "ijhs/Vol05_2_6_MChoudhury.pdf",
     "localPath": "assets/pdfs/ijhs/Vol05_2_6_MChoudhury.pdf"
   },
   {
@@ -1029,9 +1097,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol05_2_7_VGovind.pdf",
     "juUrl": "",
     "size": 521.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol05_2_7_VGovind.pdf",
+    "gcs_key": "ijhs/Vol05_2_7_VGovind.pdf",
     "localPath": "assets/pdfs/ijhs/Vol05_2_7_VGovind.pdf"
   },
   {
@@ -1044,9 +1113,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol05_2_8_TVMahalingam.pdf",
     "juUrl": "",
     "size": 127.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol05_2_8_TVMahalingam.pdf",
+    "gcs_key": "ijhs/Vol05_2_8_TVMahalingam.pdf",
     "localPath": "assets/pdfs/ijhs/Vol05_2_8_TVMahalingam.pdf"
   },
   {
@@ -1059,9 +1129,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol05_2_9_TMSrinivasan.pdf",
     "juUrl": "",
     "size": 216.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol05_2_9_TMSrinivasan.pdf",
+    "gcs_key": "ijhs/Vol05_2_9_TMSrinivasan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol05_2_9_TMSrinivasan.pdf"
   },
   {
@@ -1074,9 +1145,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol05_2_10_JFilliozat.pdf",
     "juUrl": "",
     "size": 123.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol05_2_10_JFilliozat.pdf",
+    "gcs_key": "ijhs/Vol05_2_10_JFilliozat.pdf",
     "localPath": "assets/pdfs/ijhs/Vol05_2_10_JFilliozat.pdf"
   },
   {
@@ -1089,9 +1161,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol05_2_11_SNSen.pdf",
     "juUrl": "",
     "size": 358.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol05_2_11_SNSen.pdf",
+    "gcs_key": "ijhs/Vol05_2_11_SNSen.pdf",
     "localPath": "assets/pdfs/ijhs/Vol05_2_11_SNSen.pdf"
   },
   {
@@ -1104,9 +1177,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol05_2_12_RLVerma.pdf",
     "juUrl": "",
     "size": 402.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol05_2_12_RLVerma.pdf",
+    "gcs_key": "ijhs/Vol05_2_12_RLVerma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol05_2_12_RLVerma.pdf"
   },
   {
@@ -1119,9 +1193,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol05_2_13_PVSharma.pdf",
     "juUrl": "",
     "size": 154.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol05_2_13_PVSharma.pdf",
+    "gcs_key": "ijhs/Vol05_2_13_PVSharma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol05_2_13_PVSharma.pdf"
   },
   {
@@ -1134,9 +1209,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol05_2_14_HCShukla.pdf",
     "juUrl": "",
     "size": 160.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol05_2_14_HCShukla.pdf",
+    "gcs_key": "ijhs/Vol05_2_14_HCShukla.pdf",
     "localPath": "assets/pdfs/ijhs/Vol05_2_14_HCShukla.pdf"
   },
   {
@@ -1149,9 +1225,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol05_2_15_TMSrinivasan.pdf",
     "juUrl": "",
     "size": 161.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol05_2_15_TMSrinivasan.pdf",
+    "gcs_key": "ijhs/Vol05_2_15_TMSrinivasan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol05_2_15_TMSrinivasan.pdf"
   },
   {
@@ -1164,9 +1241,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol06_1_1_MNDeshpande.pdf",
     "juUrl": "",
     "size": 433.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol06_1_1_MNDeshpande.pdf",
+    "gcs_key": "ijhs/Vol06_1_1_MNDeshpande.pdf",
     "localPath": "assets/pdfs/ijhs/Vol06_1_1_MNDeshpande.pdf"
   },
   {
@@ -1179,9 +1257,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol06_1_2_RSengupta.pdf",
     "juUrl": "",
     "size": 94.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol06_1_2_RSengupta.pdf",
+    "gcs_key": "ijhs/Vol06_1_2_RSengupta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol06_1_2_RSengupta.pdf"
   },
   {
@@ -1194,9 +1273,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vo0l6_1_3_RNRai.pdf",
     "juUrl": "",
     "size": 177.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vo0l6_1_3_RNRai.pdf",
+    "gcs_key": "ijhs/Vo0l6_1_3_RNRai.pdf",
     "localPath": "assets/pdfs/ijhs/Vo0l6_1_3_RNRai.pdf"
   },
   {
@@ -1209,9 +1289,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol06_1_4_NKPanikkar.pdf",
     "juUrl": "",
     "size": 335.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol06_1_4_NKPanikkar.pdf",
+    "gcs_key": "ijhs/Vol06_1_4_NKPanikkar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol06_1_4_NKPanikkar.pdf"
   },
   {
@@ -1224,9 +1305,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol06_1_5_RCGupta.pdf",
     "juUrl": "",
     "size": 149.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol06_1_5_RCGupta.pdf",
+    "gcs_key": "ijhs/Vol06_1_5_RCGupta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol06_1_5_RCGupta.pdf"
   },
   {
@@ -1239,9 +1321,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol06_1_6_AVCarozzi.pdf",
     "juUrl": "",
     "size": 124.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol06_1_6_AVCarozzi.pdf",
+    "gcs_key": "ijhs/Vol06_1_6_AVCarozzi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol06_1_6_AVCarozzi.pdf"
   },
   {
@@ -1254,9 +1337,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol06_1_7_PVSharma.pdf",
     "juUrl": "",
     "size": 172.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol06_1_7_PVSharma.pdf",
+    "gcs_key": "ijhs/Vol06_1_7_PVSharma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol06_1_7_PVSharma.pdf"
   },
   {
@@ -1269,9 +1353,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol06_1_8_VMukherji.pdf",
     "juUrl": "",
     "size": 521.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol06_1_8_VMukherji.pdf",
+    "gcs_key": "ijhs/Vol06_1_8_VMukherji.pdf",
     "localPath": "assets/pdfs/ijhs/Vol06_1_8_VMukherji.pdf"
   },
   {
@@ -1284,9 +1369,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol06_1_9_BMChintamani.pdf",
     "juUrl": "",
     "size": 195.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol06_1_9_BMChintamani.pdf",
+    "gcs_key": "ijhs/Vol06_1_9_BMChintamani.pdf",
     "localPath": "assets/pdfs/ijhs/Vol06_1_9_BMChintamani.pdf"
   },
   {
@@ -1299,9 +1385,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol06_1_10_BookReviews.pdf",
     "juUrl": "",
     "size": 63.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol06_1_10_BookReviews.pdf",
+    "gcs_key": "ijhs/Vol06_1_10_BookReviews.pdf",
     "localPath": "assets/pdfs/ijhs/Vol06_1_10_BookReviews.pdf"
   },
   {
@@ -1314,9 +1401,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol06_2_1_VMukherji.pdf",
     "juUrl": "",
     "size": 354.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol06_2_1_VMukherji.pdf",
+    "gcs_key": "ijhs/Vol06_2_1_VMukherji.pdf",
     "localPath": "assets/pdfs/ijhs/Vol06_2_1_VMukherji.pdf"
   },
   {
@@ -1329,9 +1417,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol06_2_2_RNRai.pdf",
     "juUrl": "",
     "size": 70.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol06_2_2_RNRai.pdf",
+    "gcs_key": "ijhs/Vol06_2_2_RNRai.pdf",
     "localPath": "assets/pdfs/ijhs/Vol06_2_2_RNRai.pdf"
   },
   {
@@ -1344,9 +1433,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol06_2_3_EGKRao.pdf",
     "juUrl": "",
     "size": 165.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol06_2_3_EGKRao.pdf",
+    "gcs_key": "ijhs/Vol06_2_3_EGKRao.pdf",
     "localPath": "assets/pdfs/ijhs/Vol06_2_3_EGKRao.pdf"
   },
   {
@@ -1359,9 +1449,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol06_2_4_RNRai.pdf",
     "juUrl": "",
     "size": 123.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol06_2_4_RNRai.pdf",
+    "gcs_key": "ijhs/Vol06_2_4_RNRai.pdf",
     "localPath": "assets/pdfs/ijhs/Vol06_2_4_RNRai.pdf"
   },
   {
@@ -1374,9 +1465,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol06_2_5_GPSharma.pdf",
     "juUrl": "",
     "size": 278.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol06_2_5_GPSharma.pdf",
+    "gcs_key": "ijhs/Vol06_2_5_GPSharma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol06_2_5_GPSharma.pdf"
   },
   {
@@ -1389,9 +1481,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol06_2_6_BMChintamani.pdf",
     "juUrl": "",
     "size": 111.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol06_2_6_BMChintamani.pdf",
+    "gcs_key": "ijhs/Vol06_2_6_BMChintamani.pdf",
     "localPath": "assets/pdfs/ijhs/Vol06_2_6_BMChintamani.pdf"
   },
   {
@@ -1404,9 +1497,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol07_1_1_RNRai.pdf",
     "juUrl": "",
     "size": 252.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol07_1_1_RNRai.pdf",
+    "gcs_key": "ijhs/Vol07_1_1_RNRai.pdf",
     "localPath": "assets/pdfs/ijhs/Vol07_1_1_RNRai.pdf"
   },
   {
@@ -1419,9 +1513,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol07_1_2_NKPanikkar.pdf",
     "juUrl": "",
     "size": 216.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol07_1_2_NKPanikkar.pdf",
+    "gcs_key": "ijhs/Vol07_1_2_NKPanikkar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol07_1_2_NKPanikkar.pdf"
   },
   {
@@ -1434,9 +1529,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol07_1_3_RNRai.pdf",
     "juUrl": "",
     "size": 311.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol07_1_3_RNRai.pdf",
+    "gcs_key": "ijhs/Vol07_1_3_RNRai.pdf",
     "localPath": "assets/pdfs/ijhs/Vol07_1_3_RNRai.pdf"
   },
   {
@@ -1449,9 +1545,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol07_1_4_ALSharma.pdf",
     "juUrl": "",
     "size": 134.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol07_1_4_ALSharma.pdf",
+    "gcs_key": "ijhs/Vol07_1_4_ALSharma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol07_1_4_ALSharma.pdf"
   },
   {
@@ -1464,9 +1561,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol07_1_5_SNSen.pdf",
     "juUrl": "",
     "size": 531.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol07_1_5_SNSen.pdf",
+    "gcs_key": "ijhs/Vol07_1_5_SNSen.pdf",
     "localPath": "assets/pdfs/ijhs/Vol07_1_5_SNSen.pdf"
   },
   {
@@ -1479,9 +1577,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol07_1_6_Notes_AKBag.pdf",
     "juUrl": "",
     "size": 66.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol07_1_6_Notes_AKBag.pdf",
+    "gcs_key": "ijhs/Vol07_1_6_Notes_AKBag.pdf",
     "localPath": "assets/pdfs/ijhs/Vol07_1_6_Notes_AKBag.pdf"
   },
   {
@@ -1494,9 +1593,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol07_1_7_News.pdf",
     "juUrl": "",
     "size": 62.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol07_1_7_News.pdf",
+    "gcs_key": "ijhs/Vol07_1_7_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol07_1_7_News.pdf"
   },
   {
@@ -1509,9 +1609,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol07_1_8_BookReview.pdf",
     "juUrl": "",
     "size": 37.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol07_1_8_BookReview.pdf",
+    "gcs_key": "ijhs/Vol07_1_8_BookReview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol07_1_8_BookReview.pdf"
   },
   {
@@ -1524,9 +1625,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol07_2_1_RCGupta.pdf",
     "juUrl": "",
     "size": 132.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol07_2_1_RCGupta.pdf",
+    "gcs_key": "ijhs/Vol07_2_1_RCGupta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol07_2_1_RCGupta.pdf"
   },
   {
@@ -1539,9 +1641,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol07_2_2_PVSharma.pdf",
     "juUrl": "",
     "size": 237.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol07_2_2_PVSharma.pdf",
+    "gcs_key": "ijhs/Vol07_2_2_PVSharma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol07_2_2_PVSharma.pdf"
   },
   {
@@ -1554,9 +1657,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol07_2_3_TKBiswas.pdf",
     "juUrl": "",
     "size": 372.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol07_2_3_TKBiswas.pdf",
+    "gcs_key": "ijhs/Vol07_2_3_TKBiswas.pdf",
     "localPath": "assets/pdfs/ijhs/Vol07_2_3_TKBiswas.pdf"
   },
   {
@@ -1569,9 +1673,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol07_2_4_SDSharma.pdf",
     "juUrl": "",
     "size": 98.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol07_2_4_SDSharma.pdf",
+    "gcs_key": "ijhs/Vol07_2_4_SDSharma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol07_2_4_SDSharma.pdf"
   },
   {
@@ -1584,9 +1689,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol07_2_5_VVRaman.pdf",
     "juUrl": "",
     "size": 600.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol07_2_5_VVRaman.pdf",
+    "gcs_key": "ijhs/Vol07_2_5_VVRaman.pdf",
     "localPath": "assets/pdfs/ijhs/Vol07_2_5_VVRaman.pdf"
   },
   {
@@ -1599,9 +1705,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol07_2_6_Notes_VMukherjee.pdf",
     "juUrl": "",
     "size": 165.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol07_2_6_Notes_VMukherjee.pdf",
+    "gcs_key": "ijhs/Vol07_2_6_Notes_VMukherjee.pdf",
     "localPath": "assets/pdfs/ijhs/Vol07_2_6_Notes_VMukherjee.pdf"
   },
   {
@@ -1614,9 +1721,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol07_2_7_BookReviews.pdf",
     "juUrl": "",
     "size": 46.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol07_2_7_BookReviews.pdf",
+    "gcs_key": "ijhs/Vol07_2_7_BookReviews.pdf",
     "localPath": "assets/pdfs/ijhs/Vol07_2_7_BookReviews.pdf"
   },
   {
@@ -1629,9 +1737,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol07_2_8_News.pdf",
     "juUrl": "",
     "size": 24.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol07_2_8_News.pdf",
+    "gcs_key": "ijhs/Vol07_2_8_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol07_2_8_News.pdf"
   },
   {
@@ -1644,9 +1753,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol08_1and2_1_LCJain.pdf",
     "juUrl": "",
     "size": 570.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol08_1and2_1_LCJain.pdf",
+    "gcs_key": "ijhs/Vol08_1and2_1_LCJain.pdf",
     "localPath": "assets/pdfs/ijhs/Vol08_1and2_1_LCJain.pdf"
   },
   {
@@ -1659,9 +1769,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol08_1and2_2_KDSwaminathan.pdf",
     "juUrl": "",
     "size": 185.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol08_1and2_2_KDSwaminathan.pdf",
+    "gcs_key": "ijhs/Vol08_1and2_2_KDSwaminathan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol08_1and2_2_KDSwaminathan.pdf"
   },
   {
@@ -1674,9 +1785,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol08_1and2_3_JNSharma.pdf",
     "juUrl": "",
     "size": 131.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol08_1and2_3_JNSharma.pdf",
+    "gcs_key": "ijhs/Vol08_1and2_3_JNSharma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol08_1and2_3_JNSharma.pdf"
   },
   {
@@ -1689,9 +1801,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol08_1and2_4_KSShukla.pdf",
     "juUrl": "",
     "size": 316.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol08_1and2_4_KSShukla.pdf",
+    "gcs_key": "ijhs/Vol08_1and2_4_KSShukla.pdf",
     "localPath": "assets/pdfs/ijhs/Vol08_1and2_4_KSShukla.pdf"
   },
   {
@@ -1704,9 +1817,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol08_1and2_5_KKTiwari.pdf",
     "juUrl": "",
     "size": 63.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol08_1and2_5_KKTiwari.pdf",
+    "gcs_key": "ijhs/Vol08_1and2_5_KKTiwari.pdf",
     "localPath": "assets/pdfs/ijhs/Vol08_1and2_5_KKTiwari.pdf"
   },
   {
@@ -1719,9 +1833,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol08_1and2_6_BGLSwamy.pdf",
     "juUrl": "",
     "size": 769.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol08_1and2_6_BGLSwamy.pdf",
+    "gcs_key": "ijhs/Vol08_1and2_6_BGLSwamy.pdf",
     "localPath": "assets/pdfs/ijhs/Vol08_1and2_6_BGLSwamy.pdf"
   },
   {
@@ -1734,9 +1849,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol08_1and2_7_KRAlur.pdf",
     "juUrl": "",
     "size": 577.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol08_1and2_7_KRAlur.pdf",
+    "gcs_key": "ijhs/Vol08_1and2_7_KRAlur.pdf",
     "localPath": "assets/pdfs/ijhs/Vol08_1and2_7_KRAlur.pdf"
   },
   {
@@ -1749,9 +1865,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol08_1and2_8_BookReviews.pdf",
     "juUrl": "",
     "size": 231.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol08_1and2_8_BookReviews.pdf",
+    "gcs_key": "ijhs/Vol08_1and2_8_BookReviews.pdf",
     "localPath": "assets/pdfs/ijhs/Vol08_1and2_8_BookReviews.pdf"
   },
   {
@@ -1764,9 +1881,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol09_1_6_TSKuppannasastry.pdf",
     "juUrl": "",
     "size": 261.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol09_1_6_TSKuppannasastry.pdf",
+    "gcs_key": "ijhs/Vol09_1_6_TSKuppannasastry.pdf",
     "localPath": "assets/pdfs/ijhs/Vol09_1_6_TSKuppannasastry.pdf"
   },
   {
@@ -1779,9 +1897,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol09_1_1_EKKharadze.pdf",
     "juUrl": "",
     "size": 110.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol09_1_1_EKKharadze.pdf",
+    "gcs_key": "ijhs/Vol09_1_1_EKKharadze.pdf",
     "localPath": "assets/pdfs/ijhs/Vol09_1_1_EKKharadze.pdf"
   },
   {
@@ -1794,9 +1913,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol09_1_2_JSmak.pdf",
     "juUrl": "",
     "size": 41.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol09_1_2_JSmak.pdf",
+    "gcs_key": "ijhs/Vol09_1_2_JSmak.pdf",
     "localPath": "assets/pdfs/ijhs/Vol09_1_2_JSmak.pdf"
   },
   {
@@ -1809,9 +1929,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol09_1_3_ATrautman.pdf",
     "juUrl": "",
     "size": 44.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol09_1_3_ATrautman.pdf",
+    "gcs_key": "ijhs/Vol09_1_3_ATrautman.pdf",
     "localPath": "assets/pdfs/ijhs/Vol09_1_3_ATrautman.pdf"
   },
   {
@@ -1824,9 +1945,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol09_1_4_SCJoshi.pdf",
     "juUrl": "",
     "size": 172.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol09_1_4_SCJoshi.pdf",
+    "gcs_key": "ijhs/Vol09_1_4_SCJoshi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol09_1_4_SCJoshi.pdf"
   },
   {
@@ -1839,9 +1961,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol09_1_5_SKGhosh.pdf",
     "juUrl": "",
     "size": 106.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol09_1_5_SKGhosh.pdf",
+    "gcs_key": "ijhs/Vol09_1_5_SKGhosh.pdf",
     "localPath": "assets/pdfs/ijhs/Vol09_1_5_SKGhosh.pdf"
   },
   {
@@ -1854,9 +1977,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol09_1_7_RNRai.pdf",
     "juUrl": "",
     "size": 107.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol09_1_7_RNRai.pdf",
+    "gcs_key": "ijhs/Vol09_1_7_RNRai.pdf",
     "localPath": "assets/pdfs/ijhs/Vol09_1_7_RNRai.pdf"
   },
   {
@@ -1869,9 +1993,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol09_1_8_BChatterjee.pdf",
     "juUrl": "",
     "size": 106.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol09_1_8_BChatterjee.pdf",
+    "gcs_key": "ijhs/Vol09_1_8_BChatterjee.pdf",
     "localPath": "assets/pdfs/ijhs/Vol09_1_8_BChatterjee.pdf"
   },
   {
@@ -1884,9 +2009,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol09_1_9_CGPendse.pdf",
     "juUrl": "",
     "size": 403.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol09_1_9_CGPendse.pdf",
+    "gcs_key": "ijhs/Vol09_1_9_CGPendse.pdf",
     "localPath": "assets/pdfs/ijhs/Vol09_1_9_CGPendse.pdf"
   },
   {
@@ -1899,9 +2025,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol09_1_11_DGDhavale.pdf",
     "juUrl": "",
     "size": 53.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol09_1_11_DGDhavale.pdf",
+    "gcs_key": "ijhs/Vol09_1_11_DGDhavale.pdf",
     "localPath": "assets/pdfs/ijhs/Vol09_1_11_DGDhavale.pdf"
   },
   {
@@ -1914,9 +2041,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol09_1_13_RCGupta.pdf",
     "juUrl": "",
     "size": 200.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol09_1_13_RCGupta.pdf",
+    "gcs_key": "ijhs/Vol09_1_13_RCGupta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol09_1_13_RCGupta.pdf"
   },
   {
@@ -1929,9 +2057,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol09_1_14_GSundaramurthy.pdf",
     "juUrl": "",
     "size": 130.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol09_1_14_GSundaramurthy.pdf",
+    "gcs_key": "ijhs/Vol09_1_14_GSundaramurthy.pdf",
     "localPath": "assets/pdfs/ijhs/Vol09_1_14_GSundaramurthy.pdf"
   },
   {
@@ -1944,9 +2073,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol09_1_15_SNSen.pdf",
     "juUrl": "",
     "size": 291.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol09_1_15_SNSen.pdf",
+    "gcs_key": "ijhs/Vol09_1_15_SNSen.pdf",
     "localPath": "assets/pdfs/ijhs/Vol09_1_15_SNSen.pdf"
   },
   {
@@ -1959,9 +2089,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol09_1_16_SMRAnsari.pdf",
     "juUrl": "",
     "size": 20.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol09_1_16_SMRAnsari.pdf",
+    "gcs_key": "ijhs/Vol09_1_16_SMRAnsari.pdf",
     "localPath": "assets/pdfs/ijhs/Vol09_1_16_SMRAnsari.pdf"
   },
   {
@@ -1974,9 +2105,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol09_1_17_MCPande.pdf",
     "juUrl": "",
     "size": 295.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol09_1_17_MCPande.pdf",
+    "gcs_key": "ijhs/Vol09_1_17_MCPande.pdf",
     "localPath": "assets/pdfs/ijhs/Vol09_1_17_MCPande.pdf"
   },
   {
@@ -1989,9 +2121,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol09_1_18_DRKaprekar.pdf",
     "juUrl": "",
     "size": 28.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol09_1_18_DRKaprekar.pdf",
+    "gcs_key": "ijhs/Vol09_1_18_DRKaprekar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol09_1_18_DRKaprekar.pdf"
   },
   {
@@ -2004,9 +2137,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol09_1_19_Discussions.pdf",
     "juUrl": "",
     "size": 88.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol09_1_19_Discussions.pdf",
+    "gcs_key": "ijhs/Vol09_1_19_Discussions.pdf",
     "localPath": "assets/pdfs/ijhs/Vol09_1_19_Discussions.pdf"
   },
   {
@@ -2019,9 +2153,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol09_2_1_RCGupta.pdf",
     "juUrl": "",
     "size": 192.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol09_2_1_RCGupta.pdf",
+    "gcs_key": "ijhs/Vol09_2_1_RCGupta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol09_2_1_RCGupta.pdf"
   },
   {
@@ -2034,9 +2169,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol09_2_2_JVNarlikar.pdf",
     "juUrl": "",
     "size": 143.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol09_2_2_JVNarlikar.pdf",
+    "gcs_key": "ijhs/Vol09_2_2_JVNarlikar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol09_2_2_JVNarlikar.pdf"
   },
   {
@@ -2049,9 +2185,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol09_2_3_RPKulkarni.pdf",
     "juUrl": "",
     "size": 184.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol09_2_3_RPKulkarni.pdf",
+    "gcs_key": "ijhs/Vol09_2_3_RPKulkarni.pdf",
     "localPath": "assets/pdfs/ijhs/Vol09_2_3_RPKulkarni.pdf"
   },
   {
@@ -2064,9 +2201,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol09_2_4_RCGupta.pdf",
     "juUrl": "",
     "size": 344.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol09_2_4_RCGupta.pdf",
+    "gcs_key": "ijhs/Vol09_2_4_RCGupta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol09_2_4_RCGupta.pdf"
   },
   {
@@ -2079,9 +2217,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol09_2_5_AKMishra.pdf",
     "juUrl": "",
     "size": 215.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol09_2_5_AKMishra.pdf",
+    "gcs_key": "ijhs/Vol09_2_5_AKMishra.pdf",
     "localPath": "assets/pdfs/ijhs/Vol09_2_5_AKMishra.pdf"
   },
   {
@@ -2094,9 +2233,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol09_2_6_VDMarza.pdf",
     "juUrl": "",
     "size": 1009.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol09_2_6_VDMarza.pdf",
+    "gcs_key": "ijhs/Vol09_2_6_VDMarza.pdf",
     "localPath": "assets/pdfs/ijhs/Vol09_2_6_VDMarza.pdf"
   },
   {
@@ -2109,9 +2249,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol09_2_7_MNChannabasappa.pdf",
     "juUrl": "",
     "size": 80.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol09_2_7_MNChannabasappa.pdf",
+    "gcs_key": "ijhs/Vol09_2_7_MNChannabasappa.pdf",
     "localPath": "assets/pdfs/ijhs/Vol09_2_7_MNChannabasappa.pdf"
   },
   {
@@ -2124,9 +2265,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol09_2_8_Reviews.pdf",
     "juUrl": "",
     "size": 100.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol09_2_8_Reviews.pdf",
+    "gcs_key": "ijhs/Vol09_2_8_Reviews.pdf",
     "localPath": "assets/pdfs/ijhs/Vol09_2_8_Reviews.pdf"
   },
   {
@@ -2139,9 +2281,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol10_1_1_PVSharma.pdf",
     "juUrl": "",
     "size": 149.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol10_1_1_PVSharma.pdf",
+    "gcs_key": "ijhs/Vol10_1_1_PVSharma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol10_1_1_PVSharma.pdf"
   },
   {
@@ -2154,9 +2297,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol10_1_2_RPKulkarni.pdf",
     "juUrl": "",
     "size": 214.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol10_1_2_RPKulkarni.pdf",
+    "gcs_key": "ijhs/Vol10_1_2_RPKulkarni.pdf",
     "localPath": "assets/pdfs/ijhs/Vol10_1_2_RPKulkarni.pdf"
   },
   {
@@ -2169,9 +2313,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol10_1_3_VVRaman.pdf",
     "juUrl": "",
     "size": 573.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol10_1_3_VVRaman.pdf",
+    "gcs_key": "ijhs/Vol10_1_3_VVRaman.pdf",
     "localPath": "assets/pdfs/ijhs/Vol10_1_3_VVRaman.pdf"
   },
   {
@@ -2184,9 +2329,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol10_1_4_RCGupta.pdf",
     "juUrl": "",
     "size": 357.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol10_1_4_RCGupta.pdf",
+    "gcs_key": "ijhs/Vol10_1_4_RCGupta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol10_1_4_RCGupta.pdf"
   },
   {
@@ -2199,9 +2345,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol10_1_5_SMRAnsari.pdf",
     "juUrl": "",
     "size": 192.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol10_1_5_SMRAnsari.pdf",
+    "gcs_key": "ijhs/Vol10_1_5_SMRAnsari.pdf",
     "localPath": "assets/pdfs/ijhs/Vol10_1_5_SMRAnsari.pdf"
   },
   {
@@ -2214,9 +2361,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol10_1_6_Announcement.pdf",
     "juUrl": "",
     "size": 57.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol10_1_6_Announcement.pdf",
+    "gcs_key": "ijhs/Vol10_1_6_Announcement.pdf",
     "localPath": "assets/pdfs/ijhs/Vol10_1_6_Announcement.pdf"
   },
   {
@@ -2229,9 +2377,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol10_1_7_BookReviews.pdf",
     "juUrl": "",
     "size": 741.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol10_1_7_BookReviews.pdf",
+    "gcs_key": "ijhs/Vol10_1_7_BookReviews.pdf",
     "localPath": "assets/pdfs/ijhs/Vol10_1_7_BookReviews.pdf"
   },
   {
@@ -2244,9 +2393,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol10_2_1_WelcomeSpeech_AGJhingran.pdf",
     "juUrl": "",
     "size": 31.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol10_2_1_WelcomeSpeech_AGJhingran.pdf",
+    "gcs_key": "ijhs/Vol10_2_1_WelcomeSpeech_AGJhingran.pdf",
     "localPath": "assets/pdfs/ijhs/Vol10_2_1_WelcomeSpeech_AGJhingran.pdf"
   },
   {
@@ -2259,9 +2409,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol10_2_2_IntroductoryRemarks_FCAuluck.pdf",
     "juUrl": "",
     "size": 43.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol10_2_2_IntroductoryRemarks_FCAuluck.pdf",
+    "gcs_key": "ijhs/Vol10_2_2_IntroductoryRemarks_FCAuluck.pdf",
     "localPath": "assets/pdfs/ijhs/Vol10_2_2_IntroductoryRemarks_FCAuluck.pdf"
   },
   {
@@ -2274,9 +2425,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol10_2_3_InauguralSpeech_BRSeshachar.pdf",
     "juUrl": "",
     "size": 58.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol10_2_3_InauguralSpeech_BRSeshachar.pdf",
+    "gcs_key": "ijhs/Vol10_2_3_InauguralSpeech_BRSeshachar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol10_2_3_InauguralSpeech_BRSeshachar.pdf"
   },
   {
@@ -2289,9 +2441,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol10_2_4_MAhmad.pdf",
     "juUrl": "",
     "size": 242.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol10_2_4_MAhmad.pdf",
+    "gcs_key": "ijhs/Vol10_2_4_MAhmad.pdf",
     "localPath": "assets/pdfs/ijhs/Vol10_2_4_MAhmad.pdf"
   },
   {
@@ -2304,9 +2457,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol10_2_5_AMShastri.pdf",
     "juUrl": "",
     "size": 553.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol10_2_5_AMShastri.pdf",
+    "gcs_key": "ijhs/Vol10_2_5_AMShastri.pdf",
     "localPath": "assets/pdfs/ijhs/Vol10_2_5_AMShastri.pdf"
   },
   {
@@ -2319,9 +2473,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol10_2_6_Ghayasuddin.pdf",
     "juUrl": "",
     "size": 559.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol10_2_6_Ghayasuddin.pdf",
+    "gcs_key": "ijhs/Vol10_2_6_Ghayasuddin.pdf",
     "localPath": "assets/pdfs/ijhs/Vol10_2_6_Ghayasuddin.pdf"
   },
   {
@@ -2334,9 +2489,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol10_2_7_BKNayar.pdf",
     "juUrl": "",
     "size": 110.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol10_2_7_BKNayar.pdf",
+    "gcs_key": "ijhs/Vol10_2_7_BKNayar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol10_2_7_BKNayar.pdf"
   },
   {
@@ -2349,9 +2505,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol10_2_8_SessionIDiscussion.pdf",
     "juUrl": "",
     "size": 41.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol10_2_8_SessionIDiscussion.pdf",
+    "gcs_key": "ijhs/Vol10_2_8_SessionIDiscussion.pdf",
     "localPath": "assets/pdfs/ijhs/Vol10_2_8_SessionIDiscussion.pdf"
   },
   {
@@ -2364,9 +2521,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol10_2_9_BChatterjee.pdf",
     "juUrl": "",
     "size": 98.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol10_2_9_BChatterjee.pdf",
+    "gcs_key": "ijhs/Vol10_2_9_BChatterjee.pdf",
     "localPath": "assets/pdfs/ijhs/Vol10_2_9_BChatterjee.pdf"
   },
   {
@@ -2379,9 +2537,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol10_2_10_RNRai.pdf",
     "juUrl": "",
     "size": 156.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol10_2_10_RNRai.pdf",
+    "gcs_key": "ijhs/Vol10_2_10_RNRai.pdf",
     "localPath": "assets/pdfs/ijhs/Vol10_2_10_RNRai.pdf"
   },
   {
@@ -2394,9 +2553,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol10_2_11_AKBag.pdf",
     "juUrl": "",
     "size": 182.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol10_2_11_AKBag.pdf",
+    "gcs_key": "ijhs/Vol10_2_11_AKBag.pdf",
     "localPath": "assets/pdfs/ijhs/Vol10_2_11_AKBag.pdf"
   },
   {
@@ -2409,9 +2569,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol10_2_12_SNSen.pdf",
     "juUrl": "",
     "size": 253.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol10_2_12_SNSen.pdf",
+    "gcs_key": "ijhs/Vol10_2_12_SNSen.pdf",
     "localPath": "assets/pdfs/ijhs/Vol10_2_12_SNSen.pdf"
   },
   {
@@ -2424,9 +2585,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol10_2_13_SMRAnsari.pdf",
     "juUrl": "",
     "size": 388.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol10_2_13_SMRAnsari.pdf",
+    "gcs_key": "ijhs/Vol10_2_13_SMRAnsari.pdf",
     "localPath": "assets/pdfs/ijhs/Vol10_2_13_SMRAnsari.pdf"
   },
   {
@@ -2439,9 +2601,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol10_2_14_SRoy.pdf",
     "juUrl": "",
     "size": 138.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol10_2_14_SRoy.pdf",
+    "gcs_key": "ijhs/Vol10_2_14_SRoy.pdf",
     "localPath": "assets/pdfs/ijhs/Vol10_2_14_SRoy.pdf"
   },
   {
@@ -2454,9 +2617,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol10_2_15_VBMainkar.pdf",
     "juUrl": "",
     "size": 111.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol10_2_15_VBMainkar.pdf",
+    "gcs_key": "ijhs/Vol10_2_15_VBMainkar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol10_2_15_VBMainkar.pdf"
   },
   {
@@ -2469,9 +2633,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol10_2_16_SMZAlavi.pdf",
     "juUrl": "",
     "size": 94.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol10_2_16_SMZAlavi.pdf",
+    "gcs_key": "ijhs/Vol10_2_16_SMZAlavi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol10_2_16_SMZAlavi.pdf"
   },
   {
@@ -2484,9 +2649,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol10_2_17_NKPanikkar.pdf",
     "juUrl": "",
     "size": 129.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol10_2_17_NKPanikkar.pdf",
+    "gcs_key": "ijhs/Vol10_2_17_NKPanikkar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol10_2_17_NKPanikkar.pdf"
   },
   {
@@ -2499,9 +2665,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol10_2_18_SessionIIDiscussion.pdf",
     "juUrl": "",
     "size": 35.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol10_2_18_SessionIIDiscussion.pdf",
+    "gcs_key": "ijhs/Vol10_2_18_SessionIIDiscussion.pdf",
     "localPath": "assets/pdfs/ijhs/Vol10_2_18_SessionIIDiscussion.pdf"
   },
   {
@@ -2514,9 +2681,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol10_2_19_SMAhmad.pdf",
     "juUrl": "",
     "size": 106.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol10_2_19_SMAhmad.pdf",
+    "gcs_key": "ijhs/Vol10_2_19_SMAhmad.pdf",
     "localPath": "assets/pdfs/ijhs/Vol10_2_19_SMAhmad.pdf"
   },
   {
@@ -2529,9 +2697,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol10_2_20_BKNayar.pdf",
     "juUrl": "",
     "size": 67.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol10_2_20_BKNayar.pdf",
+    "gcs_key": "ijhs/Vol10_2_20_BKNayar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol10_2_20_BKNayar.pdf"
   },
   {
@@ -2544,9 +2713,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol10_2_21_SessionIIIDiscussion.pdf",
     "juUrl": "",
     "size": 14.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol10_2_21_SessionIIIDiscussion.pdf",
+    "gcs_key": "ijhs/Vol10_2_21_SessionIIIDiscussion.pdf",
     "localPath": "assets/pdfs/ijhs/Vol10_2_21_SessionIIIDiscussion.pdf"
   },
   {
@@ -2559,9 +2729,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol10_2_22_MSAsimov.pdf",
     "juUrl": "",
     "size": 56.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol10_2_22_MSAsimov.pdf",
+    "gcs_key": "ijhs/Vol10_2_22_MSAsimov.pdf",
     "localPath": "assets/pdfs/ijhs/Vol10_2_22_MSAsimov.pdf"
   },
   {
@@ -2574,9 +2745,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol10_2_23_AHHabibi.pdf",
     "juUrl": "",
     "size": 32.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol10_2_23_AHHabibi.pdf",
+    "gcs_key": "ijhs/Vol10_2_23_AHHabibi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol10_2_23_AHHabibi.pdf"
   },
   {
@@ -2589,9 +2761,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol10_2_24_BKNayar.pdf",
     "juUrl": "",
     "size": 172.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol10_2_24_BKNayar.pdf",
+    "gcs_key": "ijhs/Vol10_2_24_BKNayar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol10_2_24_BKNayar.pdf"
   },
   {
@@ -2604,9 +2777,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol10_2_25_MRBhat.pdf",
     "juUrl": "",
     "size": 124.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol10_2_25_MRBhat.pdf",
+    "gcs_key": "ijhs/Vol10_2_25_MRBhat.pdf",
     "localPath": "assets/pdfs/ijhs/Vol10_2_25_MRBhat.pdf"
   },
   {
@@ -2619,9 +2793,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol10_2_26_SessionIVDiscussion.pdf",
     "juUrl": "",
     "size": 26.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol10_2_26_SessionIVDiscussion.pdf",
+    "gcs_key": "ijhs/Vol10_2_26_SessionIVDiscussion.pdf",
     "localPath": "assets/pdfs/ijhs/Vol10_2_26_SessionIVDiscussion.pdf"
   },
   {
@@ -2634,9 +2809,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol11_1_1_RCGupta.pdf",
     "juUrl": "",
     "size": 159.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol11_1_1_RCGupta.pdf",
+    "gcs_key": "ijhs/Vol11_1_1_RCGupta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol11_1_1_RCGupta.pdf"
   },
   {
@@ -2649,9 +2825,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol11_1_2_BGLSwamy.pdf",
     "juUrl": "",
     "size": 450.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol11_1_2_BGLSwamy.pdf",
+    "gcs_key": "ijhs/Vol11_1_2_BGLSwamy.pdf",
     "localPath": "assets/pdfs/ijhs/Vol11_1_2_BGLSwamy.pdf"
   },
   {
@@ -2664,9 +2841,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol11_1_3_BGLSwamy.pdf",
     "juUrl": "",
     "size": 325.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol11_1_3_BGLSwamy.pdf",
+    "gcs_key": "ijhs/Vol11_1_3_BGLSwamy.pdf",
     "localPath": "assets/pdfs/ijhs/Vol11_1_3_BGLSwamy.pdf"
   },
   {
@@ -2679,9 +2857,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol11_1_4_RNRai.pdf",
     "juUrl": "",
     "size": 95.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol11_1_4_RNRai.pdf",
+    "gcs_key": "ijhs/Vol11_1_4_RNRai.pdf",
     "localPath": "assets/pdfs/ijhs/Vol11_1_4_RNRai.pdf"
   },
   {
@@ -2694,9 +2873,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol11_1_5_AKBag.pdf",
     "juUrl": "",
     "size": 87.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol11_1_5_AKBag.pdf",
+    "gcs_key": "ijhs/Vol11_1_5_AKBag.pdf",
     "localPath": "assets/pdfs/ijhs/Vol11_1_5_AKBag.pdf"
   },
   {
@@ -2709,9 +2889,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol11_1_6_LCJain.pdf",
     "juUrl": "",
     "size": 362.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol11_1_6_LCJain.pdf",
+    "gcs_key": "ijhs/Vol11_1_6_LCJain.pdf",
     "localPath": "assets/pdfs/ijhs/Vol11_1_6_LCJain.pdf"
   },
   {
@@ -2724,9 +2905,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol11_1_7_RHSingh.pdf",
     "juUrl": "",
     "size": 187.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol11_1_7_RHSingh.pdf",
+    "gcs_key": "ijhs/Vol11_1_7_RHSingh.pdf",
     "localPath": "assets/pdfs/ijhs/Vol11_1_7_RHSingh.pdf"
   },
   {
@@ -2739,9 +2921,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol11_2_1_LCJain.pdf",
     "juUrl": "",
     "size": 481.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol11_2_1_LCJain.pdf",
+    "gcs_key": "ijhs/Vol11_2_1_LCJain.pdf",
     "localPath": "assets/pdfs/ijhs/Vol11_2_1_LCJain.pdf"
   },
   {
@@ -2754,9 +2937,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol11_2_2_MNChannabasappa.pdf",
     "juUrl": "",
     "size": 267.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol11_2_2_MNChannabasappa.pdf",
+    "gcs_key": "ijhs/Vol11_2_2_MNChannabasappa.pdf",
     "localPath": "assets/pdfs/ijhs/Vol11_2_2_MNChannabasappa.pdf"
   },
   {
@@ -2769,9 +2953,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol11_2_3_RMitra.pdf",
     "juUrl": "",
     "size": 179.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol11_2_3_RMitra.pdf",
+    "gcs_key": "ijhs/Vol11_2_3_RMitra.pdf",
     "localPath": "assets/pdfs/ijhs/Vol11_2_3_RMitra.pdf"
   },
   {
@@ -2784,9 +2969,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol11_2_4_DPAgarwal.pdf",
     "juUrl": "",
     "size": 75.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol11_2_4_DPAgarwal.pdf",
+    "gcs_key": "ijhs/Vol11_2_4_DPAgarwal.pdf",
     "localPath": "assets/pdfs/ijhs/Vol11_2_4_DPAgarwal.pdf"
   },
   {
@@ -2799,9 +2985,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol11_2_5_MChaudhuri.pdf",
     "juUrl": "",
     "size": 236.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol11_2_5_MChaudhuri.pdf",
+    "gcs_key": "ijhs/Vol11_2_5_MChaudhuri.pdf",
     "localPath": "assets/pdfs/ijhs/Vol11_2_5_MChaudhuri.pdf"
   },
   {
@@ -2814,9 +3001,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol11_2_6_TMSrinivasan.pdf",
     "juUrl": "",
     "size": 254.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol11_2_6_TMSrinivasan.pdf",
+    "gcs_key": "ijhs/Vol11_2_6_TMSrinivasan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol11_2_6_TMSrinivasan.pdf"
   },
   {
@@ -2829,9 +3017,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol13_1_1_PKMajumdar.pdf",
     "juUrl": "",
     "size": 75.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol13_1_1_PKMajumdar.pdf",
+    "gcs_key": "ijhs/Vol13_1_1_PKMajumdar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol13_1_1_PKMajumdar.pdf"
   },
   {
@@ -2844,9 +3033,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol13_1_2_PKMajumdar.pdf",
     "juUrl": "",
     "size": 75.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol13_1_2_PKMajumdar.pdf",
+    "gcs_key": "ijhs/Vol13_1_2_PKMajumdar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol13_1_2_PKMajumdar.pdf"
   },
   {
@@ -2859,9 +3049,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol13_1_3_PKMajumdar.pdf",
     "juUrl": "",
     "size": 87.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol13_1_3_PKMajumdar.pdf",
+    "gcs_key": "ijhs/Vol13_1_3_PKMajumdar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol13_1_3_PKMajumdar.pdf"
   },
   {
@@ -2874,9 +3065,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol13_1_4_SRNMurthy.pdf",
     "juUrl": "",
     "size": 100.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol13_1_4_SRNMurthy.pdf",
+    "gcs_key": "ijhs/Vol13_1_4_SRNMurthy.pdf",
     "localPath": "assets/pdfs/ijhs/Vol13_1_4_SRNMurthy.pdf"
   },
   {
@@ -2889,9 +3081,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol13_1_5_HGershenowitz.pdf",
     "juUrl": "",
     "size": 99.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol13_1_5_HGershenowitz.pdf",
+    "gcs_key": "ijhs/Vol13_1_5_HGershenowitz.pdf",
     "localPath": "assets/pdfs/ijhs/Vol13_1_5_HGershenowitz.pdf"
   },
   {
@@ -2904,9 +3097,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol13_1_6_PKSrivastava.pdf",
     "juUrl": "",
     "size": 77.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol13_1_6_PKSrivastava.pdf",
+    "gcs_key": "ijhs/Vol13_1_6_PKSrivastava.pdf",
     "localPath": "assets/pdfs/ijhs/Vol13_1_6_PKSrivastava.pdf"
   },
   {
@@ -2919,9 +3113,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol13_1_7_RPKulkarni.pdf",
     "juUrl": "",
     "size": 158.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol13_1_7_RPKulkarni.pdf",
+    "gcs_key": "ijhs/Vol13_1_7_RPKulkarni.pdf",
     "localPath": "assets/pdfs/ijhs/Vol13_1_7_RPKulkarni.pdf"
   },
   {
@@ -2934,9 +3129,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol13_1_8_LCJain.pdf",
     "juUrl": "",
     "size": 146.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol13_1_8_LCJain.pdf",
+    "gcs_key": "ijhs/Vol13_1_8_LCJain.pdf",
     "localPath": "assets/pdfs/ijhs/Vol13_1_8_LCJain.pdf"
   },
   {
@@ -2949,9 +3145,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol13_1_9_SMahdihassan.pdf",
     "juUrl": "",
     "size": 174.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol13_1_9_SMahdihassan.pdf",
+    "gcs_key": "ijhs/Vol13_1_9_SMahdihassan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol13_1_9_SMahdihassan.pdf"
   },
   {
@@ -2964,9 +3161,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol13_1_10_HGershenowitz.pdf",
     "juUrl": "",
     "size": 124.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol13_1_10_HGershenowitz.pdf",
+    "gcs_key": "ijhs/Vol13_1_10_HGershenowitz.pdf",
     "localPath": "assets/pdfs/ijhs/Vol13_1_10_HGershenowitz.pdf"
   },
   {
@@ -2979,9 +3177,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol13_1_11_SMRAnsari.pdf",
     "juUrl": "",
     "size": 187.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol13_1_11_SMRAnsari.pdf",
+    "gcs_key": "ijhs/Vol13_1_11_SMRAnsari.pdf",
     "localPath": "assets/pdfs/ijhs/Vol13_1_11_SMRAnsari.pdf"
   },
   {
@@ -2994,9 +3193,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol13_1_12_BookReviews.pdf",
     "juUrl": "",
     "size": 80.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol13_1_12_BookReviews.pdf",
+    "gcs_key": "ijhs/Vol13_1_12_BookReviews.pdf",
     "localPath": "assets/pdfs/ijhs/Vol13_1_12_BookReviews.pdf"
   },
   {
@@ -3009,9 +3209,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol13_2_1_SRNMurthy.pdf",
     "juUrl": "",
     "size": 131.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol13_2_1_SRNMurthy.pdf",
+    "gcs_key": "ijhs/Vol13_2_1_SRNMurthy.pdf",
     "localPath": "assets/pdfs/ijhs/Vol13_2_1_SRNMurthy.pdf"
   },
   {
@@ -3024,9 +3225,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol13_2_2_MRoy.pdf",
     "juUrl": "",
     "size": 542.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol13_2_2_MRoy.pdf",
+    "gcs_key": "ijhs/Vol13_2_2_MRoy.pdf",
     "localPath": "assets/pdfs/ijhs/Vol13_2_2_MRoy.pdf"
   },
   {
@@ -3039,9 +3241,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol13_2_3_KNPrasad.pdf",
     "juUrl": "",
     "size": 90.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol13_2_3_KNPrasad.pdf",
+    "gcs_key": "ijhs/Vol13_2_3_KNPrasad.pdf",
     "localPath": "assets/pdfs/ijhs/Vol13_2_3_KNPrasad.pdf"
   },
   {
@@ -3054,9 +3257,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol13_2_4_RPKulkarni.pdf",
     "juUrl": "",
     "size": 129.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol13_2_4_RPKulkarni.pdf",
+    "gcs_key": "ijhs/Vol13_2_4_RPKulkarni.pdf",
     "localPath": "assets/pdfs/ijhs/Vol13_2_4_RPKulkarni.pdf"
   },
   {
@@ -3069,9 +3273,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol13_2_5_RCGupta.pdf",
     "juUrl": "",
     "size": 371.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol13_2_5_RCGupta.pdf",
+    "gcs_key": "ijhs/Vol13_2_5_RCGupta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol13_2_5_RCGupta.pdf"
   },
   {
@@ -3084,9 +3289,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol13_2_6_HGershenowitz.pdf",
     "juUrl": "",
     "size": 152.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol13_2_6_HGershenowitz.pdf",
+    "gcs_key": "ijhs/Vol13_2_6_HGershenowitz.pdf",
     "localPath": "assets/pdfs/ijhs/Vol13_2_6_HGershenowitz.pdf"
   },
   {
@@ -3099,9 +3305,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol13_2_7_TSKShastri.pdf",
     "juUrl": "",
     "size": 173.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol13_2_7_TSKShastri.pdf",
+    "gcs_key": "ijhs/Vol13_2_7_TSKShastri.pdf",
     "localPath": "assets/pdfs/ijhs/Vol13_2_7_TSKShastri.pdf"
   },
   {
@@ -3114,9 +3321,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol13_2_8_BookReviews.pdf",
     "juUrl": "",
     "size": 57.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol13_2_8_BookReviews.pdf",
+    "gcs_key": "ijhs/Vol13_2_8_BookReviews.pdf",
     "localPath": "assets/pdfs/ijhs/Vol13_2_8_BookReviews.pdf"
   },
   {
@@ -3129,9 +3337,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol14_1_1_SSLishk.pdf",
     "juUrl": "",
     "size": 282.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol14_1_1_SSLishk.pdf",
+    "gcs_key": "ijhs/Vol14_1_1_SSLishk.pdf",
     "localPath": "assets/pdfs/ijhs/Vol14_1_1_SSLishk.pdf"
   },
   {
@@ -3144,9 +3353,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol14_1_2_HGershenowitz.pdf",
     "juUrl": "",
     "size": 157.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol14_1_2_HGershenowitz.pdf",
+    "gcs_key": "ijhs/Vol14_1_2_HGershenowitz.pdf",
     "localPath": "assets/pdfs/ijhs/Vol14_1_2_HGershenowitz.pdf"
   },
   {
@@ -3159,9 +3369,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol14_1_3_HGershenowitz.pdf",
     "juUrl": "",
     "size": 128.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol14_1_3_HGershenowitz.pdf",
+    "gcs_key": "ijhs/Vol14_1_3_HGershenowitz.pdf",
     "localPath": "assets/pdfs/ijhs/Vol14_1_3_HGershenowitz.pdf"
   },
   {
@@ -3174,9 +3385,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol14_1_4_LCJain.pdf",
     "juUrl": "",
     "size": 575.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol14_1_4_LCJain.pdf",
+    "gcs_key": "ijhs/Vol14_1_4_LCJain.pdf",
     "localPath": "assets/pdfs/ijhs/Vol14_1_4_LCJain.pdf"
   },
   {
@@ -3189,9 +3401,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol14_1_5_RCGupta.pdf",
     "juUrl": "",
     "size": 113.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol14_1_5_RCGupta.pdf",
+    "gcs_key": "ijhs/Vol14_1_5_RCGupta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol14_1_5_RCGupta.pdf"
   },
   {
@@ -3204,9 +3417,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol14_1_6_BookReviews.pdf",
     "juUrl": "",
     "size": 85.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol14_1_6_BookReviews.pdf",
+    "gcs_key": "ijhs/Vol14_1_6_BookReviews.pdf",
     "localPath": "assets/pdfs/ijhs/Vol14_1_6_BookReviews.pdf"
   },
   {
@@ -3219,9 +3433,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol14_1_7_News.pdf",
     "juUrl": "",
     "size": 84.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol14_1_7_News.pdf",
+    "gcs_key": "ijhs/Vol14_1_7_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol14_1_7_News.pdf"
   },
   {
@@ -3234,9 +3449,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol14_2_1_SRNMurthy.pdf",
     "juUrl": "",
     "size": 73.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol14_2_1_SRNMurthy.pdf",
+    "gcs_key": "ijhs/Vol14_2_1_SRNMurthy.pdf",
     "localPath": "assets/pdfs/ijhs/Vol14_2_1_SRNMurthy.pdf"
   },
   {
@@ -3249,9 +3465,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol14_2_2_VMukherji.pdf",
     "juUrl": "",
     "size": 423.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol14_2_2_VMukherji.pdf",
+    "gcs_key": "ijhs/Vol14_2_2_VMukherji.pdf",
     "localPath": "assets/pdfs/ijhs/Vol14_2_2_VMukherji.pdf"
   },
   {
@@ -3264,9 +3481,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol14_2_3_HGershenowitz.pdf",
     "juUrl": "",
     "size": 202.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol14_2_3_HGershenowitz.pdf",
+    "gcs_key": "ijhs/Vol14_2_3_HGershenowitz.pdf",
     "localPath": "assets/pdfs/ijhs/Vol14_2_3_HGershenowitz.pdf"
   },
   {
@@ -3279,9 +3497,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol14_2_4_HGershenowitz.pdf",
     "juUrl": "",
     "size": 149.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol14_2_4_HGershenowitz.pdf",
+    "gcs_key": "ijhs/Vol14_2_4_HGershenowitz.pdf",
     "localPath": "assets/pdfs/ijhs/Vol14_2_4_HGershenowitz.pdf"
   },
   {
@@ -3294,9 +3513,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol14_2_5_JCSikdar.pdf",
     "juUrl": "",
     "size": 243.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol14_2_5_JCSikdar.pdf",
+    "gcs_key": "ijhs/Vol14_2_5_JCSikdar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol14_2_5_JCSikdar.pdf"
   },
   {
@@ -3309,9 +3529,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol14_2_6_SRNMurthy.pdf",
     "juUrl": "",
     "size": 89.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol14_2_6_SRNMurthy.pdf",
+    "gcs_key": "ijhs/Vol14_2_6_SRNMurthy.pdf",
     "localPath": "assets/pdfs/ijhs/Vol14_2_6_SRNMurthy.pdf"
   },
   {
@@ -3324,9 +3545,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol14_2_7_RSSingh.pdf",
     "juUrl": "",
     "size": 94.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol14_2_7_RSSingh.pdf",
+    "gcs_key": "ijhs/Vol14_2_7_RSSingh.pdf",
     "localPath": "assets/pdfs/ijhs/Vol14_2_7_RSSingh.pdf"
   },
   {
@@ -3339,9 +3561,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol14_2_8_SRNMurthy.pdf",
     "juUrl": "",
     "size": 119.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol14_2_8_SRNMurthy.pdf",
+    "gcs_key": "ijhs/Vol14_2_8_SRNMurthy.pdf",
     "localPath": "assets/pdfs/ijhs/Vol14_2_8_SRNMurthy.pdf"
   },
   {
@@ -3354,9 +3577,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol14_2_9_TSKSastry.pdf",
     "juUrl": "",
     "size": 104.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol14_2_9_TSKSastry.pdf",
+    "gcs_key": "ijhs/Vol14_2_9_TSKSastry.pdf",
     "localPath": "assets/pdfs/ijhs/Vol14_2_9_TSKSastry.pdf"
   },
   {
@@ -3369,9 +3593,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol14_2_10_SSKamavisdar.pdf",
     "juUrl": "",
     "size": 32.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol14_2_10_SSKamavisdar.pdf",
+    "gcs_key": "ijhs/Vol14_2_10_SSKamavisdar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol14_2_10_SSKamavisdar.pdf"
   },
   {
@@ -3384,9 +3609,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol14_2_11_BookReviews.pdf",
     "juUrl": "",
     "size": 70.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol14_2_11_BookReviews.pdf",
+    "gcs_key": "ijhs/Vol14_2_11_BookReviews.pdf",
     "localPath": "assets/pdfs/ijhs/Vol14_2_11_BookReviews.pdf"
   },
   {
@@ -3399,9 +3625,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol14_2_12_News.pdf",
     "juUrl": "",
     "size": 42.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol14_2_12_News.pdf",
+    "gcs_key": "ijhs/Vol14_2_12_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol14_2_12_News.pdf"
   },
   {
@@ -3414,9 +3641,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol15_1_4_SBagchi.pdf",
     "juUrl": "",
     "size": 104.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol15_1_4_SBagchi.pdf",
+    "gcs_key": "ijhs/Vol15_1_4_SBagchi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol15_1_4_SBagchi.pdf"
   },
   {
@@ -3429,9 +3657,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol15_1_6_RCGupta.pdf",
     "juUrl": "",
     "size": 112.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol15_1_6_RCGupta.pdf",
+    "gcs_key": "ijhs/Vol15_1_6_RCGupta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol15_1_6_RCGupta.pdf"
   },
   {
@@ -3444,9 +3673,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol15_1_8_HKNaqvi.pdf",
     "juUrl": "",
     "size": 285.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol15_1_8_HKNaqvi.pdf",
+    "gcs_key": "ijhs/Vol15_1_8_HKNaqvi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol15_1_8_HKNaqvi.pdf"
   },
   {
@@ -3459,9 +3689,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol15_1_9_RLVerma.pdf",
     "juUrl": "",
     "size": 218.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol15_1_9_RLVerma.pdf",
+    "gcs_key": "ijhs/Vol15_1_9_RLVerma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol15_1_9_RLVerma.pdf"
   },
   {
@@ -3474,9 +3705,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol15_1_10_AKBag.pdf",
     "juUrl": "",
     "size": 325.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol15_1_10_AKBag.pdf",
+    "gcs_key": "ijhs/Vol15_1_10_AKBag.pdf",
     "localPath": "assets/pdfs/ijhs/Vol15_1_10_AKBag.pdf"
   },
   {
@@ -3489,9 +3721,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol15_1_11_KBehari.pdf",
     "juUrl": "",
     "size": 222.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol15_1_11_KBehari.pdf",
+    "gcs_key": "ijhs/Vol15_1_11_KBehari.pdf",
     "localPath": "assets/pdfs/ijhs/Vol15_1_11_KBehari.pdf"
   },
   {
@@ -3504,9 +3737,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol15_1_12_DKumar.pdf",
     "juUrl": "",
     "size": 189.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol15_1_12_DKumar.pdf",
+    "gcs_key": "ijhs/Vol15_1_12_DKumar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol15_1_12_DKumar.pdf"
   },
   {
@@ -3519,9 +3753,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol15_1_1_INVerma.pdf",
     "juUrl": "",
     "size": 128.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol15_1_1_INVerma.pdf",
+    "gcs_key": "ijhs/Vol15_1_1_INVerma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol15_1_1_INVerma.pdf"
   },
   {
@@ -3534,9 +3769,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol15_1_2_JCSikdar.pdf",
     "juUrl": "",
     "size": 254.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol15_1_2_JCSikdar.pdf",
+    "gcs_key": "ijhs/Vol15_1_2_JCSikdar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol15_1_2_JCSikdar.pdf"
   },
   {
@@ -3549,9 +3785,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol15_1_3_TSiddiqi.pdf",
     "juUrl": "",
     "size": 137.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol15_1_3_TSiddiqi.pdf",
+    "gcs_key": "ijhs/Vol15_1_3_TSiddiqi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol15_1_3_TSiddiqi.pdf"
   },
   {
@@ -3564,9 +3801,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol15_1_5_SPSangar.pdf",
     "juUrl": "",
     "size": 250.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol15_1_5_SPSangar.pdf",
+    "gcs_key": "ijhs/Vol15_1_5_SPSangar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol15_1_5_SPSangar.pdf"
   },
   {
@@ -3579,9 +3817,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol15_1_7_SAKGhori.pdf",
     "juUrl": "",
     "size": 174.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol15_1_7_SAKGhori.pdf",
+    "gcs_key": "ijhs/Vol15_1_7_SAKGhori.pdf",
     "localPath": "assets/pdfs/ijhs/Vol15_1_7_SAKGhori.pdf"
   },
   {
@@ -3594,9 +3833,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol15_1_13_HGershenowitz.pdf",
     "juUrl": "",
     "size": 127.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol15_1_13_HGershenowitz.pdf",
+    "gcs_key": "ijhs/Vol15_1_13_HGershenowitz.pdf",
     "localPath": "assets/pdfs/ijhs/Vol15_1_13_HGershenowitz.pdf"
   },
   {
@@ -3609,9 +3849,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol15_2_4_HGershenowitz.pdf",
     "juUrl": "",
     "size": 137.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol15_2_4_HGershenowitz.pdf",
+    "gcs_key": "ijhs/Vol15_2_4_HGershenowitz.pdf",
     "localPath": "assets/pdfs/ijhs/Vol15_2_4_HGershenowitz.pdf"
   },
   {
@@ -3624,9 +3865,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol15_2_5_SSKamavisdar.pdf",
     "juUrl": "",
     "size": 306.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol15_2_5_SSKamavisdar.pdf",
+    "gcs_key": "ijhs/Vol15_2_5_SSKamavisdar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol15_2_5_SSKamavisdar.pdf"
   },
   {
@@ -3639,9 +3881,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol15_2_6_SMahadihassan.pdf",
     "juUrl": "",
     "size": 157.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol15_2_6_SMahadihassan.pdf",
+    "gcs_key": "ijhs/Vol15_2_6_SMahadihassan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol15_2_6_SMahadihassan.pdf"
   },
   {
@@ -3654,9 +3897,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol15_2_1_KSShukla.pdf",
     "juUrl": "",
     "size": 1304.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol15_2_1_KSShukla.pdf",
+    "gcs_key": "ijhs/Vol15_2_1_KSShukla.pdf",
     "localPath": "assets/pdfs/ijhs/Vol15_2_1_KSShukla.pdf"
   },
   {
@@ -3669,9 +3913,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol15_2_2_SRNMurthy.pdf",
     "juUrl": "",
     "size": 106.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol15_2_2_SRNMurthy.pdf",
+    "gcs_key": "ijhs/Vol15_2_2_SRNMurthy.pdf",
     "localPath": "assets/pdfs/ijhs/Vol15_2_2_SRNMurthy.pdf"
   },
   {
@@ -3684,9 +3929,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol15_2_3_SSLishk.pdf",
     "juUrl": "",
     "size": 267.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol15_2_3_SSLishk.pdf",
+    "gcs_key": "ijhs/Vol15_2_3_SSLishk.pdf",
     "localPath": "assets/pdfs/ijhs/Vol15_2_3_SSLishk.pdf"
   },
   {
@@ -3699,9 +3945,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol16_1_2_KKThakral.pdf",
     "juUrl": "",
     "size": 97.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol16_1_2_KKThakral.pdf",
+    "gcs_key": "ijhs/Vol16_1_2_KKThakral.pdf",
     "localPath": "assets/pdfs/ijhs/Vol16_1_2_KKThakral.pdf"
   },
   {
@@ -3714,9 +3961,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol16_1_4_TSiddiqi.pdf",
     "juUrl": "",
     "size": 68.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol16_1_4_TSiddiqi.pdf",
+    "gcs_key": "ijhs/Vol16_1_4_TSiddiqi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol16_1_4_TSiddiqi.pdf"
   },
   {
@@ -3729,9 +3977,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol16_1_6_GNChaturvedi.pdf",
     "juUrl": "",
     "size": 90.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol16_1_6_GNChaturvedi.pdf",
+    "gcs_key": "ijhs/Vol16_1_6_GNChaturvedi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol16_1_6_GNChaturvedi.pdf"
   },
   {
@@ -3744,9 +3993,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol16_1_7_SKMishra.pdf",
     "juUrl": "",
     "size": 98.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol16_1_7_SKMishra.pdf",
+    "gcs_key": "ijhs/Vol16_1_7_SKMishra.pdf",
     "localPath": "assets/pdfs/ijhs/Vol16_1_7_SKMishra.pdf"
   },
   {
@@ -3759,9 +4009,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol16_1_8_RSSingh.pdf",
     "juUrl": "",
     "size": 121.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol16_1_8_RSSingh.pdf",
+    "gcs_key": "ijhs/Vol16_1_8_RSSingh.pdf",
     "localPath": "assets/pdfs/ijhs/Vol16_1_8_RSSingh.pdf"
   },
   {
@@ -3774,9 +4025,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol16_1_11_SMahdihassan.pdf",
     "juUrl": "",
     "size": 278.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol16_1_11_SMahdihassan.pdf",
+    "gcs_key": "ijhs/Vol16_1_11_SMahdihassan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol16_1_11_SMahdihassan.pdf"
   },
   {
@@ -3789,9 +4041,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol16_1_12_NPRai.pdf",
     "juUrl": "",
     "size": 246.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol16_1_12_NPRai.pdf",
+    "gcs_key": "ijhs/Vol16_1_12_NPRai.pdf",
     "localPath": "assets/pdfs/ijhs/Vol16_1_12_NPRai.pdf"
   },
   {
@@ -3804,9 +4057,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol16_1_15_AKBose.pdf",
     "juUrl": "",
     "size": 75.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol16_1_15_AKBose.pdf",
+    "gcs_key": "ijhs/Vol16_1_15_AKBose.pdf",
     "localPath": "assets/pdfs/ijhs/Vol16_1_15_AKBose.pdf"
   },
   {
@@ -3819,9 +4073,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol16_1_16_CBDube.pdf",
     "juUrl": "",
     "size": 67.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol16_1_16_CBDube.pdf",
+    "gcs_key": "ijhs/Vol16_1_16_CBDube.pdf",
     "localPath": "assets/pdfs/ijhs/Vol16_1_16_CBDube.pdf"
   },
   {
@@ -3834,9 +4089,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol_16_1_0_Address.pdf",
     "juUrl": "",
     "size": 32.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol_16_1_0_Address.pdf",
+    "gcs_key": "ijhs/Vol_16_1_0_Address.pdf",
     "localPath": "assets/pdfs/ijhs/Vol_16_1_0_Address.pdf"
   },
   {
@@ -3849,9 +4105,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol16_1_1_PVSharma.pdf",
     "juUrl": "",
     "size": 145.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol16_1_1_PVSharma.pdf",
+    "gcs_key": "ijhs/Vol16_1_1_PVSharma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol16_1_1_PVSharma.pdf"
   },
   {
@@ -3864,9 +4121,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol16_1_3_RNSingh.pdf",
     "juUrl": "",
     "size": 106.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol16_1_3_RNSingh.pdf",
+    "gcs_key": "ijhs/Vol16_1_3_RNSingh.pdf",
     "localPath": "assets/pdfs/ijhs/Vol16_1_3_RNSingh.pdf"
   },
   {
@@ -3879,9 +4137,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol16_1_5_TSiddiqi.pdf",
     "juUrl": "",
     "size": 92.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol16_1_5_TSiddiqi.pdf",
+    "gcs_key": "ijhs/Vol16_1_5_TSiddiqi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol16_1_5_TSiddiqi.pdf"
   },
   {
@@ -3894,9 +4153,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol16_1_9_MSKhan.pdf",
     "juUrl": "",
     "size": 223.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol16_1_9_MSKhan.pdf",
+    "gcs_key": "ijhs/Vol16_1_9_MSKhan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol16_1_9_MSKhan.pdf"
   },
   {
@@ -3909,9 +4169,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol16_1_10_ABKhan.pdf",
     "juUrl": "",
     "size": 126.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol16_1_10_ABKhan.pdf",
+    "gcs_key": "ijhs/Vol16_1_10_ABKhan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol16_1_10_ABKhan.pdf"
   },
   {
@@ -3924,9 +4185,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol16_1_13_BNSingh.pdf",
     "juUrl": "",
     "size": 138.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol16_1_13_BNSingh.pdf",
+    "gcs_key": "ijhs/Vol16_1_13_BNSingh.pdf",
     "localPath": "assets/pdfs/ijhs/Vol16_1_13_BNSingh.pdf"
   },
   {
@@ -3939,9 +4201,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol16_1_14_AHIsraili.pdf",
     "juUrl": "",
     "size": 95.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol16_1_14_AHIsraili.pdf",
+    "gcs_key": "ijhs/Vol16_1_14_AHIsraili.pdf",
     "localPath": "assets/pdfs/ijhs/Vol16_1_14_AHIsraili.pdf"
   },
   {
@@ -3954,9 +4217,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol16_2_4_AJKhan.pdf",
     "juUrl": "",
     "size": 117.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol16_2_4_AJKhan.pdf",
+    "gcs_key": "ijhs/Vol16_2_4_AJKhan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol16_2_4_AJKhan.pdf"
   },
   {
@@ -3969,9 +4233,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol16_2_6_JLSanchez.pdf",
     "juUrl": "",
     "size": 244.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol16_2_6_JLSanchez.pdf",
+    "gcs_key": "ijhs/Vol16_2_6_JLSanchez.pdf",
     "localPath": "assets/pdfs/ijhs/Vol16_2_6_JLSanchez.pdf"
   },
   {
@@ -3984,9 +4249,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol16_2_9_KTMHegde.pdf",
     "juUrl": "",
     "size": 301.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol16_2_9_KTMHegde.pdf",
+    "gcs_key": "ijhs/Vol16_2_9_KTMHegde.pdf",
     "localPath": "assets/pdfs/ijhs/Vol16_2_9_KTMHegde.pdf"
   },
   {
@@ -3999,9 +4265,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol16_2_10_SPSangar.pdf",
     "juUrl": "",
     "size": 254.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol16_2_10_SPSangar.pdf",
+    "gcs_key": "ijhs/Vol16_2_10_SPSangar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol16_2_10_SPSangar.pdf"
   },
   {
@@ -4014,9 +4281,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol16_2_11_GAbraham.pdf",
     "juUrl": "",
     "size": 64.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol16_2_11_GAbraham.pdf",
+    "gcs_key": "ijhs/Vol16_2_11_GAbraham.pdf",
     "localPath": "assets/pdfs/ijhs/Vol16_2_11_GAbraham.pdf"
   },
   {
@@ -4029,9 +4297,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol16_2_12_RSSingh.pdf",
     "juUrl": "",
     "size": 94.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol16_2_12_RSSingh.pdf",
+    "gcs_key": "ijhs/Vol16_2_12_RSSingh.pdf",
     "localPath": "assets/pdfs/ijhs/Vol16_2_12_RSSingh.pdf"
   },
   {
@@ -4044,9 +4313,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol16_2_1_PKMajumdar.pdf",
     "juUrl": "",
     "size": 85.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol16_2_1_PKMajumdar.pdf",
+    "gcs_key": "ijhs/Vol16_2_1_PKMajumdar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol16_2_1_PKMajumdar.pdf"
   },
   {
@@ -4059,9 +4329,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol16_2_2_SDSharma.pdf",
     "juUrl": "",
     "size": 221.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol16_2_2_SDSharma.pdf",
+    "gcs_key": "ijhs/Vol16_2_2_SDSharma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol16_2_2_SDSharma.pdf"
   },
   {
@@ -4074,9 +4345,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol16_2_3_HGershenowitz.pdf",
     "juUrl": "",
     "size": 184.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol16_2_3_HGershenowitz.pdf",
+    "gcs_key": "ijhs/Vol16_2_3_HGershenowitz.pdf",
     "localPath": "assets/pdfs/ijhs/Vol16_2_3_HGershenowitz.pdf"
   },
   {
@@ -4089,9 +4361,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol16_2_5_NKGarg.pdf",
     "juUrl": "",
     "size": 201.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol16_2_5_NKGarg.pdf",
+    "gcs_key": "ijhs/Vol16_2_5_NKGarg.pdf",
     "localPath": "assets/pdfs/ijhs/Vol16_2_5_NKGarg.pdf"
   },
   {
@@ -4104,9 +4377,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol16_2_7_RMitra.pdf",
     "juUrl": "",
     "size": 277.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol16_2_7_RMitra.pdf",
+    "gcs_key": "ijhs/Vol16_2_7_RMitra.pdf",
     "localPath": "assets/pdfs/ijhs/Vol16_2_7_RMitra.pdf"
   },
   {
@@ -4119,9 +4393,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol16_2_8_DGThatte.pdf",
     "juUrl": "",
     "size": 174.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol16_2_8_DGThatte.pdf",
+    "gcs_key": "ijhs/Vol16_2_8_DGThatte.pdf",
     "localPath": "assets/pdfs/ijhs/Vol16_2_8_DGThatte.pdf"
   },
   {
@@ -4134,9 +4409,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol16_2_13_SMahdihassan.pdf",
     "juUrl": "",
     "size": 154.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol16_2_13_SMahdihassan.pdf",
+    "gcs_key": "ijhs/Vol16_2_13_SMahdihassan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol16_2_13_SMahdihassan.pdf"
   },
   {
@@ -4149,9 +4425,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol17_1_2_RDRoy.pdf",
     "juUrl": "",
     "size": 197.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol17_1_2_RDRoy.pdf",
+    "gcs_key": "ijhs/Vol17_1_2_RDRoy.pdf",
     "localPath": "assets/pdfs/ijhs/Vol17_1_2_RDRoy.pdf"
   },
   {
@@ -4164,9 +4441,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol17_1_4_MJMehta.pdf",
     "juUrl": "",
     "size": 361.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol17_1_4_MJMehta.pdf",
+    "gcs_key": "ijhs/Vol17_1_4_MJMehta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol17_1_4_MJMehta.pdf"
   },
   {
@@ -4179,9 +4457,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol17_1_7_AKBag.pdf",
     "juUrl": "",
     "size": 180.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol17_1_7_AKBag.pdf",
+    "gcs_key": "ijhs/Vol17_1_7_AKBag.pdf",
     "localPath": "assets/pdfs/ijhs/Vol17_1_7_AKBag.pdf"
   },
   {
@@ -4194,9 +4473,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol17_1_12_KSMurty.pdf",
     "juUrl": "",
     "size": 282.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol17_1_12_KSMurty.pdf",
+    "gcs_key": "ijhs/Vol17_1_12_KSMurty.pdf",
     "localPath": "assets/pdfs/ijhs/Vol17_1_12_KSMurty.pdf"
   },
   {
@@ -4209,9 +4489,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol17_1_13_BookReviews.pdf",
     "juUrl": "",
     "size": 127.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol17_1_13_BookReviews.pdf",
+    "gcs_key": "ijhs/Vol17_1_13_BookReviews.pdf",
     "localPath": "assets/pdfs/ijhs/Vol17_1_13_BookReviews.pdf"
   },
   {
@@ -4224,9 +4505,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol17_1_14_News.pdf",
     "juUrl": "",
     "size": 106.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol17_1_14_News.pdf",
+    "gcs_key": "ijhs/Vol17_1_14_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol17_1_14_News.pdf"
   },
   {
@@ -4239,9 +4521,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol17_1_1_SNSen.pdf",
     "juUrl": "",
     "size": 315.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol17_1_1_SNSen.pdf",
+    "gcs_key": "ijhs/Vol17_1_1_SNSen.pdf",
     "localPath": "assets/pdfs/ijhs/Vol17_1_1_SNSen.pdf"
   },
   {
@@ -4254,9 +4537,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol17_1_3_RPKulkarni.pdf",
     "juUrl": "",
     "size": 274.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol17_1_3_RPKulkarni.pdf",
+    "gcs_key": "ijhs/Vol17_1_3_RPKulkarni.pdf",
     "localPath": "assets/pdfs/ijhs/Vol17_1_3_RPKulkarni.pdf"
   },
   {
@@ -4269,9 +4553,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol17_1_5_HKNaqvi.pdf",
     "juUrl": "",
     "size": 122.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol17_1_5_HKNaqvi.pdf",
+    "gcs_key": "ijhs/Vol17_1_5_HKNaqvi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol17_1_5_HKNaqvi.pdf"
   },
   {
@@ -4284,9 +4569,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol17_1_6_HCBhardwaj.pdf",
     "juUrl": "",
     "size": 215.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol17_1_6_HCBhardwaj.pdf",
+    "gcs_key": "ijhs/Vol17_1_6_HCBhardwaj.pdf",
     "localPath": "assets/pdfs/ijhs/Vol17_1_6_HCBhardwaj.pdf"
   },
   {
@@ -4299,9 +4585,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol17_1_8_EGKRao.pdf",
     "juUrl": "",
     "size": 433.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol17_1_8_EGKRao.pdf",
+    "gcs_key": "ijhs/Vol17_1_8_EGKRao.pdf",
     "localPath": "assets/pdfs/ijhs/Vol17_1_8_EGKRao.pdf"
   },
   {
@@ -4314,9 +4601,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol17_1_10_JCSikdar.pdf",
     "juUrl": "",
     "size": 493.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol17_1_10_JCSikdar.pdf",
+    "gcs_key": "ijhs/Vol17_1_10_JCSikdar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol17_1_10_JCSikdar.pdf"
   },
   {
@@ -4329,9 +4617,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol17_1_11_NGangadharan.pdf",
     "juUrl": "",
     "size": 198.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol17_1_11_NGangadharan.pdf",
+    "gcs_key": "ijhs/Vol17_1_11_NGangadharan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol17_1_11_NGangadharan.pdf"
   },
   {
@@ -4344,9 +4633,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol17_2_1_SSingh.pdf",
     "juUrl": "",
     "size": 283.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol17_2_1_SSingh.pdf",
+    "gcs_key": "ijhs/Vol17_2_1_SSingh.pdf",
     "localPath": "assets/pdfs/ijhs/Vol17_2_1_SSingh.pdf"
   },
   {
@@ -4359,9 +4649,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol17_2_3_HCBhardwaj.pdf",
     "juUrl": "",
     "size": 192.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol17_2_3_HCBhardwaj.pdf",
+    "gcs_key": "ijhs/Vol17_2_3_HCBhardwaj.pdf",
     "localPath": "assets/pdfs/ijhs/Vol17_2_3_HCBhardwaj.pdf"
   },
   {
@@ -4374,9 +4665,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol17_2_5_MLSharma.pdf",
     "juUrl": "",
     "size": 150.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol17_2_5_MLSharma.pdf",
+    "gcs_key": "ijhs/Vol17_2_5_MLSharma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol17_2_5_MLSharma.pdf"
   },
   {
@@ -4389,9 +4681,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol17_2_10_DKumar.pdf",
     "juUrl": "",
     "size": 212.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol17_2_10_DKumar.pdf",
+    "gcs_key": "ijhs/Vol17_2_10_DKumar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol17_2_10_DKumar.pdf"
   },
   {
@@ -4404,9 +4697,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol17_2_11_SKhatun.pdf",
     "juUrl": "",
     "size": 198.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol17_2_11_SKhatun.pdf",
+    "gcs_key": "ijhs/Vol17_2_11_SKhatun.pdf",
     "localPath": "assets/pdfs/ijhs/Vol17_2_11_SKhatun.pdf"
   },
   {
@@ -4419,9 +4713,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol17_2_13_AKBasu.pdf",
     "juUrl": "",
     "size": 139.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol17_2_13_AKBasu.pdf",
+    "gcs_key": "ijhs/Vol17_2_13_AKBasu.pdf",
     "localPath": "assets/pdfs/ijhs/Vol17_2_13_AKBasu.pdf"
   },
   {
@@ -4434,9 +4729,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol17_2_15_VNSharma.pdf",
     "juUrl": "",
     "size": 157.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol17_2_15_VNSharma.pdf",
+    "gcs_key": "ijhs/Vol17_2_15_VNSharma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol17_2_15_VNSharma.pdf"
   },
   {
@@ -4449,9 +4745,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol17_2_16_KMMatthew.pdf",
     "juUrl": "",
     "size": 231.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol17_2_16_KMMatthew.pdf",
+    "gcs_key": "ijhs/Vol17_2_16_KMMatthew.pdf",
     "localPath": "assets/pdfs/ijhs/Vol17_2_16_KMMatthew.pdf"
   },
   {
@@ -4464,9 +4761,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol17_2_18_DPJha.pdf",
     "juUrl": "",
     "size": 242.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol17_2_18_DPJha.pdf",
+    "gcs_key": "ijhs/Vol17_2_18_DPJha.pdf",
     "localPath": "assets/pdfs/ijhs/Vol17_2_18_DPJha.pdf"
   },
   {
@@ -4479,9 +4777,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol17_2_19_BookReviews.pdf",
     "juUrl": "",
     "size": 68.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol17_2_19_BookReviews.pdf",
+    "gcs_key": "ijhs/Vol17_2_19_BookReviews.pdf",
     "localPath": "assets/pdfs/ijhs/Vol17_2_19_BookReviews.pdf"
   },
   {
@@ -4494,9 +4793,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol17_2_20_Announcement.pdf",
     "juUrl": "",
     "size": 29.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol17_2_20_Announcement.pdf",
+    "gcs_key": "ijhs/Vol17_2_20_Announcement.pdf",
     "localPath": "assets/pdfs/ijhs/Vol17_2_20_Announcement.pdf"
   },
   {
@@ -4509,9 +4809,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol17_2_2_RDSingh.pdf",
     "juUrl": "",
     "size": 476.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol17_2_2_RDSingh.pdf",
+    "gcs_key": "ijhs/Vol17_2_2_RDSingh.pdf",
     "localPath": "assets/pdfs/ijhs/Vol17_2_2_RDSingh.pdf"
   },
   {
@@ -4524,9 +4825,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol17_2_4_EGForbes.pdf",
     "juUrl": "",
     "size": 224.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol17_2_4_EGForbes.pdf",
+    "gcs_key": "ijhs/Vol17_2_4_EGForbes.pdf",
     "localPath": "assets/pdfs/ijhs/Vol17_2_4_EGForbes.pdf"
   },
   {
@@ -4539,9 +4841,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol17_2_6_AKMehra.pdf",
     "juUrl": "",
     "size": 128.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol17_2_6_AKMehra.pdf",
+    "gcs_key": "ijhs/Vol17_2_6_AKMehra.pdf",
     "localPath": "assets/pdfs/ijhs/Vol17_2_6_AKMehra.pdf"
   },
   {
@@ -4554,9 +4857,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol17_2_7_MNMadhyastha.pdf",
     "juUrl": "",
     "size": 141.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol17_2_7_MNMadhyastha.pdf",
+    "gcs_key": "ijhs/Vol17_2_7_MNMadhyastha.pdf",
     "localPath": "assets/pdfs/ijhs/Vol17_2_7_MNMadhyastha.pdf"
   },
   {
@@ -4569,9 +4873,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol17_2_8_KNobuo.pdf",
     "juUrl": "",
     "size": 185.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol17_2_8_KNobuo.pdf",
+    "gcs_key": "ijhs/Vol17_2_8_KNobuo.pdf",
     "localPath": "assets/pdfs/ijhs/Vol17_2_8_KNobuo.pdf"
   },
   {
@@ -4584,9 +4889,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol17_2_9_JTBlackmore.pdf",
     "juUrl": "",
     "size": 174.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol17_2_9_JTBlackmore.pdf",
+    "gcs_key": "ijhs/Vol17_2_9_JTBlackmore.pdf",
     "localPath": "assets/pdfs/ijhs/Vol17_2_9_JTBlackmore.pdf"
   },
   {
@@ -4599,9 +4905,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol17_2_12_GSingh.pdf",
     "juUrl": "",
     "size": 225.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol17_2_12_GSingh.pdf",
+    "gcs_key": "ijhs/Vol17_2_12_GSingh.pdf",
     "localPath": "assets/pdfs/ijhs/Vol17_2_12_GSingh.pdf"
   },
   {
@@ -4614,9 +4921,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol17_2_14_VNSharma.pdf",
     "juUrl": "",
     "size": 228.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol17_2_14_VNSharma.pdf",
+    "gcs_key": "ijhs/Vol17_2_14_VNSharma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol17_2_14_VNSharma.pdf"
   },
   {
@@ -4629,9 +4937,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol17_2_17_PKBhattacharyya.pdf",
     "juUrl": "",
     "size": 364.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol17_2_17_PKBhattacharyya.pdf",
+    "gcs_key": "ijhs/Vol17_2_17_PKBhattacharyya.pdf",
     "localPath": "assets/pdfs/ijhs/Vol17_2_17_PKBhattacharyya.pdf"
   },
   {
@@ -4644,9 +4953,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol18_1_1_HGershenowitz.pdf",
     "juUrl": "",
     "size": 179.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol18_1_1_HGershenowitz.pdf",
+    "gcs_key": "ijhs/Vol18_1_1_HGershenowitz.pdf",
     "localPath": "assets/pdfs/ijhs/Vol18_1_1_HGershenowitz.pdf"
   },
   {
@@ -4659,9 +4969,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol18_1_3_HGershenowitz.pdf",
     "juUrl": "",
     "size": 183.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol18_1_3_HGershenowitz.pdf",
+    "gcs_key": "ijhs/Vol18_1_3_HGershenowitz.pdf",
     "localPath": "assets/pdfs/ijhs/Vol18_1_3_HGershenowitz.pdf"
   },
   {
@@ -4674,9 +4985,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol18_1_5_BDatta.pdf",
     "juUrl": "",
     "size": 1010.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol18_1_5_BDatta.pdf",
+    "gcs_key": "ijhs/Vol18_1_5_BDatta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol18_1_5_BDatta.pdf"
   },
   {
@@ -4689,9 +5001,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol18_1_7_HKNaqvi.pdf",
     "juUrl": "",
     "size": 284.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol18_1_7_HKNaqvi.pdf",
+    "gcs_key": "ijhs/Vol18_1_7_HKNaqvi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol18_1_7_HKNaqvi.pdf"
   },
   {
@@ -4704,9 +5017,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol18_1_8_SMahdihassan.pdf",
     "juUrl": "",
     "size": 29.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol18_1_8_SMahdihassan.pdf",
+    "gcs_key": "ijhs/Vol18_1_8_SMahdihassan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol18_1_8_SMahdihassan.pdf"
   },
   {
@@ -4719,9 +5033,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol18_1_9_Bookreview.pdf",
     "juUrl": "",
     "size": 66.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol18_1_9_Bookreview.pdf",
+    "gcs_key": "ijhs/Vol18_1_9_Bookreview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol18_1_9_Bookreview.pdf"
   },
   {
@@ -4734,9 +5049,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol18_1_2_VKJoshi.pdf",
     "juUrl": "",
     "size": 116.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol18_1_2_VKJoshi.pdf",
+    "gcs_key": "ijhs/Vol18_1_2_VKJoshi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol18_1_2_VKJoshi.pdf"
   },
   {
@@ -4749,9 +5065,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol18_1_4_RCGupta.pdf",
     "juUrl": "",
     "size": 306.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol18_1_4_RCGupta.pdf",
+    "gcs_key": "ijhs/Vol18_1_4_RCGupta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol18_1_4_RCGupta.pdf"
   },
   {
@@ -4764,9 +5081,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol18_1_6_PRamakrishnan.pdf",
     "juUrl": "",
     "size": 157.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol18_1_6_PRamakrishnan.pdf",
+    "gcs_key": "ijhs/Vol18_1_6_PRamakrishnan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol18_1_6_PRamakrishnan.pdf"
   },
   {
@@ -4779,9 +5097,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol18_2_3_RSSingh.pdf",
     "juUrl": "",
     "size": 145.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol18_2_3_RSSingh.pdf",
+    "gcs_key": "ijhs/Vol18_2_3_RSSingh.pdf",
     "localPath": "assets/pdfs/ijhs/Vol18_2_3_RSSingh.pdf"
   },
   {
@@ -4794,9 +5113,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol18_2_4_ANSingh.pdf",
     "juUrl": "",
     "size": 107.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol18_2_4_ANSingh.pdf",
+    "gcs_key": "ijhs/Vol18_2_4_ANSingh.pdf",
     "localPath": "assets/pdfs/ijhs/Vol18_2_4_ANSingh.pdf"
   },
   {
@@ -4809,9 +5129,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol18_2_7_PKMajumdar.pdf",
     "juUrl": "",
     "size": 88.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol18_2_7_PKMajumdar.pdf",
+    "gcs_key": "ijhs/Vol18_2_7_PKMajumdar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol18_2_7_PKMajumdar.pdf"
   },
   {
@@ -4824,9 +5145,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol18_2_9_BookReviews.pdf",
     "juUrl": "",
     "size": 120.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol18_2_9_BookReviews.pdf",
+    "gcs_key": "ijhs/Vol18_2_9_BookReviews.pdf",
     "localPath": "assets/pdfs/ijhs/Vol18_2_9_BookReviews.pdf"
   },
   {
@@ -4839,9 +5161,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol18_2_1_HGershenowitz.pdf",
     "juUrl": "",
     "size": 367.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol18_2_1_HGershenowitz.pdf",
+    "gcs_key": "ijhs/Vol18_2_1_HGershenowitz.pdf",
     "localPath": "assets/pdfs/ijhs/Vol18_2_1_HGershenowitz.pdf"
   },
   {
@@ -4854,9 +5177,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol18_2_2_HGershenowitz.pdf",
     "juUrl": "",
     "size": 250.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol18_2_2_HGershenowitz.pdf",
+    "gcs_key": "ijhs/Vol18_2_2_HGershenowitz.pdf",
     "localPath": "assets/pdfs/ijhs/Vol18_2_2_HGershenowitz.pdf"
   },
   {
@@ -4869,9 +5193,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol18_2_5_NCShekar.pdf",
     "juUrl": "",
     "size": 144.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol18_2_5_NCShekar.pdf",
+    "gcs_key": "ijhs/Vol18_2_5_NCShekar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol18_2_5_NCShekar.pdf"
   },
   {
@@ -4884,9 +5209,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol18_2_6_VSKirsanov.pdf",
     "juUrl": "",
     "size": 329.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol18_2_6_VSKirsanov.pdf",
+    "gcs_key": "ijhs/Vol18_2_6_VSKirsanov.pdf",
     "localPath": "assets/pdfs/ijhs/Vol18_2_6_VSKirsanov.pdf"
   },
   {
@@ -4899,9 +5225,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol18_2_8_MChaudhuri.pdf",
     "juUrl": "",
     "size": 344.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol18_2_8_MChaudhuri.pdf",
+    "gcs_key": "ijhs/Vol18_2_8_MChaudhuri.pdf",
     "localPath": "assets/pdfs/ijhs/Vol18_2_8_MChaudhuri.pdf"
   },
   {
@@ -4914,9 +5241,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol19_1_3_SAParamhans.pdf",
     "juUrl": "",
     "size": 122.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol19_1_3_SAParamhans.pdf",
+    "gcs_key": "ijhs/Vol19_1_3_SAParamhans.pdf",
     "localPath": "assets/pdfs/ijhs/Vol19_1_3_SAParamhans.pdf"
   },
   {
@@ -4929,9 +5257,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol19_1_4_NBhatla.pdf",
     "juUrl": "",
     "size": 102.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol19_1_4_NBhatla.pdf",
+    "gcs_key": "ijhs/Vol19_1_4_NBhatla.pdf",
     "localPath": "assets/pdfs/ijhs/Vol19_1_4_NBhatla.pdf"
   },
   {
@@ -4944,9 +5273,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol19_1_5_KHKrishnamurthy.pdf",
     "juUrl": "",
     "size": 181.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol19_1_5_KHKrishnamurthy.pdf",
+    "gcs_key": "ijhs/Vol19_1_5_KHKrishnamurthy.pdf",
     "localPath": "assets/pdfs/ijhs/Vol19_1_5_KHKrishnamurthy.pdf"
   },
   {
@@ -4959,9 +5289,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol19_1_8_Smahdihassan.pdf",
     "juUrl": "",
     "size": 44.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol19_1_8_Smahdihassan.pdf",
+    "gcs_key": "ijhs/Vol19_1_8_Smahdihassan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol19_1_8_Smahdihassan.pdf"
   },
   {
@@ -4974,9 +5305,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol19_1_10_SAHRizvi.pdf",
     "juUrl": "",
     "size": 103.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol19_1_10_SAHRizvi.pdf",
+    "gcs_key": "ijhs/Vol19_1_10_SAHRizvi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol19_1_10_SAHRizvi.pdf"
   },
   {
@@ -4989,9 +5321,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol19_1_11_BookReviews.pdf",
     "juUrl": "",
     "size": 44.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol19_1_11_BookReviews.pdf",
+    "gcs_key": "ijhs/Vol19_1_11_BookReviews.pdf",
     "localPath": "assets/pdfs/ijhs/Vol19_1_11_BookReviews.pdf"
   },
   {
@@ -5004,9 +5337,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol19_1_12_Report.pdf",
     "juUrl": "",
     "size": 98.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol19_1_12_Report.pdf",
+    "gcs_key": "ijhs/Vol19_1_12_Report.pdf",
     "localPath": "assets/pdfs/ijhs/Vol19_1_12_Report.pdf"
   },
   {
@@ -5019,9 +5353,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol19_1_1_PSingh.pdf",
     "juUrl": "",
     "size": 173.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol19_1_1_PSingh.pdf",
+    "gcs_key": "ijhs/Vol19_1_1_PSingh.pdf",
     "localPath": "assets/pdfs/ijhs/Vol19_1_1_PSingh.pdf"
   },
   {
@@ -5034,9 +5369,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol19_1_2_GJChhabra.pdf",
     "juUrl": "",
     "size": 127.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol19_1_2_GJChhabra.pdf",
+    "gcs_key": "ijhs/Vol19_1_2_GJChhabra.pdf",
     "localPath": "assets/pdfs/ijhs/Vol19_1_2_GJChhabra.pdf"
   },
   {
@@ -5049,9 +5385,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol19_1_6_HGershenowitz.pdf",
     "juUrl": "",
     "size": 174.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol19_1_6_HGershenowitz.pdf",
+    "gcs_key": "ijhs/Vol19_1_6_HGershenowitz.pdf",
     "localPath": "assets/pdfs/ijhs/Vol19_1_6_HGershenowitz.pdf"
   },
   {
@@ -5064,9 +5401,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol19_1_7_AIsmail.pdf",
     "juUrl": "",
     "size": 101.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol19_1_7_AIsmail.pdf",
+    "gcs_key": "ijhs/Vol19_1_7_AIsmail.pdf",
     "localPath": "assets/pdfs/ijhs/Vol19_1_7_AIsmail.pdf"
   },
   {
@@ -5079,9 +5417,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol19_1_9_Smahdihassan.pdf",
     "juUrl": "",
     "size": 41.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol19_1_9_Smahdihassan.pdf",
+    "gcs_key": "ijhs/Vol19_1_9_Smahdihassan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol19_1_9_Smahdihassan.pdf"
   },
   {
@@ -5094,9 +5433,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol19_2_3_PDGupta.pdf",
     "juUrl": "",
     "size": 144.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol19_2_3_PDGupta.pdf",
+    "gcs_key": "ijhs/Vol19_2_3_PDGupta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol19_2_3_PDGupta.pdf"
   },
   {
@@ -5109,9 +5449,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol19_2_5_MSBhatnagar.pdf",
     "juUrl": "",
     "size": 261.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol19_2_5_MSBhatnagar.pdf",
+    "gcs_key": "ijhs/Vol19_2_5_MSBhatnagar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol19_2_5_MSBhatnagar.pdf"
   },
   {
@@ -5124,9 +5465,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol19_2_8_VDeshpande.pdf",
     "juUrl": "",
     "size": 104.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol19_2_8_VDeshpande.pdf",
+    "gcs_key": "ijhs/Vol19_2_8_VDeshpande.pdf",
     "localPath": "assets/pdfs/ijhs/Vol19_2_8_VDeshpande.pdf"
   },
   {
@@ -5139,9 +5481,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol19_2_9_BookReviews.pdf",
     "juUrl": "",
     "size": 66.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol19_2_9_BookReviews.pdf",
+    "gcs_key": "ijhs/Vol19_2_9_BookReviews.pdf",
     "localPath": "assets/pdfs/ijhs/Vol19_2_9_BookReviews.pdf"
   },
   {
@@ -5154,9 +5497,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol19_2_10_Report.pdf",
     "juUrl": "",
     "size": 20.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol19_2_10_Report.pdf",
+    "gcs_key": "ijhs/Vol19_2_10_Report.pdf",
     "localPath": "assets/pdfs/ijhs/Vol19_2_10_Report.pdf"
   },
   {
@@ -5169,9 +5513,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol19_2_11_News.pdf",
     "juUrl": "",
     "size": 29.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol19_2_11_News.pdf",
+    "gcs_key": "ijhs/Vol19_2_11_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol19_2_11_News.pdf"
   },
   {
@@ -5184,9 +5529,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol19_2_1_BDatta.pdf",
     "juUrl": "",
     "size": 132.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol19_2_1_BDatta.pdf",
+    "gcs_key": "ijhs/Vol19_2_1_BDatta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol19_2_1_BDatta.pdf"
   },
   {
@@ -5199,9 +5545,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol19_2_2_HGershenowitz.pdf",
     "juUrl": "",
     "size": 71.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol19_2_2_HGershenowitz.pdf",
+    "gcs_key": "ijhs/Vol19_2_2_HGershenowitz.pdf",
     "localPath": "assets/pdfs/ijhs/Vol19_2_2_HGershenowitz.pdf"
   },
   {
@@ -5214,9 +5561,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol19_2_4_MRoy.pdf",
     "juUrl": "",
     "size": 101.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol19_2_4_MRoy.pdf",
+    "gcs_key": "ijhs/Vol19_2_4_MRoy.pdf",
     "localPath": "assets/pdfs/ijhs/Vol19_2_4_MRoy.pdf"
   },
   {
@@ -5229,9 +5577,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol19_2_6_RMercier.pdf",
     "juUrl": "",
     "size": 414.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol19_2_6_RMercier.pdf",
+    "gcs_key": "ijhs/Vol19_2_6_RMercier.pdf",
     "localPath": "assets/pdfs/ijhs/Vol19_2_6_RMercier.pdf"
   },
   {
@@ -5244,9 +5593,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol19_3_1_VVRaman.pdf",
     "juUrl": "",
     "size": 235.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol19_3_1_VVRaman.pdf",
+    "gcs_key": "ijhs/Vol19_3_1_VVRaman.pdf",
     "localPath": "assets/pdfs/ijhs/Vol19_3_1_VVRaman.pdf"
   },
   {
@@ -5259,9 +5609,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol19_3_3_VShekhawat.pdf",
     "juUrl": "",
     "size": 509.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol19_3_3_VShekhawat.pdf",
+    "gcs_key": "ijhs/Vol19_3_3_VShekhawat.pdf",
     "localPath": "assets/pdfs/ijhs/Vol19_3_3_VShekhawat.pdf"
   },
   {
@@ -5274,9 +5625,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol19_3_4_DKumar.pdf",
     "juUrl": "",
     "size": 137.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol19_3_4_DKumar.pdf",
+    "gcs_key": "ijhs/Vol19_3_4_DKumar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol19_3_4_DKumar.pdf"
   },
   {
@@ -5289,9 +5641,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol19_3_9_Announcement.pdf",
     "juUrl": "",
     "size": 18.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol19_3_9_Announcement.pdf",
+    "gcs_key": "ijhs/Vol19_3_9_Announcement.pdf",
     "localPath": "assets/pdfs/ijhs/Vol19_3_9_Announcement.pdf"
   },
   {
@@ -5304,9 +5657,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol19_3_10_SupplementVedangjyotishaofLagdha.pdf",
     "juUrl": "",
     "size": 890.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol19_3_10_SupplementVedangjyotishaofLagdha.pdf",
+    "gcs_key": "ijhs/Vol19_3_10_SupplementVedangjyotishaofLagdha.pdf",
     "localPath": "assets/pdfs/ijhs/Vol19_3_10_SupplementVedangjyotishaofLagdha.pdf"
   },
   {
@@ -5319,9 +5673,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol19_3_2_URBansal.pdf",
     "juUrl": "",
     "size": 149.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol19_3_2_URBansal.pdf",
+    "gcs_key": "ijhs/Vol19_3_2_URBansal.pdf",
     "localPath": "assets/pdfs/ijhs/Vol19_3_2_URBansal.pdf"
   },
   {
@@ -5334,9 +5689,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol19_3_5_HGershenowitz.pdf",
     "juUrl": "",
     "size": 201.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol19_3_5_HGershenowitz.pdf",
+    "gcs_key": "ijhs/Vol19_3_5_HGershenowitz.pdf",
     "localPath": "assets/pdfs/ijhs/Vol19_3_5_HGershenowitz.pdf"
   },
   {
@@ -5349,9 +5705,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol19_3_6_CLYadav.pdf",
     "juUrl": "",
     "size": 125.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol19_3_6_CLYadav.pdf",
+    "gcs_key": "ijhs/Vol19_3_6_CLYadav.pdf",
     "localPath": "assets/pdfs/ijhs/Vol19_3_6_CLYadav.pdf"
   },
   {
@@ -5364,9 +5721,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol19_3_7_APKulaichev.pdf",
     "juUrl": "",
     "size": 177.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol19_3_7_APKulaichev.pdf",
+    "gcs_key": "ijhs/Vol19_3_7_APKulaichev.pdf",
     "localPath": "assets/pdfs/ijhs/Vol19_3_7_APKulaichev.pdf"
   },
   {
@@ -5379,9 +5737,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol19_3_8_BookReviews.pdf",
     "juUrl": "",
     "size": 32.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol19_3_8_BookReviews.pdf",
+    "gcs_key": "ijhs/Vol19_3_8_BookReviews.pdf",
     "localPath": "assets/pdfs/ijhs/Vol19_3_8_BookReviews.pdf"
   },
   {
@@ -5394,9 +5753,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol19_4_1_SCDey.pdf",
     "juUrl": "",
     "size": 231.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol19_4_1_SCDey.pdf",
+    "gcs_key": "ijhs/Vol19_4_1_SCDey.pdf",
     "localPath": "assets/pdfs/ijhs/Vol19_4_1_SCDey.pdf"
   },
   {
@@ -5409,9 +5769,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol19_4_2_DKAgarwal.pdf",
     "juUrl": "",
     "size": 118.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol19_4_2_DKAgarwal.pdf",
+    "gcs_key": "ijhs/Vol19_4_2_DKAgarwal.pdf",
     "localPath": "assets/pdfs/ijhs/Vol19_4_2_DKAgarwal.pdf"
   },
   {
@@ -5424,9 +5785,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol19_4_6_PKChattopadhyay.pdf",
     "juUrl": "",
     "size": 84.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol19_4_6_PKChattopadhyay.pdf",
+    "gcs_key": "ijhs/Vol19_4_6_PKChattopadhyay.pdf",
     "localPath": "assets/pdfs/ijhs/Vol19_4_6_PKChattopadhyay.pdf"
   },
   {
@@ -5439,9 +5801,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol19_4_8_AKBag.pdf",
     "juUrl": "",
     "size": 90.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol19_4_8_AKBag.pdf",
+    "gcs_key": "ijhs/Vol19_4_8_AKBag.pdf",
     "localPath": "assets/pdfs/ijhs/Vol19_4_8_AKBag.pdf"
   },
   {
@@ -5454,9 +5817,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol19_4_9_BookReviews.pdf",
     "juUrl": "",
     "size": 128.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol19_4_9_BookReviews.pdf",
+    "gcs_key": "ijhs/Vol19_4_9_BookReviews.pdf",
     "localPath": "assets/pdfs/ijhs/Vol19_4_9_BookReviews.pdf"
   },
   {
@@ -5469,9 +5833,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol19_4_10_NotesAndNews.pdf",
     "juUrl": "",
     "size": 43.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol19_4_10_NotesAndNews.pdf",
+    "gcs_key": "ijhs/Vol19_4_10_NotesAndNews.pdf",
     "localPath": "assets/pdfs/ijhs/Vol19_4_10_NotesAndNews.pdf"
   },
   {
@@ -5484,9 +5849,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol19_4_3_MSBhatnagar.pdf",
     "juUrl": "",
     "size": 80.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol19_4_3_MSBhatnagar.pdf",
+    "gcs_key": "ijhs/Vol19_4_3_MSBhatnagar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol19_4_3_MSBhatnagar.pdf"
   },
   {
@@ -5499,9 +5865,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol19_4_4_HKNaqvi.pdf",
     "juUrl": "",
     "size": 192.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol19_4_4_HKNaqvi.pdf",
+    "gcs_key": "ijhs/Vol19_4_4_HKNaqvi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol19_4_4_HKNaqvi.pdf"
   },
   {
@@ -5514,9 +5881,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol19_4_5_MMajumdar.pdf",
     "juUrl": "",
     "size": 273.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol19_4_5_MMajumdar.pdf",
+    "gcs_key": "ijhs/Vol19_4_5_MMajumdar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol19_4_5_MMajumdar.pdf"
   },
   {
@@ -5529,9 +5897,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol19_4_7_BCJoshi.pdf",
     "juUrl": "",
     "size": 354.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol19_4_7_BCJoshi.pdf",
+    "gcs_key": "ijhs/Vol19_4_7_BCJoshi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol19_4_7_BCJoshi.pdf"
   },
   {
@@ -5544,9 +5913,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol20-1to4_2_KVSarma.pdf",
     "juUrl": "",
     "size": 368.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol20-1to4_2_KVSarma.pdf",
+    "gcs_key": "ijhs/Vol20-1to4_2_KVSarma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol20-1to4_2_KVSarma.pdf"
   },
   {
@@ -5559,9 +5929,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol20-1to4_4_SNSen.pdf",
     "juUrl": "",
     "size": 1262.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol20-1to4_4_SNSen.pdf",
+    "gcs_key": "ijhs/Vol20-1to4_4_SNSen.pdf",
     "localPath": "assets/pdfs/ijhs/Vol20-1to4_4_SNSen.pdf"
   },
   {
@@ -5574,9 +5945,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol20-1to4_5_AKBag.pdf",
     "juUrl": "",
     "size": 158.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol20-1to4_5_AKBag.pdf",
+    "gcs_key": "ijhs/Vol20-1to4_5_AKBag.pdf",
     "localPath": "assets/pdfs/ijhs/Vol20-1to4_5_AKBag.pdf"
   },
   {
@@ -5589,9 +5961,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol20-1to4_8_SDSharma.pdf",
     "juUrl": "",
     "size": 383.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol20-1to4_8_SDSharma.pdf",
+    "gcs_key": "ijhs/Vol20-1to4_8_SDSharma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol20-1to4_8_SDSharma.pdf"
   },
   {
@@ -5604,9 +5977,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol20-1to4_9_KSShukla.pdf",
     "juUrl": "",
     "size": 575.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol20-1to4_9_KSShukla.pdf",
+    "gcs_key": "ijhs/Vol20-1to4_9_KSShukla.pdf",
     "localPath": "assets/pdfs/ijhs/Vol20-1to4_9_KSShukla.pdf"
   },
   {
@@ -5619,9 +5993,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol20-1to4_12_SDSharma.pdf",
     "juUrl": "",
     "size": 481.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol20-1to4_12_SDSharma.pdf",
+    "gcs_key": "ijhs/Vol20-1to4_12_SDSharma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol20-1to4_12_SDSharma.pdf"
   },
   {
@@ -5634,9 +6009,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol20-1to4_3_SAKhan.pdf",
     "juUrl": "",
     "size": 473.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol20-1to4_3_SAKhan.pdf",
+    "gcs_key": "ijhs/Vol20-1to4_3_SAKhan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol20-1to4_3_SAKhan.pdf"
   },
   {
@@ -5649,9 +6025,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol20-1to4_6_SDSharma.pdf",
     "juUrl": "",
     "size": 235.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol20-1to4_6_SDSharma.pdf",
+    "gcs_key": "ijhs/Vol20-1to4_6_SDSharma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol20-1to4_6_SDSharma.pdf"
   },
   {
@@ -5664,9 +6041,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol20-1to4_7_ASomayaji.pdf",
     "juUrl": "",
     "size": 669.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol20-1to4_7_ASomayaji.pdf",
+    "gcs_key": "ijhs/Vol20-1to4_7_ASomayaji.pdf",
     "localPath": "assets/pdfs/ijhs/Vol20-1to4_7_ASomayaji.pdf"
   },
   {
@@ -5679,9 +6057,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol20-1to4_11_RNRai.pdf",
     "juUrl": "",
     "size": 453.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol20-1to4_11_RNRai.pdf",
+    "gcs_key": "ijhs/Vol20-1to4_11_RNRai.pdf",
     "localPath": "assets/pdfs/ijhs/Vol20-1to4_11_RNRai.pdf"
   },
   {
@@ -5694,9 +6073,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol20-1to4_13_SMRAnsari.pdf",
     "juUrl": "",
     "size": 735.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol20-1to4_13_SMRAnsari.pdf",
+    "gcs_key": "ijhs/Vol20-1to4_13_SMRAnsari.pdf",
     "localPath": "assets/pdfs/ijhs/Vol20-1to4_13_SMRAnsari.pdf"
   },
   {
@@ -5709,9 +6089,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol20-1to4_14_JCBhattacharyya.pdf",
     "juUrl": "",
     "size": 529.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol20-1to4_14_JCBhattacharyya.pdf",
+    "gcs_key": "ijhs/Vol20-1to4_14_JCBhattacharyya.pdf",
     "localPath": "assets/pdfs/ijhs/Vol20-1to4_14_JCBhattacharyya.pdf"
   },
   {
@@ -5724,9 +6105,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol21_1_1_SMahdihassan.pdf",
     "juUrl": "",
     "size": 156.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol21_1_1_SMahdihassan.pdf",
+    "gcs_key": "ijhs/Vol21_1_1_SMahdihassan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol21_1_1_SMahdihassan.pdf"
   },
   {
@@ -5739,9 +6121,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol21_1_2_ASRamanathan.pdf",
     "juUrl": "",
     "size": 146.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol21_1_2_ASRamanathan.pdf",
+    "gcs_key": "ijhs/Vol21_1_2_ASRamanathan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol21_1_2_ASRamanathan.pdf"
   },
   {
@@ -5754,9 +6137,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol21_1_3_ASRamanathan.pdf",
     "juUrl": "",
     "size": 99.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol21_1_3_ASRamanathan.pdf",
+    "gcs_key": "ijhs/Vol21_1_3_ASRamanathan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol21_1_3_ASRamanathan.pdf"
   },
   {
@@ -5769,9 +6153,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol21_1_4_RDRoy.pdf",
     "juUrl": "",
     "size": 191.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol21_1_4_RDRoy.pdf",
+    "gcs_key": "ijhs/Vol21_1_4_RDRoy.pdf",
     "localPath": "assets/pdfs/ijhs/Vol21_1_4_RDRoy.pdf"
   },
   {
@@ -5784,9 +6169,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol21_1_5_RRDaniel.pdf",
     "juUrl": "",
     "size": 342.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol21_1_5_RRDaniel.pdf",
+    "gcs_key": "ijhs/Vol21_1_5_RRDaniel.pdf",
     "localPath": "assets/pdfs/ijhs/Vol21_1_5_RRDaniel.pdf"
   },
   {
@@ -5799,9 +6185,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol21_1_6_RCGupta.pdf",
     "juUrl": "",
     "size": 174.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol21_1_6_RCGupta.pdf",
+    "gcs_key": "ijhs/Vol21_1_6_RCGupta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol21_1_6_RCGupta.pdf"
   },
   {
@@ -5814,9 +6201,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol21_1_7_SKak.pdf",
     "juUrl": "",
     "size": 136.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol21_1_7_SKak.pdf",
+    "gcs_key": "ijhs/Vol21_1_7_SKak.pdf",
     "localPath": "assets/pdfs/ijhs/Vol21_1_7_SKak.pdf"
   },
   {
@@ -5829,9 +6217,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol21_1_8_BZSzalek.pdf",
     "juUrl": "",
     "size": 77.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol21_1_8_BZSzalek.pdf",
+    "gcs_key": "ijhs/Vol21_1_8_BZSzalek.pdf",
     "localPath": "assets/pdfs/ijhs/Vol21_1_8_BZSzalek.pdf"
   },
   {
@@ -5844,9 +6233,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol21_1_9_BookReview.pdf",
     "juUrl": "",
     "size": 115.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol21_1_9_BookReview.pdf",
+    "gcs_key": "ijhs/Vol21_1_9_BookReview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol21_1_9_BookReview.pdf"
   },
   {
@@ -5859,9 +6249,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol21_1_11_News.pdf",
     "juUrl": "",
     "size": 42.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol21_1_11_News.pdf",
+    "gcs_key": "ijhs/Vol21_1_11_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol21_1_11_News.pdf"
   },
   {
@@ -5874,9 +6265,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol21_2_1_VShekhawat.pdf",
     "juUrl": "",
     "size": 276.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol21_2_1_VShekhawat.pdf",
+    "gcs_key": "ijhs/Vol21_2_1_VShekhawat.pdf",
     "localPath": "assets/pdfs/ijhs/Vol21_2_1_VShekhawat.pdf"
   },
   {
@@ -5889,9 +6281,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol21_2_2_PKunitzsch.pdf",
     "juUrl": "",
     "size": 232.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol21_2_2_PKunitzsch.pdf",
+    "gcs_key": "ijhs/Vol21_2_2_PKunitzsch.pdf",
     "localPath": "assets/pdfs/ijhs/Vol21_2_2_PKunitzsch.pdf"
   },
   {
@@ -5904,9 +6297,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol21_2_3_PSingh.pdf",
     "juUrl": "",
     "size": 143.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol21_2_3_PSingh.pdf",
+    "gcs_key": "ijhs/Vol21_2_3_PSingh.pdf",
     "localPath": "assets/pdfs/ijhs/Vol21_2_3_PSingh.pdf"
   },
   {
@@ -5919,9 +6313,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol21_2_4_RCGupta.pdf",
     "juUrl": "",
     "size": 151.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol21_2_4_RCGupta.pdf",
+    "gcs_key": "ijhs/Vol21_2_4_RCGupta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol21_2_4_RCGupta.pdf"
   },
   {
@@ -5934,9 +6329,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol21_2_5_SAHRizvi.pdf",
     "juUrl": "",
     "size": 146.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol21_2_5_SAHRizvi.pdf",
+    "gcs_key": "ijhs/Vol21_2_5_SAHRizvi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol21_2_5_SAHRizvi.pdf"
   },
   {
@@ -5949,9 +6345,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol21_2_6_BCJoshi.pdf",
     "juUrl": "",
     "size": 597.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol21_2_6_BCJoshi.pdf",
+    "gcs_key": "ijhs/Vol21_2_6_BCJoshi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol21_2_6_BCJoshi.pdf"
   },
   {
@@ -5964,9 +6361,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol21_2_7_OPUpadhyay.pdf",
     "juUrl": "",
     "size": 244.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol21_2_7_OPUpadhyay.pdf",
+    "gcs_key": "ijhs/Vol21_2_7_OPUpadhyay.pdf",
     "localPath": "assets/pdfs/ijhs/Vol21_2_7_OPUpadhyay.pdf"
   },
   {
@@ -5979,9 +6377,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol21_2_8_SMahdihassan.pdf",
     "juUrl": "",
     "size": 146.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol21_2_8_SMahdihassan.pdf",
+    "gcs_key": "ijhs/Vol21_2_8_SMahdihassan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol21_2_8_SMahdihassan.pdf"
   },
   {
@@ -5994,9 +6393,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol21_2_9_BookReviews.pdf",
     "juUrl": "",
     "size": 123.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol21_2_9_BookReviews.pdf",
+    "gcs_key": "ijhs/Vol21_2_9_BookReviews.pdf",
     "localPath": "assets/pdfs/ijhs/Vol21_2_9_BookReviews.pdf"
   },
   {
@@ -6009,9 +6409,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol21_2_10_Report.pdf",
     "juUrl": "",
     "size": 47.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol21_2_10_Report.pdf",
+    "gcs_key": "ijhs/Vol21_2_10_Report.pdf",
     "localPath": "assets/pdfs/ijhs/Vol21_2_10_Report.pdf"
   },
   {
@@ -6024,9 +6425,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol21_2_11_News.pdf",
     "juUrl": "",
     "size": 55.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol21_2_11_News.pdf",
+    "gcs_key": "ijhs/Vol21_2_11_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol21_2_11_News.pdf"
   },
   {
@@ -6039,9 +6441,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol21_2_12_Announcements.pdf",
     "juUrl": "",
     "size": 50.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol21_2_12_Announcements.pdf",
+    "gcs_key": "ijhs/Vol21_2_12_Announcements.pdf",
     "localPath": "assets/pdfs/ijhs/Vol21_2_12_Announcements.pdf"
   },
   {
@@ -6054,9 +6457,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol21_3_1_ARahman.pdf",
     "juUrl": "",
     "size": 246.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol21_3_1_ARahman.pdf",
+    "gcs_key": "ijhs/Vol21_3_1_ARahman.pdf",
     "localPath": "assets/pdfs/ijhs/Vol21_3_1_ARahman.pdf"
   },
   {
@@ -6069,9 +6473,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol21_3_2_MFAintabi.pdf",
     "juUrl": "",
     "size": 46.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol21_3_2_MFAintabi.pdf",
+    "gcs_key": "ijhs/Vol21_3_2_MFAintabi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol21_3_2_MFAintabi.pdf"
   },
   {
@@ -6084,9 +6489,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol21_3_3_MAsimov.pdf",
     "juUrl": "",
     "size": 499.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol21_3_3_MAsimov.pdf",
+    "gcs_key": "ijhs/Vol21_3_3_MAsimov.pdf",
     "localPath": "assets/pdfs/ijhs/Vol21_3_3_MAsimov.pdf"
   },
   {
@@ -6099,9 +6505,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol21_3_4_MMKhairullayev.pdf",
     "juUrl": "",
     "size": 141.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol21_3_4_MMKhairullayev.pdf",
+    "gcs_key": "ijhs/Vol21_3_4_MMKhairullayev.pdf",
     "localPath": "assets/pdfs/ijhs/Vol21_3_4_MMKhairullayev.pdf"
   },
   {
@@ -6114,9 +6521,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol21_3_5_KNPandita.pdf",
     "juUrl": "",
     "size": 115.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol21_3_5_KNPandita.pdf",
+    "gcs_key": "ijhs/Vol21_3_5_KNPandita.pdf",
     "localPath": "assets/pdfs/ijhs/Vol21_3_5_KNPandita.pdf"
   },
   {
@@ -6129,9 +6537,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol21_3_6_MAsimov.pdf",
     "juUrl": "",
     "size": 76.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol21_3_6_MAsimov.pdf",
+    "gcs_key": "ijhs/Vol21_3_6_MAsimov.pdf",
     "localPath": "assets/pdfs/ijhs/Vol21_3_6_MAsimov.pdf"
   },
   {
@@ -6144,9 +6553,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol21_3_7_HMSaid.pdf",
     "juUrl": "",
     "size": 182.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol21_3_7_HMSaid.pdf",
+    "gcs_key": "ijhs/Vol21_3_7_HMSaid.pdf",
     "localPath": "assets/pdfs/ijhs/Vol21_3_7_HMSaid.pdf"
   },
   {
@@ -6159,9 +6569,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol21_3_8_AKBag.pdf",
     "juUrl": "",
     "size": 132.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol21_3_8_AKBag.pdf",
+    "gcs_key": "ijhs/Vol21_3_8_AKBag.pdf",
     "localPath": "assets/pdfs/ijhs/Vol21_3_8_AKBag.pdf"
   },
   {
@@ -6174,9 +6585,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol21_3_9_SAARizvi.pdf",
     "juUrl": "",
     "size": 202.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol21_3_9_SAARizvi.pdf",
+    "gcs_key": "ijhs/Vol21_3_9_SAARizvi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol21_3_9_SAARizvi.pdf"
   },
   {
@@ -6189,9 +6601,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol21_3_10_WHAbdi.pdf",
     "juUrl": "",
     "size": 160.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol21_3_10_WHAbdi.pdf",
+    "gcs_key": "ijhs/Vol21_3_10_WHAbdi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol21_3_10_WHAbdi.pdf"
   },
   {
@@ -6204,9 +6617,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol21_3_11_Report.pdf",
     "juUrl": "",
     "size": 79.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol21_3_11_Report.pdf",
+    "gcs_key": "ijhs/Vol21_3_11_Report.pdf",
     "localPath": "assets/pdfs/ijhs/Vol21_3_11_Report.pdf"
   },
   {
@@ -6219,9 +6633,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol21_4_1_SRAPerwaz.pdf",
     "juUrl": "",
     "size": 356.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol21_4_1_SRAPerwaz.pdf",
+    "gcs_key": "ijhs/Vol21_4_1_SRAPerwaz.pdf",
     "localPath": "assets/pdfs/ijhs/Vol21_4_1_SRAPerwaz.pdf"
   },
   {
@@ -6234,9 +6649,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol21_4_2_MSKhan.pdf",
     "juUrl": "",
     "size": 253.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol21_4_2_MSKhan.pdf",
+    "gcs_key": "ijhs/Vol21_4_2_MSKhan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol21_4_2_MSKhan.pdf"
   },
   {
@@ -6249,9 +6665,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol21_4_3_TSiddiqi.pdf",
     "juUrl": "",
     "size": 629.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol21_4_3_TSiddiqi.pdf",
+    "gcs_key": "ijhs/Vol21_4_3_TSiddiqi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol21_4_3_TSiddiqi.pdf"
   },
   {
@@ -6264,9 +6681,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol21_4_4_GNChaturvedi.pdf",
     "juUrl": "",
     "size": 125.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol21_4_4_GNChaturvedi.pdf",
+    "gcs_key": "ijhs/Vol21_4_4_GNChaturvedi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol21_4_4_GNChaturvedi.pdf"
   },
   {
@@ -6279,9 +6697,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol21_4_5_MTaiyab.pdf",
     "juUrl": "",
     "size": 92.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol21_4_5_MTaiyab.pdf",
+    "gcs_key": "ijhs/Vol21_4_5_MTaiyab.pdf",
     "localPath": "assets/pdfs/ijhs/Vol21_4_5_MTaiyab.pdf"
   },
   {
@@ -6294,9 +6713,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol21_4_6_PNPushp.pdf",
     "juUrl": "",
     "size": 123.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol21_4_6_PNPushp.pdf",
+    "gcs_key": "ijhs/Vol21_4_6_PNPushp.pdf",
     "localPath": "assets/pdfs/ijhs/Vol21_4_6_PNPushp.pdf"
   },
   {
@@ -6309,9 +6729,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol21_4_7_HSVirk.pdf",
     "juUrl": "",
     "size": 93.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol21_4_7_HSVirk.pdf",
+    "gcs_key": "ijhs/Vol21_4_7_HSVirk.pdf",
     "localPath": "assets/pdfs/ijhs/Vol21_4_7_HSVirk.pdf"
   },
   {
@@ -6324,9 +6745,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol21_4_8_SShafi.pdf",
     "juUrl": "",
     "size": 98.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol21_4_8_SShafi.pdf",
+    "gcs_key": "ijhs/Vol21_4_8_SShafi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol21_4_8_SShafi.pdf"
   },
   {
@@ -6339,9 +6761,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol22_1_1_ASRamanathan.pdf",
     "juUrl": "",
     "size": 121.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol22_1_1_ASRamanathan.pdf",
+    "gcs_key": "ijhs/Vol22_1_1_ASRamanathan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol22_1_1_ASRamanathan.pdf"
   },
   {
@@ -6354,9 +6777,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol22_1_2_VDeshpande.pdf",
     "juUrl": "",
     "size": 1.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol22_1_2_VDeshpande.pdf",
+    "gcs_key": "ijhs/Vol22_1_2_VDeshpande.pdf",
     "localPath": "assets/pdfs/ijhs/Vol22_1_2_VDeshpande.pdf"
   },
   {
@@ -6369,9 +6793,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol22_1_4_AKBiswas.pdf",
     "juUrl": "",
     "size": 410.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol22_1_4_AKBiswas.pdf",
+    "gcs_key": "ijhs/Vol22_1_4_AKBiswas.pdf",
     "localPath": "assets/pdfs/ijhs/Vol22_1_4_AKBiswas.pdf"
   },
   {
@@ -6384,9 +6809,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol22_1_5_WHAbdi.pdf",
     "juUrl": "",
     "size": 85.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol22_1_5_WHAbdi.pdf",
+    "gcs_key": "ijhs/Vol22_1_5_WHAbdi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol22_1_5_WHAbdi.pdf"
   },
   {
@@ -6399,9 +6825,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol22_1_6_SCKak.pdf",
     "juUrl": "",
     "size": 204.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol22_1_6_SCKak.pdf",
+    "gcs_key": "ijhs/Vol22_1_6_SCKak.pdf",
     "localPath": "assets/pdfs/ijhs/Vol22_1_6_SCKak.pdf"
   },
   {
@@ -6414,9 +6841,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol22_1_7_SMahdihassan.pdf",
     "juUrl": "",
     "size": 195.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol22_1_7_SMahdihassan.pdf",
+    "gcs_key": "ijhs/Vol22_1_7_SMahdihassan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol22_1_7_SMahdihassan.pdf"
   },
   {
@@ -6429,9 +6857,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol22_1_8_RKrishnamurthy.pdf",
     "juUrl": "",
     "size": 187.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol22_1_8_RKrishnamurthy.pdf",
+    "gcs_key": "ijhs/Vol22_1_8_RKrishnamurthy.pdf",
     "localPath": "assets/pdfs/ijhs/Vol22_1_8_RKrishnamurthy.pdf"
   },
   {
@@ -6444,9 +6873,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol22_1_9_SChandra.pdf",
     "juUrl": "",
     "size": 79.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol22_1_9_SChandra.pdf",
+    "gcs_key": "ijhs/Vol22_1_9_SChandra.pdf",
     "localPath": "assets/pdfs/ijhs/Vol22_1_9_SChandra.pdf"
   },
   {
@@ -6459,9 +6889,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol22_1_10_BookReviews.pdf",
     "juUrl": "",
     "size": 110.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol22_1_10_BookReviews.pdf",
+    "gcs_key": "ijhs/Vol22_1_10_BookReviews.pdf",
     "localPath": "assets/pdfs/ijhs/Vol22_1_10_BookReviews.pdf"
   },
   {
@@ -6474,9 +6905,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol22_1_11_Report.pdf",
     "juUrl": "",
     "size": 19.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol22_1_11_Report.pdf",
+    "gcs_key": "ijhs/Vol22_1_11_Report.pdf",
     "localPath": "assets/pdfs/ijhs/Vol22_1_11_Report.pdf"
   },
   {
@@ -6489,9 +6921,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol22_1-12_Announcements.pdf",
     "juUrl": "",
     "size": 75.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol22_1-12_Announcements.pdf",
+    "gcs_key": "ijhs/Vol22_1-12_Announcements.pdf",
     "localPath": "assets/pdfs/ijhs/Vol22_1-12_Announcements.pdf"
   },
   {
@@ -6504,9 +6937,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol22_2_2_RPSTyagi.pdf",
     "juUrl": "",
     "size": 36.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol22_2_2_RPSTyagi.pdf",
+    "gcs_key": "ijhs/Vol22_2_2_RPSTyagi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol22_2_2_RPSTyagi.pdf"
   },
   {
@@ -6519,9 +6953,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol22_2_3_VKSharma.pdf",
     "juUrl": "",
     "size": 94.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol22_2_3_VKSharma.pdf",
+    "gcs_key": "ijhs/Vol22_2_3_VKSharma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol22_2_3_VKSharma.pdf"
   },
   {
@@ -6534,9 +6969,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol22_2_4_GPrasad.pdf",
     "juUrl": "",
     "size": 74.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol22_2_4_GPrasad.pdf",
+    "gcs_key": "ijhs/Vol22_2_4_GPrasad.pdf",
     "localPath": "assets/pdfs/ijhs/Vol22_2_4_GPrasad.pdf"
   },
   {
@@ -6549,9 +6985,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol22_2_5_DNGarg.pdf",
     "juUrl": "",
     "size": 147.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol22_2_5_DNGarg.pdf",
+    "gcs_key": "ijhs/Vol22_2_5_DNGarg.pdf",
     "localPath": "assets/pdfs/ijhs/Vol22_2_5_DNGarg.pdf"
   },
   {
@@ -6564,9 +7001,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol22_2_6_KCSatija.pdf",
     "juUrl": "",
     "size": 140.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol22_2_6_KCSatija.pdf",
+    "gcs_key": "ijhs/Vol22_2_6_KCSatija.pdf",
     "localPath": "assets/pdfs/ijhs/Vol22_2_6_KCSatija.pdf"
   },
   {
@@ -6579,9 +7017,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol22_2_7_RDRana.pdf",
     "juUrl": "",
     "size": 66.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol22_2_7_RDRana.pdf",
+    "gcs_key": "ijhs/Vol22_2_7_RDRana.pdf",
     "localPath": "assets/pdfs/ijhs/Vol22_2_7_RDRana.pdf"
   },
   {
@@ -6594,9 +7033,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol22_2_8_VMMandokhot.pdf",
     "juUrl": "",
     "size": 130.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol22_2_8_VMMandokhot.pdf",
+    "gcs_key": "ijhs/Vol22_2_8_VMMandokhot.pdf",
     "localPath": "assets/pdfs/ijhs/Vol22_2_8_VMMandokhot.pdf"
   },
   {
@@ -6609,9 +7049,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol22_2_9_UMandokhot.pdf",
     "juUrl": "",
     "size": 182.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol22_2_9_UMandokhot.pdf",
+    "gcs_key": "ijhs/Vol22_2_9_UMandokhot.pdf",
     "localPath": "assets/pdfs/ijhs/Vol22_2_9_UMandokhot.pdf"
   },
   {
@@ -6624,9 +7065,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol22_2_10_SPrasad.pdf",
     "juUrl": "",
     "size": 100.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol22_2_10_SPrasad.pdf",
+    "gcs_key": "ijhs/Vol22_2_10_SPrasad.pdf",
     "localPath": "assets/pdfs/ijhs/Vol22_2_10_SPrasad.pdf"
   },
   {
@@ -6639,9 +7081,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol22_2_11_SKKalra.pdf",
     "juUrl": "",
     "size": 325.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol22_2_11_SKKalra.pdf",
+    "gcs_key": "ijhs/Vol22_2_11_SKKalra.pdf",
     "localPath": "assets/pdfs/ijhs/Vol22_2_11_SKKalra.pdf"
   },
   {
@@ -6654,9 +7097,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol22_2_12_RDSharma.pdf",
     "juUrl": "",
     "size": 126.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol22_2_12_RDSharma.pdf",
+    "gcs_key": "ijhs/Vol22_2_12_RDSharma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol22_2_12_RDSharma.pdf"
   },
   {
@@ -6669,9 +7113,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol22_2_13_SCDogra.pdf",
     "juUrl": "",
     "size": 117.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol22_2_13_SCDogra.pdf",
+    "gcs_key": "ijhs/Vol22_2_13_SCDogra.pdf",
     "localPath": "assets/pdfs/ijhs/Vol22_2_13_SCDogra.pdf"
   },
   {
@@ -6684,9 +7129,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol22_2_14_News.pdf",
     "juUrl": "",
     "size": 59.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol22_2_14_News.pdf",
+    "gcs_key": "ijhs/Vol22_2_14_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol22_2_14_News.pdf"
   },
   {
@@ -6699,9 +7145,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol22_3_1_ASRamanathan.pdf",
     "juUrl": "",
     "size": 288.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol22_3_1_ASRamanathan.pdf",
+    "gcs_key": "ijhs/Vol22_3_1_ASRamanathan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol22_3_1_ASRamanathan.pdf"
   },
   {
@@ -6714,9 +7161,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol22_3_2_ASRamanathan.pdf",
     "juUrl": "",
     "size": 128.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol22_3_2_ASRamanathan.pdf",
+    "gcs_key": "ijhs/Vol22_3_2_ASRamanathan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol22_3_2_ASRamanathan.pdf"
   },
   {
@@ -6729,9 +7177,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol22_3_3_ASRamanathan.pdf",
     "juUrl": "",
     "size": 148.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol22_3_3_ASRamanathan.pdf",
+    "gcs_key": "ijhs/Vol22_3_3_ASRamanathan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol22_3_3_ASRamanathan.pdf"
   },
   {
@@ -6744,9 +7193,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol22_3_4_SCKak.pdf",
     "juUrl": "",
     "size": 349.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol22_3_4_SCKak.pdf",
+    "gcs_key": "ijhs/Vol22_3_4_SCKak.pdf",
     "localPath": "assets/pdfs/ijhs/Vol22_3_4_SCKak.pdf"
   },
   {
@@ -6759,9 +7209,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol22_3_5_SCKak.pdf",
     "juUrl": "",
     "size": 287.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol22_3_5_SCKak.pdf",
+    "gcs_key": "ijhs/Vol22_3_5_SCKak.pdf",
     "localPath": "assets/pdfs/ijhs/Vol22_3_5_SCKak.pdf"
   },
   {
@@ -6774,9 +7225,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol22_3_6_OPUpadhyay.pdf",
     "juUrl": "",
     "size": 107.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol22_3_6_OPUpadhyay.pdf",
+    "gcs_key": "ijhs/Vol22_3_6_OPUpadhyay.pdf",
     "localPath": "assets/pdfs/ijhs/Vol22_3_6_OPUpadhyay.pdf"
   },
   {
@@ -6789,9 +7241,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol22_3_7_RCGupta.pdf",
     "juUrl": "",
     "size": 173.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol22_3_7_RCGupta.pdf",
+    "gcs_key": "ijhs/Vol22_3_7_RCGupta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol22_3_7_RCGupta.pdf"
   },
   {
@@ -6804,9 +7257,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol22_3_8_Jlaurent.pdf",
     "juUrl": "",
     "size": 632.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol22_3_8_Jlaurent.pdf",
+    "gcs_key": "ijhs/Vol22_3_8_Jlaurent.pdf",
     "localPath": "assets/pdfs/ijhs/Vol22_3_8_Jlaurent.pdf"
   },
   {
@@ -6819,9 +7273,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol22_3_9_BookReviews.pdf",
     "juUrl": "",
     "size": 57.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol22_3_9_BookReviews.pdf",
+    "gcs_key": "ijhs/Vol22_3_9_BookReviews.pdf",
     "localPath": "assets/pdfs/ijhs/Vol22_3_9_BookReviews.pdf"
   },
   {
@@ -6834,9 +7289,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol22_3_10_Supplement_RasaRatnaSamuccaya.pdf",
     "juUrl": "",
     "size": 1612.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol22_3_10_Supplement_RasaRatnaSamuccaya.pdf",
+    "gcs_key": "ijhs/Vol22_3_10_Supplement_RasaRatnaSamuccaya.pdf",
     "localPath": "assets/pdfs/ijhs/Vol22_3_10_Supplement_RasaRatnaSamuccaya.pdf"
   },
   {
@@ -6849,9 +7305,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol22_4_1_ASRamanathan.pdf",
     "juUrl": "",
     "size": 152.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol22_4_1_ASRamanathan.pdf",
+    "gcs_key": "ijhs/Vol22_4_1_ASRamanathan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol22_4_1_ASRamanathan.pdf"
   },
   {
@@ -6864,9 +7321,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol22_4_2_SMahdihassan.pdf",
     "juUrl": "",
     "size": 215.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol22_4_2_SMahdihassan.pdf",
+    "gcs_key": "ijhs/Vol22_4_2_SMahdihassan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol22_4_2_SMahdihassan.pdf"
   },
   {
@@ -6879,9 +7337,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol22_4_3_BCJoshi.pdf",
     "juUrl": "",
     "size": 349.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol22_4_3_BCJoshi.pdf",
+    "gcs_key": "ijhs/Vol22_4_3_BCJoshi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol22_4_3_BCJoshi.pdf"
   },
   {
@@ -6894,9 +7353,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol22_4_4_RPKulkarni.pdf",
     "juUrl": "",
     "size": 201.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol22_4_4_RPKulkarni.pdf",
+    "gcs_key": "ijhs/Vol22_4_4_RPKulkarni.pdf",
     "localPath": "assets/pdfs/ijhs/Vol22_4_4_RPKulkarni.pdf"
   },
   {
@@ -6909,9 +7369,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol22_4_5_RPKulkarni.pdf",
     "juUrl": "",
     "size": 59.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol22_4_5_RPKulkarni.pdf",
+    "gcs_key": "ijhs/Vol22_4_5_RPKulkarni.pdf",
     "localPath": "assets/pdfs/ijhs/Vol22_4_5_RPKulkarni.pdf"
   },
   {
@@ -6924,9 +7385,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol22_4_6_BNMehrotra.pdf",
     "juUrl": "",
     "size": 144.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol22_4_6_BNMehrotra.pdf",
+    "gcs_key": "ijhs/Vol22_4_6_BNMehrotra.pdf",
     "localPath": "assets/pdfs/ijhs/Vol22_4_6_BNMehrotra.pdf"
   },
   {
@@ -6939,9 +7401,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol22_4_7_VSingh.pdf",
     "juUrl": "",
     "size": 204.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol22_4_7_VSingh.pdf",
+    "gcs_key": "ijhs/Vol22_4_7_VSingh.pdf",
     "localPath": "assets/pdfs/ijhs/Vol22_4_7_VSingh.pdf"
   },
   {
@@ -6954,9 +7417,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol22_4_8_SPGupta.pdf",
     "juUrl": "",
     "size": 68.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol22_4_8_SPGupta.pdf",
+    "gcs_key": "ijhs/Vol22_4_8_SPGupta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol22_4_8_SPGupta.pdf"
   },
   {
@@ -6969,9 +7433,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol22_4_9_RKTrivedi.pdf",
     "juUrl": "",
     "size": 395.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol22_4_9_RKTrivedi.pdf",
+    "gcs_key": "ijhs/Vol22_4_9_RKTrivedi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol22_4_9_RKTrivedi.pdf"
   },
   {
@@ -6984,9 +7449,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol24_1_1_SCKak.pdf",
     "juUrl": "",
     "size": 82.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol24_1_1_SCKak.pdf",
+    "gcs_key": "ijhs/Vol24_1_1_SCKak.pdf",
     "localPath": "assets/pdfs/ijhs/Vol24_1_1_SCKak.pdf"
   },
   {
@@ -6999,9 +7465,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol24_1_2_GArmitage.pdf",
     "juUrl": "",
     "size": 1493.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol24_1_2_GArmitage.pdf",
+    "gcs_key": "ijhs/Vol24_1_2_GArmitage.pdf",
     "localPath": "assets/pdfs/ijhs/Vol24_1_2_GArmitage.pdf"
   },
   {
@@ -7014,9 +7481,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol24_1_3_PJha.pdf",
     "juUrl": "",
     "size": 153.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol24_1_3_PJha.pdf",
+    "gcs_key": "ijhs/Vol24_1_3_PJha.pdf",
     "localPath": "assets/pdfs/ijhs/Vol24_1_3_PJha.pdf"
   },
   {
@@ -7029,9 +7497,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol24_1_4_BookReview.pdf",
     "juUrl": "",
     "size": 29.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol24_1_4_BookReview.pdf",
+    "gcs_key": "ijhs/Vol24_1_4_BookReview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol24_1_4_BookReview.pdf"
   },
   {
@@ -7044,9 +7513,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol24_1_5_Supplement.pdf",
     "juUrl": "",
     "size": 684.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol24_1_5_Supplement.pdf",
+    "gcs_key": "ijhs/Vol24_1_5_Supplement.pdf",
     "localPath": "assets/pdfs/ijhs/Vol24_1_5_Supplement.pdf"
   },
   {
@@ -7059,9 +7529,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol24_2_1_SAHRizvi.pdf",
     "juUrl": "",
     "size": 108.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol24_2_1_SAHRizvi.pdf",
+    "gcs_key": "ijhs/Vol24_2_1_SAHRizvi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol24_2_1_SAHRizvi.pdf"
   },
   {
@@ -7074,9 +7545,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol24_2_2_SSeshan.pdf",
     "juUrl": "",
     "size": 582.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol24_2_2_SSeshan.pdf",
+    "gcs_key": "ijhs/Vol24_2_2_SSeshan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol24_2_2_SSeshan.pdf"
   },
   {
@@ -7089,9 +7561,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol24_2_3_BSzalek.pdf",
     "juUrl": "",
     "size": 185.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol24_2_3_BSzalek.pdf",
+    "gcs_key": "ijhs/Vol24_2_3_BSzalek.pdf",
     "localPath": "assets/pdfs/ijhs/Vol24_2_3_BSzalek.pdf"
   },
   {
@@ -7104,9 +7577,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol24_2_4_BookReviews.pdf",
     "juUrl": "",
     "size": 38.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol24_2_4_BookReviews.pdf",
+    "gcs_key": "ijhs/Vol24_2_4_BookReviews.pdf",
     "localPath": "assets/pdfs/ijhs/Vol24_2_4_BookReviews.pdf"
   },
   {
@@ -7119,9 +7593,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol24_3_1_APKulaichev.pdf",
     "juUrl": "",
     "size": 270.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol24_3_1_APKulaichev.pdf",
+    "gcs_key": "ijhs/Vol24_3_1_APKulaichev.pdf",
     "localPath": "assets/pdfs/ijhs/Vol24_3_1_APKulaichev.pdf"
   },
   {
@@ -7134,9 +7609,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol24_3_2_SAParamhans.pdf",
     "juUrl": "",
     "size": 89.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol24_3_2_SAParamhans.pdf",
+    "gcs_key": "ijhs/Vol24_3_2_SAParamhans.pdf",
     "localPath": "assets/pdfs/ijhs/Vol24_3_2_SAParamhans.pdf"
   },
   {
@@ -7149,9 +7625,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol24_4_2_SAParamhans.pdf",
     "juUrl": "",
     "size": 1.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol24_4_2_SAParamhans.pdf",
+    "gcs_key": "ijhs/Vol24_4_2_SAParamhans.pdf",
     "localPath": "assets/pdfs/ijhs/Vol24_4_2_SAParamhans.pdf"
   },
   {
@@ -7164,9 +7641,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol24_3_4BBLal.pdf",
     "juUrl": "",
     "size": 61.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol24_3_4BBLal.pdf",
+    "gcs_key": "ijhs/Vol24_3_4BBLal.pdf",
     "localPath": "assets/pdfs/ijhs/Vol24_3_4BBLal.pdf"
   },
   {
@@ -7179,9 +7657,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol24_3_5_LCJain.pdf",
     "juUrl": "",
     "size": 255.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol24_3_5_LCJain.pdf",
+    "gcs_key": "ijhs/Vol24_3_5_LCJain.pdf",
     "localPath": "assets/pdfs/ijhs/Vol24_3_5_LCJain.pdf"
   },
   {
@@ -7194,9 +7673,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol24_3_6_SMahadihassan.pdf",
     "juUrl": "",
     "size": 72.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol24_3_6_SMahadihassan.pdf",
+    "gcs_key": "ijhs/Vol24_3_6_SMahadihassan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol24_3_6_SMahadihassan.pdf"
   },
   {
@@ -7209,9 +7689,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol24_3_7_RKKochhar.pdf",
     "juUrl": "",
     "size": 95.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol24_3_7_RKKochhar.pdf",
+    "gcs_key": "ijhs/Vol24_3_7_RKKochhar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol24_3_7_RKKochhar.pdf"
   },
   {
@@ -7224,9 +7705,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol24_3_8_AKBiswas.pdf",
     "juUrl": "",
     "size": 175.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol24_3_8_AKBiswas.pdf",
+    "gcs_key": "ijhs/Vol24_3_8_AKBiswas.pdf",
     "localPath": "assets/pdfs/ijhs/Vol24_3_8_AKBiswas.pdf"
   },
   {
@@ -7239,9 +7721,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol24_3_9_BookReviews.pdf",
     "juUrl": "",
     "size": 67.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol24_3_9_BookReviews.pdf",
+    "gcs_key": "ijhs/Vol24_3_9_BookReviews.pdf",
     "localPath": "assets/pdfs/ijhs/Vol24_3_9_BookReviews.pdf"
   },
   {
@@ -7254,9 +7737,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol24_3_10_ProjectsRenewed.pdf",
     "juUrl": "",
     "size": 43.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol24_3_10_ProjectsRenewed.pdf",
+    "gcs_key": "ijhs/Vol24_3_10_ProjectsRenewed.pdf",
     "localPath": "assets/pdfs/ijhs/Vol24_3_10_ProjectsRenewed.pdf"
   },
   {
@@ -7269,9 +7753,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol24_4_1_KSShukla.pdf",
     "juUrl": "",
     "size": 179.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol24_4_1_KSShukla.pdf",
+    "gcs_key": "ijhs/Vol24_4_1_KSShukla.pdf",
     "localPath": "assets/pdfs/ijhs/Vol24_4_1_KSShukla.pdf"
   },
   {
@@ -7284,9 +7769,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol24_4_2_BSen.pdf",
     "juUrl": "",
     "size": 524.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol24_4_2_BSen.pdf",
+    "gcs_key": "ijhs/Vol24_4_2_BSen.pdf",
     "localPath": "assets/pdfs/ijhs/Vol24_4_2_BSen.pdf"
   },
   {
@@ -7299,9 +7785,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol24_4_3_TRChandrasekhar.pdf",
     "juUrl": "",
     "size": 131.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol24_4_3_TRChandrasekhar.pdf",
+    "gcs_key": "ijhs/Vol24_4_3_TRChandrasekhar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol24_4_3_TRChandrasekhar.pdf"
   },
   {
@@ -7314,9 +7801,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol24_4_4_SNSen.pdf",
     "juUrl": "",
     "size": 466.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol24_4_4_SNSen.pdf",
+    "gcs_key": "ijhs/Vol24_4_4_SNSen.pdf",
     "localPath": "assets/pdfs/ijhs/Vol24_4_4_SNSen.pdf"
   },
   {
@@ -7329,9 +7817,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol24_4_5_MCMallik.pdf",
     "juUrl": "",
     "size": 712.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol24_4_5_MCMallik.pdf",
+    "gcs_key": "ijhs/Vol24_4_5_MCMallik.pdf",
     "localPath": "assets/pdfs/ijhs/Vol24_4_5_MCMallik.pdf"
   },
   {
@@ -7344,9 +7833,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol24_4_6_ABasu.pdf",
     "juUrl": "",
     "size": 183.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol24_4_6_ABasu.pdf",
+    "gcs_key": "ijhs/Vol24_4_6_ABasu.pdf",
     "localPath": "assets/pdfs/ijhs/Vol24_4_6_ABasu.pdf"
   },
   {
@@ -7359,9 +7849,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol24_4_7_VLSharma.pdf",
     "juUrl": "",
     "size": 129.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol24_4_7_VLSharma.pdf",
+    "gcs_key": "ijhs/Vol24_4_7_VLSharma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol24_4_7_VLSharma.pdf"
   },
   {
@@ -7374,9 +7865,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol24_4_8_SMahadihassan.pdf",
     "juUrl": "",
     "size": 63.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol24_4_8_SMahadihassan.pdf",
+    "gcs_key": "ijhs/Vol24_4_8_SMahadihassan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol24_4_8_SMahadihassan.pdf"
   },
   {
@@ -7389,9 +7881,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol24_4_9_BookReview.pdf",
     "juUrl": "",
     "size": 47.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol24_4_9_BookReview.pdf",
+    "gcs_key": "ijhs/Vol24_4_9_BookReview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol24_4_9_BookReview.pdf"
   },
   {
@@ -7404,9 +7897,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol24_4_10_Report.pdf",
     "juUrl": "",
     "size": 109.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol24_4_10_Report.pdf",
+    "gcs_key": "ijhs/Vol24_4_10_Report.pdf",
     "localPath": "assets/pdfs/ijhs/Vol24_4_10_Report.pdf"
   },
   {
@@ -7419,9 +7913,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol24_4_11_Supplement.pdf",
     "juUrl": "",
     "size": 427.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol24_4_11_Supplement.pdf",
+    "gcs_key": "ijhs/Vol24_4_11_Supplement.pdf",
     "localPath": "assets/pdfs/ijhs/Vol24_4_11_Supplement.pdf"
   },
   {
@@ -7434,9 +7929,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol25_1to4_1_SMahdihassan.pdf",
     "juUrl": "",
     "size": 52.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol25_1to4_1_SMahdihassan.pdf",
+    "gcs_key": "ijhs/Vol25_1to4_1_SMahdihassan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol25_1to4_1_SMahdihassan.pdf"
   },
   {
@@ -7449,9 +7945,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol25_1to4_2_AKBag.pdf",
     "juUrl": "",
     "size": 223.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol25_1to4_2_AKBag.pdf",
+    "gcs_key": "ijhs/Vol25_1to4_2_AKBag.pdf",
     "localPath": "assets/pdfs/ijhs/Vol25_1to4_2_AKBag.pdf"
   },
   {
@@ -7464,9 +7961,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol25_1to4_3_MSKhan.pdf",
     "juUrl": "",
     "size": 208.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol25_1to4_3_MSKhan.pdf",
+    "gcs_key": "ijhs/Vol25_1to4_3_MSKhan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol25_1to4_3_MSKhan.pdf"
   },
   {
@@ -7479,9 +7977,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol25_1to4_4_VNSharma.pdf",
     "juUrl": "",
     "size": 192.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol25_1to4_4_VNSharma.pdf",
+    "gcs_key": "ijhs/Vol25_1to4_4_VNSharma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol25_1to4_4_VNSharma.pdf"
   },
   {
@@ -7494,9 +7993,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol25_1to4_5_NewsProjectsapprovedNewpublication.pdf",
     "juUrl": "",
     "size": 109.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol25_1to4_5_NewsProjectsapprovedNewpublication.pdf",
+    "gcs_key": "ijhs/Vol25_1to4_5_NewsProjectsapprovedNewpublication.pdf",
     "localPath": "assets/pdfs/ijhs/Vol25_1to4_5_NewsProjectsapprovedNewpublication.pdf"
   },
   {
@@ -7509,9 +8009,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol25_1to4_6_SupplementLaghumanasa.pdf",
     "juUrl": "",
     "size": 2361.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol25_1to4_6_SupplementLaghumanasa.pdf",
+    "gcs_key": "ijhs/Vol25_1to4_6_SupplementLaghumanasa.pdf",
     "localPath": "assets/pdfs/ijhs/Vol25_1to4_6_SupplementLaghumanasa.pdf"
   },
   {
@@ -7524,9 +8025,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol26_1_1_KDAbhyankar.pdf",
     "juUrl": "",
     "size": 160.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol26_1_1_KDAbhyankar.pdf",
+    "gcs_key": "ijhs/Vol26_1_1_KDAbhyankar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol26_1_1_KDAbhyankar.pdf"
   },
   {
@@ -7539,9 +8041,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol26_1_2_SMahdihassan.pdf",
     "juUrl": "",
     "size": 81.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol26_1_2_SMahdihassan.pdf",
+    "gcs_key": "ijhs/Vol26_1_2_SMahdihassan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol26_1_2_SMahdihassan.pdf"
   },
   {
@@ -7554,9 +8057,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol26_1_3_SRSarma.pdf",
     "juUrl": "",
     "size": 630.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol26_1_3_SRSarma.pdf",
+    "gcs_key": "ijhs/Vol26_1_3_SRSarma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol26_1_3_SRSarma.pdf"
   },
   {
@@ -7569,9 +8073,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol26_1_4_SAParamhans.pdf",
     "juUrl": "",
     "size": 118.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol26_1_4_SAParamhans.pdf",
+    "gcs_key": "ijhs/Vol26_1_4_SAParamhans.pdf",
     "localPath": "assets/pdfs/ijhs/Vol26_1_4_SAParamhans.pdf"
   },
   {
@@ -7584,9 +8089,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol26_1_5_AKChakraborty.pdf",
     "juUrl": "",
     "size": 107.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol26_1_5_AKChakraborty.pdf",
+    "gcs_key": "ijhs/Vol26_1_5_AKChakraborty.pdf",
     "localPath": "assets/pdfs/ijhs/Vol26_1_5_AKChakraborty.pdf"
   },
   {
@@ -7599,9 +8105,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol26_1_6_SSangwan.pdf",
     "juUrl": "",
     "size": 674.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol26_1_6_SSangwan.pdf",
+    "gcs_key": "ijhs/Vol26_1_6_SSangwan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol26_1_6_SSangwan.pdf"
   },
   {
@@ -7614,9 +8121,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol26_1_7_ABandyopandhyay.pdf",
     "juUrl": "",
     "size": 175.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol26_1_7_ABandyopandhyay.pdf",
+    "gcs_key": "ijhs/Vol26_1_7_ABandyopandhyay.pdf",
     "localPath": "assets/pdfs/ijhs/Vol26_1_7_ABandyopandhyay.pdf"
   },
   {
@@ -7629,9 +8137,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol26_1_8_BookReview.pdf",
     "juUrl": "",
     "size": 111.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol26_1_8_BookReview.pdf",
+    "gcs_key": "ijhs/Vol26_1_8_BookReview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol26_1_8_BookReview.pdf"
   },
   {
@@ -7644,9 +8153,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol26_2_1_KTAcharya.pdf",
     "juUrl": "",
     "size": 104.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol26_2_1_KTAcharya.pdf",
+    "gcs_key": "ijhs/Vol26_2_1_KTAcharya.pdf",
     "localPath": "assets/pdfs/ijhs/Vol26_2_1_KTAcharya.pdf"
   },
   {
@@ -7659,9 +8169,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol26_2_2_SMahdihassan.pdf",
     "juUrl": "",
     "size": 34.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol26_2_2_SMahdihassan.pdf",
+    "gcs_key": "ijhs/Vol26_2_2_SMahdihassan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol26_2_2_SMahdihassan.pdf"
   },
   {
@@ -7674,9 +8185,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol26_2_3_MRay.pdf",
     "juUrl": "",
     "size": 313.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol26_2_3_MRay.pdf",
+    "gcs_key": "ijhs/Vol26_2_3_MRay.pdf",
     "localPath": "assets/pdfs/ijhs/Vol26_2_3_MRay.pdf"
   },
   {
@@ -7689,9 +8201,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol26_2_4_MChaudhuri.pdf",
     "juUrl": "",
     "size": 65.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol26_2_4_MChaudhuri.pdf",
+    "gcs_key": "ijhs/Vol26_2_4_MChaudhuri.pdf",
     "localPath": "assets/pdfs/ijhs/Vol26_2_4_MChaudhuri.pdf"
   },
   {
@@ -7704,9 +8217,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol26_2_5_HKNaqvi.pdf",
     "juUrl": "",
     "size": 272.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol26_2_5_HKNaqvi.pdf",
+    "gcs_key": "ijhs/Vol26_2_5_HKNaqvi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol26_2_5_HKNaqvi.pdf"
   },
   {
@@ -7719,9 +8233,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol26_2_6_KVSarma.pdf",
     "juUrl": "",
     "size": 316.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol26_2_6_KVSarma.pdf",
+    "gcs_key": "ijhs/Vol26_2_6_KVSarma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol26_2_6_KVSarma.pdf"
   },
   {
@@ -7734,9 +8249,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol26_2_7_VNSharma.pdf",
     "juUrl": "",
     "size": 135.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol26_2_7_VNSharma.pdf",
+    "gcs_key": "ijhs/Vol26_2_7_VNSharma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol26_2_7_VNSharma.pdf"
   },
   {
@@ -7749,9 +8265,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol26_2_8_AKSaxena.pdf",
     "juUrl": "",
     "size": 176.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol26_2_8_AKSaxena.pdf",
+    "gcs_key": "ijhs/Vol26_2_8_AKSaxena.pdf",
     "localPath": "assets/pdfs/ijhs/Vol26_2_8_AKSaxena.pdf"
   },
   {
@@ -7764,9 +8281,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol26_2_9_NewsIHCongress.pdf",
     "juUrl": "",
     "size": 27.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol26_2_9_NewsIHCongress.pdf",
+    "gcs_key": "ijhs/Vol26_2_9_NewsIHCongress.pdf",
     "localPath": "assets/pdfs/ijhs/Vol26_2_9_NewsIHCongress.pdf"
   },
   {
@@ -7779,9 +8297,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol26_3_1_PVSharma.pdf",
     "juUrl": "",
     "size": 229.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol26_3_1_PVSharma.pdf",
+    "gcs_key": "ijhs/Vol26_3_1_PVSharma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol26_3_1_PVSharma.pdf"
   },
   {
@@ -7794,9 +8313,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol26_3_2_VNSharma.pdf",
     "juUrl": "",
     "size": 508.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol26_3_2_VNSharma.pdf",
+    "gcs_key": "ijhs/Vol26_3_2_VNSharma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol26_3_2_VNSharma.pdf"
   },
   {
@@ -7809,9 +8329,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol26_3_3_AKarbelashvili.pdf",
     "juUrl": "",
     "size": 90.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol26_3_3_AKarbelashvili.pdf",
+    "gcs_key": "ijhs/Vol26_3_3_AKarbelashvili.pdf",
     "localPath": "assets/pdfs/ijhs/Vol26_3_3_AKarbelashvili.pdf"
   },
   {
@@ -7824,9 +8345,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol26_3_4_PKBasu.pdf",
     "juUrl": "",
     "size": 492.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol26_3_4_PKBasu.pdf",
+    "gcs_key": "ijhs/Vol26_3_4_PKBasu.pdf",
     "localPath": "assets/pdfs/ijhs/Vol26_3_4_PKBasu.pdf"
   },
   {
@@ -7839,9 +8361,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol26_3_5_SupplementRasaratnasamucchaya.pdf",
     "juUrl": "",
     "size": 386.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol26_3_5_SupplementRasaratnasamucchaya.pdf",
+    "gcs_key": "ijhs/Vol26_3_5_SupplementRasaratnasamucchaya.pdf",
     "localPath": "assets/pdfs/ijhs/Vol26_3_5_SupplementRasaratnasamucchaya.pdf"
   },
   {
@@ -7854,9 +8377,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol26_4_1_BPrakash.pdf",
     "juUrl": "",
     "size": 449.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol26_4_1_BPrakash.pdf",
+    "gcs_key": "ijhs/Vol26_4_1_BPrakash.pdf",
     "localPath": "assets/pdfs/ijhs/Vol26_4_1_BPrakash.pdf"
   },
   {
@@ -7869,9 +8393,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol26_4_2_SMahdihassan.pdf",
     "juUrl": "",
     "size": 37.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol26_4_2_SMahdihassan.pdf",
+    "gcs_key": "ijhs/Vol26_4_2_SMahdihassan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol26_4_2_SMahdihassan.pdf"
   },
   {
@@ -7884,9 +8409,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol26_4_3_NKChandel.pdf",
     "juUrl": "",
     "size": 111.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol26_4_3_NKChandel.pdf",
+    "gcs_key": "ijhs/Vol26_4_3_NKChandel.pdf",
     "localPath": "assets/pdfs/ijhs/Vol26_4_3_NKChandel.pdf"
   },
   {
@@ -7899,9 +8425,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol26_4_4_GAbraham.pdf",
     "juUrl": "",
     "size": 64.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol26_4_4_GAbraham.pdf",
+    "gcs_key": "ijhs/Vol26_4_4_GAbraham.pdf",
     "localPath": "assets/pdfs/ijhs/Vol26_4_4_GAbraham.pdf"
   },
   {
@@ -7914,9 +8441,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol26_4_5_SPGupta.pdf",
     "juUrl": "",
     "size": 59.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol26_4_5_SPGupta.pdf",
+    "gcs_key": "ijhs/Vol26_4_5_SPGupta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol26_4_5_SPGupta.pdf"
   },
   {
@@ -7929,9 +8457,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol26_4_6_SupplementsPanchavimsatika.pdf",
     "juUrl": "",
     "size": 1078.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol26_4_6_SupplementsPanchavimsatika.pdf",
+    "gcs_key": "ijhs/Vol26_4_6_SupplementsPanchavimsatika.pdf",
     "localPath": "assets/pdfs/ijhs/Vol26_4_6_SupplementsPanchavimsatika.pdf"
   },
   {
@@ -7944,9 +8473,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol27_1_1_SMahdihassan.pdf",
     "juUrl": "",
     "size": 41.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol27_1_1_SMahdihassan.pdf",
+    "gcs_key": "ijhs/Vol27_1_1_SMahdihassan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol27_1_1_SMahdihassan.pdf"
   },
   {
@@ -7959,9 +8489,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol27_1_2_KTAchaya.pdf",
     "juUrl": "",
     "size": 131.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol27_1_2_KTAchaya.pdf",
+    "gcs_key": "ijhs/Vol27_1_2_KTAchaya.pdf",
     "localPath": "assets/pdfs/ijhs/Vol27_1_2_KTAchaya.pdf"
   },
   {
@@ -7974,9 +8505,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol27_1_3_NSaxena.pdf",
     "juUrl": "",
     "size": 188.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol27_1_3_NSaxena.pdf",
+    "gcs_key": "ijhs/Vol27_1_3_NSaxena.pdf",
     "localPath": "assets/pdfs/ijhs/Vol27_1_3_NSaxena.pdf"
   },
   {
@@ -7989,9 +8521,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol27_1_4_KAChowdhury.pdf",
     "juUrl": "",
     "size": 337.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol27_1_4_KAChowdhury.pdf",
+    "gcs_key": "ijhs/Vol27_1_4_KAChowdhury.pdf",
     "localPath": "assets/pdfs/ijhs/Vol27_1_4_KAChowdhury.pdf"
   },
   {
@@ -8004,9 +8537,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol27_1_5_BDatta.pdf",
     "juUrl": "",
     "size": 1067.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol27_1_5_BDatta.pdf",
+    "gcs_key": "ijhs/Vol27_1_5_BDatta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol27_1_5_BDatta.pdf"
   },
   {
@@ -8019,9 +8553,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol27_2_1_VDeshpande.pdf",
     "juUrl": "",
     "size": 158.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol27_2_1_VDeshpande.pdf",
+    "gcs_key": "ijhs/Vol27_2_1_VDeshpande.pdf",
     "localPath": "assets/pdfs/ijhs/Vol27_2_1_VDeshpande.pdf"
   },
   {
@@ -8034,9 +8569,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol27_2_2_AJQaisar.pdf",
     "juUrl": "",
     "size": 220.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol27_2_2_AJQaisar.pdf",
+    "gcs_key": "ijhs/Vol27_2_2_AJQaisar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol27_2_2_AJQaisar.pdf"
   },
   {
@@ -8049,9 +8585,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol27_2_3_MMehta.pdf",
     "juUrl": "",
     "size": 351.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol27_2_3_MMehta.pdf",
+    "gcs_key": "ijhs/Vol27_2_3_MMehta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol27_2_3_MMehta.pdf"
   },
   {
@@ -8064,9 +8601,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol27_2_4_JNSinha.pdf",
     "juUrl": "",
     "size": 201.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol27_2_4_JNSinha.pdf",
+    "gcs_key": "ijhs/Vol27_2_4_JNSinha.pdf",
     "localPath": "assets/pdfs/ijhs/Vol27_2_4_JNSinha.pdf"
   },
   {
@@ -8079,9 +8617,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol27_2_5_BookReviews.pdf",
     "juUrl": "",
     "size": 40.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol27_2_5_BookReviews.pdf",
+    "gcs_key": "ijhs/Vol27_2_5_BookReviews.pdf",
     "localPath": "assets/pdfs/ijhs/Vol27_2_5_BookReviews.pdf"
   },
   {
@@ -8094,9 +8633,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol27_2_6_NewPublications.pdf",
     "juUrl": "",
     "size": 21.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol27_2_6_NewPublications.pdf",
+    "gcs_key": "ijhs/Vol27_2_6_NewPublications.pdf",
     "localPath": "assets/pdfs/ijhs/Vol27_2_6_NewPublications.pdf"
   },
   {
@@ -8109,9 +8649,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol27_3_1_JCSikdar.pdf",
     "juUrl": "",
     "size": 107.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol27_3_1_JCSikdar.pdf",
+    "gcs_key": "ijhs/Vol27_3_1_JCSikdar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol27_3_1_JCSikdar.pdf"
   },
   {
@@ -8124,9 +8665,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol27_3_2_BDatta.pdf",
     "juUrl": "",
     "size": 217.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol27_3_2_BDatta.pdf",
+    "gcs_key": "ijhs/Vol27_3_2_BDatta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol27_3_2_BDatta.pdf"
   },
   {
@@ -8139,9 +8681,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol27_3_3_RKrishnamurthy.pdf",
     "juUrl": "",
     "size": 134.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol27_3_3_RKrishnamurthy.pdf",
+    "gcs_key": "ijhs/Vol27_3_3_RKrishnamurthy.pdf",
     "localPath": "assets/pdfs/ijhs/Vol27_3_3_RKrishnamurthy.pdf"
   },
   {
@@ -8154,9 +8697,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol27_3_4_ASaeed.pdf",
     "juUrl": "",
     "size": 233.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol27_3_4_ASaeed.pdf",
+    "gcs_key": "ijhs/Vol27_3_4_ASaeed.pdf",
     "localPath": "assets/pdfs/ijhs/Vol27_3_4_ASaeed.pdf"
   },
   {
@@ -8169,9 +8713,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol27_3_5_DKMittra.pdf",
     "juUrl": "",
     "size": 170.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol27_3_5_DKMittra.pdf",
+    "gcs_key": "ijhs/Vol27_3_5_DKMittra.pdf",
     "localPath": "assets/pdfs/ijhs/Vol27_3_5_DKMittra.pdf"
   },
   {
@@ -8184,9 +8729,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol27_3_6_AGhosh.pdf",
     "juUrl": "",
     "size": 319.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol27_3_6_AGhosh.pdf",
+    "gcs_key": "ijhs/Vol27_3_6_AGhosh.pdf",
     "localPath": "assets/pdfs/ijhs/Vol27_3_6_AGhosh.pdf"
   },
   {
@@ -8199,9 +8745,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol27_3_7_News.pdf",
     "juUrl": "",
     "size": 32.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol27_3_7_News.pdf",
+    "gcs_key": "ijhs/Vol27_3_7_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol27_3_7_News.pdf"
   },
   {
@@ -8214,9 +8761,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol27_3_8_Supplement_RasaRatnaSamuccaya.pdf",
     "juUrl": "",
     "size": 616.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol27_3_8_Supplement_RasaRatnaSamuccaya.pdf",
+    "gcs_key": "ijhs/Vol27_3_8_Supplement_RasaRatnaSamuccaya.pdf",
     "localPath": "assets/pdfs/ijhs/Vol27_3_8_Supplement_RasaRatnaSamuccaya.pdf"
   },
   {
@@ -8229,9 +8777,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol27_4_1_SNSen.pdf",
     "juUrl": "",
     "size": 144.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol27_4_1_SNSen.pdf",
+    "gcs_key": "ijhs/Vol27_4_1_SNSen.pdf",
     "localPath": "assets/pdfs/ijhs/Vol27_4_1_SNSen.pdf"
   },
   {
@@ -8244,9 +8793,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol27_4_2_JNKapur.pdf",
     "juUrl": "",
     "size": 265.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol27_4_2_JNKapur.pdf",
+    "gcs_key": "ijhs/Vol27_4_2_JNKapur.pdf",
     "localPath": "assets/pdfs/ijhs/Vol27_4_2_JNKapur.pdf"
   },
   {
@@ -8259,9 +8809,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol27_4_3_HNBose.pdf",
     "juUrl": "",
     "size": 165.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol27_4_3_HNBose.pdf",
+    "gcs_key": "ijhs/Vol27_4_3_HNBose.pdf",
     "localPath": "assets/pdfs/ijhs/Vol27_4_3_HNBose.pdf"
   },
   {
@@ -8274,9 +8825,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol27_4_4_CKMajumdar.pdf",
     "juUrl": "",
     "size": 241.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol27_4_4_CKMajumdar.pdf",
+    "gcs_key": "ijhs/Vol27_4_4_CKMajumdar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol27_4_4_CKMajumdar.pdf"
   },
   {
@@ -8289,9 +8841,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol27_4_5_AKRaychaudhuri.pdf",
     "juUrl": "",
     "size": 87.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol27_4_5_AKRaychaudhuri.pdf",
+    "gcs_key": "ijhs/Vol27_4_5_AKRaychaudhuri.pdf",
     "localPath": "assets/pdfs/ijhs/Vol27_4_5_AKRaychaudhuri.pdf"
   },
   {
@@ -8304,9 +8857,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol27_4_6_AKSaha.pdf",
     "juUrl": "",
     "size": 48.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol27_4_6_AKSaha.pdf",
+    "gcs_key": "ijhs/Vol27_4_6_AKSaha.pdf",
     "localPath": "assets/pdfs/ijhs/Vol27_4_6_AKSaha.pdf"
   },
   {
@@ -8319,9 +8873,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol27_4_7_SKMukherjee.pdf",
     "juUrl": "",
     "size": 131.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol27_4_7_SKMukherjee.pdf",
+    "gcs_key": "ijhs/Vol27_4_7_SKMukherjee.pdf",
     "localPath": "assets/pdfs/ijhs/Vol27_4_7_SKMukherjee.pdf"
   },
   {
@@ -8334,9 +8889,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol27_4_8_RCMehrotra.pdf",
     "juUrl": "",
     "size": 115.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol27_4_8_RCMehrotra.pdf",
+    "gcs_key": "ijhs/Vol27_4_8_RCMehrotra.pdf",
     "localPath": "assets/pdfs/ijhs/Vol27_4_8_RCMehrotra.pdf"
   },
   {
@@ -8349,9 +8905,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol27_4_9_SKMukerjee.pdf",
     "juUrl": "",
     "size": 274.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol27_4_9_SKMukerjee.pdf",
+    "gcs_key": "ijhs/Vol27_4_9_SKMukerjee.pdf",
     "localPath": "assets/pdfs/ijhs/Vol27_4_9_SKMukerjee.pdf"
   },
   {
@@ -8364,9 +8921,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol27_4_10_JDas.pdf",
     "juUrl": "",
     "size": 122.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol27_4_10_JDas.pdf",
+    "gcs_key": "ijhs/Vol27_4_10_JDas.pdf",
     "localPath": "assets/pdfs/ijhs/Vol27_4_10_JDas.pdf"
   },
   {
@@ -8379,9 +8937,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol27_4_11_RRDaniel.pdf",
     "juUrl": "",
     "size": 222.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol27_4_11_RRDaniel.pdf",
+    "gcs_key": "ijhs/Vol27_4_11_RRDaniel.pdf",
     "localPath": "assets/pdfs/ijhs/Vol27_4_11_RRDaniel.pdf"
   },
   {
@@ -8394,9 +8953,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol27_4_12_BookReviews.pdf",
     "juUrl": "",
     "size": 68.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol27_4_12_BookReviews.pdf",
+    "gcs_key": "ijhs/Vol27_4_12_BookReviews.pdf",
     "localPath": "assets/pdfs/ijhs/Vol27_4_12_BookReviews.pdf"
   },
   {
@@ -8409,9 +8969,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol27_4_13_Obituary_SNSen.pdf",
     "juUrl": "",
     "size": 56.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol27_4_13_Obituary_SNSen.pdf",
+    "gcs_key": "ijhs/Vol27_4_13_Obituary_SNSen.pdf",
     "localPath": "assets/pdfs/ijhs/Vol27_4_13_Obituary_SNSen.pdf"
   },
   {
@@ -8424,9 +8985,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol27_4_16_Erratum.pdf",
     "juUrl": "",
     "size": 45.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol27_4_16_Erratum.pdf",
+    "gcs_key": "ijhs/Vol27_4_16_Erratum.pdf",
     "localPath": "assets/pdfs/ijhs/Vol27_4_16_Erratum.pdf"
   },
   {
@@ -8439,9 +9001,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol27_4_17_SupplementBibliographyofPhysics.pdf",
     "juUrl": "",
     "size": 521.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol27_4_17_SupplementBibliographyofPhysics.pdf",
+    "gcs_key": "ijhs/Vol27_4_17_SupplementBibliographyofPhysics.pdf",
     "localPath": "assets/pdfs/ijhs/Vol27_4_17_SupplementBibliographyofPhysics.pdf"
   },
   {
@@ -8454,9 +9017,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol28_1_1_KDAbhyankar.pdf",
     "juUrl": "",
     "size": 209.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol28_1_1_KDAbhyankar.pdf",
+    "gcs_key": "ijhs/Vol28_1_1_KDAbhyankar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol28_1_1_KDAbhyankar.pdf"
   },
   {
@@ -8469,9 +9033,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol28_1_2_SCKak.pdf",
     "juUrl": "",
     "size": 297.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol28_1_2_SCKak.pdf",
+    "gcs_key": "ijhs/Vol28_1_2_SCKak.pdf",
     "localPath": "assets/pdfs/ijhs/Vol28_1_2_SCKak.pdf"
   },
   {
@@ -8484,9 +9049,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol28_1_3_PVSharma.pdf",
     "juUrl": "",
     "size": 253.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol28_1_3_PVSharma.pdf",
+    "gcs_key": "ijhs/Vol28_1_3_PVSharma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol28_1_3_PVSharma.pdf"
   },
   {
@@ -8499,9 +9065,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol28_1_4_VNSharma.pdf",
     "juUrl": "",
     "size": 82.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol28_1_4_VNSharma.pdf",
+    "gcs_key": "ijhs/Vol28_1_4_VNSharma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol28_1_4_VNSharma.pdf"
   },
   {
@@ -8514,9 +9081,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol28_1_5_SRSarma.pdf",
     "juUrl": "",
     "size": 350.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol28_1_5_SRSarma.pdf",
+    "gcs_key": "ijhs/Vol28_1_5_SRSarma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol28_1_5_SRSarma.pdf"
   },
   {
@@ -8529,9 +9097,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol28_1_6_SChandra.pdf",
     "juUrl": "",
     "size": 54.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol28_1_6_SChandra.pdf",
+    "gcs_key": "ijhs/Vol28_1_6_SChandra.pdf",
     "localPath": "assets/pdfs/ijhs/Vol28_1_6_SChandra.pdf"
   },
   {
@@ -8544,9 +9113,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol28_1_7_SupplementBibliographyofPhysics.pdf",
     "juUrl": "",
     "size": 1873.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol28_1_7_SupplementBibliographyofPhysics.pdf",
+    "gcs_key": "ijhs/Vol28_1_7_SupplementBibliographyofPhysics.pdf",
     "localPath": "assets/pdfs/ijhs/Vol28_1_7_SupplementBibliographyofPhysics.pdf"
   },
   {
@@ -8559,9 +9129,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol28_2_1_SCKak.pdf",
     "juUrl": "",
     "size": 141.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol28_2_1_SCKak.pdf",
+    "gcs_key": "ijhs/Vol28_2_1_SCKak.pdf",
     "localPath": "assets/pdfs/ijhs/Vol28_2_1_SCKak.pdf"
   },
   {
@@ -8574,9 +9145,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol28_2_2_RCGupta.pdf",
     "juUrl": "",
     "size": 276.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol28_2_2_RCGupta.pdf",
+    "gcs_key": "ijhs/Vol28_2_2_RCGupta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol28_2_2_RCGupta.pdf"
   },
   {
@@ -8589,9 +9161,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol28_2_3_BDatta.pdf",
     "juUrl": "",
     "size": 317.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol28_2_3_BDatta.pdf",
+    "gcs_key": "ijhs/Vol28_2_3_BDatta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol28_2_3_BDatta.pdf"
   },
   {
@@ -8604,9 +9177,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol28_2_4_VNSharma.pdf",
     "juUrl": "",
     "size": 456.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol28_2_4_VNSharma.pdf",
+    "gcs_key": "ijhs/Vol28_2_4_VNSharma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol28_2_4_VNSharma.pdf"
   },
   {
@@ -8619,9 +9193,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol28_2_5_RMercier.pdf",
     "juUrl": "",
     "size": 169.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol28_2_5_RMercier.pdf",
+    "gcs_key": "ijhs/Vol28_2_5_RMercier.pdf",
     "localPath": "assets/pdfs/ijhs/Vol28_2_5_RMercier.pdf"
   },
   {
@@ -8634,9 +9209,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol28_2_6_AGhosh.pdf",
     "juUrl": "",
     "size": 405.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol28_2_6_AGhosh.pdf",
+    "gcs_key": "ijhs/Vol28_2_6_AGhosh.pdf",
     "localPath": "assets/pdfs/ijhs/Vol28_2_6_AGhosh.pdf"
   },
   {
@@ -8649,9 +9225,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol28_2_7_BookReview.pdf",
     "juUrl": "",
     "size": 70.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol28_2_7_BookReview.pdf",
+    "gcs_key": "ijhs/Vol28_2_7_BookReview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol28_2_7_BookReview.pdf"
   },
   {
@@ -8664,9 +9241,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol28_2_8_SupplementBiblographyofPhysics.pdf",
     "juUrl": "",
     "size": 2214.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol28_2_8_SupplementBiblographyofPhysics.pdf",
+    "gcs_key": "ijhs/Vol28_2_8_SupplementBiblographyofPhysics.pdf",
     "localPath": "assets/pdfs/ijhs/Vol28_2_8_SupplementBiblographyofPhysics.pdf"
   },
   {
@@ -8679,9 +9257,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol28_3_1_YOhashi.pdf",
     "juUrl": "",
     "size": 1027.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol28_3_1_YOhashi.pdf",
+    "gcs_key": "ijhs/Vol28_3_1_YOhashi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol28_3_1_YOhashi.pdf"
   },
   {
@@ -8694,9 +9273,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol28_3_2_BDatta.pdf",
     "juUrl": "",
     "size": 166.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol28_3_2_BDatta.pdf",
+    "gcs_key": "ijhs/Vol28_3_2_BDatta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol28_3_2_BDatta.pdf"
   },
   {
@@ -8709,9 +9289,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol28_3_3_BDatta.pdf",
     "juUrl": "",
     "size": 111.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol28_3_3_BDatta.pdf",
+    "gcs_key": "ijhs/Vol28_3_3_BDatta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol28_3_3_BDatta.pdf"
   },
   {
@@ -8724,9 +9305,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol28_3_4_HSVirk.pdf",
     "juUrl": "",
     "size": 168.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol28_3_4_HSVirk.pdf",
+    "gcs_key": "ijhs/Vol28_3_4_HSVirk.pdf",
     "localPath": "assets/pdfs/ijhs/Vol28_3_4_HSVirk.pdf"
   },
   {
@@ -8739,9 +9321,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol28_3_5_News.pdf",
     "juUrl": "",
     "size": 42.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol28_3_5_News.pdf",
+    "gcs_key": "ijhs/Vol28_3_5_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol28_3_5_News.pdf"
   },
   {
@@ -8754,9 +9337,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol28_4_1_PSFilliozat.pdf",
     "juUrl": "",
     "size": 172.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol28_4_1_PSFilliozat.pdf",
+    "gcs_key": "ijhs/Vol28_4_1_PSFilliozat.pdf",
     "localPath": "assets/pdfs/ijhs/Vol28_4_1_PSFilliozat.pdf"
   },
   {
@@ -8769,9 +9353,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol28_4_2_LCJain.pdf",
     "juUrl": "",
     "size": 103.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol28_4_2_LCJain.pdf",
+    "gcs_key": "ijhs/Vol28_4_2_LCJain.pdf",
     "localPath": "assets/pdfs/ijhs/Vol28_4_2_LCJain.pdf"
   },
   {
@@ -8784,9 +9369,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol28_4_3_AKBiswas.pdf",
     "juUrl": "",
     "size": 398.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol28_4_3_AKBiswas.pdf",
+    "gcs_key": "ijhs/Vol28_4_3_AKBiswas.pdf",
     "localPath": "assets/pdfs/ijhs/Vol28_4_3_AKBiswas.pdf"
   },
   {
@@ -8799,9 +9385,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol28_4_4_BookReviewsAKBiswasAndARahman.pdf",
     "juUrl": "",
     "size": 72.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol28_4_4_BookReviewsAKBiswasAndARahman.pdf",
+    "gcs_key": "ijhs/Vol28_4_4_BookReviewsAKBiswasAndARahman.pdf",
     "localPath": "assets/pdfs/ijhs/Vol28_4_4_BookReviewsAKBiswasAndARahman.pdf"
   },
   {
@@ -8814,9 +9401,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol28_4_5_SupplementBibliographyofPhysics.pdf",
     "juUrl": "",
     "size": 2284.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol28_4_5_SupplementBibliographyofPhysics.pdf",
+    "gcs_key": "ijhs/Vol28_4_5_SupplementBibliographyofPhysics.pdf",
     "localPath": "assets/pdfs/ijhs/Vol28_4_5_SupplementBibliographyofPhysics.pdf"
   },
   {
@@ -8829,9 +9417,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol29_1_1_DKumar.pdf",
     "juUrl": "",
     "size": 127.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol29_1_1_DKumar.pdf",
+    "gcs_key": "ijhs/Vol29_1_1_DKumar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol29_1_1_DKumar.pdf"
   },
   {
@@ -8844,9 +9433,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol29_1_2_SGhose.pdf",
     "juUrl": "",
     "size": 226.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol29_1_2_SGhose.pdf",
+    "gcs_key": "ijhs/Vol29_1_2_SGhose.pdf",
     "localPath": "assets/pdfs/ijhs/Vol29_1_2_SGhose.pdf"
   },
   {
@@ -8859,9 +9449,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol29_1_3_MKahali.pdf",
     "juUrl": "",
     "size": 123.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol29_1_3_MKahali.pdf",
+    "gcs_key": "ijhs/Vol29_1_3_MKahali.pdf",
     "localPath": "assets/pdfs/ijhs/Vol29_1_3_MKahali.pdf"
   },
   {
@@ -8874,9 +9465,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol29_1_4_DBose.pdf",
     "juUrl": "",
     "size": 162.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol29_1_4_DBose.pdf",
+    "gcs_key": "ijhs/Vol29_1_4_DBose.pdf",
     "localPath": "assets/pdfs/ijhs/Vol29_1_4_DBose.pdf"
   },
   {
@@ -8889,9 +9481,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol29_1_5_SNSen.pdf",
     "juUrl": "",
     "size": 117.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol29_1_5_SNSen.pdf",
+    "gcs_key": "ijhs/Vol29_1_5_SNSen.pdf",
     "localPath": "assets/pdfs/ijhs/Vol29_1_5_SNSen.pdf"
   },
   {
@@ -8904,9 +9497,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol29_1_6_SCGhosh.pdf",
     "juUrl": "",
     "size": 193.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol29_1_6_SCGhosh.pdf",
+    "gcs_key": "ijhs/Vol29_1_6_SCGhosh.pdf",
     "localPath": "assets/pdfs/ijhs/Vol29_1_6_SCGhosh.pdf"
   },
   {
@@ -8919,9 +9513,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol29_1_7_AGhosh.pdf",
     "juUrl": "",
     "size": 243.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol29_1_7_AGhosh.pdf",
+    "gcs_key": "ijhs/Vol29_1_7_AGhosh.pdf",
     "localPath": "assets/pdfs/ijhs/Vol29_1_7_AGhosh.pdf"
   },
   {
@@ -8934,9 +9529,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol29_1_8_AKBiswas.pdf",
     "juUrl": "",
     "size": 204.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol29_1_8_AKBiswas.pdf",
+    "gcs_key": "ijhs/Vol29_1_8_AKBiswas.pdf",
     "localPath": "assets/pdfs/ijhs/Vol29_1_8_AKBiswas.pdf"
   },
   {
@@ -8949,9 +9545,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol29_1_9_JKGhosh.pdf",
     "juUrl": "",
     "size": 159.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol29_1_9_JKGhosh.pdf",
+    "gcs_key": "ijhs/Vol29_1_9_JKGhosh.pdf",
     "localPath": "assets/pdfs/ijhs/Vol29_1_9_JKGhosh.pdf"
   },
   {
@@ -8964,9 +9561,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol29_1_10_SChatterjee.pdf",
     "juUrl": "",
     "size": 180.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol29_1_10_SChatterjee.pdf",
+    "gcs_key": "ijhs/Vol29_1_10_SChatterjee.pdf",
     "localPath": "assets/pdfs/ijhs/Vol29_1_10_SChatterjee.pdf"
   },
   {
@@ -8979,9 +9577,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol29_1_11_DChattopadhyaya.pdf",
     "juUrl": "",
     "size": 128.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol29_1_11_DChattopadhyaya.pdf",
+    "gcs_key": "ijhs/Vol29_1_11_DChattopadhyaya.pdf",
     "localPath": "assets/pdfs/ijhs/Vol29_1_11_DChattopadhyaya.pdf"
   },
   {
@@ -8994,9 +9593,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol29_1_12_News.pdf",
     "juUrl": "",
     "size": 66.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol29_1_12_News.pdf",
+    "gcs_key": "ijhs/Vol29_1_12_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol29_1_12_News.pdf"
   },
   {
@@ -9009,9 +9609,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol29_1_13_Supplement.pdf",
     "juUrl": "",
     "size": 633.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol29_1_13_Supplement.pdf",
+    "gcs_key": "ijhs/Vol29_1_13_Supplement.pdf",
     "localPath": "assets/pdfs/ijhs/Vol29_1_13_Supplement.pdf"
   },
   {
@@ -9024,9 +9625,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol29_2_2_AKBiswas.pdf",
     "juUrl": "",
     "size": 700.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol29_2_2_AKBiswas.pdf",
+    "gcs_key": "ijhs/Vol29_2_2_AKBiswas.pdf",
     "localPath": "assets/pdfs/ijhs/Vol29_2_2_AKBiswas.pdf"
   },
   {
@@ -9039,9 +9641,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol29_2_3_YOhashi.pdf",
     "juUrl": "",
     "size": 2055.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol29_2_3_YOhashi.pdf",
+    "gcs_key": "ijhs/Vol29_2_3_YOhashi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol29_2_3_YOhashi.pdf"
   },
   {
@@ -9054,9 +9657,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol29_2_4_VDeshpande.pdf",
     "juUrl": "",
     "size": 180.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol29_2_4_VDeshpande.pdf",
+    "gcs_key": "ijhs/Vol29_2_4_VDeshpande.pdf",
     "localPath": "assets/pdfs/ijhs/Vol29_2_4_VDeshpande.pdf"
   },
   {
@@ -9069,9 +9673,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol29_2_5_MFilliozat.pdf",
     "juUrl": "",
     "size": 218.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol29_2_5_MFilliozat.pdf",
+    "gcs_key": "ijhs/Vol29_2_5_MFilliozat.pdf",
     "localPath": "assets/pdfs/ijhs/Vol29_2_5_MFilliozat.pdf"
   },
   {
@@ -9084,9 +9689,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol29_2_6_News.pdf",
     "juUrl": "",
     "size": 118.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol29_2_6_News.pdf",
+    "gcs_key": "ijhs/Vol29_2_6_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol29_2_6_News.pdf"
   },
   {
@@ -9099,9 +9705,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol29_3_1_SKBhatia.pdf",
     "juUrl": "",
     "size": 135.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol29_3_1_SKBhatia.pdf",
+    "gcs_key": "ijhs/Vol29_3_1_SKBhatia.pdf",
     "localPath": "assets/pdfs/ijhs/Vol29_3_1_SKBhatia.pdf"
   },
   {
@@ -9114,9 +9721,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol29_3_2_NGDongre.pdf",
     "juUrl": "",
     "size": 161.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol29_3_2_NGDongre.pdf",
+    "gcs_key": "ijhs/Vol29_3_2_NGDongre.pdf",
     "localPath": "assets/pdfs/ijhs/Vol29_3_2_NGDongre.pdf"
   },
   {
@@ -9129,9 +9737,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol29_3_3_SCKak.pdf",
     "juUrl": "",
     "size": 219.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol29_3_3_SCKak.pdf",
+    "gcs_key": "ijhs/Vol29_3_3_SCKak.pdf",
     "localPath": "assets/pdfs/ijhs/Vol29_3_3_SCKak.pdf"
   },
   {
@@ -9144,9 +9753,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol29_3_4_AKBiswas.pdf",
     "juUrl": "",
     "size": 498.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol29_3_4_AKBiswas.pdf",
+    "gcs_key": "ijhs/Vol29_3_4_AKBiswas.pdf",
     "localPath": "assets/pdfs/ijhs/Vol29_3_4_AKBiswas.pdf"
   },
   {
@@ -9159,9 +9769,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol29_3_5_VRamaswamy.pdf",
     "juUrl": "",
     "size": 193.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol29_3_5_VRamaswamy.pdf",
+    "gcs_key": "ijhs/Vol29_3_5_VRamaswamy.pdf",
     "localPath": "assets/pdfs/ijhs/Vol29_3_5_VRamaswamy.pdf"
   },
   {
@@ -9174,9 +9785,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol29_3_6_VNSharma.pdf",
     "juUrl": "",
     "size": 207.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol29_3_6_VNSharma.pdf",
+    "gcs_key": "ijhs/Vol29_3_6_VNSharma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol29_3_6_VNSharma.pdf"
   },
   {
@@ -9189,9 +9801,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol29_3_7_Obituary.pdf",
     "juUrl": "",
     "size": 56.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol29_3_7_Obituary.pdf",
+    "gcs_key": "ijhs/Vol29_3_7_Obituary.pdf",
     "localPath": "assets/pdfs/ijhs/Vol29_3_7_Obituary.pdf"
   },
   {
@@ -9204,9 +9817,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol29_3_8_News.pdf",
     "juUrl": "",
     "size": 65.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol29_3_8_News.pdf",
+    "gcs_key": "ijhs/Vol29_3_8_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol29_3_8_News.pdf"
   },
   {
@@ -9219,9 +9833,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol29_4_1_DFrawley.pdf",
     "juUrl": "",
     "size": 147.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol29_4_1_DFrawley.pdf",
+    "gcs_key": "ijhs/Vol29_4_1_DFrawley.pdf",
     "localPath": "assets/pdfs/ijhs/Vol29_4_1_DFrawley.pdf"
   },
   {
@@ -9234,9 +9849,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol29_4_2_SRSarma.pdf",
     "juUrl": "",
     "size": 465.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol29_4_2_SRSarma.pdf",
+    "gcs_key": "ijhs/Vol29_4_2_SRSarma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol29_4_2_SRSarma.pdf"
   },
   {
@@ -9249,9 +9865,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol29_4_3_SDas.pdf",
     "juUrl": "",
     "size": 333.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol29_4_3_SDas.pdf",
+    "gcs_key": "ijhs/Vol29_4_3_SDas.pdf",
     "localPath": "assets/pdfs/ijhs/Vol29_4_3_SDas.pdf"
   },
   {
@@ -9264,9 +9881,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol29_4_4_VNJha.pdf",
     "juUrl": "",
     "size": 152.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol29_4_4_VNJha.pdf",
+    "gcs_key": "ijhs/Vol29_4_4_VNJha.pdf",
     "localPath": "assets/pdfs/ijhs/Vol29_4_4_VNJha.pdf"
   },
   {
@@ -9279,9 +9897,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol29_4_5_AKBiswas.pdf",
     "juUrl": "",
     "size": 423.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol29_4_5_AKBiswas.pdf",
+    "gcs_key": "ijhs/Vol29_4_5_AKBiswas.pdf",
     "localPath": "assets/pdfs/ijhs/Vol29_4_5_AKBiswas.pdf"
   },
   {
@@ -9294,9 +9913,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol29_4_6_NGDongre.pdf",
     "juUrl": "",
     "size": 329.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol29_4_6_NGDongre.pdf",
+    "gcs_key": "ijhs/Vol29_4_6_NGDongre.pdf",
     "localPath": "assets/pdfs/ijhs/Vol29_4_6_NGDongre.pdf"
   },
   {
@@ -9309,9 +9929,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol29_4_9_News.pdf",
     "juUrl": "",
     "size": 70.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol29_4_9_News.pdf",
+    "gcs_key": "ijhs/Vol29_4_9_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol29_4_9_News.pdf"
   },
   {
@@ -9324,9 +9945,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol30_1_1_JDHughes.pdf",
     "juUrl": "",
     "size": 163.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol30_1_1_JDHughes.pdf",
+    "gcs_key": "ijhs/Vol30_1_1_JDHughes.pdf",
     "localPath": "assets/pdfs/ijhs/Vol30_1_1_JDHughes.pdf"
   },
   {
@@ -9339,9 +9961,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol30_1_2_PManansala.pdf",
     "juUrl": "",
     "size": 237.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol30_1_2_PManansala.pdf",
+    "gcs_key": "ijhs/Vol30_1_2_PManansala.pdf",
     "localPath": "assets/pdfs/ijhs/Vol30_1_2_PManansala.pdf"
   },
   {
@@ -9354,9 +9977,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol30_1_3_NCRana.pdf",
     "juUrl": "",
     "size": 65.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol30_1_3_NCRana.pdf",
+    "gcs_key": "ijhs/Vol30_1_3_NCRana.pdf",
     "localPath": "assets/pdfs/ijhs/Vol30_1_3_NCRana.pdf"
   },
   {
@@ -9369,9 +9993,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol30_1_4_AMukhopadhyay.pdf",
     "juUrl": "",
     "size": 170.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol30_1_4_AMukhopadhyay.pdf",
+    "gcs_key": "ijhs/Vol30_1_4_AMukhopadhyay.pdf",
     "localPath": "assets/pdfs/ijhs/Vol30_1_4_AMukhopadhyay.pdf"
   },
   {
@@ -9384,9 +10009,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol30_1_5_JInsley.pdf",
     "juUrl": "",
     "size": 147.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol30_1_5_JInsley.pdf",
+    "gcs_key": "ijhs/Vol30_1_5_JInsley.pdf",
     "localPath": "assets/pdfs/ijhs/Vol30_1_5_JInsley.pdf"
   },
   {
@@ -9399,9 +10025,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol30_1_6_LCJain.pdf",
     "juUrl": "",
     "size": 192.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol30_1_6_LCJain.pdf",
+    "gcs_key": "ijhs/Vol30_1_6_LCJain.pdf",
     "localPath": "assets/pdfs/ijhs/Vol30_1_6_LCJain.pdf"
   },
   {
@@ -9414,9 +10041,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol30_1_7_BookReview.pdf",
     "juUrl": "",
     "size": 51.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol30_1_7_BookReview.pdf",
+    "gcs_key": "ijhs/Vol30_1_7_BookReview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol30_1_7_BookReview.pdf"
   },
   {
@@ -9429,9 +10057,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol30_1_8_ReviewReport.pdf",
     "juUrl": "",
     "size": 208.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol30_1_8_ReviewReport.pdf",
+    "gcs_key": "ijhs/Vol30_1_8_ReviewReport.pdf",
     "localPath": "assets/pdfs/ijhs/Vol30_1_8_ReviewReport.pdf"
   },
   {
@@ -9444,9 +10073,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol30_2and3and4_1_APGreeshmalatha.pdf",
     "juUrl": "",
     "size": 562.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol30_2and3and4_1_APGreeshmalatha.pdf",
+    "gcs_key": "ijhs/Vol30_2and3and4_1_APGreeshmalatha.pdf",
     "localPath": "assets/pdfs/ijhs/Vol30_2and3and4_1_APGreeshmalatha.pdf"
   },
   {
@@ -9459,9 +10089,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol30_2and3and4_2_LCJain.pdf",
     "juUrl": "",
     "size": 459.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol30_2and3and4_2_LCJain.pdf",
+    "gcs_key": "ijhs/Vol30_2and3and4_2_LCJain.pdf",
     "localPath": "assets/pdfs/ijhs/Vol30_2and3and4_2_LCJain.pdf"
   },
   {
@@ -9474,9 +10105,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol30_2and3and4_3_MSKhan.pdf",
     "juUrl": "",
     "size": 349.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol30_2and3and4_3_MSKhan.pdf",
+    "gcs_key": "ijhs/Vol30_2and3and4_3_MSKhan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol30_2and3and4_3_MSKhan.pdf"
   },
   {
@@ -9489,9 +10121,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol30_2and3and4_4_AKChakravarty.pdf",
     "juUrl": "",
     "size": 137.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol30_2and3and4_4_AKChakravarty.pdf",
+    "gcs_key": "ijhs/Vol30_2and3and4_4_AKChakravarty.pdf",
     "localPath": "assets/pdfs/ijhs/Vol30_2and3and4_4_AKChakravarty.pdf"
   },
   {
@@ -9504,9 +10137,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol30_2and3and4_5_BookReviews.pdf",
     "juUrl": "",
     "size": 51.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol30_2and3and4_5_BookReviews.pdf",
+    "gcs_key": "ijhs/Vol30_2and3and4_5_BookReviews.pdf",
     "localPath": "assets/pdfs/ijhs/Vol30_2and3and4_5_BookReviews.pdf"
   },
   {
@@ -9519,9 +10153,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol30_2and3and4_6_News.pdf",
     "juUrl": "",
     "size": 47.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol30_2and3and4_6_News.pdf",
+    "gcs_key": "ijhs/Vol30_2and3and4_6_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol30_2and3and4_6_News.pdf"
   },
   {
@@ -9534,9 +10169,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol30_2and3and4_7_Supplementary_HistoryofMagneticStudiesinIndia.pdf",
     "juUrl": "",
     "size": 3495.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol30_2and3and4_7_Supplementary_HistoryofMagneticStudiesinIndia.pdf",
+    "gcs_key": "ijhs/Vol30_2and3and4_7_Supplementary_HistoryofMagneticStudiesinIndia.pdf",
     "localPath": "assets/pdfs/ijhs/Vol30_2and3and4_7_Supplementary_HistoryofMagneticStudiesinIndia.pdf"
   },
   {
@@ -9549,9 +10185,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol31_1_1_AKChakravarty.pdf",
     "juUrl": "",
     "size": 211.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol31_1_1_AKChakravarty.pdf",
+    "gcs_key": "ijhs/Vol31_1_1_AKChakravarty.pdf",
     "localPath": "assets/pdfs/ijhs/Vol31_1_1_AKChakravarty.pdf"
   },
   {
@@ -9564,9 +10201,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol31_1_2_KDAbhyankar.pdf",
     "juUrl": "",
     "size": 262.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol31_1_2_KDAbhyankar.pdf",
+    "gcs_key": "ijhs/Vol31_1_2_KDAbhyankar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol31_1_2_KDAbhyankar.pdf"
   },
   {
@@ -9579,9 +10217,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol31_1_3_AMShastri_vikrama.pdf",
     "juUrl": "",
     "size": 589.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol31_1_3_AMShastri_vikrama.pdf",
+    "gcs_key": "ijhs/Vol31_1_3_AMShastri_vikrama.pdf",
     "localPath": "assets/pdfs/ijhs/Vol31_1_3_AMShastri_vikrama.pdf"
   },
   {
@@ -9594,9 +10233,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol31_1_4_AMShastri_Saka.pdf",
     "juUrl": "",
     "size": 445.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol31_1_4_AMShastri_Saka.pdf",
+    "gcs_key": "ijhs/Vol31_1_4_AMShastri_Saka.pdf",
     "localPath": "assets/pdfs/ijhs/Vol31_1_4_AMShastri_Saka.pdf"
   },
   {
@@ -9609,9 +10249,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol31_1_5_ABhattacharyya.pdf",
     "juUrl": "",
     "size": 63.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol31_1_5_ABhattacharyya.pdf",
+    "gcs_key": "ijhs/Vol31_1_5_ABhattacharyya.pdf",
     "localPath": "assets/pdfs/ijhs/Vol31_1_5_ABhattacharyya.pdf"
   },
   {
@@ -9624,9 +10265,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol31_1_6_KVSarma.pdf",
     "juUrl": "",
     "size": 94.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol31_1_6_KVSarma.pdf",
+    "gcs_key": "ijhs/Vol31_1_6_KVSarma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol31_1_6_KVSarma.pdf"
   },
   {
@@ -9639,9 +10281,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol31_1_7_NewsSeminarPublications.pdf",
     "juUrl": "",
     "size": 94.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol31_1_7_NewsSeminarPublications.pdf",
+    "gcs_key": "ijhs/Vol31_1_7_NewsSeminarPublications.pdf",
     "localPath": "assets/pdfs/ijhs/Vol31_1_7_NewsSeminarPublications.pdf"
   },
   {
@@ -9654,9 +10297,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol31_1_8_SupplementBibliographyon%20MagneticStudies.pdf",
     "juUrl": "",
     "size": 2752.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol31_1_8_SupplementBibliographyon%20MagneticStudies.pdf",
+    "gcs_key": "ijhs/Vol31_1_8_SupplementBibliographyon%20MagneticStudies.pdf",
     "localPath": "assets/pdfs/ijhs/Vol31_1_8_SupplementBibliographyon%20MagneticStudies.pdf"
   },
   {
@@ -9669,9 +10313,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol31_2_1_PVSharma.pdf",
     "juUrl": "",
     "size": 323.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol31_2_1_PVSharma.pdf",
+    "gcs_key": "ijhs/Vol31_2_1_PVSharma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol31_2_1_PVSharma.pdf"
   },
   {
@@ -9684,9 +10329,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol31_2_2_KHKrishnamurthy.pdf",
     "juUrl": "",
     "size": 388.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol31_2_2_KHKrishnamurthy.pdf",
+    "gcs_key": "ijhs/Vol31_2_2_KHKrishnamurthy.pdf",
     "localPath": "assets/pdfs/ijhs/Vol31_2_2_KHKrishnamurthy.pdf"
   },
   {
@@ -9699,9 +10345,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol31_2_3_VMishra.pdf",
     "juUrl": "",
     "size": 104.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol31_2_3_VMishra.pdf",
+    "gcs_key": "ijhs/Vol31_2_3_VMishra.pdf",
     "localPath": "assets/pdfs/ijhs/Vol31_2_3_VMishra.pdf"
   },
   {
@@ -9714,9 +10361,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol31_2_4_LGopal.pdf",
     "juUrl": "",
     "size": 83.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol31_2_4_LGopal.pdf",
+    "gcs_key": "ijhs/Vol31_2_4_LGopal.pdf",
     "localPath": "assets/pdfs/ijhs/Vol31_2_4_LGopal.pdf"
   },
   {
@@ -9729,9 +10377,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol31_2_5_DPingree.pdf",
     "juUrl": "",
     "size": 460.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol31_2_5_DPingree.pdf",
+    "gcs_key": "ijhs/Vol31_2_5_DPingree.pdf",
     "localPath": "assets/pdfs/ijhs/Vol31_2_5_DPingree.pdf"
   },
   {
@@ -9744,9 +10393,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol31_2_6_NewsMonographPublications.pdf",
     "juUrl": "",
     "size": 136.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol31_2_6_NewsMonographPublications.pdf",
+    "gcs_key": "ijhs/Vol31_2_6_NewsMonographPublications.pdf",
     "localPath": "assets/pdfs/ijhs/Vol31_2_6_NewsMonographPublications.pdf"
   },
   {
@@ -9759,9 +10409,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol31_3_1_HWLaale.pdf",
     "juUrl": "",
     "size": 477.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol31_3_1_HWLaale.pdf",
+    "gcs_key": "ijhs/Vol31_3_1_HWLaale.pdf",
     "localPath": "assets/pdfs/ijhs/Vol31_3_1_HWLaale.pdf"
   },
   {
@@ -9774,9 +10425,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol31_3_2_MBanerjee.pdf",
     "juUrl": "",
     "size": 156.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol31_3_2_MBanerjee.pdf",
+    "gcs_key": "ijhs/Vol31_3_2_MBanerjee.pdf",
     "localPath": "assets/pdfs/ijhs/Vol31_3_2_MBanerjee.pdf"
   },
   {
@@ -9789,9 +10441,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol31_3_3_SDSharma.pdf",
     "juUrl": "",
     "size": 70.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol31_3_3_SDSharma.pdf",
+    "gcs_key": "ijhs/Vol31_3_3_SDSharma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol31_3_3_SDSharma.pdf"
   },
   {
@@ -9804,9 +10457,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol31_3_4_VDeshpande.pdf",
     "juUrl": "",
     "size": 76.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol31_3_4_VDeshpande.pdf",
+    "gcs_key": "ijhs/Vol31_3_4_VDeshpande.pdf",
     "localPath": "assets/pdfs/ijhs/Vol31_3_4_VDeshpande.pdf"
   },
   {
@@ -9819,9 +10473,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol31_3_5_PKMisra.pdf",
     "juUrl": "",
     "size": 106.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol31_3_5_PKMisra.pdf",
+    "gcs_key": "ijhs/Vol31_3_5_PKMisra.pdf",
     "localPath": "assets/pdfs/ijhs/Vol31_3_5_PKMisra.pdf"
   },
   {
@@ -9834,9 +10489,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol31_3_6_BookReviewandNews.pdf",
     "juUrl": "",
     "size": 1.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol31_3_6_BookReviewandNews.pdf",
+    "gcs_key": "ijhs/Vol31_3_6_BookReviewandNews.pdf",
     "localPath": "assets/pdfs/ijhs/Vol31_3_6_BookReviewandNews.pdf"
   },
   {
@@ -9849,9 +10505,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol31_4_1_MJShendge.pdf",
     "juUrl": "",
     "size": 485.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol31_4_1_MJShendge.pdf",
+    "gcs_key": "ijhs/Vol31_4_1_MJShendge.pdf",
     "localPath": "assets/pdfs/ijhs/Vol31_4_1_MJShendge.pdf"
   },
   {
@@ -9864,9 +10521,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol31_4_2_RKrishnamurthy.pdf",
     "juUrl": "",
     "size": 183.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol31_4_2_RKrishnamurthy.pdf",
+    "gcs_key": "ijhs/Vol31_4_2_RKrishnamurthy.pdf",
     "localPath": "assets/pdfs/ijhs/Vol31_4_2_RKrishnamurthy.pdf"
   },
   {
@@ -9879,9 +10537,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol31_4_3_SDas.pdf",
     "juUrl": "",
     "size": 335.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol31_4_3_SDas.pdf",
+    "gcs_key": "ijhs/Vol31_4_3_SDas.pdf",
     "localPath": "assets/pdfs/ijhs/Vol31_4_3_SDas.pdf"
   },
   {
@@ -9894,9 +10553,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol31_4_4_VJDeshpande.pdf",
     "juUrl": "",
     "size": 278.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol31_4_4_VJDeshpande.pdf",
+    "gcs_key": "ijhs/Vol31_4_4_VJDeshpande.pdf",
     "localPath": "assets/pdfs/ijhs/Vol31_4_4_VJDeshpande.pdf"
   },
   {
@@ -9909,9 +10569,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol31_4_5_MKChandrashekaran.pdf",
     "juUrl": "",
     "size": 150.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol31_4_5_MKChandrashekaran.pdf",
+    "gcs_key": "ijhs/Vol31_4_5_MKChandrashekaran.pdf",
     "localPath": "assets/pdfs/ijhs/Vol31_4_5_MKChandrashekaran.pdf"
   },
   {
@@ -9924,9 +10585,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol31_4_6_NCShah.pdf",
     "juUrl": "",
     "size": 155.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol31_4_6_NCShah.pdf",
+    "gcs_key": "ijhs/Vol31_4_6_NCShah.pdf",
     "localPath": "assets/pdfs/ijhs/Vol31_4_6_NCShah.pdf"
   },
   {
@@ -9939,9 +10601,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol32_1_1_BPrakash.pdf",
     "juUrl": "",
     "size": 600.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol32_1_1_BPrakash.pdf",
+    "gcs_key": "ijhs/Vol32_1_1_BPrakash.pdf",
     "localPath": "assets/pdfs/ijhs/Vol32_1_1_BPrakash.pdf"
   },
   {
@@ -9954,9 +10617,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol32_1_2_GVRajamanickam.pdf",
     "juUrl": "",
     "size": 461.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol32_1_2_GVRajamanickam.pdf",
+    "gcs_key": "ijhs/Vol32_1_2_GVRajamanickam.pdf",
     "localPath": "assets/pdfs/ijhs/Vol32_1_2_GVRajamanickam.pdf"
   },
   {
@@ -9969,9 +10633,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol32_1_3_GAbraham.pdf",
     "juUrl": "",
     "size": 59.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol32_1_3_GAbraham.pdf",
+    "gcs_key": "ijhs/Vol32_1_3_GAbraham.pdf",
     "localPath": "assets/pdfs/ijhs/Vol32_1_3_GAbraham.pdf"
   },
   {
@@ -9984,9 +10649,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol32_1_4_AMukhopadhyay.pdf",
     "juUrl": "",
     "size": 247.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol32_1_4_AMukhopadhyay.pdf",
+    "gcs_key": "ijhs/Vol32_1_4_AMukhopadhyay.pdf",
     "localPath": "assets/pdfs/ijhs/Vol32_1_4_AMukhopadhyay.pdf"
   },
   {
@@ -9999,9 +10665,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol32_1_5_SKChatterjee.pdf",
     "juUrl": "",
     "size": 216.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol32_1_5_SKChatterjee.pdf",
+    "gcs_key": "ijhs/Vol32_1_5_SKChatterjee.pdf",
     "localPath": "assets/pdfs/ijhs/Vol32_1_5_SKChatterjee.pdf"
   },
   {
@@ -10014,9 +10681,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol32_1_6_BNMukherjee.pdf",
     "juUrl": "",
     "size": 102.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol32_1_6_BNMukherjee.pdf",
+    "gcs_key": "ijhs/Vol32_1_6_BNMukherjee.pdf",
     "localPath": "assets/pdfs/ijhs/Vol32_1_6_BNMukherjee.pdf"
   },
   {
@@ -10029,9 +10697,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol32_1_7_BookReview.pdf",
     "juUrl": "",
     "size": 51.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol32_1_7_BookReview.pdf",
+    "gcs_key": "ijhs/Vol32_1_7_BookReview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol32_1_7_BookReview.pdf"
   },
   {
@@ -10044,9 +10713,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol32_1_9_NewsandAcademyPublicationsonHOS.pdf",
     "juUrl": "",
     "size": 130.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol32_1_9_NewsandAcademyPublicationsonHOS.pdf",
+    "gcs_key": "ijhs/Vol32_1_9_NewsandAcademyPublicationsonHOS.pdf",
     "localPath": "assets/pdfs/ijhs/Vol32_1_9_NewsandAcademyPublicationsonHOS.pdf"
   },
   {
@@ -10059,9 +10729,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol32_1_10_SupplementRasahrdayatantramCh1to10.pdf",
     "juUrl": "",
     "size": 2446.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol32_1_10_SupplementRasahrdayatantramCh1to10.pdf",
+    "gcs_key": "ijhs/Vol32_1_10_SupplementRasahrdayatantramCh1to10.pdf",
     "localPath": "assets/pdfs/ijhs/Vol32_1_10_SupplementRasahrdayatantramCh1to10.pdf"
   },
   {
@@ -10074,9 +10745,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol32_2_1_SCKak.pdf",
     "juUrl": "",
     "size": 216.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol32_2_1_SCKak.pdf",
+    "gcs_key": "ijhs/Vol32_2_1_SCKak.pdf",
     "localPath": "assets/pdfs/ijhs/Vol32_2_1_SCKak.pdf"
   },
   {
@@ -10089,9 +10761,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol32_2_2_HFrost.pdf",
     "juUrl": "",
     "size": 102.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol32_2_2_HFrost.pdf",
+    "gcs_key": "ijhs/Vol32_2_2_HFrost.pdf",
     "localPath": "assets/pdfs/ijhs/Vol32_2_2_HFrost.pdf"
   },
   {
@@ -10104,9 +10777,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol32_2_3_VMishra.pdf",
     "juUrl": "",
     "size": 80.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol32_2_3_VMishra.pdf",
+    "gcs_key": "ijhs/Vol32_2_3_VMishra.pdf",
     "localPath": "assets/pdfs/ijhs/Vol32_2_3_VMishra.pdf"
   },
   {
@@ -10119,9 +10793,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol32_2_4_GAbraham.pdf",
     "juUrl": "",
     "size": 50.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol32_2_4_GAbraham.pdf",
+    "gcs_key": "ijhs/Vol32_2_4_GAbraham.pdf",
     "localPath": "assets/pdfs/ijhs/Vol32_2_4_GAbraham.pdf"
   },
   {
@@ -10134,9 +10809,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol32_2_5_AGhosh.pdf",
     "juUrl": "",
     "size": 313.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol32_2_5_AGhosh.pdf",
+    "gcs_key": "ijhs/Vol32_2_5_AGhosh.pdf",
     "localPath": "assets/pdfs/ijhs/Vol32_2_5_AGhosh.pdf"
   },
   {
@@ -10149,9 +10825,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol32_2_6_KVSarma.pdf",
     "juUrl": "",
     "size": 187.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol32_2_6_KVSarma.pdf",
+    "gcs_key": "ijhs/Vol32_2_6_KVSarma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol32_2_6_KVSarma.pdf"
   },
   {
@@ -10164,9 +10841,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol32_2_7_BookReview.pdf",
     "juUrl": "",
     "size": 58.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol32_2_7_BookReview.pdf",
+    "gcs_key": "ijhs/Vol32_2_7_BookReview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol32_2_7_BookReview.pdf"
   },
   {
@@ -10179,9 +10857,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol32_2_8_NewsIndoPortuguesePublicationsonHOS.pdf",
     "juUrl": "",
     "size": 77.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol32_2_8_NewsIndoPortuguesePublicationsonHOS.pdf",
+    "gcs_key": "ijhs/Vol32_2_8_NewsIndoPortuguesePublicationsonHOS.pdf",
     "localPath": "assets/pdfs/ijhs/Vol32_2_8_NewsIndoPortuguesePublicationsonHOS.pdf"
   },
   {
@@ -10194,9 +10873,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol32_3_1_KCHari.pdf",
     "juUrl": "",
     "size": 145.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol32_3_1_KCHari.pdf",
+    "gcs_key": "ijhs/Vol32_3_1_KCHari.pdf",
     "localPath": "assets/pdfs/ijhs/Vol32_3_1_KCHari.pdf"
   },
   {
@@ -10209,9 +10889,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol32_3_2_SRSarma.pdf",
     "juUrl": "",
     "size": 125.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol32_3_2_SRSarma.pdf",
+    "gcs_key": "ijhs/Vol32_3_2_SRSarma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol32_3_2_SRSarma.pdf"
   },
   {
@@ -10224,9 +10905,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol32_3_3_YOhashi.pdf",
     "juUrl": "",
     "size": 1491.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol32_3_3_YOhashi.pdf",
+    "gcs_key": "ijhs/Vol32_3_3_YOhashi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol32_3_3_YOhashi.pdf"
   },
   {
@@ -10239,9 +10921,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol32_3_4_BookReview.pdf",
     "juUrl": "",
     "size": 89.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol32_3_4_BookReview.pdf",
+    "gcs_key": "ijhs/Vol32_3_4_BookReview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol32_3_4_BookReview.pdf"
   },
   {
@@ -10254,9 +10937,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol32_4_1_SCKak.pdf",
     "juUrl": "",
     "size": 124.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol32_4_1_SCKak.pdf",
+    "gcs_key": "ijhs/Vol32_4_1_SCKak.pdf",
     "localPath": "assets/pdfs/ijhs/Vol32_4_1_SCKak.pdf"
   },
   {
@@ -10269,9 +10953,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol32_4_2_VMMallayya.pdf",
     "juUrl": "",
     "size": 182.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol32_4_2_VMMallayya.pdf",
+    "gcs_key": "ijhs/Vol32_4_2_VMMallayya.pdf",
     "localPath": "assets/pdfs/ijhs/Vol32_4_2_VMMallayya.pdf"
   },
   {
@@ -10284,9 +10969,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol32_4_3_SKChatterjee.pdf",
     "juUrl": "",
     "size": 300.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol32_4_3_SKChatterjee.pdf",
+    "gcs_key": "ijhs/Vol32_4_3_SKChatterjee.pdf",
     "localPath": "assets/pdfs/ijhs/Vol32_4_3_SKChatterjee.pdf"
   },
   {
@@ -10299,9 +10985,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol32_4_4_BRRao.pdf",
     "juUrl": "",
     "size": 526.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol32_4_4_BRRao.pdf",
+    "gcs_key": "ijhs/Vol32_4_4_BRRao.pdf",
     "localPath": "assets/pdfs/ijhs/Vol32_4_4_BRRao.pdf"
   },
   {
@@ -10314,9 +11001,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol32_4_5_NSaxena.pdf",
     "juUrl": "",
     "size": 181.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol32_4_5_NSaxena.pdf",
+    "gcs_key": "ijhs/Vol32_4_5_NSaxena.pdf",
     "localPath": "assets/pdfs/ijhs/Vol32_4_5_NSaxena.pdf"
   },
   {
@@ -10329,9 +11017,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol32_4_6_KSMathew.pdf",
     "juUrl": "",
     "size": 156.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol32_4_6_KSMathew.pdf",
+    "gcs_key": "ijhs/Vol32_4_6_KSMathew.pdf",
     "localPath": "assets/pdfs/ijhs/Vol32_4_6_KSMathew.pdf"
   },
   {
@@ -10344,9 +11033,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol32_4_7_BookReviewaAndSRSarma.pdf",
     "juUrl": "",
     "size": 61.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol32_4_7_BookReviewaAndSRSarma.pdf",
+    "gcs_key": "ijhs/Vol32_4_7_BookReviewaAndSRSarma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol32_4_7_BookReviewaAndSRSarma.pdf"
   },
   {
@@ -10359,9 +11049,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol32_4_8_NewsMagicSquare.pdf",
     "juUrl": "",
     "size": 36.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol32_4_8_NewsMagicSquare.pdf",
+    "gcs_key": "ijhs/Vol32_4_8_NewsMagicSquare.pdf",
     "localPath": "assets/pdfs/ijhs/Vol32_4_8_NewsMagicSquare.pdf"
   },
   {
@@ -10374,9 +11065,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol33_1_1_SKAdhikari.pdf",
     "juUrl": "",
     "size": 249.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol33_1_1_SKAdhikari.pdf",
+    "gcs_key": "ijhs/Vol33_1_1_SKAdhikari.pdf",
     "localPath": "assets/pdfs/ijhs/Vol33_1_1_SKAdhikari.pdf"
   },
   {
@@ -10389,9 +11081,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol33_1_2_SCKak.pdf",
     "juUrl": "",
     "size": 85.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol33_1_2_SCKak.pdf",
+    "gcs_key": "ijhs/Vol33_1_2_SCKak.pdf",
     "localPath": "assets/pdfs/ijhs/Vol33_1_2_SCKak.pdf"
   },
   {
@@ -10404,9 +11097,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol33_1_3_SCKak.pdf",
     "juUrl": "",
     "size": 78.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol33_1_3_SCKak.pdf",
+    "gcs_key": "ijhs/Vol33_1_3_SCKak.pdf",
     "localPath": "assets/pdfs/ijhs/Vol33_1_3_SCKak.pdf"
   },
   {
@@ -10419,9 +11113,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol33_1_4_SSSarma.pdf",
     "juUrl": "",
     "size": 185.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol33_1_4_SSSarma.pdf",
+    "gcs_key": "ijhs/Vol33_1_4_SSSarma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol33_1_4_SSSarma.pdf"
   },
   {
@@ -10434,9 +11129,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol33_1_5_SKJain.pdf",
     "juUrl": "",
     "size": 198.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol33_1_5_SKJain.pdf",
+    "gcs_key": "ijhs/Vol33_1_5_SKJain.pdf",
     "localPath": "assets/pdfs/ijhs/Vol33_1_5_SKJain.pdf"
   },
   {
@@ -10449,9 +11145,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol33_1_6_SJJKozhamthadam.pdf",
     "juUrl": "",
     "size": 329.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol33_1_6_SJJKozhamthadam.pdf",
+    "gcs_key": "ijhs/Vol33_1_6_SJJKozhamthadam.pdf",
     "localPath": "assets/pdfs/ijhs/Vol33_1_6_SJJKozhamthadam.pdf"
   },
   {
@@ -10464,9 +11161,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol33_1_7_PublicationonHOS.pdf",
     "juUrl": "",
     "size": 84.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol33_1_7_PublicationonHOS.pdf",
+    "gcs_key": "ijhs/Vol33_1_7_PublicationonHOS.pdf",
     "localPath": "assets/pdfs/ijhs/Vol33_1_7_PublicationonHOS.pdf"
   },
   {
@@ -10479,9 +11177,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol33_1_8_Supplement.pdf",
     "juUrl": "",
     "size": 594.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol33_1_8_Supplement.pdf",
+    "gcs_key": "ijhs/Vol33_1_8_Supplement.pdf",
     "localPath": "assets/pdfs/ijhs/Vol33_1_8_Supplement.pdf"
   },
   {
@@ -10494,9 +11193,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol33_2_1_SCKak.pdf",
     "juUrl": "",
     "size": 115.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol33_2_1_SCKak.pdf",
+    "gcs_key": "ijhs/Vol33_2_1_SCKak.pdf",
     "localPath": "assets/pdfs/ijhs/Vol33_2_1_SCKak.pdf"
   },
   {
@@ -10509,9 +11209,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol33_2_2_BNNAchar.pdf",
     "juUrl": "",
     "size": 157.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol33_2_2_BNNAchar.pdf",
+    "gcs_key": "ijhs/Vol33_2_2_BNNAchar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol33_2_2_BNNAchar.pdf"
   },
   {
@@ -10524,9 +11225,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol33_2_3_SMadabhushi.pdf",
     "juUrl": "",
     "size": 132.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol33_2_3_SMadabhushi.pdf",
+    "gcs_key": "ijhs/Vol33_2_3_SMadabhushi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol33_2_3_SMadabhushi.pdf"
   },
   {
@@ -10539,9 +11241,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol33_2_4_AMukhopadhyay.pdf",
     "juUrl": "",
     "size": 191.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol33_2_4_AMukhopadhyay.pdf",
+    "gcs_key": "ijhs/Vol33_2_4_AMukhopadhyay.pdf",
     "localPath": "assets/pdfs/ijhs/Vol33_2_4_AMukhopadhyay.pdf"
   },
   {
@@ -10554,9 +11257,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol33_2_5_SSarkar.pdf",
     "juUrl": "",
     "size": 255.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol33_2_5_SSarkar.pdf",
+    "gcs_key": "ijhs/Vol33_2_5_SSarkar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol33_2_5_SSarkar.pdf"
   },
   {
@@ -10569,9 +11273,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol33_2_6_SKChatterjee.pdf",
     "juUrl": "",
     "size": 263.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol33_2_6_SKChatterjee.pdf",
+    "gcs_key": "ijhs/Vol33_2_6_SKChatterjee.pdf",
     "localPath": "assets/pdfs/ijhs/Vol33_2_6_SKChatterjee.pdf"
   },
   {
@@ -10584,9 +11289,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol33_2_7_News.pdf",
     "juUrl": "",
     "size": 36.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol33_2_7_News.pdf",
+    "gcs_key": "ijhs/Vol33_2_7_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol33_2_7_News.pdf"
   },
   {
@@ -10599,9 +11305,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol33_2_8_ProjectsApproved.pdf",
     "juUrl": "",
     "size": 45.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol33_2_8_ProjectsApproved.pdf",
+    "gcs_key": "ijhs/Vol33_2_8_ProjectsApproved.pdf",
     "localPath": "assets/pdfs/ijhs/Vol33_2_8_ProjectsApproved.pdf"
   },
   {
@@ -10614,9 +11321,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol33_2_9_AcademyPublicationsofHOS.pdf",
     "juUrl": "",
     "size": 79.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol33_2_9_AcademyPublicationsofHOS.pdf",
+    "gcs_key": "ijhs/Vol33_2_9_AcademyPublicationsofHOS.pdf",
     "localPath": "assets/pdfs/ijhs/Vol33_2_9_AcademyPublicationsofHOS.pdf"
   },
   {
@@ -10629,9 +11337,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol33_2_10_Supplement.pdf",
     "juUrl": "",
     "size": 611.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol33_2_10_Supplement.pdf",
+    "gcs_key": "ijhs/Vol33_2_10_Supplement.pdf",
     "localPath": "assets/pdfs/ijhs/Vol33_2_10_Supplement.pdf"
   },
   {
@@ -10644,9 +11353,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol33_3_1_SCKak.pdf",
     "juUrl": "",
     "size": 213.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol33_3_1_SCKak.pdf",
+    "gcs_key": "ijhs/Vol33_3_1_SCKak.pdf",
     "localPath": "assets/pdfs/ijhs/Vol33_3_1_SCKak.pdf"
   },
   {
@@ -10659,9 +11369,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol33_3_2_KCHari.pdf",
     "juUrl": "",
     "size": 114.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol33_3_2_KCHari.pdf",
+    "gcs_key": "ijhs/Vol33_3_2_KCHari.pdf",
     "localPath": "assets/pdfs/ijhs/Vol33_3_2_KCHari.pdf"
   },
   {
@@ -10674,9 +11385,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol33_3_3_CSRao.pdf",
     "juUrl": "",
     "size": 325.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol33_3_3_CSRao.pdf",
+    "gcs_key": "ijhs/Vol33_3_3_CSRao.pdf",
     "localPath": "assets/pdfs/ijhs/Vol33_3_3_CSRao.pdf"
   },
   {
@@ -10689,9 +11401,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol33_3_4_NGDongre.pdf",
     "juUrl": "",
     "size": 161.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol33_3_4_NGDongre.pdf",
+    "gcs_key": "ijhs/Vol33_3_4_NGDongre.pdf",
     "localPath": "assets/pdfs/ijhs/Vol33_3_4_NGDongre.pdf"
   },
   {
@@ -10704,9 +11417,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol33_3_5_ADas.pdf",
     "juUrl": "",
     "size": 152.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol33_3_5_ADas.pdf",
+    "gcs_key": "ijhs/Vol33_3_5_ADas.pdf",
     "localPath": "assets/pdfs/ijhs/Vol33_3_5_ADas.pdf"
   },
   {
@@ -10719,9 +11433,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol33_3_6_AcademyPublicationsofHOS.pdf",
     "juUrl": "",
     "size": 88.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol33_3_6_AcademyPublicationsofHOS.pdf",
+    "gcs_key": "ijhs/Vol33_3_6_AcademyPublicationsofHOS.pdf",
     "localPath": "assets/pdfs/ijhs/Vol33_3_6_AcademyPublicationsofHOS.pdf"
   },
   {
@@ -10734,9 +11449,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol33_3_7_Supplement.pdf",
     "juUrl": "",
     "size": 789.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol33_3_7_Supplement.pdf",
+    "gcs_key": "ijhs/Vol33_3_7_Supplement.pdf",
     "localPath": "assets/pdfs/ijhs/Vol33_3_7_Supplement.pdf"
   },
   {
@@ -10749,9 +11465,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol33_4_1_KCHari.pdf",
     "juUrl": "",
     "size": 171.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol33_4_1_KCHari.pdf",
+    "gcs_key": "ijhs/Vol33_4_1_KCHari.pdf",
     "localPath": "assets/pdfs/ijhs/Vol33_4_1_KCHari.pdf"
   },
   {
@@ -10764,9 +11481,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol33_4_2_PSensarma.pdf",
     "juUrl": "",
     "size": 120.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol33_4_2_PSensarma.pdf",
+    "gcs_key": "ijhs/Vol33_4_2_PSensarma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol33_4_2_PSensarma.pdf"
   },
   {
@@ -10779,9 +11497,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol33_4_3_NGDongre.pdf",
     "juUrl": "",
     "size": 177.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol33_4_3_NGDongre.pdf",
+    "gcs_key": "ijhs/Vol33_4_3_NGDongre.pdf",
     "localPath": "assets/pdfs/ijhs/Vol33_4_3_NGDongre.pdf"
   },
   {
@@ -10794,9 +11513,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol33_4_4_CPalit.pdf",
     "juUrl": "",
     "size": 213.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol33_4_4_CPalit.pdf",
+    "gcs_key": "ijhs/Vol33_4_4_CPalit.pdf",
     "localPath": "assets/pdfs/ijhs/Vol33_4_4_CPalit.pdf"
   },
   {
@@ -10809,9 +11529,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol33_4_5_AcademysPublicationsonHOS.pdf",
     "juUrl": "",
     "size": 84.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol33_4_5_AcademysPublicationsonHOS.pdf",
+    "gcs_key": "ijhs/Vol33_4_5_AcademysPublicationsonHOS.pdf",
     "localPath": "assets/pdfs/ijhs/Vol33_4_5_AcademysPublicationsonHOS.pdf"
   },
   {
@@ -10824,9 +11545,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol33_4_6_News.pdf",
     "juUrl": "",
     "size": 114.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol33_4_6_News.pdf",
+    "gcs_key": "ijhs/Vol33_4_6_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol33_4_6_News.pdf"
   },
   {
@@ -10839,9 +11561,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol33_4_7_Supplement.pdf",
     "juUrl": "",
     "size": 1024.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol33_4_7_Supplement.pdf",
+    "gcs_key": "ijhs/Vol33_4_7_Supplement.pdf",
     "localPath": "assets/pdfs/ijhs/Vol33_4_7_Supplement.pdf"
   },
   {
@@ -10854,9 +11577,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol34_1_1_KCHari.pdf",
     "juUrl": "",
     "size": 288.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol34_1_1_KCHari.pdf",
+    "gcs_key": "ijhs/Vol34_1_1_KCHari.pdf",
     "localPath": "assets/pdfs/ijhs/Vol34_1_1_KCHari.pdf"
   },
   {
@@ -10869,9 +11593,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol34_1_2_NKumar.pdf",
     "juUrl": "",
     "size": 1167.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol34_1_2_NKumar.pdf",
+    "gcs_key": "ijhs/Vol34_1_2_NKumar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol34_1_2_NKumar.pdf"
   },
   {
@@ -10884,9 +11609,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol34_1_3_RShrivastva.pdf",
     "juUrl": "",
     "size": 721.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol34_1_3_RShrivastva.pdf",
+    "gcs_key": "ijhs/Vol34_1_3_RShrivastva.pdf",
     "localPath": "assets/pdfs/ijhs/Vol34_1_3_RShrivastva.pdf"
   },
   {
@@ -10899,9 +11625,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol34_1_4_AGhosh.pdf",
     "juUrl": "",
     "size": 223.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol34_1_4_AGhosh.pdf",
+    "gcs_key": "ijhs/Vol34_1_4_AGhosh.pdf",
     "localPath": "assets/pdfs/ijhs/Vol34_1_4_AGhosh.pdf"
   },
   {
@@ -10914,9 +11641,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol34_1_5_RSingh.pdf",
     "juUrl": "",
     "size": 240.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol34_1_5_RSingh.pdf",
+    "gcs_key": "ijhs/Vol34_1_5_RSingh.pdf",
     "localPath": "assets/pdfs/ijhs/Vol34_1_5_RSingh.pdf"
   },
   {
@@ -10929,9 +11657,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol34_1_6_BookReviews.pdf",
     "juUrl": "",
     "size": 71.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol34_1_6_BookReviews.pdf",
+    "gcs_key": "ijhs/Vol34_1_6_BookReviews.pdf",
     "localPath": "assets/pdfs/ijhs/Vol34_1_6_BookReviews.pdf"
   },
   {
@@ -10944,9 +11673,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol34_1_7_News.pdf",
     "juUrl": "",
     "size": 85.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol34_1_7_News.pdf",
+    "gcs_key": "ijhs/Vol34_1_7_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol34_1_7_News.pdf"
   },
   {
@@ -10959,9 +11689,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol34_2_1_JSPettersson.pdf",
     "juUrl": "",
     "size": 317.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol34_2_1_JSPettersson.pdf",
+    "gcs_key": "ijhs/Vol34_2_1_JSPettersson.pdf",
     "localPath": "assets/pdfs/ijhs/Vol34_2_1_JSPettersson.pdf"
   },
   {
@@ -10974,9 +11705,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol34_2_2_BNNAchar.pdf",
     "juUrl": "",
     "size": 104.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol34_2_2_BNNAchar.pdf",
+    "gcs_key": "ijhs/Vol34_2_2_BNNAchar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol34_2_2_BNNAchar.pdf"
   },
   {
@@ -10989,9 +11721,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol34_2_3_Skak.pdf",
     "juUrl": "",
     "size": 203.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol34_2_3_Skak.pdf",
+    "gcs_key": "ijhs/Vol34_2_3_Skak.pdf",
     "localPath": "assets/pdfs/ijhs/Vol34_2_3_Skak.pdf"
   },
   {
@@ -11004,9 +11737,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol34_2_4_DKKanjilal.pdf",
     "juUrl": "",
     "size": 101.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol34_2_4_DKKanjilal.pdf",
+    "gcs_key": "ijhs/Vol34_2_4_DKKanjilal.pdf",
     "localPath": "assets/pdfs/ijhs/Vol34_2_4_DKKanjilal.pdf"
   },
   {
@@ -11019,9 +11753,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol34_2_5_KCHari.pdf",
     "juUrl": "",
     "size": 193.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol34_2_5_KCHari.pdf",
+    "gcs_key": "ijhs/Vol34_2_5_KCHari.pdf",
     "localPath": "assets/pdfs/ijhs/Vol34_2_5_KCHari.pdf"
   },
   {
@@ -11034,9 +11769,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol34_2_6_SRSarma.pdf",
     "juUrl": "",
     "size": 368.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol34_2_6_SRSarma.pdf",
+    "gcs_key": "ijhs/Vol34_2_6_SRSarma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol34_2_6_SRSarma.pdf"
   },
   {
@@ -11049,9 +11785,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol34_2_7_BookReviews.pdf",
     "juUrl": "",
     "size": 119.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol34_2_7_BookReviews.pdf",
+    "gcs_key": "ijhs/Vol34_2_7_BookReviews.pdf",
     "localPath": "assets/pdfs/ijhs/Vol34_2_7_BookReviews.pdf"
   },
   {
@@ -11064,9 +11801,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol34_2_8_News.pdf",
     "juUrl": "",
     "size": 40.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol34_2_8_News.pdf",
+    "gcs_key": "ijhs/Vol34_2_8_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol34_2_8_News.pdf"
   },
   {
@@ -11079,9 +11817,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol34_2_9_AcademyPublicationsonHOS.pdf",
     "juUrl": "",
     "size": 93.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol34_2_9_AcademyPublicationsonHOS.pdf",
+    "gcs_key": "ijhs/Vol34_2_9_AcademyPublicationsonHOS.pdf",
     "localPath": "assets/pdfs/ijhs/Vol34_2_9_AcademyPublicationsonHOS.pdf"
   },
   {
@@ -11094,9 +11833,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol34_3_1_RShrivastva.pdf",
     "juUrl": "",
     "size": 121.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol34_3_1_RShrivastva.pdf",
+    "gcs_key": "ijhs/Vol34_3_1_RShrivastva.pdf",
     "localPath": "assets/pdfs/ijhs/Vol34_3_1_RShrivastva.pdf"
   },
   {
@@ -11109,9 +11849,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol34_3_2_RNIyengar.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vol34_3_2_RNIyengar.pdf",
     "size": 909.0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol34_3_2_RNIyengar.pdf",
+    "gcs_key": "ijhs/Vol34_3_2_RNIyengar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol34_3_2_RNIyengar.pdf"
   },
   {
@@ -11124,9 +11865,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol34_3_3_NKMaitra.pdf",
     "juUrl": "",
     "size": 72.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol34_3_3_NKMaitra.pdf",
+    "gcs_key": "ijhs/Vol34_3_3_NKMaitra.pdf",
     "localPath": "assets/pdfs/ijhs/Vol34_3_3_NKMaitra.pdf"
   },
   {
@@ -11139,9 +11881,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol34_3_4_BookReviews.pdf",
     "juUrl": "",
     "size": 70.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol34_3_4_BookReviews.pdf",
+    "gcs_key": "ijhs/Vol34_3_4_BookReviews.pdf",
     "localPath": "assets/pdfs/ijhs/Vol34_3_4_BookReviews.pdf"
   },
   {
@@ -11154,9 +11897,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol34_3_5_News.pdf",
     "juUrl": "",
     "size": 93.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol34_3_5_News.pdf",
+    "gcs_key": "ijhs/Vol34_3_5_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol34_3_5_News.pdf"
   },
   {
@@ -11169,9 +11913,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol34_4_1_BSasisekaran.pdf",
     "juUrl": "",
     "size": 672.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol34_4_1_BSasisekaran.pdf",
+    "gcs_key": "ijhs/Vol34_4_1_BSasisekaran.pdf",
     "localPath": "assets/pdfs/ijhs/Vol34_4_1_BSasisekaran.pdf"
   },
   {
@@ -11184,9 +11929,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol34_4_2_SRSarma.pdf",
     "juUrl": "",
     "size": 366.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol34_4_2_SRSarma.pdf",
+    "gcs_key": "ijhs/Vol34_4_2_SRSarma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol34_4_2_SRSarma.pdf"
   },
   {
@@ -11199,9 +11945,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol34_4_3_SGarg.pdf",
     "juUrl": "",
     "size": 388.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol34_4_3_SGarg.pdf",
+    "gcs_key": "ijhs/Vol34_4_3_SGarg.pdf",
     "localPath": "assets/pdfs/ijhs/Vol34_4_3_SGarg.pdf"
   },
   {
@@ -11214,9 +11961,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol34_4_4_RKKochhar.pdf",
     "juUrl": "",
     "size": 481.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol34_4_4_RKKochhar.pdf",
+    "gcs_key": "ijhs/Vol34_4_4_RKKochhar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol34_4_4_RKKochhar.pdf"
   },
   {
@@ -11229,9 +11977,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol34_4_5_BookReview.pdf",
     "juUrl": "",
     "size": 44.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol34_4_5_BookReview.pdf",
+    "gcs_key": "ijhs/Vol34_4_5_BookReview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol34_4_5_BookReview.pdf"
   },
   {
@@ -11244,9 +11993,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol34_4_6_News.pdf",
     "juUrl": "",
     "size": 109.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol34_4_6_News.pdf",
+    "gcs_key": "ijhs/Vol34_4_6_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol34_4_6_News.pdf"
   },
   {
@@ -11259,9 +12009,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol34_4_7_Supplement_Rasendramangalam.pdf",
     "juUrl": "",
     "size": 649.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol34_4_7_Supplement_Rasendramangalam.pdf",
+    "gcs_key": "ijhs/Vol34_4_7_Supplement_Rasendramangalam.pdf",
     "localPath": "assets/pdfs/ijhs/Vol34_4_7_Supplement_Rasendramangalam.pdf"
   },
   {
@@ -11274,9 +12025,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol35_1_1_BNNAchar.pdf",
     "juUrl": "",
     "size": 343.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol35_1_1_BNNAchar.pdf",
+    "gcs_key": "ijhs/Vol35_1_1_BNNAchar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol35_1_1_BNNAchar.pdf"
   },
   {
@@ -11289,9 +12041,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol35_1_2_KCHari.pdf",
     "juUrl": "",
     "size": 64.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol35_1_2_KCHari.pdf",
+    "gcs_key": "ijhs/Vol35_1_2_KCHari.pdf",
     "localPath": "assets/pdfs/ijhs/Vol35_1_2_KCHari.pdf"
   },
   {
@@ -11304,9 +12057,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol35_1_3_PSensarma.pdf",
     "juUrl": "",
     "size": 183.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol35_1_3_PSensarma.pdf",
+    "gcs_key": "ijhs/Vol35_1_3_PSensarma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol35_1_3_PSensarma.pdf"
   },
   {
@@ -11319,9 +12073,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol35_1_4_BvDalen.pdf",
     "juUrl": "",
     "size": 363.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol35_1_4_BvDalen.pdf",
+    "gcs_key": "ijhs/Vol35_1_4_BvDalen.pdf",
     "localPath": "assets/pdfs/ijhs/Vol35_1_4_BvDalen.pdf"
   },
   {
@@ -11334,9 +12089,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol35_1_5_HSingh.pdf",
     "juUrl": "",
     "size": 139.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol35_1_5_HSingh.pdf",
+    "gcs_key": "ijhs/Vol35_1_5_HSingh.pdf",
     "localPath": "assets/pdfs/ijhs/Vol35_1_5_HSingh.pdf"
   },
   {
@@ -11349,9 +12105,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol35_1_6_BookReviews.pdf",
     "juUrl": "",
     "size": 136.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol35_1_6_BookReviews.pdf",
+    "gcs_key": "ijhs/Vol35_1_6_BookReviews.pdf",
     "localPath": "assets/pdfs/ijhs/Vol35_1_6_BookReviews.pdf"
   },
   {
@@ -11364,9 +12121,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol35_1_7_Notices.pdf",
     "juUrl": "",
     "size": 39.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol35_1_7_Notices.pdf",
+    "gcs_key": "ijhs/Vol35_1_7_Notices.pdf",
     "localPath": "assets/pdfs/ijhs/Vol35_1_7_Notices.pdf"
   },
   {
@@ -11379,9 +12137,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol35_3_1_BNNAchar.pdf",
     "juUrl": "",
     "size": 149.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol35_3_1_BNNAchar.pdf",
+    "gcs_key": "ijhs/Vol35_3_1_BNNAchar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol35_3_1_BNNAchar.pdf"
   },
   {
@@ -11394,9 +12153,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol35_3_2_KDAbhyankar.pdf",
     "juUrl": "",
     "size": 62.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol35_3_2_KDAbhyankar.pdf",
+    "gcs_key": "ijhs/Vol35_3_2_KDAbhyankar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol35_3_2_KDAbhyankar.pdf"
   },
   {
@@ -11409,9 +12169,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol35_3_3_THayashi.pdf",
     "juUrl": "",
     "size": 666.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol35_3_3_THayashi.pdf",
+    "gcs_key": "ijhs/Vol35_3_3_THayashi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol35_3_3_THayashi.pdf"
   },
   {
@@ -11424,9 +12185,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol35_3_4_VNSharma.pdf",
     "juUrl": "",
     "size": 427.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol35_3_4_VNSharma.pdf",
+    "gcs_key": "ijhs/Vol35_3_4_VNSharma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol35_3_4_VNSharma.pdf"
   },
   {
@@ -11439,9 +12201,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol35_3_5_IHabib.pdf",
     "juUrl": "",
     "size": 615.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol35_3_5_IHabib.pdf",
+    "gcs_key": "ijhs/Vol35_3_5_IHabib.pdf",
     "localPath": "assets/pdfs/ijhs/Vol35_3_5_IHabib.pdf"
   },
   {
@@ -11454,9 +12217,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol35_3_6_BookReviews.pdf",
     "juUrl": "",
     "size": 131.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol35_3_6_BookReviews.pdf",
+    "gcs_key": "ijhs/Vol35_3_6_BookReviews.pdf",
     "localPath": "assets/pdfs/ijhs/Vol35_3_6_BookReviews.pdf"
   },
   {
@@ -11469,9 +12233,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol35_3_7_Notices.pdf",
     "juUrl": "",
     "size": 33.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol35_3_7_Notices.pdf",
+    "gcs_key": "ijhs/Vol35_3_7_Notices.pdf",
     "localPath": "assets/pdfs/ijhs/Vol35_3_7_Notices.pdf"
   },
   {
@@ -11484,9 +12249,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol35_3_8_Conferences.pdf",
     "juUrl": "",
     "size": 108.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol35_3_8_Conferences.pdf",
+    "gcs_key": "ijhs/Vol35_3_8_Conferences.pdf",
     "localPath": "assets/pdfs/ijhs/Vol35_3_8_Conferences.pdf"
   },
   {
@@ -11499,9 +12265,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol35_4_1_BNNAchar.pdf",
     "juUrl": "",
     "size": 280.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol35_4_1_BNNAchar.pdf",
+    "gcs_key": "ijhs/Vol35_4_1_BNNAchar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol35_4_1_BNNAchar.pdf"
   },
   {
@@ -11514,9 +12281,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol35_4_2_HThurston.pdf",
     "juUrl": "",
     "size": 121.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol35_4_2_HThurston.pdf",
+    "gcs_key": "ijhs/Vol35_4_2_HThurston.pdf",
     "localPath": "assets/pdfs/ijhs/Vol35_4_2_HThurston.pdf"
   },
   {
@@ -11529,9 +12297,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol35_4_3_DRaina.pdf",
     "juUrl": "",
     "size": 509.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol35_4_3_DRaina.pdf",
+    "gcs_key": "ijhs/Vol35_4_3_DRaina.pdf",
     "localPath": "assets/pdfs/ijhs/Vol35_4_3_DRaina.pdf"
   },
   {
@@ -11544,9 +12313,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol35_4_4_BookReviews.pdf",
     "juUrl": "",
     "size": 108.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol35_4_4_BookReviews.pdf",
+    "gcs_key": "ijhs/Vol35_4_4_BookReviews.pdf",
     "localPath": "assets/pdfs/ijhs/Vol35_4_4_BookReviews.pdf"
   },
   {
@@ -11559,9 +12329,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol35_4_5_SupplementsHOSResearchProjects.pdf",
     "juUrl": "",
     "size": 1524.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol35_4_5_SupplementsHOSResearchProjects.pdf",
+    "gcs_key": "ijhs/Vol35_4_5_SupplementsHOSResearchProjects.pdf",
     "localPath": "assets/pdfs/ijhs/Vol35_4_5_SupplementsHOSResearchProjects.pdf"
   },
   {
@@ -11574,9 +12345,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol36_1and2_1_RBalasubramanian.pdf",
     "juUrl": "",
     "size": 1182.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol36_1and2_1_RBalasubramanian.pdf",
+    "gcs_key": "ijhs/Vol36_1and2_1_RBalasubramanian.pdf",
     "localPath": "assets/pdfs/ijhs/Vol36_1and2_1_RBalasubramanian.pdf"
   },
   {
@@ -11589,9 +12361,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol36_1and2_2_SRSarma.pdf",
     "juUrl": "",
     "size": 82.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol36_1and2_2_SRSarma.pdf",
+    "gcs_key": "ijhs/Vol36_1and2_2_SRSarma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol36_1and2_2_SRSarma.pdf"
   },
   {
@@ -11604,9 +12377,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol36_1and2_3_AKBag.pdf",
     "juUrl": "",
     "size": 163.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol36_1and2_3_AKBag.pdf",
+    "gcs_key": "ijhs/Vol36_1and2_3_AKBag.pdf",
     "localPath": "assets/pdfs/ijhs/Vol36_1and2_3_AKBag.pdf"
   },
   {
@@ -11619,9 +12393,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol36_1and2_4_BookReview.pdf",
     "juUrl": "",
     "size": 152.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol36_1and2_4_BookReview.pdf",
+    "gcs_key": "ijhs/Vol36_1and2_4_BookReview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol36_1and2_4_BookReview.pdf"
   },
   {
@@ -11634,9 +12409,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol36_1and2_5_Notices.pdf",
     "juUrl": "",
     "size": 72.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol36_1and2_5_Notices.pdf",
+    "gcs_key": "ijhs/Vol36_1and2_5_Notices.pdf",
     "localPath": "assets/pdfs/ijhs/Vol36_1and2_5_Notices.pdf"
   },
   {
@@ -11649,9 +12425,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol36_1and2_6_Conferences.pdf",
     "juUrl": "",
     "size": 119.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol36_1and2_6_Conferences.pdf",
+    "gcs_key": "ijhs/Vol36_1and2_6_Conferences.pdf",
     "localPath": "assets/pdfs/ijhs/Vol36_1and2_6_Conferences.pdf"
   },
   {
@@ -11664,9 +12441,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol36_1and2_7_Projects.pdf",
     "juUrl": "",
     "size": 75.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol36_1and2_7_Projects.pdf",
+    "gcs_key": "ijhs/Vol36_1and2_7_Projects.pdf",
     "localPath": "assets/pdfs/ijhs/Vol36_1and2_7_Projects.pdf"
   },
   {
@@ -11679,9 +12457,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol36_3and4_1_BSasisekaran.pdf",
     "juUrl": "",
     "size": 375.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol36_3and4_1_BSasisekaran.pdf",
+    "gcs_key": "ijhs/Vol36_3and4_1_BSasisekaran.pdf",
     "localPath": "assets/pdfs/ijhs/Vol36_3and4_1_BSasisekaran.pdf"
   },
   {
@@ -11694,9 +12473,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol36_3and4_2_KVSarma.pdf",
     "juUrl": "",
     "size": 161.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol36_3and4_2_KVSarma.pdf",
+    "gcs_key": "ijhs/Vol36_3and4_2_KVSarma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol36_3and4_2_KVSarma.pdf"
   },
   {
@@ -11709,9 +12489,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol36_3and4_3_YVJeppu.pdf",
     "juUrl": "",
     "size": 125.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol36_3and4_3_YVJeppu.pdf",
+    "gcs_key": "ijhs/Vol36_3and4_3_YVJeppu.pdf",
     "localPath": "assets/pdfs/ijhs/Vol36_3and4_3_YVJeppu.pdf"
   },
   {
@@ -11724,9 +12505,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol36_3and4_4_KCHari.pdf",
     "juUrl": "",
     "size": 333.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol36_3and4_4_KCHari.pdf",
+    "gcs_key": "ijhs/Vol36_3and4_4_KCHari.pdf",
     "localPath": "assets/pdfs/ijhs/Vol36_3and4_4_KCHari.pdf"
   },
   {
@@ -11739,9 +12521,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol36_3and4_5_GSSodhi.pdf",
     "juUrl": "",
     "size": 112.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol36_3and4_5_GSSodhi.pdf",
+    "gcs_key": "ijhs/Vol36_3and4_5_GSSodhi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol36_3and4_5_GSSodhi.pdf"
   },
   {
@@ -11754,9 +12537,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol36_3and4_6_BookReviews.pdf",
     "juUrl": "",
     "size": 138.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol36_3and4_6_BookReviews.pdf",
+    "gcs_key": "ijhs/Vol36_3and4_6_BookReviews.pdf",
     "localPath": "assets/pdfs/ijhs/Vol36_3and4_6_BookReviews.pdf"
   },
   {
@@ -11769,9 +12553,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol36_3and4_7_ProjectReport.pdf",
     "juUrl": "",
     "size": 1503.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol36_3and4_7_ProjectReport.pdf",
+    "gcs_key": "ijhs/Vol36_3and4_7_ProjectReport.pdf",
     "localPath": "assets/pdfs/ijhs/Vol36_3and4_7_ProjectReport.pdf"
   },
   {
@@ -11784,9 +12569,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol36_3and4_8_Conferences.pdf",
     "juUrl": "",
     "size": 126.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol36_3and4_8_Conferences.pdf",
+    "gcs_key": "ijhs/Vol36_3and4_8_Conferences.pdf",
     "localPath": "assets/pdfs/ijhs/Vol36_3and4_8_Conferences.pdf"
   },
   {
@@ -11799,9 +12585,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol37_1_1_RBalasubramaniam.pdf",
     "juUrl": "",
     "size": 350.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol37_1_1_RBalasubramaniam.pdf",
+    "gcs_key": "ijhs/Vol37_1_1_RBalasubramaniam.pdf",
     "localPath": "assets/pdfs/ijhs/Vol37_1_1_RBalasubramaniam.pdf"
   },
   {
@@ -11814,9 +12601,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol37_1_2_BSasisekaran.pdf",
     "juUrl": "",
     "size": 180.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol37_1_2_BSasisekaran.pdf",
+    "gcs_key": "ijhs/Vol37_1_2_BSasisekaran.pdf",
     "localPath": "assets/pdfs/ijhs/Vol37_1_2_BSasisekaran.pdf"
   },
   {
@@ -11829,9 +12617,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol37_1_3_KDAbhyankar.pdf",
     "juUrl": "",
     "size": 89.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol37_1_3_KDAbhyankar.pdf",
+    "gcs_key": "ijhs/Vol37_1_3_KDAbhyankar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol37_1_3_KDAbhyankar.pdf"
   },
   {
@@ -11844,9 +12633,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol37_1_4_VJha.pdf",
     "juUrl": "",
     "size": 288.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol37_1_4_VJha.pdf",
+    "gcs_key": "ijhs/Vol37_1_4_VJha.pdf",
     "localPath": "assets/pdfs/ijhs/Vol37_1_4_VJha.pdf"
   },
   {
@@ -11859,9 +12649,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol37_1_5_TVVenkateswaran.pdf",
     "juUrl": "",
     "size": 370.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol37_1_5_TVVenkateswaran.pdf",
+    "gcs_key": "ijhs/Vol37_1_5_TVVenkateswaran.pdf",
     "localPath": "assets/pdfs/ijhs/Vol37_1_5_TVVenkateswaran.pdf"
   },
   {
@@ -11874,9 +12665,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol37_1_6_BookReview.pdf",
     "juUrl": "",
     "size": 27.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol37_1_6_BookReview.pdf",
+    "gcs_key": "ijhs/Vol37_1_6_BookReview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol37_1_6_BookReview.pdf"
   },
   {
@@ -11889,9 +12681,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol37_1_7_Conference.pdf",
     "juUrl": "",
     "size": 92.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol37_1_7_Conference.pdf",
+    "gcs_key": "ijhs/Vol37_1_7_Conference.pdf",
     "localPath": "assets/pdfs/ijhs/Vol37_1_7_Conference.pdf"
   },
   {
@@ -11904,9 +12697,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol37_1_9_Supplement%20ScientificPeriodicals.pdf",
     "juUrl": "",
     "size": 629.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol37_1_9_Supplement%20ScientificPeriodicals.pdf",
+    "gcs_key": "ijhs/Vol37_1_9_Supplement%20ScientificPeriodicals.pdf",
     "localPath": "assets/pdfs/ijhs/Vol37_1_9_Supplement%20ScientificPeriodicals.pdf"
   },
   {
@@ -11919,9 +12713,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol37_2_1_BNNAchar.pdf",
     "juUrl": "",
     "size": 70.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol37_2_1_BNNAchar.pdf",
+    "gcs_key": "ijhs/Vol37_2_1_BNNAchar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol37_2_1_BNNAchar.pdf"
   },
   {
@@ -11934,9 +12729,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol37_2_2_KCHari.pdf",
     "juUrl": "",
     "size": 218.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol37_2_2_KCHari.pdf",
+    "gcs_key": "ijhs/Vol37_2_2_KCHari.pdf",
     "localPath": "assets/pdfs/ijhs/Vol37_2_2_KCHari.pdf"
   },
   {
@@ -11949,9 +12745,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol37_2_3_RBalasubramaniam.pdf",
     "juUrl": "",
     "size": 1321.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol37_2_3_RBalasubramaniam.pdf",
+    "gcs_key": "ijhs/Vol37_2_3_RBalasubramaniam.pdf",
     "localPath": "assets/pdfs/ijhs/Vol37_2_3_RBalasubramaniam.pdf"
   },
   {
@@ -11964,9 +12761,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol37_2_4_JWisniak.pdf",
     "juUrl": "",
     "size": 344.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol37_2_4_JWisniak.pdf",
+    "gcs_key": "ijhs/Vol37_2_4_JWisniak.pdf",
     "localPath": "assets/pdfs/ijhs/Vol37_2_4_JWisniak.pdf"
   },
   {
@@ -11979,9 +12777,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol37_2_5_RSingh.pdf",
     "juUrl": "",
     "size": 388.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol37_2_5_RSingh.pdf",
+    "gcs_key": "ijhs/Vol37_2_5_RSingh.pdf",
     "localPath": "assets/pdfs/ijhs/Vol37_2_5_RSingh.pdf"
   },
   {
@@ -11994,9 +12793,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol37_2_6_BookReview.pdf",
     "juUrl": "",
     "size": 41.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol37_2_6_BookReview.pdf",
+    "gcs_key": "ijhs/Vol37_2_6_BookReview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol37_2_6_BookReview.pdf"
   },
   {
@@ -12009,9 +12809,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol37_2_7_ProjectReport.pdf",
     "juUrl": "",
     "size": 45.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol37_2_7_ProjectReport.pdf",
+    "gcs_key": "ijhs/Vol37_2_7_ProjectReport.pdf",
     "localPath": "assets/pdfs/ijhs/Vol37_2_7_ProjectReport.pdf"
   },
   {
@@ -12024,9 +12825,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol37_2_8_Conferences.pdf",
     "juUrl": "",
     "size": 70.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol37_2_8_Conferences.pdf",
+    "gcs_key": "ijhs/Vol37_2_8_Conferences.pdf",
     "localPath": "assets/pdfs/ijhs/Vol37_2_8_Conferences.pdf"
   },
   {
@@ -12039,9 +12841,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol37_2_9_BChaki.pdf",
     "juUrl": "",
     "size": 50.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol37_2_9_BChaki.pdf",
+    "gcs_key": "ijhs/Vol37_2_9_BChaki.pdf",
     "localPath": "assets/pdfs/ijhs/Vol37_2_9_BChaki.pdf"
   },
   {
@@ -12054,9 +12857,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol37_2_10_INCforHOS.pdf",
     "juUrl": "",
     "size": 44.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol37_2_10_INCforHOS.pdf",
+    "gcs_key": "ijhs/Vol37_2_10_INCforHOS.pdf",
     "localPath": "assets/pdfs/ijhs/Vol37_2_10_INCforHOS.pdf"
   },
   {
@@ -12069,9 +12873,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol37_2_11_SupplementScientificPeriodicals.pdf",
     "juUrl": "",
     "size": 995.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol37_2_11_SupplementScientificPeriodicals.pdf",
+    "gcs_key": "ijhs/Vol37_2_11_SupplementScientificPeriodicals.pdf",
     "localPath": "assets/pdfs/ijhs/Vol37_2_11_SupplementScientificPeriodicals.pdf"
   },
   {
@@ -12084,9 +12889,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol37_3_1_KDAbhyankar.pdf",
     "juUrl": "",
     "size": 129.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol37_3_1_KDAbhyankar.pdf",
+    "gcs_key": "ijhs/Vol37_3_1_KDAbhyankar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol37_3_1_KDAbhyankar.pdf"
   },
   {
@@ -12099,9 +12905,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol37_3_2_KCHari.pdf",
     "juUrl": "",
     "size": 213.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol37_3_2_KCHari.pdf",
+    "gcs_key": "ijhs/Vol37_3_2_KCHari.pdf",
     "localPath": "assets/pdfs/ijhs/Vol37_3_2_KCHari.pdf"
   },
   {
@@ -12114,9 +12921,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol37_3_3_DJadhav.pdf",
     "juUrl": "",
     "size": 207.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol37_3_3_DJadhav.pdf",
+    "gcs_key": "ijhs/Vol37_3_3_DJadhav.pdf",
     "localPath": "assets/pdfs/ijhs/Vol37_3_3_DJadhav.pdf"
   },
   {
@@ -12129,9 +12937,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol37_3_4_SMRAnsari.pdf",
     "juUrl": "",
     "size": 156.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol37_3_4_SMRAnsari.pdf",
+    "gcs_key": "ijhs/Vol37_3_4_SMRAnsari.pdf",
     "localPath": "assets/pdfs/ijhs/Vol37_3_4_SMRAnsari.pdf"
   },
   {
@@ -12144,9 +12953,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol37_3_5_RSingh.pdf",
     "juUrl": "",
     "size": 342.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol37_3_5_RSingh.pdf",
+    "gcs_key": "ijhs/Vol37_3_5_RSingh.pdf",
     "localPath": "assets/pdfs/ijhs/Vol37_3_5_RSingh.pdf"
   },
   {
@@ -12159,9 +12969,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol37_3_6_BookReview.pdf",
     "juUrl": "",
     "size": 185.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol37_3_6_BookReview.pdf",
+    "gcs_key": "ijhs/Vol37_3_6_BookReview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol37_3_6_BookReview.pdf"
   },
   {
@@ -12174,9 +12985,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol37_3_7_ProjectReport.pdf",
     "juUrl": "",
     "size": 24.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol37_3_7_ProjectReport.pdf",
+    "gcs_key": "ijhs/Vol37_3_7_ProjectReport.pdf",
     "localPath": "assets/pdfs/ijhs/Vol37_3_7_ProjectReport.pdf"
   },
   {
@@ -12189,9 +13001,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol37_3_8_Obituary.pdf",
     "juUrl": "",
     "size": 106.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol37_3_8_Obituary.pdf",
+    "gcs_key": "ijhs/Vol37_3_8_Obituary.pdf",
     "localPath": "assets/pdfs/ijhs/Vol37_3_8_Obituary.pdf"
   },
   {
@@ -12204,9 +13017,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol37_3_9_NoticeofJournals.pdf",
     "juUrl": "",
     "size": 23.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol37_3_9_NoticeofJournals.pdf",
+    "gcs_key": "ijhs/Vol37_3_9_NoticeofJournals.pdf",
     "localPath": "assets/pdfs/ijhs/Vol37_3_9_NoticeofJournals.pdf"
   },
   {
@@ -12219,9 +13033,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol37_3_10_SupplementScientificPeriodicalsBKSen.pdf",
     "juUrl": "",
     "size": 1250.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol37_3_10_SupplementScientificPeriodicalsBKSen.pdf",
+    "gcs_key": "ijhs/Vol37_3_10_SupplementScientificPeriodicalsBKSen.pdf",
     "localPath": "assets/pdfs/ijhs/Vol37_3_10_SupplementScientificPeriodicalsBKSen.pdf"
   },
   {
@@ -12234,9 +13049,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol37_4_1_MMishra.pdf",
     "juUrl": "",
     "size": 127.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol37_4_1_MMishra.pdf",
+    "gcs_key": "ijhs/Vol37_4_1_MMishra.pdf",
     "localPath": "assets/pdfs/ijhs/Vol37_4_1_MMishra.pdf"
   },
   {
@@ -12249,9 +13065,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol37_4_2_TLaha.pdf",
     "juUrl": "",
     "size": 188.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol37_4_2_TLaha.pdf",
+    "gcs_key": "ijhs/Vol37_4_2_TLaha.pdf",
     "localPath": "assets/pdfs/ijhs/Vol37_4_2_TLaha.pdf"
   },
   {
@@ -12264,9 +13081,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol37_4_3_KCHari.pdf",
     "juUrl": "",
     "size": 95.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol37_4_3_KCHari.pdf",
+    "gcs_key": "ijhs/Vol37_4_3_KCHari.pdf",
     "localPath": "assets/pdfs/ijhs/Vol37_4_3_KCHari.pdf"
   },
   {
@@ -12279,9 +13097,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol37_4_4_NCShah.pdf",
     "juUrl": "",
     "size": 169.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol37_4_4_NCShah.pdf",
+    "gcs_key": "ijhs/Vol37_4_4_NCShah.pdf",
     "localPath": "assets/pdfs/ijhs/Vol37_4_4_NCShah.pdf"
   },
   {
@@ -12294,9 +13113,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol37_4_5_SSen.pdf",
     "juUrl": "",
     "size": 287.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol37_4_5_SSen.pdf",
+    "gcs_key": "ijhs/Vol37_4_5_SSen.pdf",
     "localPath": "assets/pdfs/ijhs/Vol37_4_5_SSen.pdf"
   },
   {
@@ -12309,9 +13129,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol37_4_6_BookReview.pdf",
     "juUrl": "",
     "size": 115.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol37_4_6_BookReview.pdf",
+    "gcs_key": "ijhs/Vol37_4_6_BookReview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol37_4_6_BookReview.pdf"
   },
   {
@@ -12324,9 +13145,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol37_4_8_ProjectReport.pdf",
     "juUrl": "",
     "size": 67.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol37_4_8_ProjectReport.pdf",
+    "gcs_key": "ijhs/Vol37_4_8_ProjectReport.pdf",
     "localPath": "assets/pdfs/ijhs/Vol37_4_8_ProjectReport.pdf"
   },
   {
@@ -12339,9 +13161,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol37_4_9_Obituary.pdf",
     "juUrl": "",
     "size": 55.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol37_4_9_Obituary.pdf",
+    "gcs_key": "ijhs/Vol37_4_9_Obituary.pdf",
     "localPath": "assets/pdfs/ijhs/Vol37_4_9_Obituary.pdf"
   },
   {
@@ -12354,9 +13177,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol37_4_10_NoticeofJournals.pdf",
     "juUrl": "",
     "size": 45.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol37_4_10_NoticeofJournals.pdf",
+    "gcs_key": "ijhs/Vol37_4_10_NoticeofJournals.pdf",
     "localPath": "assets/pdfs/ijhs/Vol37_4_10_NoticeofJournals.pdf"
   },
   {
@@ -12369,9 +13193,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol38_1_1_RCGupta.pdf",
     "juUrl": "",
     "size": 606.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol38_1_1_RCGupta.pdf",
+    "gcs_key": "ijhs/Vol38_1_1_RCGupta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol38_1_1_RCGupta.pdf"
   },
   {
@@ -12384,9 +13209,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol38_1_2_AKBag.pdf",
     "juUrl": "",
     "size": 721.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol38_1_2_AKBag.pdf",
+    "gcs_key": "ijhs/Vol38_1_2_AKBag.pdf",
     "localPath": "assets/pdfs/ijhs/Vol38_1_2_AKBag.pdf"
   },
   {
@@ -12399,9 +13225,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol38_1_3_AKBag.pdf",
     "juUrl": "",
     "size": 183.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol38_1_3_AKBag.pdf",
+    "gcs_key": "ijhs/Vol38_1_3_AKBag.pdf",
     "localPath": "assets/pdfs/ijhs/Vol38_1_3_AKBag.pdf"
   },
   {
@@ -12414,9 +13241,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol38_1_4_KCHari.pdf",
     "juUrl": "",
     "size": 666.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol38_1_4_KCHari.pdf",
+    "gcs_key": "ijhs/Vol38_1_4_KCHari.pdf",
     "localPath": "assets/pdfs/ijhs/Vol38_1_4_KCHari.pdf"
   },
   {
@@ -12429,9 +13257,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol38_1_5_SFTuan.pdf",
     "juUrl": "",
     "size": 373.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol38_1_5_SFTuan.pdf",
+    "gcs_key": "ijhs/Vol38_1_5_SFTuan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol38_1_5_SFTuan.pdf"
   },
   {
@@ -12444,9 +13273,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol38_1_6_BookReview.pdf",
     "juUrl": "",
     "size": 203.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol38_1_6_BookReview.pdf",
+    "gcs_key": "ijhs/Vol38_1_6_BookReview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol38_1_6_BookReview.pdf"
   },
   {
@@ -12459,9 +13289,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol38_1_7_Obituary.pdf",
     "juUrl": "",
     "size": 218.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol38_1_7_Obituary.pdf",
+    "gcs_key": "ijhs/Vol38_1_7_Obituary.pdf",
     "localPath": "assets/pdfs/ijhs/Vol38_1_7_Obituary.pdf"
   },
   {
@@ -12474,9 +13305,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol38_2_1_RNIyengar.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vol38_2_1_RNIyengar.pdf",
     "size": 2037.0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol38_2_1_RNIyengar.pdf",
+    "gcs_key": "ijhs/Vol38_2_1_RNIyengar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol38_2_1_RNIyengar.pdf"
   },
   {
@@ -12489,9 +13321,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol38_2_2_JLCoze.pdf",
     "juUrl": "",
     "size": 458.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol38_2_2_JLCoze.pdf",
+    "gcs_key": "ijhs/Vol38_2_2_JLCoze.pdf",
     "localPath": "assets/pdfs/ijhs/Vol38_2_2_JLCoze.pdf"
   },
   {
@@ -12504,9 +13337,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol38_2_3_KRamasubramanian.pdf",
     "juUrl": "",
     "size": 532.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol38_2_3_KRamasubramanian.pdf",
+    "gcs_key": "ijhs/Vol38_2_3_KRamasubramanian.pdf",
     "localPath": "assets/pdfs/ijhs/Vol38_2_3_KRamasubramanian.pdf"
   },
   {
@@ -12519,9 +13353,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol38_2_4_BRRao.pdf",
     "juUrl": "",
     "size": 253.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol38_2_4_BRRao.pdf",
+    "gcs_key": "ijhs/Vol38_2_4_BRRao.pdf",
     "localPath": "assets/pdfs/ijhs/Vol38_2_4_BRRao.pdf"
   },
   {
@@ -12534,9 +13369,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol38_2_5_RSingh.pdf",
     "juUrl": "",
     "size": 1003.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol38_2_5_RSingh.pdf",
+    "gcs_key": "ijhs/Vol38_2_5_RSingh.pdf",
     "localPath": "assets/pdfs/ijhs/Vol38_2_5_RSingh.pdf"
   },
   {
@@ -12549,9 +13385,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol38_2_6_BookReview.pdf",
     "juUrl": "",
     "size": 226.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol38_2_6_BookReview.pdf",
+    "gcs_key": "ijhs/Vol38_2_6_BookReview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol38_2_6_BookReview.pdf"
   },
   {
@@ -12564,9 +13401,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol38_2_7_ProjectReport.pdf",
     "juUrl": "",
     "size": 128.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol38_2_7_ProjectReport.pdf",
+    "gcs_key": "ijhs/Vol38_2_7_ProjectReport.pdf",
     "localPath": "assets/pdfs/ijhs/Vol38_2_7_ProjectReport.pdf"
   },
   {
@@ -12579,9 +13417,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol38_2_8_IndianNationalCommissionforHOS.pdf",
     "juUrl": "",
     "size": 83.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol38_2_8_IndianNationalCommissionforHOS.pdf",
+    "gcs_key": "ijhs/Vol38_2_8_IndianNationalCommissionforHOS.pdf",
     "localPath": "assets/pdfs/ijhs/Vol38_2_8_IndianNationalCommissionforHOS.pdf"
   },
   {
@@ -12594,9 +13433,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol38_2_9_Conferences.pdf",
     "juUrl": "",
     "size": 127.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol38_2_9_Conferences.pdf",
+    "gcs_key": "ijhs/Vol38_2_9_Conferences.pdf",
     "localPath": "assets/pdfs/ijhs/Vol38_2_9_Conferences.pdf"
   },
   {
@@ -12609,9 +13449,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol38_3_1_RBalasubramaniam.pdf",
     "juUrl": "",
     "size": 1266.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol38_3_1_RBalasubramaniam.pdf",
+    "gcs_key": "ijhs/Vol38_3_1_RBalasubramaniam.pdf",
     "localPath": "assets/pdfs/ijhs/Vol38_3_1_RBalasubramaniam.pdf"
   },
   {
@@ -12624,9 +13465,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol38_3_2_BSasisekaran.pdf",
     "juUrl": "",
     "size": 1104.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol38_3_2_BSasisekaran.pdf",
+    "gcs_key": "ijhs/Vol38_3_2_BSasisekaran.pdf",
     "localPath": "assets/pdfs/ijhs/Vol38_3_2_BSasisekaran.pdf"
   },
   {
@@ -12639,9 +13481,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol38_3_3_KCHari.pdf",
     "juUrl": "",
     "size": 1150.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol38_3_3_KCHari.pdf",
+    "gcs_key": "ijhs/Vol38_3_3_KCHari.pdf",
     "localPath": "assets/pdfs/ijhs/Vol38_3_3_KCHari.pdf"
   },
   {
@@ -12654,9 +13497,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol38_3_4_SBRao.pdf",
     "juUrl": "",
     "size": 747.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol38_3_4_SBRao.pdf",
+    "gcs_key": "ijhs/Vol38_3_4_SBRao.pdf",
     "localPath": "assets/pdfs/ijhs/Vol38_3_4_SBRao.pdf"
   },
   {
@@ -12669,9 +13513,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol38_3_5_IGKhan.pdf",
     "juUrl": "",
     "size": 2160.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol38_3_5_IGKhan.pdf",
+    "gcs_key": "ijhs/Vol38_3_5_IGKhan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol38_3_5_IGKhan.pdf"
   },
   {
@@ -12684,9 +13529,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol38_3_6_BookReview.pdf",
     "juUrl": "",
     "size": 417.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol38_3_6_BookReview.pdf",
+    "gcs_key": "ijhs/Vol38_3_6_BookReview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol38_3_6_BookReview.pdf"
   },
   {
@@ -12699,9 +13545,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol38_3_7_ProjectReport.pdf",
     "juUrl": "",
     "size": 229.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol38_3_7_ProjectReport.pdf",
+    "gcs_key": "ijhs/Vol38_3_7_ProjectReport.pdf",
     "localPath": "assets/pdfs/ijhs/Vol38_3_7_ProjectReport.pdf"
   },
   {
@@ -12714,9 +13561,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol38_3_8_Obituary.pdf",
     "juUrl": "",
     "size": 253.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol38_3_8_Obituary.pdf",
+    "gcs_key": "ijhs/Vol38_3_8_Obituary.pdf",
     "localPath": "assets/pdfs/ijhs/Vol38_3_8_Obituary.pdf"
   },
   {
@@ -12729,9 +13577,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol38_3_9_Supplement.pdf",
     "juUrl": "",
     "size": 3824.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol38_3_9_Supplement.pdf",
+    "gcs_key": "ijhs/Vol38_3_9_Supplement.pdf",
     "localPath": "assets/pdfs/ijhs/Vol38_3_9_Supplement.pdf"
   },
   {
@@ -12744,9 +13593,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol38_4_1_PSensarma.pdf",
     "juUrl": "",
     "size": 504.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol38_4_1_PSensarma.pdf",
+    "gcs_key": "ijhs/Vol38_4_1_PSensarma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol38_4_1_PSensarma.pdf"
   },
   {
@@ -12759,9 +13609,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol38_4_2_RBalasubramaniam.pdf",
     "juUrl": "",
     "size": 1630.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol38_4_2_RBalasubramaniam.pdf",
+    "gcs_key": "ijhs/Vol38_4_2_RBalasubramaniam.pdf",
     "localPath": "assets/pdfs/ijhs/Vol38_4_2_RBalasubramaniam.pdf"
   },
   {
@@ -12774,9 +13625,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol38_4_3_ACMandal.pdf",
     "juUrl": "",
     "size": 847.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol38_4_3_ACMandal.pdf",
+    "gcs_key": "ijhs/Vol38_4_3_ACMandal.pdf",
     "localPath": "assets/pdfs/ijhs/Vol38_4_3_ACMandal.pdf"
   },
   {
@@ -12789,9 +13641,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol38_4_4_GAbraham.pdf",
     "juUrl": "",
     "size": 383.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol38_4_4_GAbraham.pdf",
+    "gcs_key": "ijhs/Vol38_4_4_GAbraham.pdf",
     "localPath": "assets/pdfs/ijhs/Vol38_4_4_GAbraham.pdf"
   },
   {
@@ -12804,9 +13657,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol38_4_5_RSingh.pdf",
     "juUrl": "",
     "size": 678.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol38_4_5_RSingh.pdf",
+    "gcs_key": "ijhs/Vol38_4_5_RSingh.pdf",
     "localPath": "assets/pdfs/ijhs/Vol38_4_5_RSingh.pdf"
   },
   {
@@ -12819,9 +13673,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol38_4_6_BookReview.pdf",
     "juUrl": "",
     "size": 429.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol38_4_6_BookReview.pdf",
+    "gcs_key": "ijhs/Vol38_4_6_BookReview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol38_4_6_BookReview.pdf"
   },
   {
@@ -12834,9 +13689,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol38_4_7_Conference.pdf",
     "juUrl": "",
     "size": 266.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol38_4_7_Conference.pdf",
+    "gcs_key": "ijhs/Vol38_4_7_Conference.pdf",
     "localPath": "assets/pdfs/ijhs/Vol38_4_7_Conference.pdf"
   },
   {
@@ -12849,9 +13705,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol38_4_8_News.pdf",
     "juUrl": "",
     "size": 104.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol38_4_8_News.pdf",
+    "gcs_key": "ijhs/Vol38_4_8_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol38_4_8_News.pdf"
   },
   {
@@ -12864,9 +13721,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol38_4_9_CHAMANewsletter.pdf",
     "juUrl": "",
     "size": 138.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol38_4_9_CHAMANewsletter.pdf",
+    "gcs_key": "ijhs/Vol38_4_9_CHAMANewsletter.pdf",
     "localPath": "assets/pdfs/ijhs/Vol38_4_9_CHAMANewsletter.pdf"
   },
   {
@@ -12879,9 +13737,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol39_1_1_RSatyanarayana.pdf",
     "juUrl": "",
     "size": 180.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol39_1_1_RSatyanarayana.pdf",
+    "gcs_key": "ijhs/Vol39_1_1_RSatyanarayana.pdf",
     "localPath": "assets/pdfs/ijhs/Vol39_1_1_RSatyanarayana.pdf"
   },
   {
@@ -12894,9 +13753,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol39_1_2_RNIyengar.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vol39_1_2_RNIyengar.pdf",
     "size": 621.0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol39_1_2_RNIyengar.pdf",
+    "gcs_key": "ijhs/Vol39_1_2_RNIyengar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol39_1_2_RNIyengar.pdf"
   },
   {
@@ -12909,9 +13769,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol39_1_3_MIDass.pdf",
     "juUrl": "",
     "size": 632.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol39_1_3_MIDass.pdf",
+    "gcs_key": "ijhs/Vol39_1_3_MIDass.pdf",
     "localPath": "assets/pdfs/ijhs/Vol39_1_3_MIDass.pdf"
   },
   {
@@ -12924,9 +13785,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol39_1_4_JWisniak.pdf",
     "juUrl": "",
     "size": 460.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol39_1_4_JWisniak.pdf",
+    "gcs_key": "ijhs/Vol39_1_4_JWisniak.pdf",
     "localPath": "assets/pdfs/ijhs/Vol39_1_4_JWisniak.pdf"
   },
   {
@@ -12939,9 +13801,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol39_1_5_JNSinha.pdf",
     "juUrl": "",
     "size": 315.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol39_1_5_JNSinha.pdf",
+    "gcs_key": "ijhs/Vol39_1_5_JNSinha.pdf",
     "localPath": "assets/pdfs/ijhs/Vol39_1_5_JNSinha.pdf"
   },
   {
@@ -12954,9 +13817,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol39_1_6_BookReview.pdf",
     "juUrl": "",
     "size": 114.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol39_1_6_BookReview.pdf",
+    "gcs_key": "ijhs/Vol39_1_6_BookReview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol39_1_6_BookReview.pdf"
   },
   {
@@ -12969,9 +13833,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol39_1_9_SRSarma.pdf",
     "juUrl": "",
     "size": 27.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol39_1_9_SRSarma.pdf",
+    "gcs_key": "ijhs/Vol39_1_9_SRSarma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol39_1_9_SRSarma.pdf"
   },
   {
@@ -12984,9 +13849,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol39_1_10_News.pdf",
     "juUrl": "",
     "size": 21.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol39_1_10_News.pdf",
+    "gcs_key": "ijhs/Vol39_1_10_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol39_1_10_News.pdf"
   },
   {
@@ -12999,9 +13865,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol39_2_1_SKAcharya.pdf",
     "juUrl": "",
     "size": 112.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol39_2_1_SKAcharya.pdf",
+    "gcs_key": "ijhs/Vol39_2_1_SKAcharya.pdf",
     "localPath": "assets/pdfs/ijhs/Vol39_2_1_SKAcharya.pdf"
   },
   {
@@ -13014,9 +13881,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol39_2_2_KCHari.pdf",
     "juUrl": "",
     "size": 223.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol39_2_2_KCHari.pdf",
+    "gcs_key": "ijhs/Vol39_2_2_KCHari.pdf",
     "localPath": "assets/pdfs/ijhs/Vol39_2_2_KCHari.pdf"
   },
   {
@@ -13029,9 +13897,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol39_2_3_RBalasubramaniam.pdf",
     "juUrl": "",
     "size": 667.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol39_2_3_RBalasubramaniam.pdf",
+    "gcs_key": "ijhs/Vol39_2_3_RBalasubramaniam.pdf",
     "localPath": "assets/pdfs/ijhs/Vol39_2_3_RBalasubramaniam.pdf"
   },
   {
@@ -13044,9 +13913,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol39_2_4_NAthiyaman.pdf",
     "juUrl": "",
     "size": 313.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol39_2_4_NAthiyaman.pdf",
+    "gcs_key": "ijhs/Vol39_2_4_NAthiyaman.pdf",
     "localPath": "assets/pdfs/ijhs/Vol39_2_4_NAthiyaman.pdf"
   },
   {
@@ -13059,9 +13929,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol39_2_5_HistoricalNotes.pdf",
     "juUrl": "",
     "size": 53.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol39_2_5_HistoricalNotes.pdf",
+    "gcs_key": "ijhs/Vol39_2_5_HistoricalNotes.pdf",
     "localPath": "assets/pdfs/ijhs/Vol39_2_5_HistoricalNotes.pdf"
   },
   {
@@ -13074,9 +13945,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol39_2_6_NRathnasree.pdf",
     "juUrl": "",
     "size": 95.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol39_2_6_NRathnasree.pdf",
+    "gcs_key": "ijhs/Vol39_2_6_NRathnasree.pdf",
     "localPath": "assets/pdfs/ijhs/Vol39_2_6_NRathnasree.pdf"
   },
   {
@@ -13089,9 +13961,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol39_2_7_BookReviews.pdf",
     "juUrl": "",
     "size": 85.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol39_2_7_BookReviews.pdf",
+    "gcs_key": "ijhs/Vol39_2_7_BookReviews.pdf",
     "localPath": "assets/pdfs/ijhs/Vol39_2_7_BookReviews.pdf"
   },
   {
@@ -13104,9 +13977,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol39_2_8_Notices.pdf",
     "juUrl": "",
     "size": 26.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol39_2_8_Notices.pdf",
+    "gcs_key": "ijhs/Vol39_2_8_Notices.pdf",
     "localPath": "assets/pdfs/ijhs/Vol39_2_8_Notices.pdf"
   },
   {
@@ -13119,9 +13993,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol39_2_9_Supplement.pdf",
     "juUrl": "",
     "size": 1117.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol39_2_9_Supplement.pdf",
+    "gcs_key": "ijhs/Vol39_2_9_Supplement.pdf",
     "localPath": "assets/pdfs/ijhs/Vol39_2_9_Supplement.pdf"
   },
   {
@@ -13134,9 +14009,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol39_3_1_ARBasu.pdf",
     "juUrl": "",
     "size": 410.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol39_3_1_ARBasu.pdf",
+    "gcs_key": "ijhs/Vol39_3_1_ARBasu.pdf",
     "localPath": "assets/pdfs/ijhs/Vol39_3_1_ARBasu.pdf"
   },
   {
@@ -13149,9 +14025,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol39_3_2_TVVenkateswaran.pdf",
     "juUrl": "",
     "size": 444.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol39_3_2_TVVenkateswaran.pdf",
+    "gcs_key": "ijhs/Vol39_3_2_TVVenkateswaran.pdf",
     "localPath": "assets/pdfs/ijhs/Vol39_3_2_TVVenkateswaran.pdf"
   },
   {
@@ -13164,9 +14041,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol39_3_3_ASDhumatkar.pdf",
     "juUrl": "",
     "size": 371.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol39_3_3_ASDhumatkar.pdf",
+    "gcs_key": "ijhs/Vol39_3_3_ASDhumatkar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol39_3_3_ASDhumatkar.pdf"
   },
   {
@@ -13179,9 +14057,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol39_3_4_ABasu.pdf",
     "juUrl": "",
     "size": 279.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol39_3_4_ABasu.pdf",
+    "gcs_key": "ijhs/Vol39_3_4_ABasu.pdf",
     "localPath": "assets/pdfs/ijhs/Vol39_3_4_ABasu.pdf"
   },
   {
@@ -13194,9 +14073,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol39_3_5_HistoricalNotes.pdf",
     "juUrl": "",
     "size": 68.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol39_3_5_HistoricalNotes.pdf",
+    "gcs_key": "ijhs/Vol39_3_5_HistoricalNotes.pdf",
     "localPath": "assets/pdfs/ijhs/Vol39_3_5_HistoricalNotes.pdf"
   },
   {
@@ -13209,9 +14089,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol39_3_6_SKMajumdar.pdf",
     "juUrl": "",
     "size": 105.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol39_3_6_SKMajumdar.pdf",
+    "gcs_key": "ijhs/Vol39_3_6_SKMajumdar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol39_3_6_SKMajumdar.pdf"
   },
   {
@@ -13224,9 +14105,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol39_3_7_BookReview.pdf",
     "juUrl": "",
     "size": 157.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol39_3_7_BookReview.pdf",
+    "gcs_key": "ijhs/Vol39_3_7_BookReview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol39_3_7_BookReview.pdf"
   },
   {
@@ -13239,9 +14121,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol39_4_1_RRajan.pdf",
     "juUrl": "",
     "size": 705.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol39_4_1_RRajan.pdf",
+    "gcs_key": "ijhs/Vol39_4_1_RRajan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol39_4_1_RRajan.pdf"
   },
   {
@@ -13254,9 +14137,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol39_4_2_ANThakur.pdf",
     "juUrl": "",
     "size": 159.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol39_4_2_ANThakur.pdf",
+    "gcs_key": "ijhs/Vol39_4_2_ANThakur.pdf",
     "localPath": "assets/pdfs/ijhs/Vol39_4_2_ANThakur.pdf"
   },
   {
@@ -13269,9 +14153,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol39_4_3_KDAbhyankar.pdf",
     "juUrl": "",
     "size": 150.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol39_4_3_KDAbhyankar.pdf",
+    "gcs_key": "ijhs/Vol39_4_3_KDAbhyankar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol39_4_3_KDAbhyankar.pdf"
   },
   {
@@ -13284,9 +14169,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol39_4_4_SBRao.pdf",
     "juUrl": "",
     "size": 414.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol39_4_4_SBRao.pdf",
+    "gcs_key": "ijhs/Vol39_4_4_SBRao.pdf",
     "localPath": "assets/pdfs/ijhs/Vol39_4_4_SBRao.pdf"
   },
   {
@@ -13299,9 +14185,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol39_4_5_GDYoung.pdf",
     "juUrl": "",
     "size": 509.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol39_4_5_GDYoung.pdf",
+    "gcs_key": "ijhs/Vol39_4_5_GDYoung.pdf",
     "localPath": "assets/pdfs/ijhs/Vol39_4_5_GDYoung.pdf"
   },
   {
@@ -13314,9 +14201,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol39_4_6_HistoricalNotes.pdf",
     "juUrl": "",
     "size": 480.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol39_4_6_HistoricalNotes.pdf",
+    "gcs_key": "ijhs/Vol39_4_6_HistoricalNotes.pdf",
     "localPath": "assets/pdfs/ijhs/Vol39_4_6_HistoricalNotes.pdf"
   },
   {
@@ -13329,9 +14217,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol39_4_7_CmdSKChatterjee.pdf",
     "juUrl": "",
     "size": 237.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol39_4_7_CmdSKChatterjee.pdf",
+    "gcs_key": "ijhs/Vol39_4_7_CmdSKChatterjee.pdf",
     "localPath": "assets/pdfs/ijhs/Vol39_4_7_CmdSKChatterjee.pdf"
   },
   {
@@ -13344,9 +14233,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol39_4_8_JNSinha.pdf",
     "juUrl": "",
     "size": 61.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol39_4_8_JNSinha.pdf",
+    "gcs_key": "ijhs/Vol39_4_8_JNSinha.pdf",
     "localPath": "assets/pdfs/ijhs/Vol39_4_8_JNSinha.pdf"
   },
   {
@@ -13359,9 +14249,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol39_4_9_News.pdf",
     "juUrl": "",
     "size": 41.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol39_4_9_News.pdf",
+    "gcs_key": "ijhs/Vol39_4_9_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol39_4_9_News.pdf"
   },
   {
@@ -13374,9 +14265,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol1_2005_01.pdf",
     "juUrl": "",
     "size": 2707.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol1_2005_01.pdf",
+    "gcs_key": "ijhs/Vol1_2005_01.pdf",
     "localPath": "assets/pdfs/ijhs/Vol1_2005_01.pdf"
   },
   {
@@ -13389,9 +14281,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol1_2005_02_ENVIRONMENT%20AND%20ECOLOGY%20IN%20THE%20RAMAYANA.pdf",
     "juUrl": "",
     "size": 6863.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol1_2005_02_ENVIRONMENT%20AND%20ECOLOGY%20IN%20THE%20RAMAYANA.pdf",
+    "gcs_key": "ijhs/Vol1_2005_02_ENVIRONMENT%20AND%20ECOLOGY%20IN%20THE%20RAMAYANA.pdf",
     "localPath": "assets/pdfs/ijhs/Vol1_2005_02_ENVIRONMENT%20AND%20ECOLOGY%20IN%20THE%20RAMAYANA.pdf"
   },
   {
@@ -13404,9 +14297,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol1_2005_03_MYSTICAL%20MATHEMATICS%20IN%20ANCIENT%20PLANETS.pdf",
     "juUrl": "",
     "size": 6720.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol1_2005_03_MYSTICAL%20MATHEMATICS%20IN%20ANCIENT%20PLANETS.pdf",
+    "gcs_key": "ijhs/Vol1_2005_03_MYSTICAL%20MATHEMATICS%20IN%20ANCIENT%20PLANETS.pdf",
     "localPath": "assets/pdfs/ijhs/Vol1_2005_03_MYSTICAL%20MATHEMATICS%20IN%20ANCIENT%20PLANETS.pdf"
   },
   {
@@ -13419,9 +14313,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol1_2005_04_CONGRESS%20AND%20CONSERVATION.pdf",
     "juUrl": "",
     "size": 9895.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol1_2005_04_CONGRESS%20AND%20CONSERVATION.pdf",
+    "gcs_key": "ijhs/Vol1_2005_04_CONGRESS%20AND%20CONSERVATION.pdf",
     "localPath": "assets/pdfs/ijhs/Vol1_2005_04_CONGRESS%20AND%20CONSERVATION.pdf"
   },
   {
@@ -13434,9 +14329,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol40_1_5_SSen.pdf",
     "juUrl": "",
     "size": 337.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol40_1_5_SSen.pdf",
+    "gcs_key": "ijhs/Vol40_1_5_SSen.pdf",
     "localPath": "assets/pdfs/ijhs/Vol40_1_5_SSen.pdf"
   },
   {
@@ -13449,9 +14345,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol40_1_6_HistoricalNotes.pdf",
     "juUrl": "",
     "size": 57.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol40_1_6_HistoricalNotes.pdf",
+    "gcs_key": "ijhs/Vol40_1_6_HistoricalNotes.pdf",
     "localPath": "assets/pdfs/ijhs/Vol40_1_6_HistoricalNotes.pdf"
   },
   {
@@ -13464,9 +14361,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol40_1_7_KCHari.pdf",
     "juUrl": "",
     "size": 106.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol40_1_7_KCHari.pdf",
+    "gcs_key": "ijhs/Vol40_1_7_KCHari.pdf",
     "localPath": "assets/pdfs/ijhs/Vol40_1_7_KCHari.pdf"
   },
   {
@@ -13479,9 +14377,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol40_1_8_BookReview.pdf",
     "juUrl": "",
     "size": 180.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol40_1_8_BookReview.pdf",
+    "gcs_key": "ijhs/Vol40_1_8_BookReview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol40_1_8_BookReview.pdf"
   },
   {
@@ -13494,9 +14393,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol1_2005_08_NEWS.pdf",
     "juUrl": "",
     "size": 973.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol1_2005_08_NEWS.pdf",
+    "gcs_key": "ijhs/Vol1_2005_08_NEWS.pdf",
     "localPath": "assets/pdfs/ijhs/Vol1_2005_08_NEWS.pdf"
   },
   {
@@ -13509,9 +14409,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol40_1_10_SupplementScientificPeriodicals.pdf",
     "juUrl": "",
     "size": 1024.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol40_1_10_SupplementScientificPeriodicals.pdf",
+    "gcs_key": "ijhs/Vol40_1_10_SupplementScientificPeriodicals.pdf",
     "localPath": "assets/pdfs/ijhs/Vol40_1_10_SupplementScientificPeriodicals.pdf"
   },
   {
@@ -13524,9 +14425,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol2_2005_01.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vol2_2005_01.pdf",
     "size": 5391.0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol2_2005_01.pdf",
+    "gcs_key": "ijhs/Vol2_2005_01.pdf",
     "localPath": "assets/pdfs/ijhs/Vol2_2005_01.pdf"
   },
   {
@@ -13539,9 +14441,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol2_2005_02_MANAGEMENT%20OF%20FISTULA%20IN%20ANO%20IN%20ANCIENT%20GREEK%20AND%20AYURVEDIC%20MEDICINE%20A%20HISTORICAL%20AN.pdf",
     "juUrl": "",
     "size": 18650.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol2_2005_02_MANAGEMENT%20OF%20FISTULA%20IN%20ANO%20IN%20ANCIENT%20GREEK%20AND%20AYURVEDIC%20MEDICINE%20A%20HISTORICAL%20AN.pdf",
+    "gcs_key": "ijhs/Vol2_2005_02_MANAGEMENT%20OF%20FISTULA%20IN%20ANO%20IN%20ANCIENT%20GREEK%20AND%20AYURVEDIC%20MEDICINE%20A%20HISTORICAL%20AN.pdf",
     "localPath": "assets/pdfs/ijhs/Vol2_2005_02_MANAGEMENT%20OF%20FISTULA%20IN%20ANO%20IN%20ANCIENT%20GREEK%20AND%20AYURVEDIC%20MEDICINE%20A%20HISTORICAL%20AN.pdf"
   },
   {
@@ -13554,9 +14457,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol2_2005_03_HIPPARCHUS'S%203600%20BASED%20CHORD%20TABLE%20AND%20ITS%20PLACE%20IN%20THE%20HISTORY%20OF%20ANCIENT%20GREEK%20AN.pdf",
     "juUrl": "",
     "size": 3133.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol2_2005_03_HIPPARCHUS'S%203600%20BASED%20CHORD%20TABLE%20AND%20ITS%20PLACE%20IN%20THE%20HISTORY%20OF%20ANCIENT%20GREEK%20AN.pdf",
+    "gcs_key": "ijhs/Vol2_2005_03_HIPPARCHUS'S%203600%20BASED%20CHORD%20TABLE%20AND%20ITS%20PLACE%20IN%20THE%20HISTORY%20OF%20ANCIENT%20GREEK%20AN.pdf",
     "localPath": "assets/pdfs/ijhs/Vol2_2005_03_HIPPARCHUS'S%203600%20BASED%20CHORD%20TABLE%20AND%20ITS%20PLACE%20IN%20THE%20HISTORY%20OF%20ANCIENT%20GREEK%20AN.pdf"
   },
   {
@@ -13569,9 +14473,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol2_2005_04_HINDUS%20SCIENTIFIC%20CONTRIBUTIONS%20IN%20INDO%20CALENDAR.pdf",
     "juUrl": "",
     "size": 21918.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol2_2005_04_HINDUS%20SCIENTIFIC%20CONTRIBUTIONS%20IN%20INDO%20CALENDAR.pdf",
+    "gcs_key": "ijhs/Vol2_2005_04_HINDUS%20SCIENTIFIC%20CONTRIBUTIONS%20IN%20INDO%20CALENDAR.pdf",
     "localPath": "assets/pdfs/ijhs/Vol2_2005_04_HINDUS%20SCIENTIFIC%20CONTRIBUTIONS%20IN%20INDO%20CALENDAR.pdf"
   },
   {
@@ -13584,9 +14489,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol2_2005_05_HISTORICAL%20NOTES_1.pdf",
     "juUrl": "",
     "size": 1845.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol2_2005_05_HISTORICAL%20NOTES_1.pdf",
+    "gcs_key": "ijhs/Vol2_2005_05_HISTORICAL%20NOTES_1.pdf",
     "localPath": "assets/pdfs/ijhs/Vol2_2005_05_HISTORICAL%20NOTES_1.pdf"
   },
   {
@@ -13599,9 +14505,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol2_2005_05_HISTORICAL%20NOTES_2.pdf",
     "juUrl": "",
     "size": 9223.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol2_2005_05_HISTORICAL%20NOTES_2.pdf",
+    "gcs_key": "ijhs/Vol2_2005_05_HISTORICAL%20NOTES_2.pdf",
     "localPath": "assets/pdfs/ijhs/Vol2_2005_05_HISTORICAL%20NOTES_2.pdf"
   },
   {
@@ -13614,9 +14521,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol2_2005_06_BOOK%20REVIEW.pdf",
     "juUrl": "",
     "size": 2902.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol2_2005_06_BOOK%20REVIEW.pdf",
+    "gcs_key": "ijhs/Vol2_2005_06_BOOK%20REVIEW.pdf",
     "localPath": "assets/pdfs/ijhs/Vol2_2005_06_BOOK%20REVIEW.pdf"
   },
   {
@@ -13629,9 +14537,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol2_2005_07_NEWS.pdf",
     "juUrl": "",
     "size": 1722.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol2_2005_07_NEWS.pdf",
+    "gcs_key": "ijhs/Vol2_2005_07_NEWS.pdf",
     "localPath": "assets/pdfs/ijhs/Vol2_2005_07_NEWS.pdf"
   },
   {
@@ -13644,9 +14553,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol2_2005_08_SUPPLEMENT.pdf",
     "juUrl": "",
     "size": 9939.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol2_2005_08_SUPPLEMENT.pdf",
+    "gcs_key": "ijhs/Vol2_2005_08_SUPPLEMENT.pdf",
     "localPath": "assets/pdfs/ijhs/Vol2_2005_08_SUPPLEMENT.pdf"
   },
   {
@@ -13659,9 +14569,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol3_2005_01_THE%20FIRST%20CATALOGUE%20ON%20FORGE%20WELDED%20IRON%20CANNONS%20BY%20NEOGI.pdf",
     "juUrl": "",
     "size": 3913.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol3_2005_01_THE%20FIRST%20CATALOGUE%20ON%20FORGE%20WELDED%20IRON%20CANNONS%20BY%20NEOGI.pdf",
+    "gcs_key": "ijhs/Vol3_2005_01_THE%20FIRST%20CATALOGUE%20ON%20FORGE%20WELDED%20IRON%20CANNONS%20BY%20NEOGI.pdf",
     "localPath": "assets/pdfs/ijhs/Vol3_2005_01_THE%20FIRST%20CATALOGUE%20ON%20FORGE%20WELDED%20IRON%20CANNONS%20BY%20NEOGI.pdf"
   },
   {
@@ -13674,9 +14585,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol3_2005_02_RAJAGOPALA%20THE%20MASSIVE%20IRON%20CANNON%20AT%20THANJAVUR%20IN%20TAMIL%20NADU.pdf",
     "juUrl": "",
     "size": 28448.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol3_2005_02_RAJAGOPALA%20THE%20MASSIVE%20IRON%20CANNON%20AT%20THANJAVUR%20IN%20TAMIL%20NADU.pdf",
+    "gcs_key": "ijhs/Vol3_2005_02_RAJAGOPALA%20THE%20MASSIVE%20IRON%20CANNON%20AT%20THANJAVUR%20IN%20TAMIL%20NADU.pdf",
     "localPath": "assets/pdfs/ijhs/Vol3_2005_02_RAJAGOPALA%20THE%20MASSIVE%20IRON%20CANNON%20AT%20THANJAVUR%20IN%20TAMIL%20NADU.pdf"
   },
   {
@@ -13689,9 +14601,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol3_2005_03_DAL%20MARDAN%20THE%20FORGE%20WELDED%20IRON%20CANNON%20AT%20BISHNUPUR.pdf",
     "juUrl": "",
     "size": 2301.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol3_2005_03_DAL%20MARDAN%20THE%20FORGE%20WELDED%20IRON%20CANNON%20AT%20BISHNUPUR.pdf",
+    "gcs_key": "ijhs/Vol3_2005_03_DAL%20MARDAN%20THE%20FORGE%20WELDED%20IRON%20CANNON%20AT%20BISHNUPUR.pdf",
     "localPath": "assets/pdfs/ijhs/Vol3_2005_03_DAL%20MARDAN%20THE%20FORGE%20WELDED%20IRON%20CANNON%20AT%20BISHNUPUR.pdf"
   },
   {
@@ -13704,9 +14617,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol3_2005_04_THE%20FORGE%20WELDED%20IRON%20CANNON%20AT%20BADA%20BURJ%20OF%20GOLCONDA%20FORT%20RAMPART.pdf",
     "juUrl": "",
     "size": 7456.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol3_2005_04_THE%20FORGE%20WELDED%20IRON%20CANNON%20AT%20BADA%20BURJ%20OF%20GOLCONDA%20FORT%20RAMPART.pdf",
+    "gcs_key": "ijhs/Vol3_2005_04_THE%20FORGE%20WELDED%20IRON%20CANNON%20AT%20BADA%20BURJ%20OF%20GOLCONDA%20FORT%20RAMPART.pdf",
     "localPath": "assets/pdfs/ijhs/Vol3_2005_04_THE%20FORGE%20WELDED%20IRON%20CANNON%20AT%20BADA%20BURJ%20OF%20GOLCONDA%20FORT%20RAMPART.pdf"
   },
   {
@@ -13719,9 +14633,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol3_2005_05_THE%20FORGE%20WELDED%20IRON%20CANNON%20AT%20FATEH%20BURJ%20OF%20GOLCONDA%20FORST%20RAMPART.pdf",
     "juUrl": "",
     "size": 5311.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol3_2005_05_THE%20FORGE%20WELDED%20IRON%20CANNON%20AT%20FATEH%20BURJ%20OF%20GOLCONDA%20FORST%20RAMPART.pdf",
+    "gcs_key": "ijhs/Vol3_2005_05_THE%20FORGE%20WELDED%20IRON%20CANNON%20AT%20FATEH%20BURJ%20OF%20GOLCONDA%20FORST%20RAMPART.pdf",
     "localPath": "assets/pdfs/ijhs/Vol3_2005_05_THE%20FORGE%20WELDED%20IRON%20CANNON%20AT%20FATEH%20BURJ%20OF%20GOLCONDA%20FORST%20RAMPART.pdf"
   },
   {
@@ -13734,9 +14649,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol3_2005_06_BHAVANI%20SANKAR%20THE%20FORGE%20WELDED%20IRON%20CANNON%20AT%20JHANSI%20FORT.pdf",
     "juUrl": "",
     "size": 26629.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol3_2005_06_BHAVANI%20SANKAR%20THE%20FORGE%20WELDED%20IRON%20CANNON%20AT%20JHANSI%20FORT.pdf",
+    "gcs_key": "ijhs/Vol3_2005_06_BHAVANI%20SANKAR%20THE%20FORGE%20WELDED%20IRON%20CANNON%20AT%20JHANSI%20FORT.pdf",
     "localPath": "assets/pdfs/ijhs/Vol3_2005_06_BHAVANI%20SANKAR%20THE%20FORGE%20WELDED%20IRON%20CANNON%20AT%20JHANSI%20FORT.pdf"
   },
   {
@@ -13749,9 +14665,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol3_2005_07_KADAK%20BIJLI%20THE%20FORGE%20WELDED%20IRON%20CANNON%20AT%20JHANSI%20FORT.pdf",
     "juUrl": "",
     "size": 21132.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol3_2005_07_KADAK%20BIJLI%20THE%20FORGE%20WELDED%20IRON%20CANNON%20AT%20JHANSI%20FORT.pdf",
+    "gcs_key": "ijhs/Vol3_2005_07_KADAK%20BIJLI%20THE%20FORGE%20WELDED%20IRON%20CANNON%20AT%20JHANSI%20FORT.pdf",
     "localPath": "assets/pdfs/ijhs/Vol3_2005_07_KADAK%20BIJLI%20THE%20FORGE%20WELDED%20IRON%20CANNON%20AT%20JHANSI%20FORT.pdf"
   },
   {
@@ -13764,9 +14681,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol3_2005_08_AZDAHA%20PAIKAR%20THE%20COMPOSITE%20IRON%20BROZE%20CANNON%20AT%20MUSA%20BURJ%20OF%20GOLCONDA%20FORT.pdf",
     "juUrl": "",
     "size": 8487.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol3_2005_08_AZDAHA%20PAIKAR%20THE%20COMPOSITE%20IRON%20BROZE%20CANNON%20AT%20MUSA%20BURJ%20OF%20GOLCONDA%20FORT.pdf",
+    "gcs_key": "ijhs/Vol3_2005_08_AZDAHA%20PAIKAR%20THE%20COMPOSITE%20IRON%20BROZE%20CANNON%20AT%20MUSA%20BURJ%20OF%20GOLCONDA%20FORT.pdf",
     "localPath": "assets/pdfs/ijhs/Vol3_2005_08_AZDAHA%20PAIKAR%20THE%20COMPOSITE%20IRON%20BROZE%20CANNON%20AT%20MUSA%20BURJ%20OF%20GOLCONDA%20FORT.pdf"
   },
   {
@@ -13779,9 +14697,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol3_2005_09_FATH%20RAIHBAR%20THE%20MASSIVE%20BRONZE%20CANNON%20AT%20PETLA%20BURJ%20OF%20GOLCONDA%20FORT.pdf",
     "juUrl": "",
     "size": 8715.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol3_2005_09_FATH%20RAIHBAR%20THE%20MASSIVE%20BRONZE%20CANNON%20AT%20PETLA%20BURJ%20OF%20GOLCONDA%20FORT.pdf",
+    "gcs_key": "ijhs/Vol3_2005_09_FATH%20RAIHBAR%20THE%20MASSIVE%20BRONZE%20CANNON%20AT%20PETLA%20BURJ%20OF%20GOLCONDA%20FORT.pdf",
     "localPath": "assets/pdfs/ijhs/Vol3_2005_09_FATH%20RAIHBAR%20THE%20MASSIVE%20BRONZE%20CANNON%20AT%20PETLA%20BURJ%20OF%20GOLCONDA%20FORT.pdf"
   },
   {
@@ -13794,9 +14713,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol3_2005_10_HISTORICAL%20NOTES.pdf",
     "juUrl": "",
     "size": 1765.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol3_2005_10_HISTORICAL%20NOTES.pdf",
+    "gcs_key": "ijhs/Vol3_2005_10_HISTORICAL%20NOTES.pdf",
     "localPath": "assets/pdfs/ijhs/Vol3_2005_10_HISTORICAL%20NOTES.pdf"
   },
   {
@@ -13809,9 +14729,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol3_2005_11_SUPPELMENT.pdf",
     "juUrl": "",
     "size": 28728.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol3_2005_11_SUPPELMENT.pdf",
+    "gcs_key": "ijhs/Vol3_2005_11_SUPPELMENT.pdf",
     "localPath": "assets/pdfs/ijhs/Vol3_2005_11_SUPPELMENT.pdf"
   },
   {
@@ -13824,9 +14745,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol4_2005_01_IRON%20CANNONS%20OF%20CHINA.pdf",
     "juUrl": "",
     "size": 5363.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol4_2005_01_IRON%20CANNONS%20OF%20CHINA.pdf",
+    "gcs_key": "ijhs/Vol4_2005_01_IRON%20CANNONS%20OF%20CHINA.pdf",
     "localPath": "assets/pdfs/ijhs/Vol4_2005_01_IRON%20CANNONS%20OF%20CHINA.pdf"
   },
   {
@@ -13839,9 +14761,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol4_2005_02_MONSTER%20CANNON%20WROUGHT%20IRON%20BOMBARDS%20OF%20EUROPE.pdf",
     "juUrl": "",
     "size": 6006.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol4_2005_02_MONSTER%20CANNON%20WROUGHT%20IRON%20BOMBARDS%20OF%20EUROPE.pdf",
+    "gcs_key": "ijhs/Vol4_2005_02_MONSTER%20CANNON%20WROUGHT%20IRON%20BOMBARDS%20OF%20EUROPE.pdf",
     "localPath": "assets/pdfs/ijhs/Vol4_2005_02_MONSTER%20CANNON%20WROUGHT%20IRON%20BOMBARDS%20OF%20EUROPE.pdf"
   },
   {
@@ -13854,9 +14777,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol4_2005_03_CANNONS%20OF%20EASTERN%20INDIA.pdf",
     "juUrl": "",
     "size": 7624.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol4_2005_03_CANNONS%20OF%20EASTERN%20INDIA.pdf",
+    "gcs_key": "ijhs/Vol4_2005_03_CANNONS%20OF%20EASTERN%20INDIA.pdf",
     "localPath": "assets/pdfs/ijhs/Vol4_2005_03_CANNONS%20OF%20EASTERN%20INDIA.pdf"
   },
   {
@@ -13869,9 +14793,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol4_2005_04_FORGE%20WELDED%20CANNONS%20IN%20THE%20FORTS%20OF%20KARIMNAGAR%20DISTRICT%20IN%20THE%20ANDHRA%20PRADESH.pdf",
     "juUrl": "",
     "size": 5678.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol4_2005_04_FORGE%20WELDED%20CANNONS%20IN%20THE%20FORTS%20OF%20KARIMNAGAR%20DISTRICT%20IN%20THE%20ANDHRA%20PRADESH.pdf",
+    "gcs_key": "ijhs/Vol4_2005_04_FORGE%20WELDED%20CANNONS%20IN%20THE%20FORTS%20OF%20KARIMNAGAR%20DISTRICT%20IN%20THE%20ANDHRA%20PRADESH.pdf",
     "localPath": "assets/pdfs/ijhs/Vol4_2005_04_FORGE%20WELDED%20CANNONS%20IN%20THE%20FORTS%20OF%20KARIMNAGAR%20DISTRICT%20IN%20THE%20ANDHRA%20PRADESH.pdf"
   },
   {
@@ -13884,9 +14809,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol4_2005_05_DEVELOPMENT%20OF%20CANNON%20TECHNOLOGY%20IN%20INDIA.pdf",
     "juUrl": "",
     "size": 13544.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol4_2005_05_DEVELOPMENT%20OF%20CANNON%20TECHNOLOGY%20IN%20INDIA.pdf",
+    "gcs_key": "ijhs/Vol4_2005_05_DEVELOPMENT%20OF%20CANNON%20TECHNOLOGY%20IN%20INDIA.pdf",
     "localPath": "assets/pdfs/ijhs/Vol4_2005_05_DEVELOPMENT%20OF%20CANNON%20TECHNOLOGY%20IN%20INDIA.pdf"
   },
   {
@@ -13899,9 +14825,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol4_2005_06_EPIC%20OF%20SALTPETRE%20TO%20GUNPOWDER.pdf",
     "juUrl": "",
     "size": 11534.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol4_2005_06_EPIC%20OF%20SALTPETRE%20TO%20GUNPOWDER.pdf",
+    "gcs_key": "ijhs/Vol4_2005_06_EPIC%20OF%20SALTPETRE%20TO%20GUNPOWDER.pdf",
     "localPath": "assets/pdfs/ijhs/Vol4_2005_06_EPIC%20OF%20SALTPETRE%20TO%20GUNPOWDER.pdf"
   },
   {
@@ -13914,9 +14841,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol4_2005_07_GUNPOWDER%20ARTILLERY%20AND%20MILITARY%20ARCHITECTURE%20IN%20SOUTH%20INDIA%20(15-18TH%20CENTURY).pdf",
     "juUrl": "",
     "size": 8694.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol4_2005_07_GUNPOWDER%20ARTILLERY%20AND%20MILITARY%20ARCHITECTURE%20IN%20SOUTH%20INDIA%20(15-18TH%20CENTURY).pdf",
+    "gcs_key": "ijhs/Vol4_2005_07_GUNPOWDER%20ARTILLERY%20AND%20MILITARY%20ARCHITECTURE%20IN%20SOUTH%20INDIA%20(15-18TH%20CENTURY).pdf",
     "localPath": "assets/pdfs/ijhs/Vol4_2005_07_GUNPOWDER%20ARTILLERY%20AND%20MILITARY%20ARCHITECTURE%20IN%20SOUTH%20INDIA%20(15-18TH%20CENTURY).pdf"
   },
   {
@@ -13929,9 +14857,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol4_2005_08_FIREPOWER%20CENTRIC%20WARFARE%20IN%20INDIA%20AND%20MILITARY%20MODERNIZATION%20OF%20THE%20MARATHAS%201740-1.pdf",
     "juUrl": "",
     "size": 14140.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol4_2005_08_FIREPOWER%20CENTRIC%20WARFARE%20IN%20INDIA%20AND%20MILITARY%20MODERNIZATION%20OF%20THE%20MARATHAS%201740-1.pdf",
+    "gcs_key": "ijhs/Vol4_2005_08_FIREPOWER%20CENTRIC%20WARFARE%20IN%20INDIA%20AND%20MILITARY%20MODERNIZATION%20OF%20THE%20MARATHAS%201740-1.pdf",
     "localPath": "assets/pdfs/ijhs/Vol4_2005_08_FIREPOWER%20CENTRIC%20WARFARE%20IN%20INDIA%20AND%20MILITARY%20MODERNIZATION%20OF%20THE%20MARATHAS%201740-1.pdf"
   },
   {
@@ -13944,9 +14873,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol4_2005_09_ROCKETS%20UNDER%20HAIDAR%20ALI%20AND%20TIPU%20SULTAN'.pdf",
     "juUrl": "",
     "size": 24969.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol4_2005_09_ROCKETS%20UNDER%20HAIDAR%20ALI%20AND%20TIPU%20SULTAN'.pdf",
+    "gcs_key": "ijhs/Vol4_2005_09_ROCKETS%20UNDER%20HAIDAR%20ALI%20AND%20TIPU%20SULTAN'.pdf",
     "localPath": "assets/pdfs/ijhs/Vol4_2005_09_ROCKETS%20UNDER%20HAIDAR%20ALI%20AND%20TIPU%20SULTAN'.pdf"
   },
   {
@@ -13959,9 +14889,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Pages%20from%20Vol4_2005_10_HISTORICAL%20NOTES_1.pdf",
     "juUrl": "",
     "size": 1806.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Pages%20from%20Vol4_2005_10_HISTORICAL%20NOTES_1.pdf",
+    "gcs_key": "ijhs/Pages%20from%20Vol4_2005_10_HISTORICAL%20NOTES_1.pdf",
     "localPath": "assets/pdfs/ijhs/Pages%20from%20Vol4_2005_10_HISTORICAL%20NOTES_1.pdf"
   },
   {
@@ -13974,9 +14905,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol4_2005_10_HISTORICAL%20NOTES_2.pdf",
     "juUrl": "",
     "size": 3258.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol4_2005_10_HISTORICAL%20NOTES_2.pdf",
+    "gcs_key": "ijhs/Vol4_2005_10_HISTORICAL%20NOTES_2.pdf",
     "localPath": "assets/pdfs/ijhs/Vol4_2005_10_HISTORICAL%20NOTES_2.pdf"
   },
   {
@@ -13989,9 +14921,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol4_2005_10_HISTORICAL%20NOTES_3.pdf",
     "juUrl": "",
     "size": 1536.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol4_2005_10_HISTORICAL%20NOTES_3.pdf",
+    "gcs_key": "ijhs/Vol4_2005_10_HISTORICAL%20NOTES_3.pdf",
     "localPath": "assets/pdfs/ijhs/Vol4_2005_10_HISTORICAL%20NOTES_3.pdf"
   },
   {
@@ -14004,9 +14937,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol4_2005_11_BOOK%20REVIEW.pdf",
     "juUrl": "",
     "size": 2703.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol4_2005_11_BOOK%20REVIEW.pdf",
+    "gcs_key": "ijhs/Vol4_2005_11_BOOK%20REVIEW.pdf",
     "localPath": "assets/pdfs/ijhs/Vol4_2005_11_BOOK%20REVIEW.pdf"
   },
   {
@@ -14019,9 +14953,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol4_2005_12_NEWS.pdf",
     "juUrl": "",
     "size": 363.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol4_2005_12_NEWS.pdf",
+    "gcs_key": "ijhs/Vol4_2005_12_NEWS.pdf",
     "localPath": "assets/pdfs/ijhs/Vol4_2005_12_NEWS.pdf"
   },
   {
@@ -14034,9 +14969,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol4_2005_13_SUUPPLEMENT.pdf",
     "juUrl": "",
     "size": 19834.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol4_2005_13_SUUPPLEMENT.pdf",
+    "gcs_key": "ijhs/Vol4_2005_13_SUUPPLEMENT.pdf",
     "localPath": "assets/pdfs/ijhs/Vol4_2005_13_SUUPPLEMENT.pdf"
   },
   {
@@ -14049,9 +14985,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol41_1_1_RNIyengar.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vol41_1_1_RNIyengar.pdf",
     "size": 204.0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol41_1_1_RNIyengar.pdf",
+    "gcs_key": "ijhs/Vol41_1_1_RNIyengar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol41_1_1_RNIyengar.pdf"
   },
   {
@@ -14064,9 +15001,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol41_1_2_PSensarma.pdf",
     "juUrl": "",
     "size": 195.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol41_1_2_PSensarma.pdf",
+    "gcs_key": "ijhs/Vol41_1_2_PSensarma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol41_1_2_PSensarma.pdf"
   },
   {
@@ -14079,9 +15017,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol41_1_3_KCHari.pdf",
     "juUrl": "",
     "size": 365.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol41_1_3_KCHari.pdf",
+    "gcs_key": "ijhs/Vol41_1_3_KCHari.pdf",
     "localPath": "assets/pdfs/ijhs/Vol41_1_3_KCHari.pdf"
   },
   {
@@ -14094,9 +15033,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol41_1_4_DBhattacharya.pdf",
     "juUrl": "",
     "size": 922.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol41_1_4_DBhattacharya.pdf",
+    "gcs_key": "ijhs/Vol41_1_4_DBhattacharya.pdf",
     "localPath": "assets/pdfs/ijhs/Vol41_1_4_DBhattacharya.pdf"
   },
   {
@@ -14109,9 +15049,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol41_1_5_JAshraf.pdf",
     "juUrl": "",
     "size": 252.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol41_1_5_JAshraf.pdf",
+    "gcs_key": "ijhs/Vol41_1_5_JAshraf.pdf",
     "localPath": "assets/pdfs/ijhs/Vol41_1_5_JAshraf.pdf"
   },
   {
@@ -14124,9 +15065,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol41_1_6_HistoricalNotes.pdf",
     "juUrl": "",
     "size": 358.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol41_1_6_HistoricalNotes.pdf",
+    "gcs_key": "ijhs/Vol41_1_6_HistoricalNotes.pdf",
     "localPath": "assets/pdfs/ijhs/Vol41_1_6_HistoricalNotes.pdf"
   },
   {
@@ -14139,9 +15081,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol41_1_7_Einstien.pdf",
     "juUrl": "",
     "size": 122.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol41_1_7_Einstien.pdf",
+    "gcs_key": "ijhs/Vol41_1_7_Einstien.pdf",
     "localPath": "assets/pdfs/ijhs/Vol41_1_7_Einstien.pdf"
   },
   {
@@ -14154,9 +15097,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol41_1_8_Magic%20Square.pdf",
     "juUrl": "",
     "size": 15.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol41_1_8_Magic%20Square.pdf",
+    "gcs_key": "ijhs/Vol41_1_8_Magic%20Square.pdf",
     "localPath": "assets/pdfs/ijhs/Vol41_1_8_Magic%20Square.pdf"
   },
   {
@@ -14169,9 +15113,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol41_1_9_BookReview.pdf",
     "juUrl": "",
     "size": 131.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol41_1_9_BookReview.pdf",
+    "gcs_key": "ijhs/Vol41_1_9_BookReview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol41_1_9_BookReview.pdf"
   },
   {
@@ -14184,9 +15129,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol41_1_10_Notices.pdf",
     "juUrl": "",
     "size": 20.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol41_1_10_Notices.pdf",
+    "gcs_key": "ijhs/Vol41_1_10_Notices.pdf",
     "localPath": "assets/pdfs/ijhs/Vol41_1_10_Notices.pdf"
   },
   {
@@ -14199,9 +15145,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol41_1_11_Supplement_Grahalaghavam.pdf",
     "juUrl": "",
     "size": 982.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol41_1_11_Supplement_Grahalaghavam.pdf",
+    "gcs_key": "ijhs/Vol41_1_11_Supplement_Grahalaghavam.pdf",
     "localPath": "assets/pdfs/ijhs/Vol41_1_11_Supplement_Grahalaghavam.pdf"
   },
   {
@@ -14214,9 +15161,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol41_2_1_SBhujle.pdf",
     "juUrl": "",
     "size": 274.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol41_2_1_SBhujle.pdf",
+    "gcs_key": "ijhs/Vol41_2_1_SBhujle.pdf",
     "localPath": "assets/pdfs/ijhs/Vol41_2_1_SBhujle.pdf"
   },
   {
@@ -14229,9 +15177,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol41_2_2_KDAbhyankar.pdf",
     "juUrl": "",
     "size": 88.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol41_2_2_KDAbhyankar.pdf",
+    "gcs_key": "ijhs/Vol41_2_2_KDAbhyankar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol41_2_2_KDAbhyankar.pdf"
   },
   {
@@ -14244,9 +15193,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol41_2_3_AKBiswas.pdf",
     "juUrl": "",
     "size": 201.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol41_2_3_AKBiswas.pdf",
+    "gcs_key": "ijhs/Vol41_2_3_AKBiswas.pdf",
     "localPath": "assets/pdfs/ijhs/Vol41_2_3_AKBiswas.pdf"
   },
   {
@@ -14259,9 +15209,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol41_2_4_VNSharma.pdf",
     "juUrl": "",
     "size": 611.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol41_2_4_VNSharma.pdf",
+    "gcs_key": "ijhs/Vol41_2_4_VNSharma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol41_2_4_VNSharma.pdf"
   },
   {
@@ -14274,9 +15225,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol41_2_5_HistoricalNotes.pdf",
     "juUrl": "",
     "size": 423.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol41_2_5_HistoricalNotes.pdf",
+    "gcs_key": "ijhs/Vol41_2_5_HistoricalNotes.pdf",
     "localPath": "assets/pdfs/ijhs/Vol41_2_5_HistoricalNotes.pdf"
   },
   {
@@ -14289,9 +15241,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol41_2_6_BookReview.pdf",
     "juUrl": "",
     "size": 49.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol41_2_6_BookReview.pdf",
+    "gcs_key": "ijhs/Vol41_2_6_BookReview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol41_2_6_BookReview.pdf"
   },
   {
@@ -14304,9 +15257,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol41_2_7_Obituary.pdf",
     "juUrl": "",
     "size": 216.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol41_2_7_Obituary.pdf",
+    "gcs_key": "ijhs/Vol41_2_7_Obituary.pdf",
     "localPath": "assets/pdfs/ijhs/Vol41_2_7_Obituary.pdf"
   },
   {
@@ -14319,9 +15273,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol41_2_8_SupplementGrahalaghvam.pdf",
     "juUrl": "",
     "size": 2831.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol41_2_8_SupplementGrahalaghvam.pdf",
+    "gcs_key": "ijhs/Vol41_2_8_SupplementGrahalaghvam.pdf",
     "localPath": "assets/pdfs/ijhs/Vol41_2_8_SupplementGrahalaghvam.pdf"
   },
   {
@@ -14334,9 +15289,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol41_3_1_AKMishra.pdf",
     "juUrl": "",
     "size": 196.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol41_3_1_AKMishra.pdf",
+    "gcs_key": "ijhs/Vol41_3_1_AKMishra.pdf",
     "localPath": "assets/pdfs/ijhs/Vol41_3_1_AKMishra.pdf"
   },
   {
@@ -14349,9 +15305,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol41_3_2_KCHari.pdf",
     "juUrl": "",
     "size": 105.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol41_3_2_KCHari.pdf",
+    "gcs_key": "ijhs/Vol41_3_2_KCHari.pdf",
     "localPath": "assets/pdfs/ijhs/Vol41_3_2_KCHari.pdf"
   },
   {
@@ -14364,9 +15321,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol41_3_3_NRaghavan.pdf",
     "juUrl": "",
     "size": 784.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol41_3_3_NRaghavan.pdf",
+    "gcs_key": "ijhs/Vol41_3_3_NRaghavan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol41_3_3_NRaghavan.pdf"
   },
   {
@@ -14379,9 +15337,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol41_3_4_RKDube.pdf",
     "juUrl": "",
     "size": 397.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol41_3_4_RKDube.pdf",
+    "gcs_key": "ijhs/Vol41_3_4_RKDube.pdf",
     "localPath": "assets/pdfs/ijhs/Vol41_3_4_RKDube.pdf"
   },
   {
@@ -14394,9 +15353,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol41_3_5_RNIyengar.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vol41_3_5_RNIyengar.pdf",
     "size": 37.0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol41_3_5_RNIyengar.pdf",
+    "gcs_key": "ijhs/Vol41_3_5_RNIyengar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol41_3_5_RNIyengar.pdf"
   },
   {
@@ -14409,9 +15369,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol41_3_6_RCGupta.pdf",
     "juUrl": "",
     "size": 78.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol41_3_6_RCGupta.pdf",
+    "gcs_key": "ijhs/Vol41_3_6_RCGupta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol41_3_6_RCGupta.pdf"
   },
   {
@@ -14424,9 +15385,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol41_3_7_SisirKMajumdar.pdf",
     "juUrl": "",
     "size": 69.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol41_3_7_SisirKMajumdar.pdf",
+    "gcs_key": "ijhs/Vol41_3_7_SisirKMajumdar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol41_3_7_SisirKMajumdar.pdf"
   },
   {
@@ -14439,9 +15401,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol41_3_8_BookReview.pdf",
     "juUrl": "",
     "size": 687.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol41_3_8_BookReview.pdf",
+    "gcs_key": "ijhs/Vol41_3_8_BookReview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol41_3_8_BookReview.pdf"
   },
   {
@@ -14454,9 +15417,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol41_3_9_SupplementGrahalaghavam.pdf",
     "juUrl": "",
     "size": 4070.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol41_3_9_SupplementGrahalaghavam.pdf",
+    "gcs_key": "ijhs/Vol41_3_9_SupplementGrahalaghavam.pdf",
     "localPath": "assets/pdfs/ijhs/Vol41_3_9_SupplementGrahalaghavam.pdf"
   },
   {
@@ -14469,9 +15433,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_1_1_RKDubey.pdf",
     "juUrl": "",
     "size": 33.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_1_1_RKDubey.pdf",
+    "gcs_key": "ijhs/Vol42_1_1_RKDubey.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_1_1_RKDubey.pdf"
   },
   {
@@ -14484,9 +15449,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_1_2_JKozhmthadan.pdf",
     "juUrl": "",
     "size": 1.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_1_2_JKozhmthadan.pdf",
+    "gcs_key": "ijhs/Vol42_1_2_JKozhmthadan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_1_2_JKozhmthadan.pdf"
   },
   {
@@ -14499,9 +15465,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_1_3_DRaina.pdf",
     "juUrl": "",
     "size": 1.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_1_3_DRaina.pdf",
+    "gcs_key": "ijhs/Vol42_1_3_DRaina.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_1_3_DRaina.pdf"
   },
   {
@@ -14514,9 +15481,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_1_4_SSahoo.pdf",
     "juUrl": "",
     "size": 1.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_1_4_SSahoo.pdf",
+    "gcs_key": "ijhs/Vol42_1_4_SSahoo.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_1_4_SSahoo.pdf"
   },
   {
@@ -14529,9 +15497,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_1_5_BSahai.pdf",
     "juUrl": "",
     "size": 1.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_1_5_BSahai.pdf",
+    "gcs_key": "ijhs/Vol42_1_5_BSahai.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_1_5_BSahai.pdf"
   },
   {
@@ -14544,9 +15513,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_1_6_HJoglekar.pdf",
     "juUrl": "",
     "size": 113.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_1_6_HJoglekar.pdf",
+    "gcs_key": "ijhs/Vol42_1_6_HJoglekar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_1_6_HJoglekar.pdf"
   },
   {
@@ -14559,9 +15529,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_1_7_NRatnasree.pdf",
     "juUrl": "",
     "size": 192.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_1_7_NRatnasree.pdf",
+    "gcs_key": "ijhs/Vol42_1_7_NRatnasree.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_1_7_NRatnasree.pdf"
   },
   {
@@ -14574,9 +15545,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_1_8_BSShyalaja.pdf",
     "juUrl": "",
     "size": 16.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_1_8_BSShyalaja.pdf",
+    "gcs_key": "ijhs/Vol42_1_8_BSShyalaja.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_1_8_BSShyalaja.pdf"
   },
   {
@@ -14589,9 +15561,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_1_9_BookReview.pdf",
     "juUrl": "",
     "size": 1.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_1_9_BookReview.pdf",
+    "gcs_key": "ijhs/Vol42_1_9_BookReview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_1_9_BookReview.pdf"
   },
   {
@@ -14604,9 +15577,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_1_10_Supplement.pdf",
     "juUrl": "",
     "size": 212.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_1_10_Supplement.pdf",
+    "gcs_key": "ijhs/Vol42_1_10_Supplement.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_1_10_Supplement.pdf"
   },
   {
@@ -14619,9 +15593,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_2_1_PSensarma.pdf",
     "juUrl": "",
     "size": 174.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_2_1_PSensarma.pdf",
+    "gcs_key": "ijhs/Vol42_2_1_PSensarma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_2_1_PSensarma.pdf"
   },
   {
@@ -14634,9 +15609,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_2_2_ASule.pdf",
     "juUrl": "",
     "size": 169.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_2_2_ASule.pdf",
+    "gcs_key": "ijhs/Vol42_2_2_ASule.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_2_2_ASule.pdf"
   },
   {
@@ -14649,9 +15625,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_2_3_AParekh.pdf",
     "juUrl": "",
     "size": 107.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_2_3_AParekh.pdf",
+    "gcs_key": "ijhs/Vol42_2_3_AParekh.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_2_3_AParekh.pdf"
   },
   {
@@ -14664,9 +15641,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_2_4_RCGupta.pdf",
     "juUrl": "",
     "size": 552.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_2_4_RCGupta.pdf",
+    "gcs_key": "ijhs/Vol42_2_4_RCGupta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_2_4_RCGupta.pdf"
   },
   {
@@ -14679,9 +15657,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_2_5_RBalasubramaniam.pdf",
     "juUrl": "",
     "size": 576.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_2_5_RBalasubramaniam.pdf",
+    "gcs_key": "ijhs/Vol42_2_5_RBalasubramaniam.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_2_5_RBalasubramaniam.pdf"
   },
   {
@@ -14694,9 +15673,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_2_6_KDAbhyankar.pdf",
     "juUrl": "",
     "size": 135.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_2_6_KDAbhyankar.pdf",
+    "gcs_key": "ijhs/Vol42_2_6_KDAbhyankar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_2_6_KDAbhyankar.pdf"
   },
   {
@@ -14709,9 +15689,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_2_7_KCHari.pdf",
     "juUrl": "",
     "size": 103.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_2_7_KCHari.pdf",
+    "gcs_key": "ijhs/Vol42_2_7_KCHari.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_2_7_KCHari.pdf"
   },
   {
@@ -14724,9 +15705,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_2_8_RRanade.pdf",
     "juUrl": "",
     "size": 58.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_2_8_RRanade.pdf",
+    "gcs_key": "ijhs/Vol42_2_8_RRanade.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_2_8_RRanade.pdf"
   },
   {
@@ -14739,9 +15721,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_2_9_SKMajumdar.pdf",
     "juUrl": "",
     "size": 142.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_2_9_SKMajumdar.pdf",
+    "gcs_key": "ijhs/Vol42_2_9_SKMajumdar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_2_9_SKMajumdar.pdf"
   },
   {
@@ -14754,9 +15737,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_2_10_BookReviewDWajastyk.pdf",
     "juUrl": "",
     "size": 59.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_2_10_BookReviewDWajastyk.pdf",
+    "gcs_key": "ijhs/Vol42_2_10_BookReviewDWajastyk.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_2_10_BookReviewDWajastyk.pdf"
   },
   {
@@ -14769,9 +15753,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_2_11_BookReviewMSSriram.pdf",
     "juUrl": "",
     "size": 64.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_2_11_BookReviewMSSriram.pdf",
+    "gcs_key": "ijhs/Vol42_2_11_BookReviewMSSriram.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_2_11_BookReviewMSSriram.pdf"
   },
   {
@@ -14784,9 +15769,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_2_12_BookReviewJNSinha.pdf",
     "juUrl": "",
     "size": 28.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_2_12_BookReviewJNSinha.pdf",
+    "gcs_key": "ijhs/Vol42_2_12_BookReviewJNSinha.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_2_12_BookReviewJNSinha.pdf"
   },
   {
@@ -14799,9 +15785,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_2_13_Obituary.pdf",
     "juUrl": "",
     "size": 93.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_2_13_Obituary.pdf",
+    "gcs_key": "ijhs/Vol42_2_13_Obituary.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_2_13_Obituary.pdf"
   },
   {
@@ -14814,9 +15801,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_2_14_News.pdf",
     "juUrl": "",
     "size": 42.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_2_14_News.pdf",
+    "gcs_key": "ijhs/Vol42_2_14_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_2_14_News.pdf"
   },
   {
@@ -14829,9 +15817,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_2_15_Supplement.pdf",
     "juUrl": "",
     "size": 562.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_2_15_Supplement.pdf",
+    "gcs_key": "ijhs/Vol42_2_15_Supplement.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_2_15_Supplement.pdf"
   },
   {
@@ -14844,9 +15833,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_3_1_DBWagner.pdf",
     "juUrl": "",
     "size": 521.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_3_1_DBWagner.pdf",
+    "gcs_key": "ijhs/Vol42_3_1_DBWagner.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_3_1_DBWagner.pdf"
   },
   {
@@ -14859,9 +15849,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_3_2_AFeuerbach.pdf",
     "juUrl": "",
     "size": 272.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_3_2_AFeuerbach.pdf",
+    "gcs_key": "ijhs/Vol42_3_2_AFeuerbach.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_3_2_AFeuerbach.pdf"
   },
   {
@@ -14874,9 +15865,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_3_3_JLCoze.pdf",
     "juUrl": "",
     "size": 398.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_3_3_JLCoze.pdf",
+    "gcs_key": "ijhs/Vol42_3_3_JLCoze.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_3_3_JLCoze.pdf"
   },
   {
@@ -14889,9 +15881,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_3_4_AFeuerbach.pdf",
     "juUrl": "",
     "size": 117.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_3_4_AFeuerbach.pdf",
+    "gcs_key": "ijhs/Vol42_3_4_AFeuerbach.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_3_4_AFeuerbach.pdf"
   },
   {
@@ -14904,9 +15897,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_3_5_PKChattopadhyay.pdf",
     "juUrl": "",
     "size": 465.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_3_5_PKChattopadhyay.pdf",
+    "gcs_key": "ijhs/Vol42_3_5_PKChattopadhyay.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_3_5_PKChattopadhyay.pdf"
   },
   {
@@ -14919,9 +15913,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_3_6_VTripathi.pdf",
     "juUrl": "",
     "size": 298.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_3_6_VTripathi.pdf",
+    "gcs_key": "ijhs/Vol42_3_6_VTripathi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_3_6_VTripathi.pdf"
   },
   {
@@ -14934,9 +15929,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_3_7_RBalasubramaniam.pdf",
     "juUrl": "",
     "size": 256.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_3_7_RBalasubramaniam.pdf",
+    "gcs_key": "ijhs/Vol42_3_7_RBalasubramaniam.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_3_7_RBalasubramaniam.pdf"
   },
   {
@@ -14949,9 +15945,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_3_8_SJaikishan.pdf",
     "juUrl": "",
     "size": 414.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_3_8_SJaikishan.pdf",
+    "gcs_key": "ijhs/Vol42_3_8_SJaikishan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_3_8_SJaikishan.pdf"
   },
   {
@@ -14964,9 +15961,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_3_9_SJaikishan.pdf",
     "juUrl": "",
     "size": 579.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_3_9_SJaikishan.pdf",
+    "gcs_key": "ijhs/Vol42_3_9_SJaikishan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_3_9_SJaikishan.pdf"
   },
   {
@@ -14979,9 +15977,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_3_10_SJaikishan.pdf",
     "juUrl": "",
     "size": 262.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_3_10_SJaikishan.pdf",
+    "gcs_key": "ijhs/Vol42_3_10_SJaikishan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_3_10_SJaikishan.pdf"
   },
   {
@@ -14994,9 +15993,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_3_11_RBalasubramaniam.pdf",
     "juUrl": "",
     "size": 494.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_3_11_RBalasubramaniam.pdf",
+    "gcs_key": "ijhs/Vol42_3_11_RBalasubramaniam.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_3_11_RBalasubramaniam.pdf"
   },
   {
@@ -15009,9 +16009,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_3_12_HistoricalNoteRBalasubramaniam.pdf",
     "juUrl": "",
     "size": 126.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_3_12_HistoricalNoteRBalasubramaniam.pdf",
+    "gcs_key": "ijhs/Vol42_3_12_HistoricalNoteRBalasubramaniam.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_3_12_HistoricalNoteRBalasubramaniam.pdf"
   },
   {
@@ -15024,9 +16025,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_3_13_HistoricalNoteGJuleff.pdf",
     "juUrl": "",
     "size": 24.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_3_13_HistoricalNoteGJuleff.pdf",
+    "gcs_key": "ijhs/Vol42_3_13_HistoricalNoteGJuleff.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_3_13_HistoricalNoteGJuleff.pdf"
   },
   {
@@ -15039,9 +16041,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_3_14_HistoricalNoteLPandey.pdf",
     "juUrl": "",
     "size": 31.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_3_14_HistoricalNoteLPandey.pdf",
+    "gcs_key": "ijhs/Vol42_3_14_HistoricalNoteLPandey.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_3_14_HistoricalNoteLPandey.pdf"
   },
   {
@@ -15054,9 +16057,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_3_15_Historical%20NoteRBalasubramaniam.pdf",
     "juUrl": "",
     "size": 96.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_3_15_Historical%20NoteRBalasubramaniam.pdf",
+    "gcs_key": "ijhs/Vol42_3_15_Historical%20NoteRBalasubramaniam.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_3_15_Historical%20NoteRBalasubramaniam.pdf"
   },
   {
@@ -15069,9 +16073,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_4_1_JWadsworth.pdf",
     "juUrl": "",
     "size": 454.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_4_1_JWadsworth.pdf",
+    "gcs_key": "ijhs/Vol42_4_1_JWadsworth.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_4_1_JWadsworth.pdf"
   },
   {
@@ -15084,9 +16089,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_4_2_JVerhoeven.pdf",
     "juUrl": "",
     "size": 358.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_4_2_JVerhoeven.pdf",
+    "gcs_key": "ijhs/Vol42_4_2_JVerhoeven.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_4_2_JVerhoeven.pdf"
   },
   {
@@ -15099,9 +16105,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_4_3_JLCoze.pdf",
     "juUrl": "",
     "size": 218.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_4_3_JLCoze.pdf",
+    "gcs_key": "ijhs/Vol42_4_3_JLCoze.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_4_3_JLCoze.pdf"
   },
   {
@@ -15114,9 +16121,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_4_4_PTCraddock.pdf",
     "juUrl": "",
     "size": 188.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_4_4_PTCraddock.pdf",
+    "gcs_key": "ijhs/Vol42_4_4_PTCraddock.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_4_4_PTCraddock.pdf"
   },
   {
@@ -15129,9 +16137,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_4_5_VKumar.pdf",
     "juUrl": "",
     "size": 548.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_4_5_VKumar.pdf",
+    "gcs_key": "ijhs/Vol42_4_5_VKumar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_4_5_VKumar.pdf"
   },
   {
@@ -15144,9 +16153,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_4_6_MRBarnett.pdf",
     "juUrl": "",
     "size": 392.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_4_6_MRBarnett.pdf",
+    "gcs_key": "ijhs/Vol42_4_6_MRBarnett.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_4_6_MRBarnett.pdf"
   },
   {
@@ -15159,9 +16169,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_4_7_RBalasubramaniam.pdf",
     "juUrl": "",
     "size": 444.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_4_7_RBalasubramaniam.pdf",
+    "gcs_key": "ijhs/Vol42_4_7_RBalasubramaniam.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_4_7_RBalasubramaniam.pdf"
   },
   {
@@ -15174,9 +16185,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_4_8_SSrinivasan.pdf",
     "juUrl": "",
     "size": 401.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_4_8_SSrinivasan.pdf",
+    "gcs_key": "ijhs/Vol42_4_8_SSrinivasan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_4_8_SSrinivasan.pdf"
   },
   {
@@ -15189,9 +16201,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_4_9_HistoricalNotes.pdf",
     "juUrl": "",
     "size": 74.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_4_9_HistoricalNotes.pdf",
+    "gcs_key": "ijhs/Vol42_4_9_HistoricalNotes.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_4_9_HistoricalNotes.pdf"
   },
   {
@@ -15204,9 +16217,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_4_10_SJaikishan.pdf",
     "juUrl": "",
     "size": 68.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_4_10_SJaikishan.pdf",
+    "gcs_key": "ijhs/Vol42_4_10_SJaikishan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_4_10_SJaikishan.pdf"
   },
   {
@@ -15219,9 +16233,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_4_11_BookReview.pdf",
     "juUrl": "",
     "size": 137.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_4_11_BookReview.pdf",
+    "gcs_key": "ijhs/Vol42_4_11_BookReview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_4_11_BookReview.pdf"
   },
   {
@@ -15234,9 +16249,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol42_4_12_Supplement.pdf",
     "juUrl": "",
     "size": 552.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol42_4_12_Supplement.pdf",
+    "gcs_key": "ijhs/Vol42_4_12_Supplement.pdf",
     "localPath": "assets/pdfs/ijhs/Vol42_4_12_Supplement.pdf"
   },
   {
@@ -15249,9 +16265,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_1_1_RNIyengar.pdf",
     "juUrl": "",
     "size": 220.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_1_1_RNIyengar.pdf",
+    "gcs_key": "ijhs/Vol43_1_1_RNIyengar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_1_1_RNIyengar.pdf"
   },
   {
@@ -15264,9 +16281,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_1_2_SSantra.pdf",
     "juUrl": "",
     "size": 208.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_1_2_SSantra.pdf",
+    "gcs_key": "ijhs/Vol43_1_2_SSantra.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_1_2_SSantra.pdf"
   },
   {
@@ -15279,9 +16297,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_1_3_JDeloche.pdf",
     "juUrl": "",
     "size": 344.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_1_3_JDeloche.pdf",
+    "gcs_key": "ijhs/Vol43_1_3_JDeloche.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_1_3_JDeloche.pdf"
   },
   {
@@ -15294,9 +16313,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_1_4_PKBondyopadhyay.pdf",
     "juUrl": "",
     "size": 435.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_1_4_PKBondyopadhyay.pdf",
+    "gcs_key": "ijhs/Vol43_1_4_PKBondyopadhyay.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_1_4_PKBondyopadhyay.pdf"
   },
   {
@@ -15309,9 +16329,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_1_5_KDAbhyankar.pdf",
     "juUrl": "",
     "size": 148.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_1_5_KDAbhyankar.pdf",
+    "gcs_key": "ijhs/Vol43_1_5_KDAbhyankar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_1_5_KDAbhyankar.pdf"
   },
   {
@@ -15324,9 +16345,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_1_6_RCGupta.pdf",
     "juUrl": "",
     "size": 99.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_1_6_RCGupta.pdf",
+    "gcs_key": "ijhs/Vol43_1_6_RCGupta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_1_6_RCGupta.pdf"
   },
   {
@@ -15339,9 +16361,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_1_7_DBhattacharya.pdf",
     "juUrl": "",
     "size": 195.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_1_7_DBhattacharya.pdf",
+    "gcs_key": "ijhs/Vol43_1_7_DBhattacharya.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_1_7_DBhattacharya.pdf"
   },
   {
@@ -15354,9 +16377,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_1_8_DNUkidwe.pdf",
     "juUrl": "",
     "size": 158.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_1_8_DNUkidwe.pdf",
+    "gcs_key": "ijhs/Vol43_1_8_DNUkidwe.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_1_8_DNUkidwe.pdf"
   },
   {
@@ -15369,9 +16393,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_1_9_DBhattacharya.pdf",
     "juUrl": "",
     "size": 102.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_1_9_DBhattacharya.pdf",
+    "gcs_key": "ijhs/Vol43_1_9_DBhattacharya.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_1_9_DBhattacharya.pdf"
   },
   {
@@ -15384,9 +16409,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_1_10_SKMajumdar.pdf",
     "juUrl": "",
     "size": 100.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_1_10_SKMajumdar.pdf",
+    "gcs_key": "ijhs/Vol43_1_10_SKMajumdar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_1_10_SKMajumdar.pdf"
   },
   {
@@ -15399,9 +16425,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_1_11_BookReview_CPalit.pdf",
     "juUrl": "",
     "size": 78.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_1_11_BookReview_CPalit.pdf",
+    "gcs_key": "ijhs/Vol43_1_11_BookReview_CPalit.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_1_11_BookReview_CPalit.pdf"
   },
   {
@@ -15414,9 +16441,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_1_12_BookReview_AKBiswas.pdf",
     "juUrl": "",
     "size": 113.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_1_12_BookReview_AKBiswas.pdf",
+    "gcs_key": "ijhs/Vol43_1_12_BookReview_AKBiswas.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_1_12_BookReview_AKBiswas.pdf"
   },
   {
@@ -15429,9 +16457,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_1_13_Obituary.pdf",
     "juUrl": "",
     "size": 84.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_1_13_Obituary.pdf",
+    "gcs_key": "ijhs/Vol43_1_13_Obituary.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_1_13_Obituary.pdf"
   },
   {
@@ -15444,9 +16473,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_1_14_News.pdf",
     "juUrl": "",
     "size": 73.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_1_14_News.pdf",
+    "gcs_key": "ijhs/Vol43_1_14_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_1_14_News.pdf"
   },
   {
@@ -15459,9 +16489,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_1_15_Supplement.pdf",
     "juUrl": "",
     "size": 291.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_1_15_Supplement.pdf",
+    "gcs_key": "ijhs/Vol43_1_15_Supplement.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_1_15_Supplement.pdf"
   },
   {
@@ -15474,9 +16505,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_2_1_VJDeshpande.pdf",
     "juUrl": "",
     "size": 303.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_2_1_VJDeshpande.pdf",
+    "gcs_key": "ijhs/Vol43_2_1_VJDeshpande.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_2_1_VJDeshpande.pdf"
   },
   {
@@ -15489,9 +16521,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_2_2_JBhattacharya.pdf",
     "juUrl": "",
     "size": 252.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_2_2_JBhattacharya.pdf",
+    "gcs_key": "ijhs/Vol43_2_2_JBhattacharya.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_2_2_JBhattacharya.pdf"
   },
   {
@@ -15504,9 +16537,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_2_3_RAkhtar.pdf",
     "juUrl": "",
     "size": 196.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_2_3_RAkhtar.pdf",
+    "gcs_key": "ijhs/Vol43_2_3_RAkhtar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_2_3_RAkhtar.pdf"
   },
   {
@@ -15519,9 +16553,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_2_4_HSingh.pdf",
     "juUrl": "",
     "size": 224.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_2_4_HSingh.pdf",
+    "gcs_key": "ijhs/Vol43_2_4_HSingh.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_2_4_HSingh.pdf"
   },
   {
@@ -15534,9 +16569,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_2_5_SKAcharya.pdf",
     "juUrl": "",
     "size": 126.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_2_5_SKAcharya.pdf",
+    "gcs_key": "ijhs/Vol43_2_5_SKAcharya.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_2_5_SKAcharya.pdf"
   },
   {
@@ -15549,9 +16585,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_2_6_CPalit.pdf",
     "juUrl": "",
     "size": 90.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_2_6_CPalit.pdf",
+    "gcs_key": "ijhs/Vol43_2_6_CPalit.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_2_6_CPalit.pdf"
   },
   {
@@ -15564,9 +16601,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_2_7_RKDube.pdf",
     "juUrl": "",
     "size": 94.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_2_7_RKDube.pdf",
+    "gcs_key": "ijhs/Vol43_2_7_RKDube.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_2_7_RKDube.pdf"
   },
   {
@@ -15579,9 +16617,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_2_8_SKMjumdar.pdf",
     "juUrl": "",
     "size": 123.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_2_8_SKMjumdar.pdf",
+    "gcs_key": "ijhs/Vol43_2_8_SKMjumdar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_2_8_SKMjumdar.pdf"
   },
   {
@@ -15594,9 +16633,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_2_9_BookReview.pdf",
     "juUrl": "",
     "size": 99.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_2_9_BookReview.pdf",
+    "gcs_key": "ijhs/Vol43_2_9_BookReview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_2_9_BookReview.pdf"
   },
   {
@@ -15609,9 +16649,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_2_10_Obituary.pdf",
     "juUrl": "",
     "size": 250.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_2_10_Obituary.pdf",
+    "gcs_key": "ijhs/Vol43_2_10_Obituary.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_2_10_Obituary.pdf"
   },
   {
@@ -15624,9 +16665,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_3_1_PGondhalekar.pdf",
     "juUrl": "",
     "size": 217.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_3_1_PGondhalekar.pdf",
+    "gcs_key": "ijhs/Vol43_3_1_PGondhalekar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_3_1_PGondhalekar.pdf"
   },
   {
@@ -15639,9 +16681,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_3_2_ACohen.pdf",
     "juUrl": "",
     "size": 219.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_3_2_ACohen.pdf",
+    "gcs_key": "ijhs/Vol43_3_2_ACohen.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_3_2_ACohen.pdf"
   },
   {
@@ -15654,9 +16697,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_3_3_PKDatta.pdf",
     "juUrl": "",
     "size": 431.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_3_3_PKDatta.pdf",
+    "gcs_key": "ijhs/Vol43_3_3_PKDatta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_3_3_PKDatta.pdf"
   },
   {
@@ -15669,9 +16713,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_3_4_DBhattacharya.pdf",
     "juUrl": "",
     "size": 282.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_3_4_DBhattacharya.pdf",
+    "gcs_key": "ijhs/Vol43_3_4_DBhattacharya.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_3_4_DBhattacharya.pdf"
   },
   {
@@ -15684,9 +16729,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_3_5_NRatnasree.pdf",
     "juUrl": "",
     "size": 180.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_3_5_NRatnasree.pdf",
+    "gcs_key": "ijhs/Vol43_3_5_NRatnasree.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_3_5_NRatnasree.pdf"
   },
   {
@@ -15699,9 +16745,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_3_6_RSingh.pdf",
     "juUrl": "",
     "size": 145.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_3_6_RSingh.pdf",
+    "gcs_key": "ijhs/Vol43_3_6_RSingh.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_3_6_RSingh.pdf"
   },
   {
@@ -15714,9 +16761,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_3_7_BookReview.pdf",
     "juUrl": "",
     "size": 168.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_3_7_BookReview.pdf",
+    "gcs_key": "ijhs/Vol43_3_7_BookReview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_3_7_BookReview.pdf"
   },
   {
@@ -15729,9 +16777,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_3_8_Obituary.pdf",
     "juUrl": "",
     "size": 122.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_3_8_Obituary.pdf",
+    "gcs_key": "ijhs/Vol43_3_8_Obituary.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_3_8_Obituary.pdf"
   },
   {
@@ -15744,9 +16793,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_3_9_News.pdf",
     "juUrl": "",
     "size": 94.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_3_9_News.pdf",
+    "gcs_key": "ijhs/Vol43_3_9_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_3_9_News.pdf"
   },
   {
@@ -15759,9 +16809,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_3_10_Supplement.pdf",
     "juUrl": "",
     "size": 454.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_3_10_Supplement.pdf",
+    "gcs_key": "ijhs/Vol43_3_10_Supplement.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_3_10_Supplement.pdf"
   },
   {
@@ -15774,9 +16825,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_4_1_PGondhalekar.pdf",
     "juUrl": "",
     "size": 282.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_4_1_PGondhalekar.pdf",
+    "gcs_key": "ijhs/Vol43_4_1_PGondhalekar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_4_1_PGondhalekar.pdf"
   },
   {
@@ -15789,9 +16841,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_4_2_Sbalachandrarao.pdf",
     "juUrl": "",
     "size": 372.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_4_2_Sbalachandrarao.pdf",
+    "gcs_key": "ijhs/Vol43_4_2_Sbalachandrarao.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_4_2_Sbalachandrarao.pdf"
   },
   {
@@ -15804,9 +16857,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_4_3_VMMallayya.pdf",
     "juUrl": "",
     "size": 149.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_4_3_VMMallayya.pdf",
+    "gcs_key": "ijhs/Vol43_4_3_VMMallayya.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_4_3_VMMallayya.pdf"
   },
   {
@@ -15819,9 +16873,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_4_4_SDucheyne.pdf",
     "juUrl": "",
     "size": 681.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_4_4_SDucheyne.pdf",
+    "gcs_key": "ijhs/Vol43_4_4_SDucheyne.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_4_4_SDucheyne.pdf"
   },
   {
@@ -15834,9 +16889,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_4_5_HSingh.pdf",
     "juUrl": "",
     "size": 187.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_4_5_HSingh.pdf",
+    "gcs_key": "ijhs/Vol43_4_5_HSingh.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_4_5_HSingh.pdf"
   },
   {
@@ -15849,9 +16905,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_4_6_SKMajumdar.pdf",
     "juUrl": "",
     "size": 55.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_4_6_SKMajumdar.pdf",
+    "gcs_key": "ijhs/Vol43_4_6_SKMajumdar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_4_6_SKMajumdar.pdf"
   },
   {
@@ -15864,9 +16921,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_4_7_BookReviewKRajan.pdf",
     "juUrl": "",
     "size": 47.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_4_7_BookReviewKRajan.pdf",
+    "gcs_key": "ijhs/Vol43_4_7_BookReviewKRajan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_4_7_BookReviewKRajan.pdf"
   },
   {
@@ -15879,9 +16937,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_4_8_BookReviewBPrakash.pdf",
     "juUrl": "",
     "size": 83.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_4_8_BookReviewBPrakash.pdf",
+    "gcs_key": "ijhs/Vol43_4_8_BookReviewBPrakash.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_4_8_BookReviewBPrakash.pdf"
   },
   {
@@ -15894,9 +16953,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_4_9_News.pdf",
     "juUrl": "",
     "size": 18.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_4_9_News.pdf",
+    "gcs_key": "ijhs/Vol43_4_9_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_4_9_News.pdf"
   },
   {
@@ -15909,9 +16969,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol43_4_10_BooksreceivedforReview.pdf",
     "juUrl": "",
     "size": 24.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_4_10_BooksreceivedforReview.pdf",
+    "gcs_key": "ijhs/Vol43_4_10_BooksreceivedforReview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_4_10_BooksreceivedforReview.pdf"
   },
   {
@@ -15924,9 +16985,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_1_0_Editorial.pdf",
     "juUrl": "",
     "size": 318.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_1_0_Editorial.pdf",
+    "gcs_key": "ijhs/Vol44_1_0_Editorial.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_1_0_Editorial.pdf"
   },
   {
@@ -15939,9 +17001,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_1_1_MRoy.pdf",
     "juUrl": "",
     "size": 71.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_1_1_MRoy.pdf",
+    "gcs_key": "ijhs/Vol44_1_1_MRoy.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_1_1_MRoy.pdf"
   },
   {
@@ -15954,9 +17017,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_1_2_PSensarma.pdf",
     "juUrl": "",
     "size": 35.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_1_2_PSensarma.pdf",
+    "gcs_key": "ijhs/Vol44_1_2_PSensarma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_1_2_PSensarma.pdf"
   },
   {
@@ -15969,9 +17033,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_1_3_RBalasubramaniam.pdf",
     "juUrl": "",
     "size": 342.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_1_3_RBalasubramaniam.pdf",
+    "gcs_key": "ijhs/Vol44_1_3_RBalasubramaniam.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_1_3_RBalasubramaniam.pdf"
   },
   {
@@ -15984,9 +17049,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_1_4_BPrakash.pdf",
     "juUrl": "",
     "size": 459.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_1_4_BPrakash.pdf",
+    "gcs_key": "ijhs/Vol44_1_4_BPrakash.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_1_4_BPrakash.pdf"
   },
   {
@@ -15999,9 +17065,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_1_5_KRoy.pdf",
     "juUrl": "",
     "size": 61.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_1_5_KRoy.pdf",
+    "gcs_key": "ijhs/Vol44_1_5_KRoy.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_1_5_KRoy.pdf"
   },
   {
@@ -16014,9 +17081,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_1_6_Historical%20Notes.pdf",
     "juUrl": "",
     "size": 63.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_1_6_Historical%20Notes.pdf",
+    "gcs_key": "ijhs/Vol44_1_6_Historical%20Notes.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_1_6_Historical%20Notes.pdf"
   },
   {
@@ -16029,9 +17097,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_1_7_KCHari.pdf",
     "juUrl": "",
     "size": 62.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_1_7_KCHari.pdf",
+    "gcs_key": "ijhs/Vol44_1_7_KCHari.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_1_7_KCHari.pdf"
   },
   {
@@ -16044,9 +17113,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_1_8_SKMajumdar.pdf",
     "juUrl": "",
     "size": 40.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_1_8_SKMajumdar.pdf",
+    "gcs_key": "ijhs/Vol44_1_8_SKMajumdar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_1_8_SKMajumdar.pdf"
   },
   {
@@ -16059,9 +17129,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_1_9_Book%20Review.pdf",
     "juUrl": "",
     "size": 43.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_1_9_Book%20Review.pdf",
+    "gcs_key": "ijhs/Vol44_1_9_Book%20Review.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_1_9_Book%20Review.pdf"
   },
   {
@@ -16074,9 +17145,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_2_0_Editorial.pdf",
     "juUrl": "",
     "size": 144.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_2_0_Editorial.pdf",
+    "gcs_key": "ijhs/Vol44_2_0_Editorial.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_2_0_Editorial.pdf"
   },
   {
@@ -16089,9 +17161,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_2_1_CPechhia.pdf",
     "juUrl": "",
     "size": 66.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_2_1_CPechhia.pdf",
+    "gcs_key": "ijhs/Vol44_2_1_CPechhia.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_2_1_CPechhia.pdf"
   },
   {
@@ -16104,9 +17177,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_2_2_PAMaas.pdf",
     "juUrl": "",
     "size": 636.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_2_2_PAMaas.pdf",
+    "gcs_key": "ijhs/Vol44_2_2_PAMaas.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_2_2_PAMaas.pdf"
   },
   {
@@ -16119,9 +17193,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_2_3_DWujastyk.pdf",
     "juUrl": "",
     "size": 2110.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_2_3_DWujastyk.pdf",
+    "gcs_key": "ijhs/Vol44_2_3_DWujastyk.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_2_3_DWujastyk.pdf"
   },
   {
@@ -16134,9 +17209,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_2_4_KGZysk.pdf",
     "juUrl": "",
     "size": 37.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_2_4_KGZysk.pdf",
+    "gcs_key": "ijhs/Vol44_2_4_KGZysk.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_2_4_KGZysk.pdf"
   },
   {
@@ -16149,9 +17225,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_2_5_PT%20Craddock.pdf",
     "juUrl": "",
     "size": 512.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_2_5_PT%20Craddock.pdf",
+    "gcs_key": "ijhs/Vol44_2_5_PT%20Craddock.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_2_5_PT%20Craddock.pdf"
   },
   {
@@ -16164,9 +17241,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_2_6_ACerulli.pdf",
     "juUrl": "",
     "size": 65.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_2_6_ACerulli.pdf",
+    "gcs_key": "ijhs/Vol44_2_6_ACerulli.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_2_6_ACerulli.pdf"
   },
   {
@@ -16179,9 +17257,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_2_7_MSankaranarayana.pdf",
     "juUrl": "",
     "size": 85.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_2_7_MSankaranarayana.pdf",
+    "gcs_key": "ijhs/Vol44_2_7_MSankaranarayana.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_2_7_MSankaranarayana.pdf"
   },
   {
@@ -16194,9 +17273,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_2_8_KPrasendanz.pdf",
     "juUrl": "",
     "size": 221.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_2_8_KPrasendanz.pdf",
+    "gcs_key": "ijhs/Vol44_2_8_KPrasendanz.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_2_8_KPrasendanz.pdf"
   },
   {
@@ -16209,9 +17289,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_2_9_HistoricalNotes.pdf",
     "juUrl": "",
     "size": 323.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_2_9_HistoricalNotes.pdf",
+    "gcs_key": "ijhs/Vol44_2_9_HistoricalNotes.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_2_9_HistoricalNotes.pdf"
   },
   {
@@ -16224,9 +17305,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_2_10_SPrema.pdf",
     "juUrl": "",
     "size": 159.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_2_10_SPrema.pdf",
+    "gcs_key": "ijhs/Vol44_2_10_SPrema.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_2_10_SPrema.pdf"
   },
   {
@@ -16239,9 +17321,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_2_11_RSarkar.pdf",
     "juUrl": "",
     "size": 42.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_2_11_RSarkar.pdf",
+    "gcs_key": "ijhs/Vol44_2_11_RSarkar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_2_11_RSarkar.pdf"
   },
   {
@@ -16254,9 +17337,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_2_12_SDas.pdf",
     "juUrl": "",
     "size": 158.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_2_12_SDas.pdf",
+    "gcs_key": "ijhs/Vol44_2_12_SDas.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_2_12_SDas.pdf"
   },
   {
@@ -16269,9 +17353,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_2_13_Supplement.pdf",
     "juUrl": "",
     "size": 145.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_2_13_Supplement.pdf",
+    "gcs_key": "ijhs/Vol44_2_13_Supplement.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_2_13_Supplement.pdf"
   },
   {
@@ -16284,9 +17369,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_3_1_RNIyengar.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vol44_3_1_RNIyengar.pdf",
     "size": 46.0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_3_1_RNIyengar.pdf",
+    "gcs_key": "ijhs/Vol44_3_1_RNIyengar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_3_1_RNIyengar.pdf"
   },
   {
@@ -16299,9 +17385,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_3_2_WLox.pdf",
     "juUrl": "",
     "size": 234.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_3_2_WLox.pdf",
+    "gcs_key": "ijhs/Vol44_3_2_WLox.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_3_2_WLox.pdf"
   },
   {
@@ -16314,9 +17401,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_3_3_RBalasubramaniampdf.pdf",
     "juUrl": "",
     "size": 162.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_3_3_RBalasubramaniampdf.pdf",
+    "gcs_key": "ijhs/Vol44_3_3_RBalasubramaniampdf.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_3_3_RBalasubramaniampdf.pdf"
   },
   {
@@ -16329,9 +17417,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_3_4_KRoy.pdf",
     "juUrl": "",
     "size": 66.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_3_4_KRoy.pdf",
+    "gcs_key": "ijhs/Vol44_3_4_KRoy.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_3_4_KRoy.pdf"
   },
   {
@@ -16344,9 +17433,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_3_5_Historical%20Notes.pdf",
     "juUrl": "",
     "size": 87.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_3_5_Historical%20Notes.pdf",
+    "gcs_key": "ijhs/Vol44_3_5_Historical%20Notes.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_3_5_Historical%20Notes.pdf"
   },
   {
@@ -16359,9 +17449,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_3_6_RBhattacharya.pdf",
     "juUrl": "",
     "size": 114.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_3_6_RBhattacharya.pdf",
+    "gcs_key": "ijhs/Vol44_3_6_RBhattacharya.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_3_6_RBhattacharya.pdf"
   },
   {
@@ -16374,9 +17465,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_3_7_AKBag.pdf",
     "juUrl": "",
     "size": 35.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_3_7_AKBag.pdf",
+    "gcs_key": "ijhs/Vol44_3_7_AKBag.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_3_7_AKBag.pdf"
   },
   {
@@ -16389,9 +17481,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_3_8_AKBiswaspdf.pdf",
     "juUrl": "",
     "size": 24.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_3_8_AKBiswaspdf.pdf",
+    "gcs_key": "ijhs/Vol44_3_8_AKBiswaspdf.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_3_8_AKBiswaspdf.pdf"
   },
   {
@@ -16404,9 +17497,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_3_9_News.pdf",
     "juUrl": "",
     "size": 23.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_3_9_News.pdf",
+    "gcs_key": "ijhs/Vol44_3_9_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_3_9_News.pdf"
   },
   {
@@ -16419,9 +17513,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_3_10_SShuklapdf.pdf",
     "juUrl": "",
     "size": 18.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_3_10_SShuklapdf.pdf",
+    "gcs_key": "ijhs/Vol44_3_10_SShuklapdf.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_3_10_SShuklapdf.pdf"
   },
   {
@@ -16434,9 +17529,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_11_SupplementRasaprakasasudhakara.pdf",
     "juUrl": "",
     "size": 46.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_11_SupplementRasaprakasasudhakara.pdf",
+    "gcs_key": "ijhs/Vol44_11_SupplementRasaprakasasudhakara.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_11_SupplementRasaprakasasudhakara.pdf"
   },
   {
@@ -16449,9 +17545,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_4_1_PGondhalekar.pdf",
     "juUrl": "",
     "size": 112.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_4_1_PGondhalekar.pdf",
+    "gcs_key": "ijhs/Vol44_4_1_PGondhalekar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_4_1_PGondhalekar.pdf"
   },
   {
@@ -16464,9 +17561,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_4_2_MRoy.pdf",
     "juUrl": "",
     "size": 82.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_4_2_MRoy.pdf",
+    "gcs_key": "ijhs/Vol44_4_2_MRoy.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_4_2_MRoy.pdf"
   },
   {
@@ -16479,9 +17577,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_4_3_RBalasubramaniam.pdf",
     "juUrl": "",
     "size": 330.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_4_3_RBalasubramaniam.pdf",
+    "gcs_key": "ijhs/Vol44_4_3_RBalasubramaniam.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_4_3_RBalasubramaniam.pdf"
   },
   {
@@ -16494,9 +17593,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_4_4_JDeloche.pdf",
     "juUrl": "",
     "size": 797.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_4_4_JDeloche.pdf",
+    "gcs_key": "ijhs/Vol44_4_4_JDeloche.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_4_4_JDeloche.pdf"
   },
   {
@@ -16509,9 +17609,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_4_5_HSingh.pdf",
     "juUrl": "",
     "size": 118.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_4_5_HSingh.pdf",
+    "gcs_key": "ijhs/Vol44_4_5_HSingh.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_4_5_HSingh.pdf"
   },
   {
@@ -16524,9 +17625,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_4_6_Historical%20Notes.pdf",
     "juUrl": "",
     "size": 20.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_4_6_Historical%20Notes.pdf",
+    "gcs_key": "ijhs/Vol44_4_6_Historical%20Notes.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_4_6_Historical%20Notes.pdf"
   },
   {
@@ -16539,9 +17641,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_4_7_AKBag.pdf",
     "juUrl": "",
     "size": 34.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_4_7_AKBag.pdf",
+    "gcs_key": "ijhs/Vol44_4_7_AKBag.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_4_7_AKBag.pdf"
   },
   {
@@ -16554,9 +17657,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_4_8_SeminarReport.pdf",
     "juUrl": "",
     "size": 13.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_4_8_SeminarReport.pdf",
+    "gcs_key": "ijhs/Vol44_4_8_SeminarReport.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_4_8_SeminarReport.pdf"
   },
   {
@@ -16569,9 +17673,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_4_9_SShukla.pdf",
     "juUrl": "",
     "size": 17.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_4_9_SShukla.pdf",
+    "gcs_key": "ijhs/Vol44_4_9_SShukla.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_4_9_SShukla.pdf"
   },
   {
@@ -16584,9 +17689,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_4_10_CPecchia.pdf",
     "juUrl": "",
     "size": 21.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_4_10_CPecchia.pdf",
+    "gcs_key": "ijhs/Vol44_4_10_CPecchia.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_4_10_CPecchia.pdf"
   },
   {
@@ -16599,9 +17705,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_4_11_News.pdf",
     "juUrl": "",
     "size": 13.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_4_11_News.pdf",
+    "gcs_key": "ijhs/Vol44_4_11_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_4_11_News.pdf"
   },
   {
@@ -16614,9 +17721,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_4_12_Reminiscenses.pdf",
     "juUrl": "",
     "size": 9.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_4_12_Reminiscenses.pdf",
+    "gcs_key": "ijhs/Vol44_4_12_Reminiscenses.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_4_12_Reminiscenses.pdf"
   },
   {
@@ -16629,9 +17737,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol44_13_SupplementRasaprakasasudhakara.pdf",
     "juUrl": "",
     "size": 184.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol44_13_SupplementRasaprakasasudhakara.pdf",
+    "gcs_key": "ijhs/Vol44_13_SupplementRasaprakasasudhakara.pdf",
     "localPath": "assets/pdfs/ijhs/Vol44_13_SupplementRasaprakasasudhakara.pdf"
   },
   {
@@ -16644,9 +17753,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_1_0_Contents.pdf",
     "juUrl": "",
     "size": 10.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_1_0_Contents.pdf",
+    "gcs_key": "ijhs/Vol45_1_0_Contents.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_1_0_Contents.pdf"
   },
   {
@@ -16659,9 +17769,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_1_1_RNIyengar.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vol45_1_1_RNIyengar.pdf",
     "size": 113.0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_1_1_RNIyengar.pdf",
+    "gcs_key": "ijhs/Vol45_1_1_RNIyengar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_1_1_RNIyengar.pdf"
   },
   {
@@ -16674,9 +17785,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_1_2_JDeloche.pdf",
     "juUrl": "",
     "size": 180.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_1_2_JDeloche.pdf",
+    "gcs_key": "ijhs/Vol45_1_2_JDeloche.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_1_2_JDeloche.pdf"
   },
   {
@@ -16689,9 +17801,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_1_4_RCGupta.pdf",
     "juUrl": "",
     "size": 183.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_1_4_RCGupta.pdf",
+    "gcs_key": "ijhs/Vol45_1_4_RCGupta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_1_4_RCGupta.pdf"
   },
   {
@@ -16704,9 +17817,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_1_5_BMandalarticle.pdf",
     "juUrl": "",
     "size": 937.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_1_5_BMandalarticle.pdf",
+    "gcs_key": "ijhs/Vol45_1_5_BMandalarticle.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_1_5_BMandalarticle.pdf"
   },
   {
@@ -16719,9 +17833,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_1_6_SKMajumdar.pdf",
     "juUrl": "",
     "size": 15.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_1_6_SKMajumdar.pdf",
+    "gcs_key": "ijhs/Vol45_1_6_SKMajumdar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_1_6_SKMajumdar.pdf"
   },
   {
@@ -16734,9 +17849,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_1_7_Bookreview.pdf",
     "juUrl": "",
     "size": 27.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_1_7_Bookreview.pdf",
+    "gcs_key": "ijhs/Vol45_1_7_Bookreview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_1_7_Bookreview.pdf"
   },
   {
@@ -16749,9 +17865,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_1_8_SeminarReport.pdf",
     "juUrl": "",
     "size": 20.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_1_8_SeminarReport.pdf",
+    "gcs_key": "ijhs/Vol45_1_8_SeminarReport.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_1_8_SeminarReport.pdf"
   },
   {
@@ -16764,9 +17881,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_1_9_News.pdf",
     "juUrl": "",
     "size": 18.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_1_9_News.pdf",
+    "gcs_key": "ijhs/Vol45_1_9_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_1_9_News.pdf"
   },
   {
@@ -16779,9 +17897,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_1_10_Awards.pdf",
     "juUrl": "",
     "size": 13.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_1_10_Awards.pdf",
+    "gcs_key": "ijhs/Vol45_1_10_Awards.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_1_10_Awards.pdf"
   },
   {
@@ -16794,9 +17913,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_1_11_1_Supplement.pdf",
     "juUrl": "",
     "size": 45.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_1_11_1_Supplement.pdf",
+    "gcs_key": "ijhs/Vol45_1_11_1_Supplement.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_1_11_1_Supplement.pdf"
   },
   {
@@ -16809,9 +17929,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_1_11_2_Supplement.pdf",
     "juUrl": "",
     "size": 44.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_1_11_2_Supplement.pdf",
+    "gcs_key": "ijhs/Vol45_1_11_2_Supplement.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_1_11_2_Supplement.pdf"
   },
   {
@@ -16824,9 +17945,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_1_11_3_Supplement.pdf",
     "juUrl": "",
     "size": 59.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_1_11_3_Supplement.pdf",
+    "gcs_key": "ijhs/Vol45_1_11_3_Supplement.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_1_11_3_Supplement.pdf"
   },
   {
@@ -16839,9 +17961,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_1_11_4_Supplement.pdf",
     "juUrl": "",
     "size": 39.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_1_11_4_Supplement.pdf",
+    "gcs_key": "ijhs/Vol45_1_11_4_Supplement.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_1_11_4_Supplement.pdf"
   },
   {
@@ -16854,9 +17977,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_1_11_5_Supplement.pdf",
     "juUrl": "",
     "size": 43.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_1_11_5_Supplement.pdf",
+    "gcs_key": "ijhs/Vol45_1_11_5_Supplement.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_1_11_5_Supplement.pdf"
   },
   {
@@ -16869,9 +17993,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_2_0_Contents.pdf",
     "juUrl": "",
     "size": 9.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_2_0_Contents.pdf",
+    "gcs_key": "ijhs/Vol45_2_0_Contents.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_2_0_Contents.pdf"
   },
   {
@@ -16884,9 +18009,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_2_1_NSingh.pdf",
     "juUrl": "",
     "size": 57.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_2_1_NSingh.pdf",
+    "gcs_key": "ijhs/Vol45_2_1_NSingh.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_2_1_NSingh.pdf"
   },
   {
@@ -16899,9 +18025,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_2_2_PTaneja.pdf",
     "juUrl": "",
     "size": 152.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_2_2_PTaneja.pdf",
+    "gcs_key": "ijhs/Vol45_2_2_PTaneja.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_2_2_PTaneja.pdf"
   },
   {
@@ -16914,9 +18041,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_2_3_AKPanda.pdf",
     "juUrl": "",
     "size": 38.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_2_3_AKPanda.pdf",
+    "gcs_key": "ijhs/Vol45_2_3_AKPanda.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_2_3_AKPanda.pdf"
   },
   {
@@ -16929,9 +18057,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_2_4_SSen.pdf",
     "juUrl": "",
     "size": 214.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_2_4_SSen.pdf",
+    "gcs_key": "ijhs/Vol45_2_4_SSen.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_2_4_SSen.pdf"
   },
   {
@@ -16944,9 +18073,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_2_5_AKBiswas.pdf",
     "juUrl": "",
     "size": 129.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_2_5_AKBiswas.pdf",
+    "gcs_key": "ijhs/Vol45_2_5_AKBiswas.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_2_5_AKBiswas.pdf"
   },
   {
@@ -16959,9 +18089,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_2_6_RKochar.pdf",
     "juUrl": "",
     "size": 45.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_2_6_RKochar.pdf",
+    "gcs_key": "ijhs/Vol45_2_6_RKochar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_2_6_RKochar.pdf"
   },
   {
@@ -16974,9 +18105,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_2_7_AKBag.pdf",
     "juUrl": "",
     "size": 33.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_2_7_AKBag.pdf",
+    "gcs_key": "ijhs/Vol45_2_7_AKBag.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_2_7_AKBag.pdf"
   },
   {
@@ -16989,9 +18121,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_2_8_Bookreview.pdf",
     "juUrl": "",
     "size": 20.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_2_8_Bookreview.pdf",
+    "gcs_key": "ijhs/Vol45_2_8_Bookreview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_2_8_Bookreview.pdf"
   },
   {
@@ -17004,9 +18137,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_2_9_News.pdf",
     "juUrl": "",
     "size": 19.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_2_9_News.pdf",
+    "gcs_key": "ijhs/Vol45_2_9_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_2_9_News.pdf"
   },
   {
@@ -17019,9 +18153,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_2_10_Obituary.pdf",
     "juUrl": "",
     "size": 46.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_2_10_Obituary.pdf",
+    "gcs_key": "ijhs/Vol45_2_10_Obituary.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_2_10_Obituary.pdf"
   },
   {
@@ -17034,9 +18169,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_2_11_1_Supplement_cover.pdf",
     "juUrl": "",
     "size": 45.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_2_11_1_Supplement_cover.pdf",
+    "gcs_key": "ijhs/Vol45_2_11_1_Supplement_cover.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_2_11_1_Supplement_cover.pdf"
   },
   {
@@ -17049,9 +18185,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_2_11_2_Supplement_text.pdf",
     "juUrl": "",
     "size": 580.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_2_11_2_Supplement_text.pdf",
+    "gcs_key": "ijhs/Vol45_2_11_2_Supplement_text.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_2_11_2_Supplement_text.pdf"
   },
   {
@@ -17064,9 +18201,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_3_0_Contents.pdf",
     "juUrl": "",
     "size": 10.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_3_0_Contents.pdf",
+    "gcs_key": "ijhs/Vol45_3_0_Contents.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_3_0_Contents.pdf"
   },
   {
@@ -17079,9 +18217,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_3_1_PGondalekha.pdf",
     "juUrl": "",
     "size": 93.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_3_1_PGondalekha.pdf",
+    "gcs_key": "ijhs/Vol45_3_1_PGondalekha.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_3_1_PGondalekha.pdf"
   },
   {
@@ -17094,9 +18233,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_3_2_MNVahia.pdf",
     "juUrl": "",
     "size": 979.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_3_2_MNVahia.pdf",
+    "gcs_key": "ijhs/Vol45_3_2_MNVahia.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_3_2_MNVahia.pdf"
   },
   {
@@ -17109,9 +18249,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_3_3_BSasisekara.pdf",
     "juUrl": "",
     "size": 893.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_3_3_BSasisekara.pdf",
+    "gcs_key": "ijhs/Vol45_3_3_BSasisekara.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_3_3_BSasisekara.pdf"
   },
   {
@@ -17124,9 +18265,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_3_4_RKDubey.pdf",
     "juUrl": "",
     "size": 39.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_3_4_RKDubey.pdf",
+    "gcs_key": "ijhs/Vol45_3_4_RKDubey.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_3_4_RKDubey.pdf"
   },
   {
@@ -17139,9 +18281,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_3_5_JLCoze.pdf",
     "juUrl": "",
     "size": 32.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_3_5_JLCoze.pdf",
+    "gcs_key": "ijhs/Vol45_3_5_JLCoze.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_3_5_JLCoze.pdf"
   },
   {
@@ -17154,9 +18297,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_3_6_SRSarma.pdf",
     "juUrl": "",
     "size": 36.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_3_6_SRSarma.pdf",
+    "gcs_key": "ijhs/Vol45_3_6_SRSarma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_3_6_SRSarma.pdf"
   },
   {
@@ -17169,9 +18313,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_3_7_HSingh.pdf",
     "juUrl": "",
     "size": 126.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_3_7_HSingh.pdf",
+    "gcs_key": "ijhs/Vol45_3_7_HSingh.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_3_7_HSingh.pdf"
   },
   {
@@ -17184,9 +18329,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_3_8_SKSen.pdf",
     "juUrl": "",
     "size": 12.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_3_8_SKSen.pdf",
+    "gcs_key": "ijhs/Vol45_3_8_SKSen.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_3_8_SKSen.pdf"
   },
   {
@@ -17199,9 +18345,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_3_9_NupurDasgup.pdf",
     "juUrl": "",
     "size": 32.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_3_9_NupurDasgup.pdf",
+    "gcs_key": "ijhs/Vol45_3_9_NupurDasgup.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_3_9_NupurDasgup.pdf"
   },
   {
@@ -17214,9 +18361,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_3_10_NParthasar.pdf",
     "juUrl": "",
     "size": 21.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_3_10_NParthasar.pdf",
+    "gcs_key": "ijhs/Vol45_3_10_NParthasar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_3_10_NParthasar.pdf"
   },
   {
@@ -17229,9 +18377,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_3_11_News.pdf",
     "juUrl": "",
     "size": 25.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_3_11_News.pdf",
+    "gcs_key": "ijhs/Vol45_3_11_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_3_11_News.pdf"
   },
   {
@@ -17244,9 +18393,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_3_12_SupplementInn.pdf",
     "juUrl": "",
     "size": 62.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_3_12_SupplementInn.pdf",
+    "gcs_key": "ijhs/Vol45_3_12_SupplementInn.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_3_12_SupplementInn.pdf"
   },
   {
@@ -17259,9 +18409,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_3_13_Sanskrittextc.pdf",
     "juUrl": "",
     "size": 90.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_3_13_Sanskrittextc.pdf",
+    "gcs_key": "ijhs/Vol45_3_13_Sanskrittextc.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_3_13_Sanskrittextc.pdf"
   },
   {
@@ -17274,9 +18425,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_3_14_EnglishtextCha.pdf",
     "juUrl": "",
     "size": 225.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_3_14_EnglishtextCha.pdf",
+    "gcs_key": "ijhs/Vol45_3_14_EnglishtextCha.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_3_14_EnglishtextCha.pdf"
   },
   {
@@ -17289,9 +18441,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_4_0_Contents.pdf",
     "juUrl": "",
     "size": 11.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_4_0_Contents.pdf",
+    "gcs_key": "ijhs/Vol45_4_0_Contents.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_4_0_Contents.pdf"
   },
   {
@@ -17304,9 +18457,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_4_1_ANarayan.pdf",
     "juUrl": "",
     "size": 129.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_4_1_ANarayan.pdf",
+    "gcs_key": "ijhs/Vol45_4_1_ANarayan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_4_1_ANarayan.pdf"
   },
   {
@@ -17319,9 +18473,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_4_2_ASharan.pdf",
     "juUrl": "",
     "size": 82.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_4_2_ASharan.pdf",
+    "gcs_key": "ijhs/Vol45_4_2_ASharan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_4_2_ASharan.pdf"
   },
   {
@@ -17334,9 +18489,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_4_3_RCKapoor.pdf",
     "juUrl": "",
     "size": 149.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_4_3_RCKapoor.pdf",
+    "gcs_key": "ijhs/Vol45_4_3_RCKapoor.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_4_3_RCKapoor.pdf"
   },
   {
@@ -17349,9 +18505,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_4_4_GKhan.pdf",
     "juUrl": "",
     "size": 100.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_4_4_GKhan.pdf",
+    "gcs_key": "ijhs/Vol45_4_4_GKhan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_4_4_GKhan.pdf"
   },
   {
@@ -17364,9 +18521,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_4_5_HSingh.pdf",
     "juUrl": "",
     "size": 338.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_4_5_HSingh.pdf",
+    "gcs_key": "ijhs/Vol45_4_5_HSingh.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_4_5_HSingh.pdf"
   },
   {
@@ -17379,9 +18537,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_4_6_JNSinha.pdf",
     "juUrl": "",
     "size": 30.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_4_6_JNSinha.pdf",
+    "gcs_key": "ijhs/Vol45_4_6_JNSinha.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_4_6_JNSinha.pdf"
   },
   {
@@ -17394,9 +18553,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_4_7_Historicalnotes.pdf",
     "juUrl": "",
     "size": 35.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_4_7_Historicalnotes.pdf",
+    "gcs_key": "ijhs/Vol45_4_7_Historicalnotes.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_4_7_Historicalnotes.pdf"
   },
   {
@@ -17409,9 +18569,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_4_8_Bookreview.pdf",
     "juUrl": "",
     "size": 24.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_4_8_Bookreview.pdf",
+    "gcs_key": "ijhs/Vol45_4_8_Bookreview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_4_8_Bookreview.pdf"
   },
   {
@@ -17424,9 +18585,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_4_9_ReportsDPAgarwal.pdf",
     "juUrl": "",
     "size": 20.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_4_9_ReportsDPAgarwal.pdf",
+    "gcs_key": "ijhs/Vol45_4_9_ReportsDPAgarwal.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_4_9_ReportsDPAgarwal.pdf"
   },
   {
@@ -17439,9 +18601,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_4_10_ReportsJayanta.pdf",
     "juUrl": "",
     "size": 34.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_4_10_ReportsJayanta.pdf",
+    "gcs_key": "ijhs/Vol45_4_10_ReportsJayanta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_4_10_ReportsJayanta.pdf"
   },
   {
@@ -17454,9 +18617,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_4_11_ReportShukla.pdf",
     "juUrl": "",
     "size": 14.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_4_11_ReportShukla.pdf",
+    "gcs_key": "ijhs/Vol45_4_11_ReportShukla.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_4_11_ReportShukla.pdf"
   },
   {
@@ -17469,9 +18633,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_4_12_ReportMNarayan.pdf",
     "juUrl": "",
     "size": 30.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_4_12_ReportMNarayan.pdf",
+    "gcs_key": "ijhs/Vol45_4_12_ReportMNarayan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_4_12_ReportMNarayan.pdf"
   },
   {
@@ -17484,9 +18649,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_4_13_Bookreceived.pdf",
     "juUrl": "",
     "size": 11.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_4_13_Bookreceived.pdf",
+    "gcs_key": "ijhs/Vol45_4_13_Bookreceived.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_4_13_Bookreceived.pdf"
   },
   {
@@ -17499,9 +18665,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_4_14_SupplementInner.pdf",
     "juUrl": "",
     "size": 67.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_4_14_SupplementInner.pdf",
+    "gcs_key": "ijhs/Vol45_4_14_SupplementInner.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_4_14_SupplementInner.pdf"
   },
   {
@@ -17514,9 +18681,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_4_15_SupChap9English.pdf",
     "juUrl": "",
     "size": 30.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_4_15_SupChap9English.pdf",
+    "gcs_key": "ijhs/Vol45_4_15_SupChap9English.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_4_15_SupChap9English.pdf"
   },
   {
@@ -17529,9 +18697,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_4_16_SupChap9Sankrit.pdf",
     "juUrl": "",
     "size": 31.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_4_16_SupChap9Sankrit.pdf",
+    "gcs_key": "ijhs/Vol45_4_16_SupChap9Sankrit.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_4_16_SupChap9Sankrit.pdf"
   },
   {
@@ -17544,9 +18713,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_4_17_SupChap10Sankrit.pdf",
     "juUrl": "",
     "size": 34.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_4_17_SupChap10Sankrit.pdf",
+    "gcs_key": "ijhs/Vol45_4_17_SupChap10Sankrit.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_4_17_SupChap10Sankrit.pdf"
   },
   {
@@ -17559,9 +18729,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_4_18_SupChap10English.pdf",
     "juUrl": "",
     "size": 38.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_4_18_SupChap10English.pdf",
+    "gcs_key": "ijhs/Vol45_4_18_SupChap10English.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_4_18_SupChap10English.pdf"
   },
   {
@@ -17574,9 +18745,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_4_19_SupChap11Sankrit.pdf",
     "juUrl": "",
     "size": 52.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_4_19_SupChap11Sankrit.pdf",
+    "gcs_key": "ijhs/Vol45_4_19_SupChap11Sankrit.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_4_19_SupChap11Sankrit.pdf"
   },
   {
@@ -17589,9 +18761,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_4_20_SupChap11English.pdf",
     "juUrl": "",
     "size": 54.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_4_20_SupChap11English.pdf",
+    "gcs_key": "ijhs/Vol45_4_20_SupChap11English.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_4_20_SupChap11English.pdf"
   },
   {
@@ -17604,9 +18777,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_4_21_SupChap12Sankrit.pdf",
     "juUrl": "",
     "size": 28.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_4_21_SupChap12Sankrit.pdf",
+    "gcs_key": "ijhs/Vol45_4_21_SupChap12Sankrit.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_4_21_SupChap12Sankrit.pdf"
   },
   {
@@ -17619,9 +18793,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_4_22_SupChap12English.pdf",
     "juUrl": "",
     "size": 23.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_4_22_SupChap12English.pdf",
+    "gcs_key": "ijhs/Vol45_4_22_SupChap12English.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_4_22_SupChap12English.pdf"
   },
   {
@@ -17634,9 +18809,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_4_23_SupChap13Sankrit.pdf",
     "juUrl": "",
     "size": 28.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_4_23_SupChap13Sankrit.pdf",
+    "gcs_key": "ijhs/Vol45_4_23_SupChap13Sankrit.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_4_23_SupChap13Sankrit.pdf"
   },
   {
@@ -17649,9 +18825,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_4_24_SupChap13English.pdf",
     "juUrl": "",
     "size": 23.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_4_24_SupChap13English.pdf",
+    "gcs_key": "ijhs/Vol45_4_24_SupChap13English.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_4_24_SupChap13English.pdf"
   },
   {
@@ -17664,9 +18841,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_4_25_Appendices.pdf",
     "juUrl": "",
     "size": 54.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_4_25_Appendices.pdf",
+    "gcs_key": "ijhs/Vol45_4_25_Appendices.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_4_25_Appendices.pdf"
   },
   {
@@ -17679,9 +18857,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_4_26_Index.pdf",
     "juUrl": "",
     "size": 12.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_4_26_Index.pdf",
+    "gcs_key": "ijhs/Vol45_4_26_Index.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_4_26_Index.pdf"
   },
   {
@@ -17694,9 +18873,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_4_27_Cumulativeindex.pdf",
     "juUrl": "",
     "size": 24.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_4_27_Cumulativeindex.pdf",
+    "gcs_key": "ijhs/Vol45_4_27_Cumulativeindex.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_4_27_Cumulativeindex.pdf"
   },
   {
@@ -17709,9 +18889,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol45_4_28_AnnualContents.pdf",
     "juUrl": "",
     "size": 23.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol45_4_28_AnnualContents.pdf",
+    "gcs_key": "ijhs/Vol45_4_28_AnnualContents.pdf",
     "localPath": "assets/pdfs/ijhs/Vol45_4_28_AnnualContents.pdf"
   },
   {
@@ -17724,9 +18905,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_1_1_PGondalekhar.pdf",
     "juUrl": "",
     "size": 182.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_1_1_PGondalekhar.pdf",
+    "gcs_key": "ijhs/Vol46_1_1_PGondalekhar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_1_1_PGondalekhar.pdf"
   },
   {
@@ -17739,9 +18921,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_1_2_RNIyenger.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vol46_1_2_RNIyenger.pdf",
     "size": 156.0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_1_2_RNIyenger.pdf",
+    "gcs_key": "ijhs/Vol46_1_2_RNIyenger.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_1_2_RNIyenger.pdf"
   },
   {
@@ -17754,9 +18937,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_1_3_OPJaiswal.pdf",
     "juUrl": "",
     "size": 37.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_1_3_OPJaiswal.pdf",
+    "gcs_key": "ijhs/Vol46_1_3_OPJaiswal.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_1_3_OPJaiswal.pdf"
   },
   {
@@ -17769,9 +18953,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_1_4_VMishra.pdf",
     "juUrl": "",
     "size": 69.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_1_4_VMishra.pdf",
+    "gcs_key": "ijhs/Vol46_1_4_VMishra.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_1_4_VMishra.pdf"
   },
   {
@@ -17784,9 +18969,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_1_5_JBhattacharyya.pdf",
     "juUrl": "",
     "size": 225.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_1_5_JBhattacharyya.pdf",
+    "gcs_key": "ijhs/Vol46_1_5_JBhattacharyya.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_1_5_JBhattacharyya.pdf"
   },
   {
@@ -17799,9 +18985,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_1_6_AKBiswas.pdf",
     "juUrl": "",
     "size": 62.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_1_6_AKBiswas.pdf",
+    "gcs_key": "ijhs/Vol46_1_6_AKBiswas.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_1_6_AKBiswas.pdf"
   },
   {
@@ -17814,9 +19001,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_1_7_SKMajumdar.pdf",
     "juUrl": "",
     "size": 63.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_1_7_SKMajumdar.pdf",
+    "gcs_key": "ijhs/Vol46_1_7_SKMajumdar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_1_7_SKMajumdar.pdf"
   },
   {
@@ -17829,9 +19017,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_1_8_SRSarma.pdf",
     "juUrl": "",
     "size": 166.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_1_8_SRSarma.pdf",
+    "gcs_key": "ijhs/Vol46_1_8_SRSarma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_1_8_SRSarma.pdf"
   },
   {
@@ -17844,9 +19033,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_1_9_Bookreview.pdf",
     "juUrl": "",
     "size": 26.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_1_9_Bookreview.pdf",
+    "gcs_key": "ijhs/Vol46_1_9_Bookreview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_1_9_Bookreview.pdf"
   },
   {
@@ -17859,9 +19049,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_1_10_Project%20reportAKSeth.pdf",
     "juUrl": "",
     "size": 23.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_1_10_Project%20reportAKSeth.pdf",
+    "gcs_key": "ijhs/Vol46_1_10_Project%20reportAKSeth.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_1_10_Project%20reportAKSeth.pdf"
   },
   {
@@ -17874,9 +19065,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_1_11_Project%20reportSSen.pdf",
     "juUrl": "",
     "size": 25.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_1_11_Project%20reportSSen.pdf",
+    "gcs_key": "ijhs/Vol46_1_11_Project%20reportSSen.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_1_11_Project%20reportSSen.pdf"
   },
   {
@@ -17889,9 +19081,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_1_12_News.pdf",
     "juUrl": "",
     "size": 21.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_1_12_News.pdf",
+    "gcs_key": "ijhs/Vol46_1_12_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_1_12_News.pdf"
   },
   {
@@ -17904,9 +19097,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_1_14_Supplement.pdf",
     "juUrl": "",
     "size": 93.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_1_14_Supplement.pdf",
+    "gcs_key": "ijhs/Vol46_1_14_Supplement.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_1_14_Supplement.pdf"
   },
   {
@@ -17919,9 +19113,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_1_15_Supplement.pdf",
     "juUrl": "",
     "size": 399.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_1_15_Supplement.pdf",
+    "gcs_key": "ijhs/Vol46_1_15_Supplement.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_1_15_Supplement.pdf"
   },
   {
@@ -17934,9 +19129,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_2_0_Contents.pdf",
     "juUrl": "",
     "size": 9.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_2_0_Contents.pdf",
+    "gcs_key": "ijhs/Vol46_2_0_Contents.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_2_0_Contents.pdf"
   },
   {
@@ -17949,9 +19145,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_2_1_KJaouiche.pdf",
     "juUrl": "",
     "size": 98.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_2_1_KJaouiche.pdf",
+    "gcs_key": "ijhs/Vol46_2_1_KJaouiche.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_2_1_KJaouiche.pdf"
   },
   {
@@ -17964,9 +19161,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_2_2_AKeller.pdf",
     "juUrl": "",
     "size": 89.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_2_2_AKeller.pdf",
+    "gcs_key": "ijhs/Vol46_2_2_AKeller.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_2_2_AKeller.pdf"
   },
   {
@@ -17979,9 +19177,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_2_3_DRaina.pdf",
     "juUrl": "",
     "size": 49.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_2_3_DRaina.pdf",
+    "gcs_key": "ijhs/Vol46_2_3_DRaina.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_2_3_DRaina.pdf"
   },
   {
@@ -17994,9 +19193,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_2_4_1_MJDurandRichard.pdf",
     "juUrl": "",
     "size": 103.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_2_4_1_MJDurandRichard.pdf",
+    "gcs_key": "ijhs/Vol46_2_4_1_MJDurandRichard.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_2_4_1_MJDurandRichard.pdf"
   },
   {
@@ -18009,9 +19209,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_2_7_SKMajumdar.pdf",
     "juUrl": "",
     "size": 90.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_2_7_SKMajumdar.pdf",
+    "gcs_key": "ijhs/Vol46_2_7_SKMajumdar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_2_7_SKMajumdar.pdf"
   },
   {
@@ -18024,9 +19225,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_2_8_BShailaja.pdf",
     "juUrl": "",
     "size": 33.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_2_8_BShailaja.pdf",
+    "gcs_key": "ijhs/Vol46_2_8_BShailaja.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_2_8_BShailaja.pdf"
   },
   {
@@ -18039,9 +19241,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_2_9_Bookreview.pdf",
     "juUrl": "",
     "size": 39.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_2_9_Bookreview.pdf",
+    "gcs_key": "ijhs/Vol46_2_9_Bookreview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_2_9_Bookreview.pdf"
   },
   {
@@ -18054,9 +19257,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_2_10_AKThakur.pdf",
     "juUrl": "",
     "size": 27.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_2_10_AKThakur.pdf",
+    "gcs_key": "ijhs/Vol46_2_10_AKThakur.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_2_10_AKThakur.pdf"
   },
   {
@@ -18069,9 +19273,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_2_11_SuktaDas.pdf",
     "juUrl": "",
     "size": 24.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_2_11_SuktaDas.pdf",
+    "gcs_key": "ijhs/Vol46_2_11_SuktaDas.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_2_11_SuktaDas.pdf"
   },
   {
@@ -18084,9 +19289,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_2_12_NewsSRSarma.pdf",
     "juUrl": "",
     "size": 30.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_2_12_NewsSRSarma.pdf",
+    "gcs_key": "ijhs/Vol46_2_12_NewsSRSarma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_2_12_NewsSRSarma.pdf"
   },
   {
@@ -18099,9 +19305,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_2_13_NewsKnudsen.pdf",
     "juUrl": "",
     "size": 15.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_2_13_NewsKnudsen.pdf",
+    "gcs_key": "ijhs/Vol46_2_13_NewsKnudsen.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_2_13_NewsKnudsen.pdf"
   },
   {
@@ -18114,9 +19321,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_2_14_NewsShukla.pdf",
     "juUrl": "",
     "size": 18.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_2_14_NewsShukla.pdf",
+    "gcs_key": "ijhs/Vol46_2_14_NewsShukla.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_2_14_NewsShukla.pdf"
   },
   {
@@ -18129,9 +19337,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_2_15_Supplement.pdf",
     "juUrl": "",
     "size": 44.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_2_15_Supplement.pdf",
+    "gcs_key": "ijhs/Vol46_2_15_Supplement.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_2_15_Supplement.pdf"
   },
   {
@@ -18144,9 +19353,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_3_0_Contents.pdf",
     "juUrl": "",
     "size": 11.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_3_0_Contents.pdf",
+    "gcs_key": "ijhs/Vol47_3_0_Contents.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_3_0_Contents.pdf"
   },
   {
@@ -18159,9 +19369,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_3_1_ANarayanan.pdf",
     "juUrl": "",
     "size": 768.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_3_1_ANarayanan.pdf",
+    "gcs_key": "ijhs/Vol47_3_1_ANarayanan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_3_1_ANarayanan.pdf"
   },
   {
@@ -18174,9 +19385,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_3_1_BPrakash.pdf",
     "juUrl": "",
     "size": 2010.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_3_1_BPrakash.pdf",
+    "gcs_key": "ijhs/Vol46_3_1_BPrakash.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_3_1_BPrakash.pdf"
   },
   {
@@ -18189,9 +19401,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_3_2_ANarayanan.pdf",
     "juUrl": "",
     "size": 454.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_3_2_ANarayanan.pdf",
+    "gcs_key": "ijhs/Vol46_3_2_ANarayanan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_3_2_ANarayanan.pdf"
   },
   {
@@ -18204,9 +19417,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_3_2_SSen.pdf",
     "juUrl": "",
     "size": 1356.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_3_2_SSen.pdf",
+    "gcs_key": "ijhs/Vol47_3_2_SSen.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_3_2_SSen.pdf"
   },
   {
@@ -18219,9 +19433,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_3_3_AKBiswas.pdf",
     "juUrl": "",
     "size": 176.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_3_3_AKBiswas.pdf",
+    "gcs_key": "ijhs/Vol47_3_3_AKBiswas.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_3_3_AKBiswas.pdf"
   },
   {
@@ -18234,9 +19449,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_3_3_AKBiswas.pdf",
     "juUrl": "",
     "size": 148.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_3_3_AKBiswas.pdf",
+    "gcs_key": "ijhs/Vol46_3_3_AKBiswas.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_3_3_AKBiswas.pdf"
   },
   {
@@ -18249,9 +19465,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_3_4_SNBiswas.pdf",
     "juUrl": "",
     "size": 1128.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_3_4_SNBiswas.pdf",
+    "gcs_key": "ijhs/Vol46_3_4_SNBiswas.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_3_4_SNBiswas.pdf"
   },
   {
@@ -18264,9 +19481,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_3_4(1)_PKBandyopadhyay.pdf",
     "juUrl": "",
     "size": 3404.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_3_4(1)_PKBandyopadhyay.pdf",
+    "gcs_key": "ijhs/Vol47_3_4(1)_PKBandyopadhyay.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_3_4(1)_PKBandyopadhyay.pdf"
   },
   {
@@ -18279,9 +19497,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_3_5_RCGupta.pdf",
     "juUrl": "",
     "size": 38.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_3_5_RCGupta.pdf",
+    "gcs_key": "ijhs/Vol46_3_5_RCGupta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_3_5_RCGupta.pdf"
   },
   {
@@ -18294,9 +19513,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_3_6_SKMajumdar.pdf",
     "juUrl": "",
     "size": 35.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_3_6_SKMajumdar.pdf",
+    "gcs_key": "ijhs/Vol46_3_6_SKMajumdar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_3_6_SKMajumdar.pdf"
   },
   {
@@ -18309,9 +19529,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_3_5_AKBag.pdf",
     "juUrl": "",
     "size": 143.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_3_5_AKBag.pdf",
+    "gcs_key": "ijhs/Vol47_3_5_AKBag.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_3_5_AKBag.pdf"
   },
   {
@@ -18324,9 +19545,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_3_6_RNIyengar.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vol47_3_6_RNIyengar.pdf",
     "size": 536.0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_3_6_RNIyengar.pdf",
+    "gcs_key": "ijhs/Vol47_3_6_RNIyengar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_3_6_RNIyengar.pdf"
   },
   {
@@ -18339,9 +19561,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_3_7_Bookreview.pdf",
     "juUrl": "",
     "size": 17.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_3_7_Bookreview.pdf",
+    "gcs_key": "ijhs/Vol46_3_7_Bookreview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_3_7_Bookreview.pdf"
   },
   {
@@ -18354,9 +19577,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_3_8_SVSingh.pdf",
     "juUrl": "",
     "size": 48.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_3_8_SVSingh.pdf",
+    "gcs_key": "ijhs/Vol46_3_8_SVSingh.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_3_8_SVSingh.pdf"
   },
   {
@@ -18369,9 +19593,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_3_7_UBTewari.pdf",
     "juUrl": "",
     "size": 55.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_3_7_UBTewari.pdf",
+    "gcs_key": "ijhs/Vol47_3_7_UBTewari.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_3_7_UBTewari.pdf"
   },
   {
@@ -18384,9 +19609,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_3_8_Bookreview.pdf",
     "juUrl": "",
     "size": 20.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_3_8_Bookreview.pdf",
+    "gcs_key": "ijhs/Vol47_3_8_Bookreview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_3_8_Bookreview.pdf"
   },
   {
@@ -18399,9 +19625,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_3_10_News.pdf",
     "juUrl": "",
     "size": 17.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_3_10_News.pdf",
+    "gcs_key": "ijhs/Vol46_3_10_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_3_10_News.pdf"
   },
   {
@@ -18414,9 +19641,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_3_9_Projectreports.pdf",
     "juUrl": "",
     "size": 46.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_3_9_Projectreports.pdf",
+    "gcs_key": "ijhs/Vol47_3_9_Projectreports.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_3_9_Projectreports.pdf"
   },
   {
@@ -18429,9 +19657,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_3_10_ASBhat.pdf",
     "juUrl": "",
     "size": 30.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_3_10_ASBhat.pdf",
+    "gcs_key": "ijhs/Vol47_3_10_ASBhat.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_3_10_ASBhat.pdf"
   },
   {
@@ -18444,9 +19673,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_3_11_Supplement.pdf",
     "juUrl": "",
     "size": 47.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_3_11_Supplement.pdf",
+    "gcs_key": "ijhs/Vol46_3_11_Supplement.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_3_11_Supplement.pdf"
   },
   {
@@ -18459,9 +19689,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_3_12_Supplement.pdf",
     "juUrl": "",
     "size": 215.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_3_12_Supplement.pdf",
+    "gcs_key": "ijhs/Vol46_3_12_Supplement.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_3_12_Supplement.pdf"
   },
   {
@@ -18474,9 +19705,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_3_11_Announcements.pdf",
     "juUrl": "",
     "size": 16.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_3_11_Announcements.pdf",
+    "gcs_key": "ijhs/Vol47_3_11_Announcements.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_3_11_Announcements.pdf"
   },
   {
@@ -18489,9 +19721,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_4_0_Contents.pdf",
     "juUrl": "",
     "size": 10.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_4_0_Contents.pdf",
+    "gcs_key": "ijhs/Vol46_4_0_Contents.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_4_0_Contents.pdf"
   },
   {
@@ -18504,9 +19737,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_4_1_TRSPrasanna.pdf",
     "juUrl": "",
     "size": 475.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_4_1_TRSPrasanna.pdf",
+    "gcs_key": "ijhs/Vol46_4_1_TRSPrasanna.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_4_1_TRSPrasanna.pdf"
   },
   {
@@ -18519,9 +19753,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_4_2_BVenkateswarlu.pdf",
     "juUrl": "",
     "size": 117.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_4_2_BVenkateswarlu.pdf",
+    "gcs_key": "ijhs/Vol46_4_2_BVenkateswarlu.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_4_2_BVenkateswarlu.pdf"
   },
   {
@@ -18534,9 +19769,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_4_3_RCGupta.pdf",
     "juUrl": "",
     "size": 167.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_4_3_RCGupta.pdf",
+    "gcs_key": "ijhs/Vol46_4_3_RCGupta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_4_3_RCGupta.pdf"
   },
   {
@@ -18549,9 +19785,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_4_4_SKMajumdar.pdf",
     "juUrl": "",
     "size": 92.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_4_4_SKMajumdar.pdf",
+    "gcs_key": "ijhs/Vol46_4_4_SKMajumdar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_4_4_SKMajumdar.pdf"
   },
   {
@@ -18564,9 +19801,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_4_5_Purabi.pdf",
     "juUrl": "",
     "size": 32.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_4_5_Purabi.pdf",
+    "gcs_key": "ijhs/Vol46_4_5_Purabi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_4_5_Purabi.pdf"
   },
   {
@@ -18579,9 +19817,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_4_6_Bookreview.pdf",
     "juUrl": "",
     "size": 18.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_4_6_Bookreview.pdf",
+    "gcs_key": "ijhs/Vol46_4_6_Bookreview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_4_6_Bookreview.pdf"
   },
   {
@@ -18594,9 +19833,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_4_7_VJDeshpande.pdf",
     "juUrl": "",
     "size": 33.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_4_7_VJDeshpande.pdf",
+    "gcs_key": "ijhs/Vol46_4_7_VJDeshpande.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_4_7_VJDeshpande.pdf"
   },
   {
@@ -18609,9 +19849,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_4_8_PPDeshpande.pdf",
     "juUrl": "",
     "size": 427.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_4_8_PPDeshpande.pdf",
+    "gcs_key": "ijhs/Vol46_4_8_PPDeshpande.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_4_8_PPDeshpande.pdf"
   },
   {
@@ -18624,9 +19865,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_4_9_News.pdf",
     "juUrl": "",
     "size": 52.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_4_9_News.pdf",
+    "gcs_key": "ijhs/Vol46_4_9_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_4_9_News.pdf"
   },
   {
@@ -18639,9 +19881,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_4_10_Supplement.pdf",
     "juUrl": "",
     "size": 47.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_4_10_Supplement.pdf",
+    "gcs_key": "ijhs/Vol46_4_10_Supplement.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_4_10_Supplement.pdf"
   },
   {
@@ -18654,9 +19897,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_4_12_Cumulativeindex.pdf",
     "juUrl": "",
     "size": 28.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_4_12_Cumulativeindex.pdf",
+    "gcs_key": "ijhs/Vol46_4_12_Cumulativeindex.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_4_12_Cumulativeindex.pdf"
   },
   {
@@ -18669,9 +19913,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol46_4_13_Annualcontent.pdf",
     "juUrl": "",
     "size": 19.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol46_4_13_Annualcontent.pdf",
+    "gcs_key": "ijhs/Vol46_4_13_Annualcontent.pdf",
     "localPath": "assets/pdfs/ijhs/Vol46_4_13_Annualcontent.pdf"
   },
   {
@@ -18684,9 +19929,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_1_0_Contents.pdf",
     "juUrl": "",
     "size": 10.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_1_0_Contents.pdf",
+    "gcs_key": "ijhs/Vol47_1_0_Contents.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_1_0_Contents.pdf"
   },
   {
@@ -18699,9 +19945,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_1_1_LDi.pdf",
     "juUrl": "",
     "size": 2223.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_1_1_LDi.pdf",
+    "gcs_key": "ijhs/Vol47_1_1_LDi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_1_1_LDi.pdf"
   },
   {
@@ -18714,9 +19961,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_1_2_DVDwivedi.pdf",
     "juUrl": "",
     "size": 107.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_1_2_DVDwivedi.pdf",
+    "gcs_key": "ijhs/Vol47_1_2_DVDwivedi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_1_2_DVDwivedi.pdf"
   },
   {
@@ -18729,9 +19977,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_1_3_SRSarma.pdf",
     "juUrl": "",
     "size": 2045.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_1_3_SRSarma.pdf",
+    "gcs_key": "ijhs/Vol47_1_3_SRSarma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_1_3_SRSarma.pdf"
   },
   {
@@ -18744,9 +19993,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_1_4_JNSinha.pdf",
     "juUrl": "",
     "size": 36.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_1_4_JNSinha.pdf",
+    "gcs_key": "ijhs/Vol47_1_4_JNSinha.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_1_4_JNSinha.pdf"
   },
   {
@@ -18759,9 +20009,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_1_5_SKMajumdar.pdf",
     "juUrl": "",
     "size": 14.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_1_5_SKMajumdar.pdf",
+    "gcs_key": "ijhs/Vol47_1_5_SKMajumdar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_1_5_SKMajumdar.pdf"
   },
   {
@@ -18774,9 +20025,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_1_6_SKSaha.pdf",
     "juUrl": "",
     "size": 68.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_1_6_SKSaha.pdf",
+    "gcs_key": "ijhs/Vol47_1_6_SKSaha.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_1_6_SKSaha.pdf"
   },
   {
@@ -18789,9 +20041,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_1_7_Bookreview.pdf",
     "juUrl": "",
     "size": 21.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_1_7_Bookreview.pdf",
+    "gcs_key": "ijhs/Vol47_1_7_Bookreview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_1_7_Bookreview.pdf"
   },
   {
@@ -18804,9 +20057,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_1_8_KRoy.pdf",
     "juUrl": "",
     "size": 31.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_1_8_KRoy.pdf",
+    "gcs_key": "ijhs/Vol47_1_8_KRoy.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_1_8_KRoy.pdf"
   },
   {
@@ -18819,9 +20073,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_1_9_PKChattopadhyay.pdf",
     "juUrl": "",
     "size": 529.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_1_9_PKChattopadhyay.pdf",
+    "gcs_key": "ijhs/Vol47_1_9_PKChattopadhyay.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_1_9_PKChattopadhyay.pdf"
   },
   {
@@ -18834,9 +20089,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_1_10_News.pdf",
     "juUrl": "",
     "size": 60.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_1_10_News.pdf",
+    "gcs_key": "ijhs/Vol47_1_10_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_1_10_News.pdf"
   },
   {
@@ -18849,9 +20105,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_1_12_Supplement_cover.pdf",
     "juUrl": "",
     "size": 64.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_1_12_Supplement_cover.pdf",
+    "gcs_key": "ijhs/Vol47_1_12_Supplement_cover.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_1_12_Supplement_cover.pdf"
   },
   {
@@ -18864,9 +20121,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_1_14_Announcement.pdf",
     "juUrl": "",
     "size": 14.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_1_14_Announcement.pdf",
+    "gcs_key": "ijhs/Vol47_1_14_Announcement.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_1_14_Announcement.pdf"
   },
   {
@@ -18879,9 +20137,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_2_0_Contents.pdf",
     "juUrl": "",
     "size": 12.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_2_0_Contents.pdf",
+    "gcs_key": "ijhs/Vol47_2_0_Contents.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_2_0_Contents.pdf"
   },
   {
@@ -18894,9 +20153,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_2_1_Sdas.pdf",
     "juUrl": "",
     "size": 50.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_2_1_Sdas.pdf",
+    "gcs_key": "ijhs/Vol47_2_1_Sdas.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_2_1_Sdas.pdf"
   },
   {
@@ -18909,9 +20169,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_2_2_NKodlady.pdf",
     "juUrl": "",
     "size": 114.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_2_2_NKodlady.pdf",
+    "gcs_key": "ijhs/Vol47_2_2_NKodlady.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_2_2_NKodlady.pdf"
   },
   {
@@ -18924,9 +20185,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_2_3_ASamanta.pdf",
     "juUrl": "",
     "size": 103.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_2_3_ASamanta.pdf",
+    "gcs_key": "ijhs/Vol47_2_3_ASamanta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_2_3_ASamanta.pdf"
   },
   {
@@ -18939,9 +20201,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_2_4_VMRavikumar.pdf",
     "juUrl": "",
     "size": 48.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_2_4_VMRavikumar.pdf",
+    "gcs_key": "ijhs/Vol47_2_4_VMRavikumar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_2_4_VMRavikumar.pdf"
   },
   {
@@ -18954,9 +20217,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_2_5_JDeloche.pdf",
     "juUrl": "",
     "size": 193.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_2_5_JDeloche.pdf",
+    "gcs_key": "ijhs/Vol47_2_5_JDeloche.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_2_5_JDeloche.pdf"
   },
   {
@@ -18969,9 +20233,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_2_6_BSShylaja.pdf",
     "juUrl": "",
     "size": 173.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_2_6_BSShylaja.pdf",
+    "gcs_key": "ijhs/Vol47_2_6_BSShylaja.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_2_6_BSShylaja.pdf"
   },
   {
@@ -18984,9 +20249,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_2_7_VRRaghvan.pdf",
     "juUrl": "",
     "size": 32.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_2_7_VRRaghvan.pdf",
+    "gcs_key": "ijhs/Vol47_2_7_VRRaghvan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_2_7_VRRaghvan.pdf"
   },
   {
@@ -18999,9 +20265,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_2_8_SKMajumdar.pdf",
     "juUrl": "",
     "size": 16.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_2_8_SKMajumdar.pdf",
+    "gcs_key": "ijhs/Vol47_2_8_SKMajumdar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_2_8_SKMajumdar.pdf"
   },
   {
@@ -19014,9 +20281,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_2_9_Bookreview.pdf",
     "juUrl": "",
     "size": 33.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_2_9_Bookreview.pdf",
+    "gcs_key": "ijhs/Vol47_2_9_Bookreview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_2_9_Bookreview.pdf"
   },
   {
@@ -19029,9 +20297,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_2_10_AKBiswas.pdf",
     "juUrl": "",
     "size": 26.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_2_10_AKBiswas.pdf",
+    "gcs_key": "ijhs/Vol47_2_10_AKBiswas.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_2_10_AKBiswas.pdf"
   },
   {
@@ -19044,9 +20313,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_2_11_CPalit.pdf",
     "juUrl": "",
     "size": 22.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_2_11_CPalit.pdf",
+    "gcs_key": "ijhs/Vol47_2_11_CPalit.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_2_11_CPalit.pdf"
   },
   {
@@ -19059,9 +20329,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_2_12_News.pdf",
     "juUrl": "",
     "size": 29.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_2_12_News.pdf",
+    "gcs_key": "ijhs/Vol47_2_12_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_2_12_News.pdf"
   },
   {
@@ -19074,9 +20345,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_4_0_Editorial.pdf",
     "juUrl": "",
     "size": 17.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_4_0_Editorial.pdf",
+    "gcs_key": "ijhs/Vol47_4_0_Editorial.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_4_0_Editorial.pdf"
   },
   {
@@ -19089,9 +20361,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_4_1_Contents.pdf",
     "juUrl": "",
     "size": 8.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_4_1_Contents.pdf",
+    "gcs_key": "ijhs/Vol47_4_1_Contents.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_4_1_Contents.pdf"
   },
   {
@@ -19104,9 +20377,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_4_2_PRamManohar.pdf",
     "juUrl": "",
     "size": 247.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_4_2_PRamManohar.pdf",
+    "gcs_key": "ijhs/Vol47_4_2_PRamManohar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_4_2_PRamManohar.pdf"
   },
   {
@@ -19119,9 +20393,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_4_3_DPKaundinya.pdf",
     "juUrl": "",
     "size": 293.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_4_3_DPKaundinya.pdf",
+    "gcs_key": "ijhs/Vol47_4_3_DPKaundinya.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_4_3_DPKaundinya.pdf"
   },
   {
@@ -19134,9 +20409,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_4_4_RSridhan.pdf",
     "juUrl": "",
     "size": 1002.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_4_4_RSridhan.pdf",
+    "gcs_key": "ijhs/Vol47_4_4_RSridhan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_4_4_RSridhan.pdf"
   },
   {
@@ -19149,9 +20425,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_4_5_RSridhan.pdf",
     "juUrl": "",
     "size": 414.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_4_5_RSridhan.pdf",
+    "gcs_key": "ijhs/Vol47_4_5_RSridhan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_4_5_RSridhan.pdf"
   },
   {
@@ -19164,9 +20441,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_4_6_ADutta.pdf",
     "juUrl": "",
     "size": 312.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_4_6_ADutta.pdf",
+    "gcs_key": "ijhs/Vol47_4_6_ADutta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_4_6_ADutta.pdf"
   },
   {
@@ -19179,9 +20457,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_4_7_AKBag.pdf",
     "juUrl": "",
     "size": 113.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_4_7_AKBag.pdf",
+    "gcs_key": "ijhs/Vol47_4_7_AKBag.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_4_7_AKBag.pdf"
   },
   {
@@ -19194,9 +20473,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_4_8_SMadhavan.pdf",
     "juUrl": "",
     "size": 215.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_4_8_SMadhavan.pdf",
+    "gcs_key": "ijhs/Vol47_4_8_SMadhavan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_4_8_SMadhavan.pdf"
   },
   {
@@ -19209,9 +20489,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_4_9_MSSriram.pdf",
     "juUrl": "",
     "size": 184.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_4_9_MSSriram.pdf",
+    "gcs_key": "ijhs/Vol47_4_9_MSSriram.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_4_9_MSSriram.pdf"
   },
   {
@@ -19224,9 +20505,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_4_10_Malaya.pdf",
     "juUrl": "",
     "size": 963.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_4_10_Malaya.pdf",
+    "gcs_key": "ijhs/Vol47_4_10_Malaya.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_4_10_Malaya.pdf"
   },
   {
@@ -19239,9 +20521,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_4_11_PPDivakaran.pdf",
     "juUrl": "",
     "size": 422.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_4_11_PPDivakaran.pdf",
+    "gcs_key": "ijhs/Vol47_4_11_PPDivakaran.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_4_11_PPDivakaran.pdf"
   },
   {
@@ -19254,9 +20537,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_4_12_Booksreceived.pdf",
     "juUrl": "",
     "size": 17.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_4_12_Booksreceived.pdf",
+    "gcs_key": "ijhs/Vol47_4_12_Booksreceived.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_4_12_Booksreceived.pdf"
   },
   {
@@ -19269,9 +20553,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_4_13_Cumulativeindex.pdf",
     "juUrl": "",
     "size": 35.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_4_13_Cumulativeindex.pdf",
+    "gcs_key": "ijhs/Vol47_4_13_Cumulativeindex.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_4_13_Cumulativeindex.pdf"
   },
   {
@@ -19284,9 +20569,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_4_14_Annualcontent.pdf",
     "juUrl": "",
     "size": 24.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol47_4_14_Annualcontent.pdf",
+    "gcs_key": "ijhs/Vol47_4_14_Annualcontent.pdf",
     "localPath": "assets/pdfs/ijhs/Vol47_4_14_Annualcontent.pdf"
   },
   {
@@ -19299,9 +20585,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_1_0_Contents.pdf",
     "juUrl": "",
     "size": 12.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_1_0_Contents.pdf",
+    "gcs_key": "ijhs/Vol48_1_0_Contents.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_1_0_Contents.pdf"
   },
   {
@@ -19314,9 +20601,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_1_1_PTCraddock.pdf",
     "juUrl": "",
     "size": 1053.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_1_1_PTCraddock.pdf",
+    "gcs_key": "ijhs/Vol48_1_1_PTCraddock.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_1_1_PTCraddock.pdf"
   },
   {
@@ -19329,9 +20617,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_1_2_JBhattacharya.pdf",
     "juUrl": "",
     "size": 58.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_1_2_JBhattacharya.pdf",
+    "gcs_key": "ijhs/Vol48_1_2_JBhattacharya.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_1_2_JBhattacharya.pdf"
   },
   {
@@ -19344,9 +20633,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_1_3_AKBiswas.pdf",
     "juUrl": "",
     "size": 231.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_1_3_AKBiswas.pdf",
+    "gcs_key": "ijhs/Vol48_1_3_AKBiswas.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_1_3_AKBiswas.pdf"
   },
   {
@@ -19359,9 +20649,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_1_4_Rsingh.pdf",
     "juUrl": "",
     "size": 68.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_1_4_Rsingh.pdf",
+    "gcs_key": "ijhs/Vol48_1_4_Rsingh.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_1_4_Rsingh.pdf"
   },
   {
@@ -19374,9 +20665,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_1_5_Ssar.pdf",
     "juUrl": "",
     "size": 43.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_1_5_Ssar.pdf",
+    "gcs_key": "ijhs/Vol48_1_5_Ssar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_1_5_Ssar.pdf"
   },
   {
@@ -19389,9 +20681,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_1_6_Pchakrabarti.pdf",
     "juUrl": "",
     "size": 20.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_1_6_Pchakrabarti.pdf",
+    "gcs_key": "ijhs/Vol48_1_6_Pchakrabarti.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_1_6_Pchakrabarti.pdf"
   },
   {
@@ -19404,9 +20697,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_1_7_Bookreview.pdf",
     "juUrl": "",
     "size": 23.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_1_7_Bookreview.pdf",
+    "gcs_key": "ijhs/Vol48_1_7_Bookreview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_1_7_Bookreview.pdf"
   },
   {
@@ -19419,9 +20713,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_1_8_APPandey.pdf",
     "juUrl": "",
     "size": 20.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_1_8_APPandey.pdf",
+    "gcs_key": "ijhs/Vol48_1_8_APPandey.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_1_8_APPandey.pdf"
   },
   {
@@ -19434,9 +20729,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_1_9_Msarkar.pdf",
     "juUrl": "",
     "size": 32.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_1_9_Msarkar.pdf",
+    "gcs_key": "ijhs/Vol48_1_9_Msarkar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_1_9_Msarkar.pdf"
   },
   {
@@ -19449,9 +20745,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_1_10_News.pdf",
     "juUrl": "",
     "size": 22.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_1_10_News.pdf",
+    "gcs_key": "ijhs/Vol48_1_10_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_1_10_News.pdf"
   },
   {
@@ -19464,9 +20761,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_1_12_Supplement.pdf",
     "juUrl": "",
     "size": 278.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_1_12_Supplement.pdf",
+    "gcs_key": "ijhs/Vol48_1_12_Supplement.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_1_12_Supplement.pdf"
   },
   {
@@ -19479,9 +20777,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_1_13_Form%20IV.pdf",
     "juUrl": "",
     "size": 10.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_1_13_Form%20IV.pdf",
+    "gcs_key": "ijhs/Vol48_1_13_Form%20IV.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_1_13_Form%20IV.pdf"
   },
   {
@@ -19494,9 +20793,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_2_0_Contents.pdf",
     "juUrl": "",
     "size": 13.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_2_0_Contents.pdf",
+    "gcs_key": "ijhs/Vol48_2_0_Contents.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_2_0_Contents.pdf"
   },
   {
@@ -19509,9 +20809,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_2_1_NCShah.pdf",
     "juUrl": "",
     "size": 749.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_2_1_NCShah.pdf",
+    "gcs_key": "ijhs/Vol48_2_1_NCShah.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_2_1_NCShah.pdf"
   },
   {
@@ -19524,9 +20825,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_2_2_VDeshpande.pdf",
     "juUrl": "",
     "size": 184.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_2_2_VDeshpande.pdf",
+    "gcs_key": "ijhs/Vol48_2_2_VDeshpande.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_2_2_VDeshpande.pdf"
   },
   {
@@ -19539,9 +20841,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_2_3_JDeloche.pdf",
     "juUrl": "",
     "size": 2014.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_2_3_JDeloche.pdf",
+    "gcs_key": "ijhs/Vol48_2_3_JDeloche.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_2_3_JDeloche.pdf"
   },
   {
@@ -19554,9 +20857,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_2_4_AKBiswas.pdf",
     "juUrl": "",
     "size": 64.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_2_4_AKBiswas.pdf",
+    "gcs_key": "ijhs/Vol48_2_4_AKBiswas.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_2_4_AKBiswas.pdf"
   },
   {
@@ -19569,9 +20873,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_2_5_JWisniak.pdf",
     "juUrl": "",
     "size": 134.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_2_5_JWisniak.pdf",
+    "gcs_key": "ijhs/Vol48_2_5_JWisniak.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_2_5_JWisniak.pdf"
   },
   {
@@ -19584,9 +20889,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_2_6_BSShylaja.pdf",
     "juUrl": "",
     "size": 86.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_2_6_BSShylaja.pdf",
+    "gcs_key": "ijhs/Vol48_2_6_BSShylaja.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_2_6_BSShylaja.pdf"
   },
   {
@@ -19599,9 +20905,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_2_7_KBBasant.pdf",
     "juUrl": "",
     "size": 668.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_2_7_KBBasant.pdf",
+    "gcs_key": "ijhs/Vol48_2_7_KBBasant.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_2_7_KBBasant.pdf"
   },
   {
@@ -19614,9 +20921,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_2_8_Correspondence.pdf",
     "juUrl": "",
     "size": 19.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_2_8_Correspondence.pdf",
+    "gcs_key": "ijhs/Vol48_2_8_Correspondence.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_2_8_Correspondence.pdf"
   },
   {
@@ -19629,9 +20937,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_2_9_BookReview.pdf",
     "juUrl": "",
     "size": 18.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_2_9_BookReview.pdf",
+    "gcs_key": "ijhs/Vol48_2_9_BookReview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_2_9_BookReview.pdf"
   },
   {
@@ -19644,9 +20953,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_2_10_VTripathi.pdf",
     "juUrl": "",
     "size": 95.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_2_10_VTripathi.pdf",
+    "gcs_key": "ijhs/Vol48_2_10_VTripathi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_2_10_VTripathi.pdf"
   },
   {
@@ -19659,9 +20969,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_2_11_MBhattacharjee.pdf",
     "juUrl": "",
     "size": 34.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_2_11_MBhattacharjee.pdf",
+    "gcs_key": "ijhs/Vol48_2_11_MBhattacharjee.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_2_11_MBhattacharjee.pdf"
   },
   {
@@ -19674,9 +20985,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_2_12_News.pdf",
     "juUrl": "",
     "size": 25.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_2_12_News.pdf",
+    "gcs_key": "ijhs/Vol48_2_12_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_2_12_News.pdf"
   },
   {
@@ -19689,9 +21001,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_2_13_Supplement_inner.pdf",
     "juUrl": "",
     "size": 60.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_2_13_Supplement_inner.pdf",
+    "gcs_key": "ijhs/Vol48_2_13_Supplement_inner.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_2_13_Supplement_inner.pdf"
   },
   {
@@ -19704,9 +21017,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_3_0_Contents.pdf",
     "juUrl": "",
     "size": 16.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_3_0_Contents.pdf",
+    "gcs_key": "ijhs/Vol48_3_0_Contents.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_3_0_Contents.pdf"
   },
   {
@@ -19719,9 +21033,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_3_1_ANarayanan.pdf",
     "juUrl": "",
     "size": 1467.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_3_1_ANarayanan.pdf",
+    "gcs_key": "ijhs/Vol48_3_1_ANarayanan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_3_1_ANarayanan.pdf"
   },
   {
@@ -19734,9 +21049,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_3_2_CYJagtap.pdf",
     "juUrl": "",
     "size": 96.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_3_2_CYJagtap.pdf",
+    "gcs_key": "ijhs/Vol48_3_2_CYJagtap.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_3_2_CYJagtap.pdf"
   },
   {
@@ -19749,9 +21065,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_3_3_RCKapoor.pdf",
     "juUrl": "",
     "size": 306.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_3_3_RCKapoor.pdf",
+    "gcs_key": "ijhs/Vol48_3_3_RCKapoor.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_3_3_RCKapoor.pdf"
   },
   {
@@ -19764,9 +21081,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_3_4_SSarkar.pdf",
     "juUrl": "",
     "size": 1114.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_3_4_SSarkar.pdf",
+    "gcs_key": "ijhs/Vol48_3_4_SSarkar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_3_4_SSarkar.pdf"
   },
   {
@@ -19779,9 +21097,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_3_5_CPalit.pdf",
     "juUrl": "",
     "size": 25.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_3_5_CPalit.pdf",
+    "gcs_key": "ijhs/Vol48_3_5_CPalit.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_3_5_CPalit.pdf"
   },
   {
@@ -19794,9 +21113,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_3_6_SKMajumdar.pdf",
     "juUrl": "",
     "size": 26.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_3_6_SKMajumdar.pdf",
+    "gcs_key": "ijhs/Vol48_3_6_SKMajumdar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_3_6_SKMajumdar.pdf"
   },
   {
@@ -19809,9 +21129,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_3_7_Correspondence.pdf",
     "juUrl": "",
     "size": 9.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_3_7_Correspondence.pdf",
+    "gcs_key": "ijhs/Vol48_3_7_Correspondence.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_3_7_Correspondence.pdf"
   },
   {
@@ -19824,9 +21145,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_3_8_Bookreview.pdf",
     "juUrl": "",
     "size": 44.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_3_8_Bookreview.pdf",
+    "gcs_key": "ijhs/Vol48_3_8_Bookreview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_3_8_Bookreview.pdf"
   },
   {
@@ -19839,9 +21161,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_3_9_Project%20Reports.pdf",
     "juUrl": "",
     "size": 47.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_3_9_Project%20Reports.pdf",
+    "gcs_key": "ijhs/Vol48_3_9_Project%20Reports.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_3_9_Project%20Reports.pdf"
   },
   {
@@ -19854,9 +21177,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_3_10_SSen.pdf",
     "juUrl": "",
     "size": 47.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_3_10_SSen.pdf",
+    "gcs_key": "ijhs/Vol48_3_10_SSen.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_3_10_SSen.pdf"
   },
   {
@@ -19869,9 +21193,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_3_11_News.pdf",
     "juUrl": "",
     "size": 134.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_3_11_News.pdf",
+    "gcs_key": "ijhs/Vol48_3_11_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_3_11_News.pdf"
   },
   {
@@ -19884,9 +21209,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_3_12_Supplement_cover.pdf",
     "juUrl": "",
     "size": 60.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_3_12_Supplement_cover.pdf",
+    "gcs_key": "ijhs/Vol48_3_12_Supplement_cover.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_3_12_Supplement_cover.pdf"
   },
   {
@@ -19899,9 +21225,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_3_13_Supplement_text.pdf",
     "juUrl": "",
     "size": 1010.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_3_13_Supplement_text.pdf",
+    "gcs_key": "ijhs/Vol48_3_13_Supplement_text.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_3_13_Supplement_text.pdf"
   },
   {
@@ -19914,9 +21241,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_4_0_Contents.pdf",
     "juUrl": "",
     "size": 87.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_4_0_Contents.pdf",
+    "gcs_key": "ijhs/Vol48_4_0_Contents.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_4_0_Contents.pdf"
   },
   {
@@ -19929,9 +21257,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_4_1_BBaware.pdf",
     "juUrl": "",
     "size": 284.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_4_1_BBaware.pdf",
+    "gcs_key": "ijhs/Vol48_4_1_BBaware.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_4_1_BBaware.pdf"
   },
   {
@@ -19944,9 +21273,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_4_2_VNSharma.pdf",
     "juUrl": "",
     "size": 588.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_4_2_VNSharma.pdf",
+    "gcs_key": "ijhs/Vol48_4_2_VNSharma.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_4_2_VNSharma.pdf"
   },
   {
@@ -19959,9 +21289,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_4_3_%20AMSharan.pdf",
     "juUrl": "",
     "size": 3232.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_4_3_%20AMSharan.pdf",
+    "gcs_key": "ijhs/Vol48_4_3_%20AMSharan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_4_3_%20AMSharan.pdf"
   },
   {
@@ -19974,9 +21305,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_4_4_PMandal.pdf",
     "juUrl": "",
     "size": 284.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_4_4_PMandal.pdf",
+    "gcs_key": "ijhs/Vol48_4_4_PMandal.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_4_4_PMandal.pdf"
   },
   {
@@ -19989,9 +21321,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_4_5_SuktaDas.pdf",
     "juUrl": "",
     "size": 148.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_4_5_SuktaDas.pdf",
+    "gcs_key": "ijhs/Vol48_4_5_SuktaDas.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_4_5_SuktaDas.pdf"
   },
   {
@@ -20004,9 +21337,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_4_6_%20RCGupta.pdf",
     "juUrl": "",
     "size": 151.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_4_6_%20RCGupta.pdf",
+    "gcs_key": "ijhs/Vol48_4_6_%20RCGupta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_4_6_%20RCGupta.pdf"
   },
   {
@@ -20019,9 +21353,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_4_7_Correspondence.pdf",
     "juUrl": "",
     "size": 98.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_4_7_Correspondence.pdf",
+    "gcs_key": "ijhs/Vol48_4_7_Correspondence.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_4_7_Correspondence.pdf"
   },
   {
@@ -20034,9 +21369,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_4_8_Book%20Review.pdf",
     "juUrl": "",
     "size": 108.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_4_8_Book%20Review.pdf",
+    "gcs_key": "ijhs/Vol48_4_8_Book%20Review.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_4_8_Book%20Review.pdf"
   },
   {
@@ -20049,9 +21385,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_4_9_Project%20Report_%20Jbhattacharyya.pdf",
     "juUrl": "",
     "size": 178.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_4_9_Project%20Report_%20Jbhattacharyya.pdf",
+    "gcs_key": "ijhs/Vol48_4_9_Project%20Report_%20Jbhattacharyya.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_4_9_Project%20Report_%20Jbhattacharyya.pdf"
   },
   {
@@ -20064,9 +21401,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_4_10_ProjectReport_%20BKSen.pdf",
     "juUrl": "",
     "size": 169.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_4_10_ProjectReport_%20BKSen.pdf",
+    "gcs_key": "ijhs/Vol48_4_10_ProjectReport_%20BKSen.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_4_10_ProjectReport_%20BKSen.pdf"
   },
   {
@@ -20079,9 +21417,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_4_11_%20News.pdf",
     "juUrl": "",
     "size": 155.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_4_11_%20News.pdf",
+    "gcs_key": "ijhs/Vol48_4_11_%20News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_4_11_%20News.pdf"
   },
   {
@@ -20094,9 +21433,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_4_12_BookReceivedForReview.pdf",
     "juUrl": "",
     "size": 107.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_4_12_BookReceivedForReview.pdf",
+    "gcs_key": "ijhs/Vol48_4_12_BookReceivedForReview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_4_12_BookReceivedForReview.pdf"
   },
   {
@@ -20109,9 +21449,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_4_13_CumulativeIndex.pdf",
     "juUrl": "",
     "size": 124.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_4_13_CumulativeIndex.pdf",
+    "gcs_key": "ijhs/Vol48_4_13_CumulativeIndex.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_4_13_CumulativeIndex.pdf"
   },
   {
@@ -20124,9 +21465,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol48_4_14_AnnualContent.pdf",
     "juUrl": "",
     "size": 117.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol48_4_14_AnnualContent.pdf",
+    "gcs_key": "ijhs/Vol48_4_14_AnnualContent.pdf",
     "localPath": "assets/pdfs/ijhs/Vol48_4_14_AnnualContent.pdf"
   },
   {
@@ -20139,9 +21481,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_1_0_Contents.pdf",
     "juUrl": "",
     "size": 85.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_1_0_Contents.pdf",
+    "gcs_key": "ijhs/Vol49_1_0_Contents.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_1_0_Contents.pdf"
   },
   {
@@ -20154,9 +21497,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_1_1_PKChattopadhyay.pdf",
     "juUrl": "",
     "size": 570.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_1_1_PKChattopadhyay.pdf",
+    "gcs_key": "ijhs/Vol49_1_1_PKChattopadhyay.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_1_1_PKChattopadhyay.pdf"
   },
   {
@@ -20169,9 +21513,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_1_2_SNDhundi.pdf",
     "juUrl": "",
     "size": 191.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_1_2_SNDhundi.pdf",
+    "gcs_key": "ijhs/Vol49_1_2_SNDhundi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_1_2_SNDhundi.pdf"
   },
   {
@@ -20184,9 +21529,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_1_3_Sdasgupta.pdf",
     "juUrl": "",
     "size": 377.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_1_3_Sdasgupta.pdf",
+    "gcs_key": "ijhs/Vol49_1_3_Sdasgupta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_1_3_Sdasgupta.pdf"
   },
   {
@@ -20199,9 +21545,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_1_4_SKJain.pdf",
     "juUrl": "",
     "size": 135.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_1_4_SKJain.pdf",
+    "gcs_key": "ijhs/Vol49_1_4_SKJain.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_1_4_SKJain.pdf"
   },
   {
@@ -20214,9 +21561,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_1_5_Kmishra.pdf",
     "juUrl": "",
     "size": 127.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_1_5_Kmishra.pdf",
+    "gcs_key": "ijhs/Vol49_1_5_Kmishra.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_1_5_Kmishra.pdf"
   },
   {
@@ -20229,9 +21577,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_1_6_Sbhowmik.pdf",
     "juUrl": "",
     "size": 107.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_1_6_Sbhowmik.pdf",
+    "gcs_key": "ijhs/Vol49_1_6_Sbhowmik.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_1_6_Sbhowmik.pdf"
   },
   {
@@ -20244,9 +21593,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_1_7_SKMajumdar.pdf",
     "juUrl": "",
     "size": 122.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_1_7_SKMajumdar.pdf",
+    "gcs_key": "ijhs/Vol49_1_7_SKMajumdar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_1_7_SKMajumdar.pdf"
   },
   {
@@ -20259,9 +21609,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_1_8_JJShah.pdf",
     "juUrl": "",
     "size": 106.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_1_8_JJShah.pdf",
+    "gcs_key": "ijhs/Vol49_1_8_JJShah.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_1_8_JJShah.pdf"
   },
   {
@@ -20274,9 +21625,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_1_9_Pmukherji.pdf",
     "juUrl": "",
     "size": 141.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_1_9_Pmukherji.pdf",
+    "gcs_key": "ijhs/Vol49_1_9_Pmukherji.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_1_9_Pmukherji.pdf"
   },
   {
@@ -20289,9 +21641,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_1_10_Book%20Review.pdf",
     "juUrl": "",
     "size": 137.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_1_10_Book%20Review.pdf",
+    "gcs_key": "ijhs/Vol49_1_10_Book%20Review.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_1_10_Book%20Review.pdf"
   },
   {
@@ -20304,9 +21657,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_1_11_SKGeorge.pdf",
     "juUrl": "",
     "size": 308.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_1_11_SKGeorge.pdf",
+    "gcs_key": "ijhs/Vol49_1_11_SKGeorge.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_1_11_SKGeorge.pdf"
   },
   {
@@ -20319,9 +21673,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_1_12_Sbiswas.pdf",
     "juUrl": "",
     "size": 105.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_1_12_Sbiswas.pdf",
+    "gcs_key": "ijhs/Vol49_1_12_Sbiswas.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_1_12_Sbiswas.pdf"
   },
   {
@@ -20334,9 +21689,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_1_13_News.pdf",
     "juUrl": "",
     "size": 117.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_1_13_News.pdf",
+    "gcs_key": "ijhs/Vol49_1_13_News.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_1_13_News.pdf"
   },
   {
@@ -20349,9 +21705,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_3_0_Contents.pdf",
     "juUrl": "",
     "size": 19.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_3_0_Contents.pdf",
+    "gcs_key": "ijhs/Vol49_3_0_Contents.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_3_0_Contents.pdf"
   },
   {
@@ -20364,9 +21721,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_3_1_RN_Iyengar.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vol49_3_1_RN_Iyengar.pdf",
     "size": 641.0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_3_1_RN_Iyengar.pdf",
+    "gcs_key": "ijhs/Vol49_3_1_RN_Iyengar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_3_1_RN_Iyengar.pdf"
   },
   {
@@ -20379,9 +21737,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_2_1_Editorial.pdf",
     "juUrl": "",
     "size": 17.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_2_1_Editorial.pdf",
+    "gcs_key": "ijhs/Vol49_2_1_Editorial.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_2_1_Editorial.pdf"
   },
   {
@@ -20394,9 +21753,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_2_2_GuestEditorial.pdf",
     "juUrl": "",
     "size": 21.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_2_2_GuestEditorial.pdf",
+    "gcs_key": "ijhs/Vol49_2_2_GuestEditorial.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_2_2_GuestEditorial.pdf"
   },
   {
@@ -20409,9 +21769,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_3_2_Dwivedi.pdf",
     "juUrl": "",
     "size": 79.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_3_2_Dwivedi.pdf",
+    "gcs_key": "ijhs/Vol49_3_2_Dwivedi.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_3_2_Dwivedi.pdf"
   },
   {
@@ -20424,9 +21785,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_3_3_NHanda.pdf",
     "juUrl": "",
     "size": 444.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_3_3_NHanda.pdf",
+    "gcs_key": "ijhs/Vol49_3_3_NHanda.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_3_3_NHanda.pdf"
   },
   {
@@ -20439,9 +21801,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_2_3_KPlofker.pdf",
     "juUrl": "",
     "size": 632.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_2_3_KPlofker.pdf",
+    "gcs_key": "ijhs/Vol49_2_3_KPlofker.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_2_3_KPlofker.pdf"
   },
   {
@@ -20454,9 +21817,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_2_4_AKeller.pdf",
     "juUrl": "",
     "size": 331.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_2_4_AKeller.pdf",
+    "gcs_key": "ijhs/Vol49_2_4_AKeller.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_2_4_AKeller.pdf"
   },
   {
@@ -20469,9 +21833,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_3_4_DJadhav.pdf",
     "juUrl": "",
     "size": 86.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_3_4_DJadhav.pdf",
+    "gcs_key": "ijhs/Vol49_3_4_DJadhav.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_3_4_DJadhav.pdf"
   },
   {
@@ -20484,9 +21849,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_3_5_Pustynski.pdf",
     "juUrl": "",
     "size": 790.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_3_5_Pustynski.pdf",
+    "gcs_key": "ijhs/Vol49_3_5_Pustynski.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_3_5_Pustynski.pdf"
   },
   {
@@ -20499,9 +21865,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_2_5_TKnudsen.pdf",
     "juUrl": "",
     "size": 547.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_2_5_TKnudsen.pdf",
+    "gcs_key": "ijhs/Vol49_2_5_TKnudsen.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_2_5_TKnudsen.pdf"
   },
   {
@@ -20514,9 +21881,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_2_6_VMallayya.pdf",
     "juUrl": "",
     "size": 499.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_2_6_VMallayya.pdf",
+    "gcs_key": "ijhs/Vol49_2_6_VMallayya.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_2_6_VMallayya.pdf"
   },
   {
@@ -20529,9 +21897,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_3_6_NShah.pdf",
     "juUrl": "",
     "size": 63.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_3_6_NShah.pdf",
+    "gcs_key": "ijhs/Vol49_3_6_NShah.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_3_6_NShah.pdf"
   },
   {
@@ -20544,9 +21913,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_3_7_DBhatacharya.pdf",
     "juUrl": "",
     "size": 35.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_3_7_DBhatacharya.pdf",
+    "gcs_key": "ijhs/Vol49_3_7_DBhatacharya.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_3_7_DBhatacharya.pdf"
   },
   {
@@ -20559,9 +21929,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_2_7_KMahesh.pdf",
     "juUrl": "",
     "size": 355.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_2_7_KMahesh.pdf",
+    "gcs_key": "ijhs/Vol49_2_7_KMahesh.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_2_7_KMahesh.pdf"
   },
   {
@@ -20574,9 +21945,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_2_8_CMontelle.pdf",
     "juUrl": "",
     "size": 2112.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_2_8_CMontelle.pdf",
+    "gcs_key": "ijhs/Vol49_2_8_CMontelle.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_2_8_CMontelle.pdf"
   },
   {
@@ -20589,9 +21961,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_3_8_RSridharan.pdf",
     "juUrl": "",
     "size": 153.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_3_8_RSridharan.pdf",
+    "gcs_key": "ijhs/Vol49_3_8_RSridharan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_3_8_RSridharan.pdf"
   },
   {
@@ -20604,9 +21977,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_3_9_SKMajumdar.pdf",
     "juUrl": "",
     "size": 41.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_3_9_SKMajumdar.pdf",
+    "gcs_key": "ijhs/Vol49_3_9_SKMajumdar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_3_9_SKMajumdar.pdf"
   },
   {
@@ -20619,9 +21993,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_2_9_KRupa.pdf",
     "juUrl": "",
     "size": 1068.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_2_9_KRupa.pdf",
+    "gcs_key": "ijhs/Vol49_2_9_KRupa.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_2_9_KRupa.pdf"
   },
   {
@@ -20634,9 +22009,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_2_10_BookReview.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vol49_2_10_BookReview.pdf",
     "size": 76.0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_2_10_BookReview.pdf",
+    "gcs_key": "ijhs/Vol49_2_10_BookReview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_2_10_BookReview.pdf"
   },
   {
@@ -20649,9 +22025,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_3_10_KBBasant.pdf",
     "juUrl": "",
     "size": 1840.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_3_10_KBBasant.pdf",
+    "gcs_key": "ijhs/Vol49_3_10_KBBasant.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_3_10_KBBasant.pdf"
   },
   {
@@ -20664,9 +22041,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_3_11_RCGupta.pdf",
     "juUrl": "",
     "size": 51.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_3_11_RCGupta.pdf",
+    "gcs_key": "ijhs/Vol49_3_11_RCGupta.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_3_11_RCGupta.pdf"
   },
   {
@@ -20679,9 +22057,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_3_12_SNellickappilly.pdf",
     "juUrl": "",
     "size": 44.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_3_12_SNellickappilly.pdf",
+    "gcs_key": "ijhs/Vol49_3_12_SNellickappilly.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_3_12_SNellickappilly.pdf"
   },
   {
@@ -20694,9 +22073,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_3_13_PMandal.pdf",
     "juUrl": "",
     "size": 50.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_3_13_PMandal.pdf",
+    "gcs_key": "ijhs/Vol49_3_13_PMandal.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_3_13_PMandal.pdf"
   },
   {
@@ -20709,9 +22089,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_3_14_NEWS.pdf",
     "juUrl": "",
     "size": 15.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_3_14_NEWS.pdf",
+    "gcs_key": "ijhs/Vol49_3_14_NEWS.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_3_14_NEWS.pdf"
   },
   {
@@ -20724,9 +22105,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_4_0_Contents.pdf",
     "juUrl": "",
     "size": 13.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_4_0_Contents.pdf",
+    "gcs_key": "ijhs/Vol49_4_0_Contents.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_4_0_Contents.pdf"
   },
   {
@@ -20739,9 +22121,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_4_1_Editorial.pdf",
     "juUrl": "",
     "size": 87.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_4_1_Editorial.pdf",
+    "gcs_key": "ijhs/Vol49_4_1_Editorial.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_4_1_Editorial.pdf"
   },
   {
@@ -20754,9 +22137,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_4_2_Guest_Editorial.pdf",
     "juUrl": "",
     "size": 63.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_4_2_Guest_Editorial.pdf",
+    "gcs_key": "ijhs/Vol49_4_2_Guest_Editorial.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_4_2_Guest_Editorial.pdf"
   },
   {
@@ -20769,9 +22153,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_4_3_AChakravorty.pdf",
     "juUrl": "",
     "size": 254.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_4_3_AChakravorty.pdf",
+    "gcs_key": "ijhs/Vol49_4_3_AChakravorty.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_4_3_AChakravorty.pdf"
   },
   {
@@ -20784,9 +22169,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_4_4_KBhattacharyya.pdf",
     "juUrl": "",
     "size": 52.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_4_4_KBhattacharyya.pdf",
+    "gcs_key": "ijhs/Vol49_4_4_KBhattacharyya.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_4_4_KBhattacharyya.pdf"
   },
   {
@@ -20799,9 +22185,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_4_5_KNagarajan.pdf",
     "juUrl": "",
     "size": 596.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_4_5_KNagarajan.pdf",
+    "gcs_key": "ijhs/Vol49_4_5_KNagarajan.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_4_5_KNagarajan.pdf"
   },
   {
@@ -20814,9 +22201,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_4_6_AVRRao.pdf",
     "juUrl": "",
     "size": 576.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_4_6_AVRRao.pdf",
+    "gcs_key": "ijhs/Vol49_4_6_AVRRao.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_4_6_AVRRao.pdf"
   },
   {
@@ -20829,9 +22217,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_4_7_HSingh.pdf",
     "juUrl": "",
     "size": 415.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_4_7_HSingh.pdf",
+    "gcs_key": "ijhs/Vol49_4_7_HSingh.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_4_7_HSingh.pdf"
   },
   {
@@ -20844,9 +22233,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_4_8_AKShukla.pdf",
     "juUrl": "",
     "size": 25.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_4_8_AKShukla.pdf",
+    "gcs_key": "ijhs/Vol49_4_8_AKShukla.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_4_8_AKShukla.pdf"
   },
   {
@@ -20859,9 +22249,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_4_9_MRoy.pdf",
     "juUrl": "",
     "size": 39.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_4_9_MRoy.pdf",
+    "gcs_key": "ijhs/Vol49_4_9_MRoy.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_4_9_MRoy.pdf"
   },
   {
@@ -20874,9 +22265,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_4_10_BKSen.pdf",
     "juUrl": "",
     "size": 50.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_4_10_BKSen.pdf",
+    "gcs_key": "ijhs/Vol49_4_10_BKSen.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_4_10_BKSen.pdf"
   },
   {
@@ -20889,9 +22281,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_4_11_DRaina.pdf",
     "juUrl": "",
     "size": 61.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_4_11_DRaina.pdf",
+    "gcs_key": "ijhs/Vol49_4_11_DRaina.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_4_11_DRaina.pdf"
   },
   {
@@ -20904,9 +22297,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_4_12_PKBasu.pdf",
     "juUrl": "",
     "size": 53.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_4_12_PKBasu.pdf",
+    "gcs_key": "ijhs/Vol49_4_12_PKBasu.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_4_12_PKBasu.pdf"
   },
   {
@@ -20919,9 +22313,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_4_13_Bookreview.pdf",
     "juUrl": "",
     "size": 75.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_4_13_Bookreview.pdf",
+    "gcs_key": "ijhs/Vol49_4_13_Bookreview.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_4_13_Bookreview.pdf"
   },
   {
@@ -20934,9 +22329,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_4_14_Bookreceived.pdf",
     "juUrl": "",
     "size": 17.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_4_14_Bookreceived.pdf",
+    "gcs_key": "ijhs/Vol49_4_14_Bookreceived.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_4_14_Bookreceived.pdf"
   },
   {
@@ -20949,9 +22345,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_4_15_CumulativeIndex.pdf",
     "juUrl": "",
     "size": 40.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_4_15_CumulativeIndex.pdf",
+    "gcs_key": "ijhs/Vol49_4_15_CumulativeIndex.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_4_15_CumulativeIndex.pdf"
   },
   {
@@ -20964,9 +22361,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol49_4_16_AnnualContents2014.pdf",
     "juUrl": "",
     "size": 28.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol49_4_16_AnnualContents2014.pdf",
+    "gcs_key": "ijhs/Vol49_4_16_AnnualContents2014.pdf",
     "localPath": "assets/pdfs/ijhs/Vol49_4_16_AnnualContents2014.pdf"
   },
   {
@@ -20979,9 +22377,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_1_Contents.pdf",
     "juUrl": "",
     "size": 90.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_1_Contents.pdf",
+    "gcs_key": "ijhs/Vol50_2015_1_Contents.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_1_Contents.pdf"
   },
   {
@@ -20994,9 +22393,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_1_Message_President.pdf",
     "juUrl": "",
     "size": 70.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_1_Message_President.pdf",
+    "gcs_key": "ijhs/Vol50_2015_1_Message_President.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_1_Message_President.pdf"
   },
   {
@@ -21009,9 +22409,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_1_Art01.pdf",
     "juUrl": "",
     "size": 28.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_1_Art01.pdf",
+    "gcs_key": "ijhs/Vol50_2015_1_Art01.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_1_Art01.pdf"
   },
   {
@@ -21024,9 +22425,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_1_Art02.pdf",
     "juUrl": "",
     "size": 286.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_1_Art02.pdf",
+    "gcs_key": "ijhs/Vol50_2015_1_Art02.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_1_Art02.pdf"
   },
   {
@@ -21039,9 +22441,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_1_Art03.pdf",
     "juUrl": "",
     "size": 368.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_1_Art03.pdf",
+    "gcs_key": "ijhs/Vol50_2015_1_Art03.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_1_Art03.pdf"
   },
   {
@@ -21054,9 +22457,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_1_Art04.pdf",
     "juUrl": "",
     "size": 52.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_1_Art04.pdf",
+    "gcs_key": "ijhs/Vol50_2015_1_Art04.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_1_Art04.pdf"
   },
   {
@@ -21069,9 +22473,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_1_Art05.pdf",
     "juUrl": "",
     "size": 900.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_1_Art05.pdf",
+    "gcs_key": "ijhs/Vol50_2015_1_Art05.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_1_Art05.pdf"
   },
   {
@@ -21084,9 +22489,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_1_Art06.pdf",
     "juUrl": "",
     "size": 104.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_1_Art06.pdf",
+    "gcs_key": "ijhs/Vol50_2015_1_Art06.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_1_Art06.pdf"
   },
   {
@@ -21099,9 +22505,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_1_Art07.pdf",
     "juUrl": "",
     "size": 899.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_1_Art07.pdf",
+    "gcs_key": "ijhs/Vol50_2015_1_Art07.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_1_Art07.pdf"
   },
   {
@@ -21114,9 +22521,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_1_Art08.pdf",
     "juUrl": "",
     "size": 65.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_1_Art08.pdf",
+    "gcs_key": "ijhs/Vol50_2015_1_Art08.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_1_Art08.pdf"
   },
   {
@@ -21129,9 +22537,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_1_Art09.pdf",
     "juUrl": "",
     "size": 103.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_1_Art09.pdf",
+    "gcs_key": "ijhs/Vol50_2015_1_Art09.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_1_Art09.pdf"
   },
   {
@@ -21144,9 +22553,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_1_Art10.pdf",
     "juUrl": "",
     "size": 391.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_1_Art10.pdf",
+    "gcs_key": "ijhs/Vol50_2015_1_Art10.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_1_Art10.pdf"
   },
   {
@@ -21159,9 +22569,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_1_Art11.pdf",
     "juUrl": "",
     "size": 28.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_1_Art11.pdf",
+    "gcs_key": "ijhs/Vol50_2015_1_Art11.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_1_Art11.pdf"
   },
   {
@@ -21174,9 +22585,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_1_Art12.pdf",
     "juUrl": "",
     "size": 37.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_1_Art12.pdf",
+    "gcs_key": "ijhs/Vol50_2015_1_Art12.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_1_Art12.pdf"
   },
   {
@@ -21189,9 +22601,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_1_Art13.pdf",
     "juUrl": "",
     "size": 500.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_1_Art13.pdf",
+    "gcs_key": "ijhs/Vol50_2015_1_Art13.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_1_Art13.pdf"
   },
   {
@@ -21204,9 +22617,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_1_Art14.pdf",
     "juUrl": "",
     "size": 132.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_1_Art14.pdf",
+    "gcs_key": "ijhs/Vol50_2015_1_Art14.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_1_Art14.pdf"
   },
   {
@@ -21219,9 +22633,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_1_Art15.pdf",
     "juUrl": "",
     "size": 118.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_1_Art15.pdf",
+    "gcs_key": "ijhs/Vol50_2015_1_Art15.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_1_Art15.pdf"
   },
   {
@@ -21234,9 +22649,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_2_Contents.pdf",
     "juUrl": "",
     "size": 89.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_2_Contents.pdf",
+    "gcs_key": "ijhs/Vol50_2015_2_Contents.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_2_Contents.pdf"
   },
   {
@@ -21249,9 +22665,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_2_Art01.pdf",
     "juUrl": "",
     "size": 260.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_2_Art01.pdf",
+    "gcs_key": "ijhs/Vol50_2015_2_Art01.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_2_Art01.pdf"
   },
   {
@@ -21264,9 +22681,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_2_Art02.pdf",
     "juUrl": "",
     "size": 189.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_2_Art02.pdf",
+    "gcs_key": "ijhs/Vol50_2015_2_Art02.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_2_Art02.pdf"
   },
   {
@@ -21279,9 +22697,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_2_Art03.pdf",
     "juUrl": "",
     "size": 173.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_2_Art03.pdf",
+    "gcs_key": "ijhs/Vol50_2015_2_Art03.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_2_Art03.pdf"
   },
   {
@@ -21294,9 +22713,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_2_Art04.pdf",
     "juUrl": "",
     "size": 889.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_2_Art04.pdf",
+    "gcs_key": "ijhs/Vol50_2015_2_Art04.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_2_Art04.pdf"
   },
   {
@@ -21309,9 +22729,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_2_Art05.pdf",
     "juUrl": "",
     "size": 1373.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_2_Art05.pdf",
+    "gcs_key": "ijhs/Vol50_2015_2_Art05.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_2_Art05.pdf"
   },
   {
@@ -21324,9 +22745,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_2_Art06.pdf",
     "juUrl": "",
     "size": 677.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_2_Art06.pdf",
+    "gcs_key": "ijhs/Vol50_2015_2_Art06.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_2_Art06.pdf"
   },
   {
@@ -21339,9 +22761,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_2_Art07.pdf",
     "juUrl": "",
     "size": 1283.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_2_Art07.pdf",
+    "gcs_key": "ijhs/Vol50_2015_2_Art07.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_2_Art07.pdf"
   },
   {
@@ -21354,9 +22777,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_2_Art08.pdf",
     "juUrl": "",
     "size": 430.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_2_Art08.pdf",
+    "gcs_key": "ijhs/Vol50_2015_2_Art08.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_2_Art08.pdf"
   },
   {
@@ -21369,9 +22793,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_2_Art09.pdf",
     "juUrl": "",
     "size": 215.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_2_Art09.pdf",
+    "gcs_key": "ijhs/Vol50_2015_2_Art09.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_2_Art09.pdf"
   },
   {
@@ -21384,9 +22809,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_2_Art10.pdf",
     "juUrl": "",
     "size": 119.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_2_Art10.pdf",
+    "gcs_key": "ijhs/Vol50_2015_2_Art10.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_2_Art10.pdf"
   },
   {
@@ -21399,9 +22825,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_2_Art11.pdf",
     "juUrl": "",
     "size": 173.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_2_Art11.pdf",
+    "gcs_key": "ijhs/Vol50_2015_2_Art11.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_2_Art11.pdf"
   },
   {
@@ -21414,9 +22841,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_2_Art12.pdf",
     "juUrl": "",
     "size": 486.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_2_Art12.pdf",
+    "gcs_key": "ijhs/Vol50_2015_2_Art12.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_2_Art12.pdf"
   },
   {
@@ -21429,9 +22857,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_2_Art13.pdf",
     "juUrl": "",
     "size": 105.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_2_Art13.pdf",
+    "gcs_key": "ijhs/Vol50_2015_2_Art13.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_2_Art13.pdf"
   },
   {
@@ -21444,9 +22873,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_2_Art14.pdf",
     "juUrl": "",
     "size": 108.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_2_Art14.pdf",
+    "gcs_key": "ijhs/Vol50_2015_2_Art14.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_2_Art14.pdf"
   },
   {
@@ -21459,9 +22889,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_2_Art15.pdf",
     "juUrl": "",
     "size": 89.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_2_Art15.pdf",
+    "gcs_key": "ijhs/Vol50_2015_2_Art15.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_2_Art15.pdf"
   },
   {
@@ -21474,9 +22905,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_3_CONTENTS.pdf",
     "juUrl": "",
     "size": 11.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_3_CONTENTS.pdf",
+    "gcs_key": "ijhs/Vol50_2015_3_CONTENTS.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_3_CONTENTS.pdf"
   },
   {
@@ -21489,9 +22921,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_3_Art01.pdf",
     "juUrl": "",
     "size": 568.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_3_Art01.pdf",
+    "gcs_key": "ijhs/Vol50_2015_3_Art01.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_3_Art01.pdf"
   },
   {
@@ -21504,9 +22937,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_3_Art02.pdf",
     "juUrl": "",
     "size": 113.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_3_Art02.pdf",
+    "gcs_key": "ijhs/Vol50_2015_3_Art02.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_3_Art02.pdf"
   },
   {
@@ -21519,9 +22953,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_3_Art03.pdf",
     "juUrl": "",
     "size": 86.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_3_Art03.pdf",
+    "gcs_key": "ijhs/Vol50_2015_3_Art03.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_3_Art03.pdf"
   },
   {
@@ -21534,9 +22969,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_3_Art04.pdf",
     "juUrl": "",
     "size": 155.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_3_Art04.pdf",
+    "gcs_key": "ijhs/Vol50_2015_3_Art04.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_3_Art04.pdf"
   },
   {
@@ -21549,9 +22985,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_3_Art05.pdf",
     "juUrl": "",
     "size": 1618.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_3_Art05.pdf",
+    "gcs_key": "ijhs/Vol50_2015_3_Art05.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_3_Art05.pdf"
   },
   {
@@ -21564,9 +23001,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_3_Art06.pdf",
     "juUrl": "",
     "size": 192.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_3_Art06.pdf",
+    "gcs_key": "ijhs/Vol50_2015_3_Art06.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_3_Art06.pdf"
   },
   {
@@ -21579,9 +23017,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_3_Art07.pdf",
     "juUrl": "",
     "size": 54.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_3_Art07.pdf",
+    "gcs_key": "ijhs/Vol50_2015_3_Art07.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_3_Art07.pdf"
   },
   {
@@ -21594,9 +23033,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_3_Art08.pdf",
     "juUrl": "",
     "size": 844.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_3_Art08.pdf",
+    "gcs_key": "ijhs/Vol50_2015_3_Art08.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_3_Art08.pdf"
   },
   {
@@ -21609,9 +23049,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_3_Art09.pdf",
     "juUrl": "",
     "size": 29.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_3_Art09.pdf",
+    "gcs_key": "ijhs/Vol50_2015_3_Art09.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_3_Art09.pdf"
   },
   {
@@ -21624,9 +23065,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_3_Art10.pdf",
     "juUrl": "",
     "size": 58.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_3_Art10.pdf",
+    "gcs_key": "ijhs/Vol50_2015_3_Art10.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_3_Art10.pdf"
   },
   {
@@ -21639,9 +23081,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_3_Art11.pdf",
     "juUrl": "",
     "size": 11.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_3_Art11.pdf",
+    "gcs_key": "ijhs/Vol50_2015_3_Art11.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_3_Art11.pdf"
   },
   {
@@ -21654,9 +23097,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_3_Art12.pdf",
     "juUrl": "",
     "size": 145.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_3_Art12.pdf",
+    "gcs_key": "ijhs/Vol50_2015_3_Art12.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_3_Art12.pdf"
   },
   {
@@ -21669,9 +23113,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_3_Art13.pdf",
     "juUrl": "",
     "size": 26.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_3_Art13.pdf",
+    "gcs_key": "ijhs/Vol50_2015_3_Art13.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_3_Art13.pdf"
   },
   {
@@ -21684,9 +23129,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_3_Art14.pdf",
     "juUrl": "",
     "size": 7.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_3_Art14.pdf",
+    "gcs_key": "ijhs/Vol50_2015_3_Art14.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_3_Art14.pdf"
   },
   {
@@ -21699,9 +23145,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_4_CONTENTS.pdf",
     "juUrl": "",
     "size": 97.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_4_CONTENTS.pdf",
+    "gcs_key": "ijhs/Vol50_2015_4_CONTENTS.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_4_CONTENTS.pdf"
   },
   {
@@ -21714,9 +23161,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_4_Art01.pdf",
     "juUrl": "",
     "size": 1128.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_4_Art01.pdf",
+    "gcs_key": "ijhs/Vol50_2015_4_Art01.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_4_Art01.pdf"
   },
   {
@@ -21729,9 +23177,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_4_Art02.pdf",
     "juUrl": "",
     "size": 177.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_4_Art02.pdf",
+    "gcs_key": "ijhs/Vol50_2015_4_Art02.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_4_Art02.pdf"
   },
   {
@@ -21744,9 +23193,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_4_Art03.pdf",
     "juUrl": "",
     "size": 2402.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_4_Art03.pdf",
+    "gcs_key": "ijhs/Vol50_2015_4_Art03.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_4_Art03.pdf"
   },
   {
@@ -21759,9 +23209,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_4_Art04.pdf",
     "juUrl": "",
     "size": 749.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_4_Art04.pdf",
+    "gcs_key": "ijhs/Vol50_2015_4_Art04.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_4_Art04.pdf"
   },
   {
@@ -21774,9 +23225,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_4_Art05.pdf",
     "juUrl": "",
     "size": 156.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_4_Art05.pdf",
+    "gcs_key": "ijhs/Vol50_2015_4_Art05.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_4_Art05.pdf"
   },
   {
@@ -21789,9 +23241,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_4_Art06.pdf",
     "juUrl": "",
     "size": 163.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_4_Art06.pdf",
+    "gcs_key": "ijhs/Vol50_2015_4_Art06.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_4_Art06.pdf"
   },
   {
@@ -21804,9 +23257,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_4_Art07.pdf",
     "juUrl": "",
     "size": 167.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_4_Art07.pdf",
+    "gcs_key": "ijhs/Vol50_2015_4_Art07.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_4_Art07.pdf"
   },
   {
@@ -21819,9 +23273,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_4_Art08.pdf",
     "juUrl": "",
     "size": 112.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_4_Art08.pdf",
+    "gcs_key": "ijhs/Vol50_2015_4_Art08.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_4_Art08.pdf"
   },
   {
@@ -21834,9 +23289,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_4_Art09.pdf",
     "juUrl": "",
     "size": 121.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_4_Art09.pdf",
+    "gcs_key": "ijhs/Vol50_2015_4_Art09.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_4_Art09.pdf"
   },
   {
@@ -21849,9 +23305,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_4_Art10.pdf",
     "juUrl": "",
     "size": 151.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_4_Art10.pdf",
+    "gcs_key": "ijhs/Vol50_2015_4_Art10.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_4_Art10.pdf"
   },
   {
@@ -21864,9 +23321,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_4_Art11.pdf",
     "juUrl": "",
     "size": 103.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_4_Art11.pdf",
+    "gcs_key": "ijhs/Vol50_2015_4_Art11.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_4_Art11.pdf"
   },
   {
@@ -21879,9 +23337,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_4_Art12.pdf",
     "juUrl": "",
     "size": 112.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_4_Art12.pdf",
+    "gcs_key": "ijhs/Vol50_2015_4_Art12.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_4_Art12.pdf"
   },
   {
@@ -21894,9 +23353,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_4_Art13.pdf",
     "juUrl": "",
     "size": 143.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_4_Art13.pdf",
+    "gcs_key": "ijhs/Vol50_2015_4_Art13.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_4_Art13.pdf"
   },
   {
@@ -21909,9 +23369,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol50_2015_4_Art14.pdf",
     "juUrl": "",
     "size": 118.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol50_2015_4_Art14.pdf",
+    "gcs_key": "ijhs/Vol50_2015_4_Art14.pdf",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_4_Art14.pdf"
   },
   {
@@ -21924,9 +23385,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_1_Art01.pdf",
     "juUrl": "",
     "size": 118.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_1_Art01.pdf",
+    "gcs_key": "ijhs/Vol51_2016_1_Art01.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_1_Art01.pdf"
   },
   {
@@ -21939,9 +23401,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_1_Art02.pdf",
     "juUrl": "",
     "size": 180.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_1_Art02.pdf",
+    "gcs_key": "ijhs/Vol51_2016_1_Art02.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_1_Art02.pdf"
   },
   {
@@ -21954,9 +23417,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_1_Art03.pdf",
     "juUrl": "",
     "size": 70.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_1_Art03.pdf",
+    "gcs_key": "ijhs/Vol51_2016_1_Art03.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_1_Art03.pdf"
   },
   {
@@ -21969,9 +23433,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_1_Art04.pdf",
     "juUrl": "",
     "size": 182.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_1_Art04.pdf",
+    "gcs_key": "ijhs/Vol51_2016_1_Art04.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_1_Art04.pdf"
   },
   {
@@ -21984,9 +23449,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_1_Art05.pdf",
     "juUrl": "",
     "size": 484.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_1_Art05.pdf",
+    "gcs_key": "ijhs/Vol51_2016_1_Art05.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_1_Art05.pdf"
   },
   {
@@ -21999,9 +23465,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_1_Art06.pdf",
     "juUrl": "",
     "size": 231.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_1_Art06.pdf",
+    "gcs_key": "ijhs/Vol51_2016_1_Art06.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_1_Art06.pdf"
   },
   {
@@ -22014,9 +23481,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_1_Art07.pdf",
     "juUrl": "",
     "size": 186.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_1_Art07.pdf",
+    "gcs_key": "ijhs/Vol51_2016_1_Art07.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_1_Art07.pdf"
   },
   {
@@ -22029,9 +23497,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_1_Art08.pdf",
     "juUrl": "",
     "size": 193.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_1_Art08.pdf",
+    "gcs_key": "ijhs/Vol51_2016_1_Art08.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_1_Art08.pdf"
   },
   {
@@ -22044,9 +23513,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_1_Art09.pdf",
     "juUrl": "",
     "size": 385.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_1_Art09.pdf",
+    "gcs_key": "ijhs/Vol51_2016_1_Art09.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_1_Art09.pdf"
   },
   {
@@ -22059,9 +23529,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_1_Art10.pdf",
     "juUrl": "",
     "size": 476.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_1_Art10.pdf",
+    "gcs_key": "ijhs/Vol51_2016_1_Art10.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_1_Art10.pdf"
   },
   {
@@ -22074,9 +23545,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_1_Art11.pdf",
     "juUrl": "",
     "size": 144.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_1_Art11.pdf",
+    "gcs_key": "ijhs/Vol51_2016_1_Art11.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_1_Art11.pdf"
   },
   {
@@ -22089,9 +23561,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_1_Art12.pdf",
     "juUrl": "",
     "size": 150.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_1_Art12.pdf",
+    "gcs_key": "ijhs/Vol51_2016_1_Art12.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_1_Art12.pdf"
   },
   {
@@ -22104,9 +23577,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_1_Art13.pdf",
     "juUrl": "",
     "size": 174.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_1_Art13.pdf",
+    "gcs_key": "ijhs/Vol51_2016_1_Art13.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_1_Art13.pdf"
   },
   {
@@ -22119,9 +23593,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_1_Art14.pdf",
     "juUrl": "",
     "size": 182.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_1_Art14.pdf",
+    "gcs_key": "ijhs/Vol51_2016_1_Art14.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_1_Art14.pdf"
   },
   {
@@ -22134,9 +23609,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_1_Art15.pdf",
     "juUrl": "",
     "size": 155.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_1_Art15.pdf",
+    "gcs_key": "ijhs/Vol51_2016_1_Art15.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_1_Art15.pdf"
   },
   {
@@ -22149,9 +23625,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_1_Art16.pdf",
     "juUrl": "",
     "size": 192.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_1_Art16.pdf",
+    "gcs_key": "ijhs/Vol51_2016_1_Art16.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_1_Art16.pdf"
   },
   {
@@ -22164,9 +23641,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_1_Art17.pdf",
     "juUrl": "",
     "size": 412.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_1_Art17.pdf",
+    "gcs_key": "ijhs/Vol51_2016_1_Art17.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_1_Art17.pdf"
   },
   {
@@ -22179,9 +23657,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_1_Art18.pdf",
     "juUrl": "",
     "size": 620.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_1_Art18.pdf",
+    "gcs_key": "ijhs/Vol51_2016_1_Art18.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_1_Art18.pdf"
   },
   {
@@ -22194,9 +23673,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_2_1_Art00.pdf",
     "juUrl": "",
     "size": 87.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_2_1_Art00.pdf",
+    "gcs_key": "ijhs/Vol51_2016_2_1_Art00.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_1_Art00.pdf"
   },
   {
@@ -22209,9 +23689,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_2_1_Art01.pdf",
     "juUrl": "",
     "size": 468.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_2_1_Art01.pdf",
+    "gcs_key": "ijhs/Vol51_2016_2_1_Art01.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_1_Art01.pdf"
   },
   {
@@ -22224,9 +23705,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_2_1_Art02.pdf",
     "juUrl": "",
     "size": 704.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_2_1_Art02.pdf",
+    "gcs_key": "ijhs/Vol51_2016_2_1_Art02.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_1_Art02.pdf"
   },
   {
@@ -22239,9 +23721,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_2_1_Art03.pdf",
     "juUrl": "",
     "size": 433.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_2_1_Art03.pdf",
+    "gcs_key": "ijhs/Vol51_2016_2_1_Art03.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_1_Art03.pdf"
   },
   {
@@ -22254,9 +23737,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_2_1_Art04.pdf",
     "juUrl": "",
     "size": 181.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_2_1_Art04.pdf",
+    "gcs_key": "ijhs/Vol51_2016_2_1_Art04.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_1_Art04.pdf"
   },
   {
@@ -22269,9 +23753,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_2_1_Art05.pdf",
     "juUrl": "",
     "size": 142.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_2_1_Art05.pdf",
+    "gcs_key": "ijhs/Vol51_2016_2_1_Art05.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_1_Art05.pdf"
   },
   {
@@ -22284,9 +23769,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_2_1_Art06.pdf",
     "juUrl": "",
     "size": 316.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_2_1_Art06.pdf",
+    "gcs_key": "ijhs/Vol51_2016_2_1_Art06.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_1_Art06.pdf"
   },
   {
@@ -22299,9 +23785,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_2_1_Art07.pdf",
     "juUrl": "",
     "size": 413.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_2_1_Art07.pdf",
+    "gcs_key": "ijhs/Vol51_2016_2_1_Art07.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_1_Art07.pdf"
   },
   {
@@ -22314,9 +23801,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_2_1_Art08.pdf",
     "juUrl": "",
     "size": 178.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_2_1_Art08.pdf",
+    "gcs_key": "ijhs/Vol51_2016_2_1_Art08.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_1_Art08.pdf"
   },
   {
@@ -22329,9 +23817,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_2_1_Art09.pdf",
     "juUrl": "",
     "size": 119.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_2_1_Art09.pdf",
+    "gcs_key": "ijhs/Vol51_2016_2_1_Art09.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_1_Art09.pdf"
   },
   {
@@ -22344,9 +23833,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_2_1_Art10.pdf",
     "juUrl": "",
     "size": 128.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_2_1_Art10.pdf",
+    "gcs_key": "ijhs/Vol51_2016_2_1_Art10.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_1_Art10.pdf"
   },
   {
@@ -22359,9 +23849,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_2_1_Art11.pdf",
     "juUrl": "",
     "size": 122.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_2_1_Art11.pdf",
+    "gcs_key": "ijhs/Vol51_2016_2_1_Art11.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_1_Art11.pdf"
   },
   {
@@ -22374,9 +23865,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_2_1_Art12.pdf",
     "juUrl": "",
     "size": 1368.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_2_1_Art12.pdf",
+    "gcs_key": "ijhs/Vol51_2016_2_1_Art12.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_1_Art12.pdf"
   },
   {
@@ -22389,9 +23881,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_2_1_Art13.pdf",
     "juUrl": "",
     "size": 138.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_2_1_Art13.pdf",
+    "gcs_key": "ijhs/Vol51_2016_2_1_Art13.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_1_Art13.pdf"
   },
   {
@@ -22404,9 +23897,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_2_2_Art00.pdf",
     "juUrl": "",
     "size": 81.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_2_2_Art00.pdf",
+    "gcs_key": "ijhs/Vol51_2016_2_2_Art00.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_2_Art00.pdf"
   },
   {
@@ -22419,9 +23913,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_2_2_Art01.pdf",
     "juUrl": "",
     "size": 81.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_2_2_Art01.pdf",
+    "gcs_key": "ijhs/Vol51_2016_2_2_Art01.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_2_Art01.pdf"
   },
   {
@@ -22434,9 +23929,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_2_2_Art02.pdf",
     "juUrl": "",
     "size": 73.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_2_2_Art02.pdf",
+    "gcs_key": "ijhs/Vol51_2016_2_2_Art02.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_2_Art02.pdf"
   },
   {
@@ -22449,9 +23945,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_2_2_Art03.pdf",
     "juUrl": "",
     "size": 2076.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_2_2_Art03.pdf",
+    "gcs_key": "ijhs/Vol51_2016_2_2_Art03.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_2_Art03.pdf"
   },
   {
@@ -22464,9 +23961,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_2_2_Art04.pdf",
     "juUrl": "",
     "size": 222.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_2_2_Art04.pdf",
+    "gcs_key": "ijhs/Vol51_2016_2_2_Art04.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_2_Art04.pdf"
   },
   {
@@ -22479,9 +23977,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_2_2_Art05.pdf",
     "juUrl": "",
     "size": 112.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_2_2_Art05.pdf",
+    "gcs_key": "ijhs/Vol51_2016_2_2_Art05.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_2_Art05.pdf"
   },
   {
@@ -22494,9 +23993,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_2_2_Art06.pdf",
     "juUrl": "",
     "size": 89.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_2_2_Art06.pdf",
+    "gcs_key": "ijhs/Vol51_2016_2_2_Art06.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_2_Art06.pdf"
   },
   {
@@ -22509,9 +24009,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_2_2_Art07.pdf",
     "juUrl": "",
     "size": 738.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_2_2_Art07.pdf",
+    "gcs_key": "ijhs/Vol51_2016_2_2_Art07.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_2_Art07.pdf"
   },
   {
@@ -22524,9 +24025,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_2_2_Art08.pdf",
     "juUrl": "",
     "size": 321.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_2_2_Art08.pdf",
+    "gcs_key": "ijhs/Vol51_2016_2_2_Art08.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_2_Art08.pdf"
   },
   {
@@ -22539,9 +24041,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_2_2_Art09.pdf",
     "juUrl": "",
     "size": 346.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_2_2_Art09.pdf",
+    "gcs_key": "ijhs/Vol51_2016_2_2_Art09.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_2_Art09.pdf"
   },
   {
@@ -22554,9 +24057,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_2_2_Art10.pdf",
     "juUrl": "",
     "size": 90.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_2_2_Art10.pdf",
+    "gcs_key": "ijhs/Vol51_2016_2_2_Art10.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_2_Art10.pdf"
   },
   {
@@ -22569,9 +24073,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_2_2_Art11.pdf",
     "juUrl": "",
     "size": 711.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_2_2_Art11.pdf",
+    "gcs_key": "ijhs/Vol51_2016_2_2_Art11.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_2_Art11.pdf"
   },
   {
@@ -22584,9 +24089,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_2_2_Art12.pdf",
     "juUrl": "",
     "size": 146.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_2_2_Art12.pdf",
+    "gcs_key": "ijhs/Vol51_2016_2_2_Art12.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_2_Art12.pdf"
   },
   {
@@ -22599,9 +24105,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_2_2_Art13.pdf",
     "juUrl": "",
     "size": 239.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_2_2_Art13.pdf",
+    "gcs_key": "ijhs/Vol51_2016_2_2_Art13.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_2_Art13.pdf"
   },
   {
@@ -22614,9 +24121,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_2_2_Art14.pdf",
     "juUrl": "",
     "size": 264.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_2_2_Art14.pdf",
+    "gcs_key": "ijhs/Vol51_2016_2_2_Art14.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_2_Art14.pdf"
   },
   {
@@ -22629,9 +24137,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_3_Art00.pdf",
     "juUrl": "",
     "size": 162.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_3_Art00.pdf",
+    "gcs_key": "ijhs/Vol51_2016_3_Art00.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_3_Art00.pdf"
   },
   {
@@ -22644,9 +24153,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_3_Art01.pdf",
     "juUrl": "",
     "size": 982.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_3_Art01.pdf",
+    "gcs_key": "ijhs/Vol51_2016_3_Art01.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_3_Art01.pdf"
   },
   {
@@ -22659,9 +24169,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_3_Art02.pdf",
     "juUrl": "",
     "size": 506.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_3_Art02.pdf",
+    "gcs_key": "ijhs/Vol51_2016_3_Art02.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_3_Art02.pdf"
   },
   {
@@ -22674,9 +24185,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_3_Art03.pdf",
     "juUrl": "",
     "size": 1657.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_3_Art03.pdf",
+    "gcs_key": "ijhs/Vol51_2016_3_Art03.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_3_Art03.pdf"
   },
   {
@@ -22689,9 +24201,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_3_Art04.pdf",
     "juUrl": "",
     "size": 538.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_3_Art04.pdf",
+    "gcs_key": "ijhs/Vol51_2016_3_Art04.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_3_Art04.pdf"
   },
   {
@@ -22704,9 +24217,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_3_Art05.pdf",
     "juUrl": "",
     "size": 1096.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_3_Art05.pdf",
+    "gcs_key": "ijhs/Vol51_2016_3_Art05.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_3_Art05.pdf"
   },
   {
@@ -22719,9 +24233,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_3_Art06.pdf",
     "juUrl": "",
     "size": 775.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_3_Art06.pdf",
+    "gcs_key": "ijhs/Vol51_2016_3_Art06.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_3_Art06.pdf"
   },
   {
@@ -22734,9 +24249,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_3_Art07.pdf",
     "juUrl": "",
     "size": 289.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_3_Art07.pdf",
+    "gcs_key": "ijhs/Vol51_2016_3_Art07.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_3_Art07.pdf"
   },
   {
@@ -22749,9 +24265,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_3_Art08.pdf",
     "juUrl": "",
     "size": 569.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_3_Art08.pdf",
+    "gcs_key": "ijhs/Vol51_2016_3_Art08.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_3_Art08.pdf"
   },
   {
@@ -22764,9 +24281,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_3_Art09.pdf",
     "juUrl": "",
     "size": 439.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_3_Art09.pdf",
+    "gcs_key": "ijhs/Vol51_2016_3_Art09.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_3_Art09.pdf"
   },
   {
@@ -22779,9 +24297,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_3_Art10.pdf",
     "juUrl": "",
     "size": 273.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_3_Art10.pdf",
+    "gcs_key": "ijhs/Vol51_2016_3_Art10.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_3_Art10.pdf"
   },
   {
@@ -22794,9 +24313,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_2016_3_Art11.pdf",
     "juUrl": "",
     "size": 225.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_2016_3_Art11.pdf",
+    "gcs_key": "ijhs/Vol51_2016_3_Art11.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_3_Art11.pdf"
   },
   {
@@ -22809,9 +24329,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_4_2016_Contents.pdf",
     "juUrl": "",
     "size": 93.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_4_2016_Contents.pdf",
+    "gcs_key": "ijhs/Vol51_4_2016_Contents.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_4_2016_Contents.pdf"
   },
   {
@@ -22824,9 +24345,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_4_2016_Art01.pdf",
     "juUrl": "",
     "size": 177.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_4_2016_Art01.pdf",
+    "gcs_key": "ijhs/Vol51_4_2016_Art01.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_4_2016_Art01.pdf"
   },
   {
@@ -22839,9 +24361,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_4_2016_Art02.pdf",
     "juUrl": "",
     "size": 84.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_4_2016_Art02.pdf",
+    "gcs_key": "ijhs/Vol51_4_2016_Art02.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_4_2016_Art02.pdf"
   },
   {
@@ -22854,9 +24377,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_4_2016_Art03.pdf",
     "juUrl": "",
     "size": 201.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_4_2016_Art03.pdf",
+    "gcs_key": "ijhs/Vol51_4_2016_Art03.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_4_2016_Art03.pdf"
   },
   {
@@ -22869,9 +24393,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_4_2016_Art04.pdf",
     "juUrl": "",
     "size": 335.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_4_2016_Art04.pdf",
+    "gcs_key": "ijhs/Vol51_4_2016_Art04.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_4_2016_Art04.pdf"
   },
   {
@@ -22884,9 +24409,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_4_2016_Art05.pdf",
     "juUrl": "",
     "size": 642.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_4_2016_Art05.pdf",
+    "gcs_key": "ijhs/Vol51_4_2016_Art05.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_4_2016_Art05.pdf"
   },
   {
@@ -22899,9 +24425,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_4_2016_Art06.pdf",
     "juUrl": "",
     "size": 166.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_4_2016_Art06.pdf",
+    "gcs_key": "ijhs/Vol51_4_2016_Art06.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_4_2016_Art06.pdf"
   },
   {
@@ -22914,9 +24441,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_4_2016_Art07.pdf",
     "juUrl": "",
     "size": 676.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_4_2016_Art07.pdf",
+    "gcs_key": "ijhs/Vol51_4_2016_Art07.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_4_2016_Art07.pdf"
   },
   {
@@ -22929,9 +24457,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_4_2016_Art08.pdf",
     "juUrl": "",
     "size": 224.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_4_2016_Art08.pdf",
+    "gcs_key": "ijhs/Vol51_4_2016_Art08.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_4_2016_Art08.pdf"
   },
   {
@@ -22944,9 +24473,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_4_2016_Art09.pdf",
     "juUrl": "",
     "size": 644.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_4_2016_Art09.pdf",
+    "gcs_key": "ijhs/Vol51_4_2016_Art09.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_4_2016_Art09.pdf"
   },
   {
@@ -22959,9 +24489,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_4_2016_Art10.pdf",
     "juUrl": "",
     "size": 210.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_4_2016_Art10.pdf",
+    "gcs_key": "ijhs/Vol51_4_2016_Art10.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_4_2016_Art10.pdf"
   },
   {
@@ -22974,9 +24505,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_4_2016_Art11.pdf",
     "juUrl": "",
     "size": 137.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_4_2016_Art11.pdf",
+    "gcs_key": "ijhs/Vol51_4_2016_Art11.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_4_2016_Art11.pdf"
   },
   {
@@ -22989,9 +24521,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_4_2016_Art12.pdf",
     "juUrl": "",
     "size": 566.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_4_2016_Art12.pdf",
+    "gcs_key": "ijhs/Vol51_4_2016_Art12.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_4_2016_Art12.pdf"
   },
   {
@@ -23004,9 +24537,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_4_2016_Art13.pdf",
     "juUrl": "",
     "size": 593.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_4_2016_Art13.pdf",
+    "gcs_key": "ijhs/Vol51_4_2016_Art13.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_4_2016_Art13.pdf"
   },
   {
@@ -23019,9 +24553,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_4_2016_Art14.pdf",
     "juUrl": "",
     "size": 529.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_4_2016_Art14.pdf",
+    "gcs_key": "ijhs/Vol51_4_2016_Art14.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_4_2016_Art14.pdf"
   },
   {
@@ -23034,9 +24569,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_4_2016_Art15.pdf",
     "juUrl": "",
     "size": 110.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_4_2016_Art15.pdf",
+    "gcs_key": "ijhs/Vol51_4_2016_Art15.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_4_2016_Art15.pdf"
   },
   {
@@ -23049,9 +24585,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol51_4_2016_Art16.pdf",
     "juUrl": "",
     "size": 135.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol51_4_2016_Art16.pdf",
+    "gcs_key": "ijhs/Vol51_4_2016_Art16.pdf",
     "localPath": "assets/pdfs/ijhs/Vol51_4_2016_Art16.pdf"
   },
   {
@@ -23064,9 +24601,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_1_2017_Art00.pdf",
     "juUrl": "",
     "size": 165.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_1_2017_Art00.pdf",
+    "gcs_key": "ijhs/Vol52_1_2017_Art00.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_1_2017_Art00.pdf"
   },
   {
@@ -23079,9 +24617,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_1_2017_Art01.pdf",
     "juUrl": "",
     "size": 809.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_1_2017_Art01.pdf",
+    "gcs_key": "ijhs/Vol52_1_2017_Art01.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_1_2017_Art01.pdf"
   },
   {
@@ -23094,9 +24633,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_1_2017_Art02.pdf",
     "juUrl": "",
     "size": 411.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_1_2017_Art02.pdf",
+    "gcs_key": "ijhs/Vol52_1_2017_Art02.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_1_2017_Art02.pdf"
   },
   {
@@ -23109,9 +24649,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_1_2017_Art03.pdf",
     "juUrl": "",
     "size": 620.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_1_2017_Art03.pdf",
+    "gcs_key": "ijhs/Vol52_1_2017_Art03.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_1_2017_Art03.pdf"
   },
   {
@@ -23124,9 +24665,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_1_2017_Art04.pdf",
     "juUrl": "",
     "size": 349.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_1_2017_Art04.pdf",
+    "gcs_key": "ijhs/Vol52_1_2017_Art04.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_1_2017_Art04.pdf"
   },
   {
@@ -23139,9 +24681,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_1_2017_Art05.pdf",
     "juUrl": "",
     "size": 545.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_1_2017_Art05.pdf",
+    "gcs_key": "ijhs/Vol52_1_2017_Art05.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_1_2017_Art05.pdf"
   },
   {
@@ -23154,9 +24697,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_1_2017_Art06.pdf",
     "juUrl": "",
     "size": 50.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_1_2017_Art06.pdf",
+    "gcs_key": "ijhs/Vol52_1_2017_Art06.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_1_2017_Art06.pdf"
   },
   {
@@ -23169,9 +24713,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_1_2017_Art07.pdf",
     "juUrl": "",
     "size": 127.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_1_2017_Art07.pdf",
+    "gcs_key": "ijhs/Vol52_1_2017_Art07.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_1_2017_Art07.pdf"
   },
   {
@@ -23184,9 +24729,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_1_2017_Art08.pdf",
     "juUrl": "",
     "size": 184.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_1_2017_Art08.pdf",
+    "gcs_key": "ijhs/Vol52_1_2017_Art08.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_1_2017_Art08.pdf"
   },
   {
@@ -23199,9 +24745,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_1_2017_Art09.pdf",
     "juUrl": "",
     "size": 269.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_1_2017_Art09.pdf",
+    "gcs_key": "ijhs/Vol52_1_2017_Art09.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_1_2017_Art09.pdf"
   },
   {
@@ -23214,9 +24761,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_1_2017_Art10.pdf",
     "juUrl": "",
     "size": 299.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_1_2017_Art10.pdf",
+    "gcs_key": "ijhs/Vol52_1_2017_Art10.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_1_2017_Art10.pdf"
   },
   {
@@ -23229,9 +24777,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_1_2017_Art11.pdf",
     "juUrl": "",
     "size": 378.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_1_2017_Art11.pdf",
+    "gcs_key": "ijhs/Vol52_1_2017_Art11.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_1_2017_Art11.pdf"
   },
   {
@@ -23244,9 +24793,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_2_2017__Contents.pdf",
     "juUrl": "",
     "size": 163.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_2_2017__Contents.pdf",
+    "gcs_key": "ijhs/Vol52_2_2017__Contents.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_2_2017__Contents.pdf"
   },
   {
@@ -23259,9 +24809,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_2_2017__Art01.pdf",
     "juUrl": "",
     "size": 579.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_2_2017__Art01.pdf",
+    "gcs_key": "ijhs/Vol52_2_2017__Art01.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_2_2017__Art01.pdf"
   },
   {
@@ -23274,9 +24825,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_2_2017__Art02.pdf",
     "juUrl": "",
     "size": 293.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_2_2017__Art02.pdf",
+    "gcs_key": "ijhs/Vol52_2_2017__Art02.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_2_2017__Art02.pdf"
   },
   {
@@ -23289,9 +24841,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_2_2017__Art03.pdf",
     "juUrl": "",
     "size": 636.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_2_2017__Art03.pdf",
+    "gcs_key": "ijhs/Vol52_2_2017__Art03.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_2_2017__Art03.pdf"
   },
   {
@@ -23304,9 +24857,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_2_2017__Art04.pdf",
     "juUrl": "",
     "size": 343.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_2_2017__Art04.pdf",
+    "gcs_key": "ijhs/Vol52_2_2017__Art04.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_2_2017__Art04.pdf"
   },
   {
@@ -23319,9 +24873,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_2_2017__Art05.pdf",
     "juUrl": "",
     "size": 368.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_2_2017__Art05.pdf",
+    "gcs_key": "ijhs/Vol52_2_2017__Art05.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_2_2017__Art05.pdf"
   },
   {
@@ -23334,9 +24889,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_2_2017__Art06.pdf",
     "juUrl": "",
     "size": 326.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_2_2017__Art06.pdf",
+    "gcs_key": "ijhs/Vol52_2_2017__Art06.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_2_2017__Art06.pdf"
   },
   {
@@ -23349,9 +24905,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_2_2017__Art07.pdf",
     "juUrl": "",
     "size": 344.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_2_2017__Art07.pdf",
+    "gcs_key": "ijhs/Vol52_2_2017__Art07.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_2_2017__Art07.pdf"
   },
   {
@@ -23364,9 +24921,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_2_2017__Art08.pdf",
     "juUrl": "",
     "size": 542.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_2_2017__Art08.pdf",
+    "gcs_key": "ijhs/Vol52_2_2017__Art08.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_2_2017__Art08.pdf"
   },
   {
@@ -23379,9 +24937,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_2_2017__Art09.pdf",
     "juUrl": "",
     "size": 467.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_2_2017__Art09.pdf",
+    "gcs_key": "ijhs/Vol52_2_2017__Art09.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_2_2017__Art09.pdf"
   },
   {
@@ -23394,9 +24953,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_2_2017__Art10.pdf",
     "juUrl": "",
     "size": 289.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_2_2017__Art10.pdf",
+    "gcs_key": "ijhs/Vol52_2_2017__Art10.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_2_2017__Art10.pdf"
   },
   {
@@ -23409,9 +24969,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_2_2017__Art12.pdf",
     "juUrl": "",
     "size": 158.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_2_2017__Art12.pdf",
+    "gcs_key": "ijhs/Vol52_2_2017__Art12.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_2_2017__Art12.pdf"
   },
   {
@@ -23424,9 +24985,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_2_2017__Art13.pdf",
     "juUrl": "",
     "size": 236.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_2_2017__Art13.pdf",
+    "gcs_key": "ijhs/Vol52_2_2017__Art13.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_2_2017__Art13.pdf"
   },
   {
@@ -23439,9 +25001,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_2_2017__Art11.pdf",
     "juUrl": "",
     "size": 1004.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_2_2017__Art11.pdf",
+    "gcs_key": "ijhs/Vol52_2_2017__Art11.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_2_2017__Art11.pdf"
   },
   {
@@ -23454,9 +25017,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_3_2017__Art01.pdf",
     "juUrl": "",
     "size": 926.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_3_2017__Art01.pdf",
+    "gcs_key": "ijhs/Vol52_3_2017__Art01.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_3_2017__Art01.pdf"
   },
   {
@@ -23469,9 +25033,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_3_2017__Art02.pdf",
     "juUrl": "",
     "size": 277.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_3_2017__Art02.pdf",
+    "gcs_key": "ijhs/Vol52_3_2017__Art02.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_3_2017__Art02.pdf"
   },
   {
@@ -23484,9 +25049,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_3_2017__Art03.pdf",
     "juUrl": "",
     "size": 324.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_3_2017__Art03.pdf",
+    "gcs_key": "ijhs/Vol52_3_2017__Art03.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_3_2017__Art03.pdf"
   },
   {
@@ -23499,9 +25065,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_3_2017__Art04.pdf",
     "juUrl": "",
     "size": 1809.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_3_2017__Art04.pdf",
+    "gcs_key": "ijhs/Vol52_3_2017__Art04.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_3_2017__Art04.pdf"
   },
   {
@@ -23514,9 +25081,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_3_2017__Art05.pdf",
     "juUrl": "",
     "size": 411.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_3_2017__Art05.pdf",
+    "gcs_key": "ijhs/Vol52_3_2017__Art05.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_3_2017__Art05.pdf"
   },
   {
@@ -23529,9 +25097,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_3_2017__Art06.pdf",
     "juUrl": "",
     "size": 343.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_3_2017__Art06.pdf",
+    "gcs_key": "ijhs/Vol52_3_2017__Art06.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_3_2017__Art06.pdf"
   },
   {
@@ -23544,9 +25113,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_3_2017__Art07.pdf",
     "juUrl": "",
     "size": 430.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_3_2017__Art07.pdf",
+    "gcs_key": "ijhs/Vol52_3_2017__Art07.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_3_2017__Art07.pdf"
   },
   {
@@ -23559,9 +25129,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_3_2017__Art08.pdf",
     "juUrl": "",
     "size": 114.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_3_2017__Art08.pdf",
+    "gcs_key": "ijhs/Vol52_3_2017__Art08.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_3_2017__Art08.pdf"
   },
   {
@@ -23574,9 +25145,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_3_2017__Art09.pdf",
     "juUrl": "",
     "size": 1202.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_3_2017__Art09.pdf",
+    "gcs_key": "ijhs/Vol52_3_2017__Art09.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_3_2017__Art09.pdf"
   },
   {
@@ -23589,9 +25161,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_3_2017__Art10.pdf",
     "juUrl": "",
     "size": 93.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_3_2017__Art10.pdf",
+    "gcs_key": "ijhs/Vol52_3_2017__Art10.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_3_2017__Art10.pdf"
   },
   {
@@ -23604,9 +25177,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_3_2017__Art11.pdf",
     "juUrl": "",
     "size": 126.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_3_2017__Art11.pdf",
+    "gcs_key": "ijhs/Vol52_3_2017__Art11.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_3_2017__Art11.pdf"
   },
   {
@@ -23619,9 +25193,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_3_2017__Art12.pdf",
     "juUrl": "",
     "size": 1410.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_3_2017__Art12.pdf",
+    "gcs_key": "ijhs/Vol52_3_2017__Art12.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_3_2017__Art12.pdf"
   },
   {
@@ -23634,9 +25209,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Contents.pdf",
     "juUrl": "",
     "size": 100.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Contents.pdf",
+    "gcs_key": "ijhs/Contents.pdf",
     "localPath": "assets/pdfs/ijhs/Contents.pdf"
   },
   {
@@ -23649,9 +25225,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_4_2017__Art01.pdf",
     "juUrl": "",
     "size": 1063.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_4_2017__Art01.pdf",
+    "gcs_key": "ijhs/Vol52_4_2017__Art01.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_4_2017__Art01.pdf"
   },
   {
@@ -23664,9 +25241,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_4_2017__Art02.pdf",
     "juUrl": "",
     "size": 449.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_4_2017__Art02.pdf",
+    "gcs_key": "ijhs/Vol52_4_2017__Art02.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_4_2017__Art02.pdf"
   },
   {
@@ -23679,9 +25257,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_4_2017__Art03.pdf",
     "juUrl": "",
     "size": 1227.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_4_2017__Art03.pdf",
+    "gcs_key": "ijhs/Vol52_4_2017__Art03.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_4_2017__Art03.pdf"
   },
   {
@@ -23694,9 +25273,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_4_2017__Art04.pdf",
     "juUrl": "",
     "size": 1921.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_4_2017__Art04.pdf",
+    "gcs_key": "ijhs/Vol52_4_2017__Art04.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_4_2017__Art04.pdf"
   },
   {
@@ -23709,9 +25289,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_4_2017__Art05.pdf",
     "juUrl": "",
     "size": 974.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_4_2017__Art05.pdf",
+    "gcs_key": "ijhs/Vol52_4_2017__Art05.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_4_2017__Art05.pdf"
   },
   {
@@ -23724,9 +25305,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_4_2017__Art06.pdf",
     "juUrl": "",
     "size": 376.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_4_2017__Art06.pdf",
+    "gcs_key": "ijhs/Vol52_4_2017__Art06.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_4_2017__Art06.pdf"
   },
   {
@@ -23739,9 +25321,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_4_2017__Art07.pdf",
     "juUrl": "",
     "size": 165.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_4_2017__Art07.pdf",
+    "gcs_key": "ijhs/Vol52_4_2017__Art07.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_4_2017__Art07.pdf"
   },
   {
@@ -23754,9 +25337,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_4_2017__Art08.pdf",
     "juUrl": "",
     "size": 83.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_4_2017__Art08.pdf",
+    "gcs_key": "ijhs/Vol52_4_2017__Art08.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_4_2017__Art08.pdf"
   },
   {
@@ -23769,9 +25353,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_4_2017__Art09.pdf",
     "juUrl": "",
     "size": 90.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_4_2017__Art09.pdf",
+    "gcs_key": "ijhs/Vol52_4_2017__Art09.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_4_2017__Art09.pdf"
   },
   {
@@ -23784,9 +25369,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_4_2017__Art10.pdf",
     "juUrl": "",
     "size": 120.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_4_2017__Art10.pdf",
+    "gcs_key": "ijhs/Vol52_4_2017__Art10.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_4_2017__Art10.pdf"
   },
   {
@@ -23799,9 +25385,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_4_2017__Art11.pdf",
     "juUrl": "",
     "size": 171.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_4_2017__Art11.pdf",
+    "gcs_key": "ijhs/Vol52_4_2017__Art11.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_4_2017__Art11.pdf"
   },
   {
@@ -23814,9 +25401,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_4_2017__Art12.pdf",
     "juUrl": "",
     "size": 128.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_4_2017__Art12.pdf",
+    "gcs_key": "ijhs/Vol52_4_2017__Art12.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_4_2017__Art12.pdf"
   },
   {
@@ -23829,9 +25417,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/13-Books%20Received%20for%20Review.pdf",
     "juUrl": "",
     "size": 126.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/13-Books%20Received%20for%20Review.pdf",
+    "gcs_key": "ijhs/13-Books%20Received%20for%20Review.pdf",
     "localPath": "assets/pdfs/ijhs/13-Books%20Received%20for%20Review.pdf"
   },
   {
@@ -23844,9 +25433,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol52_4_2017__Art13.pdf",
     "juUrl": "",
     "size": 2318.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol52_4_2017__Art13.pdf",
+    "gcs_key": "ijhs/Vol52_4_2017__Art13.pdf",
     "localPath": "assets/pdfs/ijhs/Vol52_4_2017__Art13.pdf"
   },
   {
@@ -23859,9 +25449,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/17-Cumulativeindex.pdf",
     "juUrl": "",
     "size": 135.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/17-Cumulativeindex.pdf",
+    "gcs_key": "ijhs/17-Cumulativeindex.pdf",
     "localPath": "assets/pdfs/ijhs/17-Cumulativeindex.pdf"
   },
   {
@@ -23874,9 +25465,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/18-Contentsall.pdf",
     "juUrl": "",
     "size": 114.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/18-Contentsall.pdf",
+    "gcs_key": "ijhs/18-Contentsall.pdf",
     "localPath": "assets/pdfs/ijhs/18-Contentsall.pdf"
   },
   {
@@ -23889,9 +25481,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_1_2018__Contents.pdf",
     "juUrl": "",
     "size": 89.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_1_2018__Contents.pdf",
+    "gcs_key": "ijhs/Vol53_1_2018__Contents.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_1_2018__Contents.pdf"
   },
   {
@@ -23904,9 +25497,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_1_2018__Art01.pdf",
     "juUrl": "",
     "size": 244.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_1_2018__Art01.pdf",
+    "gcs_key": "ijhs/Vol53_1_2018__Art01.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_1_2018__Art01.pdf"
   },
   {
@@ -23919,9 +25513,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_1_2018__Art02.pdf",
     "juUrl": "",
     "size": 429.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_1_2018__Art02.pdf",
+    "gcs_key": "ijhs/Vol53_1_2018__Art02.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_1_2018__Art02.pdf"
   },
   {
@@ -23934,9 +25529,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_1_2018__Art03.pdf",
     "juUrl": "",
     "size": 286.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_1_2018__Art03.pdf",
+    "gcs_key": "ijhs/Vol53_1_2018__Art03.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_1_2018__Art03.pdf"
   },
   {
@@ -23949,9 +25545,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_1_2018__Art04.pdf",
     "juUrl": "",
     "size": 777.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_1_2018__Art04.pdf",
+    "gcs_key": "ijhs/Vol53_1_2018__Art04.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_1_2018__Art04.pdf"
   },
   {
@@ -23964,9 +25561,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_1_2018__Art05.pdf",
     "juUrl": "",
     "size": 154.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_1_2018__Art05.pdf",
+    "gcs_key": "ijhs/Vol53_1_2018__Art05.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_1_2018__Art05.pdf"
   },
   {
@@ -23979,9 +25577,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_1_2018__Art06.pdf",
     "juUrl": "",
     "size": 155.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_1_2018__Art06.pdf",
+    "gcs_key": "ijhs/Vol53_1_2018__Art06.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_1_2018__Art06.pdf"
   },
   {
@@ -23994,9 +25593,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_1_2018__Art07.pdf",
     "juUrl": "",
     "size": 138.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_1_2018__Art07.pdf",
+    "gcs_key": "ijhs/Vol53_1_2018__Art07.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_1_2018__Art07.pdf"
   },
   {
@@ -24009,9 +25609,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_1_2018__Art08.pdf",
     "juUrl": "",
     "size": 194.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_1_2018__Art08.pdf",
+    "gcs_key": "ijhs/Vol53_1_2018__Art08.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_1_2018__Art08.pdf"
   },
   {
@@ -24024,9 +25625,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_1_2018__Art09.pdf",
     "juUrl": "",
     "size": 169.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_1_2018__Art09.pdf",
+    "gcs_key": "ijhs/Vol53_1_2018__Art09.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_1_2018__Art09.pdf"
   },
   {
@@ -24039,9 +25641,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_1_2018__Art10.pdf",
     "juUrl": "",
     "size": 156.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_1_2018__Art10.pdf",
+    "gcs_key": "ijhs/Vol53_1_2018__Art10.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_1_2018__Art10.pdf"
   },
   {
@@ -24054,9 +25657,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_1_2018__Art11.pdf",
     "juUrl": "",
     "size": 111.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_1_2018__Art11.pdf",
+    "gcs_key": "ijhs/Vol53_1_2018__Art11.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_1_2018__Art11.pdf"
   },
   {
@@ -24069,9 +25673,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_1_2018__Art12.pdf",
     "juUrl": "",
     "size": 124.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_1_2018__Art12.pdf",
+    "gcs_key": "ijhs/Vol53_1_2018__Art12.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_1_2018__Art12.pdf"
   },
   {
@@ -24084,9 +25689,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_2_2018__Contents.pdf",
     "juUrl": "",
     "size": 87.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_2_2018__Contents.pdf",
+    "gcs_key": "ijhs/Vol53_2_2018__Contents.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_2_2018__Contents.pdf"
   },
   {
@@ -24099,9 +25705,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_2_2018__Art01.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vol53_2_2018__Art01.pdf",
     "size": 567.0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_2_2018__Art01.pdf",
+    "gcs_key": "ijhs/Vol53_2_2018__Art01.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_2_2018__Art01.pdf"
   },
   {
@@ -24114,9 +25721,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_2_2018__Art02.pdf",
     "juUrl": "",
     "size": 2752.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_2_2018__Art02.pdf",
+    "gcs_key": "ijhs/Vol53_2_2018__Art02.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_2_2018__Art02.pdf"
   },
   {
@@ -24129,9 +25737,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_2_2018__Art03.pdf",
     "juUrl": "",
     "size": 206.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_2_2018__Art03.pdf",
+    "gcs_key": "ijhs/Vol53_2_2018__Art03.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_2_2018__Art03.pdf"
   },
   {
@@ -24144,9 +25753,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_2_2018__Art04.pdf",
     "juUrl": "",
     "size": 297.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_2_2018__Art04.pdf",
+    "gcs_key": "ijhs/Vol53_2_2018__Art04.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_2_2018__Art04.pdf"
   },
   {
@@ -24159,9 +25769,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_2_2018__Art05.pdf",
     "juUrl": "",
     "size": 327.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_2_2018__Art05.pdf",
+    "gcs_key": "ijhs/Vol53_2_2018__Art05.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_2_2018__Art05.pdf"
   },
   {
@@ -24174,9 +25785,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_2_2018__Art06.pdf",
     "juUrl": "",
     "size": 7085.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_2_2018__Art06.pdf",
+    "gcs_key": "ijhs/Vol53_2_2018__Art06.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_2_2018__Art06.pdf"
   },
   {
@@ -24189,9 +25801,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_2_2018__Art07.pdf",
     "juUrl": "",
     "size": 2266.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_2_2018__Art07.pdf",
+    "gcs_key": "ijhs/Vol53_2_2018__Art07.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_2_2018__Art07.pdf"
   },
   {
@@ -24204,9 +25817,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_2_2018__Art08.pdf",
     "juUrl": "",
     "size": 118.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_2_2018__Art08.pdf",
+    "gcs_key": "ijhs/Vol53_2_2018__Art08.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_2_2018__Art08.pdf"
   },
   {
@@ -24219,9 +25833,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_2_2018__Art09.pdf",
     "juUrl": "",
     "size": 119.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_2_2018__Art09.pdf",
+    "gcs_key": "ijhs/Vol53_2_2018__Art09.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_2_2018__Art09.pdf"
   },
   {
@@ -24234,9 +25849,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_2_2018__Art10.pdf",
     "juUrl": "",
     "size": 106.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_2_2018__Art10.pdf",
+    "gcs_key": "ijhs/Vol53_2_2018__Art10.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_2_2018__Art10.pdf"
   },
   {
@@ -24249,9 +25865,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_2_2018__Art11.pdf",
     "juUrl": "",
     "size": 95.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_2_2018__Art11.pdf",
+    "gcs_key": "ijhs/Vol53_2_2018__Art11.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_2_2018__Art11.pdf"
   },
   {
@@ -24264,9 +25881,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_3_2018__Art01.pdf",
     "juUrl": "",
     "size": 1524.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_3_2018__Art01.pdf",
+    "gcs_key": "ijhs/Vol53_3_2018__Art01.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_3_2018__Art01.pdf"
   },
   {
@@ -24279,9 +25897,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_3_2018__Art02.pdf",
     "juUrl": "",
     "size": 195.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_3_2018__Art02.pdf",
+    "gcs_key": "ijhs/Vol53_3_2018__Art02.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_3_2018__Art02.pdf"
   },
   {
@@ -24294,9 +25913,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_3_2018__Art03.pdf",
     "juUrl": "",
     "size": 377.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_3_2018__Art03.pdf",
+    "gcs_key": "ijhs/Vol53_3_2018__Art03.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_3_2018__Art03.pdf"
   },
   {
@@ -24309,9 +25929,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_3_2018__Art04.pdf",
     "juUrl": "",
     "size": 998.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_3_2018__Art04.pdf",
+    "gcs_key": "ijhs/Vol53_3_2018__Art04.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_3_2018__Art04.pdf"
   },
   {
@@ -24324,9 +25945,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_3_2018__Art05.pdf",
     "juUrl": "",
     "size": 142.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_3_2018__Art05.pdf",
+    "gcs_key": "ijhs/Vol53_3_2018__Art05.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_3_2018__Art05.pdf"
   },
   {
@@ -24339,9 +25961,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_3_2018__Art06.pdf",
     "juUrl": "",
     "size": 191.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_3_2018__Art06.pdf",
+    "gcs_key": "ijhs/Vol53_3_2018__Art06.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_3_2018__Art06.pdf"
   },
   {
@@ -24354,9 +25977,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_3_2018__Art07.pdf",
     "juUrl": "",
     "size": 159.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_3_2018__Art07.pdf",
+    "gcs_key": "ijhs/Vol53_3_2018__Art07.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_3_2018__Art07.pdf"
   },
   {
@@ -24369,9 +25993,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_3_2018__Art08.pdf",
     "juUrl": "",
     "size": 360.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_3_2018__Art08.pdf",
+    "gcs_key": "ijhs/Vol53_3_2018__Art08.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_3_2018__Art08.pdf"
   },
   {
@@ -24384,9 +26009,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_3_2018__Art09.pdf",
     "juUrl": "",
     "size": 283.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_3_2018__Art09.pdf",
+    "gcs_key": "ijhs/Vol53_3_2018__Art09.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_3_2018__Art09.pdf"
   },
   {
@@ -24399,9 +26025,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_3_2018__Art10.pdf",
     "juUrl": "",
     "size": 1916.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_3_2018__Art10.pdf",
+    "gcs_key": "ijhs/Vol53_3_2018__Art10.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_3_2018__Art10.pdf"
   },
   {
@@ -24414,9 +26041,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_3_2018__Art11.pdf",
     "juUrl": "",
     "size": 346.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_3_2018__Art11.pdf",
+    "gcs_key": "ijhs/Vol53_3_2018__Art11.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_3_2018__Art11.pdf"
   },
   {
@@ -24429,9 +26057,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_3_2018__Art12.pdf",
     "juUrl": "",
     "size": 93.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_3_2018__Art12.pdf",
+    "gcs_key": "ijhs/Vol53_3_2018__Art12.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_3_2018__Art12.pdf"
   },
   {
@@ -24444,9 +26073,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_3_2018__Art13.pdf",
     "juUrl": "",
     "size": 126.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_3_2018__Art13.pdf",
+    "gcs_key": "ijhs/Vol53_3_2018__Art13.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_3_2018__Art13.pdf"
   },
   {
@@ -24459,9 +26089,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_4_2018__Contents.pdf",
     "juUrl": "",
     "size": 376.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_4_2018__Contents.pdf",
+    "gcs_key": "ijhs/Vol53_4_2018__Contents.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Contents.pdf"
   },
   {
@@ -24474,9 +26105,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_4_2018__Art01.pdf",
     "juUrl": "",
     "size": 348.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_4_2018__Art01.pdf",
+    "gcs_key": "ijhs/Vol53_4_2018__Art01.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art01.pdf"
   },
   {
@@ -24489,9 +26121,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_4_2018__Art02.pdf",
     "juUrl": "",
     "size": 94.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_4_2018__Art02.pdf",
+    "gcs_key": "ijhs/Vol53_4_2018__Art02.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art02.pdf"
   },
   {
@@ -24504,9 +26137,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_4_2018__Art03.pdf",
     "juUrl": "",
     "size": 137.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_4_2018__Art03.pdf",
+    "gcs_key": "ijhs/Vol53_4_2018__Art03.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art03.pdf"
   },
   {
@@ -24519,9 +26153,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_4_2018__Art04.pdf",
     "juUrl": "",
     "size": 375.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_4_2018__Art04.pdf",
+    "gcs_key": "ijhs/Vol53_4_2018__Art04.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art04.pdf"
   },
   {
@@ -24534,9 +26169,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_4_2018__Art05.pdf",
     "juUrl": "",
     "size": 124.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_4_2018__Art05.pdf",
+    "gcs_key": "ijhs/Vol53_4_2018__Art05.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art05.pdf"
   },
   {
@@ -24549,9 +26185,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_4_2018__Art06.pdf",
     "juUrl": "",
     "size": 118.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_4_2018__Art06.pdf",
+    "gcs_key": "ijhs/Vol53_4_2018__Art06.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art06.pdf"
   },
   {
@@ -24564,9 +26201,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_4_2018__Art07.pdf",
     "juUrl": "",
     "size": 804.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_4_2018__Art07.pdf",
+    "gcs_key": "ijhs/Vol53_4_2018__Art07.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art07.pdf"
   },
   {
@@ -24579,9 +26217,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_4_2018__Art08.pdf",
     "juUrl": "",
     "size": 151.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_4_2018__Art08.pdf",
+    "gcs_key": "ijhs/Vol53_4_2018__Art08.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art08.pdf"
   },
   {
@@ -24594,9 +26233,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_4_2018__Art09.pdf",
     "juUrl": "",
     "size": 644.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_4_2018__Art09.pdf",
+    "gcs_key": "ijhs/Vol53_4_2018__Art09.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art09.pdf"
   },
   {
@@ -24609,9 +26249,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_4_2018__Art10.pdf",
     "juUrl": "",
     "size": 124.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_4_2018__Art10.pdf",
+    "gcs_key": "ijhs/Vol53_4_2018__Art10.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art10.pdf"
   },
   {
@@ -24624,9 +26265,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_4_2018__Art11.pdf",
     "juUrl": "",
     "size": 128.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_4_2018__Art11.pdf",
+    "gcs_key": "ijhs/Vol53_4_2018__Art11.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art11.pdf"
   },
   {
@@ -24639,9 +26281,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_4_2018__Art12.pdf",
     "juUrl": "",
     "size": 1118.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_4_2018__Art12.pdf",
+    "gcs_key": "ijhs/Vol53_4_2018__Art12.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art12.pdf"
   },
   {
@@ -24654,9 +26297,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_4_2018__Art13.pdf",
     "juUrl": "",
     "size": 129.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_4_2018__Art13.pdf",
+    "gcs_key": "ijhs/Vol53_4_2018__Art13.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art13.pdf"
   },
   {
@@ -24669,9 +26313,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_4_2018__Art14.pdf",
     "juUrl": "",
     "size": 1350.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_4_2018__Art14.pdf",
+    "gcs_key": "ijhs/Vol53_4_2018__Art14.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art14.pdf"
   },
   {
@@ -24684,9 +26329,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_4_2018__Art15.pdf",
     "juUrl": "",
     "size": 247.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_4_2018__Art15.pdf",
+    "gcs_key": "ijhs/Vol53_4_2018__Art15.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art15.pdf"
   },
   {
@@ -24699,9 +26345,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_4_2018__Art16.pdf",
     "juUrl": "",
     "size": 234.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_4_2018__Art16.pdf",
+    "gcs_key": "ijhs/Vol53_4_2018__Art16.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art16.pdf"
   },
   {
@@ -24714,9 +26361,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_4_2018__Art17.pdf",
     "juUrl": "",
     "size": 854.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_4_2018__Art17.pdf",
+    "gcs_key": "ijhs/Vol53_4_2018__Art17.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art17.pdf"
   },
   {
@@ -24729,9 +26377,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_4_2018__Art18.pdf",
     "juUrl": "",
     "size": 138.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_4_2018__Art18.pdf",
+    "gcs_key": "ijhs/Vol53_4_2018__Art18.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art18.pdf"
   },
   {
@@ -24744,9 +26393,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_4_2018__Art19.pdf",
     "juUrl": "",
     "size": 446.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_4_2018__Art19.pdf",
+    "gcs_key": "ijhs/Vol53_4_2018__Art19.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art19.pdf"
   },
   {
@@ -24759,9 +26409,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_4_2018__Art20.pdf",
     "juUrl": "",
     "size": 126.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_4_2018__Art20.pdf",
+    "gcs_key": "ijhs/Vol53_4_2018__Art20.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art20.pdf"
   },
   {
@@ -24774,9 +26425,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_4_2018__Art21.pdf",
     "juUrl": "",
     "size": 324.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_4_2018__Art21.pdf",
+    "gcs_key": "ijhs/Vol53_4_2018__Art21.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art21.pdf"
   },
   {
@@ -24789,9 +26441,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_4_2018__Art22.pdf",
     "juUrl": "",
     "size": 397.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_4_2018__Art22.pdf",
+    "gcs_key": "ijhs/Vol53_4_2018__Art22.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art22.pdf"
   },
   {
@@ -24804,9 +26457,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_4_2018__Art23.pdf",
     "juUrl": "",
     "size": 130.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_4_2018__Art23.pdf",
+    "gcs_key": "ijhs/Vol53_4_2018__Art23.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art23.pdf"
   },
   {
@@ -24819,9 +26473,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_4_2018__Art24.pdf",
     "juUrl": "",
     "size": 121.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_4_2018__Art24.pdf",
+    "gcs_key": "ijhs/Vol53_4_2018__Art24.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art24.pdf"
   },
   {
@@ -24834,9 +26489,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_4_2018__Art25.pdf",
     "juUrl": "",
     "size": 246.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_4_2018__Art25.pdf",
+    "gcs_key": "ijhs/Vol53_4_2018__Art25.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art25.pdf"
   },
   {
@@ -24849,9 +26505,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_4_2018__Art26.pdf",
     "juUrl": "",
     "size": 616.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_4_2018__Art26.pdf",
+    "gcs_key": "ijhs/Vol53_4_2018__Art26.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art26.pdf"
   },
   {
@@ -24864,9 +26521,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_4_2018__Art27.pdf",
     "juUrl": "",
     "size": 1115.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_4_2018__Art27.pdf",
+    "gcs_key": "ijhs/Vol53_4_2018__Art27.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art27.pdf"
   },
   {
@@ -24879,9 +26537,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_4_2018__Art28.pdf",
     "juUrl": "",
     "size": 145.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_4_2018__Art28.pdf",
+    "gcs_key": "ijhs/Vol53_4_2018__Art28.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art28.pdf"
   },
   {
@@ -24894,9 +26553,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_4_2018__Art29.pdf",
     "juUrl": "",
     "size": 124.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_4_2018__Art29.pdf",
+    "gcs_key": "ijhs/Vol53_4_2018__Art29.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art29.pdf"
   },
   {
@@ -24909,9 +26569,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_4_2018__Art30.pdf",
     "juUrl": "",
     "size": 122.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_4_2018__Art30.pdf",
+    "gcs_key": "ijhs/Vol53_4_2018__Art30.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art30.pdf"
   },
   {
@@ -24924,9 +26585,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_4_2018__Art31.pdf",
     "juUrl": "",
     "size": 122.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_4_2018__Art31.pdf",
+    "gcs_key": "ijhs/Vol53_4_2018__Art31.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art31.pdf"
   },
   {
@@ -24939,9 +26601,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_4_2018__Art32.pdf",
     "juUrl": "",
     "size": 533.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_4_2018__Art32.pdf",
+    "gcs_key": "ijhs/Vol53_4_2018__Art32.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art32.pdf"
   },
   {
@@ -24954,9 +26617,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_4_2018-Index.pdf",
     "juUrl": "",
     "size": 99.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_4_2018-Index.pdf",
+    "gcs_key": "ijhs/Vol53_4_2018-Index.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018-Index.pdf"
   },
   {
@@ -24969,9 +26633,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_4_2018-Cumulativeindex.pdf",
     "juUrl": "",
     "size": 137.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_4_2018-Cumulativeindex.pdf",
+    "gcs_key": "ijhs/Vol53_4_2018-Cumulativeindex.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018-Cumulativeindex.pdf"
   },
   {
@@ -24984,9 +26649,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/35-Contentsall.pdf",
     "juUrl": "",
     "size": 116.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/35-Contentsall.pdf",
+    "gcs_key": "ijhs/35-Contentsall.pdf",
     "localPath": "assets/pdfs/ijhs/35-Contentsall.pdf"
   },
   {
@@ -24999,9 +26665,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol53_4_2018__Books.pdf",
     "juUrl": "",
     "size": 120.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol53_4_2018__Books.pdf",
+    "gcs_key": "ijhs/Vol53_4_2018__Books.pdf",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Books.pdf"
   },
   {
@@ -25014,9 +26681,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_1_2019__Contents.pdf",
     "juUrl": "",
     "size": 91.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_1_2019__Contents.pdf",
+    "gcs_key": "ijhs/Vol54_1_2019__Contents.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_1_2019__Contents.pdf"
   },
   {
@@ -25029,9 +26697,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_1_2019__Art01.pdf",
     "juUrl": "",
     "size": 174.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_1_2019__Art01.pdf",
+    "gcs_key": "ijhs/Vol54_1_2019__Art01.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_1_2019__Art01.pdf"
   },
   {
@@ -25044,9 +26713,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_1_2019__Art02.pdf",
     "juUrl": "",
     "size": 684.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_1_2019__Art02.pdf",
+    "gcs_key": "ijhs/Vol54_1_2019__Art02.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_1_2019__Art02.pdf"
   },
   {
@@ -25059,9 +26729,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_1_2019__Art03.pdf",
     "juUrl": "",
     "size": 153.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_1_2019__Art03.pdf",
+    "gcs_key": "ijhs/Vol54_1_2019__Art03.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_1_2019__Art03.pdf"
   },
   {
@@ -25074,9 +26745,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_1_2019__Art04.pdf",
     "juUrl": "",
     "size": 2393.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_1_2019__Art04.pdf",
+    "gcs_key": "ijhs/Vol54_1_2019__Art04.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_1_2019__Art04.pdf"
   },
   {
@@ -25089,9 +26761,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_1_2019__Art05.pdf",
     "juUrl": "",
     "size": 318.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_1_2019__Art05.pdf",
+    "gcs_key": "ijhs/Vol54_1_2019__Art05.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_1_2019__Art05.pdf"
   },
   {
@@ -25104,9 +26777,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_1_2019__Art06.pdf",
     "juUrl": "",
     "size": 192.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_1_2019__Art06.pdf",
+    "gcs_key": "ijhs/Vol54_1_2019__Art06.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_1_2019__Art06.pdf"
   },
   {
@@ -25119,9 +26793,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_1_2019__Art07.pdf",
     "juUrl": "",
     "size": 156.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_1_2019__Art07.pdf",
+    "gcs_key": "ijhs/Vol54_1_2019__Art07.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_1_2019__Art07.pdf"
   },
   {
@@ -25134,9 +26809,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_1_2019__Art08.pdf",
     "juUrl": "",
     "size": 512.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_1_2019__Art08.pdf",
+    "gcs_key": "ijhs/Vol54_1_2019__Art08.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_1_2019__Art08.pdf"
   },
   {
@@ -25149,9 +26825,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_1_2019__Art09.pdf",
     "juUrl": "",
     "size": 330.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_1_2019__Art09.pdf",
+    "gcs_key": "ijhs/Vol54_1_2019__Art09.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_1_2019__Art09.pdf"
   },
   {
@@ -25164,9 +26841,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_1_2019__Art10.pdf",
     "juUrl": "",
     "size": 106.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_1_2019__Art10.pdf",
+    "gcs_key": "ijhs/Vol54_1_2019__Art10.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_1_2019__Art10.pdf"
   },
   {
@@ -25179,9 +26857,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_1_2019__Art11.pdf",
     "juUrl": "",
     "size": 115.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_1_2019__Art11.pdf",
+    "gcs_key": "ijhs/Vol54_1_2019__Art11.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_1_2019__Art11.pdf"
   },
   {
@@ -25194,9 +26873,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_1_2019__Art12.pdf",
     "juUrl": "",
     "size": 107.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_1_2019__Art12.pdf",
+    "gcs_key": "ijhs/Vol54_1_2019__Art12.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_1_2019__Art12.pdf"
   },
   {
@@ -25209,9 +26889,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_1_2019__Art13.pdf",
     "juUrl": "",
     "size": 142.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_1_2019__Art13.pdf",
+    "gcs_key": "ijhs/Vol54_1_2019__Art13.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_1_2019__Art13.pdf"
   },
   {
@@ -25224,9 +26905,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_1_2019__Art14.pdf",
     "juUrl": "",
     "size": 1048.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_1_2019__Art14.pdf",
+    "gcs_key": "ijhs/Vol54_1_2019__Art14.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_1_2019__Art14.pdf"
   },
   {
@@ -25239,9 +26921,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_2_2019__Contents.pdf",
     "juUrl": "",
     "size": 92.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_2_2019__Contents.pdf",
+    "gcs_key": "ijhs/Vol54_2_2019__Contents.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_2_2019__Contents.pdf"
   },
   {
@@ -25254,9 +26937,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_2_2019__Art01.pdf",
     "juUrl": "",
     "size": 582.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_2_2019__Art01.pdf",
+    "gcs_key": "ijhs/Vol54_2_2019__Art01.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_2_2019__Art01.pdf"
   },
   {
@@ -25269,9 +26953,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_2_2019__Art02.pdf",
     "juUrl": "",
     "size": 696.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_2_2019__Art02.pdf",
+    "gcs_key": "ijhs/Vol54_2_2019__Art02.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_2_2019__Art02.pdf"
   },
   {
@@ -25284,9 +26969,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_2_2019__Art03.pdf",
     "juUrl": "",
     "size": 228.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_2_2019__Art03.pdf",
+    "gcs_key": "ijhs/Vol54_2_2019__Art03.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_2_2019__Art03.pdf"
   },
   {
@@ -25299,9 +26985,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_2_2019__Art04.pdf",
     "juUrl": "",
     "size": 208.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_2_2019__Art04.pdf",
+    "gcs_key": "ijhs/Vol54_2_2019__Art04.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_2_2019__Art04.pdf"
   },
   {
@@ -25314,9 +27001,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_2_2019__Art05.pdf",
     "juUrl": "",
     "size": 301.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_2_2019__Art05.pdf",
+    "gcs_key": "ijhs/Vol54_2_2019__Art05.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_2_2019__Art05.pdf"
   },
   {
@@ -25329,9 +27017,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_2_2019__Art06.pdf",
     "juUrl": "",
     "size": 161.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_2_2019__Art06.pdf",
+    "gcs_key": "ijhs/Vol54_2_2019__Art06.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_2_2019__Art06.pdf"
   },
   {
@@ -25344,9 +27033,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_2_2019__Art07.pdf",
     "juUrl": "",
     "size": 139.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_2_2019__Art07.pdf",
+    "gcs_key": "ijhs/Vol54_2_2019__Art07.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_2_2019__Art07.pdf"
   },
   {
@@ -25359,9 +27049,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_2_2019__Art08.pdf",
     "juUrl": "",
     "size": 206.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_2_2019__Art08.pdf",
+    "gcs_key": "ijhs/Vol54_2_2019__Art08.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_2_2019__Art08.pdf"
   },
   {
@@ -25374,9 +27065,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_2_2019__Art09.pdf",
     "juUrl": "",
     "size": 112.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_2_2019__Art09.pdf",
+    "gcs_key": "ijhs/Vol54_2_2019__Art09.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_2_2019__Art09.pdf"
   },
   {
@@ -25389,9 +27081,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_2_2019__Art10.pdf",
     "juUrl": "",
     "size": 104.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_2_2019__Art10.pdf",
+    "gcs_key": "ijhs/Vol54_2_2019__Art10.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_2_2019__Art10.pdf"
   },
   {
@@ -25404,9 +27097,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_2_2019__Art11.pdf",
     "juUrl": "",
     "size": 132.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_2_2019__Art11.pdf",
+    "gcs_key": "ijhs/Vol54_2_2019__Art11.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_2_2019__Art11.pdf"
   },
   {
@@ -25419,9 +27113,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_2_2019__Art12.pdf",
     "juUrl": "",
     "size": 117.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_2_2019__Art12.pdf",
+    "gcs_key": "ijhs/Vol54_2_2019__Art12.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_2_2019__Art12.pdf"
   },
   {
@@ -25434,9 +27129,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_2_2019__Art13.pdf",
     "juUrl": "",
     "size": 358.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_2_2019__Art13.pdf",
+    "gcs_key": "ijhs/Vol54_2_2019__Art13.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_2_2019__Art13.pdf"
   },
   {
@@ -25449,9 +27145,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_2_2019__Art14.pdf",
     "juUrl": "",
     "size": 160.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_2_2019__Art14.pdf",
+    "gcs_key": "ijhs/Vol54_2_2019__Art14.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_2_2019__Art14.pdf"
   },
   {
@@ -25464,9 +27161,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_3_2019__Art01.pdf",
     "juUrl": "",
     "size": 206.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_3_2019__Art01.pdf",
+    "gcs_key": "ijhs/Vol54_3_2019__Art01.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_3_2019__Art01.pdf"
   },
   {
@@ -25479,9 +27177,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_3_2019__Art02.pdf",
     "juUrl": "",
     "size": 304.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_3_2019__Art02.pdf",
+    "gcs_key": "ijhs/Vol54_3_2019__Art02.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_3_2019__Art02.pdf"
   },
   {
@@ -25494,9 +27193,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_3_2019__Art03.pdf",
     "juUrl": "",
     "size": 295.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_3_2019__Art03.pdf",
+    "gcs_key": "ijhs/Vol54_3_2019__Art03.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_3_2019__Art03.pdf"
   },
   {
@@ -25509,9 +27209,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_3_2019__Art04.pdf",
     "juUrl": "",
     "size": 166.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_3_2019__Art04.pdf",
+    "gcs_key": "ijhs/Vol54_3_2019__Art04.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_3_2019__Art04.pdf"
   },
   {
@@ -25524,9 +27225,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_3_2019__Art05.pdf",
     "juUrl": "",
     "size": 141.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_3_2019__Art05.pdf",
+    "gcs_key": "ijhs/Vol54_3_2019__Art05.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_3_2019__Art05.pdf"
   },
   {
@@ -25539,9 +27241,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_3_2019__Art06.pdf",
     "juUrl": "",
     "size": 124.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_3_2019__Art06.pdf",
+    "gcs_key": "ijhs/Vol54_3_2019__Art06.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_3_2019__Art06.pdf"
   },
   {
@@ -25554,9 +27257,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_3_2019__Art07.pdf",
     "juUrl": "",
     "size": 137.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_3_2019__Art07.pdf",
+    "gcs_key": "ijhs/Vol54_3_2019__Art07.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_3_2019__Art07.pdf"
   },
   {
@@ -25569,9 +27273,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_3_2019__Art08.pdf",
     "juUrl": "",
     "size": 275.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_3_2019__Art08.pdf",
+    "gcs_key": "ijhs/Vol54_3_2019__Art08.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_3_2019__Art08.pdf"
   },
   {
@@ -25584,9 +27289,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_3_2019__Art10.pdf",
     "juUrl": "",
     "size": 561.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_3_2019__Art10.pdf",
+    "gcs_key": "ijhs/Vol54_3_2019__Art10.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_3_2019__Art10.pdf"
   },
   {
@@ -25599,9 +27305,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_3_2019__Art11.pdf",
     "juUrl": "",
     "size": 86.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_3_2019__Art11.pdf",
+    "gcs_key": "ijhs/Vol54_3_2019__Art11.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_3_2019__Art11.pdf"
   },
   {
@@ -25614,9 +27321,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_3_2019__Art12.pdf",
     "juUrl": "",
     "size": 63.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_3_2019__Art12.pdf",
+    "gcs_key": "ijhs/Vol54_3_2019__Art12.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_3_2019__Art12.pdf"
   },
   {
@@ -25629,9 +27337,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_3_2019__Art13.pdf",
     "juUrl": "",
     "size": 155.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_3_2019__Art13.pdf",
+    "gcs_key": "ijhs/Vol54_3_2019__Art13.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_3_2019__Art13.pdf"
   },
   {
@@ -25644,9 +27353,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_3_2019__Art14.pdf",
     "juUrl": "",
     "size": 121.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_3_2019__Art14.pdf",
+    "gcs_key": "ijhs/Vol54_3_2019__Art14.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_3_2019__Art14.pdf"
   },
   {
@@ -25659,9 +27369,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Contents_Vol54_4.pdf",
     "juUrl": "",
     "size": 25.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Contents_Vol54_4.pdf",
+    "gcs_key": "ijhs/Contents_Vol54_4.pdf",
     "localPath": "assets/pdfs/ijhs/Contents_Vol54_4.pdf"
   },
   {
@@ -25674,9 +27385,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_4_2019__Art01.pdf",
     "juUrl": "",
     "size": 149.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_4_2019__Art01.pdf",
+    "gcs_key": "ijhs/Vol54_4_2019__Art01.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_4_2019__Art01.pdf"
   },
   {
@@ -25689,9 +27401,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_4_2019__Art02.pdf",
     "juUrl": "",
     "size": 616.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_4_2019__Art02.pdf",
+    "gcs_key": "ijhs/Vol54_4_2019__Art02.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_4_2019__Art02.pdf"
   },
   {
@@ -25704,9 +27417,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_4_2019__Art03.pdf",
     "juUrl": "",
     "size": 437.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_4_2019__Art03.pdf",
+    "gcs_key": "ijhs/Vol54_4_2019__Art03.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_4_2019__Art03.pdf"
   },
   {
@@ -25719,9 +27433,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_4_2019__Art04.pdf",
     "juUrl": "",
     "size": 82.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_4_2019__Art04.pdf",
+    "gcs_key": "ijhs/Vol54_4_2019__Art04.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_4_2019__Art04.pdf"
   },
   {
@@ -25734,9 +27449,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_4_2019__Art05.pdf",
     "juUrl": "",
     "size": 142.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_4_2019__Art05.pdf",
+    "gcs_key": "ijhs/Vol54_4_2019__Art05.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_4_2019__Art05.pdf"
   },
   {
@@ -25749,9 +27465,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_4_2019__Art06.pdf",
     "juUrl": "",
     "size": 526.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_4_2019__Art06.pdf",
+    "gcs_key": "ijhs/Vol54_4_2019__Art06.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_4_2019__Art06.pdf"
   },
   {
@@ -25764,9 +27481,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_4_2019__Art08.pdf",
     "juUrl": "",
     "size": 397.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_4_2019__Art08.pdf",
+    "gcs_key": "ijhs/Vol54_4_2019__Art08.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_4_2019__Art08.pdf"
   },
   {
@@ -25779,9 +27497,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol54_4_2019__Art09.pdf",
     "juUrl": "",
     "size": 352.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol54_4_2019__Art09.pdf",
+    "gcs_key": "ijhs/Vol54_4_2019__Art09.pdf",
     "localPath": "assets/pdfs/ijhs/Vol54_4_2019__Art09.pdf"
   },
   {
@@ -25794,9 +27513,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol55_1_2020__contents.pdf",
     "juUrl": "",
     "size": 28.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol55_1_2020__contents.pdf",
+    "gcs_key": "ijhs/Vol55_1_2020__contents.pdf",
     "localPath": "assets/pdfs/ijhs/Vol55_1_2020__contents.pdf"
   },
   {
@@ -25809,9 +27529,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol55_1_2020__Art01.pdf",
     "juUrl": "",
     "size": 226.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol55_1_2020__Art01.pdf",
+    "gcs_key": "ijhs/Vol55_1_2020__Art01.pdf",
     "localPath": "assets/pdfs/ijhs/Vol55_1_2020__Art01.pdf"
   },
   {
@@ -25824,9 +27545,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol55_1_2020__Art02.pdf",
     "juUrl": "",
     "size": 365.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol55_1_2020__Art02.pdf",
+    "gcs_key": "ijhs/Vol55_1_2020__Art02.pdf",
     "localPath": "assets/pdfs/ijhs/Vol55_1_2020__Art02.pdf"
   },
   {
@@ -25839,9 +27561,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol55_1_2020__Art03.pdf",
     "juUrl": "",
     "size": 240.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol55_1_2020__Art03.pdf",
+    "gcs_key": "ijhs/Vol55_1_2020__Art03.pdf",
     "localPath": "assets/pdfs/ijhs/Vol55_1_2020__Art03.pdf"
   },
   {
@@ -25854,9 +27577,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol55_1_2020__Art04.pdf",
     "juUrl": "",
     "size": 191.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol55_1_2020__Art04.pdf",
+    "gcs_key": "ijhs/Vol55_1_2020__Art04.pdf",
     "localPath": "assets/pdfs/ijhs/Vol55_1_2020__Art04.pdf"
   },
   {
@@ -25869,9 +27593,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol55_1_2020__Art05.pdf",
     "juUrl": "",
     "size": 141.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol55_1_2020__Art05.pdf",
+    "gcs_key": "ijhs/Vol55_1_2020__Art05.pdf",
     "localPath": "assets/pdfs/ijhs/Vol55_1_2020__Art05.pdf"
   },
   {
@@ -25884,9 +27609,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol55_1_2020__Art06.pdf",
     "juUrl": "",
     "size": 821.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol55_1_2020__Art06.pdf",
+    "gcs_key": "ijhs/Vol55_1_2020__Art06.pdf",
     "localPath": "assets/pdfs/ijhs/Vol55_1_2020__Art06.pdf"
   },
   {
@@ -25899,9 +27625,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol55_1_2020__Art07.pdf",
     "juUrl": "",
     "size": 1359.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol55_1_2020__Art07.pdf",
+    "gcs_key": "ijhs/Vol55_1_2020__Art07.pdf",
     "localPath": "assets/pdfs/ijhs/Vol55_1_2020__Art07.pdf"
   },
   {
@@ -25914,9 +27641,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol55_1_2020__Art08.pdf",
     "juUrl": "",
     "size": 84.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol55_1_2020__Art08.pdf",
+    "gcs_key": "ijhs/Vol55_1_2020__Art08.pdf",
     "localPath": "assets/pdfs/ijhs/Vol55_1_2020__Art08.pdf"
   },
   {
@@ -25929,9 +27657,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol55_2_2020__Contents.pdf",
     "juUrl": "",
     "size": 28.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol55_2_2020__Contents.pdf",
+    "gcs_key": "ijhs/Vol55_2_2020__Contents.pdf",
     "localPath": "assets/pdfs/ijhs/Vol55_2_2020__Contents.pdf"
   },
   {
@@ -25944,9 +27673,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol55_2_2020__Art01.pdf",
     "juUrl": "",
     "size": 164.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol55_2_2020__Art01.pdf",
+    "gcs_key": "ijhs/Vol55_2_2020__Art01.pdf",
     "localPath": "assets/pdfs/ijhs/Vol55_2_2020__Art01.pdf"
   },
   {
@@ -25959,9 +27689,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol55_2_2020__Art02.pdf",
     "juUrl": "",
     "size": 667.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol55_2_2020__Art02.pdf",
+    "gcs_key": "ijhs/Vol55_2_2020__Art02.pdf",
     "localPath": "assets/pdfs/ijhs/Vol55_2_2020__Art02.pdf"
   },
   {
@@ -25974,9 +27705,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol55_2_2020__Art03.pdf",
     "juUrl": "",
     "size": 152.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol55_2_2020__Art03.pdf",
+    "gcs_key": "ijhs/Vol55_2_2020__Art03.pdf",
     "localPath": "assets/pdfs/ijhs/Vol55_2_2020__Art03.pdf"
   },
   {
@@ -25989,9 +27721,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol55_2_2020__Art04.pdf",
     "juUrl": "",
     "size": 1627.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol55_2_2020__Art04.pdf",
+    "gcs_key": "ijhs/Vol55_2_2020__Art04.pdf",
     "localPath": "assets/pdfs/ijhs/Vol55_2_2020__Art04.pdf"
   },
   {
@@ -26004,9 +27737,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol55_2_2020__Art05.pdf",
     "juUrl": "",
     "size": 169.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol55_2_2020__Art05.pdf",
+    "gcs_key": "ijhs/Vol55_2_2020__Art05.pdf",
     "localPath": "assets/pdfs/ijhs/Vol55_2_2020__Art05.pdf"
   },
   {
@@ -26019,9 +27753,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol55_2_2020__Art06.pdf",
     "juUrl": "",
     "size": 313.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol55_2_2020__Art06.pdf",
+    "gcs_key": "ijhs/Vol55_2_2020__Art06.pdf",
     "localPath": "assets/pdfs/ijhs/Vol55_2_2020__Art06.pdf"
   },
   {
@@ -26034,9 +27769,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol55_2_2020__Art07.pdf",
     "juUrl": "",
     "size": 251.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol55_2_2020__Art07.pdf",
+    "gcs_key": "ijhs/Vol55_2_2020__Art07.pdf",
     "localPath": "assets/pdfs/ijhs/Vol55_2_2020__Art07.pdf"
   },
   {
@@ -26049,9 +27785,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol55_2_2020__Art08.pdf",
     "juUrl": "",
     "size": 357.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol55_2_2020__Art08.pdf",
+    "gcs_key": "ijhs/Vol55_2_2020__Art08.pdf",
     "localPath": "assets/pdfs/ijhs/Vol55_2_2020__Art08.pdf"
   },
   {
@@ -26064,9 +27801,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol55_3_2020__Contents.pdf",
     "juUrl": "",
     "size": 28.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol55_3_2020__Contents.pdf",
+    "gcs_key": "ijhs/Vol55_3_2020__Contents.pdf",
     "localPath": "assets/pdfs/ijhs/Vol55_3_2020__Contents.pdf"
   },
   {
@@ -26079,9 +27817,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol55_3_2020__Art01.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vol55_3_2020__Art01.pdf",
     "size": 1284.0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol55_3_2020__Art01.pdf",
+    "gcs_key": "ijhs/Vol55_3_2020__Art01.pdf",
     "localPath": "assets/pdfs/ijhs/Vol55_3_2020__Art01.pdf"
   },
   {
@@ -26094,9 +27833,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol55_3_2020__Art02.pdf",
     "juUrl": "",
     "size": 371.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol55_3_2020__Art02.pdf",
+    "gcs_key": "ijhs/Vol55_3_2020__Art02.pdf",
     "localPath": "assets/pdfs/ijhs/Vol55_3_2020__Art02.pdf"
   },
   {
@@ -26109,9 +27849,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol55_3_2020__Art03.pdf",
     "juUrl": "",
     "size": 122.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol55_3_2020__Art03.pdf",
+    "gcs_key": "ijhs/Vol55_3_2020__Art03.pdf",
     "localPath": "assets/pdfs/ijhs/Vol55_3_2020__Art03.pdf"
   },
   {
@@ -26124,9 +27865,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol55_3_2020__Art04.pdf",
     "juUrl": "",
     "size": 115.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol55_3_2020__Art04.pdf",
+    "gcs_key": "ijhs/Vol55_3_2020__Art04.pdf",
     "localPath": "assets/pdfs/ijhs/Vol55_3_2020__Art04.pdf"
   },
   {
@@ -26139,9 +27881,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol55_3_2020__Art05.pdf",
     "juUrl": "",
     "size": 97.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol55_3_2020__Art05.pdf",
+    "gcs_key": "ijhs/Vol55_3_2020__Art05.pdf",
     "localPath": "assets/pdfs/ijhs/Vol55_3_2020__Art05.pdf"
   },
   {
@@ -26154,9 +27897,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol55_3_2020__Art06.pdf",
     "juUrl": "",
     "size": 103.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol55_3_2020__Art06.pdf",
+    "gcs_key": "ijhs/Vol55_3_2020__Art06.pdf",
     "localPath": "assets/pdfs/ijhs/Vol55_3_2020__Art06.pdf"
   },
   {
@@ -26169,9 +27913,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol55_3_2020__Art07.pdf",
     "juUrl": "",
     "size": 259.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol55_3_2020__Art07.pdf",
+    "gcs_key": "ijhs/Vol55_3_2020__Art07.pdf",
     "localPath": "assets/pdfs/ijhs/Vol55_3_2020__Art07.pdf"
   },
   {
@@ -26184,9 +27929,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol55_3_2020__Art08.pdf",
     "juUrl": "",
     "size": 124.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol55_3_2020__Art08.pdf",
+    "gcs_key": "ijhs/Vol55_3_2020__Art08.pdf",
     "localPath": "assets/pdfs/ijhs/Vol55_3_2020__Art08.pdf"
   },
   {
@@ -26199,9 +27945,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol55_4Contents.pdf",
     "juUrl": "",
     "size": 29.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol55_4Contents.pdf",
+    "gcs_key": "ijhs/Vol55_4Contents.pdf",
     "localPath": "assets/pdfs/ijhs/Vol55_4Contents.pdf"
   },
   {
@@ -26214,9 +27961,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol55_4_2020__Art01.pdf",
     "juUrl": "",
     "size": 886.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol55_4_2020__Art01.pdf",
+    "gcs_key": "ijhs/Vol55_4_2020__Art01.pdf",
     "localPath": "assets/pdfs/ijhs/Vol55_4_2020__Art01.pdf"
   },
   {
@@ -26229,9 +27977,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol55_4_2020__Art02.pdf",
     "juUrl": "",
     "size": 141.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol55_4_2020__Art02.pdf",
+    "gcs_key": "ijhs/Vol55_4_2020__Art02.pdf",
     "localPath": "assets/pdfs/ijhs/Vol55_4_2020__Art02.pdf"
   },
   {
@@ -26244,9 +27993,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol55_4_2020__Art03.pdf",
     "juUrl": "",
     "size": 105.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol55_4_2020__Art03.pdf",
+    "gcs_key": "ijhs/Vol55_4_2020__Art03.pdf",
     "localPath": "assets/pdfs/ijhs/Vol55_4_2020__Art03.pdf"
   },
   {
@@ -26259,9 +28009,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol55_4_2020__Art04.pdf",
     "juUrl": "",
     "size": 900.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol55_4_2020__Art04.pdf",
+    "gcs_key": "ijhs/Vol55_4_2020__Art04.pdf",
     "localPath": "assets/pdfs/ijhs/Vol55_4_2020__Art04.pdf"
   },
   {
@@ -26274,9 +28025,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol55_4_2020__Art05.pdf",
     "juUrl": "",
     "size": 686.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol55_4_2020__Art05.pdf",
+    "gcs_key": "ijhs/Vol55_4_2020__Art05.pdf",
     "localPath": "assets/pdfs/ijhs/Vol55_4_2020__Art05.pdf"
   },
   {
@@ -26289,9 +28041,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol55_4_2020__Art10.pdf",
     "juUrl": "",
     "size": 113.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol55_4_2020__Art10.pdf",
+    "gcs_key": "ijhs/Vol55_4_2020__Art10.pdf",
     "localPath": "assets/pdfs/ijhs/Vol55_4_2020__Art10.pdf"
   },
   {
@@ -26304,9 +28057,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol55_4_2020__Art06.pdf",
     "juUrl": "",
     "size": 71.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol55_4_2020__Art06.pdf",
+    "gcs_key": "ijhs/Vol55_4_2020__Art06.pdf",
     "localPath": "assets/pdfs/ijhs/Vol55_4_2020__Art06.pdf"
   },
   {
@@ -26319,9 +28073,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol55_4_2020__Art07.pdf",
     "juUrl": "",
     "size": 103.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol55_4_2020__Art07.pdf",
+    "gcs_key": "ijhs/Vol55_4_2020__Art07.pdf",
     "localPath": "assets/pdfs/ijhs/Vol55_4_2020__Art07.pdf"
   },
   {
@@ -26334,9 +28089,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol55_4_2020__Art08.pdf",
     "juUrl": "",
     "size": 101.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol55_4_2020__Art08.pdf",
+    "gcs_key": "ijhs/Vol55_4_2020__Art08.pdf",
     "localPath": "assets/pdfs/ijhs/Vol55_4_2020__Art08.pdf"
   },
   {
@@ -26349,9 +28105,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol55_4_2020__Art09.pdf",
     "juUrl": "",
     "size": 406.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol55_4_2020__Art09.pdf",
+    "gcs_key": "ijhs/Vol55_4_2020__Art09.pdf",
     "localPath": "assets/pdfs/ijhs/Vol55_4_2020__Art09.pdf"
   },
   {
@@ -26364,9 +28121,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol55_4_2020__CIndex.pdf",
     "juUrl": "",
     "size": 35.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol55_4_2020__CIndex.pdf",
+    "gcs_key": "ijhs/Vol55_4_2020__CIndex.pdf",
     "localPath": "assets/pdfs/ijhs/Vol55_4_2020__CIndex.pdf"
   },
   {
@@ -26379,9 +28137,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol55_4_2020__AnnualContents.pdf",
     "juUrl": "",
     "size": 41.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol55_4_2020__AnnualContents.pdf",
+    "gcs_key": "ijhs/Vol55_4_2020__AnnualContents.pdf",
     "localPath": "assets/pdfs/ijhs/Vol55_4_2020__AnnualContents.pdf"
   },
   {
@@ -26394,9 +28153,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Content.pdf",
     "juUrl": "",
     "size": 90.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Content.pdf",
+    "gcs_key": "ijhs/Content.pdf",
     "localPath": "assets/pdfs/ijhs/Content.pdf"
   },
   {
@@ -26409,9 +28169,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/1-13.pdf",
     "juUrl": "",
     "size": 7639.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/1-13.pdf",
+    "gcs_key": "ijhs/1-13.pdf",
     "localPath": "assets/pdfs/ijhs/1-13.pdf"
   },
   {
@@ -26424,9 +28185,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/14-19.pdf",
     "juUrl": "",
     "size": 345.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/14-19.pdf",
+    "gcs_key": "ijhs/14-19.pdf",
     "localPath": "assets/pdfs/ijhs/14-19.pdf"
   },
   {
@@ -26439,9 +28201,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/20-27.pdf",
     "juUrl": "",
     "size": 401.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/20-27.pdf",
+    "gcs_key": "ijhs/20-27.pdf",
     "localPath": "assets/pdfs/ijhs/20-27.pdf"
   },
   {
@@ -26454,9 +28217,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/28-36.pdf",
     "juUrl": "",
     "size": 451.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/28-36.pdf",
+    "gcs_key": "ijhs/28-36.pdf",
     "localPath": "assets/pdfs/ijhs/28-36.pdf"
   },
   {
@@ -26469,9 +28233,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/37-48.pdf",
     "juUrl": "",
     "size": 607.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/37-48.pdf",
+    "gcs_key": "ijhs/37-48.pdf",
     "localPath": "assets/pdfs/ijhs/37-48.pdf"
   },
   {
@@ -26484,9 +28249,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/49-59.pdf",
     "juUrl": "",
     "size": 7844.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/49-59.pdf",
+    "gcs_key": "ijhs/49-59.pdf",
     "localPath": "assets/pdfs/ijhs/49-59.pdf"
   },
   {
@@ -26499,9 +28265,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/60-64.pdf",
     "juUrl": "",
     "size": 295.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/60-64.pdf",
+    "gcs_key": "ijhs/60-64.pdf",
     "localPath": "assets/pdfs/ijhs/60-64.pdf"
   },
   {
@@ -26514,9 +28281,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/65-69.pdf",
     "juUrl": "",
     "size": 4244.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/65-69.pdf",
+    "gcs_key": "ijhs/65-69.pdf",
     "localPath": "assets/pdfs/ijhs/65-69.pdf"
   },
   {
@@ -26529,9 +28297,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/0__Content.pdf",
     "juUrl": "",
     "size": 97.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/0__Content.pdf",
+    "gcs_key": "ijhs/0__Content.pdf",
     "localPath": "assets/pdfs/ijhs/0__Content.pdf"
   },
   {
@@ -26544,9 +28313,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/1__Mahesh.pdf",
     "juUrl": "",
     "size": 491.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/1__Mahesh.pdf",
+    "gcs_key": "ijhs/1__Mahesh.pdf",
     "localPath": "assets/pdfs/ijhs/1__Mahesh.pdf"
   },
   {
@@ -26559,9 +28329,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/2__Chauthaiwale.pdf",
     "juUrl": "",
     "size": 262.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/2__Chauthaiwale.pdf",
+    "gcs_key": "ijhs/2__Chauthaiwale.pdf",
     "localPath": "assets/pdfs/ijhs/2__Chauthaiwale.pdf"
   },
   {
@@ -26574,9 +28345,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/3__Thomas.pdf",
     "juUrl": "",
     "size": 1094.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/3__Thomas.pdf",
+    "gcs_key": "ijhs/3__Thomas.pdf",
     "localPath": "assets/pdfs/ijhs/3__Thomas.pdf"
   },
   {
@@ -26589,9 +28361,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/4__Sasisekaran.pdf",
     "juUrl": "",
     "size": 702.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/4__Sasisekaran.pdf",
+    "gcs_key": "ijhs/4__Sasisekaran.pdf",
     "localPath": "assets/pdfs/ijhs/4__Sasisekaran.pdf"
   },
   {
@@ -26604,9 +28377,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/5__Jitendra.pdf",
     "juUrl": "",
     "size": 829.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/5__Jitendra.pdf",
+    "gcs_key": "ijhs/5__Jitendra.pdf",
     "localPath": "assets/pdfs/ijhs/5__Jitendra.pdf"
   },
   {
@@ -26619,9 +28393,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/6__Arnab%20Rai%20Choudhuri.pdf",
     "juUrl": "",
     "size": 7500.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/6__Arnab%20Rai%20Choudhuri.pdf",
+    "gcs_key": "ijhs/6__Arnab%20Rai%20Choudhuri.pdf",
     "localPath": "assets/pdfs/ijhs/6__Arnab%20Rai%20Choudhuri.pdf"
   },
   {
@@ -26634,9 +28409,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/7__Satyanad.pdf",
     "juUrl": "",
     "size": 405.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/7__Satyanad.pdf",
+    "gcs_key": "ijhs/7__Satyanad.pdf",
     "localPath": "assets/pdfs/ijhs/7__Satyanad.pdf"
   },
   {
@@ -26649,9 +28425,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/8__Maidul.pdf",
     "juUrl": "",
     "size": 276.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/8__Maidul.pdf",
+    "gcs_key": "ijhs/8__Maidul.pdf",
     "localPath": "assets/pdfs/ijhs/8__Maidul.pdf"
   },
   {
@@ -26664,9 +28441,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/1.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/1.pdf",
     "size": 5789.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/1.pdf",
+    "gcs_key": "ijhs/1.pdf",
     "localPath": "assets/pdfs/ijhs/1.pdf"
   },
   {
@@ -26679,9 +28457,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/2.pdf",
     "juUrl": "",
     "size": 454.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/2.pdf",
+    "gcs_key": "ijhs/2.pdf",
     "localPath": "assets/pdfs/ijhs/2.pdf"
   },
   {
@@ -26694,9 +28473,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/3.pdf",
     "juUrl": "",
     "size": 990.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/3.pdf",
+    "gcs_key": "ijhs/3.pdf",
     "localPath": "assets/pdfs/ijhs/3.pdf"
   },
   {
@@ -26709,9 +28489,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/4.pdf",
     "juUrl": "",
     "size": 704.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/4.pdf",
+    "gcs_key": "ijhs/4.pdf",
     "localPath": "assets/pdfs/ijhs/4.pdf"
   },
   {
@@ -26724,9 +28505,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/5.pdf",
     "juUrl": "",
     "size": 691.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/5.pdf",
+    "gcs_key": "ijhs/5.pdf",
     "localPath": "assets/pdfs/ijhs/5.pdf"
   },
   {
@@ -26739,9 +28521,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/6.pdf",
     "juUrl": "",
     "size": 593.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/6.pdf",
+    "gcs_key": "ijhs/6.pdf",
     "localPath": "assets/pdfs/ijhs/6.pdf"
   },
   {
@@ -26754,9 +28537,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/7.pdf",
     "juUrl": "",
     "size": 70.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/7.pdf",
+    "gcs_key": "ijhs/7.pdf",
     "localPath": "assets/pdfs/ijhs/7.pdf"
   },
   {
@@ -26769,9 +28553,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/8.pdf",
     "juUrl": "",
     "size": 276.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/8.pdf",
+    "gcs_key": "ijhs/8.pdf",
     "localPath": "assets/pdfs/ijhs/8.pdf"
   },
   {
@@ -26784,9 +28569,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/1_PM%20Dolas.pdf",
     "juUrl": "",
     "size": 6455.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/1_PM%20Dolas.pdf",
+    "gcs_key": "ijhs/1_PM%20Dolas.pdf",
     "localPath": "assets/pdfs/ijhs/1_PM%20Dolas.pdf"
   },
   {
@@ -26799,9 +28585,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/2_NC%20Shah.pdf",
     "juUrl": "",
     "size": 4879.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/2_NC%20Shah.pdf",
+    "gcs_key": "ijhs/2_NC%20Shah.pdf",
     "localPath": "assets/pdfs/ijhs/2_NC%20Shah.pdf"
   },
   {
@@ -26814,9 +28601,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/3_F%20Di%20Giacomo.pdf",
     "juUrl": "",
     "size": 3578.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/3_F%20Di%20Giacomo.pdf",
+    "gcs_key": "ijhs/3_F%20Di%20Giacomo.pdf",
     "localPath": "assets/pdfs/ijhs/3_F%20Di%20Giacomo.pdf"
   },
   {
@@ -26829,9 +28617,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/4_S%20Dasgupta.pdf",
     "juUrl": "",
     "size": 3017.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/4_S%20Dasgupta.pdf",
+    "gcs_key": "ijhs/4_S%20Dasgupta.pdf",
     "localPath": "assets/pdfs/ijhs/4_S%20Dasgupta.pdf"
   },
   {
@@ -26844,9 +28633,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/5_P%20Sharma.pdf",
     "juUrl": "",
     "size": 7085.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/5_P%20Sharma.pdf",
+    "gcs_key": "ijhs/5_P%20Sharma.pdf",
     "localPath": "assets/pdfs/ijhs/5_P%20Sharma.pdf"
   },
   {
@@ -26859,9 +28649,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/6_R%20Ghosh.pdf",
     "juUrl": "",
     "size": 3274.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/6_R%20Ghosh.pdf",
+    "gcs_key": "ijhs/6_R%20Ghosh.pdf",
     "localPath": "assets/pdfs/ijhs/6_R%20Ghosh.pdf"
   },
   {
@@ -26874,9 +28665,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/7_MA%20Wani.pdf",
     "juUrl": "",
     "size": 2960.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/7_MA%20Wani.pdf",
+    "gcs_key": "ijhs/7_MA%20Wani.pdf",
     "localPath": "assets/pdfs/ijhs/7_MA%20Wani.pdf"
   },
   {
@@ -26889,9 +28681,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/8_S%20Kulangara.pdf",
     "juUrl": "",
     "size": 3028.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/8_S%20Kulangara.pdf",
+    "gcs_key": "ijhs/8_S%20Kulangara.pdf",
     "localPath": "assets/pdfs/ijhs/8_S%20Kulangara.pdf"
   },
   {
@@ -26904,9 +28697,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/9_B%20Goswami.pdf",
     "juUrl": "",
     "size": 2936.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/9_B%20Goswami.pdf",
+    "gcs_key": "ijhs/9_B%20Goswami.pdf",
     "localPath": "assets/pdfs/ijhs/9_B%20Goswami.pdf"
   },
   {
@@ -26919,9 +28713,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/57_2_Content.pdf",
     "juUrl": "",
     "size": 94.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/57_2_Content.pdf",
+    "gcs_key": "ijhs/57_2_Content.pdf",
     "localPath": "assets/pdfs/ijhs/57_2_Content.pdf"
   },
   {
@@ -26934,9 +28729,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/57_2_1.pdf",
     "juUrl": "",
     "size": 1355.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/57_2_1.pdf",
+    "gcs_key": "ijhs/57_2_1.pdf",
     "localPath": "assets/pdfs/ijhs/57_2_1.pdf"
   },
   {
@@ -26949,9 +28745,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/57_2_2.pdf",
     "juUrl": "",
     "size": 455.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/57_2_2.pdf",
+    "gcs_key": "ijhs/57_2_2.pdf",
     "localPath": "assets/pdfs/ijhs/57_2_2.pdf"
   },
   {
@@ -26964,9 +28761,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/57_2_3.pdf",
     "juUrl": "",
     "size": 275.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/57_2_3.pdf",
+    "gcs_key": "ijhs/57_2_3.pdf",
     "localPath": "assets/pdfs/ijhs/57_2_3.pdf"
   },
   {
@@ -26979,9 +28777,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/57_2_4.pdf",
     "juUrl": "",
     "size": 357.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/57_2_4.pdf",
+    "gcs_key": "ijhs/57_2_4.pdf",
     "localPath": "assets/pdfs/ijhs/57_2_4.pdf"
   },
   {
@@ -26994,9 +28793,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/57_2_5.pdf",
     "juUrl": "",
     "size": 382.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/57_2_5.pdf",
+    "gcs_key": "ijhs/57_2_5.pdf",
     "localPath": "assets/pdfs/ijhs/57_2_5.pdf"
   },
   {
@@ -27009,9 +28809,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/57_2_6.pdf",
     "juUrl": "",
     "size": 878.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/57_2_6.pdf",
+    "gcs_key": "ijhs/57_2_6.pdf",
     "localPath": "assets/pdfs/ijhs/57_2_6.pdf"
   },
   {
@@ -27024,9 +28825,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/57_2_7.pdf",
     "juUrl": "",
     "size": 1003.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/57_2_7.pdf",
+    "gcs_key": "ijhs/57_2_7.pdf",
     "localPath": "assets/pdfs/ijhs/57_2_7.pdf"
   },
   {
@@ -27039,9 +28841,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/57_2_8.pdf",
     "juUrl": "",
     "size": 627.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/57_2_8.pdf",
+    "gcs_key": "ijhs/57_2_8.pdf",
     "localPath": "assets/pdfs/ijhs/57_2_8.pdf"
   },
   {
@@ -27054,9 +28857,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/57_2_9.pdf",
     "juUrl": "",
     "size": 227.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/57_2_9.pdf",
+    "gcs_key": "ijhs/57_2_9.pdf",
     "localPath": "assets/pdfs/ijhs/57_2_9.pdf"
   },
   {
@@ -27069,9 +28873,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/57_2_10.pdf",
     "juUrl": "",
     "size": 164.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/57_2_10.pdf",
+    "gcs_key": "ijhs/57_2_10.pdf",
     "localPath": "assets/pdfs/ijhs/57_2_10.pdf"
   },
   {
@@ -27084,9 +28889,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/57_3_Content.pdf",
     "juUrl": "",
     "size": 81.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/57_3_Content.pdf",
+    "gcs_key": "ijhs/57_3_Content.pdf",
     "localPath": "assets/pdfs/ijhs/57_3_Content.pdf"
   },
   {
@@ -27099,9 +28905,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/57_3_1.pdf",
     "juUrl": "",
     "size": 1338.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/57_3_1.pdf",
+    "gcs_key": "ijhs/57_3_1.pdf",
     "localPath": "assets/pdfs/ijhs/57_3_1.pdf"
   },
   {
@@ -27114,9 +28921,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/57_3_2.pdf",
     "juUrl": "",
     "size": 322.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/57_3_2.pdf",
+    "gcs_key": "ijhs/57_3_2.pdf",
     "localPath": "assets/pdfs/ijhs/57_3_2.pdf"
   },
   {
@@ -27129,9 +28937,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/57_3_3.pdf",
     "juUrl": "",
     "size": 340.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/57_3_3.pdf",
+    "gcs_key": "ijhs/57_3_3.pdf",
     "localPath": "assets/pdfs/ijhs/57_3_3.pdf"
   },
   {
@@ -27144,9 +28953,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/57_3_4.pdf",
     "juUrl": "",
     "size": 272.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/57_3_4.pdf",
+    "gcs_key": "ijhs/57_3_4.pdf",
     "localPath": "assets/pdfs/ijhs/57_3_4.pdf"
   },
   {
@@ -27159,9 +28969,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/57_3_5.pdf",
     "juUrl": "",
     "size": 268.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/57_3_5.pdf",
+    "gcs_key": "ijhs/57_3_5.pdf",
     "localPath": "assets/pdfs/ijhs/57_3_5.pdf"
   },
   {
@@ -27174,9 +28985,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/57_3_6.pdf",
     "juUrl": "",
     "size": 228.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/57_3_6.pdf",
+    "gcs_key": "ijhs/57_3_6.pdf",
     "localPath": "assets/pdfs/ijhs/57_3_6.pdf"
   },
   {
@@ -27189,9 +29001,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/57_3_7.pdf",
     "juUrl": "",
     "size": 1122.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/57_3_7.pdf",
+    "gcs_key": "ijhs/57_3_7.pdf",
     "localPath": "assets/pdfs/ijhs/57_3_7.pdf"
   },
   {
@@ -27204,9 +29017,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/57_3_8.pdf",
     "juUrl": "",
     "size": 242.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/57_3_8.pdf",
+    "gcs_key": "ijhs/57_3_8.pdf",
     "localPath": "assets/pdfs/ijhs/57_3_8.pdf"
   },
   {
@@ -27219,9 +29033,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/S1-IndusZoomorphicIconCatalogue.pdf",
     "juUrl": "",
     "size": 1065.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/S1-IndusZoomorphicIconCatalogue.pdf",
+    "gcs_key": "ijhs/S1-IndusZoomorphicIconCatalogue.pdf",
     "localPath": "assets/pdfs/ijhs/S1-IndusZoomorphicIconCatalogue.pdf"
   },
   {
@@ -27234,9 +29049,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/57_4_Content.pdf",
     "juUrl": "",
     "size": 92.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/57_4_Content.pdf",
+    "gcs_key": "ijhs/57_4_Content.pdf",
     "localPath": "assets/pdfs/ijhs/57_4_Content.pdf"
   },
   {
@@ -27249,9 +29065,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/57_4_1.pdf",
     "juUrl": "",
     "size": 663.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/57_4_1.pdf",
+    "gcs_key": "ijhs/57_4_1.pdf",
     "localPath": "assets/pdfs/ijhs/57_4_1.pdf"
   },
   {
@@ -27264,9 +29081,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/57_4_2.pdf",
     "juUrl": "",
     "size": 267.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/57_4_2.pdf",
+    "gcs_key": "ijhs/57_4_2.pdf",
     "localPath": "assets/pdfs/ijhs/57_4_2.pdf"
   },
   {
@@ -27279,9 +29097,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/57_4_3.pdf",
     "juUrl": "",
     "size": 592.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/57_4_3.pdf",
+    "gcs_key": "ijhs/57_4_3.pdf",
     "localPath": "assets/pdfs/ijhs/57_4_3.pdf"
   },
   {
@@ -27294,9 +29113,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/57_4_4.pdf",
     "juUrl": "",
     "size": 1103.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/57_4_4.pdf",
+    "gcs_key": "ijhs/57_4_4.pdf",
     "localPath": "assets/pdfs/ijhs/57_4_4.pdf"
   },
   {
@@ -27309,9 +29129,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/57_4_5.pdf",
     "juUrl": "",
     "size": 919.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/57_4_5.pdf",
+    "gcs_key": "ijhs/57_4_5.pdf",
     "localPath": "assets/pdfs/ijhs/57_4_5.pdf"
   },
   {
@@ -27324,9 +29145,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/57_4_6.pdf",
     "juUrl": "",
     "size": 357.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/57_4_6.pdf",
+    "gcs_key": "ijhs/57_4_6.pdf",
     "localPath": "assets/pdfs/ijhs/57_4_6.pdf"
   },
   {
@@ -27339,9 +29161,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/57_4_7.pdf",
     "juUrl": "",
     "size": 231.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/57_4_7.pdf",
+    "gcs_key": "ijhs/57_4_7.pdf",
     "localPath": "assets/pdfs/ijhs/57_4_7.pdf"
   },
   {
@@ -27354,9 +29177,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/57_4_8.pdf",
     "juUrl": "",
     "size": 205.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/57_4_8.pdf",
+    "gcs_key": "ijhs/57_4_8.pdf",
     "localPath": "assets/pdfs/ijhs/57_4_8.pdf"
   },
   {
@@ -27369,9 +29193,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/57_4_9.pdf",
     "juUrl": "",
     "size": 244.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/57_4_9.pdf",
+    "gcs_key": "ijhs/57_4_9.pdf",
     "localPath": "assets/pdfs/ijhs/57_4_9.pdf"
   },
   {
@@ -27384,9 +29209,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/57_4_10.pdf",
     "juUrl": "",
     "size": 256.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/57_4_10.pdf",
+    "gcs_key": "ijhs/57_4_10.pdf",
     "localPath": "assets/pdfs/ijhs/57_4_10.pdf"
   },
   {
@@ -27399,9 +29225,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/58_1_Content.pdf",
     "juUrl": "",
     "size": 108.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/58_1_Content.pdf",
+    "gcs_key": "ijhs/58_1_Content.pdf",
     "localPath": "assets/pdfs/ijhs/58_1_Content.pdf"
   },
   {
@@ -27414,9 +29241,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/58_1_1.pdf",
     "juUrl": "",
     "size": 1026.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/58_1_1.pdf",
+    "gcs_key": "ijhs/58_1_1.pdf",
     "localPath": "assets/pdfs/ijhs/58_1_1.pdf"
   },
   {
@@ -27429,9 +29257,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/58_1_2.pdf",
     "juUrl": "",
     "size": 339.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/58_1_2.pdf",
+    "gcs_key": "ijhs/58_1_2.pdf",
     "localPath": "assets/pdfs/ijhs/58_1_2.pdf"
   },
   {
@@ -27444,9 +29273,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/58_1_3.pdf",
     "juUrl": "",
     "size": 355.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/58_1_3.pdf",
+    "gcs_key": "ijhs/58_1_3.pdf",
     "localPath": "assets/pdfs/ijhs/58_1_3.pdf"
   },
   {
@@ -27459,9 +29289,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/58_1_4.pdf",
     "juUrl": "",
     "size": 497.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/58_1_4.pdf",
+    "gcs_key": "ijhs/58_1_4.pdf",
     "localPath": "assets/pdfs/ijhs/58_1_4.pdf"
   },
   {
@@ -27474,9 +29305,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/58_1_5.pdf",
     "juUrl": "",
     "size": 396.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/58_1_5.pdf",
+    "gcs_key": "ijhs/58_1_5.pdf",
     "localPath": "assets/pdfs/ijhs/58_1_5.pdf"
   },
   {
@@ -27489,9 +29321,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/58_1_6.pdf",
     "juUrl": "",
     "size": 335.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/58_1_6.pdf",
+    "gcs_key": "ijhs/58_1_6.pdf",
     "localPath": "assets/pdfs/ijhs/58_1_6.pdf"
   },
   {
@@ -27504,9 +29337,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/58_1_7.pdf",
     "juUrl": "",
     "size": 474.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/58_1_7.pdf",
+    "gcs_key": "ijhs/58_1_7.pdf",
     "localPath": "assets/pdfs/ijhs/58_1_7.pdf"
   },
   {
@@ -27519,9 +29353,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/58_1_8.pdf",
     "juUrl": "",
     "size": 384.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/58_1_8.pdf",
+    "gcs_key": "ijhs/58_1_8.pdf",
     "localPath": "assets/pdfs/ijhs/58_1_8.pdf"
   },
   {
@@ -27534,9 +29369,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/58_1_9.pdf",
     "juUrl": "",
     "size": 327.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/58_1_9.pdf",
+    "gcs_key": "ijhs/58_1_9.pdf",
     "localPath": "assets/pdfs/ijhs/58_1_9.pdf"
   },
   {
@@ -27549,9 +29385,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/58_1_10.pdf",
     "juUrl": "",
     "size": 187.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/58_1_10.pdf",
+    "gcs_key": "ijhs/58_1_10.pdf",
     "localPath": "assets/pdfs/ijhs/58_1_10.pdf"
   },
   {
@@ -27564,9 +29401,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/58-1_11.pdf",
     "juUrl": "",
     "size": 227.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/58-1_11.pdf",
+    "gcs_key": "ijhs/58-1_11.pdf",
     "localPath": "assets/pdfs/ijhs/58-1_11.pdf"
   },
   {
@@ -27579,9 +29417,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_58_2_Contents.pdf",
     "juUrl": "",
     "size": 87.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_58_2_Contents.pdf",
+    "gcs_key": "ijhs/IJHS_58_2_Contents.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_58_2_Contents.pdf"
   },
   {
@@ -27594,9 +29433,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_58_2_1.pdf",
     "juUrl": "",
     "size": 351.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_58_2_1.pdf",
+    "gcs_key": "ijhs/IJHS_58_2_1.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_58_2_1.pdf"
   },
   {
@@ -27609,9 +29449,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_58_2_2.pdf",
     "juUrl": "",
     "size": 605.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_58_2_2.pdf",
+    "gcs_key": "ijhs/IJHS_58_2_2.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_58_2_2.pdf"
   },
   {
@@ -27624,9 +29465,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_58_2_3.pdf",
     "juUrl": "",
     "size": 249.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_58_2_3.pdf",
+    "gcs_key": "ijhs/IJHS_58_2_3.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_58_2_3.pdf"
   },
   {
@@ -27639,9 +29481,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS58_2_4.pdf",
     "juUrl": "",
     "size": 427.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS58_2_4.pdf",
+    "gcs_key": "ijhs/IJHS58_2_4.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS58_2_4.pdf"
   },
   {
@@ -27654,9 +29497,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_58_2_5.pdf",
     "juUrl": "",
     "size": 691.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_58_2_5.pdf",
+    "gcs_key": "ijhs/IJHS_58_2_5.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_58_2_5.pdf"
   },
   {
@@ -27669,9 +29513,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_58_2_6.pdf",
     "juUrl": "",
     "size": 366.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_58_2_6.pdf",
+    "gcs_key": "ijhs/IJHS_58_2_6.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_58_2_6.pdf"
   },
   {
@@ -27684,9 +29529,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS58_2_7.pdf",
     "juUrl": "",
     "size": 237.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS58_2_7.pdf",
+    "gcs_key": "ijhs/IJHS58_2_7.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS58_2_7.pdf"
   },
   {
@@ -27699,9 +29545,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_58_2_8.pdf",
     "juUrl": "",
     "size": 196.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_58_2_8.pdf",
+    "gcs_key": "ijhs/IJHS_58_2_8.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_58_2_8.pdf"
   },
   {
@@ -27714,9 +29561,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Contents_58-3.pdf",
     "juUrl": "",
     "size": 94.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Contents_58-3.pdf",
+    "gcs_key": "ijhs/Contents_58-3.pdf",
     "localPath": "assets/pdfs/ijhs/Contents_58-3.pdf"
   },
   {
@@ -27729,9 +29577,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_58_3_1.pdf",
     "juUrl": "",
     "size": 901.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_58_3_1.pdf",
+    "gcs_key": "ijhs/IJHS_58_3_1.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_58_3_1.pdf"
   },
   {
@@ -27744,9 +29593,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_58_3_2.pdf",
     "juUrl": "",
     "size": 476.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_58_3_2.pdf",
+    "gcs_key": "ijhs/IJHS_58_3_2.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_58_3_2.pdf"
   },
   {
@@ -27759,9 +29609,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_58_3_3.pdf",
     "juUrl": "",
     "size": 691.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_58_3_3.pdf",
+    "gcs_key": "ijhs/IJHS_58_3_3.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_58_3_3.pdf"
   },
   {
@@ -27774,9 +29625,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_58_3_4.pdf",
     "juUrl": "",
     "size": 270.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_58_3_4.pdf",
+    "gcs_key": "ijhs/IJHS_58_3_4.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_58_3_4.pdf"
   },
   {
@@ -27789,9 +29641,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_58_3_5.pdf",
     "juUrl": "",
     "size": 227.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_58_3_5.pdf",
+    "gcs_key": "ijhs/IJHS_58_3_5.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_58_3_5.pdf"
   },
   {
@@ -27804,9 +29657,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_58_3_6.pdf",
     "juUrl": "",
     "size": 450.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_58_3_6.pdf",
+    "gcs_key": "ijhs/IJHS_58_3_6.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_58_3_6.pdf"
   },
   {
@@ -27819,9 +29673,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_58_3_7.pdf",
     "juUrl": "",
     "size": 351.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_58_3_7.pdf",
+    "gcs_key": "ijhs/IJHS_58_3_7.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_58_3_7.pdf"
   },
   {
@@ -27834,9 +29689,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_58_3_8.pdf",
     "juUrl": "",
     "size": 149.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_58_3_8.pdf",
+    "gcs_key": "ijhs/IJHS_58_3_8.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_58_3_8.pdf"
   },
   {
@@ -27849,9 +29705,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_58_3_9.pdf",
     "juUrl": "",
     "size": 115.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_58_3_9.pdf",
+    "gcs_key": "ijhs/IJHS_58_3_9.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_58_3_9.pdf"
   },
   {
@@ -27864,9 +29721,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_58_3_10.pdf",
     "juUrl": "",
     "size": 206.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_58_3_10.pdf",
+    "gcs_key": "ijhs/IJHS_58_3_10.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_58_3_10.pdf"
   },
   {
@@ -27879,9 +29737,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Contents_58_4IJHS.pdf",
     "juUrl": "",
     "size": 182.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Contents_58_4IJHS.pdf",
+    "gcs_key": "ijhs/Contents_58_4IJHS.pdf",
     "localPath": "assets/pdfs/ijhs/Contents_58_4IJHS.pdf"
   },
   {
@@ -27894,9 +29753,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/01_58_4.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/01_58_4.pdf",
     "size": 1132.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/01_58_4.pdf",
+    "gcs_key": "ijhs/01_58_4.pdf",
     "localPath": "assets/pdfs/ijhs/01_58_4.pdf"
   },
   {
@@ -27909,9 +29769,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/02-58_4.pdf",
     "juUrl": "",
     "size": 970.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/02-58_4.pdf",
+    "gcs_key": "ijhs/02-58_4.pdf",
     "localPath": "assets/pdfs/ijhs/02-58_4.pdf"
   },
   {
@@ -27924,9 +29785,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/03-58_4.pdf",
     "juUrl": "",
     "size": 975.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/03-58_4.pdf",
+    "gcs_key": "ijhs/03-58_4.pdf",
     "localPath": "assets/pdfs/ijhs/03-58_4.pdf"
   },
   {
@@ -27939,9 +29801,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/04-58_4.pdf",
     "juUrl": "",
     "size": 628.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/04-58_4.pdf",
+    "gcs_key": "ijhs/04-58_4.pdf",
     "localPath": "assets/pdfs/ijhs/04-58_4.pdf"
   },
   {
@@ -27954,9 +29817,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/05-58_4.pdf",
     "juUrl": "",
     "size": 1114.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/05-58_4.pdf",
+    "gcs_key": "ijhs/05-58_4.pdf",
     "localPath": "assets/pdfs/ijhs/05-58_4.pdf"
   },
   {
@@ -27969,9 +29833,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/06-58_4.pdf",
     "juUrl": "",
     "size": 584.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/06-58_4.pdf",
+    "gcs_key": "ijhs/06-58_4.pdf",
     "localPath": "assets/pdfs/ijhs/06-58_4.pdf"
   },
   {
@@ -27984,9 +29849,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/07-58_4.pdf",
     "juUrl": "",
     "size": 277.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/07-58_4.pdf",
+    "gcs_key": "ijhs/07-58_4.pdf",
     "localPath": "assets/pdfs/ijhs/07-58_4.pdf"
   },
   {
@@ -27999,9 +29865,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/08-58_4.pdf",
     "juUrl": "",
     "size": 157.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/08-58_4.pdf",
+    "gcs_key": "ijhs/08-58_4.pdf",
     "localPath": "assets/pdfs/ijhs/08-58_4.pdf"
   },
   {
@@ -28014,9 +29881,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/09-58_4.pdf",
     "juUrl": "",
     "size": 301.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/09-58_4.pdf",
+    "gcs_key": "ijhs/09-58_4.pdf",
     "localPath": "assets/pdfs/ijhs/09-58_4.pdf"
   },
   {
@@ -28029,9 +29897,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/10-58_4.pdf",
     "juUrl": "",
     "size": 120.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/10-58_4.pdf",
+    "gcs_key": "ijhs/10-58_4.pdf",
     "localPath": "assets/pdfs/ijhs/10-58_4.pdf"
   },
   {
@@ -28044,9 +29913,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Cumulative%20Index_58_ijhs.pdf",
     "juUrl": "",
     "size": 662.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Cumulative%20Index_58_ijhs.pdf",
+    "gcs_key": "ijhs/Cumulative%20Index_58_ijhs.pdf",
     "localPath": "assets/pdfs/ijhs/Cumulative%20Index_58_ijhs.pdf"
   },
   {
@@ -28059,9 +29929,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Contents_59_1_ijhs.pdf",
     "juUrl": "",
     "size": 101.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Contents_59_1_ijhs.pdf",
+    "gcs_key": "ijhs/Contents_59_1_ijhs.pdf",
     "localPath": "assets/pdfs/ijhs/Contents_59_1_ijhs.pdf"
   },
   {
@@ -28074,9 +29945,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/01-IJHS59_1.pdf",
     "juUrl": "",
     "size": 1127.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/01-IJHS59_1.pdf",
+    "gcs_key": "ijhs/01-IJHS59_1.pdf",
     "localPath": "assets/pdfs/ijhs/01-IJHS59_1.pdf"
   },
   {
@@ -28089,9 +29961,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/02-IJHS59_2.pdf",
     "juUrl": "",
     "size": 629.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/02-IJHS59_2.pdf",
+    "gcs_key": "ijhs/02-IJHS59_2.pdf",
     "localPath": "assets/pdfs/ijhs/02-IJHS59_2.pdf"
   },
   {
@@ -28104,9 +29977,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/03-IJHS59_1.pdf",
     "juUrl": "",
     "size": 334.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/03-IJHS59_1.pdf",
+    "gcs_key": "ijhs/03-IJHS59_1.pdf",
     "localPath": "assets/pdfs/ijhs/03-IJHS59_1.pdf"
   },
   {
@@ -28119,9 +29993,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/04-IJHS59_1.pdf",
     "juUrl": "",
     "size": 570.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/04-IJHS59_1.pdf",
+    "gcs_key": "ijhs/04-IJHS59_1.pdf",
     "localPath": "assets/pdfs/ijhs/04-IJHS59_1.pdf"
   },
   {
@@ -28134,9 +30009,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/05-IJHS59_1.pdf",
     "juUrl": "",
     "size": 326.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/05-IJHS59_1.pdf",
+    "gcs_key": "ijhs/05-IJHS59_1.pdf",
     "localPath": "assets/pdfs/ijhs/05-IJHS59_1.pdf"
   },
   {
@@ -28149,9 +30025,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/06-IJHS59_1.pdf",
     "juUrl": "",
     "size": 496.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/06-IJHS59_1.pdf",
+    "gcs_key": "ijhs/06-IJHS59_1.pdf",
     "localPath": "assets/pdfs/ijhs/06-IJHS59_1.pdf"
   },
   {
@@ -28164,9 +30041,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/07-IJHS59_1.pdf",
     "juUrl": "",
     "size": 338.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/07-IJHS59_1.pdf",
+    "gcs_key": "ijhs/07-IJHS59_1.pdf",
     "localPath": "assets/pdfs/ijhs/07-IJHS59_1.pdf"
   },
   {
@@ -28179,9 +30057,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/08-IJHS59_1.pdf",
     "juUrl": "",
     "size": 1556.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/08-IJHS59_1.pdf",
+    "gcs_key": "ijhs/08-IJHS59_1.pdf",
     "localPath": "assets/pdfs/ijhs/08-IJHS59_1.pdf"
   },
   {
@@ -28194,9 +30073,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/09-IJHS59_1.pdf",
     "juUrl": "",
     "size": 146.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/09-IJHS59_1.pdf",
+    "gcs_key": "ijhs/09-IJHS59_1.pdf",
     "localPath": "assets/pdfs/ijhs/09-IJHS59_1.pdf"
   },
   {
@@ -28209,9 +30089,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/10-IJHS59_1.pdf",
     "juUrl": "",
     "size": 178.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/10-IJHS59_1.pdf",
+    "gcs_key": "ijhs/10-IJHS59_1.pdf",
     "localPath": "assets/pdfs/ijhs/10-IJHS59_1.pdf"
   },
   {
@@ -28224,9 +30105,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/11-IJHS59_1.pdf",
     "juUrl": "",
     "size": 642.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/11-IJHS59_1.pdf",
+    "gcs_key": "ijhs/11-IJHS59_1.pdf",
     "localPath": "assets/pdfs/ijhs/11-IJHS59_1.pdf"
   },
   {
@@ -28239,9 +30121,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Corrigendum_59_1.pdf",
     "juUrl": "",
     "size": 65.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Corrigendum_59_1.pdf",
+    "gcs_key": "ijhs/Corrigendum_59_1.pdf",
     "localPath": "assets/pdfs/ijhs/Corrigendum_59_1.pdf"
   },
   {
@@ -28254,9 +30137,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Contents_59_2_ijhs.pdf",
     "juUrl": "",
     "size": 89.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Contents_59_2_ijhs.pdf",
+    "gcs_key": "ijhs/Contents_59_2_ijhs.pdf",
     "localPath": "assets/pdfs/ijhs/Contents_59_2_ijhs.pdf"
   },
   {
@@ -28269,9 +30153,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/01-43539_2024_127_OnlinePDF123-142.pdf",
     "juUrl": "",
     "size": 1331.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/01-43539_2024_127_OnlinePDF123-142.pdf",
+    "gcs_key": "ijhs/01-43539_2024_127_OnlinePDF123-142.pdf",
     "localPath": "assets/pdfs/ijhs/01-43539_2024_127_OnlinePDF123-142.pdf"
   },
   {
@@ -28284,9 +30169,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/02-43539_2024_121_OnlinePDF143-158.pdf",
     "juUrl": "",
     "size": 449.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/02-43539_2024_121_OnlinePDF143-158.pdf",
+    "gcs_key": "ijhs/02-43539_2024_121_OnlinePDF143-158.pdf",
     "localPath": "assets/pdfs/ijhs/02-43539_2024_121_OnlinePDF143-158.pdf"
   },
   {
@@ -28299,9 +30185,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/03-43539_2024_123_OnlinePDF159-164.pdf",
     "juUrl": "",
     "size": 449.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/03-43539_2024_123_OnlinePDF159-164.pdf",
+    "gcs_key": "ijhs/03-43539_2024_123_OnlinePDF159-164.pdf",
     "localPath": "assets/pdfs/ijhs/03-43539_2024_123_OnlinePDF159-164.pdf"
   },
   {
@@ -28314,9 +30201,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/04-43539_2024_126_OnlinePDF165-177.pdf",
     "juUrl": "",
     "size": 383.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/04-43539_2024_126_OnlinePDF165-177.pdf",
+    "gcs_key": "ijhs/04-43539_2024_126_OnlinePDF165-177.pdf",
     "localPath": "assets/pdfs/ijhs/04-43539_2024_126_OnlinePDF165-177.pdf"
   },
   {
@@ -28329,9 +30217,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/05-43539_2024_122_OnlinePDF178-191.pdf",
     "juUrl": "",
     "size": 518.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/05-43539_2024_122_OnlinePDF178-191.pdf",
+    "gcs_key": "ijhs/05-43539_2024_122_OnlinePDF178-191.pdf",
     "localPath": "assets/pdfs/ijhs/05-43539_2024_122_OnlinePDF178-191.pdf"
   },
   {
@@ -28344,9 +30233,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/06-43539_2024_120_OnlinePDF192-203.pdf",
     "juUrl": "",
     "size": 412.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/06-43539_2024_120_OnlinePDF192-203.pdf",
+    "gcs_key": "ijhs/06-43539_2024_120_OnlinePDF192-203.pdf",
     "localPath": "assets/pdfs/ijhs/06-43539_2024_120_OnlinePDF192-203.pdf"
   },
   {
@@ -28359,9 +30249,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/07-43539_2024_125_OnlinePDF204-215.pdf",
     "juUrl": "",
     "size": 471.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/07-43539_2024_125_OnlinePDF204-215.pdf",
+    "gcs_key": "ijhs/07-43539_2024_125_OnlinePDF204-215.pdf",
     "localPath": "assets/pdfs/ijhs/07-43539_2024_125_OnlinePDF204-215.pdf"
   },
   {
@@ -28374,9 +30265,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/08-43539_2024_124_OnlinePDF216-222.pdf",
     "juUrl": "",
     "size": 315.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/08-43539_2024_124_OnlinePDF216-222.pdf",
+    "gcs_key": "ijhs/08-43539_2024_124_OnlinePDF216-222.pdf",
     "localPath": "assets/pdfs/ijhs/08-43539_2024_124_OnlinePDF216-222.pdf"
   },
   {
@@ -28389,9 +30281,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/09-43539_2024_129_OnlinePDF223-224.pdf",
     "juUrl": "",
     "size": 181.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/09-43539_2024_129_OnlinePDF223-224.pdf",
+    "gcs_key": "ijhs/09-43539_2024_129_OnlinePDF223-224.pdf",
     "localPath": "assets/pdfs/ijhs/09-43539_2024_129_OnlinePDF223-224.pdf"
   },
   {
@@ -28404,9 +30297,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/10-43539_2024_128_OnlinePDF225-232.pdf",
     "juUrl": "",
     "size": 423.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/10-43539_2024_128_OnlinePDF225-232.pdf",
+    "gcs_key": "ijhs/10-43539_2024_128_OnlinePDF225-232.pdf",
     "localPath": "assets/pdfs/ijhs/10-43539_2024_128_OnlinePDF225-232.pdf"
   },
   {
@@ -28419,9 +30313,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Contents_IJHS_59_3.pdf",
     "juUrl": "",
     "size": 103.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Contents_IJHS_59_3.pdf",
+    "gcs_key": "ijhs/Contents_IJHS_59_3.pdf",
     "localPath": "assets/pdfs/ijhs/Contents_IJHS_59_3.pdf"
   },
   {
@@ -28434,9 +30329,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_59_3_1.pdf",
     "juUrl": "",
     "size": 705.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_59_3_1.pdf",
+    "gcs_key": "ijhs/IJHS_59_3_1.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_59_3_1.pdf"
   },
   {
@@ -28449,9 +30345,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_59_3_2.pdf",
     "juUrl": "",
     "size": 718.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_59_3_2.pdf",
+    "gcs_key": "ijhs/IJHS_59_3_2.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_59_3_2.pdf"
   },
   {
@@ -28464,9 +30361,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_59_3_3.pdf",
     "juUrl": "",
     "size": 747.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_59_3_3.pdf",
+    "gcs_key": "ijhs/IJHS_59_3_3.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_59_3_3.pdf"
   },
   {
@@ -28479,9 +30377,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_59_3_4.pdf",
     "juUrl": "",
     "size": 388.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_59_3_4.pdf",
+    "gcs_key": "ijhs/IJHS_59_3_4.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_59_3_4.pdf"
   },
   {
@@ -28494,9 +30393,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_59_3_5.pdf",
     "juUrl": "",
     "size": 400.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_59_3_5.pdf",
+    "gcs_key": "ijhs/IJHS_59_3_5.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_59_3_5.pdf"
   },
   {
@@ -28509,9 +30409,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_59_3_6.pdf",
     "juUrl": "",
     "size": 536.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_59_3_6.pdf",
+    "gcs_key": "ijhs/IJHS_59_3_6.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_59_3_6.pdf"
   },
   {
@@ -28524,9 +30425,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_59_3_7.pdf",
     "juUrl": "",
     "size": 441.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_59_3_7.pdf",
+    "gcs_key": "ijhs/IJHS_59_3_7.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_59_3_7.pdf"
   },
   {
@@ -28539,9 +30441,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_59_3_8.pdf",
     "juUrl": "",
     "size": 193.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_59_3_8.pdf",
+    "gcs_key": "ijhs/IJHS_59_3_8.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_59_3_8.pdf"
   },
   {
@@ -28554,9 +30457,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_59_3_9.pdf",
     "juUrl": "",
     "size": 313.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_59_3_9.pdf",
+    "gcs_key": "ijhs/IJHS_59_3_9.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_59_3_9.pdf"
   },
   {
@@ -28569,9 +30473,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_59_3_10.pdf",
     "juUrl": "",
     "size": 267.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_59_3_10.pdf",
+    "gcs_key": "ijhs/IJHS_59_3_10.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_59_3_10.pdf"
   },
   {
@@ -28584,9 +30489,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_59_4Contents.pdf",
     "juUrl": "",
     "size": 1495.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_59_4Contents.pdf",
+    "gcs_key": "ijhs/IJHS_59_4Contents.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_59_4Contents.pdf"
   },
   {
@@ -28599,9 +30505,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/01_IJHS59_4.pdf",
     "juUrl": "",
     "size": 1845.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/01_IJHS59_4.pdf",
+    "gcs_key": "ijhs/01_IJHS59_4.pdf",
     "localPath": "assets/pdfs/ijhs/01_IJHS59_4.pdf"
   },
   {
@@ -28614,9 +30521,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/02_IJHS59_4.pdf",
     "juUrl": "",
     "size": 1943.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/02_IJHS59_4.pdf",
+    "gcs_key": "ijhs/02_IJHS59_4.pdf",
     "localPath": "assets/pdfs/ijhs/02_IJHS59_4.pdf"
   },
   {
@@ -28629,9 +30537,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/03_IJHS59_4.pdf",
     "juUrl": "",
     "size": 813.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/03_IJHS59_4.pdf",
+    "gcs_key": "ijhs/03_IJHS59_4.pdf",
     "localPath": "assets/pdfs/ijhs/03_IJHS59_4.pdf"
   },
   {
@@ -28644,9 +30553,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/04_IJHS59_4.pdf",
     "juUrl": "",
     "size": 598.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/04_IJHS59_4.pdf",
+    "gcs_key": "ijhs/04_IJHS59_4.pdf",
     "localPath": "assets/pdfs/ijhs/04_IJHS59_4.pdf"
   },
   {
@@ -28659,9 +30569,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/05_IJHS59_4.pdf",
     "juUrl": "",
     "size": 1619.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/05_IJHS59_4.pdf",
+    "gcs_key": "ijhs/05_IJHS59_4.pdf",
     "localPath": "assets/pdfs/ijhs/05_IJHS59_4.pdf"
   },
   {
@@ -28674,9 +30585,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/06_IJHS59_4.pdf",
     "juUrl": "",
     "size": 1226.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/06_IJHS59_4.pdf",
+    "gcs_key": "ijhs/06_IJHS59_4.pdf",
     "localPath": "assets/pdfs/ijhs/06_IJHS59_4.pdf"
   },
   {
@@ -28689,9 +30601,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/07_IJHS59_4.pdf",
     "juUrl": "",
     "size": 755.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/07_IJHS59_4.pdf",
+    "gcs_key": "ijhs/07_IJHS59_4.pdf",
     "localPath": "assets/pdfs/ijhs/07_IJHS59_4.pdf"
   },
   {
@@ -28704,9 +30617,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/08_IJHS59_4.pdf",
     "juUrl": "",
     "size": 388.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/08_IJHS59_4.pdf",
+    "gcs_key": "ijhs/08_IJHS59_4.pdf",
     "localPath": "assets/pdfs/ijhs/08_IJHS59_4.pdf"
   },
   {
@@ -28719,9 +30633,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/09_IJHS59_4.pdf",
     "juUrl": "",
     "size": 1449.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/09_IJHS59_4.pdf",
+    "gcs_key": "ijhs/09_IJHS59_4.pdf",
     "localPath": "assets/pdfs/ijhs/09_IJHS59_4.pdf"
   },
   {
@@ -28734,9 +30649,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_60_1_1.pdf",
     "juUrl": "",
     "size": 1850.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_60_1_1.pdf",
+    "gcs_key": "ijhs/IJHS_60_1_1.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_60_1_1.pdf"
   },
   {
@@ -28749,9 +30665,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_60_1_2.pdf",
     "juUrl": "",
     "size": 1583.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_60_1_2.pdf",
+    "gcs_key": "ijhs/IJHS_60_1_2.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_60_1_2.pdf"
   },
   {
@@ -28764,9 +30681,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_60_1_3.pdf",
     "juUrl": "",
     "size": 2483.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_60_1_3.pdf",
+    "gcs_key": "ijhs/IJHS_60_1_3.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_60_1_3.pdf"
   },
   {
@@ -28779,9 +30697,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_60_1_4.pdf",
     "juUrl": "",
     "size": 512.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_60_1_4.pdf",
+    "gcs_key": "ijhs/IJHS_60_1_4.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_60_1_4.pdf"
   },
   {
@@ -28794,9 +30713,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_60_1_5.pdf",
     "juUrl": "",
     "size": 459.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_60_1_5.pdf",
+    "gcs_key": "ijhs/IJHS_60_1_5.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_60_1_5.pdf"
   },
   {
@@ -28809,9 +30729,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_60_1_6.pdf",
     "juUrl": "",
     "size": 416.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_60_1_6.pdf",
+    "gcs_key": "ijhs/IJHS_60_1_6.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_60_1_6.pdf"
   },
   {
@@ -28824,9 +30745,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_60_1_7.pdf",
     "juUrl": "",
     "size": 440.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_60_1_7.pdf",
+    "gcs_key": "ijhs/IJHS_60_1_7.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_60_1_7.pdf"
   },
   {
@@ -28839,9 +30761,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_60_1_8.pdf",
     "juUrl": "",
     "size": 485.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_60_1_8.pdf",
+    "gcs_key": "ijhs/IJHS_60_1_8.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_60_1_8.pdf"
   },
   {
@@ -28854,9 +30777,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_60_1_9.pdf",
     "juUrl": "",
     "size": 541.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_60_1_9.pdf",
+    "gcs_key": "ijhs/IJHS_60_1_9.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_60_1_9.pdf"
   },
   {
@@ -28869,9 +30793,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_60_1_10.pdf",
     "juUrl": "",
     "size": 371.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_60_1_10.pdf",
+    "gcs_key": "ijhs/IJHS_60_1_10.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_60_1_10.pdf"
   },
   {
@@ -28884,9 +30809,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_60_1_11.pdf",
     "juUrl": "",
     "size": 691.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_60_1_11.pdf",
+    "gcs_key": "ijhs/IJHS_60_1_11.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_60_1_11.pdf"
   },
   {
@@ -28899,9 +30825,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_60_2_1.pdf",
     "juUrl": "",
     "size": 1633.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_60_2_1.pdf",
+    "gcs_key": "ijhs/IJHS_60_2_1.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_60_2_1.pdf"
   },
   {
@@ -28914,9 +30841,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_60_2_2.pdf",
     "juUrl": "",
     "size": 1505.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_60_2_2.pdf",
+    "gcs_key": "ijhs/IJHS_60_2_2.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_60_2_2.pdf"
   },
   {
@@ -28929,9 +30857,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_60_2_3.pdf",
     "juUrl": "",
     "size": 584.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_60_2_3.pdf",
+    "gcs_key": "ijhs/IJHS_60_2_3.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_60_2_3.pdf"
   },
   {
@@ -28944,9 +30873,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_60_2_4.pdf",
     "juUrl": "",
     "size": 454.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_60_2_4.pdf",
+    "gcs_key": "ijhs/IJHS_60_2_4.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_60_2_4.pdf"
   },
   {
@@ -28959,9 +30889,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_60_2_5.pdf",
     "juUrl": "",
     "size": 5163.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_60_2_5.pdf",
+    "gcs_key": "ijhs/IJHS_60_2_5.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_60_2_5.pdf"
   },
   {
@@ -28974,9 +30905,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_60_2_6.pdf",
     "juUrl": "",
     "size": 832.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_60_2_6.pdf",
+    "gcs_key": "ijhs/IJHS_60_2_6.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_60_2_6.pdf"
   },
   {
@@ -28989,9 +30921,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_60_2_7.pdf",
     "juUrl": "",
     "size": 885.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_60_2_7.pdf",
+    "gcs_key": "ijhs/IJHS_60_2_7.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_60_2_7.pdf"
   },
   {
@@ -29004,9 +30937,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_60_2_8.pdf",
     "juUrl": "",
     "size": 428.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_60_2_8.pdf",
+    "gcs_key": "ijhs/IJHS_60_2_8.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_60_2_8.pdf"
   },
   {
@@ -29019,9 +30953,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_60_2_9.pdf",
     "juUrl": "",
     "size": 908.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_60_2_9.pdf",
+    "gcs_key": "ijhs/IJHS_60_2_9.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_60_2_9.pdf"
   },
   {
@@ -29034,9 +30969,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_60_2_10.pdf",
     "juUrl": "",
     "size": 3917.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_60_2_10.pdf",
+    "gcs_key": "ijhs/IJHS_60_2_10.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_60_2_10.pdf"
   },
   {
@@ -29049,9 +30985,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_60_2_11.pdf",
     "juUrl": "",
     "size": 305.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_60_2_11.pdf",
+    "gcs_key": "ijhs/IJHS_60_2_11.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_60_2_11.pdf"
   },
   {
@@ -29064,9 +31001,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_60_2_12.pdf",
     "juUrl": "",
     "size": 387.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_60_2_12.pdf",
+    "gcs_key": "ijhs/IJHS_60_2_12.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_60_2_12.pdf"
   },
   {
@@ -29079,9 +31017,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_60_3_0.pdf",
     "juUrl": "",
     "size": 1485.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_60_3_0.pdf",
+    "gcs_key": "ijhs/IJHS_60_3_0.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_60_3_0.pdf"
   },
   {
@@ -29094,9 +31033,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_60_3_1.pdf",
     "juUrl": "",
     "size": 1115.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_60_3_1.pdf",
+    "gcs_key": "ijhs/IJHS_60_3_1.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_60_3_1.pdf"
   },
   {
@@ -29109,9 +31049,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_60_3_2.pdf",
     "juUrl": "",
     "size": 1693.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_60_3_2.pdf",
+    "gcs_key": "ijhs/IJHS_60_3_2.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_60_3_2.pdf"
   },
   {
@@ -29124,9 +31065,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_60_3_3.pdf",
     "juUrl": "",
     "size": 3020.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_60_3_3.pdf",
+    "gcs_key": "ijhs/IJHS_60_3_3.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_60_3_3.pdf"
   },
   {
@@ -29139,9 +31081,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_60_3_4.pdf",
     "juUrl": "",
     "size": 2069.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_60_3_4.pdf",
+    "gcs_key": "ijhs/IJHS_60_3_4.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_60_3_4.pdf"
   },
   {
@@ -29154,9 +31097,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_60_3_5.pdf",
     "juUrl": "",
     "size": 6824.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_60_3_5.pdf",
+    "gcs_key": "ijhs/IJHS_60_3_5.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_60_3_5.pdf"
   },
   {
@@ -29169,9 +31113,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_60_3_6.pdf",
     "juUrl": "",
     "size": 1070.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_60_3_6.pdf",
+    "gcs_key": "ijhs/IJHS_60_3_6.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_60_3_6.pdf"
   },
   {
@@ -29184,9 +31129,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_60_3_7.pdf",
     "juUrl": "",
     "size": 462.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_60_3_7.pdf",
+    "gcs_key": "ijhs/IJHS_60_3_7.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_60_3_7.pdf"
   },
   {
@@ -29199,9 +31145,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_60_3_8.pdf",
     "juUrl": "",
     "size": 7000.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_60_3_8.pdf",
+    "gcs_key": "ijhs/IJHS_60_3_8.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_60_3_8.pdf"
   },
   {
@@ -29214,9 +31161,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_60_3_9.pdf",
     "juUrl": "",
     "size": 1051.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_60_3_9.pdf",
+    "gcs_key": "ijhs/IJHS_60_3_9.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_60_3_9.pdf"
   },
   {
@@ -29229,9 +31177,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_60_3_10.pdf",
     "juUrl": "",
     "size": 423.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_60_3_10.pdf",
+    "gcs_key": "ijhs/IJHS_60_3_10.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_60_3_10.pdf"
   },
   {
@@ -29244,9 +31193,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_60_3_11.pdf",
     "juUrl": "",
     "size": 376.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_60_3_11.pdf",
+    "gcs_key": "ijhs/IJHS_60_3_11.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_60_3_11.pdf"
   },
   {
@@ -29259,9 +31209,10 @@ const PAPERS = [
     "remoteUrl": "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/IJHS_60_3_12.pdf",
     "juUrl": "",
     "size": 872.0,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/IJHS_60_3_12.pdf",
+    "gcs_key": "ijhs/IJHS_60_3_12.pdf",
     "localPath": "assets/pdfs/ijhs/IJHS_60_3_12.pdf"
   },
   {
@@ -29274,9 +31225,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/QJMS_116_2_Hindu_Time.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/QJMS_116_2_Hindu_Time.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/QJMS_116_2_Hindu_Time.pdf",
+    "gcs_key": "ijhs/QJMS_116_2_Hindu_Time.pdf",
     "localPath": "assets/pdfs/other/QJMS_116_2_Hindu_Time.pdf"
   },
   {
@@ -29289,9 +31241,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Indian_Heritage_of_Gurukula_System_Ethic.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Indian_Heritage_of_Gurukula_System_Ethic.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Indian_Heritage_of_Gurukula_System_Ethic.pdf",
+    "gcs_key": "ijhs/Indian_Heritage_of_Gurukula_System_Ethic.pdf",
     "localPath": "assets/pdfs/other/Indian_Heritage_of_Gurukula_System_Ethic.pdf"
   },
   {
@@ -29304,9 +31257,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/$T_A_T_T_V_A_D_E_P_A_H_Journal_of_Academy.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/$T_A_T_T_V_A_D_E_P_A_H_Journal_of_Academy.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/$T_A_T_T_V_A_D_E_P_A_H_Journal_of_Academy.pdf",
+    "gcs_key": "ijhs/$T_A_T_T_V_A_D_E_P_A_H_Journal_of_Academy.pdf",
     "localPath": "assets/pdfs/other/$T_A_T_T_V_A_D_E_P_A_H_Journal_of_Academy.pdf"
   },
   {
@@ -29319,9 +31273,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/$Vddhagargiya_Jyotisa_2_Continued_from_p.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/$Vddhagargiya_Jyotisa_2_Continued_from_p.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/$Vddhagargiya_Jyotisa_2_Continued_from_p.pdf",
+    "gcs_key": "ijhs/$Vddhagargiya_Jyotisa_2_Continued_from_p.pdf",
     "localPath": "assets/pdfs/other/$Vddhagargiya_Jyotisa_2_Continued_from_p.pdf"
   },
   {
@@ -29334,9 +31289,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/vddhagargiya_jyotisa_3.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/vddhagargiya_jyotisa_3.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/vddhagargiya_jyotisa_3.pdf",
+    "gcs_key": "ijhs/vddhagargiya_jyotisa_3.pdf",
     "localPath": "assets/pdfs/other/vddhagargiya_jyotisa_3.pdf"
   },
   {
@@ -29349,9 +31305,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/rni-ichr-archaeo-astronomy-2018.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/rni-ichr-archaeo-astronomy-2018.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/rni-ichr-archaeo-astronomy-2018.pdf",
+    "gcs_key": "ijhs/rni-ichr-archaeo-astronomy-2018.pdf",
     "localPath": "assets/pdfs/other/rni-ichr-archaeo-astronomy-2018.pdf"
   },
   {
@@ -29364,9 +31321,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Narada_Silpasastra_Sanskrit_Text_on_Arch.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Narada_Silpasastra_Sanskrit_Text_on_Arch.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Narada_Silpasastra_Sanskrit_Text_on_Arch.pdf",
+    "gcs_key": "ijhs/Narada_Silpasastra_Sanskrit_Text_on_Arch.pdf",
     "localPath": "assets/pdfs/other/Narada_Silpasastra_Sanskrit_Text_on_Arch.pdf"
   },
   {
@@ -29379,9 +31337,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Concept_of_Probability_in_Sanskrit_Texts.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Concept_of_Probability_in_Sanskrit_Texts.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Concept_of_Probability_in_Sanskrit_Texts.pdf",
+    "gcs_key": "ijhs/Concept_of_Probability_in_Sanskrit_Texts.pdf",
     "localPath": "assets/pdfs/other/Concept_of_Probability_in_Sanskrit_Texts.pdf"
   },
   {
@@ -29394,9 +31353,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/$Ancient_Indian_Astronomy_in_Vedic_Texts.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/$Ancient_Indian_Astronomy_in_Vedic_Texts.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/$Ancient_Indian_Astronomy_in_Vedic_Texts.pdf",
+    "gcs_key": "ijhs/$Ancient_Indian_Astronomy_in_Vedic_Texts.pdf",
     "localPath": "assets/pdfs/other/$Ancient_Indian_Astronomy_in_Vedic_Texts.pdf"
   },
   {
@@ -29409,9 +31369,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/rni-extract-comets-meteors-vedas-2016.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/rni-extract-comets-meteors-vedas-2016.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/rni-extract-comets-meteors-vedas-2016.pdf",
+    "gcs_key": "ijhs/rni-extract-comets-meteors-vedas-2016.pdf",
     "localPath": "assets/pdfs/other/rni-extract-comets-meteors-vedas-2016.pdf"
   },
   {
@@ -29424,9 +31385,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Comparison_of_Seismic_Qualification_Chal.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Comparison_of_Seismic_Qualification_Chal.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Comparison_of_Seismic_Qualification_Chal.pdf",
+    "gcs_key": "ijhs/Comparison_of_Seismic_Qualification_Chal.pdf",
     "localPath": "assets/pdfs/other/Comparison_of_Seismic_Qualification_Chal.pdf"
   },
   {
@@ -29439,9 +31401,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Location_of_the_Vedic_Iria_and_its_Arch.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Location_of_the_Vedic_Iria_and_its_Arch.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Location_of_the_Vedic_Iria_and_its_Arch.pdf",
+    "gcs_key": "ijhs/Location_of_the_Vedic_Iria_and_its_Arch.pdf",
     "localPath": "assets/pdfs/other/Location_of_the_Vedic_Iria_and_its_Arch.pdf"
   },
   {
@@ -29454,9 +31417,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/$Parasara_Tantra_an_Ancient_Text_on_Natur.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/$Parasara_Tantra_an_Ancient_Text_on_Natur.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/$Parasara_Tantra_an_Ancient_Text_on_Natur.pdf",
+    "gcs_key": "ijhs/$Parasara_Tantra_an_Ancient_Text_on_Natur.pdf",
     "localPath": "assets/pdfs/other/$Parasara_Tantra_an_Ancient_Text_on_Natur.pdf"
   },
   {
@@ -29469,9 +31433,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Rainfall_cycles_in_Ancient_Sanskrit_Text.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Rainfall_cycles_in_Ancient_Sanskrit_Text.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Rainfall_cycles_in_Ancient_Sanskrit_Text.pdf",
+    "gcs_key": "ijhs/Rainfall_cycles_in_Ancient_Sanskrit_Text.pdf",
     "localPath": "assets/pdfs/other/Rainfall_cycles_in_Ancient_Sanskrit_Text.pdf"
   },
   {
@@ -29484,9 +31449,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/profile_of_indian_astronomy_before_siddhantic_period.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/profile_of_indian_astronomy_before_siddhantic_period.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/profile_of_indian_astronomy_before_siddhantic_period.pdf",
+    "gcs_key": "ijhs/profile_of_indian_astronomy_before_siddhantic_period.pdf",
     "localPath": "assets/pdfs/other/profile_of_indian_astronomy_before_siddhantic_period.pdf"
   },
   {
@@ -29499,9 +31465,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Estimation_of_seismic_spectral_accelerat.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Estimation_of_seismic_spectral_accelerat.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Estimation_of_seismic_spectral_accelerat.pdf",
+    "gcs_key": "ijhs/Estimation_of_seismic_spectral_accelerat.pdf",
     "localPath": "assets/pdfs/other/Estimation_of_seismic_spectral_accelerat.pdf"
   },
   {
@@ -29514,9 +31481,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/geographical_location_of_vedic_irina_in_southern_rajasthan.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/geographical_location_of_vedic_irina_in_southern_rajasthan.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/geographical_location_of_vedic_irina_in_southern_rajasthan.pdf",
+    "gcs_key": "ijhs/geographical_location_of_vedic_irina_in_southern_rajasthan.pdf",
     "localPath": "assets/pdfs/other/geographical_location_of_vedic_irina_in_southern_rajasthan.pdf"
   },
   {
@@ -29529,9 +31497,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Forecasting_of_seasonal_monsoon_rainfall.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Forecasting_of_seasonal_monsoon_rainfall.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Forecasting_of_seasonal_monsoon_rainfall.pdf",
+    "gcs_key": "ijhs/Forecasting_of_seasonal_monsoon_rainfall.pdf",
     "localPath": "assets/pdfs/other/Forecasting_of_seasonal_monsoon_rainfall.pdf"
   },
   {
@@ -29544,9 +31513,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/on_some_comet_observations_in_ancient_india.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/on_some_comet_observations_in_ancient_india.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/on_some_comet_observations_in_ancient_india.pdf",
+    "gcs_key": "ijhs/on_some_comet_observations_in_ancient_india.pdf",
     "localPath": "assets/pdfs/other/on_some_comet_observations_in_ancient_india.pdf"
   },
   {
@@ -29559,9 +31529,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Seismic_hazard_estimation_for_Mumbai_cit.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Seismic_hazard_estimation_for_Mumbai_cit.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Seismic_hazard_estimation_for_Mumbai_cit.pdf",
+    "gcs_key": "ijhs/Seismic_hazard_estimation_for_Mumbai_cit.pdf",
     "localPath": "assets/pdfs/other/Seismic_hazard_estimation_for_Mumbai_cit.pdf"
   },
   {
@@ -29574,9 +31545,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Strong_Ground_Motion_Estimation_During_t.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Strong_Ground_Motion_Estimation_During_t.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Strong_Ground_Motion_Estimation_During_t.pdf",
+    "gcs_key": "ijhs/Strong_Ground_Motion_Estimation_During_t.pdf",
     "localPath": "assets/pdfs/other/Strong_Ground_Motion_Estimation_During_t.pdf"
   },
   {
@@ -29589,9 +31561,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/evolution_of_the_western_coastline_of_india_and_the_probable_location_of_dwaraka_of_krishna.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/evolution_of_the_western_coastline_of_india_and_the_probable_location_of_dwaraka_of_krishna.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/evolution_of_the_western_coastline_of_india_and_the_probable_location_of_dwaraka_of_krishna.pdf",
+    "gcs_key": "ijhs/evolution_of_the_western_coastline_of_india_and_the_probable_location_of_dwaraka_of_krishna.pdf",
     "localPath": "assets/pdfs/other/evolution_of_the_western_coastline_of_india_and_the_probable_location_of_dwaraka_of_krishna.pdf"
   },
   {
@@ -29604,9 +31577,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Interview_with_Prof_RN_Iyengar.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Interview_with_Prof_RN_Iyengar.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Interview_with_Prof_RN_Iyengar.pdf",
+    "gcs_key": "ijhs/Interview_with_Prof_RN_Iyengar.pdf",
     "localPath": "assets/pdfs/other/Interview_with_Prof_RN_Iyengar.pdf"
   },
   {
@@ -29619,9 +31593,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Intrinsic_mode_functions_and_a_strategy.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Intrinsic_mode_functions_and_a_strategy.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Intrinsic_mode_functions_and_a_strategy.pdf",
+    "gcs_key": "ijhs/Intrinsic_mode_functions_and_a_strategy.pdf",
     "localPath": "assets/pdfs/other/Intrinsic_mode_functions_and_a_strategy.pdf"
   },
   {
@@ -29634,9 +31609,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vedic_Irinn_a_and_the_Rann_of_kutch.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vedic_Irinn_a_and_the_Rann_of_kutch.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vedic_Irinn_a_and_the_Rann_of_kutch.pdf",
+    "gcs_key": "ijhs/Vedic_Irinn_a_and_the_Rann_of_kutch.pdf",
     "localPath": "assets/pdfs/other/Vedic_Irinn_a_and_the_Rann_of_kutch.pdf"
   },
   {
@@ -29649,9 +31625,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Description_of_rainfall_variability_in_B.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Description_of_rainfall_variability_in_B.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Description_of_rainfall_variability_in_B.pdf",
+    "gcs_key": "ijhs/Description_of_rainfall_variability_in_B.pdf",
     "localPath": "assets/pdfs/other/Description_of_rainfall_variability_in_B.pdf"
   },
   {
@@ -29664,9 +31641,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Microzonation_of_earthquake_hazard_in_Gr.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Microzonation_of_earthquake_hazard_in_Gr.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Microzonation_of_earthquake_hazard_in_Gr.pdf",
+    "gcs_key": "ijhs/Microzonation_of_earthquake_hazard_in_Gr.pdf",
     "localPath": "assets/pdfs/other/Microzonation_of_earthquake_hazard_in_Gr.pdf"
   },
   {
@@ -29679,9 +31657,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Earthquake_source_model_using_strong_mot.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Earthquake_source_model_using_strong_mot.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Earthquake_source_model_using_strong_mot.pdf",
+    "gcs_key": "ijhs/Earthquake_source_model_using_strong_mot.pdf",
     "localPath": "assets/pdfs/other/Earthquake_source_model_using_strong_mot.pdf"
   },
   {
@@ -29694,9 +31673,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Seismic_status_of_Delhi_megacity.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Seismic_status_of_Delhi_megacity.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Seismic_status_of_Delhi_megacity.pdf",
+    "gcs_key": "ijhs/Seismic_status_of_Delhi_megacity.pdf",
     "localPath": "assets/pdfs/other/Seismic_status_of_Delhi_megacity.pdf"
   },
   {
@@ -29709,9 +31689,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Earthquakes_in_ancient_India.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Earthquakes_in_ancient_India.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Earthquakes_in_ancient_India.pdf",
+    "gcs_key": "ijhs/Earthquakes_in_ancient_India.pdf",
     "localPath": "assets/pdfs/other/Earthquakes_in_ancient_India.pdf"
   },
   {
@@ -29724,9 +31705,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/some_earthquakes_of_kashmir_from_historical_sources.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/some_earthquakes_of_kashmir_from_historical_sources.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/some_earthquakes_of_kashmir_from_historical_sources.pdf",
+    "gcs_key": "ijhs/some_earthquakes_of_kashmir_from_historical_sources.pdf",
     "localPath": "assets/pdfs/other/some_earthquakes_of_kashmir_from_historical_sources.pdf"
   },
   {
@@ -29739,9 +31721,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Dynamic_response_of_a_beam_on_elastic_fo.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Dynamic_response_of_a_beam_on_elastic_fo.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Dynamic_response_of_a_beam_on_elastic_fo.pdf",
+    "gcs_key": "ijhs/Dynamic_response_of_a_beam_on_elastic_fo.pdf",
     "localPath": "assets/pdfs/other/Dynamic_response_of_a_beam_on_elastic_fo.pdf"
   },
   {
@@ -29754,9 +31737,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Application_of_principal_component_analy.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Application_of_principal_component_analy.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Application_of_principal_component_analy.pdf",
+    "gcs_key": "ijhs/Application_of_principal_component_analy.pdf",
     "localPath": "assets/pdfs/other/Application_of_principal_component_analy.pdf"
   },
   {
@@ -29769,9 +31753,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Rocking_response_of_rectangular_rigid_bl.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Rocking_response_of_rectangular_rigid_bl.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Rocking_response_of_rectangular_rigid_bl.pdf",
+    "gcs_key": "ijhs/Rocking_response_of_rectangular_rigid_bl.pdf",
     "localPath": "assets/pdfs/other/Rocking_response_of_rectangular_rigid_bl.pdf"
   },
   {
@@ -29784,9 +31769,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/A_nonlinear_system_under_combined_period.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/A_nonlinear_system_under_combined_period.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/A_nonlinear_system_under_combined_period.pdf",
+    "gcs_key": "ijhs/A_nonlinear_system_under_combined_period.pdf",
     "localPath": "assets/pdfs/other/A_nonlinear_system_under_combined_period.pdf"
   },
   {
@@ -29799,9 +31785,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Cluster_analysis_of_rainfall_stations_of.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Cluster_analysis_of_rainfall_stations_of.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Cluster_analysis_of_rainfall_stations_of.pdf",
+    "gcs_key": "ijhs/Cluster_analysis_of_rainfall_stations_of.pdf",
     "localPath": "assets/pdfs/other/Cluster_analysis_of_rainfall_stations_of.pdf"
   },
   {
@@ -29814,9 +31801,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Random_vibration_of_a_second_order_non_l.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Random_vibration_of_a_second_order_non_l.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Random_vibration_of_a_second_order_non_l.pdf",
+    "gcs_key": "ijhs/Random_vibration_of_a_second_order_non_l.pdf",
     "localPath": "assets/pdfs/other/Random_vibration_of_a_second_order_non_l.pdf"
   },
   {
@@ -29829,9 +31817,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Effect_of_self_weight_and_vertical_accel.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Effect_of_self_weight_and_vertical_accel.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Effect_of_self_weight_and_vertical_accel.pdf",
+    "gcs_key": "ijhs/Effect_of_self_weight_and_vertical_accel.pdf",
     "localPath": "assets/pdfs/other/Effect_of_self_weight_and_vertical_accel.pdf"
   },
   {
@@ -29844,9 +31833,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/QJMS_116_2_Kamasvada_compare.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/QJMS_116_2_Kamasvada_compare.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/QJMS_116_2_Kamasvada_compare.pdf",
+    "gcs_key": "ijhs/QJMS_116_2_Kamasvada_compare.pdf",
     "localPath": "assets/pdfs/other/QJMS_116_2_Kamasvada_compare.pdf"
   },
   {
@@ -29859,9 +31849,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/ajpem_2025_no_laugh.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/ajpem_2025_no_laugh.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/ajpem_2025_no_laugh.pdf",
+    "gcs_key": "ijhs/ajpem_2025_no_laugh.pdf",
     "localPath": "assets/pdfs/other/ajpem_2025_no_laugh.pdf"
   },
   {
@@ -29874,9 +31865,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/ajpem_2025_sukanasopdesa.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/ajpem_2025_sukanasopdesa.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/ajpem_2025_sukanasopdesa.pdf",
+    "gcs_key": "ijhs/ajpem_2025_sukanasopdesa.pdf",
     "localPath": "assets/pdfs/other/ajpem_2025_sukanasopdesa.pdf"
   },
   {
@@ -29889,9 +31881,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/ajpem_2025_ethical_project.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/ajpem_2025_ethical_project.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/ajpem_2025_ethical_project.pdf",
+    "gcs_key": "ijhs/ajpem_2025_ethical_project.pdf",
     "localPath": "assets/pdfs/other/ajpem_2025_ethical_project.pdf"
   },
   {
@@ -29904,9 +31897,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/mahisvini_2024_kamsavadha.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/mahisvini_2024_kamsavadha.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/mahisvini_2024_kamsavadha.pdf",
+    "gcs_key": "ijhs/mahisvini_2024_kamsavadha.pdf",
     "localPath": "assets/pdfs/other/mahisvini_2024_kamsavadha.pdf"
   },
   {
@@ -29919,9 +31913,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/ajpem_2022_silence.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/ajpem_2022_silence.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/ajpem_2022_silence.pdf",
+    "gcs_key": "ijhs/ajpem_2022_silence.pdf",
     "localPath": "assets/pdfs/other/ajpem_2022_silence.pdf"
   },
   {
@@ -29934,9 +31929,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/ijts_2018_well_being.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/ijts_2018_well_being.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/ijts_2018_well_being.pdf",
+    "gcs_key": "ijhs/ijts_2018_well_being.pdf",
     "localPath": "assets/pdfs/other/ijts_2018_well_being.pdf"
   },
   {
@@ -29949,9 +31945,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/alt_2013_madhura_vijaya.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/alt_2013_madhura_vijaya.pdf",
     "size": 0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/alt_2013_madhura_vijaya.pdf",
+    "gcs_key": "ijhs/alt_2013_madhura_vijaya.pdf",
     "localPath": "assets/pdfs/other/alt_2013_madhura_vijaya.pdf"
   },
   {
@@ -29964,9 +31961,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/History-of-Calendar-Panchanga-Committee.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/History-of-Calendar-Panchanga-Committee.pdf",
     "size": 24366.0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/History-of-Calendar-Panchanga-Committee.pdf",
+    "gcs_key": "ijhs/History-of-Calendar-Panchanga-Committee.pdf",
     "localPath": "assets/pdfs/other/History-of-Calendar-Panchanga-Committee.pdf"
   },
   {
@@ -29979,9 +31977,10 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/time-2015-haya-time-units-ancient-india.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/time-2015-haya-time-units-ancient-india.pdf",
     "size": 855.0,
-    "cahcAuthored": true,
+    "cahc_authored": true,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/time-2015-haya-time-units-ancient-india.pdf",
+    "gcs_key": "ijhs/time-2015-haya-time-units-ancient-india.pdf",
     "localPath": "assets/pdfs/other/time-2015-haya-time-units-ancient-india.pdf"
   },
   {
@@ -29994,9 +31993,90 @@ const PAPERS = [
     "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vol43_1_1_RNIyengar.pdf",
     "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vol43_1_1_RNIyengar.pdf",
     "size": 220.2568359375,
-    "cahcAuthored": false,
+    "cahc_authored": false,
+    "entry_type": "pdf",
     "source": "insa",
-    "gcsKey": "ijhs/Vol43_1_1_RNIyengar.pdf",
+    "gcs_key": "ijhs/Vol43_1_1_RNIyengar.pdf",
     "localPath": "assets/pdfs/ijhs/Vol43_1_1_RNIyengar.pdf"
+  },
+  {
+    "journal": "SwarajyaMag",
+    "title": "A Forgotten Indian Theory Of How Power Turns Comic Before It Turns Cruel",
+    "author": "R. S. Hariharan",
+    "category": "Indic",
+    "subject": "Culture",
+    "year": "2025",
+    "remoteUrl": "https://swarajyamag.com/culture/a-forgotten-indian-theory-of-how-power-turns-comic-before-it-turns-cruel",
+    "juUrl": "",
+    "size": 0.0,
+    "cahc_authored": true,
+    "entry_type": "link",
+    "source": "swarajya",
+    "gcs_key": "",
+    "localPath": null
+  },
+  {
+    "journal": "SwarajyaMag",
+    "title": "Pur\u0101\u1e47ic Dhruva Was Not A Myth: How Ancient India Remembered A Real Pole Star",
+    "author": "R. S. Hariharan",
+    "category": "Indic",
+    "subject": "Astronomy",
+    "year": "2025",
+    "remoteUrl": "https://swarajyamag.com/ideas/puric-dhruva-was-not-a-myth-how-ancient-india-remembered-a-real-pole-star",
+    "juUrl": "",
+    "size": 0.0,
+    "cahc_authored": true,
+    "entry_type": "link",
+    "source": "swarajya",
+    "gcs_key": "",
+    "localPath": null
+  },
+  {
+    "journal": "SwarajyaMag",
+    "title": "How A Sanskrit Play Brings Ancient Theatre Into Today\u2019s Bengaluru",
+    "author": "R. S. Hariharan",
+    "category": "Indic",
+    "subject": "Arts",
+    "year": "2025",
+    "remoteUrl": "https://swarajyamag.com/books/how-a-sanskrit-play-brings-ancient-theatre-into-todays-bengaluru",
+    "juUrl": "",
+    "size": 0.0,
+    "cahc_authored": true,
+    "entry_type": "link",
+    "source": "swarajya",
+    "gcs_key": "",
+    "localPath": null
+  },
+  {
+    "journal": "SwarajyaMag",
+    "title": "R\u0101m\u0101nuy\u0101tram: The Modern Ratha Yatra In Classical Sanskrit",
+    "author": "R. S. Hariharan",
+    "category": "Indic",
+    "subject": "Books",
+    "year": "2025",
+    "remoteUrl": "https://swarajyamag.com/books/rmnuytram-the-modern-ratha-yatra-in-classical-sanskrit",
+    "juUrl": "",
+    "size": 0.0,
+    "cahc_authored": true,
+    "entry_type": "link",
+    "source": "swarajya",
+    "gcs_key": "",
+    "localPath": null
+  },
+  {
+    "journal": "SwarajyaMag",
+    "title": "Before Space Science, There Was Mah\u0101salilam: Rediscovery Of India's Oldest Astronomical Text",
+    "author": "R. S. Hariharan",
+    "category": "Indic",
+    "subject": "Astronomy",
+    "year": "2025",
+    "remoteUrl": "https://swarajyamag.com/ideas/before-space-science-there-was-mahsalilam-rediscovery-of-indias-oldest-astronomical-text",
+    "juUrl": "",
+    "size": 0.0,
+    "cahc_authored": true,
+    "entry_type": "link",
+    "source": "swarajya",
+    "gcs_key": "",
+    "localPath": null
   }
 ];
