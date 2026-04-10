@@ -17,6 +17,7 @@ ops/gcs-key.json
 #!.cache/ijhs-classified.md
 *~*
 _agent/
+patra-darpan-spasta-corpus.code-workspace
 
 # Local Netlify folder
 .netlify
