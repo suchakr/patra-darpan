@@ -1,7 +1,7 @@
 # Legacy Index Validation
 
-- exported path: `/Users/sunder/projects/patra-darpan-spasta-corpus/exports/index.tsv`
-- legacy path: `/Users/sunder/projects/patra-darpan-spasta-corpus/reference/legacy/index.tsv`
+- exported path: `/Users/sunder/projects/patra-darpan/exports/index.tsv`
+- legacy path: `/Users/sunder/projects/patra-darpan/reference/legacy/index.tsv`
 
 ## Row Counts
 - exported rows: 2010
