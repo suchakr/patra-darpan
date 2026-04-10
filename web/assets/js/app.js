@@ -234,9 +234,11 @@ function getArchivedLink(paper) {
 
     // 2. Local/Dev Mode
     if (State.env === 'netlify' || (State.env === 'netlify_dev' && State.devMode === 'simulation')) {
-        // Use gcsKey if available (e.g. "ijhs/Vol01_1.pdf" or "other/ajpem_2022.pdf")
-        if (paper.gcsKey) {
-            return `/.netlify/functions/authorize-pdf?file=${encodeURIComponent('assets/' + paper.gcsKey)}`;
+        // Use the projected GCS key when available (for example:
+        // "ijhs/Vol01_1.pdf" or "other/ajpem_2022.pdf").
+        const gcsKey = paper.gcs_key || paper.gcsKey;
+        if (gcsKey) {
+            return `/.netlify/functions/authorize-pdf?file=${encodeURIComponent('assets/' + gcsKey)}`;
         }
         // Fallback: derive from remoteUrl (legacy INSA papers)
         const filename = paper.remoteUrl ? paper.remoteUrl.split('/').pop().split('?')[0] : '';
