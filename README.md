@@ -1,312 +1,297 @@
 # Patra Darpan
 
-Patra Darpan (Mirror of Documents) is a platform for indexing, classifying, and serving scholarly collections, research papers, and archival documents curated or referenced by the Centre for Ancient History and Culture (CAHC).
+Patra Darpan is a corpus, projection, and web-access layer for scholarly
+documents, with an initial focus on the Indian Journal of History of Science
+and curated related material.
 
-## Project Structure
+Its purpose is to make the corpus:
+- easier to browse and search
+- easier to maintain and extend
+- more resilient when original source sites are slow, down, or inconsistent
 
-This project has been refactored (Jan 2026) into the following components:
+The current architecture uses a cleaner canonical corpus layer with explicit
+root inputs, canonical assembly in SQLite, compatibility projections such as
+`exports/index.tsv`, and a separate Patra Darpan web payload build.
 
-- **`pipeline/`**: Data ingestion and processing scripts.
-  - `01-scrape.py`: Scrapes metadata from INSA portal.
-  - `02-patch.py`: Fixes metadata errors.
-  - `03-classify.py`: Uses Gemini LLM to classify new papers.
-  - `04-compare.py`: Compares classification with legacy p85 search.
-  - `05-import-cahcblr.py`: Imports non-IJHS metadata from Prof. R.N. Iyengar's collection (`p60`).
-  - `bootstrap-ingest.py`: Hardened end-to-end ingestion and deduplication utility.
-- **`web/`**: The web application (Netlify).
-  - Contains `index.html`, `assets/`, and `netlify/` functions.
-- **`corpus/`**: Primary Metadata Store (Tracked in Git).
-  - `index.tsv`: The unified master index (Source of Truth for the web app).
-  - `ijhs.tsv`: Raw metadata from INSA.
-  - `ijhs-classified.tsv`: Machine-classified metadata with subject/category.
-- **`.cache/`**: Transient data and intermediate artifacts (Git ignored).
-  - Contains `.pkl` caches, `~.tsv` checkpoint files, and `ijhs-classified.md` reports.
-- **`ops/`**: Operational utilities.
-  - `sync_gcs.py`: Syncs local assets to Google Cloud Storage.
-  - `migrate_index.py`: Builds the final index from individual metadata sources.
-  - `generate_juni_embeds.py`: Generates the search snippets and sandbox for the JUNI website.
+Patra Darpan does **not** own the shared PDF binaries in this repository.
+In this repository layout, PDFs are served from the sibling `patra-darpan`
+checkout.
 
-## Setup
+## Status
 
-Patra Darpan uses `uv` for lightning-fast, reproducible dependency management.
+Current milestone:
+- root inputs are explicit and documented
+- canonical corpus build works
+- legacy-compatible `index.tsv` regeneration works from canonical root inputs
+- Patra Darpan `data.js` can be regenerated from `exports/index.tsv`
 
-1. Install [uv](https://docs.astral.sh/uv/getting-started/installation/).
-2. Run `uv sync` from the project root to build the `.venv`.
-3. Commands in this repository use `uv run <script>` to automatically execute within the isolated environment.
+Legacy scripts still exist in the repo, but the intended authority flow is now:
 
-## External Dependencies
+`root inputs -> canonical build -> validation/audit -> compatibility projections`
 
-Patra Darpan is designed as a **Companion Engine** to an external asset repository, but it is architecturally **self-contained** regarding its metadata and internal PDF storage.
+## Repository Layout
 
-1. **Google Cloud Storage (GCS) Credentials**:
-   - **Why**: Required by `ops/sync_gcs.py` to mirror the local PDFs to the private GCS bucket for production archiving.
-   - **What it does**: Uses your local ADC (Application Default Credentials) via `gcloud`.
-2. **Sibling Asset Repository (`cahcblr.github.io`) / Legacy JUNI**:
-   - **Why**: Used strictly as an import source for non-IJHS metadata (via `05-import-cahcblr.py`), or as a deployment target for `p85`/`p60` embeds. The `cahc_authored_registry.txt` inside Patra Darpan removes any dependency on this repo for defining core authorship.
-3. **Chrome Browser & Selenium**:
-   - **Why**: The INSA portal requires JavaScript execution for navigation. `pipeline/01-scrape.py` uses Selenium to automate Chrome for scraping metadata.
+- `corpus/`
+  root metadata inputs only
+- `scripts/`
+  canonical corpus pipeline entrypoints
+- `ops/`
+  downstream integration utilities such as Patra Darpan payload export
+- `lib/`
+  shared implementation code
+- `exports/`
+  generated compatibility outputs such as `index.tsv`
+- `reports/`
+  validation, audit, and migration reports
+- `reference/legacy/`
+  legacy comparison fixtures
+- `.build~/`
+  generated machine state, including the SQLite corpus build
+- `scratch~/`
+  untracked helpers and one-offs
+- `web/`
+  Patra Darpan SPA, Netlify function, and local web testing docs
 
-## Data Flow Architecture
+## Root Inputs
 
-### 1. High-Level View
+See [corpus/README.md](corpus/README.md).
 
-```mermaid
-graph LR
-    subgraph INSA_Ext ["INSA Portal"]
-        INSA["insa.nic.in"]
-    end
+Current root metadata inputs are:
+- `corpus/ijhs.tsv`
+- `corpus/curated-pdfs.tsv`
+- `corpus/curated-links.tsv`
+- `corpus/cahc_authored_registry.txt`
+- `corpus/cahc-pdf-mirrors.tsv`
 
-    subgraph Sibling_Ext ["cahcblr.github.io"]
-        Sibling[("Sibling Repo<br>+ Live Site")]
-    end
+Shared PDF asset roots live in the sibling `patra-darpan` checkout:
+- `corpus/ijhs`
+- `corpus/other`
 
-    subgraph PatraDarpan ["Patra Darpan"]
-        Pipeline["Data Pipeline"]
-        Meta[("Metadata Store<br>(corpus/)")]
-        Cache[("Intermediate Cache<br>(.cache/)")]
-        DarpanUI(["Darpan UI<br>(Netlify)"])
-    end
+## Common Commands
 
-    subgraph Cloud_Arch ["Cloud"]
-        GCS[("GCS Archive")]
-    end
+Run these from the repository root unless noted otherwise.
 
-    INSA         -->|"Metadata & PDFs"| Pipeline
-    Sibling      -->|"Legacy P60 metadata"| Pipeline
-    Pipeline    <-->|"Read / Write Clear"| Meta
-    Pipeline    <-->|"Cache Partial"| Cache
-    Meta         -->|"Generates data.js"| DarpanUI
-    Meta         -->|"Sync via ops"| GCS
-
-    DarpanUI -.->|"Production Read<br>(cahc.ju.ac.in)"| Sibling
-    DarpanUI -.->|"Production Archive<br>(signed URL)"| GCS
-    DarpanUI -.->|"Local Dev Read<br>(local symlink)"| Meta
-
-    style INSA_Ext    fill:#fce4ec,stroke:#e91e63
-    style Sibling_Ext fill:#e8f5e9,stroke:#66bb6a
-    style PatraDarpan fill:#fff3e0,stroke:#ffa726
-    style Cloud_Arch  fill:#e3f2fd,stroke:#29b6f6
-```
-
-### 2. Detailed View
-
-_Each color zone is a zoom-in of the corresponding box in the High-Level View above. Every node maps to a real file or script._
-
-```mermaid
-graph TD
-    subgraph INSA_Ext ["INSA Portal"]
-        INSA["insa.nic.in<br>(HTML + PDFs)"]
-    end
-
-    subgraph Sibling_Ext ["cahcblr.github.io"]
-        P60["p60_papers.markdown"]
-        ClassMD["ijhs-classified.md<br>(manual copy target)"]
-        JUSite(("cahc.ju.ac.in<br>(Live Site)"))
-    end
-
-    subgraph PatraDarpan ["Patra Darpan"]
-        S1["01-scrape.py<br>(Selenium)"]
-        S5["05-import-cahcblr.py"]
-        S2["02-patch.py"]
-        S3["03-classify.py<br>(Gemini LLM)"]
-        Build["build_data.py"]
-        Sync["sync_gcs.py"]
-        PD_PDFs["corpus/ijhs/<br>(Potentials)"]
-        TSV[("ijhs.tsv")]
-        CTSV[("ijhs-classified.tsv")]
-        Index[("index.tsv<br>(Final)")]
-        Registry["cahc_authored_registry.txt"]
-        CacheFiles[(".cache/*.pkl<br>~.tsv")]
-        ClassMD_out["ijhs-classified.md<br>(in .cache/)"]
-        DataJS["data.js"]
-        DarpanUI(["Darpan UI<br>(Netlify SPA)"])
-        NetFn["Netlify Auth Fn"]
-    end
-
-    subgraph Cloud_Arch ["Cloud"]
-        GCS[("Private GCS Bucket")]
-    end
-
-    %% Ingestion – INSA
-    INSA      -->|"Scrape HTML"| S1
-    S1        -->|"Download PDFs"| PD_PDFs
-    S1        -->|"Write metadata"| TSV
-
-    %% Ingestion – Sibling
-    P60       -->|"Parse"| S5
-    S5        -->|"Merge new entries<br>(URL-deduped)"| TSV
-
-    %% Processing
-    Registry  -->|"Read tags"| S2
-    TSV       -->|"Read"| S2
-    S2        -->|"Patch in-place"| TSV
-    TSV       -->|"Read"| S3
-    S3        -->|"Write Result"| CTSV
-    S3       <-->|"Cache"| CacheFiles
-    S3        -->|"Generate Report"| ClassMD_out
-
-    %% Controlled enrichment loop
-    ClassMD_out -.->|"Manual copy/append"| ClassMD
-
-    %% Ops
-    CTSV      -->|"Read"| Build
-    Build     -->|"Generate"| DataJS
-    DataJS    -->|"Loaded by"| DarpanUI
-    PD_PDFs   -->|"Scan"| Sync
-    Sync      -->|"Upload missing"| GCS
-
-    %% Runtime serving (dotted)
-    DarpanUI  -.->|"Production Read (juUrl)"| JUSite
-    DarpanUI  -.->|"Production Archive"| NetFn
-    NetFn     -.->|"Signed URL"| GCS
-    DarpanUI  -.->|"Local Dev Read<br>(via symlink)"| PD_PDFs
-
-    style INSA_Ext    fill:#fce4ec,stroke:#e91e63
-    style Sibling_Ext fill:#e8f5e9,stroke:#66bb6a
-    style PatraDarpan fill:#fff3e0,stroke:#ffa726
-    style Cloud_Arch  fill:#e3f2fd,stroke:#29b6f6
-```
-
-> [!NOTE]
-> **On the apparent data cycle between `ijhs-classified.md` and `p85_search.markdown`**: After `03-classify.py` generates `ijhs-classified.md`, it is manually appended to `p85_search.markdown` in the sibling repo. One might expect this to cause `05-import-cahcblr.py` to re-import those same papers on its next run, causing an ever-growing metadata store. This does not happen. The import script checks every candidate URL against the existing `ijhs.tsv` and skips any paper already present. The only data that flows back through `p85` are **JU mirror URLs** (`juUrl`) for papers discovered there — an intentional enrichment step, not a re-import.
-
-### 3. Runtime Sequence
-
-```mermaid
-sequenceDiagram
-    participant Dev as Developer
-    participant Pipe as Pipeline Scripts
-    participant INSA as INSA Portal
-    participant Meta as corpus/ (Metadata/PDFs)
-    participant SibRepo as cahcblr.github.io (Repo)
-    participant Build as build_data.py
-    participant DarpanUI as Darpan UI
-    participant NetFn as Netlify Auth Fn
-    participant GCS as GCS Archive
-    participant JUSite as cahc.ju.ac.in (Live)
-    participant User as User
-
-    Note over Dev, Meta: Phase 1 — Ingestion
-    Dev      ->>  Pipe:     Run 01-scrape / 05-import
-    Pipe     ->>  INSA:     Fetch HTML & PDFs
-    INSA     -->> Pipe:     HTML + PDF bytes
-    Pipe     ->>  Meta:     Download PDFs to corpus/ijhs/
-    Pipe     ->>  Meta:     Write ijhs.tsv
-    Pipe     ->>  SibRepo:  Read p60_papers.markdown (Legacy)
-    Pipe     ->>  Meta:     Merge legacy entries (URL-deduped)
-
-    Note over Dev, Meta: Phase 2 — Processing
-    Dev      ->>  Pipe:     Run 02-patch / 03-classify
-    Pipe     <<->> Meta:    Read cahc_authored_registry.txt
-    Pipe     <<->> Meta:    Patch ijhs.tsv → Classify → ijhs-classified.tsv
-    Pipe     ->>  SibRepo:  Write ijhs-classified.md (manual copy target)
-
-    Note over Dev, GCS: Phase 3 — Build & Sync
-    Dev      ->>  Build:    Run build_data.py
-    Build    ->>  Meta:     Read index.tsv
-    Build    -->> DarpanUI: Write data.js
-    Dev      ->>  Pipe:     Run sync_gcs.py
-    Pipe     ->>  Meta:     Scan local corpus/ PDFs
-    Pipe     ->>  GCS:      Upload missing PDFs
-    Dev      ->>  DarpanUI: netlify deploy --prod
-
-    Note over User, JUSite: Phase 4 — Serving
-    User     ->>  DarpanUI: Click "Read"
-    alt Production Mode (JU Mirror)
-        DarpanUI ->> JUSite: Redirect via juUrl
-        JUSite -->> User:   PDF served
-    else Production Archive (GCS)
-        DarpanUI ->> NetFn:  Request signed URL
-        NetFn    ->> GCS:    Get signed URL
-        GCS     -->> NetFn:  URL (15min validity)
-        NetFn   -->> User:   Redirect to GCS PDF
-    else Local Dev Mode
-        DarpanUI ->> Meta: Read via local symlink (assets/pdfs/)
-        Meta -->> User:    PDF served directly
-    end
-```
-
-## Usage
-
-### 1. Data Pipeline
-
-The pipeline scripts should be run in sequence to ensure data integrity:
+### Canonical Corpus
 
 ```bash
-uv run pipeline/01-scrape.py   # Scrape new metadata
-uv run pipeline/05-import-cahcblr.py # Import non-IJHS metadata
-uv run pipeline/02-patch.py    # Fix known metadata errors
-uv run pipeline/03-classify.py # Classify new papers
+uv run python scripts/build_corpus_metadata.py
+uv run python scripts/export_index_tsv.py
+uv run python scripts/validate_legacy_index.py
+uv run python scripts/audit_corpus_inputs.py
 ```
 
-### 2. Operations
-
-To regenerate the web application data:
+### Patra Darpan Web Payload
 
 ```bash
-uv run ops/build_data.py
+uv run python ops/export_patra_darpan_data_js.py
 ```
 
-To sync PDFs to GCS (uses local ADC/gcloud credentials):
+This reads `exports/index.tsv` and writes:
+- `web/assets/js/data.js`
+- `web/assets/pdfs` symlink to the shared PDF asset root
+
+### Local Web Preview
 
 ```bash
-uv run ops/sync_gcs.py       # Summarize and ask for confirmation
-uv run ops/sync_gcs.py -y    # Bypass confirmation (non-interactive)
+cd web
+uv run python -m http.server 8000
 ```
 
-### 3. Diagnostics & Maintenance
+Then open:
+- `http://127.0.0.1:8000`
 
-Use these tools to maintain the health of the local metadata store:
+For Netlify-function testing:
 
 ```bash
-uv run ops/analyze_tsv.py   # Find potential duplicates/anomalies
-uv run ops/dedupe_tsv.py    # Surgically remove duplicates from corpus
+cd web
+npm install
+netlify dev
 ```
 
-### 4. Web Development & Deployment
+See [web/README.md](web/README.md).
 
-The Netlify CLI usage differs slightly depending on your objective:
+## Branching From Here
 
-- **Local Development**: Run `dev` from the `web/` directory for a direct local preview.
-  ```bash
-  cd web
-  netlify dev
-  ```
-- **Local Mode Toggle**: When running `netlify dev`, look for the **Simulation Mode** badge in the header. Click it to toggle between:
-  - **Simulation Mode**: Uses INSA for "Read" and GCS (Cloud) for "Archive".
-  - **Local Mode**: Uses your local PDF files for "Read" and INSA for "Archive".
-- **Production Deployment**: Run `deploy` from the **project root**.
-  ```bash
-  netlify deploy --prod
-  ```
+If you branch from this repository state, treat these as frozen-for-now unless
+your branch is intentionally architectural:
 
-## Content Maintenance Guide
+- root input contract under `corpus/`
+- directory roles (`corpus/`, `scripts/`, `ops/`, `exports/`, `reports/`,
+  `reference/legacy/`, `.build~/`)
+- canonical `index.tsv` projection contract
+- shared PDF asset root assumption via the sibling `patra-darpan` checkout
 
-Patra Darpan is a living archive. Follow these workflows to keep the collection current:
+Before making changes, read:
+- [README.md](README.md)
+- [corpus/README.md](corpus/README.md)
+- [docs/index-tsv-projection-contract.md](docs/index-tsv-projection-contract.md)
+- [web/README.md](web/README.md) if you are touching the SPA or Netlify flow
 
-### 1. New IJHS Volume Released
+From the repository root, verify the current baseline:
 
-When a new volume of the _Indian Journal of History of Science_ is published:
+```bash
+uv run python scripts/build_corpus_metadata.py
+uv run python scripts/export_index_tsv.py
+uv run python scripts/validate_legacy_index.py
+uv run python scripts/audit_corpus_inputs.py
+```
 
-1.  **Scrape**: Run `uv run pipeline/01-scrape.py`. This downloads new PDFs to `corpus/ijhs/` and updates `corpus/ijhs.tsv`.
-2.  **Authorship (if applicable)**: If the new volume contains CAHC-authored papers, append the new Paper ID (e.g., `Vol60_1_5.pdf`) to `corpus/cahc_authored_registry.txt`.
-3.  **Patch**: Run `uv run pipeline/02-patch.py` to seamlessly apply the registry tags and automated metadata fixes.
-4.  **Classify**: Run `uv run pipeline/03-classify.py` to use Gemini for subject/category assignment.
-5.  **Merge**: Run `uv run ops/migrate_index.py` to update the master `corpus/index.tsv`.
-6.  **Deploy**: Run `uv run ops/build_data.py` followed by `netlify deploy --prod`.
+If you are touching Patra Darpan web behavior, also run:
 
-### 2. New CAHC-Authored Paper (PDF)
+```bash
+uv run python ops/export_patra_darpan_data_js.py
+cd web
+uv run python -m http.server 8000
+```
 
-For papers where you have a local PDF file (AJPEM, ALT, etc.):
+Use `netlify dev` from `web/` only when you need to test Netlify-function
+behavior.
 
-1.  **Placement**: Copy the PDF to `corpus/other/`.
-2.  **Ingest**: Run `uv run pipeline/bootstrap-ingest.py`. It extracts metadata from the filename and appends a row to `corpus/index.tsv`.
-3.  **Cloud Sync**: Run `uv run ops/sync_gcs.py` to upload the new asset to the GCS archive.
-4.  **Deploy**: Run `uv run ops/build_data.py` and deploy.
+Prefer these boundaries:
+- `scripts/` for canonical corpus pipeline steps
+- `ops/` for downstream integration utilities
+- `corpus/` for root metadata inputs only
+- `exports/` and `reports/` for generated text artifacts
 
-### 3. New External Post/Link
+If your branch changes any frozen-for-now contract, document that explicitly in
+`docs/spasta-corpus-decisions.md` or the relevant design doc.
 
-For articles that are only available as external web links (e.g., JSTOR, News):
+## Adding New Items
 
-1.  **Manual Entry**: Manually add a row to `corpus/index.tsv` with the `url` and metadata. Set `source="ext"` and `cahc_authored="true"`.
-2.  **Deploy**: Run `uv run ops/build_data.py` and deploy.
+There are three normal add paths.
+
+### 1. New IJHS PDF-backed item
+
+Use this when the item belongs in the portal/IJHS root:
+- ensure the PDF exists in the shared asset root under `../patra-darpan/corpus/ijhs/`
+- add or update the row in `corpus/ijhs.tsv`
+- if the item has a CAHC/JU mirror, add it to `corpus/cahc-pdf-mirrors.tsv`
+- if the item is CAHC-authored, add it to `corpus/cahc_authored_registry.txt`
+
+Example workflow:
+
+```bash
+cp /path/to/IJHS_60_3_0.pdf ../patra-darpan/corpus/ijhs/
+```
+
+Append to `corpus/ijhs.tsv`:
+
+```tsv
+IJHS-60-2025-Issue-3	On mean motions in Indian astronomy	https://insa.nic.in/(S(...))/writereaddata/UpLoadedFiles/IJHS/IJHS_60_3_0.pdf	531	Anil Narayanan
+```
+
+If mirrored, append to `corpus/cahc-pdf-mirrors.tsv`:
+
+```tsv
+https://insa.nic.in/(S(...))/writereaddata/UpLoadedFiles/IJHS/IJHS_60_3_0.pdf	https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/IJHS_60_3_0.pdf
+```
+
+Current convention:
+- CAHC/JU mirror URLs usually take the form
+  `https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/<pdf>`
+- on the current maintainer machine, that mirror is typically backed by copying
+  the PDF into `~/projects/cahcblr.github.io/assets/cached_papers/rni/<pdf>`
+- on another machine or clone, the developer is responsible for ensuring that a
+  declared mirror URL is actually valid
+
+If CAHC-authored, append to `corpus/cahc_authored_registry.txt`:
+
+```text
+IJHS_60_3_0.pdf
+```
+
+### 2. New curated PDF-backed item
+
+Use this when the item is not part of portal IJHS ingest:
+- place the PDF in the shared asset root under `../patra-darpan/corpus/other/`
+- add the row to `corpus/curated-pdfs.tsv`
+- if the item has a CAHC/JU mirror, add it to `corpus/cahc-pdf-mirrors.tsv`
+- if the item is CAHC-authored, add it to `corpus/cahc_authored_registry.txt`
+
+Example workflow:
+
+```bash
+cp /path/to/The_Scope_of_Ashtadashavarnana.pdf ../patra-darpan/corpus/other/
+```
+
+Append to `corpus/curated-pdfs.tsv`:
+
+```tsv
+Karnataka Sanskrit 8.1	The Scope of Aṣṭādaśavarṇana in the Mahākāvya Mathurābhyudaya	https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/The_Scope_of_Ashtadashavarnana.pdf	320.0	2025.0	Shankar Rajaraman, R. S. Hariharan
+```
+
+If the mirror URL should be treated as a declared mirror of some other source
+URL, append that pair to `corpus/cahc-pdf-mirrors.tsv`.
+
+Current convention:
+- CAHC/JU mirror URLs usually take the form
+  `https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/<pdf>`
+- on the current maintainer machine, that mirror is typically backed by copying
+  the PDF into `~/projects/cahcblr.github.io/assets/cached_papers/rni/<pdf>`
+- on another machine or clone, the developer is responsible for ensuring that a
+  declared mirror URL is actually valid
+
+If CAHC-authored, append to `corpus/cahc_authored_registry.txt`:
+
+```text
+The_Scope_of_Ashtadashavarnana.pdf
+```
+
+### 3. New URL-only item
+
+Use this when there is no managed local PDF:
+- add the row to `corpus/curated-links.tsv`
+- if the item is CAHC-authored, add it to `corpus/cahc_authored_registry.txt`
+
+Example `corpus/curated-links.tsv` row:
+
+```tsv
+SwarajyaMag	Did India Lack Historical Consciousness, Or Is It Just That India Understood Time Differently?	https://swarajyamag.com/ideas/did-india-lack-historical-consciousness-or-is-it-just-that-india-understood-time-differently	2026	R. S. Hariharan
+```
+
+### After Adding
+
+From the repository root:
+
+```bash
+uv run python scripts/build_corpus_metadata.py
+uv run python scripts/export_index_tsv.py
+uv run python scripts/validate_legacy_index.py
+uv run python scripts/audit_corpus_inputs.py
+uv run python ops/export_patra_darpan_data_js.py
+```
+
+### Deleting Or Retiring Items
+
+Treat deletion as higher-risk than addition.
+
+Do not casually remove root-input rows, shared PDFs, or GCS objects. Prefer to:
+- first classify the item as duplicate, obsolete, or bad
+- keep a report or manifest if shared assets or GCS objects will be removed
+- rerun export and audit after any intentional deletion
+
+## Documentation Map
+
+- [corpus/README.md](corpus/README.md)
+  root-input contract and file schemas
+- [docs/spasta-corpus-prd.md](docs/spasta-corpus-prd.md)
+  product intent and migration rationale
+- [docs/spasta-corpus-technical-design.md](docs/spasta-corpus-technical-design.md)
+  technical architecture and layer model
+- [docs/spasta-corpus-decisions.md](docs/spasta-corpus-decisions.md)
+  durable design and tactical decisions
+- [docs/index-tsv-projection-contract.md](docs/index-tsv-projection-contract.md)
+  `index.tsv` compatibility projection contract
+- [web/README.md](web/README.md)
+  local web runtime, Netlify dev/deploy, and link behavior
+
+## Environment
+
+Python commands in this repository should use `uv run python ...`, not system
+Python.
+
+## License
+
+Code in this repository is licensed under the MIT License. PDF/content rights
+vary by source and remain with their respective publishers, repositories, or
+mirror providers.

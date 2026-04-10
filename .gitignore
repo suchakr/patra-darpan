@@ -24,6 +24,7 @@ _agent/
 # PDF corpus subfolders are local mirrors of GCS; never commit
 corpus/ijhs/
 corpus/other/
+web/assets/pdfs
 # Specifically track the metadata TSVs
 !corpus/*.tsv
 corpus/*~*

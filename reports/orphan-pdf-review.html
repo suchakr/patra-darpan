@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Orphan PDF Review</title>
+  <style>
+    :root {
+      --bg: #f5f1e8;
+      --panel: #fffaf0;
+      --ink: #1f1c18;
+      --muted: #74685a;
+      --line: #d8ccb8;
+      --accent: #9a6a2f;
+      --accent-soft: #efe1c9;
+      --active: #f2d7a7;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; font-family: Georgia, "Iowan Old Style", serif; color: var(--ink); background: linear-gradient(180deg, #f7f4ed 0%, #ede4d5 100%); }
+    .layout { display: grid; grid-template-columns: 360px 1fr; height: 100vh; }
+    .sidebar { border-right: 1px solid var(--line); background: rgba(255, 250, 240, 0.9); display: flex; flex-direction: column; min-height: 0; }
+    .main { min-height: 0; display: grid; grid-template-rows: auto 1fr auto; }
+    .section { padding: 14px 16px; }
+    .title { font-size: 22px; margin: 0 0 6px; }
+    .subtitle { color: var(--muted); font-size: 14px; margin: 0; }
+    .controls { display: grid; gap: 10px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .controls input, .controls select, .notes textarea, .notes input {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 10px 12px;
+      background: #fffef9;
+      color: var(--ink);
+      font: inherit;
+    }
+    .button-row { display: flex; gap: 8px; flex-wrap: wrap; }
+    button {
+      border: 1px solid #b99968;
+      background: linear-gradient(180deg, #fff7ea 0%, #efd9b3 100%);
+      color: var(--ink);
+      border-radius: 999px;
+      padding: 8px 12px;
+      cursor: pointer;
+      font: inherit;
+    }
+    button:hover { background: linear-gradient(180deg, #fff9ef 0%, #ebcf9e 100%); }
+    .list { overflow: auto; min-height: 0; padding: 8px; }
+    .item {
+      width: 100%;
+      text-align: left;
+      border: 1px solid transparent;
+      border-radius: 12px;
+      background: transparent;
+      padding: 10px 12px;
+      margin: 0 0 6px;
+      display: grid;
+      gap: 4px;
+    }
+    .item:hover { border-color: var(--line); background: rgba(255,255,255,0.6); }
+    .item.active { background: var(--active); border-color: #c99d5b; }
+    .item-index { font-size: 12px; color: var(--muted); }
+    .item-path { font-size: 14px; line-height: 1.25; word-break: break-word; }
+    .item-meta { font-size: 12px; color: var(--muted); display: flex; gap: 10px; flex-wrap: wrap; }
+    .viewer-head { border-bottom: 1px solid var(--line); background: rgba(255,255,255,0.5); }
+    .pathline { font-size: 18px; margin: 0 0 6px; word-break: break-word; }
+    .meta { display: flex; gap: 10px; flex-wrap: wrap; color: var(--muted); font-size: 13px; }
+    .viewer-shell { position: relative; min-height: 0; }
+    .viewer {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      background: #f2ede4;
+    }
+    .fallback {
+      position: absolute;
+      inset: auto 16px 16px auto;
+      background: rgba(255, 250, 240, 0.95);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 8px 10px;
+      font-size: 13px;
+    }
+    .notes { border-top: 1px solid var(--line); background: rgba(255,255,255,0.6); display: grid; grid-template-columns: 220px 1fr 160px; gap: 12px; align-items: start; }
+    .notes textarea { min-height: 110px; resize: vertical; }
+    .stack { display: grid; gap: 10px; }
+    .status-chip { font-size: 12px; color: var(--muted); }
+    .countline { font-size: 13px; color: var(--muted); }
+    .empty { padding: 24px; color: var(--muted); }
+    @media (max-width: 900px) {
+      .layout { grid-template-columns: 1fr; grid-template-rows: 42vh 58vh; }
+      .sidebar { border-right: 0; border-bottom: 1px solid var(--line); }
+      .notes { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="section">
+        <h1 class="title">Orphan PDF Review</h1>
+        <p class="subtitle">1 shared PDFs on disk that are not currently reachable from root-input-driven canonical assembly.</p>
+      </div>
+      <div class="section controls">
+        <input id="search" type="search" placeholder="Filter by filename or path">
+        <div class="button-row">
+          <button id="prevBtn" type="button">Previous</button>
+          <button id="nextBtn" type="button">Next</button>
+          <button id="exportBtn" type="button">Export Notes JSON</button>
+        </div>
+        <div class="countline" id="countLine"></div>
+      </div>
+      <div class="list" id="list"></div>
+    </aside>
+    <main class="main">
+      <div class="section viewer-head">
+        <h2 class="pathline" id="currentPath">Select a PDF</h2>
+        <div class="meta">
+          <span id="currentIndex"></span>
+          <span id="currentBucket"></span>
+          <span id="currentStatusText"></span>
+          <a id="openExternal" href="#" target="_blank" rel="noopener">Open in new tab</a>
+        </div>
+      </div>
+      <div class="viewer-shell">
+        <iframe id="viewer" class="viewer" title="PDF viewer"></iframe>
+        <div class="fallback">If the embedded PDF does not render, use “Open in new tab”.</div>
+      </div>
+      <div class="section notes">
+        <div class="stack">
+          <label>
+            <div class="status-chip">Review Status</div>
+            <select id="status">
+              <option value="unreviewed">Unreviewed</option>
+              <option value="non_corpus">Non-corpus / ignore</option>
+              <option value="missing_metadata">Needs metadata row</option>
+              <option value="mapping_gap">Mapping gap</option>
+              <option value="secondary_asset">Secondary asset</option>
+              <option value="broken_hold">Broken / hold</option>
+              <option value="keep_pending">Keep pending decision</option>
+            </select>
+          </label>
+          <label>
+            <div class="status-chip">Tags</div>
+            <input id="tags" type="text" placeholder="comma, separated, tags">
+          </label>
+        </div>
+        <label>
+          <div class="status-chip">Notes</div>
+          <textarea id="notes" placeholder="Type thoughts here. Notes save automatically in this browser."></textarea>
+        </label>
+        <div class="stack">
+          <div class="status-chip">Saved locally</div>
+          <div id="saveState" class="countline">No item selected.</div>
+          <button id="clearBtn" type="button">Clear Current Notes</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const STORAGE_KEY = "spasta-corpus-orphan-pdf-review-v1";
+    const ITEMS = [
+      {
+            "relPath": "ijhs/IJHS_60_3_1_mean_motions.pdf",
+            "absPath": "/Users/sunder/projects/patra-darpan/corpus/ijhs/IJHS_60_3_1_mean_motions.pdf"
+      }
+];
+
+    const searchEl = document.getElementById("search");
+    const listEl = document.getElementById("list");
+    const countLineEl = document.getElementById("countLine");
+    const currentPathEl = document.getElementById("currentPath");
+    const currentIndexEl = document.getElementById("currentIndex");
+    const currentBucketEl = document.getElementById("currentBucket");
+    const currentStatusTextEl = document.getElementById("currentStatusText");
+    const viewerEl = document.getElementById("viewer");
+    const openExternalEl = document.getElementById("openExternal");
+    const statusEl = document.getElementById("status");
+    const tagsEl = document.getElementById("tags");
+    const notesEl = document.getElementById("notes");
+    const saveStateEl = document.getElementById("saveState");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const clearBtn = document.getElementById("clearBtn");
+    const exportBtn = document.getElementById("exportBtn");
+
+    function loadReviewState() {
+      try {
+        return JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+      } catch {
+        return {};
+      }
+    }
+
+    function saveReviewState(state) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    let reviewState = loadReviewState();
+    let selectedIndex = 0;
+    let filteredItems = ITEMS.slice();
+
+    function fileUrl(absPath) {
+      return encodeURI("file://" + absPath);
+    }
+
+    function getItemState(relPath) {
+      return reviewState[relPath] || { status: "unreviewed", tags: "", notes: "" };
+    }
+
+    function setItemState(relPath, patch) {
+      reviewState[relPath] = { ...getItemState(relPath), ...patch, updatedAt: new Date().toISOString() };
+      saveReviewState(reviewState);
+    }
+
+    function renderList() {
+      const query = searchEl.value.trim().toLowerCase();
+      filteredItems = ITEMS.filter((item) => item.relPath.toLowerCase().includes(query));
+      if (!filteredItems.length) {
+        listEl.innerHTML = '<div class="empty">No matching orphan PDFs.</div>';
+        countLineEl.textContent = "0 shown";
+        currentPathEl.textContent = "No matching PDF";
+        currentIndexEl.textContent = "";
+        currentBucketEl.textContent = "";
+        currentStatusTextEl.textContent = "";
+        viewerEl.removeAttribute("src");
+        openExternalEl.href = "#";
+        return;
+      }
+
+      if (selectedIndex >= filteredItems.length) selectedIndex = filteredItems.length - 1;
+      if (selectedIndex < 0) selectedIndex = 0;
+
+      countLineEl.textContent = `${filteredItems.length} shown of ${ITEMS.length}`;
+      listEl.innerHTML = "";
+      filteredItems.forEach((item, idx) => {
+        const state = getItemState(item.relPath);
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "item" + (idx === selectedIndex ? " active" : "");
+        btn.innerHTML = `
+          <div class="item-index">#${idx + 1}</div>
+          <div class="item-path">${item.relPath}</div>
+          <div class="item-meta">
+            <span>${item.relPath.startsWith("ijhs/") ? "ijhs" : "other"}</span>
+            <span>${state.status || "unreviewed"}</span>
+          </div>
+        `;
+        btn.addEventListener("click", () => {
+          selectedIndex = idx;
+          renderList();
+          renderDetail();
+        });
+        listEl.appendChild(btn);
+      });
+      renderDetail();
+    }
+
+    function renderDetail() {
+      const item = filteredItems[selectedIndex];
+      if (!item) return;
+      const state = getItemState(item.relPath);
+      currentPathEl.textContent = item.relPath;
+      currentIndexEl.textContent = `Item ${selectedIndex + 1} of ${filteredItems.length}`;
+      currentBucketEl.textContent = item.relPath.startsWith("ijhs/") ? "Bucket: ijhs" : "Bucket: other";
+      currentStatusTextEl.textContent = `Status: ${state.status || "unreviewed"}`;
+      const url = fileUrl(item.absPath);
+      viewerEl.src = url;
+      openExternalEl.href = url;
+      statusEl.value = state.status || "unreviewed";
+      tagsEl.value = state.tags || "";
+      notesEl.value = state.notes || "";
+      saveStateEl.textContent = state.updatedAt ? `Saved ${new Date(state.updatedAt).toLocaleString()}` : "No notes yet for this file.";
+    }
+
+    function persistCurrent() {
+      const item = filteredItems[selectedIndex];
+      if (!item) return;
+      setItemState(item.relPath, {
+        status: statusEl.value,
+        tags: tagsEl.value.trim(),
+        notes: notesEl.value,
+      });
+      currentStatusTextEl.textContent = `Status: ${statusEl.value}`;
+      saveStateEl.textContent = `Saved ${new Date().toLocaleString()}`;
+      renderList();
+    }
+
+    let saveTimer = null;
+    function scheduleSave() {
+      window.clearTimeout(saveTimer);
+      saveTimer = window.setTimeout(persistCurrent, 150);
+    }
+
+    searchEl.addEventListener("input", renderList);
+    statusEl.addEventListener("change", persistCurrent);
+    tagsEl.addEventListener("input", scheduleSave);
+    notesEl.addEventListener("input", scheduleSave);
+
+    prevBtn.addEventListener("click", () => {
+      if (!filteredItems.length) return;
+      selectedIndex = Math.max(0, selectedIndex - 1);
+      renderList();
+    });
+    nextBtn.addEventListener("click", () => {
+      if (!filteredItems.length) return;
+      selectedIndex = Math.min(filteredItems.length - 1, selectedIndex + 1);
+      renderList();
+    });
+    clearBtn.addEventListener("click", () => {
+      const item = filteredItems[selectedIndex];
+      if (!item) return;
+      reviewState[item.relPath] = { status: "unreviewed", tags: "", notes: "", updatedAt: new Date().toISOString() };
+      saveReviewState(reviewState);
+      renderList();
+    });
+    exportBtn.addEventListener("click", () => {
+      const payload = {
+        exportedAt: new Date().toISOString(),
+        itemCount: ITEMS.length,
+        notes: reviewState,
+      };
+      const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "orphan-pdf-review-notes.json";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    });
+
+    renderList();
+  </script>
+</body>
+</html>

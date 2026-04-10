@@ -10,19 +10,26 @@ import json
 import os
 import pathlib
 import sys
+
 # Paths
-BASE_DIR = pathlib.Path(__file__).parent.parent # patra-darpan root
-TSV_PATH = BASE_DIR / "corpus" / "index.tsv"
+BASE_DIR = pathlib.Path(__file__).parent.parent
+if str(BASE_DIR) not in sys.path:
+    sys.path.insert(0, str(BASE_DIR))
+
+from lib.config import EXPORTS_DIR, resolve_shared_asset_root
+
+
+TSV_PATH = EXPORTS_DIR / "index.tsv"
 OUTPUT_JS_PATH = BASE_DIR / "web" / "assets" / "js" / "data.js"
 SYMLINK_DIR = BASE_DIR / "web" / "assets" / "pdfs"
 
-# Corpus directories — canonical local PDF home
-CORPUS_ROOT = BASE_DIR / "corpus"
+# Shared PDF asset directories — canonical local PDF home
+CORPUS_ROOT = resolve_shared_asset_root()
 CORPUS_IJHS = CORPUS_ROOT / "ijhs"
 CORPUS_OTHER = CORPUS_ROOT / "other"
 
 def setup_symlink():
-    """Creates a relative symlink web/assets/pdfs -> ../../corpus/"""
+    """Creates a relative symlink web/assets/pdfs -> shared PDF asset root."""
     if not CORPUS_ROOT.exists():
         print(f"Warning: Corpus root not found at {CORPUS_ROOT}")
         return
@@ -66,10 +73,11 @@ def find_local_path(url_filename, gcs_key=""):
     return None
 
 def main():
-    print(f"Reading TSV from {TSV_PATH}")
+    print(f"Reading projected index TSV from {TSV_PATH}")
     if not TSV_PATH.exists():
         print("TSV file not found!")
         sys.exit(1)
+    print(f"Using shared asset root {CORPUS_ROOT}")
 
     df = pd.read_csv(TSV_PATH, sep='\t')
     
@@ -138,7 +146,9 @@ def main():
             
         papers.append(paper)
 
-    print(f"Processed {len(papers)} papers. Found local PDF for {found_count} of them.")
+    print(
+        f"Processed {len(papers)} papers. Found local PDF for {found_count} of them."
+    )
     
     # Write to JS
     js_content = f"const PAPERS = {json.dumps(papers, indent=2)};\n"
@@ -146,7 +156,7 @@ def main():
     with open(OUTPUT_JS_PATH, "w") as f:
         f.write(js_content)
     
-    print(f"Data written to {OUTPUT_JS_PATH}")
+    print(f"Patra Darpan data JS written to {OUTPUT_JS_PATH}")
     
     # Setup Symlink
     setup_symlink()
