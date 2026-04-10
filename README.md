@@ -35,8 +35,12 @@ Legacy scripts still exist in the repo, but the intended authority flow is now:
   root metadata inputs only
 - `scripts/`
   canonical corpus pipeline entrypoints
+- `pipeline/`
+  legacy ingestion/enrichment scripts retained for reference; see
+  `pipeline/README.md`
 - `ops/`
-  downstream integration utilities such as Patra Darpan payload export
+  downstream integration utilities such as Patra Darpan payload export; see
+  `ops/README.md` for current vs legacy script status
 - `lib/`
   shared implementation code
 - `exports/`
