@@ -32005,7 +32005,7 @@ const PAPERS = [
     "author": "R. S. Hariharan",
     "category": "Indic",
     "subject": "Culture",
-    "year": "2025",
+    "year": "2026",
     "remoteUrl": "https://swarajyamag.com/culture/a-forgotten-indian-theory-of-how-power-turns-comic-before-it-turns-cruel",
     "juUrl": "",
     "size": 0.0,
