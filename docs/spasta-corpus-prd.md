@@ -149,10 +149,10 @@ URL, filename, current TSV row order, and `gcs_key` are storage or projection pr
 `spasta-corpus` should be developed and stabilized in an isolated feature branch and worktree.
 
 Recommended setup:
-- Live checkout: `/Users/sunder/projects/patra-darpan`
-- Feature branch: `feat/spasta-corpus`
-- Feature worktree: `/Users/sunder/projects/patra-darpan-spasta-corpus`
-- Shared binary asset root used by feature code: `/Users/sunder/projects/patra-darpan/corpus`
+- a live `patra-darpan` checkout that owns the shared PDF asset store
+- a feature branch for canonical corpus work
+- an isolated checkout or worktree for that feature branch
+- shared binary asset root used by feature code: sibling `patra-darpan/corpus`
 
 The new pipeline must not assume that the local binary corpus sits inside the same checkout where the assembly code runs. The corpus root must be configurable.
 

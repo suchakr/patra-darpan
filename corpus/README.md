@@ -1,6 +1,6 @@
 # Corpus Root Input Contract
 
-This directory defines the root inputs for `spasta-corpus`.
+This directory defines the root inputs for the current canonical corpus build.
 
 Root inputs are the files and asset locations that canonical assembly reads directly.
 Derived artifacts do not belong to the root-input set.
@@ -8,31 +8,32 @@ Derived artifacts do not belong to the root-input set.
 ## Root Inputs
 
 ### Shared PDF asset roots
-These are external shared asset roots owned by the live `patra-darpan` checkout.
-They are not git-managed here.
+These are external shared asset roots owned by the sibling `patra-darpan`
+checkout. They are not git-managed here.
 
-- `/Users/sunder/projects/patra-darpan/corpus/ijhs/`
+- `../patra-darpan/corpus/ijhs/`
   Role: local PDF asset root for portal-derived IJHS papers
-- `/Users/sunder/projects/patra-darpan/corpus/other/`
+- `../patra-darpan/corpus/other/`
   Role: local PDF asset root for curated non-IJHS papers
 
-### Git-managed finite metadata files in this branch
-These files are root inputs for canonical assembly and are git-managed in the `spasta-corpus` branch.
+### Git-managed finite metadata files in this repository
+These files are root inputs for canonical assembly and are git-managed here.
 
-- [ijhs.tsv](/Users/sunder/projects/patra-darpan-spasta-corpus/corpus/ijhs.tsv)
+- [ijhs.tsv](ijhs.tsv)
   Role: portal-derived metadata root for IJHS papers
-  Owner: upstream refresh by `01-scrape.py`, but `spasta-corpus` treats the file itself as an external root input
+  Owner: upstream refresh by `01-scrape.py`, but the canonical build treats the
+  file itself as an external root input
 
-- [cahc_authored_registry.txt](/Users/sunder/projects/patra-darpan-spasta-corpus/corpus/cahc_authored_registry.txt)
+- [cahc_authored_registry.txt](cahc_authored_registry.txt)
   Role: narrow manual patch input for CAHC authorship tagging
 
-- [cahc-pdf-mirrors.tsv](/Users/sunder/projects/patra-darpan-spasta-corpus/corpus/cahc-pdf-mirrors.tsv)
+- [cahc-pdf-mirrors.tsv](cahc-pdf-mirrors.tsv)
   Role: explicit mapping from source PDF URLs to CAHC-managed mirror URLs
 
-- [curated-pdfs.tsv](/Users/sunder/projects/patra-darpan-spasta-corpus/corpus/curated-pdfs.tsv)
-  Role: curated metadata root for PDFs stored under `/Users/sunder/projects/patra-darpan/corpus/other/`
+- [curated-pdfs.tsv](curated-pdfs.tsv)
+  Role: curated metadata root for PDFs stored under `../patra-darpan/corpus/other/`
 
-- [curated-links.tsv](/Users/sunder/projects/patra-darpan-spasta-corpus/corpus/curated-links.tsv)
+- [curated-links.tsv](curated-links.tsv)
   Role: curated metadata root for URL-only corpus entries
 
 ## Not Root Inputs
@@ -40,17 +41,17 @@ These files are root inputs for canonical assembly and are git-managed in the `s
 These files are retained under `reference/legacy/` for migration comparison, but
 they are not root inputs for the new canonical build.
 
-- [reference/legacy/ijhs-classified.tsv](/Users/sunder/projects/patra-darpan-spasta-corpus/reference/legacy/ijhs-classified.tsv)
+- [reference/legacy/ijhs-classified.tsv](../reference/legacy/ijhs-classified.tsv)
   Role: derived enrichment over `ijhs.tsv`
 
-- [reference/legacy/index.tsv](/Users/sunder/projects/patra-darpan-spasta-corpus/reference/legacy/index.tsv)
+- [reference/legacy/index.tsv](../reference/legacy/index.tsv)
   Role: legacy unified projection and migration comparison target
 
 ## Transitional Note
 
 The current `main` branch has a historically messy layout where `ijhs.tsv` acts as a sum of portal-derived metadata and additional non-IJHS metadata imported through legacy flows.
 
-The `spasta-corpus` cleanup direction is:
+The cleanup direction is:
 - keep `ijhs.tsv` as the portal-derived root metadata input
 - move non-IJHS local-PDF metadata into `curated-pdfs.tsv`
 - move URL-only curated entries into `curated-links.tsv`
@@ -101,7 +102,8 @@ Current root columns:
 - `author`
 
 Working expectation:
-- one row describes one curated local PDF intended to map to `/Users/sunder/projects/patra-darpan/corpus/other/`
+- one row describes one curated local PDF intended to map to
+  `../patra-darpan/corpus/other/`
 - `year` is explicit here because it is not safely derivable from journal naming
 
 ### `curated-links.tsv`
@@ -122,13 +124,13 @@ The root inputs may be cleaner and smaller than legacy `index.tsv`, as long as t
 
 ## Assembly Boundary
 
-`spasta-corpus` is responsible for:
+The canonical corpus build is responsible for:
 - reading these root inputs
 - normalizing them
 - assembling canonical corpus state
 - validating and projecting outputs
 
-`spasta-corpus` is not responsible for:
+The canonical corpus build is not responsible for:
 - scraping INSA or any other live site
 - guaranteeing the health of upstream refresh utilities such as `01-scrape.py`
 - managing the shared PDF asset roots themselves

@@ -20,12 +20,13 @@ Rationale:
 ### Decision: shared PDF assets remain external
 Status: active
 
-Shared PDF assets remain outside the feature worktree at:
-- `/Users/sunder/projects/patra-darpan/corpus/ijhs/`
-- `/Users/sunder/projects/patra-darpan/corpus/other/`
+Shared PDF assets remain outside this repository checkout in the sibling
+`patra-darpan` asset roots:
+- `../patra-darpan/corpus/ijhs/`
+- `../patra-darpan/corpus/other/`
 
-These are treated as read-only asset roots from the point of view of
-`spasta-corpus`.
+These are treated as read-only asset roots from the point of view of the
+canonical build.
 
 Rationale:
 - avoids duplication of binaries
@@ -71,7 +72,7 @@ The current `main` branch has a historically messy layout in which `ijhs.tsv`
 acts as a sum of portal-derived metadata and additional non-IJHS metadata
 imported through legacy flows.
 
-The cleanup direction in `spasta-corpus` is:
+The cleanup direction is:
 - keep `ijhs.tsv` as portal-derived root metadata
 - move curated non-IJHS local PDF metadata into `curated-pdfs.tsv`
 - move curated URL-only metadata into `curated-links.tsv`
@@ -133,7 +134,7 @@ Rationale:
 ### Decision: derived artifact directory roles
 Status: active
 
-The feature worktree uses these directory roles:
+This repository layout uses these directory roles:
 - `corpus/`
   root inputs, git-managed
 - `.build~/`
