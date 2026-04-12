@@ -21,6 +21,10 @@ patra-darpan-spasta-corpus.code-workspace
 
 # Local Netlify folder
 .netlify
+web/.netlify/
+
+# Netlify CLI may create this when running from web/ with only ".netlify".
+web/.gitignore
 
 # PDF corpus subfolders are local mirrors of GCS; never commit
 corpus/ijhs/

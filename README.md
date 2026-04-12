@@ -160,6 +160,49 @@ Prefer these boundaries:
 If your branch changes any frozen-for-now contract, document that explicitly in
 `docs/spasta-corpus-decisions.md` or the relevant design doc.
 
+### Worktree Policy
+
+Default to a fresh worktree for new feature work. The local asset symlink setup
+is reproducible through the web payload export, so do not repurpose an old
+feature worktree as the normal workflow.
+
+Example:
+
+```bash
+git worktree add ../patra-darpan-cahcportal -b feat/wire-cahcportal main
+cd ../patra-darpan-cahcportal
+uv run python ops/export_patra_darpan_data_js.py
+```
+
+This should recreate `web/assets/js/data.js` and the `web/assets/pdfs` symlink
+from the documented shared asset-root assumptions. If this fails, treat it as a
+bootstrap or documentation problem to fix, not as a reason to normalize
+directory reuse.
+
+Before creating, reusing, or deleting worktrees, check:
+
+```bash
+git status --short --branch
+git worktree list
+git branch --merged main
+```
+
+Notes for humans and agents:
+- a `+` next to a branch in `git branch` means that branch is checked out in
+  another worktree
+- do not try to check out `main` in a secondary worktree while `main` is already
+  checked out in the primary worktree
+- use `git worktree move` if a worktree directory must be renamed
+- delete merged feature branches with `git branch -d <branch>` only after they
+  are no longer checked out in any worktree
+- temporary `safe-main-before-*` branches are acceptable around merges, but
+  should be deleted once the merge is verified and no longer needs that rollback
+  point
+
+Repurposing an existing worktree is only a temporary local workaround when fresh
+setup is broken, slow, or blocked by local-only state. It should not become the
+canonical workflow.
+
 ## Adding New Items
 
 There are three normal add paths.
