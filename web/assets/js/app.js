@@ -229,25 +229,159 @@ function updateModeBadge() {
 function getArchivedLink(paper) {
     // 1. External Links: No Archive/Mirror, point to original source
     if (paper.entry_type === 'link') {
-        return paper.remoteUrl || '#';
+        return getRemoteUrl(paper) || '#';
     }
 
     // 2. Local/Dev Mode
     if (State.env === 'netlify' || (State.env === 'netlify_dev' && State.devMode === 'simulation')) {
         // Use the projected GCS key when available (for example:
         // "ijhs/Vol01_1.pdf" or "other/ajpem_2022.pdf").
-        const gcsKey = paper.gcs_key || paper.gcsKey;
+        const gcsKey = getGcsKey(paper);
         if (gcsKey) {
-            return `/.netlify/functions/authorize-pdf?file=${encodeURIComponent('assets/' + gcsKey)}`;
+            return getGcsArchiveLink(gcsKey);
         }
         // Fallback: derive from remoteUrl (legacy INSA papers)
-        const filename = paper.remoteUrl ? paper.remoteUrl.split('/').pop().split('?')[0] : '';
+        const remoteUrl = getRemoteUrl(paper);
+        const filename = remoteUrl ? remoteUrl.split('/').pop().split('?')[0] : '';
         if (filename) {
             return `/.netlify/functions/authorize-pdf?file=${encodeURIComponent('assets/ijhs/' + filename)}`;
         }
-        return paper.remoteUrl || '#';
+        return remoteUrl || '#';
     }
-    return paper.remoteUrl;
+    return getRemoteUrl(paper);
+}
+
+function getRemoteUrl(paper) {
+    return paper.remoteUrl || paper.url || '';
+}
+
+function getJuUrl(paper) {
+    return paper.juUrl || paper.ju_url || '';
+}
+
+function getGcsKey(paper) {
+    return paper.gcs_key || paper.gcsKey || '';
+}
+
+function getGcsArchiveLink(gcsKey) {
+    return `/.netlify/functions/authorize-pdf?file=${encodeURIComponent('assets/' + gcsKey)}`;
+}
+
+function escapeAttr(value) {
+    return String(value || '')
+        .replace(/&/g, '&amp;')
+        .replace(/"/g, '&quot;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;');
+}
+
+function sameLink(left, right) {
+    return Boolean(left && right && left === right);
+}
+
+function getAccessIcon(kind) {
+    const icons = {
+        read: '<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>',
+        open: '<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15.3 15.3 0 0 1 0 20"></path><path d="M12 2a15.3 15.3 0 0 0 0 20"></path></svg>',
+        source: '<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>',
+        mirror: '<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="7" height="14" rx="1.5"></rect><rect x="13" y="5" width="7" height="14" rx="1.5"></rect><path d="M11 12h2"></path></svg>',
+        archive: '<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"></rect><path d="M4 16V6a2 2 0 0 1 2-2h10"></path></svg>'
+    };
+    return icons[kind] || icons.archive;
+}
+
+function renderLinkSourceChips(paper, primaryLink, isLocalMode) {
+    const isLink = paper.entry_type === 'link';
+    const remoteUrl = getRemoteUrl(paper);
+    const juUrl = getJuUrl(paper);
+    const gcsKey = getGcsKey(paper);
+    const targets = [];
+
+    const addTarget = ({ id, kind, label, href, active = false, visibleText = '' }) => {
+        if (!href) return;
+        if (targets.some(target => sameLink(target.href, href))) return;
+        targets.push({ id, kind, label, href, active, visibleText });
+    };
+
+    if (isLink) {
+        addTarget({
+            id: 'open',
+            kind: 'open',
+            label: 'Open resource',
+            href: remoteUrl,
+            active: sameLink(primaryLink, remoteUrl)
+        });
+    } else {
+        const isLocalDefault = isLocalMode && sameLink(primaryLink, paper.localPath);
+
+        if (isLocalDefault) {
+            addTarget({
+                id: 'local',
+                kind: 'local',
+                label: 'Local copy',
+                href: paper.localPath,
+                active: true,
+                visibleText: 'Local'
+            });
+        } else {
+            addTarget({
+                id: 'read',
+                kind: 'read',
+                label: 'Read resource',
+                href: primaryLink,
+                active: true
+            });
+        }
+
+        if (isLocalMode && !isLocalDefault) {
+            addTarget({
+                id: 'local',
+                kind: 'local',
+                label: 'Local copy',
+                href: paper.localPath,
+                visibleText: 'Local'
+            });
+        }
+
+        addTarget({
+            id: 'alternate-ju',
+            kind: 'mirror',
+            label: 'Alternate access',
+            href: juUrl,
+            active: sameLink(primaryLink, juUrl)
+        });
+
+        addTarget({
+            id: 'alternate-source',
+            kind: 'source',
+            label: 'Alternate access',
+            href: remoteUrl,
+            active: sameLink(primaryLink, remoteUrl)
+        });
+
+        addTarget({
+            id: 'alternate-archive',
+            kind: 'archive',
+            label: 'Alternate access',
+            href: !isLocalMode && gcsKey ? getGcsArchiveLink(gcsKey) : '',
+            active: false
+        });
+    }
+
+    if (targets.length === 0) return '';
+
+    return `
+        <div class="link-source-chips" aria-label="Access options">
+            ${targets.map(target => {
+                const className = `link-source-chip chip-${target.id}${target.active ? ' active' : ''}${target.visibleText ? ' has-text' : ''}`;
+                const label = target.active ? `${target.label} default` : target.label;
+                const content = target.visibleText
+                    ? `<span class="chip-text">${target.visibleText}</span>`
+                    : getAccessIcon(target.kind);
+                return `<a href="${escapeAttr(target.href)}" class="${className}" target="_blank" rel="noopener noreferrer" title="${escapeAttr(label)}" aria-label="${escapeAttr(label)}" onclick="event.stopPropagation();">${content}</a>`;
+            }).join('')}
+        </div>
+    `;
 }
 
 function toggleTheme() {
@@ -372,7 +506,7 @@ function applyFilters() {
         // 1. Search Filter (Expanded Scope: Title, Author, Subject, Year, Journal)
         if (term) {
             const isCahc = (p.cahc_authored === true || p.cahc_authored === 'true');
-            const instKeywords = isCahc ? "cahc juni jain university" : (p.juUrl ? "juni jain university" : "");
+            const instKeywords = isCahc ? "cahc juni jain university" : (getJuUrl(p) ? "juni jain university" : "");
             const content = `${p.title} ${p.author} ${p.subject} ${p.year} ${p.journal} ${instKeywords}`;
 
             if (useRegex) {
@@ -486,22 +620,23 @@ function renderGrid() {
         const cat = SafeCat(paper.category);
         const sub = SafeSub(paper.subject);
         const isLink = paper.entry_type === 'link';
+        const remoteUrl = getRemoteUrl(paper);
+        const juUrl = getJuUrl(paper);
 
         // Determine Links based on Mode
-        let primaryLink, backupLink;
+        let primaryLink;
         const isLocalMode = (State.env === 'localhost' || State.env === 'file' || (State.env === 'netlify_dev' && State.devMode === 'local'));
+        const archivedLink = !isLocalMode && getGcsKey(paper) ? getArchivedLink(paper) : '';
 
-        if (isLocalMode) {
-            // Local Mode: Prioritize local copy for "Read", remote for "Archive/Backup"
-            primaryLink = paper.localPath || paper.remoteUrl;
-            backupLink = paper.remoteUrl;
+        if (isLink) {
+            primaryLink = remoteUrl;
         } else {
-            // Simulation/Remote: JU Mirror (if available) > Remote (INSA) for "Read", GCS for "Archive/Backup"
-            primaryLink = paper.juUrl || paper.remoteUrl;
-            backupLink = getArchivedLink(paper);
+            // PDFs: mirror first, then archive where available, then original source.
+            primaryLink = juUrl || archivedLink || remoteUrl;
         }
+        primaryLink = primaryLink || '#';
 
-        // Use DIV instead of A to support nested interactive elements (Backup Button)
+        // Use DIV instead of A to support nested interactive access chips.
         const card = document.createElement('div');
         const catClass = `cat-${cat.replace(/[^a-zA-Z0-9]/g, '-')}`;
 
@@ -517,70 +652,23 @@ function renderGrid() {
         const titleHtml = highlightText(paper.title, term, useRegex);
         const authorHtml = highlightText(paper.author, term, useRegex);
         const yearHtml = highlightText(String(paper.year), term, useRegex);
-
-        // Primary Read Button
-        const readBtnLabel = isLink ? "Open" : "Read";
-        const readBtn = `
-             <a href="${primaryLink}" 
-               class="read-link" 
-               target="_blank" 
-               rel="noopener noreferrer"
-               onclick="event.stopPropagation();">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    ${isLink 
-                        ? '<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>'
-                        : '<path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>'
-                    }
-                </svg>
-                <span>${readBtnLabel}</span>
-            </a>
-        `;
-
-        // Secondary Button (Archive vs Source Website)
-        const secondaryIcon = isLink 
-            ? '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>'
-            : '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>';
-        
-        const secondaryTooltip = isLink ? "Visit Publisher Website" : "View Archived Copy (Mirror)";
-
-        const backupBtn = `
-            <a href="${backupLink}" 
-               class="backup-link" 
-               target="_blank" 
-               rel="noopener noreferrer"
-               title="${secondaryTooltip}"
-               onclick="event.stopPropagation();">
-                ${secondaryIcon}
-            </a>
-        `;
-
-        // Badges
-        const juBadge = paper.juUrl ? `
-            <a href="${paper.juUrl}" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               class="badge ju" 
-               title="Open Jain University Mirror"
-               onclick="event.stopPropagation();">JU</a>
-        ` : "";
-        
-        const webBadge = isLink ? `<span class="badge web">Web</span>` : "";
+        const linkSourceChips = renderLinkSourceChips(paper, primaryLink, isLocalMode);
+        const sizeText = isLink ? '' : Math.round(paper.size / 1024 * 10) / 10 + ' MB';
+        const sizeMeta = sizeText ? `<span class="size-info">${sizeText}</span>` : '';
 
         card.innerHTML = `
             <div class="paper-meta">
-                <span class="paper-year">${yearHtml}${juBadge}${webBadge}</span>
+                <span class="paper-meta-left">
+                    <span class="paper-year">${yearHtml}</span>
+                    <span class="paper-journal" title="${escapeAttr(paper.journal)}">${paper.journal}</span>
+                    ${sizeMeta}
+                </span>
                 <span class="paper-category">${cat} / ${sub}</span>
             </div>
             <h3 class="paper-title">${titleHtml}</h3>
             <div class="paper-author">${authorHtml}</div>
             <div class="paper-footer">
-                <span>${paper.journal}</span>
-                <div class="footer-right">
-                    <span class="size-info">${isLink ? 'Link' : Math.round(paper.size / 1024 * 10) / 10 + ' MB'}</span>
-                    ${readBtn}
-                    <div class="vr-sep"></div>
-                    ${backupBtn}
-                </div>
+                ${linkSourceChips}
             </div>
         `;
         container.appendChild(card);

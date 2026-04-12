@@ -13,13 +13,16 @@ A high-performance, single-page application for browsing the Indian Journal of H
   - **Netlify Dev / Deploy Mode**: Uses the same web payload, but changes link
     preference:
     - `Read` prefers `ju_url` when available, otherwise the primary `url`
-    - the archive icon uses the Netlify `authorize-pdf` function and `gcs_key`
+    - archive access uses the Netlify `authorize-pdf` function and `gcs_key`
       to open a signed GCS URL
     - URL-only entries open their publisher URL directly
   - **Shared corpus model**:
     - all PDF records may have a local shared copy
     - all PDF records are expected to have a GCS archive copy
     - some curated PDFs also have a CAHC/JU mirror URL
+  - **Access chips**: Cards show compact access icons for the default target
+    and any alternates. `Local` is shown only in local/testing mode; deployed
+    cards do not expose storage or mirror labels to end users.
 - **Glassmorphism UI**: Premium aesthetic with dark mode by default.
 
 ## 🛠️ Local Setup
@@ -104,10 +107,10 @@ netlify dev
 
 In this mode:
 - PDF cards prefer `ju_url` when available, otherwise `url`
-- the archive icon goes through `/.netlify/functions/authorize-pdf?...`
+- archive access goes through `/.netlify/functions/authorize-pdf?...`
 - URL-only cards open the original URL directly
 
-Requirements for the archive icon to work in `netlify dev`:
+Requirements for archive access to work in `netlify dev`:
 - install the `web/` Node dependencies with `npm install`
 - provide `GCS_CREDENTIALS` locally for the Netlify function, for example by
   exporting it in the shell before starting `netlify dev` or by using your
@@ -128,7 +131,7 @@ netlify deploy
 - **Note**: The `assets/pdfs` folder is **ignored** (via `.netlifyignore`) to keep uploads fast and small (< 1MB).
 - **Hybrid Mode**:
   - `Read` prefers `ju_url` when available, otherwise `url`
-  - the archive icon uses GCS via the Netlify function
+  - archive access uses GCS via the Netlify function
   - URL-only entries open the original URL directly
 
 ### 3. Production Deploy (`deploy --prod`)
@@ -146,7 +149,7 @@ netlify deploy --prod
 
 Runtime link behavior matches the draft deploy:
 - `Read` prefers `ju_url` when available, otherwise `url`
-- the archive icon uses GCS via the Netlify function
+- archive access uses GCS via the Netlify function
 - URL-only entries open the original URL directly
 
 ## ⚙️ Configuration

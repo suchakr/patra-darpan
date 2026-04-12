@@ -566,12 +566,39 @@ mark {
 
 .paper-meta {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  gap: 12px;
+  min-width: 0;
   font-size: 0.8rem;
   color: var(--text-secondary);
 }
 
+.paper-meta-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.paper-year {
+  flex: 0 0 auto;
+}
+
+.paper-journal {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .paper-category {
+  flex: 0 1 auto;
+  max-width: 46%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   color: var(--accent-color);
   font-weight: 500;
   opacity: 0.9;
@@ -599,12 +626,97 @@ mark {
   margin-top: auto;
 }
 
+.link-source-chips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  width: auto;
+  min-height: 32px;
+}
+
+.link-source-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--glass-border);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary);
+  font-size: 0.65rem;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    color 0.2s,
+    opacity 0.2s;
+}
+
+.link-source-chip svg {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+}
+
+.link-source-chip.has-text {
+  width: auto;
+  min-width: 48px;
+  padding: 0 10px;
+  text-transform: uppercase;
+}
+
+.link-source-chip:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.link-source-chip.active {
+  border-color: var(--accent-color);
+  background: var(--accent-color);
+  color: #fff;
+}
+
+.link-source-chip.chip-local.active {
+  border-color: rgba(34, 197, 94, 0.55);
+  background: rgba(34, 197, 94, 0.16);
+  color: #4ade80;
+}
+
+[data-theme="light"] .link-source-chip {
+  background: rgba(2, 132, 199, 0.04);
+  border-color: rgba(15, 23, 42, 0.1);
+}
+
+[data-theme="light"] .link-source-chip:hover {
+  border-color: rgba(15, 23, 42, 0.18);
+  background: rgba(2, 132, 199, 0.08);
+}
+
+[data-theme="light"] .link-source-chip.active {
+  border-color: var(--accent-color);
+  background: var(--accent-color);
+  color: #fff;
+}
+
+[data-theme="light"] .link-source-chip.chip-local.active {
+  border-color: #15803d;
+  background: #15803d;
+  color: #fff;
+}
+
 .size-info {
+  flex: 0 0 auto;
   font-size: 0.65rem;
   color: var(--text-secondary);
   opacity: 0.8;
-  margin-right: 6px;
-  margin-left: 6px;
+  white-space: nowrap;
 }
 
 .paper-footer {
@@ -612,86 +724,13 @@ mark {
   padding-top: 12px;
   margin-top: 8px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  /* Critical for vertical alignment */
-  font-size: 0.75rem;
-  opacity: 0.7;
+  opacity: 0.95;
 }
 
 .paper-card:hover .paper-footer {
   opacity: 1;
-}
-
-.footer-right {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  /* Tighter gap */
-}
-
-.read-link {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.8rem;
-  color: white;
-  /* Always white text on accent */
-  text-decoration: none;
-  padding: 4px 10px;
-  border-radius: 6px;
-  /* Pill shape */
-  background: var(--accent-color);
-  transition: all 0.2s;
-  font-weight: 500;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.read-link:hover {
-  background: #0ea5e9;
-  /* Slightly darker shade of Sky Blue (Tailwind Sky-500) */
-  transform: translateY(-1px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-/* Light mode override for read-link hover */
-[data-theme="light"] .read-link:hover {
-  background: #0284c7;
-  /* Darker blue */
-}
-
-.backup-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--text-secondary);
-  text-decoration: none;
-  padding: 6px;
-  border-radius: 6px;
-  background: transparent;
-  transition: all 0.2s;
-  border: 1px solid transparent;
-  opacity: 0.6;
-}
-
-.backup-link:hover {
-  color: var(--accent-color);
-  background: rgba(var(--accent-color), 0.15);
-  /* Slightly stronger bg on hover */
-  opacity: 1;
-  transform: scale(1.1);
-  /* Micro interaction */
-}
-
-.backup-link span {
-  font-weight: 500;
-}
-
-.vr-sep {
-  width: 1px;
-  height: 16px;
-  background: var(--glass-border);
-  margin: 0 4px;
 }
 
 /* Scrollbars */
@@ -852,6 +891,25 @@ mark {
 
   .results-area {
     padding: 0;
+  }
+
+  .paper-meta {
+    flex-wrap: wrap;
+    row-gap: 4px;
+  }
+
+  .paper-meta-left,
+  .paper-category {
+    max-width: 100%;
+  }
+
+  .link-source-chip {
+    width: 34px;
+    height: 34px;
+  }
+
+  .link-source-chip.has-text {
+    min-width: 54px;
   }
 }
 
