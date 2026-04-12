@@ -41,7 +41,7 @@ A high-performance, single-page application for browsing the Indian Journal of H
 
 2. **Generate Data**:
    Run the Patra Darpan export script to project `exports/index.tsv` into
-   `assets/js/data.js` and create the PDF symlink.
+   `assets/js/data.js`, `assets/js/p60.js`, and the PDF symlink.
 
    Run this command from the repository root:
 
@@ -49,9 +49,10 @@ A high-performance, single-page application for browsing the Indian Journal of H
    uv run python ops/export_patra_darpan_data_js.py
    ```
 
-   This does three things:
+   This does four things:
    - reads `exports/index.tsv`
    - writes `web/assets/js/data.js`
+   - writes `web/assets/js/p60.js` for the CAHC `P60` projection
    - rewrites `web/assets/pdfs` to point at the shared PDF asset root in the
      sibling `patra-darpan` checkout
 
@@ -75,6 +76,8 @@ A high-performance, single-page application for browsing the Indian Journal of H
    ```
    Then open:
    - `http://127.0.0.1:8000`
+   - `http://127.0.0.1:8000/p60-projection-sandbox.html` for the generated
+     CAHC `P60` projection sandbox
 
    The app will detect that it is running locally and serve PDFs from
    `assets/pdfs`, which resolves into the shared asset root.
@@ -166,6 +169,11 @@ Runtime link behavior matches the draft deploy:
   corpus state.
 - **`assets/js/data.js`**: Patra Darpan web payload generated from
   `exports/index.tsv` by `ops/export_patra_darpan_data_js.py`.
+- **`assets/js/p60.js`**: CAHC `P60` projection generated from
+  `exports/index.tsv` by `ops/export_patra_darpan_data_js.py`. It contains
+  `cahc_authored=true` rows and is data, not a source of truth.
+- **`p60-projection-sandbox.html`**: Local test harness for checking the
+  generated `P60` projection in a browser before wiring CAHC pages.
 - **`assets/pdfs`**: A symbolic link to the shared PDF asset root in the
   sibling `patra-darpan` checkout. Ignored by git and Netlify.
 - **`url` / `ju_url` / `gcs_key`**: The web payload carries all three link

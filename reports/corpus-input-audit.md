@@ -8,7 +8,7 @@
 - ijhs_rows: 1954
 - curated_pdf_rows: 50
 - curated_link_rows: 6
-- registry_entries: 67
+- registry_entries: 73
 - mirror_rows: 17
 - shared_ijhs_files: 1954
 - shared_other_files: 50
@@ -76,7 +76,7 @@
 
 ## deferred_field_status
 - documents_by_source_root: {'curated-links.tsv': 6, 'curated-pdfs.tsv': 50, 'ijhs.tsv': 1954}
-- cahc_authored_true_by_source_root: {'curated-links.tsv': 5, 'curated-pdfs.tsv': 48, 'ijhs.tsv': 14}
+- cahc_authored_true_by_source_root: {'curated-links.tsv': 6, 'curated-pdfs.tsv': 50, 'ijhs.tsv': 17}
 - subject_status: deferred; export currently leaves subject blank
 - category_status: deferred; export currently leaves category blank
 - cahc_authored_status: present as a curated label in documents; still needs clearer long-term placement

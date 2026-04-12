@@ -10,6 +10,7 @@ import json
 import os
 import pathlib
 import sys
+from datetime import UTC, datetime
 
 # Paths
 BASE_DIR = pathlib.Path(__file__).parent.parent
@@ -21,7 +22,9 @@ from lib.config import EXPORTS_DIR, resolve_shared_asset_root
 
 TSV_PATH = EXPORTS_DIR / "index.tsv"
 OUTPUT_JS_PATH = BASE_DIR / "web" / "assets" / "js" / "data.js"
+OUTPUT_P60_JS_PATH = BASE_DIR / "web" / "assets" / "js" / "p60.js"
 SYMLINK_DIR = BASE_DIR / "web" / "assets" / "pdfs"
+CAHC_RNI_URL_PREFIX = "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/"
 
 # Shared PDF asset directories — canonical local PDF home
 CORPUS_ROOT = resolve_shared_asset_root()
@@ -71,6 +74,72 @@ def find_local_path(url_filename, gcs_key=""):
             return f"assets/pdfs/other/{filename}"
 
     return None
+
+def p60_link_for_paper(paper):
+    """Return the durable P60 link target for a projected paper row."""
+    remote_url = str(paper.get("remoteUrl") or "")
+    ju_url = str(paper.get("juUrl") or "")
+
+    if ju_url.startswith(CAHC_RNI_URL_PREFIX):
+        return ju_url
+    if remote_url.startswith(CAHC_RNI_URL_PREFIX):
+        return remote_url
+    if paper.get("entry_type") == "link":
+        return remote_url
+    return ju_url or remote_url
+
+def p60_sort_key(row):
+    try:
+        year = int(float(row.get("year") or 0))
+    except (TypeError, ValueError):
+        year = 0
+    return (-year, row.get("source", ""), row.get("title", ""))
+
+def build_p60_projection(papers):
+    rows = []
+    for paper in papers:
+        if not paper.get("cahc_authored"):
+            continue
+
+        url = p60_link_for_paper(paper)
+        if not url:
+            continue
+
+        rows.append(
+            {
+                "year": paper.get("year", ""),
+                "category": paper.get("subject", "") or "General",
+                "title": paper.get("title", ""),
+                "author": paper.get("author", ""),
+                "source": paper.get("journal", ""),
+                "url": url,
+                "entry_type": paper.get("entry_type", ""),
+            }
+        )
+
+    rows.sort(key=p60_sort_key)
+    return {
+        "generatedAt": datetime.now(UTC).isoformat().replace("+00:00", "Z"),
+        "rowCount": len(rows),
+        "rows": rows,
+    }
+
+def write_p60_projection(papers):
+    payload = build_p60_projection(papers)
+    js_content = (
+        "window.PATRA_DARPAN_P60 = "
+        f"{json.dumps(payload, indent=2)};\n"
+        "window.dispatchEvent(new CustomEvent('patra-darpan:p60-ready', "
+        "{ detail: window.PATRA_DARPAN_P60 }));\n"
+    )
+
+    with open(OUTPUT_P60_JS_PATH, "w") as f:
+        f.write(js_content)
+
+    print(
+        f"Patra Darpan P60 projection JS written to {OUTPUT_P60_JS_PATH} "
+        f"({payload['rowCount']} rows)"
+    )
 
 def main():
     print(f"Reading projected index TSV from {TSV_PATH}")
@@ -157,6 +226,8 @@ def main():
         f.write(js_content)
     
     print(f"Patra Darpan data JS written to {OUTPUT_JS_PATH}")
+
+    write_p60_projection(papers)
     
     # Setup Symlink
     setup_symlink()

@@ -10,6 +10,11 @@
   publish = "."
 
 [[headers]]
+  for = "/assets/js/p60.js"
+  [headers.values]
+    Cache-Control = "public, max-age=300, stale-while-revalidate=3600"
+
+[[headers]]
   for = "/*"
   [headers.values]
     X-Frame-Options = "DENY"

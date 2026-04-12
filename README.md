@@ -92,6 +92,7 @@ uv run python ops/export_patra_darpan_data_js.py
 
 This reads `exports/index.tsv` and writes:
 - `web/assets/js/data.js`
+- `web/assets/js/p60.js`
 - `web/assets/pdfs` symlink to the shared PDF asset root
 
 ### Local Web Preview
@@ -103,6 +104,8 @@ uv run python -m http.server 8000
 
 Then open:
 - `http://127.0.0.1:8000`
+- `http://127.0.0.1:8000/p60-projection-sandbox.html` to inspect the generated
+  CAHC `P60` projection
 
 For Netlify-function testing:
 
@@ -329,6 +332,8 @@ Do not casually remove root-input rows, shared PDFs, or GCS objects. Prefer to:
   durable design and tactical decisions
 - [docs/index-tsv-projection-contract.md](docs/index-tsv-projection-contract.md)
   `index.tsv` compatibility projection contract
+- [docs/cahc-p60-projection-prd.md](docs/cahc-p60-projection-prd.md)
+  CAHC `P60` projection and `P85` cleanup plan
 - [web/README.md](web/README.md)
   local web runtime, Netlify dev/deploy, and link behavior
 
