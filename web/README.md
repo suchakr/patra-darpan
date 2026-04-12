@@ -7,6 +7,8 @@ A high-performance, single-page application for browsing the Indian Journal of H
 ## 🚀 Features
 
 - **Instant Search**: Fuzzy search across 2000+ papers.
+- **Recent Searches**: Remembers the last 8 search terms, including plain vs
+  regex mode, and offers them from the search box.
 - **Hybrid Link Technology**:
   - **Local Serve Mode (`http.server`)**: Reads PDFs directly from
     `assets/pdfs`, which is a symlink to the shared local PDF asset root.

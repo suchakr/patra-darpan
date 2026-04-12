@@ -13,6 +13,8 @@ const State = {
     papers: [], // Source data
     filtered: [], // Current view
     isEmbedded: false,
+    recentSearches: [],
+    recentSearchActiveIndex: 0,
     filters: {
         search: "",
         useRegex: false,
@@ -43,8 +45,13 @@ const Elements = {
     closeMenu: document.getElementById('close-menu'),
     sidebar: document.getElementById('sidebar'),
     resetBtn: document.getElementById('reset-filters'),
-    themeToggle: document.getElementById('theme-toggle')
+    themeToggle: document.getElementById('theme-toggle'),
+    searchWrapper: document.querySelector('.search-input-wrapper'),
+    recentSearches: null
 };
+
+const RECENT_SEARCHES_KEY = 'ijhs-recent-searches';
+const RECENT_SEARCH_LIMIT = 8;
 
 // --- Logic ---
 
@@ -69,6 +76,7 @@ function init() {
     // 4. Setup UI
     updateModeBadge();
     setupFilters();
+    setupRecentSearches();
 
     // Apply default filters (sorting) immediately
     applyFilters();
@@ -78,6 +86,40 @@ function init() {
     Elements.searchInput.addEventListener('input', (e) => {
         State.filters.search = e.target.value; // Store raw case for regex
         applyFilters();
+        renderRecentSearches(0);
+    });
+
+    Elements.searchInput.addEventListener('focus', showRecentSearches);
+
+    Elements.searchInput.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowDown') {
+            if (moveRecentSearchSelection(1)) {
+                e.preventDefault();
+            }
+            return;
+        }
+        if (e.key === 'ArrowUp') {
+            if (moveRecentSearchSelection(-1)) {
+                e.preventDefault();
+            }
+            return;
+        }
+        if (e.key === 'Enter') {
+            if (selectActiveRecentSearch()) {
+                e.preventDefault();
+                return;
+            }
+            rememberCurrentSearch();
+            hideRecentSearches();
+        }
+        if (e.key === 'Escape') {
+            hideRecentSearches();
+        }
+    });
+
+    Elements.searchInput.addEventListener('blur', () => {
+        rememberCurrentSearch();
+        window.setTimeout(hideRecentSearches, 120);
     });
 
     // Sort Dropdown
@@ -94,6 +136,8 @@ function init() {
             State.filters.useRegex = !State.filters.useRegex;
             Elements.regexToggle.classList.toggle('active', State.filters.useRegex);
             applyFilters();
+            rememberCurrentSearch();
+            renderRecentSearches();
         });
     }
 
@@ -422,10 +466,182 @@ function resetFilters() {
     State.filters.subjects.clear();
     State.filters.decades.clear();
     Elements.searchInput.value = "";
+    hideRecentSearches();
 
     document.querySelectorAll('.checkbox-item input').forEach(el => el.checked = false);
 
     applyFilters();
+}
+
+function setupRecentSearches() {
+    State.recentSearches = loadRecentSearches();
+
+    if (!Elements.searchWrapper) return;
+    Elements.searchInput.setAttribute('aria-controls', 'recent-searches');
+    Elements.searchInput.setAttribute('aria-autocomplete', 'list');
+
+    const panel = document.createElement('div');
+    panel.id = 'recent-searches';
+    panel.className = 'recent-searches hidden';
+    panel.setAttribute('role', 'listbox');
+    panel.setAttribute('aria-label', 'Recent searches');
+    Elements.searchWrapper.appendChild(panel);
+    Elements.recentSearches = panel;
+}
+
+function loadRecentSearches() {
+    try {
+        const parsed = JSON.parse(localStorage.getItem(RECENT_SEARCHES_KEY) || '[]');
+        if (!Array.isArray(parsed)) return [];
+        return parsed
+            .filter(item => item && typeof item.query === 'string')
+            .map(item => ({
+                query: item.query,
+                useRegex: item.useRegex === true,
+                ts: Number(item.ts) || 0
+            }))
+            .slice(0, RECENT_SEARCH_LIMIT);
+    } catch (e) {
+        return [];
+    }
+}
+
+function saveRecentSearches() {
+    localStorage.setItem(RECENT_SEARCHES_KEY, JSON.stringify(State.recentSearches.slice(0, RECENT_SEARCH_LIMIT)));
+}
+
+function rememberCurrentSearch() {
+    const query = State.filters.search.trim();
+    if (query.length < 2) return;
+
+    const useRegex = State.filters.useRegex === true;
+    State.recentSearches = State.recentSearches
+        .filter(item => !(item.query.toLowerCase() === query.toLowerCase() && item.useRegex === useRegex));
+    State.recentSearches.unshift({ query, useRegex, ts: Date.now() });
+    State.recentSearches = State.recentSearches.slice(0, RECENT_SEARCH_LIMIT);
+    saveRecentSearches();
+}
+
+function showRecentSearches() {
+    renderRecentSearches(0);
+}
+
+function hideRecentSearches() {
+    if (Elements.recentSearches) {
+        Elements.recentSearches.classList.add('hidden');
+    }
+    State.recentSearchActiveIndex = 0;
+    Elements.searchInput.removeAttribute('aria-activedescendant');
+}
+
+function applyRecentSearch(item) {
+    State.filters.search = item.query;
+    State.filters.useRegex = item.useRegex === true;
+    Elements.searchInput.value = item.query;
+    if (Elements.regexToggle) {
+        Elements.regexToggle.classList.toggle('active', State.filters.useRegex);
+    }
+    applyFilters();
+    rememberCurrentSearch();
+    hideRecentSearches();
+}
+
+function clearRecentSearches() {
+    State.recentSearches = [];
+    saveRecentSearches();
+    hideRecentSearches();
+}
+
+function getRecentSearchMatches() {
+    const term = Elements.searchInput.value.trim().toLowerCase();
+    return State.recentSearches.filter(item => item.query.toLowerCase().includes(term));
+}
+
+function isRecentSearchesVisible() {
+    return Boolean(Elements.recentSearches && !Elements.recentSearches.classList.contains('hidden'));
+}
+
+function moveRecentSearchSelection(delta) {
+    if (!Elements.recentSearches) return false;
+
+    const matches = getRecentSearchMatches();
+    if (matches.length === 0) return false;
+
+    if (!isRecentSearchesVisible()) {
+        renderRecentSearches(delta < 0 ? matches.length - 1 : 0);
+        return true;
+    }
+
+    const next = (State.recentSearchActiveIndex + delta + matches.length) % matches.length;
+    renderRecentSearches(next);
+    return true;
+}
+
+function selectActiveRecentSearch() {
+    if (!isRecentSearchesVisible()) return false;
+
+    const matches = getRecentSearchMatches();
+    const item = matches[State.recentSearchActiveIndex];
+    if (!item) return false;
+
+    applyRecentSearch(item);
+    return true;
+}
+
+function renderRecentSearches(activeIndex = State.recentSearchActiveIndex) {
+    if (!Elements.recentSearches) return;
+    if (document.activeElement !== Elements.searchInput) {
+        hideRecentSearches();
+        return;
+    }
+
+    const matches = getRecentSearchMatches();
+    Elements.recentSearches.innerHTML = '';
+
+    if (matches.length === 0) {
+        Elements.recentSearches.classList.add('hidden');
+        Elements.searchInput.removeAttribute('aria-activedescendant');
+        return;
+    }
+
+    State.recentSearchActiveIndex = Math.min(Math.max(activeIndex, 0), matches.length - 1);
+
+    matches.forEach((item, index) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = `recent-search-item${index === State.recentSearchActiveIndex ? ' active' : ''}`;
+        button.id = `recent-search-item-${index}`;
+        button.setAttribute('role', 'option');
+        button.setAttribute('aria-selected', index === State.recentSearchActiveIndex ? 'true' : 'false');
+        button.addEventListener('mousedown', (e) => e.preventDefault());
+        button.addEventListener('click', () => applyRecentSearch(item));
+
+        const query = document.createElement('span');
+        query.className = 'recent-search-query';
+        query.textContent = item.query;
+        button.appendChild(query);
+
+        if (item.useRegex) {
+            const mode = document.createElement('span');
+            mode.className = 'recent-search-mode';
+            mode.textContent = 'Regex';
+            button.appendChild(mode);
+        }
+
+        Elements.recentSearches.appendChild(button);
+    });
+
+    Elements.searchInput.setAttribute('aria-activedescendant', `recent-search-item-${State.recentSearchActiveIndex}`);
+
+    const clear = document.createElement('button');
+    clear.type = 'button';
+    clear.className = 'recent-search-clear';
+    clear.textContent = 'Clear recent searches';
+    clear.addEventListener('mousedown', (e) => e.preventDefault());
+    clear.addEventListener('click', clearRecentSearches);
+    Elements.recentSearches.appendChild(clear);
+
+    Elements.recentSearches.classList.remove('hidden');
 }
 
 function setupFilters() {
