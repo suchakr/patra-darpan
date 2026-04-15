@@ -1,6 +1,6 @@
 window.PATRA_DARPAN_P60 = {
-  "generatedAt": "2026-04-12T19:32:38.913954Z",
-  "rowCount": 73,
+  "generatedAt": "2026-04-15T19:10:33.235178Z",
+  "rowCount": 74,
   "rows": [
     {
       "year": "2026",
@@ -18,6 +18,15 @@ window.PATRA_DARPAN_P60 = {
       "author": "R. S. Hariharan",
       "source": "SwarajyaMag",
       "url": "https://swarajyamag.com/ideas/did-india-lack-historical-consciousness-or-is-it-just-that-india-understood-time-differently",
+      "entry_type": "link"
+    },
+    {
+      "year": "2026",
+      "category": "Agriculture",
+      "title": "How Ancient India Predicted Rains Before The Arrival Of Modern Science",
+      "author": "R. S. Hariharan",
+      "source": "SwarajyaMag",
+      "url": "https://swarajyamag.com/ideas/how-ancient-india-predicted-rains-before-the-arrogance-of-modern-science",
       "entry_type": "link"
     },
     {

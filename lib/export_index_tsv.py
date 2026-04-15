@@ -42,6 +42,12 @@ INDEX_ENRICHMENT_FALLBACKS: dict[
         "link",
     ): {"subject": "Culture", "category": "Indic"},
     (
+        "SwarajyaMag",
+        "How Ancient India Predicted Rains Before The Arrival Of Modern Science",
+        "https://swarajyamag.com/ideas/how-ancient-india-predicted-rains-before-the-arrogance-of-modern-science",
+        "link",
+    ): {"subject": "Agriculture", "category": "Indic"},
+    (
         "IJHS-31-1996-Issue-4",
         "BookReview",
         "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol31_4_7_BookReview.pdf",

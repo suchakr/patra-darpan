@@ -4,25 +4,25 @@
 - legacy path: `/Users/sunder/projects/patra-darpan/reference/legacy/index.tsv`
 
 ## Row Counts
-- exported rows: 2010
+- exported rows: 2011
 - legacy rows: 2005
 
 ## Headers
 - exported header matches legacy: True
 
 ## Entry Type Counts
-- exported: {'link': 6, 'pdf': 2004}
+- exported: {'link': 7, 'pdf': 2004}
 - legacy: {'pdf': 2000, 'link': 5}
 
 ## Enrichment Coverage
-- exported non-empty `subject`: 2010
+- exported non-empty `subject`: 2011
 - legacy non-empty `subject`: 2005
-- exported non-empty `category`: 2010
+- exported non-empty `category`: 2011
 - legacy non-empty `category`: 2005
 
 ## Keyed Row Presence
 - missing from export by `(journal, paper, url, entry_type)`: 1
-- extra in export by `(journal, paper, url, entry_type)`: 6
+- extra in export by `(journal, paper, url, entry_type)`: 7
 
 ### Missing From Export
 - journal='IJHS 43.1', paper='Archaic Astronomy of Parāśara and Vṛddha Garga', url='https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vol43_1_1_RNIyengar.pdf', entry_type='pdf'
@@ -34,3 +34,4 @@
 - journal='Karnataka Sanskrit 8.1', paper='The Scope of Aṣṭādaśavarṇana in the Mahākāvya Mathurābhyudaya', url='https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/The_Scope_of_Ashtadashavarnana.pdf', entry_type='pdf'
 - journal='Shodhsamhita XI.2', paper='A Comparative Analysis of the Kaṁsavadha Episode Across Various Purāṇic Texts', url='https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/A_Comparitive_analysis_of_Kamsavadha_episode_in_Puranic_Texts.pdf', entry_type='pdf'
 - journal='SwarajyaMag', paper='Did India Lack Historical Consciousness, Or Is It Just That India Understood Time Differently?', url='https://swarajyamag.com/ideas/did-india-lack-historical-consciousness-or-is-it-just-that-india-understood-time-differently', entry_type='link'
+- journal='SwarajyaMag', paper='How Ancient India Predicted Rains Before The Arrival Of Modern Science', url='https://swarajyamag.com/ideas/how-ancient-india-predicted-rains-before-the-arrogance-of-modern-science', entry_type='link'
