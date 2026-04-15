@@ -137,3 +137,44 @@ Notes:
 - generated reports do not need the same level of polish as primary docs
 - some reports may still need exact paths for debugging, so this should be
   handled selectively rather than by blanket stripping
+
+### Feature: Decode Lab CONTINUE marker classification
+Status: proposed
+
+Problem:
+- Gemini MEDIUM extraction can emit `<<<CONTINUE>>>` at chunk boundaries even
+  when the text resumes cleanly in the next chunk
+- the marker is noisy in assembled `document.md`
+- blindly deleting it would hide a real truncation signal when content is
+  actually missing
+
+Users:
+- maintainers reviewing Decode Lab Markdown outputs
+- agents comparing extraction quality across Gemini model presets
+- future indexing code that should not ingest unresolved extraction markers
+
+Proposed shape:
+- classify each marker as one of:
+  - fatal truncation
+  - handled chunk-boundary continuation
+  - duplicate reference-tail noise
+  - retry/split needed
+- remove or replace handled markers in `document.md` with a quiet provenance
+  comment
+- avoid duplicate chunk-local reference blocks when the real references section
+  appears later
+- record marker evidence in provenance, likely `fallbacks.jsonl` or a small
+  `continuations.jsonl`
+
+Why now / later:
+- worth capturing now because `3-flash-med` has emitted markers in multiple
+  successful-looking runs, while `3-flash` HIGH did not show the marker for at
+  least AKBag pages 1-5
+- not implemented now because the current priority is validating Flex and the
+  micro-set extraction path rather than polishing assembler noise
+
+Notes:
+- known example: `Vol01_1_8_AKBag` under `flex-micro2-3flash-med` has a
+  marker after an incomplete phrase, but the sentence resumes in the next chunk
+  and references are repeated later
+- this is not considered blocking for micro-set exploration
