@@ -1,0 +1,7 @@
+# Purpose: first Decode Lab sample covering modern text layers, Indic risk,
+# scanned legacy pages, astronomy vocabulary, tables, and images.
+1
+01_58_4
+Vol01_1_8_AKBag
+Vol26_1_1_KDAbhyankar
+Vol44_4_1_PGondhalekar
