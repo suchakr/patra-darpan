@@ -119,8 +119,10 @@ Otherwise falls back to per-page pdftotext assembly with:
 - Extraction-gap comments for unresolved risks
 - Image reference comments
 
-Runner integration: `--assemble` flag (after extraction) or
-`--assemble-only` flag (re-assemble a previous run).
+Runner integration:
+- `--assemble` eagerly assembles each document after extraction
+- `--assemble --assemble-lazy` preserves the older batch-at-end behavior
+- `--assemble-only` re-assembles a previous run without extraction
 
 ## Current Dev Workflow
 
@@ -142,6 +144,13 @@ uv run python scripts/run_decode_lab.py --run-id my-run
 
 # Deterministic pass over a reusable campaign set
 uv run python scripts/run_decode_lab.py --set micro-2 --run-id local-micro2 --assemble
+
+# Resume or repair an existing cloud run without deleting evidence
+GEMINI_API_KEY=... uv run python scripts/run_decode_lab.py \
+  --set astro-math-indic-10 \
+  --run-id astro-math-indic-10-3flash-med-flex \
+  --extractor gemini:3-flash-med --tier flex \
+  --repair --assemble
 
 # Recommended: Gemini 3 Flash with MEDIUM thinking + assembly
 GEMINI_API_KEY=... uv run python scripts/run_decode_lab.py \
@@ -274,6 +283,12 @@ Re-runs with the same config and PDF are free.
   SQLite columns.
 - Generated campaign sets refuse to overwrite existing `.txt` or `.notes.md`
   files unless `--force` is supplied.
+- Decode runs refuse to reuse an existing `--run-id` by default. Use
+  `--resume`, `--repair`, or destructive `--force` explicitly.
+- `--assemble` now means eager per-document assembly. Use `--assemble-lazy`
+  with `--assemble` for the old batch-at-end assembly behavior.
+- Gemini chunk failures write per-doc `*_error.json` artifacts and
+  `extraction-state.json`, so repair/resume should not depend on terminal logs.
 
 ## Files Added or Modified
 
@@ -296,8 +311,9 @@ Re-runs with the same config and PDF are free.
 
 ### Modified tracked files
 - `lib/decode_lab/runner.py` — `--extractor gemini:*`, `--fallback gemini`,
-  `--assemble`, `--assemble-only`, and `--set` flags; image extraction +
-  symlinks; model config logging in run-manifest.json and audit.md
+  `--assemble`, `--assemble-lazy`, `--assemble-only`, `--set`, `--resume`,
+  `--repair`, and `--force` flags; image extraction + symlinks; model config
+  logging in run-manifest.json and audit.md
 - `lib/schema.sql` — `asset_refs` file facts, `pdf_profiles`, and
   `primary_pdf_profiles`
 - `scripts/run_decode_lab.py` — assembly and extractor CLI integration

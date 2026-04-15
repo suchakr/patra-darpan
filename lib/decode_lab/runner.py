@@ -133,9 +133,16 @@ def build_arg_parser() -> argparse.ArgumentParser:
         "--assemble",
         action="store_true",
         default=False,
-        help="After extraction, assemble document.md for each PDF. "
-        "Combines baseline text, fallback tables, risk markers, and image refs "
-        "into one readable Markdown file per document.",
+        help="Assemble document.md eagerly after each document finishes. "
+        "Combines baseline text, fallback tables, risk markers, image refs, "
+        "and Gemini chunks into one readable Markdown file per document.",
+    )
+    parser.add_argument(
+        "--assemble-lazy",
+        action="store_true",
+        default=False,
+        help="When used with --assemble, preserve the older batch behavior: "
+        "assemble all documents only after extraction for the full run finishes.",
     )
     parser.add_argument(
         "--assemble-only",
@@ -144,6 +151,29 @@ def build_arg_parser() -> argparse.ArgumentParser:
         help="Skip extraction entirely and assemble document.md from an "
         "existing run directory. Requires --run-id pointing to a previous run. "
         "Useful for re-assembling after manual edits to fallback outputs.",
+    )
+    parser.add_argument(
+        "--resume",
+        action="store_true",
+        default=False,
+        help="Reuse an existing run directory and continue/retry work. "
+        "Successful Gemini chunks are served from cache; missing or failed "
+        "chunks are attempted again.",
+    )
+    parser.add_argument(
+        "--repair",
+        action="store_true",
+        default=False,
+        help="Reuse an existing run directory to repair failed or partial work. "
+        "First implementation shares resume mechanics and reassembles affected "
+        "documents when --assemble is supplied.",
+    )
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        default=False,
+        help="Delete and recreate an existing run directory. Destructive; "
+        "prefer --resume or --repair for long Gemini runs.",
     )
     return parser
 
@@ -156,7 +186,21 @@ def run_decode_lab(args: argparse.Namespace) -> Path:
     started_at = _utc_now()
     run_id = args.run_id or datetime.now(UTC).strftime("%Y%m%dT%H%M%SZ")
     run_dir = args.out_root / run_id
-    run_dir.mkdir(parents=True, exist_ok=False)
+    if run_dir.exists():
+        if getattr(args, "force", False):
+            _progress(f"force removing existing run_dir={run_dir}")
+            shutil.rmtree(run_dir)
+            run_dir.mkdir(parents=True, exist_ok=False)
+        elif getattr(args, "resume", False) or getattr(args, "repair", False):
+            _progress(f"reusing existing run_dir={run_dir}")
+            run_dir.mkdir(parents=True, exist_ok=True)
+        else:
+            raise FileExistsError(
+                f"Run directory already exists: {run_dir}. "
+                "Use --resume, --repair, --force, or choose a new --run-id."
+            )
+    else:
+        run_dir.mkdir(parents=True, exist_ok=False)
 
     records = _load_index_records(args.index_tsv, args.pdf_root, selected_doc_ids)
     available_tools = _available_tools(["pdfinfo", "pdffonts", "pdfimages", "pdftotext"])
@@ -169,7 +213,15 @@ def run_decode_lab(args: argparse.Namespace) -> Path:
     tables: list[dict[str, Any]] = []
     fallbacks: list[dict[str, Any]] = []
 
-    for doc_id in selected_doc_ids:
+    total_docs = len(selected_doc_ids)
+    _progress(
+        f"decode run start run_id={run_id} docs={total_docs} "
+        f"extractor={getattr(args, 'extractor', 'local')} "
+        f"tier={getattr(args, 'tier', 'standard')}"
+    )
+
+    for doc_index, doc_id in enumerate(selected_doc_ids, start=1):
+        _progress(f"[{doc_index}/{total_docs}] document start doc_id={doc_id}")
         record = records.get(doc_id)
         if record is None:
             documents.append(
@@ -187,6 +239,7 @@ def run_decode_lab(args: argparse.Namespace) -> Path:
                     "status_reason": f"{doc_id} was not found in {args.index_tsv}",
                 }
             )
+            _progress(f"[{doc_index}/{total_docs}] document missing doc_id={doc_id}")
             continue
 
         doc_dir = run_dir / "by-doc" / record.doc_id
@@ -255,17 +308,44 @@ def run_decode_lab(args: argparse.Namespace) -> Path:
             _doc_manifest(record.doc_id, doc_result, doc_dir, run_dir),
         )
         _write_review_md(doc_dir / "review.md", record, doc_result)
+        if getattr(args, "assemble", False) and not getattr(args, "assemble_lazy", False):
+            _write_run_tables(
+                run_dir=run_dir,
+                documents=documents,
+                pages=pages,
+                chunks=chunks,
+                risks=risks,
+                images=images,
+                tables=tables,
+                fallbacks=fallbacks,
+                retrieval_samples=_build_retrieval_samples(chunks),
+            )
+            from lib.decode_lab.assembler import assemble_run
+
+            written = assemble_run(run_dir)
+            doc_md = doc_dir / "document.md"
+            if doc_md in written or doc_md.exists():
+                _progress(f"assembled document doc_id={record.doc_id} path={doc_md}")
+        _progress(
+            f"[{doc_index}/{total_docs}] document done doc_id={record.doc_id} "
+            f"status={doc_result['document']['status']} "
+            f"pages={doc_result['document'].get('page_count')} "
+            f"fallbacks={len(doc_result['fallbacks'])}"
+        )
 
     retrieval_samples = _build_retrieval_samples(chunks)
 
-    _write_jsonl(run_dir / "documents.jsonl", documents)
-    _write_jsonl(run_dir / "pages.jsonl", pages)
-    _write_jsonl(run_dir / "chunks.jsonl", chunks)
-    _write_jsonl(run_dir / "risks.jsonl", risks)
-    _write_jsonl(run_dir / "images.jsonl", images)
-    _write_jsonl(run_dir / "tables.jsonl", tables)
-    _write_jsonl(run_dir / "fallbacks.jsonl", fallbacks)
-    _write_jsonl(run_dir / "retrieval-samples.jsonl", retrieval_samples)
+    _write_run_tables(
+        run_dir=run_dir,
+        documents=documents,
+        pages=pages,
+        chunks=chunks,
+        risks=risks,
+        images=images,
+        tables=tables,
+        fallbacks=fallbacks,
+        retrieval_samples=retrieval_samples,
+    )
 
     finished_at = _utc_now()
 
@@ -322,6 +402,7 @@ def run_decode_lab(args: argparse.Namespace) -> Path:
         model_config_log=model_config_log,
         fallbacks=fallbacks,
     )
+    _progress(f"decode run done run_id={run_id} run_dir={run_dir}")
     return run_dir
 
 
@@ -1332,6 +1413,28 @@ def _write_jsonl(path: Path, rows: list[dict[str, Any]]) -> None:
             handle.write(json.dumps(row, ensure_ascii=False) + "\n")
 
 
+def _write_run_tables(
+    *,
+    run_dir: Path,
+    documents: list[dict[str, Any]],
+    pages: list[dict[str, Any]],
+    chunks: list[dict[str, Any]],
+    risks: list[dict[str, Any]],
+    images: list[dict[str, Any]],
+    tables: list[dict[str, Any]],
+    fallbacks: list[dict[str, Any]],
+    retrieval_samples: list[dict[str, Any]],
+) -> None:
+    _write_jsonl(run_dir / "documents.jsonl", documents)
+    _write_jsonl(run_dir / "pages.jsonl", pages)
+    _write_jsonl(run_dir / "chunks.jsonl", chunks)
+    _write_jsonl(run_dir / "risks.jsonl", risks)
+    _write_jsonl(run_dir / "images.jsonl", images)
+    _write_jsonl(run_dir / "tables.jsonl", tables)
+    _write_jsonl(run_dir / "fallbacks.jsonl", fallbacks)
+    _write_jsonl(run_dir / "retrieval-samples.jsonl", retrieval_samples)
+
+
 def _write_text(path: Path, text: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(text, encoding="utf-8")
@@ -1401,3 +1504,7 @@ def _first_informative_line(text: str) -> str:
 
 def _utc_now() -> str:
     return datetime.now(UTC).isoformat(timespec="seconds").replace("+00:00", "Z")
+
+
+def _progress(message: str) -> None:
+    print(f"[{_utc_now()}] {message}", flush=True)

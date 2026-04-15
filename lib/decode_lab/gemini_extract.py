@@ -27,8 +27,10 @@ import hashlib
 import json
 import math
 import os
+import time
 from pathlib import Path
 from typing import Any
+from datetime import UTC, datetime
 
 from lib.config import PROJECT_ROOT
 from lib.decode_lab.model_configs import ModelConfig
@@ -104,6 +106,14 @@ def _sha256_bytes(data: bytes) -> str:
 
 def _sha256_text(text: str) -> str:
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
+
+
+def _utc_now() -> str:
+    return datetime.now(UTC).isoformat(timespec="seconds").replace("+00:00", "Z")
+
+
+def _progress(message: str) -> None:
+    print(f"[{_utc_now()}] {message}", flush=True)
 
 
 def _call_gemini(
@@ -205,6 +215,12 @@ def extract_document(
     chunk_size = config.chunk_size
     num_chunks = math.ceil(page_count / chunk_size)
     fallback_records: list[dict[str, Any]] = []
+    chunk_states: list[dict[str, Any]] = []
+    _progress(
+        f"gemini extract start doc_id={doc_id} pages={page_count} "
+        f"chunks={num_chunks} model={config.name}/{config.model_name} "
+        f"tier={service_tier}"
+    )
 
     # Upload PDF once via File API if we have uncached chunks
     # (avoids re-sending the full PDF bytes for every chunk)
@@ -222,11 +238,21 @@ def extract_document(
         )
         if _cache_get(key) is None:
             uncached_chunks += 1
+    _progress(
+        f"gemini cache scan doc_id={doc_id} chunks={num_chunks} "
+        f"uncached={uncached_chunks}"
+    )
     if uncached_chunks > 0:
         try:
+            _progress(f"gemini upload start doc_id={doc_id} pdf={pdf_path.name}")
             uploaded_file = _upload_pdf(pdf_path)
+            _progress(
+                f"gemini upload done doc_id={doc_id} "
+                f"mode={'file-api' if uploaded_file is not None else 'raw-bytes'}"
+            )
         except Exception:
             uploaded_file = None  # fall back to raw bytes
+            _progress(f"gemini upload failed doc_id={doc_id}; falling back to raw bytes")
 
     for chunk_idx in range(num_chunks):
         start_page = chunk_idx * chunk_size + 1
@@ -235,28 +261,93 @@ def extract_document(
 
         prompt = config.prompt_for_pages(start_page, end_page)
         prompt_sha = config.prompt_sha256(start_page, end_page)
+        key = _cache_key(
+            config.name,
+            config.model_name,
+            prompt,
+            pdf_bytes,
+            service_tier,
+        )
+        cache_state = "hit" if _cache_get(key) is not None else "miss"
+        _progress(
+            f"gemini chunk start doc_id={doc_id} "
+            f"chunk={chunk_idx + 1}/{num_chunks} pages={start_page}-{end_page} "
+            f"cache={cache_state}"
+        )
 
         # --- Gemini call ---
-        try:
-            gemini_text, call_meta = _call_gemini(
-                pdf_bytes,
-                prompt,
-                config,
-                uploaded_file=uploaded_file,
-                service_tier=service_tier,
-            )
-        except Exception as exc:
-            fallback_records.append(
-                _error_record(
-                    doc_id,
-                    start_page,
-                    end_page,
+        gemini_text = ""
+        call_meta: dict[str, Any] = {}
+        last_error: Exception | None = None
+        max_attempts = 3 if cache_state == "miss" else 1
+        for attempt in range(1, max_attempts + 1):
+            try:
+                if attempt > 1:
+                    _progress(
+                        f"gemini chunk retry doc_id={doc_id} "
+                        f"chunk={chunk_idx + 1}/{num_chunks} pages={start_page}-{end_page} "
+                        f"attempt={attempt}/{max_attempts}"
+                    )
+                gemini_text, call_meta = _call_gemini(
+                    pdf_bytes,
+                    prompt,
                     config,
-                    f"Gemini call failed: {exc}",
-                    service_tier,
+                    uploaded_file=uploaded_file,
+                    service_tier=service_tier,
                 )
+                last_error = None
+                break
+            except Exception as exc:
+                last_error = exc
+                if attempt >= max_attempts or not _is_retryable_error(exc):
+                    break
+                time.sleep(min(60, 10 * attempt))
+
+        if last_error is not None:
+            error_record = _error_record(
+                doc_id,
+                start_page,
+                end_page,
+                config,
+                f"Gemini call failed: {last_error}",
+                service_tier,
+                prompt_sha256=prompt_sha,
+                input_sha256=pdf_sha,
+            )
+            error_path = work_dir / f"{chunk_tag}_error.json"
+            _write_json(error_path, error_record)
+            fallback_records.append(error_record)
+            chunk_states.append(
+                {
+                    "page_start": start_page,
+                    "page_end": end_page,
+                    "status": "failure",
+                    "retryable": error_record["retryable"],
+                    "error_artifact": error_path.name,
+                    "status_reason": error_record["status_reason"],
+                }
+            )
+            _write_extraction_state(
+                work_dir.parent,
+                doc_id,
+                config,
+                service_tier,
+                page_count,
+                chunk_size,
+                chunk_states,
+            )
+            _progress(
+                f"gemini chunk failed doc_id={doc_id} "
+                f"chunk={chunk_idx + 1}/{num_chunks} pages={start_page}-{end_page} "
+                f"retryable={error_record['retryable']} error={last_error}"
             )
             continue
+        _progress(
+            f"gemini chunk done doc_id={doc_id} "
+            f"chunk={chunk_idx + 1}/{num_chunks} pages={start_page}-{end_page} "
+            f"cache_hit={call_meta['cache_hit']} "
+            f"elapsed_seconds={call_meta['elapsed_seconds']}"
+        )
 
         gemini_out_path = work_dir / f"{chunk_tag}_gemini.md"
         gemini_out_path.write_text(gemini_text, encoding="utf-8")
@@ -312,7 +403,29 @@ def extract_document(
             "elapsed_seconds": 0.0,
         }
         fallback_records.append(lookup_record)
+        chunk_states.append(
+            {
+                "page_start": start_page,
+                "page_end": end_page,
+                "status": "success",
+                "retryable": False,
+                "gemini_artifact": f"{chunk_tag}_gemini.md",
+                "cleaned_artifact": f"{chunk_tag}_cleaned.md",
+                "cache_hit": call_meta["cache_hit"],
+                "elapsed_seconds": call_meta["elapsed_seconds"],
+            }
+        )
+        _write_extraction_state(
+            work_dir.parent,
+            doc_id,
+            config,
+            service_tier,
+            page_count,
+            chunk_size,
+            chunk_states,
+        )
 
+    _progress(f"gemini extract done doc_id={doc_id} records={len(fallback_records)}")
     return fallback_records
 
 
@@ -323,7 +436,10 @@ def _error_record(
     config: ModelConfig,
     reason: str,
     service_tier: str,
+    prompt_sha256: str | None = None,
+    input_sha256: str | None = None,
 ) -> dict[str, Any]:
+    retryable = _is_retryable_error_text(reason)
     return {
         "fallback_id": f"{doc_id}-p{start_page:04d}-p{end_page:04d}-gemini-extract",
         "doc_id": doc_id,
@@ -333,13 +449,70 @@ def _error_record(
         "fallback_type": "gemini_pdf_extract",
         "tool_or_model": config.model_name,
         "tool_or_model_version": config.name,
-        "prompt_sha256": None,
-        "input_sha256": None,
+        "prompt_sha256": prompt_sha256,
+        "input_sha256": input_sha256,
         "output_sha256": None,
         "status": "failure",
         "status_reason": reason,
-        "recommended_action": "no-action",
+        "recommended_action": "retry" if retryable else "inspect",
         "service_tier_requested": service_tier,
         "cache_hit": False,
         "elapsed_seconds": None,
+        "retryable": retryable,
+        "created_at": _utc_now(),
     }
+
+
+def _is_retryable_error(exc: Exception) -> bool:
+    return _is_retryable_error_text(str(exc))
+
+
+def _is_retryable_error_text(text: str) -> bool:
+    retryable_markers = [
+        "429",
+        "500",
+        "502",
+        "503",
+        "504",
+        "UNAVAILABLE",
+        "DEADLINE_EXCEEDED",
+        "RESOURCE_EXHAUSTED",
+        "high demand",
+        "temporarily",
+        "timeout",
+        "timed out",
+    ]
+    folded = text.casefold()
+    return any(marker.casefold() in folded for marker in retryable_markers)
+
+
+def _write_json(path: Path, payload: Any) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+
+
+def _write_extraction_state(
+    doc_dir: Path,
+    doc_id: str,
+    config: ModelConfig,
+    service_tier: str,
+    page_count: int,
+    chunk_size: int,
+    chunk_states: list[dict[str, Any]],
+) -> None:
+    _write_json(
+        doc_dir / "extraction-state.json",
+        {
+            "doc_id": doc_id,
+            "page_count": page_count,
+            "chunk_size": chunk_size,
+            "tool_or_model": config.model_name,
+            "tool_or_model_version": config.name,
+            "service_tier_requested": service_tier,
+            "updated_at": _utc_now(),
+            "gemini_chunks": chunk_states,
+        },
+    )

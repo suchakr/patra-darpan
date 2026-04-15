@@ -199,6 +199,32 @@ Profile locations:
 
 The decode runner's `--extractor` option remains authoritative. Profile data may guide planning, token-count/context-cache decisions, and campaign construction, but it should not silently override an explicit extractor choice.
 
+## Run Repair and Assembly Semantics
+Decode Lab run directories are evidence packets. The default behavior remains
+accident-proof: an existing `--run-id` aborts unless the user explicitly asks
+to reuse or replace it.
+
+| Flag | Meaning |
+| --- | --- |
+| default | Create a new run directory; fail if it already exists. |
+| `--resume` | Reuse an existing run directory and continue/retry work. Successful Gemini chunks are served from cache; missing or failed chunks are attempted again. |
+| `--repair` | Reuse an existing run directory to fix failed or partial work. First implementation shares resume mechanics and reassembles affected documents when `--assemble` is supplied. |
+| `--force` | Delete and recreate the run directory. Destructive; prefer `--resume` or `--repair` for long Gemini runs. |
+
+Assembly behavior:
+
+| Flag | Meaning |
+| --- | --- |
+| `--assemble` | Eager assembly. Write `document.md` after each document finishes extraction, so long runs can be reviewed before the whole campaign ends. |
+| `--assemble --assemble-lazy` | Legacy batch behavior. Assemble all documents only after extraction for the full run finishes. |
+| `--assemble-only` | Do no extraction; assemble an existing run from current artifacts. |
+
+Gemini chunk failures must be recorded inside the run, not just visible in
+terminal logs. Failed chunks write per-document error artifacts under
+`by-doc/<doc_id>/fallbacks/*_error.json` and update
+`by-doc/<doc_id>/extraction-state.json`. Repair/resume flows should be able to
+reason from these artifacts without requiring the user to paste logs.
+
 ## Script Hygiene
 The lab should avoid creating a graveyard of half-promoted WIP scripts.
 

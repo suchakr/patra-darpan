@@ -32,7 +32,7 @@ def main() -> None:
     run_dir = run_decode_lab(args)
     print(f"Wrote {run_dir}")
 
-    if args.assemble:
+    if args.assemble and args.assemble_lazy:
         written = assemble_run(run_dir)
         for path in written:
             print(f"Assembled {path}")

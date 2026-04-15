@@ -46,6 +46,15 @@ GEMINI_API_KEY=... uv run python scripts/run_decode_lab.py \
   --extractor gemini:3-flash-med --tier flex --assemble
 ```
 
+Run repair semantics:
+
+- Existing `--run-id` fails by default to protect evidence.
+- Use `--resume` to continue/retry an interrupted run.
+- Use `--repair` to reuse a run directory and fix failed/partial chunks.
+- Use `--force` only when intentionally deleting/recreating the run.
+- `--assemble` now assembles eagerly after each document. Use
+  `--assemble --assemble-lazy` for the older batch-at-end behavior.
+
 Current model decision: `gemini:3-flash-med` is the recommended default for
 corpus-scale Decode Lab extraction. HIGH thinking remains available via
 `gemini:3-flash` for hard documents.
@@ -68,7 +77,7 @@ uv run python scripts/profile_pdfs.py --set astro-math-indic-10 --token-count ge
 GEMINI_API_KEY=... uv run python scripts/run_decode_lab.py \
   --set astro-math-indic-10 \
   --run-id astro-math-indic-10-3flash-med-flex \
-  --extractor gemini:3-flash-med --tier flex --assemble
+  --extractor gemini:3-flash-med --tier flex --repair --assemble
 ```
 
 ---
@@ -290,6 +299,10 @@ uv run python scripts/run_decode_lab.py --run-id test1
 # With Gemini extraction + assembly
 GEMINI_API_KEY=... uv run python scripts/run_decode_lab.py \
   --run-id test1 --extractor gemini:3-flash-med --assemble
+
+# Repair/resume a previous cloud run
+GEMINI_API_KEY=... uv run python scripts/run_decode_lab.py \
+  --run-id test1 --extractor gemini:3-flash-med --repair --assemble
 
 # Just re-assemble a previous run
 uv run python scripts/run_decode_lab.py --assemble-only --run-id test1
