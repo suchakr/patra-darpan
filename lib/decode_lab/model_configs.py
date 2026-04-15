@@ -1,10 +1,11 @@
 """Model configurations for Gemini-based PDF extraction.
 
-Three presets covering different cost/quality tradeoffs:
+Four presets covering different cost/quality tradeoffs:
 
 - ``flash-lite``  — cheapest, no thinking (~$5.65/corpus)
 - ``flash``       — balanced, medium thinking
-- ``3-flash``     — best quality, high thinking (~$43/corpus)
+- ``3-flash-med`` — Gemini 3 Flash, medium thinking
+- ``3-flash``     — Gemini 3 Flash, high thinking (~$43/corpus)
 
 All presets share the same extraction prompt (derived from AI Studio
 experimentation on 1.pdf and AKBag.pdf).  The only differences are
