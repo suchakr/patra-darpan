@@ -1,6 +1,6 @@
 # PDF Profile Audit
 
-Generated: 2026-04-15T14:02:58.410347+00:00
+Generated: 2026-04-15T15:13:50.899981+00:00
 
 - Primary PDF assets: 2004
 - Profiled assets: 2004
