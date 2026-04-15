@@ -334,6 +334,9 @@ Do not casually remove root-input rows, shared PDFs, or GCS objects. Prefer to:
   `index.tsv` compatibility projection contract
 - [docs/cahc-p60-projection-prd.md](docs/cahc-p60-projection-prd.md)
   CAHC `P60` projection and `P85` cleanup plan
+- [docs/decode-lab.md](docs/decode-lab.md)
+  context migration patterns and single-turn intent prompt template for agent
+  handoff near quota limits
 - [web/README.md](web/README.md)
   local web runtime, Netlify dev/deploy, and link behavior
 
