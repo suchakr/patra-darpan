@@ -23,6 +23,8 @@ CLI integration via the runner::
 from __future__ import annotations
 
 import json
+import re
+from collections import Counter
 from pathlib import Path
 from typing import Any
 
@@ -130,6 +132,7 @@ def assemble_run(run_dir: Path) -> list[Path]:
             from lib.decode_lab.markdown_fixups import apply_markdown_fixups
 
             chunk_files = sorted(docs_with_gemini_chunks[doc_id])
+            printed_page_offset = _printed_page_offset_from_chunk_files(chunk_files)
             lines: list[str] = []
             lines.append(f"# {source.get('title', doc_id)}")
             lines.append("")
@@ -139,7 +142,14 @@ def assemble_run(run_dir: Path) -> list[Path]:
             lines.append("")
             for chunk_file in chunk_files:
                 chunk_text = chunk_file.read_text(encoding="utf-8").rstrip()
-                chunk_text = replace_figure_placeholders(chunk_text, doc_id)
+                page_range = _page_range_from_chunk_path(chunk_file)
+                chunk_text = replace_figure_placeholders(
+                    chunk_text,
+                    doc_id,
+                    page_start=page_range[0] if page_range else None,
+                    page_end=page_range[1] if page_range else None,
+                    printed_page_offset=printed_page_offset,
+                )
                 chunk_text = apply_markdown_fixups(chunk_text)
                 lines.append(chunk_text)
                 lines.append("")
@@ -256,6 +266,59 @@ def _load_jsonl(path: Path) -> list[dict[str, Any]]:
             if line:
                 rows.append(json.loads(line))
     return rows
+
+
+def _page_range_from_chunk_path(path: Path) -> tuple[int, int] | None:
+    match = re.search(r"-p(\d{4})-p(\d{4})_", path.name)
+    if not match:
+        return None
+    return int(match.group(1)), int(match.group(2))
+
+
+def _printed_page_offset_from_chunk_files(chunk_files: list[Path]) -> int | None:
+    """Infer article printed-page offset from Gemini chunk headers.
+
+    Gemini sometimes returns printed article page numbers in figure-meta
+    instead of counted PDF page numbers.  The chunk filenames preserve counted
+    page ranges, while repeated page headers often preserve printed numbers.
+    """
+    offsets: Counter[int] = Counter()
+    for chunk_file in chunk_files:
+        page_range = _page_range_from_chunk_path(chunk_file)
+        if page_range is None:
+            continue
+        page_start, _ = page_range
+        try:
+            lines = chunk_file.read_text(encoding="utf-8").splitlines()
+        except OSError:
+            continue
+        for line in lines[:30]:
+            printed_page = _printed_page_candidate(line)
+            if printed_page is None:
+                continue
+            offset = printed_page - page_start
+            if offset > 0:
+                offsets[offset] += 1
+            break
+    if not offsets:
+        return None
+    return offsets.most_common(1)[0][0]
+
+
+def _printed_page_candidate(line: str) -> int | None:
+    stripped = line.strip()
+    if not stripped:
+        return None
+    start_match = re.match(r"^(\d{2,4})(?:\s+|$)", stripped)
+    end_match = re.search(r"(?:\s+)(\d{2,4})$", stripped)
+    for match in (start_match, end_match):
+        if not match:
+            continue
+        printed_page = int(match.group(1))
+        if printed_page < 50:
+            continue
+        return printed_page
+    return None
 
 
 def _emit_metadata(lines: list[str], source: dict) -> None:

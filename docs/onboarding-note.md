@@ -54,6 +54,10 @@ Run repair semantics:
 - Use `--force` only when intentionally deleting/recreating the run.
 - `--assemble` now assembles eagerly after each document. Use
   `--assemble --assemble-lazy` for the older batch-at-end behavior.
+- Figure placeholders are repaired during assembly. If Gemini used printed
+  article page numbers instead of counted PDF pages, assembler infers the
+  offset from chunk headers and leaves `figure-placeholder-warning` comments
+  for corrected or unresolved mappings.
 
 Current model decision: `gemini:3-flash-med` is the recommended default for
 corpus-scale Decode Lab extraction. HIGH thinking remains available via

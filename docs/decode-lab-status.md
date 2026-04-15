@@ -105,6 +105,11 @@ Assembler post-processing replaces placeholders with real cached paths:
 Image naming: `p<page>_fig<N>.<ext>` (per-page numbering).
 For scanned pages: `p<page>_page.png`.
 
+If Gemini uses printed article pages in `figure-meta`, assembly now infers the
+printed-to-counted page offset from chunk filenames and page headers. Corrected
+or unresolved mappings are marked inline with
+`figure-placeholder-warning` comments in `document.md`.
+
 ### Layer 6: Document-level Markdown assembly — DONE
 Assembles one `document.md` per PDF from run artifacts.
 

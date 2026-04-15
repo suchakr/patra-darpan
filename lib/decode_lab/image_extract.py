@@ -249,12 +249,21 @@ def _load_cached_inventory(
     return updated
 
 
-def replace_figure_placeholders(text: str, doc_id: str) -> str:
+def replace_figure_placeholders(
+    text: str,
+    doc_id: str,
+    *,
+    page_start: int | None = None,
+    page_end: int | None = None,
+    printed_page_offset: int | None = None,
+) -> str:
     """Replace figure-N-placeholder with actual image paths.
 
     Matches ``(figure-N-placeholder)`` in Markdown image syntax and
     replaces with ``(images/p<page>_fig<N>.jpg)`` based on the
-    figure-meta annotation that follows.
+    figure-meta annotation that follows.  If Gemini supplies a printed
+    article page number instead of counted PDF page number, infer the
+    offset from the current page chunk and flag the correction inline.
     """
     cache_dir = _CACHE_ROOT / doc_id
     if not cache_dir.exists():
@@ -273,21 +282,47 @@ def replace_figure_placeholders(text: str, doc_id: str) -> str:
             page_files.setdefault(page, []).append(name)
 
     lines = text.splitlines()
+    local_printed_page_offset = printed_page_offset
+    if local_printed_page_offset is None:
+        local_printed_page_offset = _printed_page_offset(lines, page_start)
     result = []
     for i, line in enumerate(lines):
+        warning: str | None = None
         if "figure-" in line and "-placeholder" in line:
             # Look for figure-meta in the next few lines to get page number
             page_num = _find_page_from_meta(lines, i)
-            if page_num and page_num in page_files:
-                files = page_files[page_num]
+            replacement_page = page_num
+            if (
+                replacement_page
+                and replacement_page not in page_files
+                and local_printed_page_offset is not None
+            ):
+                corrected = replacement_page - local_printed_page_offset
+                if corrected in page_files and _within_range(corrected, page_start, page_end):
+                    warning = (
+                        "<!-- figure-placeholder-warning: "
+                        f"page_meta_out_of_range original_page={replacement_page} "
+                        f"corrected_page={corrected} strategy=printed-page-offset -->"
+                    )
+                    replacement_page = corrected
+            if replacement_page and replacement_page in page_files:
+                files = page_files[replacement_page]
                 # Use the first available file for this page
                 replacement = f"images/{files[0]}"
                 line = re.sub(
-                    r"figure-\d+-placeholder",
+                    r"figure-[A-Za-z0-9]+-placeholder",
                     replacement,
                     line,
                 )
+            elif "figure-" in line and "-placeholder" in line:
+                warning = (
+                    "<!-- figure-placeholder-warning: unresolved "
+                    f"page_meta={page_num if page_num is not None else 'missing'} "
+                    f"chunk_pages={page_start or '?'}-{page_end or '?'} -->"
+                )
         result.append(line)
+        if warning:
+            result.append(warning)
     return "\n".join(result)
 
 
@@ -298,3 +333,40 @@ def _find_page_from_meta(lines: list[str], img_line: int) -> int | None:
         if m:
             return int(m.group(1))
     return None
+
+
+def _printed_page_offset(lines: list[str], page_start: int | None) -> int | None:
+    if page_start is None:
+        return None
+    for line in lines[:25]:
+        printed_page = _printed_page_candidate(line)
+        if printed_page is not None:
+            return printed_page - page_start
+    return None
+
+
+def _printed_page_candidate(line: str) -> int | None:
+    stripped = line.strip()
+    if not stripped:
+        return None
+
+    # Journal/article headers may put printed page at either edge:
+    # "210 YUKIO OHASHI" or "DEVELOPMENT ... INDIA 225".
+    start_match = re.match(r"^(\d{2,4})(?:\s+|$)", stripped)
+    end_match = re.search(r"(?:\s+)(\d{2,4})$", stripped)
+
+    for match in (start_match, end_match):
+        if not match:
+            continue
+        printed_page = int(match.group(1))
+        # Ignore ordinary numbered list/table lines.
+        if printed_page < 50:
+            continue
+        return printed_page
+    return None
+
+
+def _within_range(page: int, page_start: int | None, page_end: int | None) -> bool:
+    if page_start is None or page_end is None:
+        return True
+    return page_start <= page <= page_end

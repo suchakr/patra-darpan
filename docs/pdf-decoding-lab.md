@@ -219,6 +219,14 @@ Assembly behavior:
 | `--assemble --assemble-lazy` | Legacy batch behavior. Assemble all documents only after extraction for the full run finishes. |
 | `--assemble-only` | Do no extraction; assemble an existing run from current artifacts. |
 
+Figure placeholder repair is an assembly concern, not a prompt concern. Gemini
+sometimes emits printed article page numbers in `figure-meta` while image cache
+paths use counted PDF page numbers. The assembler infers a stable printed-page
+offset from chunk filenames plus page headers, rewrites resolvable placeholders,
+and leaves an inline `figure-placeholder-warning` comment when it corrected or
+could not resolve a placeholder. This makes repair/reassembly auditable without
+requiring terminal logs or prompt changes.
+
 Gemini chunk failures must be recorded inside the run, not just visible in
 terminal logs. Failed chunks write per-document error artifacts under
 `by-doc/<doc_id>/fallbacks/*_error.json` and update
