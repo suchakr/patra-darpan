@@ -96,6 +96,22 @@ const PAPERS = [
     "localPath": null
   },
   {
+    "journal": "SwarajyaMag",
+    "title": "How Ancient India Predicted Rains Before The Arrival Of Modern Science",
+    "author": "R. S. Hariharan",
+    "category": "Indic",
+    "subject": "Agriculture",
+    "year": "2026",
+    "remoteUrl": "https://swarajyamag.com/ideas/how-ancient-india-predicted-rains-before-the-arrogance-of-modern-science",
+    "juUrl": "",
+    "size": 0.0,
+    "cahc_authored": true,
+    "entry_type": "link",
+    "source": "swarajya",
+    "gcs_key": "",
+    "localPath": null
+  },
+  {
     "journal": "QJMS 116.2",
     "title": "Characterisation of Elapsed Time as Historical Past in Hinduism",
     "author": "R.N. Iyengar",
@@ -866,7 +882,7 @@ const PAPERS = [
   {
     "journal": "Karnataka Sanskrit 8.1",
     "title": "The Scope of A\u1e63\u1e6d\u0101da\u015bavar\u1e47ana in the Mah\u0101k\u0101vya Mathur\u0101bhyudaya",
-    "author": "Shankar Rajaraman, R. S. Hariharan",
+    "author": "R. S. Hariharan",
     "category": "Indic",
     "subject": "Culture",
     "year": "2025",

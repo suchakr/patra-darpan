@@ -7,8 +7,8 @@
 ## root_inventory
 - ijhs_rows: 1954
 - curated_pdf_rows: 50
-- curated_link_rows: 6
-- registry_entries: 73
+- curated_link_rows: 7
+- registry_entries: 74
 - mirror_rows: 17
 - shared_ijhs_files: 1954
 - shared_other_files: 50
@@ -47,11 +47,11 @@
 - [info] IJHS root row has blank author outside the expected procedural patterns (row_number=1376, paper='Book Review: R N Iyengar - Parasaratantra: Ancient Sanskrit Text on Astronomy and Natural Sciences', journal='IJHS-49-2014-Issue-2')
 
 ## canonical_inventory
-- documents: 2010
-- document_sources: 2010
-- asset_refs: 2027
-- documents_by_source: {'curated-links.tsv': 6, 'curated-pdfs.tsv': 50, 'ijhs.tsv': 1954}
-- documents_by_entry_type: {'link': 6, 'pdf': 2004}
+- documents: 2011
+- document_sources: 2011
+- asset_refs: 2028
+- documents_by_source: {'curated-links.tsv': 7, 'curated-pdfs.tsv': 50, 'ijhs.tsv': 1954}
+- documents_by_entry_type: {'link': 7, 'pdf': 2004}
 - issue_count: 0
 
 ## core_field_quality
@@ -75,8 +75,8 @@
 - [warning] Missing core field `author_display` (doc_id='Vol49_2_10_BookReview', source_root='ijhs.tsv')
 
 ## deferred_field_status
-- documents_by_source_root: {'curated-links.tsv': 6, 'curated-pdfs.tsv': 50, 'ijhs.tsv': 1954}
-- cahc_authored_true_by_source_root: {'curated-links.tsv': 6, 'curated-pdfs.tsv': 50, 'ijhs.tsv': 17}
+- documents_by_source_root: {'curated-links.tsv': 7, 'curated-pdfs.tsv': 50, 'ijhs.tsv': 1954}
+- cahc_authored_true_by_source_root: {'curated-links.tsv': 7, 'curated-pdfs.tsv': 50, 'ijhs.tsv': 17}
 - subject_status: deferred; export currently leaves subject blank
 - category_status: deferred; export currently leaves category blank
 - cahc_authored_status: present as a curated label in documents; still needs clearer long-term placement

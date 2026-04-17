@@ -267,7 +267,7 @@ cp /path/to/The_Scope_of_Ashtadashavarnana.pdf ../patra-darpan/corpus/other/
 Append to `corpus/curated-pdfs.tsv`:
 
 ```tsv
-Karnataka Sanskrit 8.1	The Scope of Aṣṭādaśavarṇana in the Mahākāvya Mathurābhyudaya	https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/The_Scope_of_Ashtadashavarnana.pdf	320.0	2025.0	Shankar Rajaraman, R. S. Hariharan
+Karnataka Sanskrit 8.1	The Scope of Aṣṭādaśavarṇana in the Mahākāvya Mathurābhyudaya	https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/The_Scope_of_Ashtadashavarnana.pdf	320.0	2025.0	R. S. Hariharan
 ```
 
 If the mirror URL should be treated as a declared mirror of some other source

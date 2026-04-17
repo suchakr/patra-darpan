@@ -1,6 +1,6 @@
 window.PATRA_DARPAN_P60 = {
-  "generatedAt": "2026-04-13T02:45:35.711110Z",
-  "rowCount": 73,
+  "generatedAt": "2026-04-17T07:55:05.039919Z",
+  "rowCount": 74,
   "rows": [
     {
       "year": "2026",
@@ -18,6 +18,15 @@ window.PATRA_DARPAN_P60 = {
       "author": "R. S. Hariharan",
       "source": "SwarajyaMag",
       "url": "https://swarajyamag.com/ideas/did-india-lack-historical-consciousness-or-is-it-just-that-india-understood-time-differently",
+      "entry_type": "link"
+    },
+    {
+      "year": "2026",
+      "category": "Agriculture",
+      "title": "How Ancient India Predicted Rains Before The Arrival Of Modern Science",
+      "author": "R. S. Hariharan",
+      "source": "SwarajyaMag",
+      "url": "https://swarajyamag.com/ideas/how-ancient-india-predicted-rains-before-the-arrogance-of-modern-science",
       "entry_type": "link"
     },
     {
@@ -51,7 +60,7 @@ window.PATRA_DARPAN_P60 = {
       "year": "2025",
       "category": "Culture",
       "title": "The Scope of A\u1e63\u1e6d\u0101da\u015bavar\u1e47ana in the Mah\u0101k\u0101vya Mathur\u0101bhyudaya",
-      "author": "Shankar Rajaraman, R. S. Hariharan",
+      "author": "R. S. Hariharan",
       "source": "Karnataka Sanskrit 8.1",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/The_Scope_of_Ashtadashavarnana.pdf",
       "entry_type": "pdf"
