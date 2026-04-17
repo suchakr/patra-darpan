@@ -1,5 +1,5 @@
 window.PATRA_DARPAN_P60 = {
-  "generatedAt": "2026-04-15T19:10:33.235178Z",
+  "generatedAt": "2026-04-17T07:55:05.039919Z",
   "rowCount": 74,
   "rows": [
     {
@@ -60,7 +60,7 @@ window.PATRA_DARPAN_P60 = {
       "year": "2025",
       "category": "Culture",
       "title": "The Scope of A\u1e63\u1e6d\u0101da\u015bavar\u1e47ana in the Mah\u0101k\u0101vya Mathur\u0101bhyudaya",
-      "author": "Shankar Rajaraman, R. S. Hariharan",
+      "author": "R. S. Hariharan",
       "source": "Karnataka Sanskrit 8.1",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/The_Scope_of_Ashtadashavarnana.pdf",
       "entry_type": "pdf"

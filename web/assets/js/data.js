@@ -882,7 +882,7 @@ const PAPERS = [
   {
     "journal": "Karnataka Sanskrit 8.1",
     "title": "The Scope of A\u1e63\u1e6d\u0101da\u015bavar\u1e47ana in the Mah\u0101k\u0101vya Mathur\u0101bhyudaya",
-    "author": "Shankar Rajaraman, R. S. Hariharan",
+    "author": "R. S. Hariharan",
     "category": "Indic",
     "subject": "Culture",
     "year": "2025",
