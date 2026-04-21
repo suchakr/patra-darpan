@@ -253,6 +253,7 @@ def replace_figure_placeholders(
     text: str,
     doc_id: str,
     *,
+    pdf_path: Path | None = None,
     page_start: int | None = None,
     page_end: int | None = None,
     printed_page_offset: int | None = None,
@@ -270,7 +271,7 @@ def replace_figure_placeholders(
         return text
 
     cached_files = sorted(f.name for f in cache_dir.iterdir() if not f.name.startswith("_"))
-    if not cached_files:
+    if not cached_files and pdf_path is None:
         return text
 
     # Build page→files index
@@ -280,15 +281,19 @@ def replace_figure_placeholders(
         if m:
             page = int(m.group(1))
             page_files.setdefault(page, []).append(name)
+    for files in page_files.values():
+        files.sort(key=_image_sort_key)
 
     lines = text.splitlines()
     local_printed_page_offset = printed_page_offset
     if local_printed_page_offset is None:
         local_printed_page_offset = _printed_page_offset(lines, page_start)
     result = []
+    page_use_count: dict[int, int] = {}
     for i, line in enumerate(lines):
         warning: str | None = None
         if "figure-" in line and "-placeholder" in line:
+            line = _restore_figure_label(line)
             # Look for figure-meta in the next few lines to get page number
             page_num = _find_page_from_meta(lines, i)
             replacement_page = page_num
@@ -305,25 +310,151 @@ def replace_figure_placeholders(
                         f"corrected_page={corrected} strategy=printed-page-offset -->"
                     )
                     replacement_page = corrected
+            if (
+                replacement_page
+                and replacement_page not in page_files
+                and pdf_path is not None
+                and _within_range(replacement_page, page_start, page_end)
+            ):
+                rendered = _ensure_page_render(pdf_path, cache_dir, replacement_page)
+                if rendered is not None:
+                    page_files[replacement_page] = [rendered.name]
+                    warning = (
+                        "<!-- figure-resolved-page-render: "
+                        f"page={replacement_page} image=images/{rendered.name} "
+                        "reason=no-extracted-figure -->"
+                    )
             if replacement_page and replacement_page in page_files:
                 files = page_files[replacement_page]
-                # Use the first available file for this page
-                replacement = f"images/{files[0]}"
+                use_count = page_use_count.get(replacement_page, 0)
+                file_index = min(use_count, len(files) - 1)
+                page_use_count[replacement_page] = use_count + 1
+                replacement = f"images/{files[file_index]}"
                 line = re.sub(
-                    r"figure-[A-Za-z0-9]+-placeholder",
+                    r"figure-[^)\s]*placeholder(?:-[^)\s]+)?",
                     replacement,
                     line,
                 )
+                if warning is None:
+                    marker = (
+                        "figure-resolved-page-render"
+                        if "_page." in files[file_index]
+                        else "figure-resolved-extracted"
+                    )
+                    warning = (
+                        f"<!-- {marker}: page={replacement_page} "
+                        f"image=images/{files[file_index]} -->"
+                    )
             elif "figure-" in line and "-placeholder" in line:
+                figure_id = _figure_id_from_line(line)
                 warning = (
-                    "<!-- figure-placeholder-warning: unresolved "
+                    "<!-- figure-unresolved: "
+                    f"figure={figure_id or 'unknown'} "
                     f"page_meta={page_num if page_num is not None else 'missing'} "
                     f"chunk_pages={page_start or '?'}-{page_end or '?'} -->"
                 )
         result.append(line)
         if warning:
             result.append(warning)
+    result = _collapse_repeated_page_render_links(result)
     return "\n".join(result)
+
+
+def _restore_figure_label(line: str) -> str:
+    alt_match = re.match(r"(!\[)([^\]]*)(\]\([^)]*\))", line)
+    if not alt_match:
+        return line
+    alt_text = alt_match.group(2).strip()
+    if alt_text.lower().startswith("fig"):
+        return line
+    placeholder = alt_match.group(3)
+    if "step" in placeholder.lower():
+        return line
+    fig_match = re.search(r"figure-(\d+(?:\.\d+)?)[^)]*placeholder", placeholder)
+    if not fig_match:
+        return line
+    label = f"Fig. {fig_match.group(1)}. "
+    return f"{alt_match.group(1)}{label}{alt_match.group(2)}{alt_match.group(3)}"
+
+
+def _collapse_repeated_page_render_links(lines: list[str]) -> list[str]:
+    """Render each page fallback image once, keeping earlier captions as comments.
+
+    Page-render fallback is intentionally coarse. If a page has many figures,
+    repeating the same full-page PNG for every placeholder makes rendered
+    Markdown noisy. Keep the last occurrence visible and tag earlier ones as
+    processed.
+    """
+    page_link_pattern = re.compile(r"^!\[([^\]]*)\]\((images/p\d+_page\.png)\)$")
+    occurrences: dict[str, list[int]] = {}
+    for index, line in enumerate(lines):
+        match = page_link_pattern.match(line.strip())
+        if not match:
+            continue
+        occurrences.setdefault(match.group(2), []).append(index)
+
+    collapsed = list(lines)
+    for image_path, indexes in occurrences.items():
+        if len(indexes) < 2:
+            continue
+        for index in indexes[:-1]:
+            match = page_link_pattern.match(collapsed[index].strip())
+            if not match:
+                continue
+            caption = match.group(1).replace("--", "-")
+            collapsed[index] = (
+                "<!-- figure-resolved-page-render-hidden: "
+                f"image={image_path} caption={json.dumps(caption, ensure_ascii=False)} -->"
+            )
+            if (
+                index + 1 < len(collapsed)
+                and collapsed[index + 1].startswith("<!-- figure-resolved-page-render:")
+                and f"image={image_path}" in collapsed[index + 1]
+            ):
+                collapsed[index + 1] = ""
+    return [line for line in collapsed if line != ""]
+
+
+def _figure_id_from_line(line: str) -> str | None:
+    match = re.search(r"figure-([^)\s]*?)placeholder", line)
+    if not match:
+        return None
+    return match.group(1).rstrip("-")
+
+
+def _image_sort_key(name: str) -> tuple[int, int, str]:
+    page_match = re.match(r"p(\d+)_", name)
+    page = int(page_match.group(1)) if page_match else 0
+    fig_match = re.search(r"_fig(\d+)", name)
+    fig = int(fig_match.group(1)) if fig_match else 0
+    return page, fig, name
+
+
+def _ensure_page_render(pdf_path: Path, cache_dir: Path, page: int) -> Path | None:
+    if page < 1 or not pdf_path.exists() or not shutil.which("pdftoppm"):
+        return None
+    dest = cache_dir / f"p{page:02d}_page.png"
+    if dest.exists():
+        return dest
+    prefix = cache_dir / f"p{page:02d}_page"
+    subprocess.run(
+        [
+            "pdftoppm",
+            "-f", str(page),
+            "-l", str(page),
+            "-r", "150",
+            "-png",
+            str(pdf_path),
+            str(prefix),
+        ],
+        capture_output=True,
+        check=False,
+    )
+    candidates = sorted(cache_dir.glob(f"p{page:02d}_page-*.png"))
+    if not candidates:
+        return None
+    candidates[0].rename(dest)
+    return dest
 
 
 def _find_page_from_meta(lines: list[str], img_line: int) -> int | None:

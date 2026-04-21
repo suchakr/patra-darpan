@@ -1,0 +1,22 @@
+# Purpose: manually audited decoded-corpus sample.
+# Expanded from:
+# - reports/decoder-audit-2026-04-18-185402.md
+# - reports/decoder-audit-2026-04-22-014927.md
+01-43539_2024_127_OnlinePDF123-142
+57_3_7
+IJHS_58_2_1
+IJHS_58_3_3
+IJHS_59_3_1
+Vol04_1And2_8_TASaraswathi
+Vol09_1_9_CGPendse
+Vol20-1to4_12_SDSharma
+Vol20-1to4_8_SDSharma
+Vol26_2_6_KVSarma
+Vol27_3_2_BDatta
+Vol27_4_2_JNKapur
+Vol28_1_2_SCKak
+Vol28_2_2_RCGupta
+Vol28_2_4_VNSharma
+Vol43_4_1_PGondhalekar
+Vol49_2_5_TKnudsen
+Vol49_2_6_VMallayya

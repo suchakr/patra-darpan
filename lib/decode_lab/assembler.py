@@ -146,6 +146,7 @@ def assemble_run(run_dir: Path) -> list[Path]:
                 chunk_text = replace_figure_placeholders(
                     chunk_text,
                     doc_id,
+                    pdf_path=Path(source["local_pdf_path"]) if source.get("local_pdf_path") else None,
                     page_start=page_range[0] if page_range else None,
                     page_end=page_range[1] if page_range else None,
                     printed_page_offset=printed_page_offset,
@@ -154,11 +155,16 @@ def assemble_run(run_dir: Path) -> list[Path]:
                 lines.append(chunk_text)
                 lines.append("")
             doc_md_path = doc_dir / "document.md"
-            doc_md_path.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
+            doc_md_path.write_text(
+                apply_markdown_fixups("\n".join(lines)),
+                encoding="utf-8",
+            )
             written.append(doc_md_path)
             continue
 
         # Otherwise, fall back to per-page pdftotext assembly
+        from lib.decode_lab.markdown_fixups import apply_markdown_fixups
+
         pages_dir = doc_dir / "pages"
         page_files = sorted(pages_dir.glob("p*.txt"))
         if not page_files:
@@ -246,7 +252,10 @@ def assemble_run(run_dir: Path) -> list[Path]:
             lines.append("")
 
         doc_md_path = doc_dir / "document.md"
-        doc_md_path.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
+        doc_md_path.write_text(
+            apply_markdown_fixups("\n".join(lines)),
+            encoding="utf-8",
+        )
         written.append(doc_md_path)
 
     return written

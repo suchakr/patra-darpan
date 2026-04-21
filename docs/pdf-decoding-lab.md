@@ -131,6 +131,27 @@ Run the lab as an offline profiling and extraction campaign.
    - Include per-document manifests, raw extractor outputs, risk flags, sample chunks, table/image inventories, and fallback comparisons.
    - Produce one human-readable report summarizing what worked, what failed, and what should become the first indexing milestone.
 
+## Local Audit Workbench
+Use `tools/audit-decoder/` for manual review of decoded corpus output. It is a
+local-only workbench, not part of the public `web/` app and not part of the
+generated corpus artifact.
+
+Run it from the repository root:
+
+```bash
+python3 tools/audit-decoder/server.py
+```
+
+The server reads `decoded-corpus/manifest.jsonl`, then shows each document as a
+three-pane review surface: document list, source PDF, and `document.md`. The
+Markdown pane defaults to raw text and includes a rendered preview toggle using
+browser-loaded Markdown/KaTeX assets. Raw Markdown remains the audit source of
+truth.
+
+Review state is stored under `tools/audit-decoder/.state/` and ignored by git.
+Use the tool's export action to write collected notes as Markdown under
+`reports/`.
+
 ## PDF Profile Stage
 PDF profiling is a derived enrichment over canonical document metadata and local PDF assets. It is not root input metadata and should be rebuildable.
 

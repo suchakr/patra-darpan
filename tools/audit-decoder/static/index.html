@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>audit-decoder</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <main class="shell" id="shell">
+      <aside class="doc-list">
+        <header class="pane-head">
+          <div>
+            <h1>audit-decoder</h1>
+            <p id="doc-count">Loading corpus...</p>
+          </div>
+          <div class="head-actions">
+            <button id="export-report" type="button">Export</button>
+            <button id="collapse-list" type="button" title="Collapse document list">Hide</button>
+          </div>
+        </header>
+        <input id="filter" class="filter" type="search" placeholder="Filter documents">
+        <div class="status-filters" role="group" aria-label="Document filters">
+          <button class="status-filter active" data-filter-status="all" type="button" title="Show all documents">All <span class="chip-count">0</span></button>
+          <button class="status-filter" data-filter-status="unvisited" type="button" title="Show documents without saved notes">New <span class="chip-count">0</span></button>
+          <button class="status-filter" data-filter-status="annotated" type="button" title="Show documents with saved notes">Marked <span class="chip-count">0</span></button>
+          <button class="status-filter" data-filter-status="needs-fix" type="button" title="Show documents marked needs fix">Fix <span class="chip-count">0</span></button>
+          <button id="list-density" class="status-filter density-toggle" type="button" title="Toggle compact document rows">Lite</button>
+        </div>
+        <select id="set-filter" class="set-filter" title="Filter by decode-lab set">
+          <option value="">All decode-lab sets</option>
+        </select>
+        <div id="docs" class="docs"></div>
+      </aside>
+
+      <button id="show-list" class="show-list hidden" type="button">Docs</button>
+      <div class="resize-handle resize-list" data-resizer="list" role="separator" aria-label="Resize document list"></div>
+
+      <section class="pdf-pane">
+        <header class="pane-head">
+          <div>
+            <h2 id="pdf-title">Source PDF</h2>
+            <p id="pdf-meta">Select a document.</p>
+          </div>
+        </header>
+        <iframe id="pdf-frame" title="Source PDF"></iframe>
+      </section>
+
+      <div class="resize-handle resize-panes" data-resizer="panes" role="separator" aria-label="Resize PDF and Markdown panes"></div>
+
+      <section class="md-pane">
+        <header class="pane-head">
+          <div>
+            <h2>document.md</h2>
+            <p id="md-meta">Raw is the audit source of truth.</p>
+          </div>
+          <div class="md-tools">
+            <div class="zoom-tools" role="group" aria-label="Markdown zoom">
+              <button id="zoom-out" type="button" title="Smaller text">-</button>
+              <button id="zoom-reset" type="button" title="Reset text size">100%</button>
+              <button id="zoom-in" type="button" title="Larger text">+</button>
+            </div>
+            <div class="toggle" role="group" aria-label="Markdown view mode">
+              <button id="raw-mode" class="active" type="button">Raw</button>
+              <button id="highlight-mode" type="button" title="Syntax-highlighted raw Markdown">HL</button>
+              <button id="rendered-mode" type="button">Rendered</button>
+            </div>
+          </div>
+        </header>
+
+        <details class="collapsible metadata-shell">
+          <summary>
+            <span>Metadata</span>
+            <span id="metadata-summary">Select a document.</span>
+          </summary>
+          <div id="metadata" class="metadata"></div>
+        </details>
+        <pre id="raw-md" class="markdown raw"></pre>
+        <pre id="highlight-md" class="markdown raw highlighted hidden"><code class="language-markdown"></code></pre>
+        <article id="rendered-md" class="markdown rendered hidden"></article>
+
+        <details class="collapsible annotation-shell" open>
+          <summary>
+            <span>Annotation</span>
+            <span id="annotation-summary">No note saved.</span>
+          </summary>
+          <form id="annotation-form" class="annotation">
+            <div class="annotation-row">
+              <label>
+                Status
+                <select id="review-status">
+                  <option value="unreviewed">Unreviewed</option>
+                  <option value="pass">Pass</option>
+                  <option value="minor">Minor</option>
+                  <option value="needs-fix">Needs fix</option>
+                  <option value="bad-source">Bad source</option>
+                </select>
+              </label>
+              <label>
+                Page
+                <input id="page" type="text" inputmode="numeric">
+              </label>
+              <label>
+                Location
+                <input id="location" type="text" placeholder="section, table, equation">
+              </label>
+              <div class="note-actions">
+                <button type="submit">Save</button>
+                <button id="clear-note" type="button" title="Clear saved note for this document">Clear</button>
+              </div>
+            </div>
+            <label>
+              Comment
+              <textarea id="comment" rows="3" placeholder="Audit note for this document"></textarea>
+            </label>
+            <span id="save-status"></span>
+          </form>
+        </details>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/markdown-it@14.1.0/dist/markdown-it.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markdown.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+    <script src="/static/app.js"></script>
+  </body>
+</html>

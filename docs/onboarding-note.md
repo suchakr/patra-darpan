@@ -1,6 +1,6 @@
 # Patra Darpan Semantic Index — Onboarding Note
 
-## Snapshot — 2026-04-15
+## Snapshot — 2026-04-18
 
 Current working branch/worktree: `feat/pdf-semantic-index` in
 `/Users/sunder/projects/patra-darpan-pdf-semantic-index`.
@@ -12,7 +12,10 @@ This note is a handoff snapshot. The authoritative design contract is
 What is now in place:
 
 - Campaign sets are tracked text files under `decode-lab/sets/`.
-  `micro-2`, `micro-5`, and `astro-math-indic-10` are present.
+  `micro-2`, `micro-5`, `astro-math-indic-10`,
+  `astro-math-indic-digital`, and `astro-math-indic-raster` are present.
+  The digital/raster astro-math-indic sets currently cover 184 and 248
+  profile-matched documents respectively.
 - PDF profile state lives in SQLite via `asset_refs` file facts,
   `pdf_profiles`, and the `primary_pdf_profiles` view.
 - Full local PDF profiling completed for all primary PDFs:
@@ -22,6 +25,23 @@ What is now in place:
   - document types: `digital` 960, `raster` 983, `mixed` 53, `unknown` 8
 - Profile reports are generated at `reports/pdf-profile.tsv` and
   `reports/pdf-profile-audit.md`.
+- Decode Lab runs are now upsert-by-default. Reusing a `--run-id` skips
+  completed documents, retries unfinished/failed documents, and supports
+  `--batch-size` / `--batch` for incremental work packets. `--resume` remains
+  accepted as a compatibility alias; `--force` is still the destructive reset.
+- Gemini response cache identity has been changed so `service_tier` is
+  metadata, not semantic identity. New lookups first use the tierless cache key,
+  then lazily promote legacy `standard`/`flex` cache hits.
+- A durable generated artifact path now exists: `decoded-corpus/`. It is ignored
+  by git and built from accepted Decode Lab runs with
+  `scripts/build_decoded_corpus.py`.
+- Current local `decoded-corpus/` contains 43 documents: 42 `ok`, 1 `warning`.
+  The warning is `Vol28_1_2_SCKak` with one failed-chunk error in its
+  `quality.json`.
+- A local manual review workbench exists under `tools/audit-decoder/`. It reads
+  `decoded-corpus/manifest.jsonl`, shows PDF and Markdown side by side, stores
+  local review state under `tools/audit-decoder/.state/`, and can export review
+  notes to `reports/`.
 - Campaign set generation is available:
 
 ```bash
@@ -44,13 +64,28 @@ uv run python scripts/run_decode_lab.py --set micro-2 --run-id local-micro2 --as
 GEMINI_API_KEY=... uv run python scripts/run_decode_lab.py \
   --set micro-2 --run-id flex-micro2-3flash-med \
   --extractor gemini:3-flash-med --tier flex --assemble
+
+GEMINI_API_KEY=... uv run python scripts/run_decode_lab.py \
+  --set astro-math-indic-raster \
+  --run-id build-astro-math-indic-raster \
+  --extractor gemini:3-flash-med --tier flex \
+  --batch-size 10 --assemble
+
+uv run python scripts/build_decoded_corpus.py \
+  --from-run build-astro-math-indic-raster
+
+python3 tools/audit-decoder/server.py
 ```
 
 Run repair semantics:
 
-- Existing `--run-id` fails by default to protect evidence.
-- Use `--resume` to continue/retry an interrupted run.
-- Use `--repair` to reuse a run directory and fix failed/partial chunks.
+- Existing `--run-id` is reused by default in upsert mode.
+- Completed documents are skipped when their per-doc manifest, extraction state,
+  and assembled Markdown are complete for the requested extractor.
+- Use `--batch-size N` to process the next N unfinished documents in a selected
+  set.
+- Use `--repair` to make repair intent explicit in command history; it shares
+  the same upsert mechanics.
 - Use `--force` only when intentionally deleting/recreating the run.
 - `--assemble` now assembles eagerly after each document. Use
   `--assemble --assemble-lazy` for the older batch-at-end behavior.
@@ -58,6 +93,9 @@ Run repair semantics:
   article page numbers instead of counted PDF pages, assembler infers the
   offset from chunk headers and leaves `figure-placeholder-warning` comments
   for corrected or unresolved mappings.
+- If a Gemini placeholder references a page with no extracted figure object,
+  assembly can render that source page with `pdftoppm` as a page-image fallback
+  and marks it with a `page-render-fallback` warning.
 
 Current model decision: `gemini:3-flash-med` is the recommended default for
 corpus-scale Decode Lab extraction. HIGH thinking remains available via
@@ -73,15 +111,30 @@ Current caveats:
 - `subject/category` are projection-time enrichment from `exports/index.tsv`,
   not first-class SQLite columns. For campaign set generation today, join
   `exports/index.tsv` to `primary_pdf_profiles`.
+- `decoded-corpus/` is local generated output, not tracked source. Its current
+  status is useful for review, but it should be rebuilt from runs rather than
+  hand-edited.
+- `tools/audit-decoder/` is a local workbench only. It is deliberately outside
+  the public `web/` app and outside the canonical corpus pipeline.
 
 Recommended next workflow:
 
 ```bash
-uv run python scripts/profile_pdfs.py --set astro-math-indic-10 --token-count gemini
+# Continue raster/digital corpus generation in manageable batches.
 GEMINI_API_KEY=... uv run python scripts/run_decode_lab.py \
-  --set astro-math-indic-10 \
-  --run-id astro-math-indic-10-3flash-med-flex \
-  --extractor gemini:3-flash-med --tier flex --repair --assemble
+  --set astro-math-indic-raster \
+  --run-id build-astro-math-indic-raster \
+  --extractor gemini:3-flash-med \
+  --tier flex \
+  --batch-size 10 \
+  --assemble
+
+# Materialize accepted run output into durable generated artifacts.
+uv run python scripts/build_decoded_corpus.py \
+  --from-run build-astro-math-indic-raster
+
+# Review the generated Markdown against source PDFs.
+python3 tools/audit-decoder/server.py
 ```
 
 ---
@@ -308,18 +361,41 @@ GEMINI_API_KEY=... uv run python scripts/run_decode_lab.py \
 GEMINI_API_KEY=... uv run python scripts/run_decode_lab.py \
   --run-id test1 --extractor gemini:3-flash-med --repair --assemble
 
+# Incrementally process the next unfinished docs from a larger campaign set
+GEMINI_API_KEY=... uv run python scripts/run_decode_lab.py \
+  --set astro-math-indic-digital \
+  --run-id build-astro-math-indic-digital \
+  --extractor gemini:3-flash-med --tier flex \
+  --batch-size 10 --assemble
+
 # Just re-assemble a previous run
 uv run python scripts/run_decode_lab.py --assemble-only --run-id test1
+
+# Build durable decoded-corpus artifacts from an accepted run
+uv run python scripts/build_decoded_corpus.py \
+  --from-run build-astro-math-indic-digital
+
+# Review built documents against source PDFs
+python3 tools/audit-decoder/server.py
 
 # See all options
 uv run python scripts/run_decode_lab.py --help
 ```
 
-Output lands in `.build~/decode-lab/<run_id>/`. Each doc gets:
+Exploration/run output lands in `.build~/decode-lab/<run_id>/`. Each doc gets:
 - `document.md` — the readable Markdown (what you want to look at)
 - `fallbacks/` — raw Gemini outputs and cleaned versions
 - `review.md` — diagnostic summary
 - `pages/` — per-page pdftotext baseline
+
+Accepted run output is materialized into `decoded-corpus/by-doc/<doc_id>/`.
+Each built doc gets:
+- `document.md` — canonical readable Markdown for downstream consumers
+- `manifest.json` — provenance, source PDF, run ID, extractor, hashes, media
+- `quality.json` — warnings/errors such as `<<<CONTINUE>>>`, unresolved
+  placeholders, figure warnings, and failed chunks
+- `source.pdf` — symlink back to the local corpus PDF
+- `media/` — copied figures/page renders referenced by `document.md`
 
 ## Code layout
 
@@ -337,17 +413,27 @@ scripts/
   run_decode_lab.py  — CLI entry point
   profile_pdfs.py    — PDF profiling and reports
   generate_campaign_sets.py — campaign set generator
+  build_decoded_corpus.py — materializes durable decoded-corpus output
+
+tools/
+  audit-decoder/     — local PDF/Markdown review workbench
 
 docs/
   pdf-decoding-lab.md    — design contract and acceptance criteria
   decode-lab-status.md   — current progress and decisions
+  build-decoded-corpus-prd.md — durable artifact contract
 ```
 
 ## What's next
 
-1. Run `astro-math-indic-10` through `gemini:3-flash-med --tier flex`
-2. Populate Gemini token counts for small campaign sets before decoding
-3. Handle `<<<CONTINUE>>>` truncation marker classification before corpus scale
-4. Use `reports/pdf-profile.tsv` and generated campaign sets to plan
-   `astro-math-full` and broader decode batches
-5. Build the search index on top of the extracted Markdown
+1. Continue `astro-math-indic-digital` and `astro-math-indic-raster` through
+   `gemini:3-flash-med --tier flex` in `--batch-size` chunks.
+2. Rebuild `decoded-corpus/` from accepted run output after each batch and
+   review it with `tools/audit-decoder/`.
+3. Investigate and repair the current decoded-corpus warning:
+   `Vol28_1_2_SCKak` has one failed-chunk error.
+4. Handle `<<<CONTINUE>>>` truncation marker classification before corpus scale.
+5. Decide whether `decoded-corpus/` remains ignored/generated, becomes partly
+   tracked, or moves to external storage after the 50-doc/full
+   astro-math-indic experience.
+6. Build the search index on top of the extracted Markdown.

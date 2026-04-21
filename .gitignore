@@ -1,5 +1,6 @@
 node_modules/
 .cache/*
+decoded-corpus/
 *.bak
 *.tmp
 __pycache__/
@@ -36,3 +37,6 @@ corpus/*~*
 # Intake staging — processed files and PDFs are transient
 intake/pdfs/
 intake/processed/
+
+# Local audit-decoder review state
+tools/audit-decoder/.state/

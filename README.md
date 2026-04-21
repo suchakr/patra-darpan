@@ -41,6 +41,9 @@ Legacy scripts still exist in the repo, but the intended authority flow is now:
 - `ops/`
   downstream integration utilities such as Patra Darpan payload export; see
   `ops/README.md` for current vs legacy script status
+- `tools/`
+  local human/agent workbenches outside the canonical pipeline; see
+  `tools/README.md`
 - `lib/`
   shared implementation code
 - `exports/`

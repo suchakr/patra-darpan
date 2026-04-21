@@ -49,13 +49,28 @@ def _cache_key(
     model_name: str,
     prompt: str,
     pdf_bytes: bytes,
-    service_tier: str,
 ) -> str:
     """Deterministic cache key from config + model + prompt + PDF content.
 
     Uses config_name (e.g. '3-flash' vs '3-flash-med') to differentiate
     thinking levels on the same underlying model.
     """
+    h = hashlib.sha256()
+    h.update(config_name.encode("utf-8"))
+    h.update(model_name.encode("utf-8"))
+    h.update(prompt.encode("utf-8"))
+    h.update(pdf_bytes)
+    return h.hexdigest()
+
+
+def _legacy_cache_key(
+    config_name: str,
+    model_name: str,
+    prompt: str,
+    pdf_bytes: bytes,
+    service_tier: str,
+) -> str:
+    """Old cache key that included service tier in semantic identity."""
     h = hashlib.sha256()
     h.update(config_name.encode("utf-8"))
     h.update(model_name.encode("utf-8"))
@@ -71,14 +86,21 @@ def _cache_get(key: str) -> str | None:
         return None
     try:
         data = json.loads(path.read_text(encoding="utf-8"))
-        if data.get("cache_key") == key:
+        if data.get("cache_key") == key and isinstance(data.get("response_text"), str):
             return data["response_text"]
     except (json.JSONDecodeError, KeyError):
         pass
     return None
 
 
-def _cache_put(key: str, response_text: str, model_name: str, service_tier: str) -> None:
+def _cache_put(
+    key: str,
+    response_text: str,
+    model_name: str,
+    service_tier: str,
+    *,
+    legacy_cache_key: str | None = None,
+) -> None:
     _CACHE_DIR.mkdir(parents=True, exist_ok=True)
     path = _CACHE_DIR / f"{key[:16]}.json"
     path.write_text(
@@ -87,6 +109,7 @@ def _cache_put(key: str, response_text: str, model_name: str, service_tier: str)
                 "cache_key": key,
                 "model_name": model_name,
                 "service_tier": service_tier,
+                "legacy_cache_key": legacy_cache_key,
                 "response_text": response_text,
             },
             ensure_ascii=False,
@@ -94,6 +117,49 @@ def _cache_put(key: str, response_text: str, model_name: str, service_tier: str)
         + "\n",
         encoding="utf-8",
     )
+
+
+def _cache_lookup(
+    *,
+    config: ModelConfig,
+    prompt: str,
+    pdf_bytes: bytes,
+    service_tier: str,
+) -> tuple[str | None, dict[str, Any]]:
+    key = _cache_key(config.name, config.model_name, prompt, pdf_bytes)
+    cached = _cache_get(key)
+    if cached is not None:
+        return cached, {"cache_key": key, "cache_hit": True, "legacy_cache_hit": False}
+
+    legacy_tiers = [service_tier, "standard", "flex"]
+    seen: set[str] = set()
+    for tier in legacy_tiers:
+        if tier in seen:
+            continue
+        seen.add(tier)
+        legacy_key = _legacy_cache_key(
+            config.name,
+            config.model_name,
+            prompt,
+            pdf_bytes,
+            tier,
+        )
+        cached = _cache_get(legacy_key)
+        if cached is not None:
+            _cache_put(
+                key,
+                cached,
+                config.model_name,
+                service_tier,
+                legacy_cache_key=legacy_key,
+            )
+            return cached, {
+                "cache_key": key,
+                "cache_hit": True,
+                "legacy_cache_hit": True,
+                "legacy_service_tier": tier,
+            }
+    return None, {"cache_key": key, "cache_hit": False, "legacy_cache_hit": False}
 
 
 # ---------------------------------------------------------------------------
@@ -123,6 +189,7 @@ def _call_gemini(
     *,
     uploaded_file: Any = None,
     service_tier: str = "standard",
+    bypass_cache: bool = False,
 ) -> tuple[str, dict[str, Any]]:
     """Send PDF + prompt to Gemini.  Uses disk cache; API key required on miss.
 
@@ -130,10 +197,23 @@ def _call_gemini(
     instead of re-uploading the raw bytes.  This avoids O(N²) token waste
     when processing a document in multiple page-range chunks.
     """
-    key = _cache_key(config.name, config.model_name, prompt, pdf_bytes, service_tier)
-    cached = _cache_get(key)
-    if cached is not None:
-        return cached, {"cache_hit": True, "elapsed_seconds": 0.0}
+    cache_meta = {
+        "cache_key": _cache_key(config.name, config.model_name, prompt, pdf_bytes),
+        "legacy_cache_hit": False,
+    }
+    if not bypass_cache:
+        cached, cache_meta = _cache_lookup(
+            config=config,
+            prompt=prompt,
+            pdf_bytes=pdf_bytes,
+            service_tier=service_tier,
+        )
+        if cached is not None:
+            return cached, {
+                "cache_hit": True,
+                "legacy_cache_hit": cache_meta["legacy_cache_hit"],
+                "elapsed_seconds": 0.0,
+            }
 
     from google import genai  # deferred import — only on cache miss
     from google.genai import types
@@ -174,9 +254,51 @@ def _call_gemini(
         config=gen_config,
     )
     elapsed = time.monotonic() - started
-    text = response.text
-    _cache_put(key, text, config.model_name, service_tier)
-    return text, {"cache_hit": False, "elapsed_seconds": round(elapsed, 3)}
+    text = _response_text(response)
+    if text is None:
+        raise RuntimeError(_empty_response_reason(response))
+    _cache_put(cache_meta["cache_key"], text, config.model_name, service_tier)
+    return text, {
+        "cache_hit": False,
+        "legacy_cache_hit": False,
+        "elapsed_seconds": round(elapsed, 3),
+    }
+
+
+def _response_text(response: Any) -> str | None:
+    text = getattr(response, "text", None)
+    if isinstance(text, str) and text:
+        return text
+
+    parts: list[str] = []
+    for candidate in getattr(response, "candidates", []) or []:
+        content = getattr(candidate, "content", None)
+        for part in getattr(content, "parts", []) or []:
+            part_text = getattr(part, "text", None)
+            if isinstance(part_text, str) and part_text:
+                parts.append(part_text)
+    if parts:
+        return "\n".join(parts)
+    return None
+
+
+def _empty_response_reason(response: Any) -> str:
+    details: dict[str, Any] = {"error": "Gemini response contained no text"}
+    candidates = getattr(response, "candidates", None)
+    if candidates:
+        details["candidate_count"] = len(candidates)
+        first = candidates[0]
+        for attr in ("finish_reason", "finish_message"):
+            value = getattr(first, attr, None)
+            if value is not None:
+                details[attr] = str(value)
+        safety = getattr(first, "safety_ratings", None)
+        if safety is not None:
+            details["safety_ratings"] = str(safety)
+    prompt_feedback = getattr(response, "prompt_feedback", None)
+    if prompt_feedback is not None:
+        details["prompt_feedback"] = str(prompt_feedback)
+    return json.dumps(details, ensure_ascii=False)
 
 
 def _upload_pdf(pdf_path: Path) -> Any:
@@ -202,6 +324,7 @@ def extract_document(
     config: ModelConfig,
     work_dir: Path,
     service_tier: str = "standard",
+    bypass_cache: bool = False,
 ) -> list[dict[str, Any]]:
     """Extract a full document via Gemini in page-sized chunks.
 
@@ -219,7 +342,7 @@ def extract_document(
     _progress(
         f"gemini extract start doc_id={doc_id} pages={page_count} "
         f"chunks={num_chunks} model={config.name}/{config.model_name} "
-        f"tier={service_tier}"
+        f"tier={service_tier} bypass_cache={bypass_cache}"
     )
 
     # Upload PDF once via File API if we have uncached chunks
@@ -229,14 +352,15 @@ def extract_document(
     for ci in range(num_chunks):
         sp = ci * chunk_size + 1
         ep = min((ci + 1) * chunk_size, page_count)
-        key = _cache_key(
-            config.name,
-            config.model_name,
-            config.prompt_for_pages(sp, ep),
-            pdf_bytes,
-            service_tier,
-        )
-        if _cache_get(key) is None:
+        cached = None
+        if not bypass_cache:
+            cached, _cache_meta = _cache_lookup(
+                config=config,
+                prompt=config.prompt_for_pages(sp, ep),
+                pdf_bytes=pdf_bytes,
+                service_tier=service_tier,
+            )
+        if cached is None:
             uncached_chunks += 1
     _progress(
         f"gemini cache scan doc_id={doc_id} chunks={num_chunks} "
@@ -261,14 +385,15 @@ def extract_document(
 
         prompt = config.prompt_for_pages(start_page, end_page)
         prompt_sha = config.prompt_sha256(start_page, end_page)
-        key = _cache_key(
-            config.name,
-            config.model_name,
-            prompt,
-            pdf_bytes,
-            service_tier,
-        )
-        cache_state = "hit" if _cache_get(key) is not None else "miss"
+        cached = None
+        if not bypass_cache:
+            cached, _cache_meta = _cache_lookup(
+                config=config,
+                prompt=prompt,
+                pdf_bytes=pdf_bytes,
+                service_tier=service_tier,
+            )
+        cache_state = "hit" if cached is not None else "miss"
         _progress(
             f"gemini chunk start doc_id={doc_id} "
             f"chunk={chunk_idx + 1}/{num_chunks} pages={start_page}-{end_page} "
@@ -294,6 +419,7 @@ def extract_document(
                     config,
                     uploaded_file=uploaded_file,
                     service_tier=service_tier,
+                    bypass_cache=bypass_cache,
                 )
                 last_error = None
                 break
@@ -370,6 +496,7 @@ def extract_document(
             "recommended_action": "nakshatra-lookup",
             "service_tier_requested": service_tier,
             "cache_hit": call_meta["cache_hit"],
+            "bypass_cache": bypass_cache,
             "elapsed_seconds": call_meta["elapsed_seconds"],
         }
         fallback_records.append(gemini_record)
@@ -400,6 +527,7 @@ def extract_document(
             "recommended_action": "accept",
             "service_tier_requested": service_tier,
             "cache_hit": call_meta["cache_hit"],
+            "bypass_cache": bypass_cache,
             "elapsed_seconds": 0.0,
         }
         fallback_records.append(lookup_record)
@@ -412,6 +540,7 @@ def extract_document(
                 "gemini_artifact": f"{chunk_tag}_gemini.md",
                 "cleaned_artifact": f"{chunk_tag}_cleaned.md",
                 "cache_hit": call_meta["cache_hit"],
+                "bypass_cache": bypass_cache,
                 "elapsed_seconds": call_meta["elapsed_seconds"],
             }
         )

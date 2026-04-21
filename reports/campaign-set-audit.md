@@ -9,6 +9,24 @@
 - categories: {'Indic': 10}
 - doc_types: {'raster': 10}
 
+## astro-math-indic-digital
+
+- rows: 184
+- matched profile rows: 184
+- missing profile/index rows: 0
+- subjects: {'Astronomy': 102, 'Math': 82}
+- categories: {'Indic': 184}
+- doc_types: {'digital': 184}
+
+## astro-math-indic-raster
+
+- rows: 248
+- matched profile rows: 248
+- missing profile/index rows: 0
+- subjects: {'Astronomy': 155, 'Math': 93}
+- categories: {'Indic': 248}
+- doc_types: {'raster': 248}
+
 ## micro-2
 
 - rows: 2

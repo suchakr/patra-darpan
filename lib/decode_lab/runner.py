@@ -10,6 +10,7 @@ import subprocess
 import sys
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass
+from dataclasses import replace
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
@@ -51,6 +52,28 @@ def build_arg_parser() -> argparse.ArgumentParser:
             "Add --fallback gemini for legacy per-page PNG fallback on risky pages.\n"
             "Add --assemble to produce document.md Markdown for each PDF.\n"
             "Use --assemble-only to assemble a previous run without re-extracting."
+        ),
+        epilog=(
+            "Examples:\n"
+            "  Decode next 10 unfinished docs in a campaign:\n"
+            "    uv run python scripts/run_decode_lab.py --set astro-math-indic-raster \\\n"
+            "      --run-id build-astro-math-indic-raster --extractor gemini:3-flash-med \\\n"
+            "      --tier standard --batch-size 10 --assemble\n\n"
+            "  Reassemble an existing run after assembler/Markdown fixups:\n"
+            "    uv run python scripts/run_decode_lab.py --assemble-only \\\n"
+            "      --run-id build-astro-math-indic-raster\n\n"
+            "  Fresh Gemini repair for one suspect document, bypassing response cache:\n"
+            "    uv run python scripts/run_decode_lab.py --doc-id DOC_ID \\\n"
+            "      --run-id repair-DOC_ID --extractor gemini:3-flash-med \\\n"
+            "      --tier standard --bypass-gemini-cache --force --assemble\n\n"
+            "  Pagewise repair when a 5-page Gemini chunk fails:\n"
+            "    uv run python scripts/run_decode_lab.py --doc-id DOC_ID \\\n"
+            "      --run-id repair-DOC_ID-pagewise --extractor gemini:3-flash-med \\\n"
+            "      --tier standard --bypass-gemini-cache --gemini-chunk-size 1 \\\n"
+            "      --force --assemble\n\n"
+            "  After a repair run, update decoded-corpus/ with:\n"
+            "    uv run python scripts/build_decoded_corpus.py --from-run repair-DOC_ID \\\n"
+            "      --replace-doc DOC_ID"
         ),
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
@@ -122,6 +145,21 @@ def build_arg_parser() -> argparse.ArgumentParser:
         "traffic and is only used for Gemini extraction calls.",
     )
     parser.add_argument(
+        "--bypass-gemini-cache",
+        action="store_true",
+        default=False,
+        help="For --extractor gemini:* runs, call Gemini even when cached chunk "
+        "responses exist. The new responses still update the cache. Use for "
+        "targeted repair when cached Markdown is suspect.",
+    )
+    parser.add_argument(
+        "--gemini-chunk-size",
+        type=int,
+        default=None,
+        help="Override Gemini extraction chunk size in pages. Useful for targeted "
+        "repair when a 5-page chunk fails, for example --gemini-chunk-size 1.",
+    )
+    parser.add_argument(
         "--fallback",
         choices=["none", "gemini"],
         default="none",
@@ -154,20 +192,29 @@ def build_arg_parser() -> argparse.ArgumentParser:
         "Useful for re-assembling after manual edits to fallback outputs.",
     )
     parser.add_argument(
+        "--batch-size",
+        "--batch",
+        type=int,
+        default=None,
+        help="Process the next N unfinished documents from the selected set. "
+        "Batching happens after completed docs in the run are skipped. "
+        "Default: process all unfinished selected documents.",
+    )
+    parser.add_argument(
         "--resume",
         action="store_true",
         default=False,
-        help="Reuse an existing run directory and continue/retry work. "
-        "Successful Gemini chunks are served from cache; missing or failed "
-        "chunks are attempted again.",
+        help="Compatibility alias. Runs are upsert-by-default: existing run "
+        "directories are reused, completed docs are skipped, and unfinished "
+        "docs are processed.",
     )
     parser.add_argument(
         "--repair",
         action="store_true",
         default=False,
         help="Reuse an existing run directory to repair failed or partial work. "
-        "First implementation shares resume mechanics and reassembles affected "
-        "documents when --assemble is supplied.",
+        "Runs are upsert-by-default; this flag is retained to make repair "
+        "intent explicit in command history.",
     )
     parser.add_argument(
         "--force",
@@ -184,45 +231,72 @@ def run_decode_lab(args: argparse.Namespace) -> Path:
         set_names=getattr(args, "campaign_sets", None),
         doc_ids=args.doc_id,
     )
+    batch_size = getattr(args, "batch_size", None)
+    if batch_size is not None and batch_size < 1:
+        raise ValueError("--batch-size must be a positive integer")
     started_at = _utc_now()
     run_id = args.run_id or datetime.now(UTC).strftime("%Y%m%dT%H%M%SZ")
     run_dir = args.out_root / run_id
+    run_existed = run_dir.exists()
     if run_dir.exists():
         if getattr(args, "force", False):
             _progress(f"force removing existing run_dir={run_dir}")
             shutil.rmtree(run_dir)
             run_dir.mkdir(parents=True, exist_ok=False)
-        elif getattr(args, "resume", False) or getattr(args, "repair", False):
-            _progress(f"reusing existing run_dir={run_dir}")
-            run_dir.mkdir(parents=True, exist_ok=True)
         else:
-            raise FileExistsError(
-                f"Run directory already exists: {run_dir}. "
-                "Use --resume, --repair, --force, or choose a new --run-id."
-            )
+            _progress(f"reusing existing run_dir={run_dir} mode=upsert")
+            run_dir.mkdir(parents=True, exist_ok=True)
     else:
+        _progress(f"creating run_dir={run_dir} mode=upsert")
         run_dir.mkdir(parents=True, exist_ok=False)
+    if getattr(args, "force", False):
+        run_existed = False
 
     records = _load_index_records(args.index_tsv, args.pdf_root, selected_doc_ids)
     available_tools = _available_tools(["pdfinfo", "pdffonts", "pdfimages", "pdftotext"])
 
-    documents: list[dict[str, Any]] = []
-    pages: list[dict[str, Any]] = []
-    chunks: list[dict[str, Any]] = []
-    risks: list[dict[str, Any]] = []
-    images: list[dict[str, Any]] = []
-    tables: list[dict[str, Any]] = []
-    fallbacks: list[dict[str, Any]] = []
+    existing_rows = _load_run_tables(run_dir) if run_existed else _empty_run_tables()
+    documents: list[dict[str, Any]] = existing_rows["documents"]
+    pages: list[dict[str, Any]] = existing_rows["pages"]
+    chunks: list[dict[str, Any]] = existing_rows["chunks"]
+    risks: list[dict[str, Any]] = existing_rows["risks"]
+    images: list[dict[str, Any]] = existing_rows["images"]
+    tables: list[dict[str, Any]] = existing_rows["tables"]
+    fallbacks: list[dict[str, Any]] = existing_rows["fallbacks"]
 
-    total_docs = len(selected_doc_ids)
+    require_document_md = bool(getattr(args, "assemble", False))
+    complete_doc_ids = {
+        doc_id
+        for doc_id in selected_doc_ids
+        if _doc_is_complete(
+            run_dir / "by-doc" / doc_id,
+            require_document_md=require_document_md,
+            extractor=getattr(args, "extractor", "local"),
+        )
+    }
+    unfinished_doc_ids = [doc_id for doc_id in selected_doc_ids if doc_id not in complete_doc_ids]
+    process_doc_ids = unfinished_doc_ids[:batch_size] if batch_size is not None else unfinished_doc_ids
+    total_docs = len(process_doc_ids)
     _progress(
-        f"decode run start run_id={run_id} docs={total_docs} "
+        f"decode run start run_id={run_id} selected={len(selected_doc_ids)} "
+        f"complete={len(complete_doc_ids)} unfinished={len(unfinished_doc_ids)} "
+        f"batch_size={batch_size or 'all'} processing={total_docs} "
         f"extractor={getattr(args, 'extractor', 'local')} "
         f"tier={getattr(args, 'tier', 'standard')}"
     )
 
-    for doc_index, doc_id in enumerate(selected_doc_ids, start=1):
+    for doc_index, doc_id in enumerate(process_doc_ids, start=1):
         _progress(f"[{doc_index}/{total_docs}] document start doc_id={doc_id}")
+        documents, pages, chunks, risks, images, tables, fallbacks = _drop_doc_rows(
+            doc_id=doc_id,
+            documents=documents,
+            pages=pages,
+            chunks=chunks,
+            risks=risks,
+            images=images,
+            tables=tables,
+            fallbacks=fallbacks,
+        )
         record = records.get(doc_id)
         if record is None:
             documents.append(
@@ -264,6 +338,8 @@ def run_decode_lab(args: argparse.Namespace) -> Path:
                     page_count=doc_result["document"].get("page_count") or 0,
                     model_key=model_key,
                     service_tier=getattr(args, "tier", "standard"),
+                    bypass_cache=getattr(args, "bypass_gemini_cache", False),
+                    chunk_size_override=getattr(args, "gemini_chunk_size", None),
                 )
             )
         elif getattr(args, 'fallback', 'none') == 'gemini':
@@ -333,6 +409,8 @@ def run_decode_lab(args: argparse.Namespace) -> Path:
             f"pages={doc_result['document'].get('page_count')} "
             f"fallbacks={len(doc_result['fallbacks'])}"
         )
+    if not process_doc_ids:
+        _progress("decode run upsert found no unfinished selected documents")
 
     retrieval_samples = _build_retrieval_samples(chunks)
 
@@ -387,6 +465,8 @@ def run_decode_lab(args: argparse.Namespace) -> Path:
             "extractor": extractor_flag,
             "model_config": model_config_log or None,
             "service_tier_requested": getattr(args, "tier", "standard"),
+            "bypass_gemini_cache": getattr(args, "bypass_gemini_cache", False),
+            "gemini_chunk_size_override": getattr(args, "gemini_chunk_size", None),
             "fallback_mode": getattr(args, 'fallback', 'none'),
         },
     )
@@ -627,12 +707,18 @@ def _run_gemini_extract(
     page_count: int,
     model_key: str,
     service_tier: str,
+    bypass_cache: bool,
+    chunk_size_override: int | None,
 ) -> list[dict[str, Any]]:
     """Run full-document Gemini extraction using the PDF-native pipeline."""
     from lib.decode_lab.gemini_extract import extract_document
     from lib.decode_lab.model_configs import get_model_config
 
     config = get_model_config(model_key)
+    if chunk_size_override is not None:
+        if chunk_size_override < 1:
+            raise ValueError("--gemini-chunk-size must be a positive integer")
+        config = replace(config, chunk_size=chunk_size_override)
     if page_count < 1:
         return []
     return extract_document(
@@ -642,6 +728,7 @@ def _run_gemini_extract(
         config=config,
         work_dir=doc_dir / "fallbacks",
         service_tier=service_tier,
+        bypass_cache=bypass_cache,
     )
 
 
@@ -1412,6 +1499,120 @@ def _write_jsonl(path: Path, rows: list[dict[str, Any]]) -> None:
     with path.open("w", encoding="utf-8") as handle:
         for row in rows:
             handle.write(json.dumps(row, ensure_ascii=False) + "\n")
+
+
+def _read_json(path: Path) -> Any | None:
+    if not path.exists():
+        return None
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return None
+
+
+def _read_jsonl(path: Path) -> list[dict[str, Any]]:
+    if not path.exists():
+        return []
+    rows: list[dict[str, Any]] = []
+    with path.open(encoding="utf-8") as handle:
+        for line in handle:
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                payload = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            if isinstance(payload, dict):
+                rows.append(payload)
+    return rows
+
+
+def _empty_run_tables() -> dict[str, list[dict[str, Any]]]:
+    return {
+        "documents": [],
+        "pages": [],
+        "chunks": [],
+        "risks": [],
+        "images": [],
+        "tables": [],
+        "fallbacks": [],
+    }
+
+
+def _load_run_tables(run_dir: Path) -> dict[str, list[dict[str, Any]]]:
+    return {
+        "documents": _read_jsonl(run_dir / "documents.jsonl"),
+        "pages": _read_jsonl(run_dir / "pages.jsonl"),
+        "chunks": _read_jsonl(run_dir / "chunks.jsonl"),
+        "risks": _read_jsonl(run_dir / "risks.jsonl"),
+        "images": _read_jsonl(run_dir / "images.jsonl"),
+        "tables": _read_jsonl(run_dir / "tables.jsonl"),
+        "fallbacks": _read_jsonl(run_dir / "fallbacks.jsonl"),
+    }
+
+
+def _drop_doc_rows(
+    *,
+    doc_id: str,
+    documents: list[dict[str, Any]],
+    pages: list[dict[str, Any]],
+    chunks: list[dict[str, Any]],
+    risks: list[dict[str, Any]],
+    images: list[dict[str, Any]],
+    tables: list[dict[str, Any]],
+    fallbacks: list[dict[str, Any]],
+) -> tuple[
+    list[dict[str, Any]],
+    list[dict[str, Any]],
+    list[dict[str, Any]],
+    list[dict[str, Any]],
+    list[dict[str, Any]],
+    list[dict[str, Any]],
+    list[dict[str, Any]],
+]:
+    return (
+        [row for row in documents if row.get("doc_id") != doc_id],
+        [row for row in pages if row.get("doc_id") != doc_id],
+        [row for row in chunks if row.get("doc_id") != doc_id],
+        [row for row in risks if row.get("doc_id") != doc_id],
+        [row for row in images if row.get("doc_id") != doc_id],
+        [row for row in tables if row.get("doc_id") != doc_id],
+        [row for row in fallbacks if row.get("doc_id") != doc_id],
+    )
+
+
+def _doc_is_complete(
+    doc_dir: Path,
+    *,
+    require_document_md: bool,
+    extractor: str,
+) -> bool:
+    manifest = _read_json(doc_dir / "manifest.json")
+    if not isinstance(manifest, dict) or manifest.get("status") != "ok":
+        return False
+
+    if require_document_md:
+        document_md = doc_dir / "document.md"
+        if not document_md.exists() or document_md.stat().st_size == 0:
+            return False
+
+    if extractor.startswith("gemini:"):
+        state = _read_json(doc_dir / "extraction-state.json")
+        if not isinstance(state, dict):
+            return False
+        chunks = state.get("gemini_chunks")
+        if not isinstance(chunks, list) or not chunks:
+            return False
+        page_count = state.get("page_count") or 0
+        chunk_size = state.get("chunk_size") or 0
+        if page_count and chunk_size:
+            expected = (page_count + chunk_size - 1) // chunk_size
+            if len(chunks) < expected:
+                return False
+        return all(chunk.get("status") == "success" for chunk in chunks)
+
+    return True
 
 
 def _write_run_tables(
