@@ -1,6 +1,6 @@
 window.PATRA_DARPAN_P60 = {
-  "generatedAt": "2026-04-17T07:55:05.039919Z",
-  "rowCount": 74,
+  "generatedAt": "2026-04-19T19:16:16.182753Z",
+  "rowCount": 75,
   "rows": [
     {
       "year": "2026",
@@ -27,6 +27,15 @@ window.PATRA_DARPAN_P60 = {
       "author": "R. S. Hariharan",
       "source": "SwarajyaMag",
       "url": "https://swarajyamag.com/ideas/how-ancient-india-predicted-rains-before-the-arrogance-of-modern-science",
+      "entry_type": "link"
+    },
+    {
+      "year": "2026",
+      "category": "Culture",
+      "title": "Krishna Is Shiva: A Philosophical Secret Hidden in a Sanskrit Poem",
+      "author": "R. S. Hariharan",
+      "source": "SwarajyaMag",
+      "url": "https://swarajyamag.com/ideas/krishna-is-shiva-a-philosophical-secret-hidden-in-a-sanskrit-poem",
       "entry_type": "link"
     },
     {

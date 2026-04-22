@@ -48,6 +48,12 @@ INDEX_ENRICHMENT_FALLBACKS: dict[
         "link",
     ): {"subject": "Agriculture", "category": "Indic"},
     (
+        "SwarajyaMag",
+        "Krishna Is Shiva: A Philosophical Secret Hidden in a Sanskrit Poem",
+        "https://swarajyamag.com/ideas/krishna-is-shiva-a-philosophical-secret-hidden-in-a-sanskrit-poem",
+        "link",
+    ): {"subject": "Culture", "category": "Indic"},
+    (
         "IJHS-31-1996-Issue-4",
         "BookReview",
         "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol31_4_7_BookReview.pdf",

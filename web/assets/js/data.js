@@ -112,6 +112,22 @@ const PAPERS = [
     "localPath": null
   },
   {
+    "journal": "SwarajyaMag",
+    "title": "Krishna Is Shiva: A Philosophical Secret Hidden in a Sanskrit Poem",
+    "author": "R. S. Hariharan",
+    "category": "Indic",
+    "subject": "Culture",
+    "year": "2026",
+    "remoteUrl": "https://swarajyamag.com/ideas/krishna-is-shiva-a-philosophical-secret-hidden-in-a-sanskrit-poem",
+    "juUrl": "",
+    "size": 0.0,
+    "cahc_authored": true,
+    "entry_type": "link",
+    "source": "swarajya",
+    "gcs_key": "",
+    "localPath": null
+  },
+  {
     "journal": "QJMS 116.2",
     "title": "Characterisation of Elapsed Time as Historical Past in Hinduism",
     "author": "R.N. Iyengar",
