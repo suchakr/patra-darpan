@@ -18,6 +18,7 @@ const State = {
     filters: {
         search: "",
         useRegex: false,
+        foldDiacritics: localStorage.getItem('ijhs-fold-diacritics') !== 'false',
         sort: "newest", 
         categories: new Set(),
         subjects: new Set(),
@@ -35,6 +36,7 @@ const Elements = {
     grid: document.getElementById('results-grid'),
     searchInput: document.getElementById('search-input'),
     regexToggle: document.getElementById('regex-toggle'), // New
+    diacriticToggle: document.getElementById('diacritic-toggle'),
     categoryFilters: document.getElementById('category-filters'),
     subjectFilters: document.getElementById('subject-filters'),
     decadeFilters: document.getElementById('decade-filters'),
@@ -52,6 +54,16 @@ const Elements = {
 
 const RECENT_SEARCHES_KEY = 'ijhs-recent-searches';
 const RECENT_SEARCH_LIMIT = 8;
+const SEEDED_RECENT_SEARCHES = [
+    'astronomy',
+    'magic square',
+    'Sūrya Siddhānta',
+    'Vedāṅga Jyotiṣa',
+    'Yuktibhāṣā',
+    'calendar',
+    'nakshatra',
+    'Saptarshi'
+];
 
 // --- Logic ---
 
@@ -135,10 +147,24 @@ function init() {
         Elements.regexToggle.addEventListener('click', () => {
             State.filters.useRegex = !State.filters.useRegex;
             Elements.regexToggle.classList.toggle('active', State.filters.useRegex);
+            updateDiacriticToggle();
             applyFilters();
             rememberCurrentSearch();
             renderRecentSearches();
         });
+    }
+
+    if (Elements.diacriticToggle) {
+        Elements.diacriticToggle.addEventListener('click', () => {
+            if (State.filters.useRegex) return;
+            State.filters.foldDiacritics = !State.filters.foldDiacritics;
+            localStorage.setItem('ijhs-fold-diacritics', State.filters.foldDiacritics ? 'true' : 'false');
+            updateDiacriticToggle();
+            applyFilters();
+            rememberCurrentSearch();
+            renderRecentSearches();
+        });
+        updateDiacriticToggle();
     }
 
     if (Elements.resetBtn) {
@@ -451,9 +477,30 @@ function applyTheme(theme) {
     }
 }
 
+function foldSearchText(value) {
+    return String(value || '')
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase();
+}
+
+function updateDiacriticToggle() {
+    if (!Elements.diacriticToggle) return;
+    const disabled = State.filters.useRegex === true;
+    Elements.diacriticToggle.classList.toggle('active', State.filters.foldDiacritics && !disabled);
+    Elements.diacriticToggle.classList.toggle('disabled', disabled);
+    Elements.diacriticToggle.setAttribute('aria-pressed', State.filters.foldDiacritics && !disabled ? 'true' : 'false');
+    Elements.diacriticToggle.setAttribute('aria-disabled', disabled ? 'true' : 'false');
+    Elements.diacriticToggle.title = disabled
+        ? 'Diacritic folding is disabled in regex mode'
+        : 'Fold diacritics for plain search (Saptarsi matches Saptarṣi)';
+}
+
 function resetFilters() {
     State.filters.search = "";
     State.filters.useRegex = false;
+    State.filters.foldDiacritics = true;
+    localStorage.setItem('ijhs-fold-diacritics', 'true');
     State.filters.sort = "newest"; // Reset sort
 
     // Reset Sort UI
@@ -461,6 +508,7 @@ function resetFilters() {
     if (sortSelect) sortSelect.value = "newest";
 
     if (Elements.regexToggle) Elements.regexToggle.classList.remove('active');
+    updateDiacriticToggle();
 
     State.filters.categories.clear();
     State.filters.subjects.clear();
@@ -492,18 +540,25 @@ function setupRecentSearches() {
 function loadRecentSearches() {
     try {
         const parsed = JSON.parse(localStorage.getItem(RECENT_SEARCHES_KEY) || '[]');
-        if (!Array.isArray(parsed)) return [];
-        return parsed
+        if (!Array.isArray(parsed) || parsed.length === 0) return seededRecentSearches();
+        const loaded = parsed
             .filter(item => item && typeof item.query === 'string')
             .map(item => ({
                 query: item.query,
                 useRegex: item.useRegex === true,
+                foldDiacritics: item.foldDiacritics !== false,
                 ts: Number(item.ts) || 0
             }))
             .slice(0, RECENT_SEARCH_LIMIT);
+        return loaded.length ? loaded : seededRecentSearches();
     } catch (e) {
-        return [];
+        return seededRecentSearches();
     }
+}
+
+function seededRecentSearches() {
+    return SEEDED_RECENT_SEARCHES.slice(0, RECENT_SEARCH_LIMIT)
+        .map((query, index) => ({ query, useRegex: false, foldDiacritics: true, ts: 0 - index }));
 }
 
 function saveRecentSearches() {
@@ -515,9 +570,10 @@ function rememberCurrentSearch() {
     if (query.length < 2) return;
 
     const useRegex = State.filters.useRegex === true;
+    const foldDiacritics = State.filters.foldDiacritics !== false;
     State.recentSearches = State.recentSearches
-        .filter(item => !(item.query.toLowerCase() === query.toLowerCase() && item.useRegex === useRegex));
-    State.recentSearches.unshift({ query, useRegex, ts: Date.now() });
+        .filter(item => !(item.query.toLowerCase() === query.toLowerCase() && item.useRegex === useRegex && item.foldDiacritics === foldDiacritics));
+    State.recentSearches.unshift({ query, useRegex, foldDiacritics, ts: Date.now() });
     State.recentSearches = State.recentSearches.slice(0, RECENT_SEARCH_LIMIT);
     saveRecentSearches();
 }
@@ -537,10 +593,13 @@ function hideRecentSearches() {
 function applyRecentSearch(item) {
     State.filters.search = item.query;
     State.filters.useRegex = item.useRegex === true;
+    State.filters.foldDiacritics = item.foldDiacritics !== false;
+    localStorage.setItem('ijhs-fold-diacritics', State.filters.foldDiacritics ? 'true' : 'false');
     Elements.searchInput.value = item.query;
     if (Elements.regexToggle) {
         Elements.regexToggle.classList.toggle('active', State.filters.useRegex);
     }
+    updateDiacriticToggle();
     applyFilters();
     rememberCurrentSearch();
     hideRecentSearches();
@@ -626,6 +685,11 @@ function renderRecentSearches(activeIndex = State.recentSearchActiveIndex) {
             mode.className = 'recent-search-mode';
             mode.textContent = 'Regex';
             button.appendChild(mode);
+        } else if (item.foldDiacritics !== false) {
+            const mode = document.createElement('span');
+            mode.className = 'recent-search-mode';
+            mode.textContent = 'ā→a';
+            button.appendChild(mode);
         }
 
         Elements.recentSearches.appendChild(button);
@@ -700,6 +764,7 @@ function renderCheckboxList(container, items, filterKey) {
 function applyFilters() {
     const term = State.filters.search;
     const useRegex = State.filters.useRegex;
+    const foldDiacritics = State.filters.foldDiacritics !== false;
     const cats = State.filters.categories;
     const subs = State.filters.subjects;
     const decs = State.filters.decades;
@@ -729,8 +794,9 @@ function applyFilters() {
                 if (!regex || !regex.test(content)) return false;
             } else {
                 // Smart Search: AND logic (all terms must be present)
-                const terms = term.toLowerCase().split(/\s+/).filter(t => t.length > 0);
-                const contentLower = content.toLowerCase();
+                const normalizedTerm = foldDiacritics ? foldSearchText(term) : term.toLowerCase();
+                const terms = normalizedTerm.split(/\s+/).filter(t => t.length > 0);
+                const contentLower = foldDiacritics ? foldSearchText(content) : content.toLowerCase();
                 const matchesAll = terms.every(t => contentLower.includes(t));
                 if (!matchesAll) return false;
             }
@@ -783,8 +849,9 @@ function applyFilters() {
         if (sortMode === 'size') return (a.size || 0) - (b.size || 0); // Smallest first
         if (sortMode === 'relevance') {
             if (!term) return 0;
-            const aTitle = a.title.toLowerCase().includes(term.toLowerCase());
-            const bTitle = b.title.toLowerCase().includes(term.toLowerCase());
+            const normalizedTerm = foldDiacritics && !useRegex ? foldSearchText(term) : term.toLowerCase();
+            const aTitle = (foldDiacritics && !useRegex ? foldSearchText(a.title) : a.title.toLowerCase()).includes(normalizedTerm);
+            const bTitle = (foldDiacritics && !useRegex ? foldSearchText(b.title) : b.title.toLowerCase()).includes(normalizedTerm);
             return bTitle - aTitle;
         }
         return 0;
@@ -793,7 +860,7 @@ function applyFilters() {
     renderGrid();
 }
 
-function highlightText(text, term, useRegex) {
+function highlightText(text, term, useRegex, foldDiacritics = false) {
     if (!term || !text) return text;
     const safeText = text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
     try {
@@ -801,6 +868,7 @@ function highlightText(text, term, useRegex) {
             const regex = new RegExp(`(${term})`, 'gi');
             return safeText.replace(regex, '<mark>$1</mark>');
         } else {
+            if (foldDiacritics) return highlightFoldedText(safeText, term);
             const words = term.split(/\s+/).filter(w => w.length > 0);
             if (words.length === 0) return safeText;
             const pattern = words.map(w => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|');
@@ -808,6 +876,43 @@ function highlightText(text, term, useRegex) {
             return safeText.replace(regex, '<mark>$1</mark>');
         }
     } catch (e) { return safeText; }
+}
+
+function highlightFoldedText(safeText, term) {
+    const words = foldSearchText(term).split(/\s+/).filter(w => w.length > 0);
+    if (words.length === 0) return safeText;
+    const original = safeText;
+    const folded = foldSearchText(safeText);
+    const ranges = [];
+    words.forEach(word => {
+        let offset = 0;
+        while (offset < folded.length) {
+            const index = folded.indexOf(word, offset);
+            if (index === -1) break;
+            ranges.push([index, index + word.length]);
+            offset = index + word.length;
+        }
+    });
+    if (!ranges.length) return safeText;
+    ranges.sort((a, b) => a[0] - b[0] || b[1] - a[1]);
+    const merged = [];
+    ranges.forEach(range => {
+        const last = merged[merged.length - 1];
+        if (last && range[0] <= last[1]) {
+            last[1] = Math.max(last[1], range[1]);
+        } else {
+            merged.push(range);
+        }
+    });
+    let out = '';
+    let cursor = 0;
+    merged.forEach(([start, end]) => {
+        out += original.slice(cursor, start);
+        out += `<mark>${original.slice(start, end)}</mark>`;
+        cursor = end;
+    });
+    out += original.slice(cursor);
+    return out;
 }
 
 function renderGrid() {
@@ -831,6 +936,7 @@ function renderGrid() {
 
     const term = State.filters.search;
     const useRegex = State.filters.useRegex;
+    const foldDiacritics = State.filters.foldDiacritics !== false && !useRegex;
 
     slice.forEach(paper => {
         const cat = SafeCat(paper.category);
@@ -865,9 +971,9 @@ function renderGrid() {
             window.open(primaryLink, '_blank', 'noopener,noreferrer');
         };
 
-        const titleHtml = highlightText(paper.title, term, useRegex);
-        const authorHtml = highlightText(paper.author, term, useRegex);
-        const yearHtml = highlightText(String(paper.year), term, useRegex);
+        const titleHtml = highlightText(paper.title, term, useRegex, foldDiacritics);
+        const authorHtml = highlightText(paper.author, term, useRegex, foldDiacritics);
+        const yearHtml = highlightText(String(paper.year), term, useRegex, foldDiacritics);
         const linkSourceChips = renderLinkSourceChips(paper, primaryLink, isLocalMode);
         const sizeText = isLink ? '' : Math.round(paper.size / 1024 * 10) / 10 + ' MB';
         const sizeMeta = sizeText ? `<span class="size-info">${sizeText}</span>` : '';

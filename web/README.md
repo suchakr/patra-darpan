@@ -78,6 +78,7 @@ A high-performance, single-page application for browsing the Indian Journal of H
    - `http://127.0.0.1:8000`
    - `http://127.0.0.1:8000/p60-projection-sandbox.html` for the generated
      CAHC `P60` projection sandbox
+   - `http://127.0.0.1:8000/search-lab.html` for the decoded-corpus Search Lab
 
    The app will detect that it is running locally and serve PDFs from
    `assets/pdfs`, which resolves into the shared asset root.
@@ -87,6 +88,28 @@ A high-performance, single-page application for browsing the Indian Journal of H
    - URL-only cards open the original URL directly
    - the Netlify archive function is not involved, so the GCS archive path is
      not used from plain `http.server` local mode
+
+### Search Lab
+
+The Search Lab is an additive static page for lexical retrieval over decoded
+corpus chunks. Generate its corpus artifact from the repository root:
+
+```bash
+uv run python scripts/build_search_index.py --help
+uv run python scripts/build_search_index.py --set audit-set
+```
+
+Validate retrieval locally with the shared JS search core:
+
+```bash
+node tools/search-lab/search-cli.mjs --help
+node tools/search-lab/search-cli.mjs "Yājñavalkya cycle"
+node tools/search-lab/search-cli.mjs --json "Saptarṣi era"
+```
+
+Then serve `web/` and open `/search-lab.html`. The generated
+`assets/data/search-corpus.json` includes build metadata, document counts, chunk
+counts, cited chunks, heading paths, and neighboring chunk IDs.
 
 ## ☁️ Deployment Workflow
 
