@@ -8,7 +8,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/search-lab.css?v=foldgroup-20260422">
+  <link rel="stylesheet" href="assets/css/search-lab.css?v=tablemath-20260423">
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["$", "$"], ["\\(", "\\)"]],
+        displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </head>
 
 <body>
@@ -19,7 +32,7 @@
         <h1>Search Lab</h1>
       </div>
       <div class="status-group">
-        <span class="pilot-badge">Decoded pilot</span>
+        <span class="pilot-badge">Content pilot</span>
         <span id="corpus-stats" class="corpus-stats">Loading corpus...</span>
       </div>
     </header>
@@ -56,6 +69,7 @@
           <h2></h2>
           <div class="heading-path"></div>
           <p class="snippet"></p>
+          <div class="attachment-row"></div>
           <div class="context-row"></div>
           <div class="result-actions"></div>
         </div>
@@ -63,8 +77,8 @@
     </article>
   </template>
 
-  <script src="assets/js/search-core.js?v=foldgroup-20260422"></script>
-  <script src="assets/js/search-lab.js?v=foldgroup-20260422"></script>
+  <script src="assets/js/search-core.js?v=tablemath-20260423"></script>
+  <script src="assets/js/search-lab.js?v=tablemath-20260423"></script>
 </body>
 
 </html>

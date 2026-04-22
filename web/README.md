@@ -97,7 +97,15 @@ corpus chunks. Generate its corpus artifact from the repository root:
 ```bash
 uv run python scripts/build_search_index.py --help
 uv run python scripts/build_search_index.py --set audit-set
+uv run python scripts/build_search_index.py --set audit-set --media-mode captions
 ```
+
+`--media-mode` controls result attachments:
+
+- `none`: omit table and media attachments.
+- `captions`: include table, figure, and page-image metadata only.
+- `figures`: also copy true `.jpg` / `.jpeg` figures into
+  `assets/search-media/<doc-id>/`. This is the default.
 
 Validate retrieval locally with the shared JS search core:
 
@@ -109,7 +117,12 @@ node tools/search-lab/search-cli.mjs --json "Saptarṣi era"
 
 Then serve `web/` and open `/search-lab.html`. The generated
 `assets/data/search-corpus.json` includes build metadata, document counts, chunk
-counts, cited chunks, heading paths, and neighboring chunk IDs.
+counts, cited chunks, heading paths, neighboring chunk IDs, and compact
+table/figure attachments when enabled. For a quick visual check, search for a
+table-heavy query such as `trigonometric tables` and expand a `Table` chip,
+then search a figure-bearing result and expand a `Figure` or `Page image` chip.
+Expanded tables use horizontal scrolling for wide content and MathJax when the
+CDN is available; without network access, raw TeX remains visible.
 
 ## ☁️ Deployment Workflow
 

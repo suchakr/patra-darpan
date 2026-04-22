@@ -8,6 +8,7 @@ import datetime as dt
 import html
 import json
 import re
+import shutil
 import sys
 import unicodedata
 from pathlib import Path
@@ -19,6 +20,7 @@ DEFAULT_DECODED_ROOT = ROOT / "decoded-corpus"
 DEFAULT_OUTPUT = ROOT / "web" / "assets" / "data" / "search-corpus.json"
 DEFAULT_SMOKE_REPORT = ROOT / "reports" / "search-smoke.md"
 DEFAULT_SET_DIR = ROOT / "decode-lab" / "sets"
+DEFAULT_MEDIA_OUTPUT = ROOT / "web" / "assets" / "search-media"
 
 SMOKE_QUERIES = [
     "Yājñavalkya cycle",
@@ -70,6 +72,7 @@ def parse_args() -> argparse.Namespace:
   uv run python scripts/build_search_index.py --doc-id Vol28_1_2_SCKak
   uv run python scripts/build_search_index.py --all-decoded
   uv run python scripts/build_search_index.py --set audit-set --output /tmp/search-corpus.json
+  uv run python scripts/build_search_index.py --set audit-set --media-mode captions
 """,
     )
     parser.add_argument(
@@ -131,6 +134,21 @@ def parse_args() -> argparse.Namespace:
         "--skip-smoke",
         action="store_true",
         help="Write only the JSON corpus artifact, not reports/search-smoke.md.",
+    )
+    parser.add_argument(
+        "--media-mode",
+        choices=["none", "captions", "figures"],
+        default="figures",
+        help=(
+            "Attachment handling. none omits attachments; captions records table/figure/page-image "
+            "metadata only; figures also copies true .jpg/.jpeg figures. Default: figures."
+        ),
+    )
+    parser.add_argument(
+        "--media-output",
+        type=Path,
+        default=DEFAULT_MEDIA_OUTPUT,
+        help="Directory for copied true figures. Default: web/assets/search-media/.",
     )
     return parser.parse_args()
 
@@ -246,6 +264,142 @@ def split_paragraphs(lines: list[str]) -> list[str]:
     return paragraphs
 
 
+IMAGE_RE = re.compile(r"!\[([^\]]*)\]\(([^)]+)\)")
+
+
+def is_table_separator(line: str) -> bool:
+    cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
+    return bool(cells) and all(re.match(r"^:?-{3,}:?$", cell or "") for cell in cells)
+
+
+def find_table_blocks(block: str) -> list[str]:
+    lines = block.splitlines()
+    tables: list[str] = []
+    index = 0
+    while index < len(lines):
+        if "|" not in lines[index]:
+            index += 1
+            continue
+        if index + 1 >= len(lines) or not is_table_separator(lines[index + 1]):
+            index += 1
+            continue
+
+        start = index
+        index += 2
+        while index < len(lines) and "|" in lines[index].strip():
+            index += 1
+        tables.append("\n".join(lines[start:index]).strip())
+    return tables
+
+
+def table_dimensions(markdown: str) -> tuple[int, int]:
+    rows = [line for line in markdown.splitlines() if "|" in line]
+    data_rows = [line for idx, line in enumerate(rows) if idx != 1]
+    col_count = 0
+    if rows:
+        col_count = len([cell for cell in rows[0].strip().strip("|").split("|")])
+    return len(data_rows), col_count
+
+
+def web_media_path(media_output: Path, media_path: Path) -> str:
+    try:
+        return media_path.resolve().relative_to((ROOT / "web").resolve()).as_posix()
+    except ValueError:
+        return media_path.as_posix()
+
+
+def copy_true_figure(
+    source_path: Path,
+    doc_id: str,
+    media_output: Path,
+    copied: dict[str, Any],
+) -> str | None:
+    if not source_path.exists():
+        return None
+
+    target_dir = media_output / doc_id
+    target_dir.mkdir(parents=True, exist_ok=True)
+    target = target_dir / source_path.name
+    shutil.copy2(source_path, target)
+    target_key = str(target.resolve())
+    if target_key not in copied["seen"]:
+        copied["seen"].add(target_key)
+        copied["count"] += 1
+        copied["bytes"] += target.stat().st_size
+    return web_media_path(media_output, target)
+
+
+def extract_attachments(
+    blocks: list[str],
+    doc_root: Path,
+    doc_id: str,
+    media_mode: str,
+    media_output: Path,
+    copied: dict[str, Any],
+) -> list[dict[str, Any]]:
+    if media_mode == "none":
+        return []
+
+    attachments: list[dict[str, Any]] = []
+    table_seen: set[str] = set()
+    image_seen: set[str] = set()
+
+    for block in blocks:
+        for table in find_table_blocks(block):
+            if table in table_seen:
+                continue
+            table_seen.add(table)
+            row_count, col_count = table_dimensions(table)
+            attachments.append(
+                {
+                    "type": "table",
+                    "label": "Table",
+                    "markdown": table,
+                    "row_count": row_count,
+                    "column_count": col_count,
+                }
+            )
+
+        for match in IMAGE_RE.finditer(block):
+            caption = plain_markdown(match.group(1))
+            media_ref = match.group(2).strip()
+            media_ref = media_ref.split()[0].strip("<>")
+            key = f"{caption}\n{media_ref}"
+            if key in image_seen:
+                continue
+            image_seen.add(key)
+
+            suffix = Path(media_ref).suffix.lower()
+            source_path = doc_root / media_ref
+            source_display = source_path.relative_to(ROOT).as_posix() if source_path.exists() else media_ref
+            if suffix in {".jpg", ".jpeg"}:
+                web_path = None
+                if media_mode == "figures":
+                    web_path = copy_true_figure(source_path, doc_id, media_output, copied)
+                attachments.append(
+                    {
+                        "type": "figure",
+                        "label": "Figure",
+                        "caption": caption,
+                        "source_path": source_display,
+                        "web_path": web_path,
+                    }
+                )
+            elif suffix == ".png":
+                # Page renders are useful evidence pointers, but too large to publish by default.
+                attachments.append(
+                    {
+                        "type": "page_image",
+                        "label": "Page image",
+                        "caption": caption,
+                        "source_path": source_display,
+                        "web_path": None,
+                    }
+                )
+
+    return attachments
+
+
 def make_heading_path(stack: list[tuple[int, str]]) -> list[str]:
     return [title for _, title in stack]
 
@@ -282,9 +436,13 @@ def sectionize(markdown: str) -> list[dict[str, Any]]:
 
 def build_chunks_for_doc(
     doc: dict[str, Any],
+    doc_root: Path,
     markdown: str,
     max_words: int,
     min_words: int,
+    media_mode: str,
+    media_output: Path,
+    copied_media: dict[str, Any],
 ) -> list[dict[str, Any]]:
     sections = sectionize(markdown)
     chunks: list[dict[str, Any]] = []
@@ -298,14 +456,25 @@ def build_chunks_for_doc(
             nonlocal current, current_words
             text = plain_markdown("\n\n".join(current))
             if text:
+                attachments = extract_attachments(
+                    current,
+                    doc_root,
+                    doc["doc_id"],
+                    media_mode,
+                    media_output,
+                    copied_media,
+                )
+                chunk = {
+                    **doc,
+                    "heading_path": section["heading_path"],
+                    "chunk_ordinal": len(chunks) + 1,
+                    "text": text,
+                    "text_preview": text[:360] + ("..." if len(text) > 360 else ""),
+                }
+                if attachments:
+                    chunk["attachments"] = attachments
                 chunks.append(
-                    {
-                        **doc,
-                        "heading_path": section["heading_path"],
-                        "chunk_ordinal": len(chunks) + 1,
-                        "text": text,
-                        "text_preview": text[:360] + ("..." if len(text) > 360 else ""),
-                    }
+                    chunk
                 )
             current = []
             current_words = 0
@@ -341,7 +510,7 @@ def quality_warning_types(quality: dict[str, Any]) -> list[str]:
     return out
 
 
-def load_doc(decoded_root: Path, manifest_row: dict[str, Any]) -> tuple[dict[str, Any], str]:
+def load_doc(decoded_root: Path, manifest_row: dict[str, Any]) -> tuple[dict[str, Any], Path, str]:
     doc_id = manifest_row["doc_id"]
     doc_root = decoded_root / "by-doc" / doc_id
     per_doc_manifest_path = doc_root / "manifest.json"
@@ -370,7 +539,7 @@ def load_doc(decoded_root: Path, manifest_row: dict[str, Any]) -> tuple[dict[str
         "quality_warnings": quality_warning_types(quality),
         "run_id": per_doc_manifest.get("run_id") or manifest_row.get("run_id") or "",
     }
-    return doc, markdown
+    return doc, doc_root, markdown
 
 
 def normalize_search_text(text: str) -> str:
@@ -491,9 +660,20 @@ def main() -> int:
 
     documents: list[dict[str, Any]] = []
     chunks: list[dict[str, Any]] = []
+    copied_media = {"count": 0, "bytes": 0, "seen": set()}
+    media_output = args.media_output.resolve()
     for doc_id in selected_doc_ids:
-        doc, markdown = load_doc(decoded_root, manifest_rows[doc_id])
-        doc_chunks = build_chunks_for_doc(doc, markdown, args.max_words, args.min_words)
+        doc, doc_root, markdown = load_doc(decoded_root, manifest_rows[doc_id])
+        doc_chunks = build_chunks_for_doc(
+            doc,
+            doc_root,
+            markdown,
+            args.max_words,
+            args.min_words,
+            args.media_mode,
+            media_output,
+            copied_media,
+        )
         doc["chunk_count"] = len(doc_chunks)
         documents.append(doc)
         chunks.extend(doc_chunks)
@@ -509,6 +689,10 @@ def main() -> int:
             "all_decoded": bool(args.all_decoded),
             "doc_count": len(documents),
             "chunk_count": len(chunks),
+            "media_mode": args.media_mode,
+            "media_output": web_media_path(media_output, media_output),
+            "copied_media_count": copied_media["count"],
+            "copied_media_bytes": copied_media["bytes"],
             "chunking": {
                 "strategy": "markdown-section-first",
                 "min_words": args.min_words,

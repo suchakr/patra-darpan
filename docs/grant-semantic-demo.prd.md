@@ -260,7 +260,20 @@ The Search Lab should show:
 - quality warning badge when present;
 - source PDF action when available.
 
-For v1, cited chunk text in the result payload plus a source PDF link is enough.
+### Tables And Figures
+
+Search results may also expose compact evidence attachments for the chunk:
+
+- Markdown tables can be shown as expandable table chips, with MathJax when
+  available and horizontal scrolling for wide tables;
+- true extracted `.jpg` / `.jpeg` figures can be copied into static web assets
+  and previewed inline;
+- page-render `.png` images should remain caption-only by default, with source
+  PDF access for inspection.
+
+This demonstrates decoded structure and nearby source evidence. It is not a
+full PDF reproduction layer or a substitute for opening the source PDF.
+
 A full decoded Markdown viewer can be added later if the demo needs deeper
 inspection.
 

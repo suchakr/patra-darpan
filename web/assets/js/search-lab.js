@@ -18,6 +18,7 @@
     "Vedanga Jyotisa solstice",
     "Surya Siddhanta planetary nodes",
     "Jnanaraja sine table",
+    "trigonometric tables",
     "Yuktibhasa Jyesthadeva",
   ];
 
@@ -59,6 +60,93 @@
     chip.className = className || "chip";
     chip.textContent = text;
     return chip;
+  }
+
+  function makeQualityNotesChip(warnings) {
+    const chip = makeChip(`Quality notes: ${warnings.length}`, "chip quality-note");
+    const detail = `Extraction quality notes: ${warnings.join(", ")}. Search hit may still be valid; inspect the source PDF for evidence use.`;
+    chip.title = detail;
+    chip.tabIndex = 0;
+    chip.setAttribute("data-tooltip", detail);
+    return chip;
+  }
+
+  function summarizeText(text) {
+    const clean = String(text || "").replace(/\s+/g, " ").trim();
+    if (clean.length <= 360) return clean;
+    return `${clean.slice(0, 360).trim()}...`;
+  }
+
+  function stripMarkdown(text) {
+    return String(text || "")
+      .replace(/`([^`]+)`/g, "$1")
+      .replace(/\*\*([^*]+)\*\*/g, "$1")
+      .replace(/\*([^*]+)\*/g, "$1")
+      .replace(/__([^_]+)__/g, "$1")
+      .replace(/_([^_]+)_/g, "$1")
+      .trim();
+  }
+
+  function tableRows(markdown) {
+    return String(markdown || "")
+      .split(/\r?\n/)
+      .map((line) => line.trim())
+      .filter(Boolean)
+      .filter((line, index) => index !== 1)
+      .map((line) => line.replace(/^\|/, "").replace(/\|$/, "").split("|").map((cell) => stripMarkdown(cell)));
+  }
+
+  function renderTable(markdown) {
+    const rows = tableRows(markdown);
+    if (!rows.length) return document.createTextNode("");
+    const tableWrap = document.createElement("div");
+    tableWrap.className = "table-preview";
+    const table = document.createElement("table");
+    const thead = document.createElement("thead");
+    const headRow = document.createElement("tr");
+    rows[0].forEach((cell) => {
+      const th = document.createElement("th");
+      th.textContent = cell;
+      headRow.appendChild(th);
+    });
+    thead.appendChild(headRow);
+    table.appendChild(thead);
+
+    const tbody = document.createElement("tbody");
+    rows.slice(1).forEach((row) => {
+      const tr = document.createElement("tr");
+      row.forEach((cell) => {
+        const td = document.createElement("td");
+        td.textContent = cell;
+        tr.appendChild(td);
+      });
+      tbody.appendChild(tr);
+    });
+    table.appendChild(tbody);
+    tableWrap.appendChild(table);
+    return tableWrap;
+  }
+
+  function typesetMath(node) {
+    if (window.MathJax && typeof window.MathJax.typesetPromise === "function") {
+      window.MathJax.typesetPromise([node]).catch(() => {});
+    } else {
+      window.setTimeout(() => {
+        if (window.MathJax && typeof window.MathJax.typesetPromise === "function") {
+          window.MathJax.typesetPromise([node]).catch(() => {});
+        }
+      }, 500);
+    }
+  }
+
+  function togglePanel(button, panel, renderContent) {
+    const expanded = button.getAttribute("aria-expanded") === "true";
+    button.setAttribute("aria-expanded", expanded ? "false" : "true");
+    panel.hidden = expanded;
+    if (!expanded && !panel.hasChildNodes()) {
+      renderContent(panel);
+      typesetMath(panel);
+    }
   }
 
   function loadRecentSearches() {
@@ -108,18 +196,36 @@
   }
 
   function renderContext(container, result) {
-    const neighbors = SearchCore.getNeighborHeadings(result.chunk, state.chunkMap);
     container.textContent = "";
-    if (!neighbors.prev && !neighbors.next) return;
+    const neighbors = [
+      ["Previous context", result.chunk.prev_chunk_id],
+      ["Next context", result.chunk.next_chunk_id],
+    ]
+      .map(([label, chunkId]) => [label, chunkId ? state.chunkMap.get(chunkId) : null])
+      .filter(([, chunk]) => chunk);
 
-    if (neighbors.prev) {
-      const prev = makeChip(`Prev: ${neighbors.prev.heading || neighbors.prev.chunk_id}`, "context-chip");
-      container.appendChild(prev);
-    }
-    if (neighbors.next) {
-      const next = makeChip(`Next: ${neighbors.next.heading || neighbors.next.chunk_id}`, "context-chip");
-      container.appendChild(next);
-    }
+    neighbors.forEach(([label, chunk]) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "context-chip";
+      button.setAttribute("aria-expanded", "false");
+      button.textContent = `${label}: ${SearchCore.headingText(chunk) || chunk.chunk_id}`;
+      const panel = document.createElement("div");
+      panel.className = "context-preview";
+      panel.hidden = true;
+      button.addEventListener("click", () => {
+        togglePanel(button, panel, (target) => {
+          const heading = document.createElement("strong");
+          heading.textContent = chunk.chunk_id;
+          const excerpt = document.createElement("p");
+          excerpt.textContent = summarizeText(chunk.text);
+          target.appendChild(heading);
+          target.appendChild(excerpt);
+        });
+      });
+      container.appendChild(button);
+      container.appendChild(panel);
+    });
   }
 
   function highlightForQuery(text) {
@@ -151,21 +257,85 @@
     const cite = document.createElement("button");
     cite.type = "button";
     cite.className = "copy-cite-button";
-    cite.textContent = `Copy chunk ID ${chunk.chunk_id}`;
-    cite.title = "Copy this cited chunk ID";
-    cite.setAttribute("aria-label", `Copy cited chunk ID ${chunk.chunk_id}`);
+    cite.textContent = `Copy citation key ${chunk.chunk_id}`;
+    cite.title = "Copy this stable citation key";
+    cite.setAttribute("aria-label", `Copy citation key ${chunk.chunk_id}`);
     cite.addEventListener("click", async () => {
       try {
         await navigator.clipboard.writeText(chunk.chunk_id);
-        cite.textContent = "Copied chunk ID";
+        cite.textContent = "Copied citation key";
         window.setTimeout(() => {
-          cite.textContent = `Copy chunk ID ${chunk.chunk_id}`;
+          cite.textContent = `Copy citation key ${chunk.chunk_id}`;
         }, 900);
       } catch {
-        cite.textContent = `Copy chunk ID ${chunk.chunk_id}`;
+        cite.textContent = `Copy citation key ${chunk.chunk_id}`;
       }
     });
     container.appendChild(cite);
+  }
+
+  function renderAttachmentPanel(panel, attachment, chunk) {
+    if (attachment.type === "table") {
+      panel.appendChild(renderTable(attachment.markdown));
+      return;
+    }
+
+    const caption = document.createElement("p");
+    caption.textContent = attachment.caption || "No caption available.";
+
+    if (attachment.type === "figure" && attachment.web_path) {
+      const figure = document.createElement("figure");
+      const img = document.createElement("img");
+      img.src = attachment.web_path;
+      img.alt = attachment.caption || "Decoded figure";
+      img.loading = "lazy";
+      const figcaption = document.createElement("figcaption");
+      figcaption.textContent = attachment.caption || attachment.source_path || "";
+      figure.appendChild(img);
+      figure.appendChild(figcaption);
+      panel.appendChild(figure);
+      return;
+    }
+
+    panel.appendChild(caption);
+    const source = sourceHref(chunk);
+    if (source) {
+      const link = document.createElement("a");
+      link.href = source;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.textContent = "Open source PDF";
+      panel.appendChild(link);
+    }
+  }
+
+  function renderAttachments(container, chunk) {
+    const attachments = Array.isArray(chunk.attachments) ? chunk.attachments : [];
+    container.textContent = "";
+    if (!attachments.length) return;
+
+    attachments.forEach((attachment, index) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "attachment-chip";
+      button.setAttribute("aria-expanded", "false");
+      const label = attachment.label || attachment.type || "Attachment";
+      if (attachment.type === "table" && attachment.row_count && attachment.column_count) {
+        button.textContent = `${label} ${attachment.row_count}x${attachment.column_count}`;
+      } else {
+        button.textContent = label;
+      }
+      const panel = document.createElement("div");
+      panel.className = "attachment-panel";
+      panel.hidden = true;
+      panel.id = `${chunk.chunk_id.replace(/[^a-z0-9_-]/gi, "-")}-attachment-${index}`;
+      button.setAttribute("aria-controls", panel.id);
+      button.addEventListener("click", () => {
+        togglePanel(button, panel, (target) => renderAttachmentPanel(target, attachment, chunk));
+      });
+      container.appendChild(button);
+      container.appendChild(panel);
+    });
   }
 
   function groupResults(results) {
@@ -193,6 +363,9 @@
   function renderResultCard(result, rank) {
     const chunk = result.chunk;
     const node = elements.template.content.firstElementChild.cloneNode(true);
+    if (Array.isArray(chunk.attachments) && chunk.attachments.length) {
+      node.classList.add("has-attachments");
+    }
     node.querySelector(".result-rank").textContent = rank;
     node.querySelector("h2").innerHTML = highlightForQuery(SearchCore.headingText(chunk) || chunk.title || chunk.doc_id);
     node.querySelector(".heading-path").textContent = chunk.chunk_id;
@@ -202,9 +375,10 @@
     meta.appendChild(makeChip(`score ${result.score.toFixed(1)}`));
     meta.appendChild(makeChip(`chunk ${chunk.chunk_ordinal}`));
     if (chunk.quality_warnings && chunk.quality_warnings.length) {
-      meta.appendChild(makeChip(`${chunk.quality_warnings.length} warnings`, "chip warning"));
+      meta.appendChild(makeQualityNotesChip(chunk.quality_warnings));
     }
 
+    renderAttachments(node.querySelector(".attachment-row"), chunk);
     renderContext(node.querySelector(".context-row"), result);
     renderActions(node.querySelector(".result-actions"), chunk);
     return node;
