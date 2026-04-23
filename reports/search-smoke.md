@@ -1,6 +1,6 @@
 # Search Smoke Report
 
-- Generated at: `2026-04-22T21:44:11Z`
+- Generated at: `2026-04-23T15:52:24Z`
 - Document count: 29
 - Chunk count: 547
 
@@ -71,7 +71,7 @@
 - Heading: Planetary nodes and apses in the Sūrya-Siddhānta > 3 The data
 - Score: 90.0
 - Chunk: `IJHS_58_2_1:c0005`
-- Snippet: ...he Sūrya-Siddhānta. Therefore, it is almost certain that these numbers were produced as a result of tweaking the Indian planetary model to match observational data, that is, the observed motion of the planet itself (not its Nodes/Apses). Table 1 Planetary Nodal Movement in the Sūrya-Siddhānta | Planet | Revolutions in a Kalpa | Direction | Years per revoluti...
+- Snippet: The Sūrya-Siddhānta presents the number of orbits (revolutions) completed by the ascending-nodes of the five visible planets in a Kalpa of $4,320,000,000$ years, as shown in Table 1. Similarly, the revolutions of the apses of various planets in a kal...
 - Credibility: likely relevant; human review recommended
 
 ## Jñānarāja sine table

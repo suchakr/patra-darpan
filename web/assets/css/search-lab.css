@@ -250,7 +250,8 @@ button:hover,
 
 .group-chunks {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(520px, 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(440px, 100%), 1fr));
+  grid-auto-flow: dense;
   gap: 1px;
   background: var(--line);
 }
@@ -264,10 +265,6 @@ button:hover,
   border-radius: 0;
   background: var(--panel);
   box-shadow: none;
-}
-
-.result-item.has-attachments {
-  grid-column: 1 / -1;
 }
 
 .result-main {
@@ -379,13 +376,23 @@ mark {
 }
 
 .attachment-row,
-.context-row {
+.prev-context-row,
+.next-context-row {
   margin: 10px 0 14px;
 }
 
 .attachment-row,
-.context-row {
+.prev-context-row,
+.next-context-row {
   align-items: flex-start;
+}
+
+.prev-context-row {
+  margin: 12px 0 10px;
+}
+
+.next-context-row {
+  margin: 10px 0 12px;
 }
 
 .context-chip,
@@ -444,6 +451,43 @@ mark {
   display: inline-flex;
   margin-top: 8px;
   font-weight: 700;
+}
+
+.link-source-chips {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.link-source-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--accent-strong);
+  background: #fff;
+  transition: background 0.16s ease, color 0.16s ease, border-color 0.16s ease, transform 0.16s ease;
+}
+
+.link-source-chip svg {
+  width: 16px;
+  height: 16px;
+}
+
+.link-source-chip:hover {
+  color: #fff;
+  border-color: var(--accent);
+  background: var(--accent-strong);
+  transform: translateY(-1px);
+}
+
+.link-source-chip.active {
+  color: #fff;
+  border-color: var(--accent);
+  background: var(--accent);
 }
 
 .attachment-panel figure {
@@ -507,9 +551,31 @@ mark {
   background: #fff;
 }
 
+.result-actions .link-source-chips {
+  gap: 10px;
+  margin-right: 4px;
+}
+
+.result-actions .link-source-chip {
+  width: 44px;
+  height: 44px;
+  border-width: 1.5px;
+  box-shadow: 0 1px 2px rgba(28, 39, 48, 0.08);
+}
+
+.result-actions .link-source-chip svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2.2;
+}
+
 .copy-cite-button {
   max-width: 100%;
   overflow-wrap: anywhere;
+}
+
+.attachment-panel .link-source-chips {
+  margin-top: 8px;
 }
 
 .result-actions a:hover,

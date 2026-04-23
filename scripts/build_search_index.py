@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import csv
 import datetime as dt
 import html
 import json
@@ -21,6 +22,7 @@ DEFAULT_OUTPUT = ROOT / "web" / "assets" / "data" / "search-corpus.json"
 DEFAULT_SMOKE_REPORT = ROOT / "reports" / "search-smoke.md"
 DEFAULT_SET_DIR = ROOT / "decode-lab" / "sets"
 DEFAULT_MEDIA_OUTPUT = ROOT / "web" / "assets" / "search-media"
+DEFAULT_INDEX_TSV = ROOT / "exports" / "index.tsv"
 
 SMOKE_QUERIES = [
     "Yājñavalkya cycle",
@@ -107,6 +109,12 @@ def parse_args() -> argparse.Namespace:
         help="Directory containing set .txt files. Default: decode-lab/sets/.",
     )
     parser.add_argument(
+        "--index-tsv",
+        type=Path,
+        default=DEFAULT_INDEX_TSV,
+        help="Patra Darpan index.tsv projection used to enrich access metadata. Default: exports/index.tsv.",
+    )
+    parser.add_argument(
         "--output",
         type=Path,
         default=DEFAULT_OUTPUT,
@@ -180,6 +188,23 @@ def read_manifest(decoded_root: Path) -> dict[str, dict[str, Any]]:
             doc_id = row.get("doc_id")
             if doc_id:
                 rows[doc_id] = row
+    return rows
+
+
+def read_index_lookup(index_tsv: Path) -> dict[str, dict[str, str]]:
+    if not index_tsv.exists():
+        raise FileNotFoundError(f"Missing index.tsv for access metadata enrichment: {index_tsv}")
+
+    rows: dict[str, dict[str, str]] = {}
+    with index_tsv.open("r", encoding="utf-8", newline="") as handle:
+        for row in csv.DictReader(handle, delimiter="\t"):
+            gcs_key = (row.get("gcs_key") or "").strip()
+            if not gcs_key:
+                continue
+            rows[gcs_key] = row
+            stem = gcs_key.rsplit("/", 1)[-1].removesuffix(".pdf")
+            if stem:
+                rows.setdefault(stem, row)
     return rows
 
 
@@ -510,7 +535,11 @@ def quality_warning_types(quality: dict[str, Any]) -> list[str]:
     return out
 
 
-def load_doc(decoded_root: Path, manifest_row: dict[str, Any]) -> tuple[dict[str, Any], Path, str]:
+def load_doc(
+    decoded_root: Path,
+    manifest_row: dict[str, Any],
+    index_lookup: dict[str, dict[str, str]],
+) -> tuple[dict[str, Any], Path, str]:
     doc_id = manifest_row["doc_id"]
     doc_root = decoded_root / "by-doc" / doc_id
     per_doc_manifest_path = doc_root / "manifest.json"
@@ -525,6 +554,10 @@ def load_doc(decoded_root: Path, manifest_row: dict[str, Any]) -> tuple[dict[str
     quality = read_json(quality_path)
     source = per_doc_manifest.get("source") or {}
     markdown = markdown_path.read_text(encoding="utf-8")
+    index_row = index_lookup.get(source.get("gcs_key") or "") or index_lookup.get(doc_id) or {}
+    remote_url = (index_row.get("url") or source.get("source_url") or "").strip()
+    ju_url = (index_row.get("ju_url") or "").strip()
+    cahc_authored = str(index_row.get("cahc_authored") or "").strip().lower() == "true"
 
     doc = {
         "doc_id": doc_id,
@@ -533,7 +566,10 @@ def load_doc(decoded_root: Path, manifest_row: dict[str, Any]) -> tuple[dict[str
         "year": str(source.get("year") or ""),
         "journal_label": source.get("journal_label") or "",
         "source_url": source.get("source_url") or "",
+        "remote_url": remote_url,
+        "ju_url": ju_url,
         "gcs_key": source.get("gcs_key") or "",
+        "cahc_authored": cahc_authored,
         "decoded_document_path": per_doc_manifest.get("document_md") or manifest_row.get("document_md") or "",
         "quality_status": quality.get("status") or manifest_row.get("status") or "",
         "quality_warnings": quality_warning_types(quality),
@@ -649,6 +685,7 @@ def main() -> int:
     args = parse_args()
     decoded_root = args.decoded_root.resolve()
     manifest_rows = read_manifest(decoded_root)
+    index_lookup = read_index_lookup(args.index_tsv.resolve())
     selected_doc_ids = select_doc_ids(args, manifest_rows)
 
     missing = [doc_id for doc_id in selected_doc_ids if doc_id not in manifest_rows]
@@ -663,7 +700,7 @@ def main() -> int:
     copied_media = {"count": 0, "bytes": 0, "seen": set()}
     media_output = args.media_output.resolve()
     for doc_id in selected_doc_ids:
-        doc, doc_root, markdown = load_doc(decoded_root, manifest_rows[doc_id])
+        doc, doc_root, markdown = load_doc(decoded_root, manifest_rows[doc_id], index_lookup)
         doc_chunks = build_chunks_for_doc(
             doc,
             doc_root,

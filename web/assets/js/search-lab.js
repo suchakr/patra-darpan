@@ -39,17 +39,76 @@
     suggestions: document.getElementById("query-suggestions"),
   };
 
-  function sourceHref(chunk) {
-    if (chunk.source_url) return chunk.source_url;
-    if (chunk.gcs_key) {
-      return `/.netlify/functions/authorize-pdf?file=${encodeURIComponent(`assets/${chunk.gcs_key}`)}`;
-    }
-    return "";
+  function getRemoteUrl(chunk) {
+    return chunk.remote_url || chunk.source_url || "";
   }
 
-  function archiveHref(chunk) {
+  function getJuUrl(chunk) {
+    return chunk.ju_url || "";
+  }
+
+  function getGcsArchiveLink(chunk) {
     if (!chunk.gcs_key) return "";
     return `/.netlify/functions/authorize-pdf?file=${encodeURIComponent(`assets/${chunk.gcs_key}`)}`;
+  }
+
+  function sameLink(left, right) {
+    return Boolean(left && right && left === right);
+  }
+
+  function getAccessIcon(kind) {
+    const icons = {
+      source:
+        '<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>',
+      mirror:
+        '<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="7" height="14" rx="1.5"></rect><rect x="13" y="5" width="7" height="14" rx="1.5"></rect><path d="M11 12h2"></path></svg>',
+      archive:
+        '<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"></rect><path d="M4 16V6a2 2 0 0 1 2-2h10"></path></svg>',
+    };
+    return icons[kind] || icons.archive;
+  }
+
+  function accessTargets(chunk) {
+    const remoteUrl = getRemoteUrl(chunk);
+    const juUrl = getJuUrl(chunk);
+    const archiveUrl = getGcsArchiveLink(chunk);
+    const primary = juUrl || archiveUrl || remoteUrl || "";
+    const targets = [];
+
+    function addTarget(id, kind, label, href, active) {
+      if (!href) return;
+      if (targets.some((target) => sameLink(target.href, href))) return;
+      targets.push({ id, kind, label, href, active: Boolean(active) });
+    }
+
+    addTarget("mirror", "mirror", "CAHC mirror", juUrl, sameLink(primary, juUrl));
+    addTarget("archive", "archive", "Archive copy", archiveUrl, sameLink(primary, archiveUrl));
+    addTarget("source", "source", "Original source", remoteUrl, sameLink(primary, remoteUrl));
+    return targets;
+  }
+
+  function renderAccessChips(container, chunk, prefix) {
+    const targets = accessTargets(chunk);
+    if (!targets.length) return false;
+
+    const group = document.createElement("div");
+    group.className = "link-source-chips";
+    group.setAttribute("aria-label", prefix ? `${prefix} access options` : "Access options");
+
+    targets.forEach((target) => {
+      const link = document.createElement("a");
+      link.href = target.href;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.className = `link-source-chip chip-${target.id}${target.active ? " active" : ""}`;
+      link.title = target.label + (target.active ? " default" : "");
+      link.setAttribute("aria-label", link.title);
+      link.innerHTML = getAccessIcon(target.kind);
+      group.appendChild(link);
+    });
+
+    container.appendChild(group);
+    return true;
   }
 
   function setStatus(message) {
@@ -202,37 +261,36 @@
     });
   }
 
-  function renderContext(container, result) {
+  function renderContext(container, result, direction) {
     container.textContent = "";
-    const neighbors = [
-      ["Previous context", result.chunk.prev_chunk_id],
-      ["Next context", result.chunk.next_chunk_id],
-    ]
-      .map(([label, chunkId]) => [label, chunkId ? state.chunkMap.get(chunkId) : null])
-      .filter(([, chunk]) => chunk);
+    const config =
+      direction === "prev"
+        ? ["Previous context", result.chunk.prev_chunk_id]
+        : ["Next context", result.chunk.next_chunk_id];
+    const [label, chunkId] = config;
+    const chunk = chunkId ? state.chunkMap.get(chunkId) : null;
+    if (!chunk) return;
 
-    neighbors.forEach(([label, chunk]) => {
-      const button = document.createElement("button");
-      button.type = "button";
-      button.className = "context-chip";
-      button.setAttribute("aria-expanded", "false");
-      button.textContent = `${label}: ${SearchCore.headingText(chunk) || chunk.chunk_id}`;
-      const panel = document.createElement("div");
-      panel.className = "context-preview";
-      panel.hidden = true;
-      button.addEventListener("click", () => {
-        togglePanel(button, panel, (target) => {
-          const heading = document.createElement("strong");
-          heading.textContent = chunk.chunk_id;
-          const excerpt = document.createElement("p");
-          excerpt.textContent = summarizeText(chunk.text);
-          target.appendChild(heading);
-          target.appendChild(excerpt);
-        });
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "context-chip";
+    button.setAttribute("aria-expanded", "false");
+    button.textContent = `${label}: ${SearchCore.headingText(chunk) || chunk.chunk_id}`;
+    const panel = document.createElement("div");
+    panel.className = "context-preview";
+    panel.hidden = true;
+    button.addEventListener("click", () => {
+      togglePanel(button, panel, (target) => {
+        const heading = document.createElement("strong");
+        heading.textContent = chunk.chunk_id;
+        const excerpt = document.createElement("p");
+        excerpt.textContent = summarizeText(chunk.text);
+        target.appendChild(heading);
+        target.appendChild(excerpt);
       });
-      container.appendChild(button);
-      container.appendChild(panel);
     });
+    container.appendChild(button);
+    container.appendChild(panel);
   }
 
   function highlightForQuery(text) {
@@ -241,25 +299,7 @@
 
   function renderActions(container, chunk) {
     container.textContent = "";
-    const source = sourceHref(chunk);
-    if (source) {
-      const sourceLink = document.createElement("a");
-      sourceLink.href = source;
-      sourceLink.target = "_blank";
-      sourceLink.rel = "noopener noreferrer";
-      sourceLink.textContent = "Source PDF";
-      container.appendChild(sourceLink);
-    }
-
-    const archive = archiveHref(chunk);
-    if (archive && archive !== source) {
-      const archiveLink = document.createElement("a");
-      archiveLink.href = archive;
-      archiveLink.target = "_blank";
-      archiveLink.rel = "noopener noreferrer";
-      archiveLink.textContent = "Archive";
-      container.appendChild(archiveLink);
-    }
+    renderAccessChips(container, chunk, "PDF");
 
     const cite = document.createElement("button");
     cite.type = "button";
@@ -305,15 +345,7 @@
     }
 
     panel.appendChild(caption);
-    const source = sourceHref(chunk);
-    if (source) {
-      const link = document.createElement("a");
-      link.href = source;
-      link.target = "_blank";
-      link.rel = "noopener noreferrer";
-      link.textContent = "Open source PDF";
-      panel.appendChild(link);
-    }
+    renderAccessChips(panel, chunk, "PDF");
   }
 
   function renderAttachments(container, chunk) {
@@ -399,8 +431,9 @@
       meta.appendChild(makeQualityNotesChip(chunk.quality_warnings));
     }
 
+    renderContext(node.querySelector(".prev-context-row"), result, "prev");
+    renderContext(node.querySelector(".next-context-row"), result, "next");
     renderAttachments(node.querySelector(".attachment-row"), chunk);
-    renderContext(node.querySelector(".context-row"), result);
     renderActions(node.querySelector(".result-actions"), chunk);
     return node;
   }
