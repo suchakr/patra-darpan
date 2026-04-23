@@ -390,6 +390,9 @@ mark {
 
 .context-chip,
 .attachment-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   max-width: 100%;
   border-radius: 6px;
   color: var(--accent-strong);
@@ -397,11 +400,25 @@ mark {
   white-space: normal;
 }
 
+.attachment-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.1em;
+  color: var(--muted);
+  font-size: 1.05em;
+  line-height: 1;
+}
+
 .context-chip:hover,
 .attachment-chip:hover {
   color: #fff;
   border-color: var(--accent);
   background: var(--accent-strong);
+}
+
+.attachment-chip:hover .attachment-icon {
+  color: #fff;
 }
 
 .context-preview,

@@ -20,6 +20,13 @@
     "Jnanaraja sine table",
     "trigonometric tables",
     "Yuktibhasa Jyesthadeva",
+    "Vrddha Gargiya Jyotisa",
+    "Brahmanda Purana",
+    "Dhruva pole star",
+    "Parashara comets",
+    "Eclipse period 3339",
+    "Krishna lore",
+    "Agastya heliacal visibility",
   ];
 
   const elements = {
@@ -314,17 +321,31 @@
     container.textContent = "";
     if (!attachments.length) return;
 
+    function attachmentIcon(type) {
+      if (type === "table") return "▦";
+      if (type === "figure") return "◧";
+      if (type === "page_image") return "◫";
+      return "•";
+    }
+
     attachments.forEach((attachment, index) => {
       const button = document.createElement("button");
       button.type = "button";
       button.className = "attachment-chip";
       button.setAttribute("aria-expanded", "false");
       const label = attachment.label || attachment.type || "Attachment";
+      const icon = document.createElement("span");
+      icon.className = "attachment-icon";
+      icon.setAttribute("aria-hidden", "true");
+      icon.textContent = attachmentIcon(attachment.type);
+      const text = document.createElement("span");
       if (attachment.type === "table" && attachment.row_count && attachment.column_count) {
-        button.textContent = `${label} ${attachment.row_count}x${attachment.column_count}`;
+        text.textContent = `${label} ${attachment.row_count}x${attachment.column_count}`;
       } else {
-        button.textContent = label;
+        text.textContent = label;
       }
+      button.appendChild(icon);
+      button.appendChild(text);
       const panel = document.createElement("div");
       panel.className = "attachment-panel";
       panel.hidden = true;
