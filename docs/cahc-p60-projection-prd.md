@@ -94,9 +94,22 @@ The projected records should include:
 - `source`
 - `url`
 - `entry_type`
+- `content_kind`, an optional additive display hint
 
 The projection should not persist row numbers. The CAHC renderer should number
 rows at render time after sorting.
+
+`content_kind` is a non-breaking field. Consumers may ignore it safely. Current
+values are:
+
+- `paper`: default scholarly-paper bucket
+- `article`: source-level article or essay streams, including SwarajyaMag and
+  Asian Journal of Professional Ethics and Management rows
+- `news`: procedural/front-matter rows such as contents, announcements, notes,
+  news, book reviews, obituaries, and similar non-research items
+
+Suggested downstream behavior is to keep `paper` rows primary and optionally
+filter or group `article` and `news` rows separately.
 
 The default sort should match the current `P60` reader expectation:
 

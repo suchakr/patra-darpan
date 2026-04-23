@@ -54,6 +54,12 @@ INDEX_ENRICHMENT_FALLBACKS: dict[
         "link",
     ): {"subject": "Culture", "category": "Indic"},
     (
+        "SwarajyaMag",
+        "Vivaan, Aarav, Kalu, Chhotu... India's Naming Crisis That Rajasthan Is Trying To Fix",
+        "https://swarajyamag.com/ideas/indias-naming-crisis-rajasthan-is-trying-to-fix-it-urban-india-doesnt-even-know-it-has-the-problem",
+        "link",
+    ): {"subject": "Culture", "category": "Indic"},
+    (
         "IJHS-31-1996-Issue-4",
         "BookReview",
         "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol31_4_7_BookReview.pdf",

@@ -9,6 +9,7 @@ import pandas as pd
 import json
 import os
 import pathlib
+import re
 import sys
 from datetime import UTC, datetime
 
@@ -30,6 +31,47 @@ CAHC_RNI_URL_PREFIX = "https://cahc.jainuniversity.ac.in/assets/cached_papers/rn
 CORPUS_ROOT = resolve_shared_asset_root()
 CORPUS_IJHS = CORPUS_ROOT / "ijhs"
 CORPUS_OTHER = CORPUS_ROOT / "other"
+
+ARTICLE_SOURCES = {"swarajya"}
+ARTICLE_JOURNALS = {
+    "AJPEM",
+    "APJEM",
+    "Asian Journal of Professional Ethics and Management",
+}
+NEWS_TITLE_PATTERNS = [
+    r"^contents?$",
+    r"^annual contents\b",
+    r"^cumulative index\b",
+    r"^index$",
+    r"^notes?$",
+    r"^notes? and news$",
+    r"^news\b",
+    r"^announcements?$",
+    r"^notices?\b",
+    r"^notice of journals\b",
+    r"^new publications$",
+    r"^book received\b",
+    r"^books received\b",
+    r"^reviews?$",
+    r"^book reviews?$",
+    r"^book review\b",
+    r"^editorial$",
+    r"^guest editorial$",
+    r"^erratum$",
+    r"^obituary\b",
+    r"^orbituay\b",
+    r"^conferences?$",
+    r"^correspondence\b",
+    r"^session\b.*discussion$",
+    r"^discussions?$",
+    r"^supplements?$",
+    r"^academy publications?\b",
+    r"^projects approved\b",
+    r"^indian national commission\b",
+    r"^chama newsletter$",
+    r"^form iv$",
+    r"^awards and honours$",
+]
 
 def setup_symlink():
     """Creates a relative symlink web/assets/pdfs -> shared PDF asset root."""
@@ -75,6 +117,17 @@ def find_local_path(url_filename, gcs_key=""):
 
     return None
 
+def content_kind_for_paper(paper):
+    """Return display-only kind without changing corpus root metadata."""
+    title = str(paper.get("title") or "").strip()
+    if any(re.search(pattern, title, re.IGNORECASE) for pattern in NEWS_TITLE_PATTERNS):
+        return "news"
+    if str(paper.get("source") or "").strip().lower() in ARTICLE_SOURCES:
+        return "article"
+    if str(paper.get("journal") or "").strip() in ARTICLE_JOURNALS:
+        return "article"
+    return "paper"
+
 def p60_link_for_paper(paper):
     """Return the durable P60 link target for a projected paper row."""
     remote_url = str(paper.get("remoteUrl") or "")
@@ -114,6 +167,7 @@ def build_p60_projection(papers):
                 "source": paper.get("journal", ""),
                 "url": url,
                 "entry_type": paper.get("entry_type", ""),
+                "content_kind": paper.get("content_kind", "paper"),
             }
         )
 
@@ -176,6 +230,7 @@ def main():
             "source": clean_num(row.get("source", "insa")),
             "gcs_key": clean_num(row.get("gcs_key", "")),
         }
+        paper["content_kind"] = content_kind_for_paper(paper)
 
         # Normalization: If primary is JU but secondary is empty, use primary for JU features
         if "jainuniversity" in str(paper["remoteUrl"]) and not paper["juUrl"]:

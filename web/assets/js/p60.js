@@ -1,6 +1,6 @@
 window.PATRA_DARPAN_P60 = {
-  "generatedAt": "2026-04-19T19:16:16.182753Z",
-  "rowCount": 75,
+  "generatedAt": "2026-04-23T13:05:34.176764Z",
+  "rowCount": 76,
   "rows": [
     {
       "year": "2026",
@@ -9,7 +9,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R. S. Hariharan",
       "source": "SwarajyaMag",
       "url": "https://swarajyamag.com/culture/a-forgotten-indian-theory-of-how-power-turns-comic-before-it-turns-cruel",
-      "entry_type": "link"
+      "entry_type": "link",
+      "content_kind": "article"
     },
     {
       "year": "2026",
@@ -18,7 +19,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R. S. Hariharan",
       "source": "SwarajyaMag",
       "url": "https://swarajyamag.com/ideas/did-india-lack-historical-consciousness-or-is-it-just-that-india-understood-time-differently",
-      "entry_type": "link"
+      "entry_type": "link",
+      "content_kind": "article"
     },
     {
       "year": "2026",
@@ -27,7 +29,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R. S. Hariharan",
       "source": "SwarajyaMag",
       "url": "https://swarajyamag.com/ideas/how-ancient-india-predicted-rains-before-the-arrogance-of-modern-science",
-      "entry_type": "link"
+      "entry_type": "link",
+      "content_kind": "article"
     },
     {
       "year": "2026",
@@ -36,7 +39,18 @@ window.PATRA_DARPAN_P60 = {
       "author": "R. S. Hariharan",
       "source": "SwarajyaMag",
       "url": "https://swarajyamag.com/ideas/krishna-is-shiva-a-philosophical-secret-hidden-in-a-sanskrit-poem",
-      "entry_type": "link"
+      "entry_type": "link",
+      "content_kind": "article"
+    },
+    {
+      "year": "2026",
+      "category": "Culture",
+      "title": "Vivaan, Aarav, Kalu, Chhotu... India's Naming Crisis That Rajasthan Is Trying To Fix",
+      "author": "Nishtha Anushree, R. S. Hariharan",
+      "source": "SwarajyaMag",
+      "url": "https://swarajyamag.com/ideas/indias-naming-crisis-rajasthan-is-trying-to-fix-it-urban-india-doesnt-even-know-it-has-the-problem",
+      "entry_type": "link",
+      "content_kind": "article"
     },
     {
       "year": "2025",
@@ -45,7 +59,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "Warija Adiga",
       "source": "AJPEM",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/ajpem_2025_no_laugh.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "article"
     },
     {
       "year": "2025",
@@ -54,7 +69,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "Warija Adiga",
       "source": "AJPEM",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/ajpem_2025_ethical_project.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "article"
     },
     {
       "year": "2025",
@@ -63,7 +79,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "Warija Adiga",
       "source": "AJPEM",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/ajpem_2025_sukanasopdesa.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "article"
     },
     {
       "year": "2025",
@@ -72,7 +89,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R. S. Hariharan",
       "source": "Karnataka Sanskrit 8.1",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/The_Scope_of_Ashtadashavarnana.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2025",
@@ -81,7 +99,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R. S. Hariharan, Shankar Rajaraman",
       "source": "QJMS 116.2",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/QJMS_116_2_Kamasvada_compare.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2025",
@@ -90,7 +109,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R.N. Iyengar",
       "source": "QJMS 116.2",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/QJMS_116_2_Hindu_Time.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2025",
@@ -99,7 +119,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R. S. Hariharan",
       "source": "SwarajyaMag",
       "url": "https://swarajyamag.com/ideas/before-space-science-there-was-mahsalilam-rediscovery-of-indias-oldest-astronomical-text",
-      "entry_type": "link"
+      "entry_type": "link",
+      "content_kind": "article"
     },
     {
       "year": "2025",
@@ -108,7 +129,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R. S. Hariharan",
       "source": "SwarajyaMag",
       "url": "https://swarajyamag.com/books/how-a-sanskrit-play-brings-ancient-theatre-into-todays-bengaluru",
-      "entry_type": "link"
+      "entry_type": "link",
+      "content_kind": "article"
     },
     {
       "year": "2025",
@@ -117,7 +139,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R. S. Hariharan",
       "source": "SwarajyaMag",
       "url": "https://swarajyamag.com/ideas/puric-dhruva-was-not-a-myth-how-ancient-india-remembered-a-real-pole-star",
-      "entry_type": "link"
+      "entry_type": "link",
+      "content_kind": "article"
     },
     {
       "year": "2025",
@@ -126,7 +149,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R. S. Hariharan",
       "source": "SwarajyaMag",
       "url": "https://swarajyamag.com/books/rmnuytram-the-modern-ratha-yatra-in-classical-sanskrit",
-      "entry_type": "link"
+      "entry_type": "link",
+      "content_kind": "article"
     },
     {
       "year": "2024",
@@ -135,7 +159,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R. S. Hariharan, Shankar Rajaraman",
       "source": "Mahasvini Vol. 2",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/mahisvini_2024_kamsavadha.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2024",
@@ -144,7 +169,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R. S. Hariharan, Shankar Rajaraman",
       "source": "Shodhsamhita XI.2",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/A_Comparitive_analysis_of_Kamsavadha_episode_in_Puranic_Texts.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2023",
@@ -153,7 +179,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R. N. Iyengar, Sunder Chakravarty",
       "source": "IJHS-58-2023-Issue-4",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/01_58_4.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2022",
@@ -162,7 +189,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "Warija Adiga",
       "source": "AJPEM",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/ajpem_2022_silence.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "article"
     },
     {
       "year": "2021",
@@ -171,7 +199,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R.N. Iyengar",
       "source": "Asian Journal of Professional Ethics and Management",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Indian_Heritage_of_Gurukula_System_Ethic.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "article"
     },
     {
       "year": "2021",
@@ -180,7 +209,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R. N. Iyengar and Sunder Chakravarty",
       "source": "IJHS-56-2021-Issue-3&4",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/1.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2020",
@@ -189,7 +219,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R. N. Iyengar, H. S. Sudarshan, Anand Viswanathan",
       "source": "IJHS-55-2020-Issue-3",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vol55_3_2020__Art01.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2019",
@@ -198,7 +229,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R.N. Iyengar, H.S. Sudarshan, Anand Viswanathan",
       "source": "Tattvadipa 25 (1)",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/$T_A_T_T_V_A_D_E_P_A_H_Journal_of_Academy.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2019",
@@ -207,7 +239,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R.N. Iyengar, H.S. Sudarshan, Anand Viswanathan",
       "source": "Tattvadipa 25 (2)",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/$Vddhagargiya_Jyotisa_2_Continued_from_p.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2019",
@@ -216,7 +249,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R.N. Iyengar, H.S. Sudarshan, Anand Viswanathan",
       "source": "Tattvadipa 25 (3-4)",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/vddhagargiya_jyotisa_3.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2018",
@@ -225,7 +259,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R.N. Iyengar",
       "source": "ICHR National Conference",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/rni-ichr-archaeo-astronomy-2018.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2018",
@@ -234,7 +269,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "RN Iyengar",
       "source": "IJHS-53-2018-Issue-2",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vol53_2_2018__Art01.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2018",
@@ -243,7 +279,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "Sangeetha Menon, Shankar Rajaraman",
       "source": "IJTS 37.1",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/ijts_2018_well_being.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2018",
@@ -252,7 +289,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R.N. Iyengar, K.S. Kannan, S.Y. Wakankar",
       "source": "Jain University Press",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Narada_Silpasastra_Sanskrit_Text_on_Arch.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2017",
@@ -261,7 +299,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "Takao Hayashi",
       "source": "HSSA-2017",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/time-2015-haya-time-units-ancient-india.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2017",
@@ -270,7 +309,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R.N. Iyengar",
       "source": "ICPR Seminar",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Concept_of_Probability_in_Sanskrit_Texts.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2016",
@@ -279,7 +319,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R.N. Iyengar",
       "source": "International Conference on Oriental Astronomy",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/$Ancient_Indian_Astronomy_in_Vedic_Texts.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2016",
@@ -288,7 +329,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R.N. Iyengar",
       "source": "International Conference on Oriental Astronomy",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/rni-extract-comets-meteors-vedas-2016.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2015",
@@ -297,7 +339,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R.N. Iyengar",
       "source": "National Vedic Conference",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Location_of_the_Vedic_Iria_and_its_Arch.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2015",
@@ -306,7 +349,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R.N. Iyengar",
       "source": "SMiRT Conference",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Comparison_of_Seismic_Qualification_Chal.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2014",
@@ -315,7 +359,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "",
       "source": "IJHS-49-2014-Issue-2",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vol49_2_10_BookReview.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "news"
     },
     {
       "year": "2014",
@@ -324,7 +369,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R N Iyengar",
       "source": "IJHS-49-2014-Issue-3",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vol49_3_1_RN_Iyengar.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2014",
@@ -333,7 +379,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R N. Iyengar",
       "source": "SATAS Symposium",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/$Parasara_Tantra_an_Ancient_Text_on_Natur.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2013",
@@ -342,7 +389,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "Shankar Rajaraman, Venetia Kotamraju",
       "source": "ALT 1.4",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/alt_2013_madhura_vijaya.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2012",
@@ -351,7 +399,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R N Iyengar and V H Satheeshkumar",
       "source": "IJHS-47-2012-Issue-3",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vol47_3_6_RNIyengar.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2011",
@@ -360,7 +409,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R N Iyengar",
       "source": "IJHS-46-2011-Issue-1",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vol46_1_2_RNIyenger.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2010",
@@ -369,7 +419,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R.N. Iyengar",
       "source": "IJHS-45-2010-Issue-1",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vol45_1_1_RNIyengar.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2009",
@@ -378,7 +429,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R.N. Iyengar",
       "source": "Current Science 97.3",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Rainfall_cycles_in_Ancient_Sanskrit_Text.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2009",
@@ -387,7 +439,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R N Iyengar",
       "source": "IJHS-44-2009-Issue-3",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vol44_3_1_RNIyengar.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2008",
@@ -396,7 +449,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R N Iyengar",
       "source": "IJHS-43-2008-Issue-1",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vol43_1_1_RNIyengar.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2007",
@@ -405,7 +459,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R.N. Iyengar",
       "source": "ASERVE Conference Hyderabad",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/profile_of_indian_astronomy_before_siddhantic_period.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2007",
@@ -414,7 +469,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "S.T.G. Raghu Kanth, R.N. Iyengar",
       "source": "J. Earth Syst. Sci. 116.3",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Estimation_of_seismic_spectral_accelerat.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2007",
@@ -423,7 +479,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R.N. Iyengar, B.P. Radhakrishna",
       "source": "J. Geol. Soc. India 70.5",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/geographical_location_of_vedic_irina_in_southern_rajasthan.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2006",
@@ -432,7 +489,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "S.T.G. Raghu Kanth, R.N. Iyengar",
       "source": "Current Science 91.11",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Seismic_hazard_estimation_for_Mumbai_cit.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2006",
@@ -441,7 +499,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R.N. Iyengar, S.T.G. Raghu Kanth",
       "source": "Current Science 91.3",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Forecasting_of_seasonal_monsoon_rainfall.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2006",
@@ -450,7 +509,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R N Iyengar",
       "source": "IJHS-41-2006-Issue-1",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vol41_1_1_RNIyengar.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2006",
@@ -459,7 +519,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "K D Abhyankar",
       "source": "IJHS-41-2006-Issue-3",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vol41_3_5_RNIyengar.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2006",
@@ -468,7 +529,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R.N. Iyengar",
       "source": "J. Geol. Soc. India 67.3",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/on_some_comet_observations_in_ancient_india.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2006",
@@ -477,7 +539,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "S.T.G. Raghu Kanth, R.N. Iyengar",
       "source": "Pure appl. geophys. 163",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Strong_Ground_Motion_Estimation_During_t.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2005",
@@ -486,7 +549,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "B.K. Raghu Prasad, C.S. Manohar, D.Roy",
       "source": "Article",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Interview_with_Prof_RN_Iyengar.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2005",
@@ -495,7 +559,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "RN Iyengar",
       "source": "IJHS-40-2005-Issue-2",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vol2_2005_01.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2005",
@@ -504,7 +569,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R.N. Iyengar, B.P. Radhakrishna",
       "source": "J. Geol. Soc. India 66.3",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/evolution_of_the_western_coastline_of_india_and_the_probable_location_of_dwaraka_of_krishna.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2005",
@@ -513,7 +579,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R.N. Iyengar, B.P.Radhakrishna, S.S.Mishra",
       "source": "Journal of the Geological Society of India 70",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vedic_Irinn_a_and_the_Rann_of_kutch.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2005",
@@ -522,7 +589,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R.N. Iyengar, S.T.G. Raghu Kanth",
       "source": "Meteorol. Atmos. Phys. 90",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Intrinsic_mode_functions_and_a_strategy.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2004",
@@ -531,7 +599,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R.N. Iyengar",
       "source": "Current Science 87.4",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Description_of_rainfall_variability_in_B.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2004",
@@ -540,7 +609,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R.N. Iyengar, S. Ghosh",
       "source": "Current Science 87.9",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Microzonation_of_earthquake_hazard_in_Gr.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2004",
@@ -549,7 +619,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R N Iyengar",
       "source": "IJHS-39-2004-Issue-1",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vol39_1_2_RNIyengar.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2003",
@@ -558,7 +629,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R N Iyengar",
       "source": "IJHS-38-2003-Issue-2",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vol38_2_1_RNIyengar.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2001",
@@ -567,7 +639,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R.N. Iyengar, Shailesh KR Agrawal",
       "source": "Proc. Indian Acad. Sci (Earth Planet. Sci.) 110.1",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Earthquake_source_model_using_strong_mot.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2000",
@@ -576,7 +649,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R.N. Iyengar",
       "source": "Current Science 79.5",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Seismic_status_of_Delhi_megacity.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "1999",
@@ -585,7 +659,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R.N. Iyengar",
       "source": "Current Science 77.6",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Earthquakes_in_ancient_India.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "1999",
@@ -594,7 +669,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R N Iyengar et al.",
       "source": "IJHS-34-1999-Issue-3",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vol34_3_2_RNIyengar.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "1996",
@@ -603,7 +679,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R.N. Iyengar, Devendra Sharma",
       "source": "Current Science 71.4",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/some_earthquakes_of_kashmir_from_historical_sources.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "1993",
@@ -612,7 +689,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "O.R. Jaiswal ,    R.N. Iyengar",
       "source": "Acta Mechanica 96",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Dynamic_response_of_a_beam_on_elastic_fo.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "1991",
@@ -621,7 +699,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R.N. Iyengar",
       "source": "Int. J. Non-Linear Mechanics 26.4",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Rocking_response_of_rectangular_rigid_bl.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "1991",
@@ -630,7 +709,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R.N. Iyengar",
       "source": "Proc. Indian Acad. Sci. (Earth Planet. Sci.) 100.2",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Application_of_principal_component_analy.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "1986",
@@ -639,7 +719,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R.N. Iyengar",
       "source": "Journal of Statistical Physics, 44.5/6",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/A_nonlinear_system_under_combined_period.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "1980",
@@ -648,7 +729,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "Sulochana Gadgil, R.N. Iyengar",
       "source": "Quart. J. R. Met. Soc. 106",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Cluster_analysis_of_rainfall_stations_of.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "1975",
@@ -657,7 +739,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R.N. Iyengar",
       "source": "Journal of Sound and Vibration 40.2",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Random_vibration_of_a_second_order_non_l.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "1971",
@@ -666,7 +749,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "R.N. Iyengar, M. Shinozuka",
       "source": "Earthquake Engineering and Structural Dynamics  1",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Effect_of_self_weight_and_vertical_accel.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "1955",
@@ -675,7 +759,8 @@ window.PATRA_DARPAN_P60 = {
       "author": "M. N. Saha, Lahiri",
       "source": "CSIR-1955",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/History-of-Calendar-Panchanga-Committee.pdf",
-      "entry_type": "pdf"
+      "entry_type": "pdf",
+      "content_kind": "paper"
     }
   ]
 };
