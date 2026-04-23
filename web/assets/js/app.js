@@ -21,6 +21,7 @@ const State = {
         foldDiacritics: localStorage.getItem('ijhs-fold-diacritics') !== 'false',
         sort: "newest", 
         categories: new Set(),
+        kinds: new Set(),
         subjects: new Set(),
         decades: new Set(),
         isCahcOnly: false // New: Handles ?cahc=1 or ?juni=1
@@ -38,6 +39,7 @@ const Elements = {
     regexToggle: document.getElementById('regex-toggle'), // New
     diacriticToggle: document.getElementById('diacritic-toggle'),
     categoryFilters: document.getElementById('category-filters'),
+    kindFilters: document.getElementById('kind-filters'),
     subjectFilters: document.getElementById('subject-filters'),
     decadeFilters: document.getElementById('decade-filters'),
     resultCount: document.getElementById('result-count'),
@@ -64,6 +66,12 @@ const SEEDED_RECENT_SEARCHES = [
     'nakshatra',
     'Saptarshi'
 ];
+const CONTENT_KIND_LABELS = {
+    paper: 'Paper',
+    article: 'Article',
+    news: 'News+'
+};
+const CONTENT_KIND_ORDER = ['paper', 'article', 'news'];
 
 // --- Logic ---
 
@@ -244,6 +252,14 @@ function parseQueryParams() {
     if (sub) {
         sub.split(',').forEach(s => {
             if (s.trim()) State.filters.subjects.add(s.trim());
+        });
+    }
+
+    const kind = params.get('kind');
+    if (kind) {
+        kind.split(',').forEach(k => {
+            const normalized = normalizeContentKind(k.trim());
+            if (normalized) State.filters.kinds.add(normalized);
         });
     }
 
@@ -511,6 +527,7 @@ function resetFilters() {
     updateDiacriticToggle();
 
     State.filters.categories.clear();
+    State.filters.kinds.clear();
     State.filters.subjects.clear();
     State.filters.decades.clear();
     Elements.searchInput.value = "";
@@ -714,6 +731,7 @@ function setupFilters() {
 
     const categories = [...new Set(State.papers.map(p => SafeCat(p.category)))].sort();
     const subjects = [...new Set(State.papers.map(p => SafeSub(p.subject)))].sort();
+    const kinds = CONTENT_KIND_ORDER.filter(kind => State.papers.some(p => normalizeContentKind(p.content_kind) === kind));
 
     const decades = [...new Set(State.papers.map(p => {
         const y = parseInt(p.year);
@@ -723,11 +741,23 @@ function setupFilters() {
     const decadeStrings = decades.map(d => `${d}s`);
 
     renderCheckboxList(Elements.categoryFilters, categories, 'categories');
+    renderCheckboxList(Elements.kindFilters, kinds, 'kinds', contentKindLabel);
     renderCheckboxList(Elements.subjectFilters, subjects, 'subjects');
     renderCheckboxList(Elements.decadeFilters, decadeStrings, 'decades');
 }
 
-function renderCheckboxList(container, items, filterKey) {
+function normalizeContentKind(value) {
+    const kind = String(value || 'paper').trim().toLowerCase();
+    if (kind === 'news+') return 'news';
+    if (CONTENT_KIND_LABELS[kind]) return kind;
+    return 'paper';
+}
+
+function contentKindLabel(value) {
+    return CONTENT_KIND_LABELS[normalizeContentKind(value)] || 'Paper';
+}
+
+function renderCheckboxList(container, items, filterKey, labelFormatter = null) {
     container.innerHTML = '';
     items.forEach(item => {
         const label = document.createElement('label');
@@ -753,7 +783,8 @@ function renderCheckboxList(container, items, filterKey) {
 
         label.appendChild(input);
 
-        const displayItem = item.length > 28 ? item.substring(0, 26) + '...' : item;
+        const displayValue = labelFormatter ? labelFormatter(item) : item;
+        const displayItem = displayValue.length > 28 ? displayValue.substring(0, 26) + '...' : displayValue;
         const text = document.createTextNode(displayItem);
         label.appendChild(text);
 
@@ -766,6 +797,7 @@ function applyFilters() {
     const useRegex = State.filters.useRegex;
     const foldDiacritics = State.filters.foldDiacritics !== false;
     const cats = State.filters.categories;
+    const kinds = State.filters.kinds;
     const subs = State.filters.subjects;
     const decs = State.filters.decades;
     const sortMode = State.filters.sort || 'newest';
@@ -805,17 +837,20 @@ function applyFilters() {
         // 2. Category Filter
         if (cats.size > 0 && !cats.has(SafeCat(p.category))) return false;
 
-        // 3. Subject Filter
+        // 3. Kind Filter
+        if (kinds.size > 0 && !kinds.has(normalizeContentKind(p.content_kind))) return false;
+
+        // 4. Subject Filter
         if (subs.size > 0 && !subs.has(SafeSub(p.subject))) return false;
 
-        // 4. Decade Filter
+        // 5. Decade Filter
         if (decs.size > 0) {
             const year = parseInt(p.year);
             const decade = isNaN(year) ? 'Unknown' : `${Math.floor(year / 10) * 10}s`;
             if (!decs.has(decade)) return false;
         }
 
-        // 5. Institutional Filter (?cahc=1 or ?juni=1)
+        // 6. Institutional Filter (?cahc=1 or ?juni=1)
         if (State.filters.isCahcOnly && p.cahc_authored !== true && p.cahc_authored !== 'true') {
             return false;
         }

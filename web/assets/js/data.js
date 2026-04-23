@@ -13,6 +13,7 @@ const PAPERS = [
     "entry_type": "link",
     "source": "swarajya",
     "gcs_key": "",
+    "content_kind": "article",
     "localPath": null
   },
   {
@@ -29,6 +30,7 @@ const PAPERS = [
     "entry_type": "link",
     "source": "swarajya",
     "gcs_key": "",
+    "content_kind": "article",
     "localPath": null
   },
   {
@@ -45,6 +47,7 @@ const PAPERS = [
     "entry_type": "link",
     "source": "swarajya",
     "gcs_key": "",
+    "content_kind": "article",
     "localPath": null
   },
   {
@@ -61,6 +64,7 @@ const PAPERS = [
     "entry_type": "link",
     "source": "swarajya",
     "gcs_key": "",
+    "content_kind": "article",
     "localPath": null
   },
   {
@@ -77,6 +81,7 @@ const PAPERS = [
     "entry_type": "link",
     "source": "swarajya",
     "gcs_key": "",
+    "content_kind": "article",
     "localPath": null
   },
   {
@@ -93,6 +98,7 @@ const PAPERS = [
     "entry_type": "link",
     "source": "swarajya",
     "gcs_key": "",
+    "content_kind": "article",
     "localPath": null
   },
   {
@@ -109,6 +115,7 @@ const PAPERS = [
     "entry_type": "link",
     "source": "swarajya",
     "gcs_key": "",
+    "content_kind": "article",
     "localPath": null
   },
   {
@@ -125,6 +132,24 @@ const PAPERS = [
     "entry_type": "link",
     "source": "swarajya",
     "gcs_key": "",
+    "content_kind": "article",
+    "localPath": null
+  },
+  {
+    "journal": "SwarajyaMag",
+    "title": "Vivaan, Aarav, Kalu, Chhotu... India's Naming Crisis That Rajasthan Is Trying To Fix",
+    "author": "Nishtha Anushree, R. S. Hariharan",
+    "category": "Indic",
+    "subject": "Culture",
+    "year": "2026",
+    "remoteUrl": "https://swarajyamag.com/ideas/indias-naming-crisis-rajasthan-is-trying-to-fix-it-urban-india-doesnt-even-know-it-has-the-problem",
+    "juUrl": "",
+    "size": 0.0,
+    "cahc_authored": true,
+    "entry_type": "link",
+    "source": "swarajya",
+    "gcs_key": "",
+    "content_kind": "article",
     "localPath": null
   },
   {
@@ -141,6 +166,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/QJMS_116_2_Hindu_Time.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/QJMS_116_2_Hindu_Time.pdf"
   },
   {
@@ -157,6 +183,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/Indian_Heritage_of_Gurukula_System_Ethic.pdf",
+    "content_kind": "article",
     "localPath": "assets/pdfs/other/Indian_Heritage_of_Gurukula_System_Ethic.pdf"
   },
   {
@@ -173,6 +200,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/$T_A_T_T_V_A_D_E_P_A_H_Journal_of_Academy.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/$T_A_T_T_V_A_D_E_P_A_H_Journal_of_Academy.pdf"
   },
   {
@@ -189,6 +217,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/$Vddhagargiya_Jyotisa_2_Continued_from_p.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/$Vddhagargiya_Jyotisa_2_Continued_from_p.pdf"
   },
   {
@@ -205,6 +234,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/vddhagargiya_jyotisa_3.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/vddhagargiya_jyotisa_3.pdf"
   },
   {
@@ -221,6 +251,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/rni-ichr-archaeo-astronomy-2018.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/rni-ichr-archaeo-astronomy-2018.pdf"
   },
   {
@@ -237,6 +268,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/Narada_Silpasastra_Sanskrit_Text_on_Arch.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/Narada_Silpasastra_Sanskrit_Text_on_Arch.pdf"
   },
   {
@@ -253,6 +285,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/Concept_of_Probability_in_Sanskrit_Texts.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/Concept_of_Probability_in_Sanskrit_Texts.pdf"
   },
   {
@@ -269,6 +302,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/$Ancient_Indian_Astronomy_in_Vedic_Texts.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/$Ancient_Indian_Astronomy_in_Vedic_Texts.pdf"
   },
   {
@@ -285,6 +319,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/rni-extract-comets-meteors-vedas-2016.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/rni-extract-comets-meteors-vedas-2016.pdf"
   },
   {
@@ -301,6 +336,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/Comparison_of_Seismic_Qualification_Chal.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/Comparison_of_Seismic_Qualification_Chal.pdf"
   },
   {
@@ -317,6 +353,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/Location_of_the_Vedic_Iria_and_its_Arch.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/Location_of_the_Vedic_Iria_and_its_Arch.pdf"
   },
   {
@@ -333,6 +370,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/$Parasara_Tantra_an_Ancient_Text_on_Natur.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/$Parasara_Tantra_an_Ancient_Text_on_Natur.pdf"
   },
   {
@@ -349,6 +387,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/Rainfall_cycles_in_Ancient_Sanskrit_Text.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/Rainfall_cycles_in_Ancient_Sanskrit_Text.pdf"
   },
   {
@@ -365,6 +404,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/profile_of_indian_astronomy_before_siddhantic_period.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/profile_of_indian_astronomy_before_siddhantic_period.pdf"
   },
   {
@@ -381,6 +421,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/Estimation_of_seismic_spectral_accelerat.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/Estimation_of_seismic_spectral_accelerat.pdf"
   },
   {
@@ -397,6 +438,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/geographical_location_of_vedic_irina_in_southern_rajasthan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/geographical_location_of_vedic_irina_in_southern_rajasthan.pdf"
   },
   {
@@ -413,6 +455,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/Forecasting_of_seasonal_monsoon_rainfall.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/Forecasting_of_seasonal_monsoon_rainfall.pdf"
   },
   {
@@ -429,6 +472,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/on_some_comet_observations_in_ancient_india.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/on_some_comet_observations_in_ancient_india.pdf"
   },
   {
@@ -445,6 +489,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/Seismic_hazard_estimation_for_Mumbai_cit.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/Seismic_hazard_estimation_for_Mumbai_cit.pdf"
   },
   {
@@ -461,6 +506,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/Strong_Ground_Motion_Estimation_During_t.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/Strong_Ground_Motion_Estimation_During_t.pdf"
   },
   {
@@ -477,6 +523,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/evolution_of_the_western_coastline_of_india_and_the_probable_location_of_dwaraka_of_krishna.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/evolution_of_the_western_coastline_of_india_and_the_probable_location_of_dwaraka_of_krishna.pdf"
   },
   {
@@ -493,6 +540,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/Interview_with_Prof_RN_Iyengar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/Interview_with_Prof_RN_Iyengar.pdf"
   },
   {
@@ -509,6 +557,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/Intrinsic_mode_functions_and_a_strategy.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/Intrinsic_mode_functions_and_a_strategy.pdf"
   },
   {
@@ -525,6 +574,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/Vedic_Irinn_a_and_the_Rann_of_kutch.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/Vedic_Irinn_a_and_the_Rann_of_kutch.pdf"
   },
   {
@@ -541,6 +591,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/Description_of_rainfall_variability_in_B.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/Description_of_rainfall_variability_in_B.pdf"
   },
   {
@@ -557,6 +608,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/Microzonation_of_earthquake_hazard_in_Gr.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/Microzonation_of_earthquake_hazard_in_Gr.pdf"
   },
   {
@@ -573,6 +625,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/Earthquake_source_model_using_strong_mot.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/Earthquake_source_model_using_strong_mot.pdf"
   },
   {
@@ -589,6 +642,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/Seismic_status_of_Delhi_megacity.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/Seismic_status_of_Delhi_megacity.pdf"
   },
   {
@@ -605,6 +659,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/Earthquakes_in_ancient_India.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/Earthquakes_in_ancient_India.pdf"
   },
   {
@@ -621,6 +676,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/some_earthquakes_of_kashmir_from_historical_sources.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/some_earthquakes_of_kashmir_from_historical_sources.pdf"
   },
   {
@@ -637,6 +693,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/Dynamic_response_of_a_beam_on_elastic_fo.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/Dynamic_response_of_a_beam_on_elastic_fo.pdf"
   },
   {
@@ -653,6 +710,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/Application_of_principal_component_analy.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/Application_of_principal_component_analy.pdf"
   },
   {
@@ -669,6 +727,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/Rocking_response_of_rectangular_rigid_bl.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/Rocking_response_of_rectangular_rigid_bl.pdf"
   },
   {
@@ -685,6 +744,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/A_nonlinear_system_under_combined_period.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/A_nonlinear_system_under_combined_period.pdf"
   },
   {
@@ -701,6 +761,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/Cluster_analysis_of_rainfall_stations_of.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/Cluster_analysis_of_rainfall_stations_of.pdf"
   },
   {
@@ -717,6 +778,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/Random_vibration_of_a_second_order_non_l.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/Random_vibration_of_a_second_order_non_l.pdf"
   },
   {
@@ -733,6 +795,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/Effect_of_self_weight_and_vertical_accel.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/Effect_of_self_weight_and_vertical_accel.pdf"
   },
   {
@@ -749,6 +812,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/QJMS_116_2_Kamasvada_compare.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/QJMS_116_2_Kamasvada_compare.pdf"
   },
   {
@@ -765,6 +829,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/ajpem_2025_no_laugh.pdf",
+    "content_kind": "article",
     "localPath": "assets/pdfs/other/ajpem_2025_no_laugh.pdf"
   },
   {
@@ -781,6 +846,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/ajpem_2025_sukanasopdesa.pdf",
+    "content_kind": "article",
     "localPath": "assets/pdfs/other/ajpem_2025_sukanasopdesa.pdf"
   },
   {
@@ -797,6 +863,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/ajpem_2025_ethical_project.pdf",
+    "content_kind": "article",
     "localPath": "assets/pdfs/other/ajpem_2025_ethical_project.pdf"
   },
   {
@@ -813,6 +880,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/mahisvini_2024_kamsavadha.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/mahisvini_2024_kamsavadha.pdf"
   },
   {
@@ -829,6 +897,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/ajpem_2022_silence.pdf",
+    "content_kind": "article",
     "localPath": "assets/pdfs/other/ajpem_2022_silence.pdf"
   },
   {
@@ -845,6 +914,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/ijts_2018_well_being.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/ijts_2018_well_being.pdf"
   },
   {
@@ -861,6 +931,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/alt_2013_madhura_vijaya.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/alt_2013_madhura_vijaya.pdf"
   },
   {
@@ -877,6 +948,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/History-of-Calendar-Panchanga-Committee.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/History-of-Calendar-Panchanga-Committee.pdf"
   },
   {
@@ -893,6 +965,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/time-2015-haya-time-units-ancient-india.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/time-2015-haya-time-units-ancient-india.pdf"
   },
   {
@@ -909,6 +982,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/The_Scope_of_Ashtadashavarnana.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/The_Scope_of_Ashtadashavarnana.pdf"
   },
   {
@@ -925,6 +999,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "other/A_Comparitive_analysis_of_Kamsavadha_episode_in_Puranic_Texts.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/other/A_Comparitive_analysis_of_Kamsavadha_episode_in_Puranic_Texts.pdf"
   },
   {
@@ -941,6 +1016,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol01_1_1_PRay.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol01_1_1_PRay.pdf"
   },
   {
@@ -957,6 +1033,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol01_1_2_JRRavetz.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol01_1_2_JRRavetz.pdf"
   },
   {
@@ -973,6 +1050,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol01_1_3_MHoskin.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol01_1_3_MHoskin.pdf"
   },
   {
@@ -989,6 +1067,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol01_1_4_DJDSPrice.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol01_1_4_DJDSPrice.pdf"
   },
   {
@@ -1005,6 +1084,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol01_1_5_SNSen.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol01_1_5_SNSen.pdf"
   },
   {
@@ -1021,6 +1101,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol01_1_6_VRonchi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol01_1_6_VRonchi.pdf"
   },
   {
@@ -1037,6 +1118,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol01_1_7_VSubbarayappa.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol01_1_7_VSubbarayappa.pdf"
   },
   {
@@ -1053,6 +1135,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol01_1_8_AKBag.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol01_1_8_AKBag.pdf"
   },
   {
@@ -1069,6 +1152,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol01_1_9_BRensch.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol01_1_9_BRensch.pdf"
   },
   {
@@ -1085,6 +1169,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol01_2_1_WPetri.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol01_2_1_WPetri.pdf"
   },
   {
@@ -1101,6 +1186,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol01_2_2_MRoy.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol01_2_2_MRoy.pdf"
   },
   {
@@ -1117,6 +1203,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol01_2_3_AKBag.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol01_2_3_AKBag.pdf"
   },
   {
@@ -1133,6 +1220,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol01_2_4_SPRaychaudhuri.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol01_2_4_SPRaychaudhuri.pdf"
   },
   {
@@ -1149,6 +1237,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol01_2_5_SNSen.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol01_2_5_SNSen.pdf"
   },
   {
@@ -1165,6 +1254,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol01_2_6_MTanaka.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol01_2_6_MTanaka.pdf"
   },
   {
@@ -1181,6 +1271,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol01_2_7_SAKGhori.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol01_2_7_SAKGhori.pdf"
   },
   {
@@ -1197,6 +1288,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol01_2_8_RKGupta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol01_2_8_RKGupta.pdf"
   },
   {
@@ -1213,6 +1305,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol01_2_9_Notes.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol01_2_9_Notes.pdf"
   },
   {
@@ -1229,6 +1322,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol02_1_1_PRay.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol02_1_1_PRay.pdf"
   },
   {
@@ -1245,6 +1339,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol02_1_2_BVSubbarayappa.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol02_1_2_BVSubbarayappa.pdf"
   },
   {
@@ -1261,6 +1356,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol02_1_3_MRoy.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol02_1_3_MRoy.pdf"
   },
   {
@@ -1277,6 +1373,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol02_1_4_BMohan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol02_1_4_BMohan.pdf"
   },
   {
@@ -1293,6 +1390,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol02_1_5_MChowdhury.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol02_1_5_MChowdhury.pdf"
   },
   {
@@ -1309,6 +1407,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol02_1_6_Reviews.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol02_1_6_Reviews.pdf"
   },
   {
@@ -1325,6 +1424,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol02_2_1_VDMarza.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol02_2_1_VDMarza.pdf"
   },
   {
@@ -1341,6 +1441,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol02_2_2_HIJhala.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol02_2_2_HIJhala.pdf"
   },
   {
@@ -1357,6 +1458,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol02_2_3_RCGupta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol02_2_3_RCGupta.pdf"
   },
   {
@@ -1373,6 +1475,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol02_2_4_Notes.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol02_2_4_Notes.pdf"
   },
   {
@@ -1389,6 +1492,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol02_2_5_News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol02_2_5_News.pdf"
   },
   {
@@ -1405,6 +1509,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol02_2_6_Review.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol02_2_6_Review.pdf"
   },
   {
@@ -1421,6 +1526,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol04_1And2_1_AKBag.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol04_1And2_1_AKBag.pdf"
   },
   {
@@ -1437,6 +1543,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol04_1And2_2_KAChowdhury.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol04_1And2_2_KAChowdhury.pdf"
   },
   {
@@ -1453,6 +1560,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol04_1And2_3_GSDikshit.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol04_1And2_3_GSDikshit.pdf"
   },
   {
@@ -1469,6 +1577,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol04_1And2_4_CGKashikar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol04_1And2_4_CGKashikar.pdf"
   },
   {
@@ -1485,6 +1594,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol04_1And2_5_TMPMahadevan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol04_1And2_5_TMPMahadevan.pdf"
   },
   {
@@ -1501,6 +1611,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol04_1And2_6_GCPande.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol04_1And2_6_GCPande.pdf"
   },
   {
@@ -1517,6 +1628,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol04_1And2_7_SGopal.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol04_1And2_7_SGopal.pdf"
   },
   {
@@ -1533,6 +1645,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol04_1And2_8_TASaraswathi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol04_1And2_8_TASaraswathi.pdf"
   },
   {
@@ -1549,6 +1662,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol04_1And2_9_AKBag.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol04_1And2_9_AKBag.pdf"
   },
   {
@@ -1565,6 +1679,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol04_1And2_10_RCGupta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol04_1And2_10_RCGupta.pdf"
   },
   {
@@ -1581,6 +1696,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol04_1And2_11_KSShukla.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol04_1And2_11_KSShukla.pdf"
   },
   {
@@ -1597,6 +1713,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol04_1And2_12_TSKShastri.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol04_1And2_12_TSKShastri.pdf"
   },
   {
@@ -1613,6 +1730,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol04_1And2_13_TSKShastri.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol04_1And2_13_TSKShastri.pdf"
   },
   {
@@ -1629,6 +1747,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol04_1And2_14_SPBhattacharyya.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol04_1And2_14_SPBhattacharyya.pdf"
   },
   {
@@ -1645,6 +1764,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol04_1And2_15_News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol04_1And2_15_News.pdf"
   },
   {
@@ -1661,6 +1781,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol04_1And2_16_Review.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol04_1And2_16_Review.pdf"
   },
   {
@@ -1677,6 +1798,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol05_1_1_CDwarkanath.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol05_1_1_CDwarkanath.pdf"
   },
   {
@@ -1693,6 +1815,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol05_1_2_PJDeshpande.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol05_1_2_PJDeshpande.pdf"
   },
   {
@@ -1709,6 +1832,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol05_1_3_LMSingh.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol05_1_3_LMSingh.pdf"
   },
   {
@@ -1725,6 +1849,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol05_1_4_DSGaur.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol05_1_4_DSGaur.pdf"
   },
   {
@@ -1741,6 +1866,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol05_1_5_JMitra.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol05_1_5_JMitra.pdf"
   },
   {
@@ -1757,6 +1883,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol05_1_6_SGurumurthy.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol05_1_6_SGurumurthy.pdf"
   },
   {
@@ -1773,6 +1900,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol05_1_7_RSSMurthy.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol05_1_7_RSSMurthy.pdf"
   },
   {
@@ -1789,6 +1917,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol05_1_8_PRay.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol05_1_8_PRay.pdf"
   },
   {
@@ -1805,6 +1934,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol05_1_9_BBMishra.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol05_1_9_BBMishra.pdf"
   },
   {
@@ -1821,6 +1951,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol05_1_10_RCChakravorty.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol05_1_10_RCChakravorty.pdf"
   },
   {
@@ -1837,6 +1968,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol05_1_11_RNKapil.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol05_1_11_RNKapil.pdf"
   },
   {
@@ -1853,6 +1985,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol05_1_12_KAChowdhury.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol05_1_12_KAChowdhury.pdf"
   },
   {
@@ -1869,6 +2002,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol05_1_13_VMittre.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol05_1_13_VMittre.pdf"
   },
   {
@@ -1885,6 +2019,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol05_1_14_MRoy.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol05_1_14_MRoy.pdf"
   },
   {
@@ -1901,6 +2036,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol05_1_15_SPRaychaudhuri.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol05_1_15_SPRaychaudhuri.pdf"
   },
   {
@@ -1917,6 +2053,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol05_1_16_MSShukla.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol05_1_16_MSShukla.pdf"
   },
   {
@@ -1933,6 +2070,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol05_2_1_JCSikdar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol05_2_1_JCSikdar.pdf"
   },
   {
@@ -1949,6 +2087,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol05_2_2_GNChakravarthy.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol05_2_2_GNChakravarthy.pdf"
   },
   {
@@ -1965,6 +2104,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol05_2_3_HCBhardwaj.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol05_2_3_HCBhardwaj.pdf"
   },
   {
@@ -1981,6 +2121,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol05_2_4_DPAgrawal.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol05_2_4_DPAgrawal.pdf"
   },
   {
@@ -1997,6 +2138,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol05_2_5_BKGRao.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol05_2_5_BKGRao.pdf"
   },
   {
@@ -2013,6 +2155,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol05_2_6_MChoudhury.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol05_2_6_MChoudhury.pdf"
   },
   {
@@ -2029,6 +2172,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol05_2_7_VGovind.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol05_2_7_VGovind.pdf"
   },
   {
@@ -2045,6 +2189,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol05_2_8_TVMahalingam.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol05_2_8_TVMahalingam.pdf"
   },
   {
@@ -2061,6 +2206,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol05_2_9_TMSrinivasan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol05_2_9_TMSrinivasan.pdf"
   },
   {
@@ -2077,6 +2223,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol05_2_10_JFilliozat.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol05_2_10_JFilliozat.pdf"
   },
   {
@@ -2093,6 +2240,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol05_2_11_SNSen.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol05_2_11_SNSen.pdf"
   },
   {
@@ -2109,6 +2257,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol05_2_12_RLVerma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol05_2_12_RLVerma.pdf"
   },
   {
@@ -2125,6 +2274,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol05_2_13_PVSharma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol05_2_13_PVSharma.pdf"
   },
   {
@@ -2141,6 +2291,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol05_2_14_HCShukla.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol05_2_14_HCShukla.pdf"
   },
   {
@@ -2157,6 +2308,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol05_2_15_TMSrinivasan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol05_2_15_TMSrinivasan.pdf"
   },
   {
@@ -2173,6 +2325,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol06_1_1_MNDeshpande.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol06_1_1_MNDeshpande.pdf"
   },
   {
@@ -2189,6 +2342,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol06_1_2_RSengupta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol06_1_2_RSengupta.pdf"
   },
   {
@@ -2205,6 +2359,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vo0l6_1_3_RNRai.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vo0l6_1_3_RNRai.pdf"
   },
   {
@@ -2221,6 +2376,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol06_1_4_NKPanikkar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol06_1_4_NKPanikkar.pdf"
   },
   {
@@ -2237,6 +2393,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol06_1_5_RCGupta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol06_1_5_RCGupta.pdf"
   },
   {
@@ -2253,6 +2410,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol06_1_6_AVCarozzi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol06_1_6_AVCarozzi.pdf"
   },
   {
@@ -2269,6 +2427,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol06_1_7_PVSharma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol06_1_7_PVSharma.pdf"
   },
   {
@@ -2285,6 +2444,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol06_1_8_VMukherji.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol06_1_8_VMukherji.pdf"
   },
   {
@@ -2301,6 +2461,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol06_1_9_BMChintamani.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol06_1_9_BMChintamani.pdf"
   },
   {
@@ -2317,6 +2478,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol06_1_10_BookReviews.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol06_1_10_BookReviews.pdf"
   },
   {
@@ -2333,6 +2495,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol06_2_1_VMukherji.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol06_2_1_VMukherji.pdf"
   },
   {
@@ -2349,6 +2512,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol06_2_2_RNRai.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol06_2_2_RNRai.pdf"
   },
   {
@@ -2365,6 +2529,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol06_2_3_EGKRao.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol06_2_3_EGKRao.pdf"
   },
   {
@@ -2381,6 +2546,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol06_2_4_RNRai.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol06_2_4_RNRai.pdf"
   },
   {
@@ -2397,6 +2563,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol06_2_5_GPSharma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol06_2_5_GPSharma.pdf"
   },
   {
@@ -2413,6 +2580,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol06_2_6_BMChintamani.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol06_2_6_BMChintamani.pdf"
   },
   {
@@ -2429,6 +2597,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol07_1_1_RNRai.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol07_1_1_RNRai.pdf"
   },
   {
@@ -2445,6 +2614,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol07_1_2_NKPanikkar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol07_1_2_NKPanikkar.pdf"
   },
   {
@@ -2461,6 +2631,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol07_1_3_RNRai.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol07_1_3_RNRai.pdf"
   },
   {
@@ -2477,6 +2648,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol07_1_4_ALSharma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol07_1_4_ALSharma.pdf"
   },
   {
@@ -2493,6 +2665,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol07_1_5_SNSen.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol07_1_5_SNSen.pdf"
   },
   {
@@ -2509,6 +2682,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol07_1_6_Notes_AKBag.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol07_1_6_Notes_AKBag.pdf"
   },
   {
@@ -2525,6 +2699,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol07_1_7_News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol07_1_7_News.pdf"
   },
   {
@@ -2541,6 +2716,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol07_1_8_BookReview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol07_1_8_BookReview.pdf"
   },
   {
@@ -2557,6 +2733,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol07_2_1_RCGupta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol07_2_1_RCGupta.pdf"
   },
   {
@@ -2573,6 +2750,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol07_2_2_PVSharma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol07_2_2_PVSharma.pdf"
   },
   {
@@ -2589,6 +2767,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol07_2_3_TKBiswas.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol07_2_3_TKBiswas.pdf"
   },
   {
@@ -2605,6 +2784,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol07_2_4_SDSharma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol07_2_4_SDSharma.pdf"
   },
   {
@@ -2621,6 +2801,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol07_2_5_VVRaman.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol07_2_5_VVRaman.pdf"
   },
   {
@@ -2637,6 +2818,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol07_2_6_Notes_VMukherjee.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol07_2_6_Notes_VMukherjee.pdf"
   },
   {
@@ -2653,6 +2835,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol07_2_7_BookReviews.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol07_2_7_BookReviews.pdf"
   },
   {
@@ -2669,6 +2852,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol07_2_8_News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol07_2_8_News.pdf"
   },
   {
@@ -2685,6 +2869,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol08_1and2_1_LCJain.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol08_1and2_1_LCJain.pdf"
   },
   {
@@ -2701,6 +2886,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol08_1and2_2_KDSwaminathan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol08_1and2_2_KDSwaminathan.pdf"
   },
   {
@@ -2717,6 +2903,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol08_1and2_3_JNSharma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol08_1and2_3_JNSharma.pdf"
   },
   {
@@ -2733,6 +2920,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol08_1and2_4_KSShukla.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol08_1and2_4_KSShukla.pdf"
   },
   {
@@ -2749,6 +2937,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol08_1and2_5_KKTiwari.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol08_1and2_5_KKTiwari.pdf"
   },
   {
@@ -2765,6 +2954,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol08_1and2_6_BGLSwamy.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol08_1and2_6_BGLSwamy.pdf"
   },
   {
@@ -2781,6 +2971,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol08_1and2_7_KRAlur.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol08_1and2_7_KRAlur.pdf"
   },
   {
@@ -2797,6 +2988,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol08_1and2_8_BookReviews.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol08_1and2_8_BookReviews.pdf"
   },
   {
@@ -2813,6 +3005,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol09_1_6_TSKuppannasastry.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol09_1_6_TSKuppannasastry.pdf"
   },
   {
@@ -2829,6 +3022,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol09_1_1_EKKharadze.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol09_1_1_EKKharadze.pdf"
   },
   {
@@ -2845,6 +3039,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol09_1_2_JSmak.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol09_1_2_JSmak.pdf"
   },
   {
@@ -2861,6 +3056,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol09_1_3_ATrautman.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol09_1_3_ATrautman.pdf"
   },
   {
@@ -2877,6 +3073,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol09_1_4_SCJoshi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol09_1_4_SCJoshi.pdf"
   },
   {
@@ -2893,6 +3090,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol09_1_5_SKGhosh.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol09_1_5_SKGhosh.pdf"
   },
   {
@@ -2909,6 +3107,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol09_1_7_RNRai.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol09_1_7_RNRai.pdf"
   },
   {
@@ -2925,6 +3124,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol09_1_8_BChatterjee.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol09_1_8_BChatterjee.pdf"
   },
   {
@@ -2941,6 +3141,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol09_1_9_CGPendse.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol09_1_9_CGPendse.pdf"
   },
   {
@@ -2957,6 +3158,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol09_1_11_DGDhavale.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol09_1_11_DGDhavale.pdf"
   },
   {
@@ -2973,6 +3175,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol09_1_13_RCGupta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol09_1_13_RCGupta.pdf"
   },
   {
@@ -2989,6 +3192,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol09_1_14_GSundaramurthy.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol09_1_14_GSundaramurthy.pdf"
   },
   {
@@ -3005,6 +3209,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol09_1_15_SNSen.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol09_1_15_SNSen.pdf"
   },
   {
@@ -3021,6 +3226,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol09_1_16_SMRAnsari.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol09_1_16_SMRAnsari.pdf"
   },
   {
@@ -3037,6 +3243,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol09_1_17_MCPande.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol09_1_17_MCPande.pdf"
   },
   {
@@ -3053,6 +3260,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol09_1_18_DRKaprekar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol09_1_18_DRKaprekar.pdf"
   },
   {
@@ -3069,6 +3277,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol09_1_19_Discussions.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol09_1_19_Discussions.pdf"
   },
   {
@@ -3085,6 +3294,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol09_2_1_RCGupta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol09_2_1_RCGupta.pdf"
   },
   {
@@ -3101,6 +3311,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol09_2_2_JVNarlikar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol09_2_2_JVNarlikar.pdf"
   },
   {
@@ -3117,6 +3328,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol09_2_3_RPKulkarni.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol09_2_3_RPKulkarni.pdf"
   },
   {
@@ -3133,6 +3345,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol09_2_4_RCGupta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol09_2_4_RCGupta.pdf"
   },
   {
@@ -3149,6 +3362,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol09_2_5_AKMishra.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol09_2_5_AKMishra.pdf"
   },
   {
@@ -3165,6 +3379,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol09_2_6_VDMarza.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol09_2_6_VDMarza.pdf"
   },
   {
@@ -3181,6 +3396,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol09_2_7_MNChannabasappa.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol09_2_7_MNChannabasappa.pdf"
   },
   {
@@ -3197,6 +3413,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol09_2_8_Reviews.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol09_2_8_Reviews.pdf"
   },
   {
@@ -3213,6 +3430,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol10_1_1_PVSharma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol10_1_1_PVSharma.pdf"
   },
   {
@@ -3229,6 +3447,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol10_1_2_RPKulkarni.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol10_1_2_RPKulkarni.pdf"
   },
   {
@@ -3245,6 +3464,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol10_1_3_VVRaman.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol10_1_3_VVRaman.pdf"
   },
   {
@@ -3261,6 +3481,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol10_1_4_RCGupta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol10_1_4_RCGupta.pdf"
   },
   {
@@ -3277,6 +3498,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol10_1_5_SMRAnsari.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol10_1_5_SMRAnsari.pdf"
   },
   {
@@ -3293,6 +3515,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol10_1_6_Announcement.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol10_1_6_Announcement.pdf"
   },
   {
@@ -3309,6 +3532,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol10_1_7_BookReviews.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol10_1_7_BookReviews.pdf"
   },
   {
@@ -3325,6 +3549,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol10_2_1_WelcomeSpeech_AGJhingran.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol10_2_1_WelcomeSpeech_AGJhingran.pdf"
   },
   {
@@ -3341,6 +3566,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol10_2_2_IntroductoryRemarks_FCAuluck.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol10_2_2_IntroductoryRemarks_FCAuluck.pdf"
   },
   {
@@ -3357,6 +3583,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol10_2_3_InauguralSpeech_BRSeshachar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol10_2_3_InauguralSpeech_BRSeshachar.pdf"
   },
   {
@@ -3373,6 +3600,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol10_2_4_MAhmad.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol10_2_4_MAhmad.pdf"
   },
   {
@@ -3389,6 +3617,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol10_2_5_AMShastri.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol10_2_5_AMShastri.pdf"
   },
   {
@@ -3405,6 +3634,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol10_2_6_Ghayasuddin.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol10_2_6_Ghayasuddin.pdf"
   },
   {
@@ -3421,6 +3651,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol10_2_7_BKNayar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol10_2_7_BKNayar.pdf"
   },
   {
@@ -3437,6 +3668,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol10_2_8_SessionIDiscussion.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol10_2_8_SessionIDiscussion.pdf"
   },
   {
@@ -3453,6 +3685,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol10_2_9_BChatterjee.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol10_2_9_BChatterjee.pdf"
   },
   {
@@ -3469,6 +3702,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol10_2_10_RNRai.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol10_2_10_RNRai.pdf"
   },
   {
@@ -3485,6 +3719,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol10_2_11_AKBag.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol10_2_11_AKBag.pdf"
   },
   {
@@ -3501,6 +3736,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol10_2_12_SNSen.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol10_2_12_SNSen.pdf"
   },
   {
@@ -3517,6 +3753,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol10_2_13_SMRAnsari.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol10_2_13_SMRAnsari.pdf"
   },
   {
@@ -3533,6 +3770,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol10_2_14_SRoy.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol10_2_14_SRoy.pdf"
   },
   {
@@ -3549,6 +3787,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol10_2_15_VBMainkar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol10_2_15_VBMainkar.pdf"
   },
   {
@@ -3565,6 +3804,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol10_2_16_SMZAlavi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol10_2_16_SMZAlavi.pdf"
   },
   {
@@ -3581,6 +3821,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol10_2_17_NKPanikkar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol10_2_17_NKPanikkar.pdf"
   },
   {
@@ -3597,6 +3838,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol10_2_18_SessionIIDiscussion.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol10_2_18_SessionIIDiscussion.pdf"
   },
   {
@@ -3613,6 +3855,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol10_2_19_SMAhmad.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol10_2_19_SMAhmad.pdf"
   },
   {
@@ -3629,6 +3872,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol10_2_20_BKNayar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol10_2_20_BKNayar.pdf"
   },
   {
@@ -3645,6 +3889,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol10_2_21_SessionIIIDiscussion.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol10_2_21_SessionIIIDiscussion.pdf"
   },
   {
@@ -3661,6 +3906,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol10_2_22_MSAsimov.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol10_2_22_MSAsimov.pdf"
   },
   {
@@ -3677,6 +3923,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol10_2_23_AHHabibi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol10_2_23_AHHabibi.pdf"
   },
   {
@@ -3693,6 +3940,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol10_2_24_BKNayar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol10_2_24_BKNayar.pdf"
   },
   {
@@ -3709,6 +3957,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol10_2_25_MRBhat.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol10_2_25_MRBhat.pdf"
   },
   {
@@ -3725,6 +3974,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol10_2_26_SessionIVDiscussion.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol10_2_26_SessionIVDiscussion.pdf"
   },
   {
@@ -3741,6 +3991,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol11_1_1_RCGupta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol11_1_1_RCGupta.pdf"
   },
   {
@@ -3757,6 +4008,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol11_1_2_BGLSwamy.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol11_1_2_BGLSwamy.pdf"
   },
   {
@@ -3773,6 +4025,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol11_1_3_BGLSwamy.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol11_1_3_BGLSwamy.pdf"
   },
   {
@@ -3789,6 +4042,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol11_1_4_RNRai.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol11_1_4_RNRai.pdf"
   },
   {
@@ -3805,6 +4059,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol11_1_5_AKBag.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol11_1_5_AKBag.pdf"
   },
   {
@@ -3821,6 +4076,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol11_1_6_LCJain.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol11_1_6_LCJain.pdf"
   },
   {
@@ -3837,6 +4093,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol11_1_7_RHSingh.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol11_1_7_RHSingh.pdf"
   },
   {
@@ -3853,6 +4110,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol11_2_1_LCJain.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol11_2_1_LCJain.pdf"
   },
   {
@@ -3869,6 +4127,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol11_2_2_MNChannabasappa.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol11_2_2_MNChannabasappa.pdf"
   },
   {
@@ -3885,6 +4144,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol11_2_3_RMitra.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol11_2_3_RMitra.pdf"
   },
   {
@@ -3901,6 +4161,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol11_2_4_DPAgarwal.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol11_2_4_DPAgarwal.pdf"
   },
   {
@@ -3917,6 +4178,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol11_2_5_MChaudhuri.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol11_2_5_MChaudhuri.pdf"
   },
   {
@@ -3933,6 +4195,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol11_2_6_TMSrinivasan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol11_2_6_TMSrinivasan.pdf"
   },
   {
@@ -3949,6 +4212,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol13_1_1_PKMajumdar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol13_1_1_PKMajumdar.pdf"
   },
   {
@@ -3965,6 +4229,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol13_1_2_PKMajumdar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol13_1_2_PKMajumdar.pdf"
   },
   {
@@ -3981,6 +4246,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol13_1_3_PKMajumdar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol13_1_3_PKMajumdar.pdf"
   },
   {
@@ -3997,6 +4263,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol13_1_4_SRNMurthy.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol13_1_4_SRNMurthy.pdf"
   },
   {
@@ -4013,6 +4280,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol13_1_5_HGershenowitz.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol13_1_5_HGershenowitz.pdf"
   },
   {
@@ -4029,6 +4297,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol13_1_6_PKSrivastava.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol13_1_6_PKSrivastava.pdf"
   },
   {
@@ -4045,6 +4314,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol13_1_7_RPKulkarni.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol13_1_7_RPKulkarni.pdf"
   },
   {
@@ -4061,6 +4331,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol13_1_8_LCJain.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol13_1_8_LCJain.pdf"
   },
   {
@@ -4077,6 +4348,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol13_1_9_SMahdihassan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol13_1_9_SMahdihassan.pdf"
   },
   {
@@ -4093,6 +4365,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol13_1_10_HGershenowitz.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol13_1_10_HGershenowitz.pdf"
   },
   {
@@ -4109,6 +4382,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol13_1_11_SMRAnsari.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol13_1_11_SMRAnsari.pdf"
   },
   {
@@ -4125,6 +4399,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol13_1_12_BookReviews.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol13_1_12_BookReviews.pdf"
   },
   {
@@ -4141,6 +4416,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol13_2_1_SRNMurthy.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol13_2_1_SRNMurthy.pdf"
   },
   {
@@ -4157,6 +4433,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol13_2_2_MRoy.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol13_2_2_MRoy.pdf"
   },
   {
@@ -4173,6 +4450,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol13_2_3_KNPrasad.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol13_2_3_KNPrasad.pdf"
   },
   {
@@ -4189,6 +4467,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol13_2_4_RPKulkarni.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol13_2_4_RPKulkarni.pdf"
   },
   {
@@ -4205,6 +4484,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol13_2_5_RCGupta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol13_2_5_RCGupta.pdf"
   },
   {
@@ -4221,6 +4501,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol13_2_6_HGershenowitz.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol13_2_6_HGershenowitz.pdf"
   },
   {
@@ -4237,6 +4518,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol13_2_7_TSKShastri.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol13_2_7_TSKShastri.pdf"
   },
   {
@@ -4253,6 +4535,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol13_2_8_BookReviews.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol13_2_8_BookReviews.pdf"
   },
   {
@@ -4269,6 +4552,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol14_1_1_SSLishk.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol14_1_1_SSLishk.pdf"
   },
   {
@@ -4285,6 +4569,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol14_1_2_HGershenowitz.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol14_1_2_HGershenowitz.pdf"
   },
   {
@@ -4301,6 +4586,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol14_1_3_HGershenowitz.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol14_1_3_HGershenowitz.pdf"
   },
   {
@@ -4317,6 +4603,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol14_1_4_LCJain.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol14_1_4_LCJain.pdf"
   },
   {
@@ -4333,6 +4620,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol14_1_5_RCGupta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol14_1_5_RCGupta.pdf"
   },
   {
@@ -4349,6 +4637,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol14_1_6_BookReviews.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol14_1_6_BookReviews.pdf"
   },
   {
@@ -4365,6 +4654,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol14_1_7_News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol14_1_7_News.pdf"
   },
   {
@@ -4381,6 +4671,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol14_2_1_SRNMurthy.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol14_2_1_SRNMurthy.pdf"
   },
   {
@@ -4397,6 +4688,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol14_2_2_VMukherji.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol14_2_2_VMukherji.pdf"
   },
   {
@@ -4413,6 +4705,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol14_2_3_HGershenowitz.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol14_2_3_HGershenowitz.pdf"
   },
   {
@@ -4429,6 +4722,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol14_2_4_HGershenowitz.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol14_2_4_HGershenowitz.pdf"
   },
   {
@@ -4445,6 +4739,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol14_2_5_JCSikdar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol14_2_5_JCSikdar.pdf"
   },
   {
@@ -4461,6 +4756,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol14_2_6_SRNMurthy.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol14_2_6_SRNMurthy.pdf"
   },
   {
@@ -4477,6 +4773,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol14_2_7_RSSingh.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol14_2_7_RSSingh.pdf"
   },
   {
@@ -4493,6 +4790,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol14_2_8_SRNMurthy.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol14_2_8_SRNMurthy.pdf"
   },
   {
@@ -4509,6 +4807,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol14_2_9_TSKSastry.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol14_2_9_TSKSastry.pdf"
   },
   {
@@ -4525,6 +4824,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol14_2_10_SSKamavisdar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol14_2_10_SSKamavisdar.pdf"
   },
   {
@@ -4541,6 +4841,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol14_2_11_BookReviews.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol14_2_11_BookReviews.pdf"
   },
   {
@@ -4557,6 +4858,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol14_2_12_News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol14_2_12_News.pdf"
   },
   {
@@ -4573,6 +4875,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol15_1_4_SBagchi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol15_1_4_SBagchi.pdf"
   },
   {
@@ -4589,6 +4892,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol15_1_6_RCGupta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol15_1_6_RCGupta.pdf"
   },
   {
@@ -4605,6 +4909,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol15_1_8_HKNaqvi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol15_1_8_HKNaqvi.pdf"
   },
   {
@@ -4621,6 +4926,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol15_1_9_RLVerma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol15_1_9_RLVerma.pdf"
   },
   {
@@ -4637,6 +4943,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol15_1_10_AKBag.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol15_1_10_AKBag.pdf"
   },
   {
@@ -4653,6 +4960,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol15_1_11_KBehari.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol15_1_11_KBehari.pdf"
   },
   {
@@ -4669,6 +4977,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol15_1_12_DKumar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol15_1_12_DKumar.pdf"
   },
   {
@@ -4685,6 +4994,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol15_1_1_INVerma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol15_1_1_INVerma.pdf"
   },
   {
@@ -4701,6 +5011,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol15_1_2_JCSikdar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol15_1_2_JCSikdar.pdf"
   },
   {
@@ -4717,6 +5028,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol15_1_3_TSiddiqi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol15_1_3_TSiddiqi.pdf"
   },
   {
@@ -4733,6 +5045,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol15_1_5_SPSangar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol15_1_5_SPSangar.pdf"
   },
   {
@@ -4749,6 +5062,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol15_1_7_SAKGhori.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol15_1_7_SAKGhori.pdf"
   },
   {
@@ -4765,6 +5079,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol15_1_13_HGershenowitz.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol15_1_13_HGershenowitz.pdf"
   },
   {
@@ -4781,6 +5096,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol15_2_4_HGershenowitz.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol15_2_4_HGershenowitz.pdf"
   },
   {
@@ -4797,6 +5113,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol15_2_5_SSKamavisdar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol15_2_5_SSKamavisdar.pdf"
   },
   {
@@ -4813,6 +5130,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol15_2_6_SMahadihassan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol15_2_6_SMahadihassan.pdf"
   },
   {
@@ -4829,6 +5147,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol15_2_1_KSShukla.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol15_2_1_KSShukla.pdf"
   },
   {
@@ -4845,6 +5164,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol15_2_2_SRNMurthy.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol15_2_2_SRNMurthy.pdf"
   },
   {
@@ -4861,6 +5181,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol15_2_3_SSLishk.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol15_2_3_SSLishk.pdf"
   },
   {
@@ -4877,6 +5198,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol16_1_2_KKThakral.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol16_1_2_KKThakral.pdf"
   },
   {
@@ -4893,6 +5215,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol16_1_4_TSiddiqi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol16_1_4_TSiddiqi.pdf"
   },
   {
@@ -4909,6 +5232,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol16_1_6_GNChaturvedi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol16_1_6_GNChaturvedi.pdf"
   },
   {
@@ -4925,6 +5249,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol16_1_7_SKMishra.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol16_1_7_SKMishra.pdf"
   },
   {
@@ -4941,6 +5266,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol16_1_8_RSSingh.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol16_1_8_RSSingh.pdf"
   },
   {
@@ -4957,6 +5283,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol16_1_11_SMahdihassan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol16_1_11_SMahdihassan.pdf"
   },
   {
@@ -4973,6 +5300,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol16_1_12_NPRai.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol16_1_12_NPRai.pdf"
   },
   {
@@ -4989,6 +5317,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol16_1_15_AKBose.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol16_1_15_AKBose.pdf"
   },
   {
@@ -5005,6 +5334,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol16_1_16_CBDube.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol16_1_16_CBDube.pdf"
   },
   {
@@ -5021,6 +5351,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol_16_1_0_Address.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol_16_1_0_Address.pdf"
   },
   {
@@ -5037,6 +5368,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol16_1_1_PVSharma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol16_1_1_PVSharma.pdf"
   },
   {
@@ -5053,6 +5385,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol16_1_3_RNSingh.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol16_1_3_RNSingh.pdf"
   },
   {
@@ -5069,6 +5402,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol16_1_5_TSiddiqi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol16_1_5_TSiddiqi.pdf"
   },
   {
@@ -5085,6 +5419,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol16_1_9_MSKhan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol16_1_9_MSKhan.pdf"
   },
   {
@@ -5101,6 +5436,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol16_1_10_ABKhan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol16_1_10_ABKhan.pdf"
   },
   {
@@ -5117,6 +5453,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol16_1_13_BNSingh.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol16_1_13_BNSingh.pdf"
   },
   {
@@ -5133,6 +5470,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol16_1_14_AHIsraili.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol16_1_14_AHIsraili.pdf"
   },
   {
@@ -5149,6 +5487,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol16_2_4_AJKhan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol16_2_4_AJKhan.pdf"
   },
   {
@@ -5165,6 +5504,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol16_2_6_JLSanchez.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol16_2_6_JLSanchez.pdf"
   },
   {
@@ -5181,6 +5521,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol16_2_9_KTMHegde.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol16_2_9_KTMHegde.pdf"
   },
   {
@@ -5197,6 +5538,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol16_2_10_SPSangar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol16_2_10_SPSangar.pdf"
   },
   {
@@ -5213,6 +5555,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol16_2_11_GAbraham.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol16_2_11_GAbraham.pdf"
   },
   {
@@ -5229,6 +5572,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol16_2_12_RSSingh.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol16_2_12_RSSingh.pdf"
   },
   {
@@ -5245,6 +5589,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol16_2_1_PKMajumdar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol16_2_1_PKMajumdar.pdf"
   },
   {
@@ -5261,6 +5606,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol16_2_2_SDSharma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol16_2_2_SDSharma.pdf"
   },
   {
@@ -5277,6 +5623,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol16_2_3_HGershenowitz.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol16_2_3_HGershenowitz.pdf"
   },
   {
@@ -5293,6 +5640,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol16_2_5_NKGarg.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol16_2_5_NKGarg.pdf"
   },
   {
@@ -5309,6 +5657,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol16_2_7_RMitra.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol16_2_7_RMitra.pdf"
   },
   {
@@ -5325,6 +5674,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol16_2_8_DGThatte.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol16_2_8_DGThatte.pdf"
   },
   {
@@ -5341,6 +5691,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol16_2_13_SMahdihassan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol16_2_13_SMahdihassan.pdf"
   },
   {
@@ -5357,6 +5708,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol17_1_2_RDRoy.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol17_1_2_RDRoy.pdf"
   },
   {
@@ -5373,6 +5725,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol17_1_4_MJMehta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol17_1_4_MJMehta.pdf"
   },
   {
@@ -5389,6 +5742,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol17_1_7_AKBag.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol17_1_7_AKBag.pdf"
   },
   {
@@ -5405,6 +5759,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol17_1_12_KSMurty.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol17_1_12_KSMurty.pdf"
   },
   {
@@ -5421,6 +5776,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol17_1_13_BookReviews.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol17_1_13_BookReviews.pdf"
   },
   {
@@ -5437,6 +5793,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol17_1_14_News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol17_1_14_News.pdf"
   },
   {
@@ -5453,6 +5810,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol17_1_1_SNSen.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol17_1_1_SNSen.pdf"
   },
   {
@@ -5469,6 +5827,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol17_1_3_RPKulkarni.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol17_1_3_RPKulkarni.pdf"
   },
   {
@@ -5485,6 +5844,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol17_1_5_HKNaqvi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol17_1_5_HKNaqvi.pdf"
   },
   {
@@ -5501,6 +5861,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol17_1_6_HCBhardwaj.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol17_1_6_HCBhardwaj.pdf"
   },
   {
@@ -5517,6 +5878,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol17_1_8_EGKRao.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol17_1_8_EGKRao.pdf"
   },
   {
@@ -5533,6 +5895,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol17_1_10_JCSikdar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol17_1_10_JCSikdar.pdf"
   },
   {
@@ -5549,6 +5912,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol17_1_11_NGangadharan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol17_1_11_NGangadharan.pdf"
   },
   {
@@ -5565,6 +5929,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol17_2_1_SSingh.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol17_2_1_SSingh.pdf"
   },
   {
@@ -5581,6 +5946,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol17_2_3_HCBhardwaj.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol17_2_3_HCBhardwaj.pdf"
   },
   {
@@ -5597,6 +5963,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol17_2_5_MLSharma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol17_2_5_MLSharma.pdf"
   },
   {
@@ -5613,6 +5980,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol17_2_10_DKumar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol17_2_10_DKumar.pdf"
   },
   {
@@ -5629,6 +5997,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol17_2_11_SKhatun.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol17_2_11_SKhatun.pdf"
   },
   {
@@ -5645,6 +6014,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol17_2_13_AKBasu.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol17_2_13_AKBasu.pdf"
   },
   {
@@ -5661,6 +6031,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol17_2_15_VNSharma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol17_2_15_VNSharma.pdf"
   },
   {
@@ -5677,6 +6048,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol17_2_16_KMMatthew.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol17_2_16_KMMatthew.pdf"
   },
   {
@@ -5693,6 +6065,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol17_2_18_DPJha.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol17_2_18_DPJha.pdf"
   },
   {
@@ -5709,6 +6082,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol17_2_19_BookReviews.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol17_2_19_BookReviews.pdf"
   },
   {
@@ -5725,6 +6099,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol17_2_20_Announcement.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol17_2_20_Announcement.pdf"
   },
   {
@@ -5741,6 +6116,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol17_2_2_RDSingh.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol17_2_2_RDSingh.pdf"
   },
   {
@@ -5757,6 +6133,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol17_2_4_EGForbes.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol17_2_4_EGForbes.pdf"
   },
   {
@@ -5773,6 +6150,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol17_2_6_AKMehra.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol17_2_6_AKMehra.pdf"
   },
   {
@@ -5789,6 +6167,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol17_2_7_MNMadhyastha.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol17_2_7_MNMadhyastha.pdf"
   },
   {
@@ -5805,6 +6184,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol17_2_8_KNobuo.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol17_2_8_KNobuo.pdf"
   },
   {
@@ -5821,6 +6201,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol17_2_9_JTBlackmore.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol17_2_9_JTBlackmore.pdf"
   },
   {
@@ -5837,6 +6218,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol17_2_12_GSingh.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol17_2_12_GSingh.pdf"
   },
   {
@@ -5853,6 +6235,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol17_2_14_VNSharma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol17_2_14_VNSharma.pdf"
   },
   {
@@ -5869,6 +6252,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol17_2_17_PKBhattacharyya.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol17_2_17_PKBhattacharyya.pdf"
   },
   {
@@ -5885,6 +6269,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol18_1_1_HGershenowitz.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol18_1_1_HGershenowitz.pdf"
   },
   {
@@ -5901,6 +6286,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol18_1_3_HGershenowitz.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol18_1_3_HGershenowitz.pdf"
   },
   {
@@ -5917,6 +6303,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol18_1_5_BDatta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol18_1_5_BDatta.pdf"
   },
   {
@@ -5933,6 +6320,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol18_1_7_HKNaqvi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol18_1_7_HKNaqvi.pdf"
   },
   {
@@ -5949,6 +6337,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol18_1_8_SMahdihassan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol18_1_8_SMahdihassan.pdf"
   },
   {
@@ -5965,6 +6354,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol18_1_9_Bookreview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol18_1_9_Bookreview.pdf"
   },
   {
@@ -5981,6 +6371,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol18_1_2_VKJoshi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol18_1_2_VKJoshi.pdf"
   },
   {
@@ -5997,6 +6388,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol18_1_4_RCGupta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol18_1_4_RCGupta.pdf"
   },
   {
@@ -6013,6 +6405,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol18_1_6_PRamakrishnan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol18_1_6_PRamakrishnan.pdf"
   },
   {
@@ -6029,6 +6422,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol18_2_3_RSSingh.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol18_2_3_RSSingh.pdf"
   },
   {
@@ -6045,6 +6439,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol18_2_4_ANSingh.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol18_2_4_ANSingh.pdf"
   },
   {
@@ -6061,6 +6456,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol18_2_7_PKMajumdar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol18_2_7_PKMajumdar.pdf"
   },
   {
@@ -6077,6 +6473,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol18_2_9_BookReviews.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol18_2_9_BookReviews.pdf"
   },
   {
@@ -6093,6 +6490,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol18_2_1_HGershenowitz.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol18_2_1_HGershenowitz.pdf"
   },
   {
@@ -6109,6 +6507,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol18_2_2_HGershenowitz.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol18_2_2_HGershenowitz.pdf"
   },
   {
@@ -6125,6 +6524,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol18_2_5_NCShekar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol18_2_5_NCShekar.pdf"
   },
   {
@@ -6141,6 +6541,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol18_2_6_VSKirsanov.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol18_2_6_VSKirsanov.pdf"
   },
   {
@@ -6157,6 +6558,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol18_2_8_MChaudhuri.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol18_2_8_MChaudhuri.pdf"
   },
   {
@@ -6173,6 +6575,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol19_1_3_SAParamhans.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol19_1_3_SAParamhans.pdf"
   },
   {
@@ -6189,6 +6592,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol19_1_4_NBhatla.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol19_1_4_NBhatla.pdf"
   },
   {
@@ -6205,6 +6609,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol19_1_5_KHKrishnamurthy.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol19_1_5_KHKrishnamurthy.pdf"
   },
   {
@@ -6221,6 +6626,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol19_1_8_Smahdihassan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol19_1_8_Smahdihassan.pdf"
   },
   {
@@ -6237,6 +6643,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol19_1_10_SAHRizvi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol19_1_10_SAHRizvi.pdf"
   },
   {
@@ -6253,6 +6660,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol19_1_11_BookReviews.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol19_1_11_BookReviews.pdf"
   },
   {
@@ -6269,6 +6677,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol19_1_12_Report.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol19_1_12_Report.pdf"
   },
   {
@@ -6285,6 +6694,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol19_1_1_PSingh.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol19_1_1_PSingh.pdf"
   },
   {
@@ -6301,6 +6711,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol19_1_2_GJChhabra.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol19_1_2_GJChhabra.pdf"
   },
   {
@@ -6317,6 +6728,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol19_1_6_HGershenowitz.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol19_1_6_HGershenowitz.pdf"
   },
   {
@@ -6333,6 +6745,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol19_1_7_AIsmail.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol19_1_7_AIsmail.pdf"
   },
   {
@@ -6349,6 +6762,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol19_1_9_Smahdihassan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol19_1_9_Smahdihassan.pdf"
   },
   {
@@ -6365,6 +6779,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol19_2_3_PDGupta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol19_2_3_PDGupta.pdf"
   },
   {
@@ -6381,6 +6796,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol19_2_5_MSBhatnagar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol19_2_5_MSBhatnagar.pdf"
   },
   {
@@ -6397,6 +6813,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol19_2_8_VDeshpande.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol19_2_8_VDeshpande.pdf"
   },
   {
@@ -6413,6 +6830,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol19_2_9_BookReviews.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol19_2_9_BookReviews.pdf"
   },
   {
@@ -6429,6 +6847,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol19_2_10_Report.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol19_2_10_Report.pdf"
   },
   {
@@ -6445,6 +6864,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol19_2_11_News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol19_2_11_News.pdf"
   },
   {
@@ -6461,6 +6881,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol19_2_1_BDatta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol19_2_1_BDatta.pdf"
   },
   {
@@ -6477,6 +6898,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol19_2_2_HGershenowitz.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol19_2_2_HGershenowitz.pdf"
   },
   {
@@ -6493,6 +6915,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol19_2_4_MRoy.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol19_2_4_MRoy.pdf"
   },
   {
@@ -6509,6 +6932,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol19_2_6_RMercier.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol19_2_6_RMercier.pdf"
   },
   {
@@ -6525,6 +6949,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol19_3_1_VVRaman.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol19_3_1_VVRaman.pdf"
   },
   {
@@ -6541,6 +6966,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol19_3_3_VShekhawat.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol19_3_3_VShekhawat.pdf"
   },
   {
@@ -6557,6 +6983,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol19_3_4_DKumar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol19_3_4_DKumar.pdf"
   },
   {
@@ -6573,6 +7000,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol19_3_9_Announcement.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol19_3_9_Announcement.pdf"
   },
   {
@@ -6589,6 +7017,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol19_3_10_SupplementVedangjyotishaofLagdha.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol19_3_10_SupplementVedangjyotishaofLagdha.pdf"
   },
   {
@@ -6605,6 +7034,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol19_3_2_URBansal.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol19_3_2_URBansal.pdf"
   },
   {
@@ -6621,6 +7051,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol19_3_5_HGershenowitz.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol19_3_5_HGershenowitz.pdf"
   },
   {
@@ -6637,6 +7068,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol19_3_6_CLYadav.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol19_3_6_CLYadav.pdf"
   },
   {
@@ -6653,6 +7085,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol19_3_7_APKulaichev.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol19_3_7_APKulaichev.pdf"
   },
   {
@@ -6669,6 +7102,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol19_3_8_BookReviews.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol19_3_8_BookReviews.pdf"
   },
   {
@@ -6685,6 +7119,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol19_4_1_SCDey.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol19_4_1_SCDey.pdf"
   },
   {
@@ -6701,6 +7136,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol19_4_2_DKAgarwal.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol19_4_2_DKAgarwal.pdf"
   },
   {
@@ -6717,6 +7153,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol19_4_6_PKChattopadhyay.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol19_4_6_PKChattopadhyay.pdf"
   },
   {
@@ -6733,6 +7170,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol19_4_8_AKBag.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol19_4_8_AKBag.pdf"
   },
   {
@@ -6749,6 +7187,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol19_4_9_BookReviews.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol19_4_9_BookReviews.pdf"
   },
   {
@@ -6765,6 +7204,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol19_4_10_NotesAndNews.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol19_4_10_NotesAndNews.pdf"
   },
   {
@@ -6781,6 +7221,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol19_4_3_MSBhatnagar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol19_4_3_MSBhatnagar.pdf"
   },
   {
@@ -6797,6 +7238,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol19_4_4_HKNaqvi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol19_4_4_HKNaqvi.pdf"
   },
   {
@@ -6813,6 +7255,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol19_4_5_MMajumdar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol19_4_5_MMajumdar.pdf"
   },
   {
@@ -6829,6 +7272,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol19_4_7_BCJoshi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol19_4_7_BCJoshi.pdf"
   },
   {
@@ -6845,6 +7289,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol20-1to4_2_KVSarma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol20-1to4_2_KVSarma.pdf"
   },
   {
@@ -6861,6 +7306,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol20-1to4_4_SNSen.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol20-1to4_4_SNSen.pdf"
   },
   {
@@ -6877,6 +7323,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol20-1to4_5_AKBag.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol20-1to4_5_AKBag.pdf"
   },
   {
@@ -6893,6 +7340,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol20-1to4_8_SDSharma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol20-1to4_8_SDSharma.pdf"
   },
   {
@@ -6909,6 +7357,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol20-1to4_9_KSShukla.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol20-1to4_9_KSShukla.pdf"
   },
   {
@@ -6925,6 +7374,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol20-1to4_12_SDSharma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol20-1to4_12_SDSharma.pdf"
   },
   {
@@ -6941,6 +7391,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol20-1to4_3_SAKhan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol20-1to4_3_SAKhan.pdf"
   },
   {
@@ -6957,6 +7408,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol20-1to4_6_SDSharma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol20-1to4_6_SDSharma.pdf"
   },
   {
@@ -6973,6 +7425,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol20-1to4_7_ASomayaji.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol20-1to4_7_ASomayaji.pdf"
   },
   {
@@ -6989,6 +7442,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol20-1to4_11_RNRai.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol20-1to4_11_RNRai.pdf"
   },
   {
@@ -7005,6 +7459,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol20-1to4_13_SMRAnsari.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol20-1to4_13_SMRAnsari.pdf"
   },
   {
@@ -7021,6 +7476,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol20-1to4_14_JCBhattacharyya.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol20-1to4_14_JCBhattacharyya.pdf"
   },
   {
@@ -7037,6 +7493,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol21_1_1_SMahdihassan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol21_1_1_SMahdihassan.pdf"
   },
   {
@@ -7053,6 +7510,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol21_1_2_ASRamanathan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol21_1_2_ASRamanathan.pdf"
   },
   {
@@ -7069,6 +7527,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol21_1_3_ASRamanathan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol21_1_3_ASRamanathan.pdf"
   },
   {
@@ -7085,6 +7544,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol21_1_4_RDRoy.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol21_1_4_RDRoy.pdf"
   },
   {
@@ -7101,6 +7561,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol21_1_5_RRDaniel.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol21_1_5_RRDaniel.pdf"
   },
   {
@@ -7117,6 +7578,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol21_1_6_RCGupta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol21_1_6_RCGupta.pdf"
   },
   {
@@ -7133,6 +7595,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol21_1_7_SKak.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol21_1_7_SKak.pdf"
   },
   {
@@ -7149,6 +7612,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol21_1_8_BZSzalek.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol21_1_8_BZSzalek.pdf"
   },
   {
@@ -7165,6 +7629,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol21_1_9_BookReview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol21_1_9_BookReview.pdf"
   },
   {
@@ -7181,6 +7646,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol21_1_11_News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol21_1_11_News.pdf"
   },
   {
@@ -7197,6 +7663,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol21_2_1_VShekhawat.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol21_2_1_VShekhawat.pdf"
   },
   {
@@ -7213,6 +7680,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol21_2_2_PKunitzsch.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol21_2_2_PKunitzsch.pdf"
   },
   {
@@ -7229,6 +7697,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol21_2_3_PSingh.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol21_2_3_PSingh.pdf"
   },
   {
@@ -7245,6 +7714,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol21_2_4_RCGupta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol21_2_4_RCGupta.pdf"
   },
   {
@@ -7261,6 +7731,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol21_2_5_SAHRizvi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol21_2_5_SAHRizvi.pdf"
   },
   {
@@ -7277,6 +7748,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol21_2_6_BCJoshi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol21_2_6_BCJoshi.pdf"
   },
   {
@@ -7293,6 +7765,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol21_2_7_OPUpadhyay.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol21_2_7_OPUpadhyay.pdf"
   },
   {
@@ -7309,6 +7782,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol21_2_8_SMahdihassan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol21_2_8_SMahdihassan.pdf"
   },
   {
@@ -7325,6 +7799,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol21_2_9_BookReviews.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol21_2_9_BookReviews.pdf"
   },
   {
@@ -7341,6 +7816,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol21_2_10_Report.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol21_2_10_Report.pdf"
   },
   {
@@ -7357,6 +7833,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol21_2_11_News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol21_2_11_News.pdf"
   },
   {
@@ -7373,6 +7850,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol21_2_12_Announcements.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol21_2_12_Announcements.pdf"
   },
   {
@@ -7389,6 +7867,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol21_3_1_ARahman.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol21_3_1_ARahman.pdf"
   },
   {
@@ -7405,6 +7884,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol21_3_2_MFAintabi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol21_3_2_MFAintabi.pdf"
   },
   {
@@ -7421,6 +7901,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol21_3_3_MAsimov.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol21_3_3_MAsimov.pdf"
   },
   {
@@ -7437,6 +7918,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol21_3_4_MMKhairullayev.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol21_3_4_MMKhairullayev.pdf"
   },
   {
@@ -7453,6 +7935,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol21_3_5_KNPandita.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol21_3_5_KNPandita.pdf"
   },
   {
@@ -7469,6 +7952,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol21_3_6_MAsimov.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol21_3_6_MAsimov.pdf"
   },
   {
@@ -7485,6 +7969,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol21_3_7_HMSaid.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol21_3_7_HMSaid.pdf"
   },
   {
@@ -7501,6 +7986,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol21_3_8_AKBag.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol21_3_8_AKBag.pdf"
   },
   {
@@ -7517,6 +8003,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol21_3_9_SAARizvi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol21_3_9_SAARizvi.pdf"
   },
   {
@@ -7533,6 +8020,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol21_3_10_WHAbdi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol21_3_10_WHAbdi.pdf"
   },
   {
@@ -7549,6 +8037,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol21_3_11_Report.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol21_3_11_Report.pdf"
   },
   {
@@ -7565,6 +8054,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol21_4_1_SRAPerwaz.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol21_4_1_SRAPerwaz.pdf"
   },
   {
@@ -7581,6 +8071,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol21_4_2_MSKhan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol21_4_2_MSKhan.pdf"
   },
   {
@@ -7597,6 +8088,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol21_4_3_TSiddiqi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol21_4_3_TSiddiqi.pdf"
   },
   {
@@ -7613,6 +8105,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol21_4_4_GNChaturvedi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol21_4_4_GNChaturvedi.pdf"
   },
   {
@@ -7629,6 +8122,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol21_4_5_MTaiyab.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol21_4_5_MTaiyab.pdf"
   },
   {
@@ -7645,6 +8139,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol21_4_6_PNPushp.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol21_4_6_PNPushp.pdf"
   },
   {
@@ -7661,6 +8156,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol21_4_7_HSVirk.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol21_4_7_HSVirk.pdf"
   },
   {
@@ -7677,6 +8173,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol21_4_8_SShafi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol21_4_8_SShafi.pdf"
   },
   {
@@ -7693,6 +8190,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol22_1_1_ASRamanathan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol22_1_1_ASRamanathan.pdf"
   },
   {
@@ -7709,6 +8207,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol22_1_2_VDeshpande.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol22_1_2_VDeshpande.pdf"
   },
   {
@@ -7725,6 +8224,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol22_1_4_AKBiswas.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol22_1_4_AKBiswas.pdf"
   },
   {
@@ -7741,6 +8241,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol22_1_5_WHAbdi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol22_1_5_WHAbdi.pdf"
   },
   {
@@ -7757,6 +8258,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol22_1_6_SCKak.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol22_1_6_SCKak.pdf"
   },
   {
@@ -7773,6 +8275,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol22_1_7_SMahdihassan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol22_1_7_SMahdihassan.pdf"
   },
   {
@@ -7789,6 +8292,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol22_1_8_RKrishnamurthy.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol22_1_8_RKrishnamurthy.pdf"
   },
   {
@@ -7805,6 +8309,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol22_1_9_SChandra.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol22_1_9_SChandra.pdf"
   },
   {
@@ -7821,6 +8326,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol22_1_10_BookReviews.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol22_1_10_BookReviews.pdf"
   },
   {
@@ -7837,6 +8343,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol22_1_11_Report.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol22_1_11_Report.pdf"
   },
   {
@@ -7853,6 +8360,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol22_1-12_Announcements.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol22_1-12_Announcements.pdf"
   },
   {
@@ -7869,6 +8377,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol22_2_2_RPSTyagi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol22_2_2_RPSTyagi.pdf"
   },
   {
@@ -7885,6 +8394,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol22_2_3_VKSharma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol22_2_3_VKSharma.pdf"
   },
   {
@@ -7901,6 +8411,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol22_2_4_GPrasad.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol22_2_4_GPrasad.pdf"
   },
   {
@@ -7917,6 +8428,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol22_2_5_DNGarg.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol22_2_5_DNGarg.pdf"
   },
   {
@@ -7933,6 +8445,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol22_2_6_KCSatija.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol22_2_6_KCSatija.pdf"
   },
   {
@@ -7949,6 +8462,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol22_2_7_RDRana.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol22_2_7_RDRana.pdf"
   },
   {
@@ -7965,6 +8479,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol22_2_8_VMMandokhot.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol22_2_8_VMMandokhot.pdf"
   },
   {
@@ -7981,6 +8496,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol22_2_9_UMandokhot.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol22_2_9_UMandokhot.pdf"
   },
   {
@@ -7997,6 +8513,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol22_2_10_SPrasad.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol22_2_10_SPrasad.pdf"
   },
   {
@@ -8013,6 +8530,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol22_2_11_SKKalra.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol22_2_11_SKKalra.pdf"
   },
   {
@@ -8029,6 +8547,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol22_2_12_RDSharma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol22_2_12_RDSharma.pdf"
   },
   {
@@ -8045,6 +8564,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol22_2_13_SCDogra.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol22_2_13_SCDogra.pdf"
   },
   {
@@ -8061,6 +8581,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol22_2_14_News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol22_2_14_News.pdf"
   },
   {
@@ -8077,6 +8598,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol22_3_1_ASRamanathan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol22_3_1_ASRamanathan.pdf"
   },
   {
@@ -8093,6 +8615,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol22_3_2_ASRamanathan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol22_3_2_ASRamanathan.pdf"
   },
   {
@@ -8109,6 +8632,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol22_3_3_ASRamanathan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol22_3_3_ASRamanathan.pdf"
   },
   {
@@ -8125,6 +8649,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol22_3_4_SCKak.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol22_3_4_SCKak.pdf"
   },
   {
@@ -8141,6 +8666,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol22_3_5_SCKak.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol22_3_5_SCKak.pdf"
   },
   {
@@ -8157,6 +8683,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol22_3_6_OPUpadhyay.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol22_3_6_OPUpadhyay.pdf"
   },
   {
@@ -8173,6 +8700,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol22_3_7_RCGupta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol22_3_7_RCGupta.pdf"
   },
   {
@@ -8189,6 +8717,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol22_3_8_Jlaurent.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol22_3_8_Jlaurent.pdf"
   },
   {
@@ -8205,6 +8734,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol22_3_9_BookReviews.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol22_3_9_BookReviews.pdf"
   },
   {
@@ -8221,6 +8751,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol22_3_10_Supplement_RasaRatnaSamuccaya.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol22_3_10_Supplement_RasaRatnaSamuccaya.pdf"
   },
   {
@@ -8237,6 +8768,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol22_4_1_ASRamanathan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol22_4_1_ASRamanathan.pdf"
   },
   {
@@ -8253,6 +8785,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol22_4_2_SMahdihassan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol22_4_2_SMahdihassan.pdf"
   },
   {
@@ -8269,6 +8802,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol22_4_3_BCJoshi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol22_4_3_BCJoshi.pdf"
   },
   {
@@ -8285,6 +8819,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol22_4_4_RPKulkarni.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol22_4_4_RPKulkarni.pdf"
   },
   {
@@ -8301,6 +8836,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol22_4_5_RPKulkarni.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol22_4_5_RPKulkarni.pdf"
   },
   {
@@ -8317,6 +8853,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol22_4_6_BNMehrotra.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol22_4_6_BNMehrotra.pdf"
   },
   {
@@ -8333,6 +8870,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol22_4_7_VSingh.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol22_4_7_VSingh.pdf"
   },
   {
@@ -8349,6 +8887,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol22_4_8_SPGupta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol22_4_8_SPGupta.pdf"
   },
   {
@@ -8365,6 +8904,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol22_4_9_RKTrivedi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol22_4_9_RKTrivedi.pdf"
   },
   {
@@ -8381,6 +8921,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol24_1_1_SCKak.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol24_1_1_SCKak.pdf"
   },
   {
@@ -8397,6 +8938,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol24_1_2_GArmitage.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol24_1_2_GArmitage.pdf"
   },
   {
@@ -8413,6 +8955,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol24_1_3_PJha.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol24_1_3_PJha.pdf"
   },
   {
@@ -8429,6 +8972,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol24_1_4_BookReview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol24_1_4_BookReview.pdf"
   },
   {
@@ -8445,6 +8989,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol24_1_5_Supplement.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol24_1_5_Supplement.pdf"
   },
   {
@@ -8461,6 +9006,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol24_2_1_SAHRizvi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol24_2_1_SAHRizvi.pdf"
   },
   {
@@ -8477,6 +9023,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol24_2_2_SSeshan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol24_2_2_SSeshan.pdf"
   },
   {
@@ -8493,6 +9040,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol24_2_3_BSzalek.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol24_2_3_BSzalek.pdf"
   },
   {
@@ -8509,6 +9057,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol24_2_4_BookReviews.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol24_2_4_BookReviews.pdf"
   },
   {
@@ -8525,6 +9074,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol24_3_1_APKulaichev.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol24_3_1_APKulaichev.pdf"
   },
   {
@@ -8541,6 +9091,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol24_3_2_SAParamhans.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol24_3_2_SAParamhans.pdf"
   },
   {
@@ -8557,6 +9108,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol24_4_2_SAParamhans.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol24_4_2_SAParamhans.pdf"
   },
   {
@@ -8573,6 +9125,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol24_3_4BBLal.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol24_3_4BBLal.pdf"
   },
   {
@@ -8589,6 +9142,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol24_3_5_LCJain.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol24_3_5_LCJain.pdf"
   },
   {
@@ -8605,6 +9159,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol24_3_6_SMahadihassan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol24_3_6_SMahadihassan.pdf"
   },
   {
@@ -8621,6 +9176,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol24_3_7_RKKochhar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol24_3_7_RKKochhar.pdf"
   },
   {
@@ -8637,6 +9193,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol24_3_8_AKBiswas.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol24_3_8_AKBiswas.pdf"
   },
   {
@@ -8653,6 +9210,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol24_3_9_BookReviews.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol24_3_9_BookReviews.pdf"
   },
   {
@@ -8669,6 +9227,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol24_3_10_ProjectsRenewed.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol24_3_10_ProjectsRenewed.pdf"
   },
   {
@@ -8685,6 +9244,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol24_4_1_KSShukla.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol24_4_1_KSShukla.pdf"
   },
   {
@@ -8701,6 +9261,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol24_4_2_BSen.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol24_4_2_BSen.pdf"
   },
   {
@@ -8717,6 +9278,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol24_4_3_TRChandrasekhar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol24_4_3_TRChandrasekhar.pdf"
   },
   {
@@ -8733,6 +9295,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol24_4_4_SNSen.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol24_4_4_SNSen.pdf"
   },
   {
@@ -8749,6 +9312,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol24_4_5_MCMallik.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol24_4_5_MCMallik.pdf"
   },
   {
@@ -8765,6 +9329,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol24_4_6_ABasu.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol24_4_6_ABasu.pdf"
   },
   {
@@ -8781,6 +9346,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol24_4_7_VLSharma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol24_4_7_VLSharma.pdf"
   },
   {
@@ -8797,6 +9363,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol24_4_8_SMahadihassan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol24_4_8_SMahadihassan.pdf"
   },
   {
@@ -8813,6 +9380,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol24_4_9_BookReview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol24_4_9_BookReview.pdf"
   },
   {
@@ -8829,6 +9397,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol24_4_10_Report.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol24_4_10_Report.pdf"
   },
   {
@@ -8845,6 +9414,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol24_4_11_Supplement.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol24_4_11_Supplement.pdf"
   },
   {
@@ -8861,6 +9431,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol25_1to4_1_SMahdihassan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol25_1to4_1_SMahdihassan.pdf"
   },
   {
@@ -8877,6 +9448,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol25_1to4_2_AKBag.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol25_1to4_2_AKBag.pdf"
   },
   {
@@ -8893,6 +9465,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol25_1to4_3_MSKhan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol25_1to4_3_MSKhan.pdf"
   },
   {
@@ -8909,6 +9482,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol25_1to4_4_VNSharma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol25_1to4_4_VNSharma.pdf"
   },
   {
@@ -8925,6 +9499,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol25_1to4_5_NewsProjectsapprovedNewpublication.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol25_1to4_5_NewsProjectsapprovedNewpublication.pdf"
   },
   {
@@ -8941,6 +9516,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol25_1to4_6_SupplementLaghumanasa.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol25_1to4_6_SupplementLaghumanasa.pdf"
   },
   {
@@ -8957,6 +9533,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol26_1_1_KDAbhyankar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol26_1_1_KDAbhyankar.pdf"
   },
   {
@@ -8973,6 +9550,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol26_1_2_SMahdihassan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol26_1_2_SMahdihassan.pdf"
   },
   {
@@ -8989,6 +9567,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol26_1_3_SRSarma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol26_1_3_SRSarma.pdf"
   },
   {
@@ -9005,6 +9584,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol26_1_4_SAParamhans.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol26_1_4_SAParamhans.pdf"
   },
   {
@@ -9021,6 +9601,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol26_1_5_AKChakraborty.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol26_1_5_AKChakraborty.pdf"
   },
   {
@@ -9037,6 +9618,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol26_1_6_SSangwan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol26_1_6_SSangwan.pdf"
   },
   {
@@ -9053,6 +9635,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol26_1_7_ABandyopandhyay.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol26_1_7_ABandyopandhyay.pdf"
   },
   {
@@ -9069,6 +9652,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol26_1_8_BookReview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol26_1_8_BookReview.pdf"
   },
   {
@@ -9085,6 +9669,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol26_2_1_KTAcharya.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol26_2_1_KTAcharya.pdf"
   },
   {
@@ -9101,6 +9686,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol26_2_2_SMahdihassan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol26_2_2_SMahdihassan.pdf"
   },
   {
@@ -9117,6 +9703,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol26_2_3_MRay.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol26_2_3_MRay.pdf"
   },
   {
@@ -9133,6 +9720,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol26_2_4_MChaudhuri.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol26_2_4_MChaudhuri.pdf"
   },
   {
@@ -9149,6 +9737,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol26_2_5_HKNaqvi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol26_2_5_HKNaqvi.pdf"
   },
   {
@@ -9165,6 +9754,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol26_2_6_KVSarma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol26_2_6_KVSarma.pdf"
   },
   {
@@ -9181,6 +9771,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol26_2_7_VNSharma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol26_2_7_VNSharma.pdf"
   },
   {
@@ -9197,6 +9788,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol26_2_8_AKSaxena.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol26_2_8_AKSaxena.pdf"
   },
   {
@@ -9213,6 +9805,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol26_2_9_NewsIHCongress.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol26_2_9_NewsIHCongress.pdf"
   },
   {
@@ -9229,6 +9822,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol26_3_1_PVSharma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol26_3_1_PVSharma.pdf"
   },
   {
@@ -9245,6 +9839,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol26_3_2_VNSharma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol26_3_2_VNSharma.pdf"
   },
   {
@@ -9261,6 +9856,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol26_3_3_AKarbelashvili.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol26_3_3_AKarbelashvili.pdf"
   },
   {
@@ -9277,6 +9873,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol26_3_4_PKBasu.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol26_3_4_PKBasu.pdf"
   },
   {
@@ -9293,6 +9890,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol26_3_5_SupplementRasaratnasamucchaya.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol26_3_5_SupplementRasaratnasamucchaya.pdf"
   },
   {
@@ -9309,6 +9907,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol26_4_1_BPrakash.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol26_4_1_BPrakash.pdf"
   },
   {
@@ -9325,6 +9924,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol26_4_2_SMahdihassan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol26_4_2_SMahdihassan.pdf"
   },
   {
@@ -9341,6 +9941,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol26_4_3_NKChandel.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol26_4_3_NKChandel.pdf"
   },
   {
@@ -9357,6 +9958,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol26_4_4_GAbraham.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol26_4_4_GAbraham.pdf"
   },
   {
@@ -9373,6 +9975,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol26_4_5_SPGupta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol26_4_5_SPGupta.pdf"
   },
   {
@@ -9389,6 +9992,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol26_4_6_SupplementsPanchavimsatika.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol26_4_6_SupplementsPanchavimsatika.pdf"
   },
   {
@@ -9405,6 +10009,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol27_1_1_SMahdihassan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol27_1_1_SMahdihassan.pdf"
   },
   {
@@ -9421,6 +10026,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol27_1_2_KTAchaya.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol27_1_2_KTAchaya.pdf"
   },
   {
@@ -9437,6 +10043,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol27_1_3_NSaxena.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol27_1_3_NSaxena.pdf"
   },
   {
@@ -9453,6 +10060,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol27_1_4_KAChowdhury.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol27_1_4_KAChowdhury.pdf"
   },
   {
@@ -9469,6 +10077,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol27_1_5_BDatta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol27_1_5_BDatta.pdf"
   },
   {
@@ -9485,6 +10094,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol27_2_1_VDeshpande.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol27_2_1_VDeshpande.pdf"
   },
   {
@@ -9501,6 +10111,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol27_2_2_AJQaisar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol27_2_2_AJQaisar.pdf"
   },
   {
@@ -9517,6 +10128,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol27_2_3_MMehta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol27_2_3_MMehta.pdf"
   },
   {
@@ -9533,6 +10145,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol27_2_4_JNSinha.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol27_2_4_JNSinha.pdf"
   },
   {
@@ -9549,6 +10162,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol27_2_5_BookReviews.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol27_2_5_BookReviews.pdf"
   },
   {
@@ -9565,6 +10179,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol27_2_6_NewPublications.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol27_2_6_NewPublications.pdf"
   },
   {
@@ -9581,6 +10196,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol27_3_1_JCSikdar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol27_3_1_JCSikdar.pdf"
   },
   {
@@ -9597,6 +10213,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol27_3_2_BDatta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol27_3_2_BDatta.pdf"
   },
   {
@@ -9613,6 +10230,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol27_3_3_RKrishnamurthy.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol27_3_3_RKrishnamurthy.pdf"
   },
   {
@@ -9629,6 +10247,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol27_3_4_ASaeed.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol27_3_4_ASaeed.pdf"
   },
   {
@@ -9645,6 +10264,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol27_3_5_DKMittra.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol27_3_5_DKMittra.pdf"
   },
   {
@@ -9661,6 +10281,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol27_3_6_AGhosh.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol27_3_6_AGhosh.pdf"
   },
   {
@@ -9677,6 +10298,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol27_3_7_News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol27_3_7_News.pdf"
   },
   {
@@ -9693,6 +10315,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol27_3_8_Supplement_RasaRatnaSamuccaya.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol27_3_8_Supplement_RasaRatnaSamuccaya.pdf"
   },
   {
@@ -9709,6 +10332,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol27_4_1_SNSen.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol27_4_1_SNSen.pdf"
   },
   {
@@ -9725,6 +10349,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol27_4_2_JNKapur.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol27_4_2_JNKapur.pdf"
   },
   {
@@ -9741,6 +10366,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol27_4_3_HNBose.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol27_4_3_HNBose.pdf"
   },
   {
@@ -9757,6 +10383,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol27_4_4_CKMajumdar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol27_4_4_CKMajumdar.pdf"
   },
   {
@@ -9773,6 +10400,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol27_4_5_AKRaychaudhuri.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol27_4_5_AKRaychaudhuri.pdf"
   },
   {
@@ -9789,6 +10417,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol27_4_6_AKSaha.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol27_4_6_AKSaha.pdf"
   },
   {
@@ -9805,6 +10434,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol27_4_7_SKMukherjee.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol27_4_7_SKMukherjee.pdf"
   },
   {
@@ -9821,6 +10451,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol27_4_8_RCMehrotra.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol27_4_8_RCMehrotra.pdf"
   },
   {
@@ -9837,6 +10468,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol27_4_9_SKMukerjee.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol27_4_9_SKMukerjee.pdf"
   },
   {
@@ -9853,6 +10485,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol27_4_10_JDas.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol27_4_10_JDas.pdf"
   },
   {
@@ -9869,6 +10502,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol27_4_11_RRDaniel.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol27_4_11_RRDaniel.pdf"
   },
   {
@@ -9885,6 +10519,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol27_4_12_BookReviews.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol27_4_12_BookReviews.pdf"
   },
   {
@@ -9901,6 +10536,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol27_4_13_Obituary_SNSen.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol27_4_13_Obituary_SNSen.pdf"
   },
   {
@@ -9917,6 +10553,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol27_4_16_Erratum.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol27_4_16_Erratum.pdf"
   },
   {
@@ -9933,6 +10570,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol27_4_17_SupplementBibliographyofPhysics.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol27_4_17_SupplementBibliographyofPhysics.pdf"
   },
   {
@@ -9949,6 +10587,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol28_1_1_KDAbhyankar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol28_1_1_KDAbhyankar.pdf"
   },
   {
@@ -9965,6 +10604,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol28_1_2_SCKak.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol28_1_2_SCKak.pdf"
   },
   {
@@ -9981,6 +10621,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol28_1_3_PVSharma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol28_1_3_PVSharma.pdf"
   },
   {
@@ -9997,6 +10638,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol28_1_4_VNSharma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol28_1_4_VNSharma.pdf"
   },
   {
@@ -10013,6 +10655,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol28_1_5_SRSarma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol28_1_5_SRSarma.pdf"
   },
   {
@@ -10029,6 +10672,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol28_1_6_SChandra.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol28_1_6_SChandra.pdf"
   },
   {
@@ -10045,6 +10689,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol28_1_7_SupplementBibliographyofPhysics.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol28_1_7_SupplementBibliographyofPhysics.pdf"
   },
   {
@@ -10061,6 +10706,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol28_2_1_SCKak.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol28_2_1_SCKak.pdf"
   },
   {
@@ -10077,6 +10723,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol28_2_2_RCGupta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol28_2_2_RCGupta.pdf"
   },
   {
@@ -10093,6 +10740,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol28_2_3_BDatta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol28_2_3_BDatta.pdf"
   },
   {
@@ -10109,6 +10757,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol28_2_4_VNSharma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol28_2_4_VNSharma.pdf"
   },
   {
@@ -10125,6 +10774,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol28_2_5_RMercier.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol28_2_5_RMercier.pdf"
   },
   {
@@ -10141,6 +10791,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol28_2_6_AGhosh.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol28_2_6_AGhosh.pdf"
   },
   {
@@ -10157,6 +10808,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol28_2_7_BookReview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol28_2_7_BookReview.pdf"
   },
   {
@@ -10173,6 +10825,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol28_2_8_SupplementBiblographyofPhysics.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol28_2_8_SupplementBiblographyofPhysics.pdf"
   },
   {
@@ -10189,6 +10842,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol28_3_1_YOhashi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol28_3_1_YOhashi.pdf"
   },
   {
@@ -10205,6 +10859,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol28_3_2_BDatta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol28_3_2_BDatta.pdf"
   },
   {
@@ -10221,6 +10876,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol28_3_3_BDatta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol28_3_3_BDatta.pdf"
   },
   {
@@ -10237,6 +10893,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol28_3_4_HSVirk.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol28_3_4_HSVirk.pdf"
   },
   {
@@ -10253,6 +10910,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol28_3_5_News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol28_3_5_News.pdf"
   },
   {
@@ -10269,6 +10927,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol28_4_1_PSFilliozat.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol28_4_1_PSFilliozat.pdf"
   },
   {
@@ -10285,6 +10944,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol28_4_2_LCJain.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol28_4_2_LCJain.pdf"
   },
   {
@@ -10301,6 +10961,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol28_4_3_AKBiswas.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol28_4_3_AKBiswas.pdf"
   },
   {
@@ -10317,6 +10978,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol28_4_4_BookReviewsAKBiswasAndARahman.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol28_4_4_BookReviewsAKBiswasAndARahman.pdf"
   },
   {
@@ -10333,6 +10995,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol28_4_5_SupplementBibliographyofPhysics.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol28_4_5_SupplementBibliographyofPhysics.pdf"
   },
   {
@@ -10349,6 +11012,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol29_1_1_DKumar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol29_1_1_DKumar.pdf"
   },
   {
@@ -10365,6 +11029,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol29_1_2_SGhose.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol29_1_2_SGhose.pdf"
   },
   {
@@ -10381,6 +11046,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol29_1_3_MKahali.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol29_1_3_MKahali.pdf"
   },
   {
@@ -10397,6 +11063,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol29_1_4_DBose.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol29_1_4_DBose.pdf"
   },
   {
@@ -10413,6 +11080,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol29_1_5_SNSen.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol29_1_5_SNSen.pdf"
   },
   {
@@ -10429,6 +11097,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol29_1_6_SCGhosh.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol29_1_6_SCGhosh.pdf"
   },
   {
@@ -10445,6 +11114,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol29_1_7_AGhosh.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol29_1_7_AGhosh.pdf"
   },
   {
@@ -10461,6 +11131,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol29_1_8_AKBiswas.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol29_1_8_AKBiswas.pdf"
   },
   {
@@ -10477,6 +11148,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol29_1_9_JKGhosh.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol29_1_9_JKGhosh.pdf"
   },
   {
@@ -10493,6 +11165,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol29_1_10_SChatterjee.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol29_1_10_SChatterjee.pdf"
   },
   {
@@ -10509,6 +11182,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol29_1_11_DChattopadhyaya.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol29_1_11_DChattopadhyaya.pdf"
   },
   {
@@ -10525,6 +11199,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol29_1_12_News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol29_1_12_News.pdf"
   },
   {
@@ -10541,6 +11216,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol29_1_13_Supplement.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol29_1_13_Supplement.pdf"
   },
   {
@@ -10557,6 +11233,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol29_2_2_AKBiswas.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol29_2_2_AKBiswas.pdf"
   },
   {
@@ -10573,6 +11250,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol29_2_3_YOhashi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol29_2_3_YOhashi.pdf"
   },
   {
@@ -10589,6 +11267,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol29_2_4_VDeshpande.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol29_2_4_VDeshpande.pdf"
   },
   {
@@ -10605,6 +11284,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol29_2_5_MFilliozat.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol29_2_5_MFilliozat.pdf"
   },
   {
@@ -10621,6 +11301,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol29_2_6_News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol29_2_6_News.pdf"
   },
   {
@@ -10637,6 +11318,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol29_3_1_SKBhatia.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol29_3_1_SKBhatia.pdf"
   },
   {
@@ -10653,6 +11335,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol29_3_2_NGDongre.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol29_3_2_NGDongre.pdf"
   },
   {
@@ -10669,6 +11352,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol29_3_3_SCKak.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol29_3_3_SCKak.pdf"
   },
   {
@@ -10685,6 +11369,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol29_3_4_AKBiswas.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol29_3_4_AKBiswas.pdf"
   },
   {
@@ -10701,6 +11386,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol29_3_5_VRamaswamy.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol29_3_5_VRamaswamy.pdf"
   },
   {
@@ -10717,6 +11403,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol29_3_6_VNSharma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol29_3_6_VNSharma.pdf"
   },
   {
@@ -10733,6 +11420,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol29_3_7_Obituary.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol29_3_7_Obituary.pdf"
   },
   {
@@ -10749,6 +11437,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol29_3_8_News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol29_3_8_News.pdf"
   },
   {
@@ -10765,6 +11454,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol29_4_1_DFrawley.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol29_4_1_DFrawley.pdf"
   },
   {
@@ -10781,6 +11471,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol29_4_2_SRSarma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol29_4_2_SRSarma.pdf"
   },
   {
@@ -10797,6 +11488,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol29_4_3_SDas.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol29_4_3_SDas.pdf"
   },
   {
@@ -10813,6 +11505,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol29_4_4_VNJha.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol29_4_4_VNJha.pdf"
   },
   {
@@ -10829,6 +11522,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol29_4_5_AKBiswas.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol29_4_5_AKBiswas.pdf"
   },
   {
@@ -10845,6 +11539,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol29_4_6_NGDongre.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol29_4_6_NGDongre.pdf"
   },
   {
@@ -10861,6 +11556,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol29_4_9_News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol29_4_9_News.pdf"
   },
   {
@@ -10877,6 +11573,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol30_1_1_JDHughes.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol30_1_1_JDHughes.pdf"
   },
   {
@@ -10893,6 +11590,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol30_1_2_PManansala.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol30_1_2_PManansala.pdf"
   },
   {
@@ -10909,6 +11607,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol30_1_3_NCRana.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol30_1_3_NCRana.pdf"
   },
   {
@@ -10925,6 +11624,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol30_1_4_AMukhopadhyay.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol30_1_4_AMukhopadhyay.pdf"
   },
   {
@@ -10941,6 +11641,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol30_1_5_JInsley.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol30_1_5_JInsley.pdf"
   },
   {
@@ -10957,6 +11658,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol30_1_6_LCJain.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol30_1_6_LCJain.pdf"
   },
   {
@@ -10973,6 +11675,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol30_1_7_BookReview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol30_1_7_BookReview.pdf"
   },
   {
@@ -10989,6 +11692,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol30_1_8_ReviewReport.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol30_1_8_ReviewReport.pdf"
   },
   {
@@ -11005,6 +11709,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol30_2and3and4_1_APGreeshmalatha.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol30_2and3and4_1_APGreeshmalatha.pdf"
   },
   {
@@ -11021,6 +11726,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol30_2and3and4_2_LCJain.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol30_2and3and4_2_LCJain.pdf"
   },
   {
@@ -11037,6 +11743,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol30_2and3and4_3_MSKhan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol30_2and3and4_3_MSKhan.pdf"
   },
   {
@@ -11053,6 +11760,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol30_2and3and4_4_AKChakravarty.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol30_2and3and4_4_AKChakravarty.pdf"
   },
   {
@@ -11069,6 +11777,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol30_2and3and4_5_BookReviews.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol30_2and3and4_5_BookReviews.pdf"
   },
   {
@@ -11085,6 +11794,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol30_2and3and4_6_News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol30_2and3and4_6_News.pdf"
   },
   {
@@ -11101,6 +11811,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol30_2and3and4_7_Supplementary_HistoryofMagneticStudiesinIndia.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol30_2and3and4_7_Supplementary_HistoryofMagneticStudiesinIndia.pdf"
   },
   {
@@ -11117,6 +11828,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol31_1_1_AKChakravarty.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol31_1_1_AKChakravarty.pdf"
   },
   {
@@ -11133,6 +11845,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol31_1_2_KDAbhyankar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol31_1_2_KDAbhyankar.pdf"
   },
   {
@@ -11149,6 +11862,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol31_1_3_AMShastri_vikrama.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol31_1_3_AMShastri_vikrama.pdf"
   },
   {
@@ -11165,6 +11879,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol31_1_4_AMShastri_Saka.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol31_1_4_AMShastri_Saka.pdf"
   },
   {
@@ -11181,6 +11896,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol31_1_5_ABhattacharyya.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol31_1_5_ABhattacharyya.pdf"
   },
   {
@@ -11197,6 +11913,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol31_1_6_KVSarma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol31_1_6_KVSarma.pdf"
   },
   {
@@ -11213,6 +11930,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol31_1_7_NewsSeminarPublications.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol31_1_7_NewsSeminarPublications.pdf"
   },
   {
@@ -11229,6 +11947,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol31_1_8_SupplementBibliographyon%20MagneticStudies.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol31_1_8_SupplementBibliographyon%20MagneticStudies.pdf"
   },
   {
@@ -11245,6 +11964,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol31_2_1_PVSharma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol31_2_1_PVSharma.pdf"
   },
   {
@@ -11261,6 +11981,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol31_2_2_KHKrishnamurthy.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol31_2_2_KHKrishnamurthy.pdf"
   },
   {
@@ -11277,6 +11998,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol31_2_3_VMishra.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol31_2_3_VMishra.pdf"
   },
   {
@@ -11293,6 +12015,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol31_2_4_LGopal.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol31_2_4_LGopal.pdf"
   },
   {
@@ -11309,6 +12032,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol31_2_5_DPingree.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol31_2_5_DPingree.pdf"
   },
   {
@@ -11325,6 +12049,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol31_2_6_NewsMonographPublications.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol31_2_6_NewsMonographPublications.pdf"
   },
   {
@@ -11341,6 +12066,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol31_3_1_HWLaale.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol31_3_1_HWLaale.pdf"
   },
   {
@@ -11357,6 +12083,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol31_3_2_MBanerjee.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol31_3_2_MBanerjee.pdf"
   },
   {
@@ -11373,6 +12100,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol31_3_3_SDSharma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol31_3_3_SDSharma.pdf"
   },
   {
@@ -11389,6 +12117,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol31_3_4_VDeshpande.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol31_3_4_VDeshpande.pdf"
   },
   {
@@ -11405,6 +12134,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol31_3_5_PKMisra.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol31_3_5_PKMisra.pdf"
   },
   {
@@ -11421,6 +12151,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol31_3_6_BookReviewandNews.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol31_3_6_BookReviewandNews.pdf"
   },
   {
@@ -11437,6 +12168,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol31_4_1_MJShendge.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol31_4_1_MJShendge.pdf"
   },
   {
@@ -11453,6 +12185,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol31_4_2_RKrishnamurthy.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol31_4_2_RKrishnamurthy.pdf"
   },
   {
@@ -11469,6 +12202,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol31_4_3_SDas.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol31_4_3_SDas.pdf"
   },
   {
@@ -11485,6 +12219,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol31_4_4_VJDeshpande.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol31_4_4_VJDeshpande.pdf"
   },
   {
@@ -11501,6 +12236,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol31_4_5_MKChandrashekaran.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol31_4_5_MKChandrashekaran.pdf"
   },
   {
@@ -11517,6 +12253,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol31_4_6_NCShah.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol31_4_6_NCShah.pdf"
   },
   {
@@ -11533,6 +12270,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol32_1_1_BPrakash.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol32_1_1_BPrakash.pdf"
   },
   {
@@ -11549,6 +12287,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol32_1_2_GVRajamanickam.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol32_1_2_GVRajamanickam.pdf"
   },
   {
@@ -11565,6 +12304,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol32_1_3_GAbraham.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol32_1_3_GAbraham.pdf"
   },
   {
@@ -11581,6 +12321,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol32_1_4_AMukhopadhyay.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol32_1_4_AMukhopadhyay.pdf"
   },
   {
@@ -11597,6 +12338,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol32_1_5_SKChatterjee.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol32_1_5_SKChatterjee.pdf"
   },
   {
@@ -11613,6 +12355,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol32_1_6_BNMukherjee.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol32_1_6_BNMukherjee.pdf"
   },
   {
@@ -11629,6 +12372,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol32_1_7_BookReview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol32_1_7_BookReview.pdf"
   },
   {
@@ -11645,6 +12389,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol32_1_9_NewsandAcademyPublicationsonHOS.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol32_1_9_NewsandAcademyPublicationsonHOS.pdf"
   },
   {
@@ -11661,6 +12406,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol32_1_10_SupplementRasahrdayatantramCh1to10.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol32_1_10_SupplementRasahrdayatantramCh1to10.pdf"
   },
   {
@@ -11677,6 +12423,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol32_2_1_SCKak.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol32_2_1_SCKak.pdf"
   },
   {
@@ -11693,6 +12440,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol32_2_2_HFrost.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol32_2_2_HFrost.pdf"
   },
   {
@@ -11709,6 +12457,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol32_2_3_VMishra.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol32_2_3_VMishra.pdf"
   },
   {
@@ -11725,6 +12474,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol32_2_4_GAbraham.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol32_2_4_GAbraham.pdf"
   },
   {
@@ -11741,6 +12491,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol32_2_5_AGhosh.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol32_2_5_AGhosh.pdf"
   },
   {
@@ -11757,6 +12508,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol32_2_6_KVSarma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol32_2_6_KVSarma.pdf"
   },
   {
@@ -11773,6 +12525,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol32_2_7_BookReview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol32_2_7_BookReview.pdf"
   },
   {
@@ -11789,6 +12542,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol32_2_8_NewsIndoPortuguesePublicationsonHOS.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol32_2_8_NewsIndoPortuguesePublicationsonHOS.pdf"
   },
   {
@@ -11805,6 +12559,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol32_3_1_KCHari.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol32_3_1_KCHari.pdf"
   },
   {
@@ -11821,6 +12576,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol32_3_2_SRSarma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol32_3_2_SRSarma.pdf"
   },
   {
@@ -11837,6 +12593,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol32_3_3_YOhashi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol32_3_3_YOhashi.pdf"
   },
   {
@@ -11853,6 +12610,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol32_3_4_BookReview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol32_3_4_BookReview.pdf"
   },
   {
@@ -11869,6 +12627,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol32_4_1_SCKak.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol32_4_1_SCKak.pdf"
   },
   {
@@ -11885,6 +12644,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol32_4_2_VMMallayya.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol32_4_2_VMMallayya.pdf"
   },
   {
@@ -11901,6 +12661,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol32_4_3_SKChatterjee.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol32_4_3_SKChatterjee.pdf"
   },
   {
@@ -11917,6 +12678,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol32_4_4_BRRao.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol32_4_4_BRRao.pdf"
   },
   {
@@ -11933,6 +12695,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol32_4_5_NSaxena.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol32_4_5_NSaxena.pdf"
   },
   {
@@ -11949,6 +12712,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol32_4_6_KSMathew.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol32_4_6_KSMathew.pdf"
   },
   {
@@ -11965,6 +12729,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol32_4_7_BookReviewaAndSRSarma.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol32_4_7_BookReviewaAndSRSarma.pdf"
   },
   {
@@ -11981,6 +12746,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol32_4_8_NewsMagicSquare.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol32_4_8_NewsMagicSquare.pdf"
   },
   {
@@ -11997,6 +12763,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol33_1_1_SKAdhikari.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol33_1_1_SKAdhikari.pdf"
   },
   {
@@ -12013,6 +12780,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol33_1_2_SCKak.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol33_1_2_SCKak.pdf"
   },
   {
@@ -12029,6 +12797,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol33_1_3_SCKak.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol33_1_3_SCKak.pdf"
   },
   {
@@ -12045,6 +12814,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol33_1_4_SSSarma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol33_1_4_SSSarma.pdf"
   },
   {
@@ -12061,6 +12831,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol33_1_5_SKJain.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol33_1_5_SKJain.pdf"
   },
   {
@@ -12077,6 +12848,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol33_1_6_SJJKozhamthadam.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol33_1_6_SJJKozhamthadam.pdf"
   },
   {
@@ -12093,6 +12865,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol33_1_7_PublicationonHOS.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol33_1_7_PublicationonHOS.pdf"
   },
   {
@@ -12109,6 +12882,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol33_1_8_Supplement.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol33_1_8_Supplement.pdf"
   },
   {
@@ -12125,6 +12899,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol33_2_1_SCKak.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol33_2_1_SCKak.pdf"
   },
   {
@@ -12141,6 +12916,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol33_2_2_BNNAchar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol33_2_2_BNNAchar.pdf"
   },
   {
@@ -12157,6 +12933,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol33_2_3_SMadabhushi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol33_2_3_SMadabhushi.pdf"
   },
   {
@@ -12173,6 +12950,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol33_2_4_AMukhopadhyay.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol33_2_4_AMukhopadhyay.pdf"
   },
   {
@@ -12189,6 +12967,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol33_2_5_SSarkar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol33_2_5_SSarkar.pdf"
   },
   {
@@ -12205,6 +12984,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol33_2_6_SKChatterjee.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol33_2_6_SKChatterjee.pdf"
   },
   {
@@ -12221,6 +13001,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol33_2_7_News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol33_2_7_News.pdf"
   },
   {
@@ -12237,6 +13018,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol33_2_8_ProjectsApproved.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol33_2_8_ProjectsApproved.pdf"
   },
   {
@@ -12253,6 +13035,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol33_2_9_AcademyPublicationsofHOS.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol33_2_9_AcademyPublicationsofHOS.pdf"
   },
   {
@@ -12269,6 +13052,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol33_2_10_Supplement.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol33_2_10_Supplement.pdf"
   },
   {
@@ -12285,6 +13069,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol33_3_1_SCKak.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol33_3_1_SCKak.pdf"
   },
   {
@@ -12301,6 +13086,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol33_3_2_KCHari.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol33_3_2_KCHari.pdf"
   },
   {
@@ -12317,6 +13103,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol33_3_3_CSRao.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol33_3_3_CSRao.pdf"
   },
   {
@@ -12333,6 +13120,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol33_3_4_NGDongre.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol33_3_4_NGDongre.pdf"
   },
   {
@@ -12349,6 +13137,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol33_3_5_ADas.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol33_3_5_ADas.pdf"
   },
   {
@@ -12365,6 +13154,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol33_3_6_AcademyPublicationsofHOS.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol33_3_6_AcademyPublicationsofHOS.pdf"
   },
   {
@@ -12381,6 +13171,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol33_3_7_Supplement.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol33_3_7_Supplement.pdf"
   },
   {
@@ -12397,6 +13188,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol33_4_1_KCHari.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol33_4_1_KCHari.pdf"
   },
   {
@@ -12413,6 +13205,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol33_4_2_PSensarma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol33_4_2_PSensarma.pdf"
   },
   {
@@ -12429,6 +13222,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol33_4_3_NGDongre.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol33_4_3_NGDongre.pdf"
   },
   {
@@ -12445,6 +13239,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol33_4_4_CPalit.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol33_4_4_CPalit.pdf"
   },
   {
@@ -12461,6 +13256,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol33_4_5_AcademysPublicationsonHOS.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol33_4_5_AcademysPublicationsonHOS.pdf"
   },
   {
@@ -12477,6 +13273,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol33_4_6_News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol33_4_6_News.pdf"
   },
   {
@@ -12493,6 +13290,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol33_4_7_Supplement.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol33_4_7_Supplement.pdf"
   },
   {
@@ -12509,6 +13307,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol34_1_1_KCHari.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol34_1_1_KCHari.pdf"
   },
   {
@@ -12525,6 +13324,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol34_1_2_NKumar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol34_1_2_NKumar.pdf"
   },
   {
@@ -12541,6 +13341,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol34_1_3_RShrivastva.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol34_1_3_RShrivastva.pdf"
   },
   {
@@ -12557,6 +13358,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol34_1_4_AGhosh.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol34_1_4_AGhosh.pdf"
   },
   {
@@ -12573,6 +13375,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol34_1_5_RSingh.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol34_1_5_RSingh.pdf"
   },
   {
@@ -12589,6 +13392,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol34_1_6_BookReviews.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol34_1_6_BookReviews.pdf"
   },
   {
@@ -12605,6 +13409,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol34_1_7_News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol34_1_7_News.pdf"
   },
   {
@@ -12621,6 +13426,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol34_2_1_JSPettersson.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol34_2_1_JSPettersson.pdf"
   },
   {
@@ -12637,6 +13443,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol34_2_2_BNNAchar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol34_2_2_BNNAchar.pdf"
   },
   {
@@ -12653,6 +13460,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol34_2_3_Skak.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol34_2_3_Skak.pdf"
   },
   {
@@ -12669,6 +13477,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol34_2_4_DKKanjilal.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol34_2_4_DKKanjilal.pdf"
   },
   {
@@ -12685,6 +13494,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol34_2_5_KCHari.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol34_2_5_KCHari.pdf"
   },
   {
@@ -12701,6 +13511,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol34_2_6_SRSarma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol34_2_6_SRSarma.pdf"
   },
   {
@@ -12717,6 +13528,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol34_2_7_BookReviews.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol34_2_7_BookReviews.pdf"
   },
   {
@@ -12733,6 +13545,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol34_2_8_News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol34_2_8_News.pdf"
   },
   {
@@ -12749,6 +13562,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol34_2_9_AcademyPublicationsonHOS.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol34_2_9_AcademyPublicationsonHOS.pdf"
   },
   {
@@ -12765,6 +13579,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol34_3_1_RShrivastva.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol34_3_1_RShrivastva.pdf"
   },
   {
@@ -12781,6 +13596,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol34_3_2_RNIyengar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol34_3_2_RNIyengar.pdf"
   },
   {
@@ -12797,6 +13613,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol34_3_3_NKMaitra.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol34_3_3_NKMaitra.pdf"
   },
   {
@@ -12813,6 +13630,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol34_3_4_BookReviews.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol34_3_4_BookReviews.pdf"
   },
   {
@@ -12829,6 +13647,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol34_3_5_News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol34_3_5_News.pdf"
   },
   {
@@ -12845,6 +13664,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol34_4_1_BSasisekaran.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol34_4_1_BSasisekaran.pdf"
   },
   {
@@ -12861,6 +13681,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol34_4_2_SRSarma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol34_4_2_SRSarma.pdf"
   },
   {
@@ -12877,6 +13698,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol34_4_3_SGarg.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol34_4_3_SGarg.pdf"
   },
   {
@@ -12893,6 +13715,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol34_4_4_RKKochhar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol34_4_4_RKKochhar.pdf"
   },
   {
@@ -12909,6 +13732,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol34_4_5_BookReview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol34_4_5_BookReview.pdf"
   },
   {
@@ -12925,6 +13749,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol34_4_6_News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol34_4_6_News.pdf"
   },
   {
@@ -12941,6 +13766,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol34_4_7_Supplement_Rasendramangalam.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol34_4_7_Supplement_Rasendramangalam.pdf"
   },
   {
@@ -12957,6 +13783,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol35_1_1_BNNAchar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol35_1_1_BNNAchar.pdf"
   },
   {
@@ -12973,6 +13800,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol35_1_2_KCHari.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol35_1_2_KCHari.pdf"
   },
   {
@@ -12989,6 +13817,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol35_1_3_PSensarma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol35_1_3_PSensarma.pdf"
   },
   {
@@ -13005,6 +13834,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol35_1_4_BvDalen.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol35_1_4_BvDalen.pdf"
   },
   {
@@ -13021,6 +13851,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol35_1_5_HSingh.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol35_1_5_HSingh.pdf"
   },
   {
@@ -13037,6 +13868,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol35_1_6_BookReviews.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol35_1_6_BookReviews.pdf"
   },
   {
@@ -13053,6 +13885,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol35_1_7_Notices.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol35_1_7_Notices.pdf"
   },
   {
@@ -13069,6 +13902,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol35_3_1_BNNAchar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol35_3_1_BNNAchar.pdf"
   },
   {
@@ -13085,6 +13919,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol35_3_2_KDAbhyankar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol35_3_2_KDAbhyankar.pdf"
   },
   {
@@ -13101,6 +13936,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol35_3_3_THayashi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol35_3_3_THayashi.pdf"
   },
   {
@@ -13117,6 +13953,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol35_3_4_VNSharma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol35_3_4_VNSharma.pdf"
   },
   {
@@ -13133,6 +13970,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol35_3_5_IHabib.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol35_3_5_IHabib.pdf"
   },
   {
@@ -13149,6 +13987,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol35_3_6_BookReviews.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol35_3_6_BookReviews.pdf"
   },
   {
@@ -13165,6 +14004,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol35_3_7_Notices.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol35_3_7_Notices.pdf"
   },
   {
@@ -13181,6 +14021,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol35_3_8_Conferences.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol35_3_8_Conferences.pdf"
   },
   {
@@ -13197,6 +14038,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol35_4_1_BNNAchar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol35_4_1_BNNAchar.pdf"
   },
   {
@@ -13213,6 +14055,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol35_4_2_HThurston.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol35_4_2_HThurston.pdf"
   },
   {
@@ -13229,6 +14072,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol35_4_3_DRaina.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol35_4_3_DRaina.pdf"
   },
   {
@@ -13245,6 +14089,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol35_4_4_BookReviews.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol35_4_4_BookReviews.pdf"
   },
   {
@@ -13261,6 +14106,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol35_4_5_SupplementsHOSResearchProjects.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol35_4_5_SupplementsHOSResearchProjects.pdf"
   },
   {
@@ -13277,6 +14123,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol36_1and2_1_RBalasubramanian.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol36_1and2_1_RBalasubramanian.pdf"
   },
   {
@@ -13293,6 +14140,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol36_1and2_2_SRSarma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol36_1and2_2_SRSarma.pdf"
   },
   {
@@ -13309,6 +14157,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol36_1and2_3_AKBag.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol36_1and2_3_AKBag.pdf"
   },
   {
@@ -13325,6 +14174,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol36_1and2_4_BookReview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol36_1and2_4_BookReview.pdf"
   },
   {
@@ -13341,6 +14191,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol36_1and2_5_Notices.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol36_1and2_5_Notices.pdf"
   },
   {
@@ -13357,6 +14208,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol36_1and2_6_Conferences.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol36_1and2_6_Conferences.pdf"
   },
   {
@@ -13373,6 +14225,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol36_1and2_7_Projects.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol36_1and2_7_Projects.pdf"
   },
   {
@@ -13389,6 +14242,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol36_3and4_1_BSasisekaran.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol36_3and4_1_BSasisekaran.pdf"
   },
   {
@@ -13405,6 +14259,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol36_3and4_2_KVSarma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol36_3and4_2_KVSarma.pdf"
   },
   {
@@ -13421,6 +14276,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol36_3and4_3_YVJeppu.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol36_3and4_3_YVJeppu.pdf"
   },
   {
@@ -13437,6 +14293,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol36_3and4_4_KCHari.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol36_3and4_4_KCHari.pdf"
   },
   {
@@ -13453,6 +14310,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol36_3and4_5_GSSodhi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol36_3and4_5_GSSodhi.pdf"
   },
   {
@@ -13469,6 +14327,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol36_3and4_6_BookReviews.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol36_3and4_6_BookReviews.pdf"
   },
   {
@@ -13485,6 +14344,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol36_3and4_7_ProjectReport.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol36_3and4_7_ProjectReport.pdf"
   },
   {
@@ -13501,6 +14361,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol36_3and4_8_Conferences.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol36_3and4_8_Conferences.pdf"
   },
   {
@@ -13517,6 +14378,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol37_1_1_RBalasubramaniam.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol37_1_1_RBalasubramaniam.pdf"
   },
   {
@@ -13533,6 +14395,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol37_1_2_BSasisekaran.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol37_1_2_BSasisekaran.pdf"
   },
   {
@@ -13549,6 +14412,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol37_1_3_KDAbhyankar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol37_1_3_KDAbhyankar.pdf"
   },
   {
@@ -13565,6 +14429,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol37_1_4_VJha.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol37_1_4_VJha.pdf"
   },
   {
@@ -13581,6 +14446,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol37_1_5_TVVenkateswaran.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol37_1_5_TVVenkateswaran.pdf"
   },
   {
@@ -13597,6 +14463,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol37_1_6_BookReview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol37_1_6_BookReview.pdf"
   },
   {
@@ -13613,6 +14480,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol37_1_7_Conference.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol37_1_7_Conference.pdf"
   },
   {
@@ -13629,6 +14497,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol37_1_9_Supplement%20ScientificPeriodicals.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol37_1_9_Supplement%20ScientificPeriodicals.pdf"
   },
   {
@@ -13645,6 +14514,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol37_2_1_BNNAchar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol37_2_1_BNNAchar.pdf"
   },
   {
@@ -13661,6 +14531,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol37_2_2_KCHari.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol37_2_2_KCHari.pdf"
   },
   {
@@ -13677,6 +14548,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol37_2_3_RBalasubramaniam.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol37_2_3_RBalasubramaniam.pdf"
   },
   {
@@ -13693,6 +14565,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol37_2_4_JWisniak.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol37_2_4_JWisniak.pdf"
   },
   {
@@ -13709,6 +14582,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol37_2_5_RSingh.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol37_2_5_RSingh.pdf"
   },
   {
@@ -13725,6 +14599,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol37_2_6_BookReview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol37_2_6_BookReview.pdf"
   },
   {
@@ -13741,6 +14616,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol37_2_7_ProjectReport.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol37_2_7_ProjectReport.pdf"
   },
   {
@@ -13757,6 +14633,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol37_2_8_Conferences.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol37_2_8_Conferences.pdf"
   },
   {
@@ -13773,6 +14650,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol37_2_9_BChaki.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol37_2_9_BChaki.pdf"
   },
   {
@@ -13789,6 +14667,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol37_2_10_INCforHOS.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol37_2_10_INCforHOS.pdf"
   },
   {
@@ -13805,6 +14684,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol37_2_11_SupplementScientificPeriodicals.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol37_2_11_SupplementScientificPeriodicals.pdf"
   },
   {
@@ -13821,6 +14701,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol37_3_1_KDAbhyankar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol37_3_1_KDAbhyankar.pdf"
   },
   {
@@ -13837,6 +14718,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol37_3_2_KCHari.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol37_3_2_KCHari.pdf"
   },
   {
@@ -13853,6 +14735,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol37_3_3_DJadhav.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol37_3_3_DJadhav.pdf"
   },
   {
@@ -13869,6 +14752,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol37_3_4_SMRAnsari.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol37_3_4_SMRAnsari.pdf"
   },
   {
@@ -13885,6 +14769,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol37_3_5_RSingh.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol37_3_5_RSingh.pdf"
   },
   {
@@ -13901,6 +14786,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol37_3_6_BookReview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol37_3_6_BookReview.pdf"
   },
   {
@@ -13917,6 +14803,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol37_3_7_ProjectReport.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol37_3_7_ProjectReport.pdf"
   },
   {
@@ -13933,6 +14820,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol37_3_8_Obituary.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol37_3_8_Obituary.pdf"
   },
   {
@@ -13949,6 +14837,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol37_3_9_NoticeofJournals.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol37_3_9_NoticeofJournals.pdf"
   },
   {
@@ -13965,6 +14854,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol37_3_10_SupplementScientificPeriodicalsBKSen.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol37_3_10_SupplementScientificPeriodicalsBKSen.pdf"
   },
   {
@@ -13981,6 +14871,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol37_4_1_MMishra.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol37_4_1_MMishra.pdf"
   },
   {
@@ -13997,6 +14888,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol37_4_2_TLaha.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol37_4_2_TLaha.pdf"
   },
   {
@@ -14013,6 +14905,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol37_4_3_KCHari.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol37_4_3_KCHari.pdf"
   },
   {
@@ -14029,6 +14922,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol37_4_4_NCShah.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol37_4_4_NCShah.pdf"
   },
   {
@@ -14045,6 +14939,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol37_4_5_SSen.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol37_4_5_SSen.pdf"
   },
   {
@@ -14061,6 +14956,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol37_4_6_BookReview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol37_4_6_BookReview.pdf"
   },
   {
@@ -14077,6 +14973,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol37_4_8_ProjectReport.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol37_4_8_ProjectReport.pdf"
   },
   {
@@ -14093,6 +14990,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol37_4_9_Obituary.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol37_4_9_Obituary.pdf"
   },
   {
@@ -14109,6 +15007,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol37_4_10_NoticeofJournals.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol37_4_10_NoticeofJournals.pdf"
   },
   {
@@ -14125,6 +15024,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol38_1_1_RCGupta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol38_1_1_RCGupta.pdf"
   },
   {
@@ -14141,6 +15041,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol38_1_2_AKBag.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol38_1_2_AKBag.pdf"
   },
   {
@@ -14157,6 +15058,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol38_1_3_AKBag.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol38_1_3_AKBag.pdf"
   },
   {
@@ -14173,6 +15075,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol38_1_4_KCHari.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol38_1_4_KCHari.pdf"
   },
   {
@@ -14189,6 +15092,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol38_1_5_SFTuan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol38_1_5_SFTuan.pdf"
   },
   {
@@ -14205,6 +15109,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol38_1_6_BookReview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol38_1_6_BookReview.pdf"
   },
   {
@@ -14221,6 +15126,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol38_1_7_Obituary.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol38_1_7_Obituary.pdf"
   },
   {
@@ -14237,6 +15143,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol38_2_1_RNIyengar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol38_2_1_RNIyengar.pdf"
   },
   {
@@ -14253,6 +15160,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol38_2_2_JLCoze.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol38_2_2_JLCoze.pdf"
   },
   {
@@ -14269,6 +15177,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol38_2_3_KRamasubramanian.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol38_2_3_KRamasubramanian.pdf"
   },
   {
@@ -14285,6 +15194,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol38_2_4_BRRao.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol38_2_4_BRRao.pdf"
   },
   {
@@ -14301,6 +15211,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol38_2_5_RSingh.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol38_2_5_RSingh.pdf"
   },
   {
@@ -14317,6 +15228,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol38_2_6_BookReview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol38_2_6_BookReview.pdf"
   },
   {
@@ -14333,6 +15245,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol38_2_7_ProjectReport.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol38_2_7_ProjectReport.pdf"
   },
   {
@@ -14349,6 +15262,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol38_2_8_IndianNationalCommissionforHOS.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol38_2_8_IndianNationalCommissionforHOS.pdf"
   },
   {
@@ -14365,6 +15279,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol38_2_9_Conferences.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol38_2_9_Conferences.pdf"
   },
   {
@@ -14381,6 +15296,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol38_3_1_RBalasubramaniam.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol38_3_1_RBalasubramaniam.pdf"
   },
   {
@@ -14397,6 +15313,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol38_3_2_BSasisekaran.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol38_3_2_BSasisekaran.pdf"
   },
   {
@@ -14413,6 +15330,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol38_3_3_KCHari.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol38_3_3_KCHari.pdf"
   },
   {
@@ -14429,6 +15347,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol38_3_4_SBRao.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol38_3_4_SBRao.pdf"
   },
   {
@@ -14445,6 +15364,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol38_3_5_IGKhan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol38_3_5_IGKhan.pdf"
   },
   {
@@ -14461,6 +15381,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol38_3_6_BookReview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol38_3_6_BookReview.pdf"
   },
   {
@@ -14477,6 +15398,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol38_3_7_ProjectReport.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol38_3_7_ProjectReport.pdf"
   },
   {
@@ -14493,6 +15415,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol38_3_8_Obituary.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol38_3_8_Obituary.pdf"
   },
   {
@@ -14509,6 +15432,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol38_3_9_Supplement.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol38_3_9_Supplement.pdf"
   },
   {
@@ -14525,6 +15449,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol38_4_1_PSensarma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol38_4_1_PSensarma.pdf"
   },
   {
@@ -14541,6 +15466,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol38_4_2_RBalasubramaniam.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol38_4_2_RBalasubramaniam.pdf"
   },
   {
@@ -14557,6 +15483,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol38_4_3_ACMandal.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol38_4_3_ACMandal.pdf"
   },
   {
@@ -14573,6 +15500,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol38_4_4_GAbraham.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol38_4_4_GAbraham.pdf"
   },
   {
@@ -14589,6 +15517,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol38_4_5_RSingh.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol38_4_5_RSingh.pdf"
   },
   {
@@ -14605,6 +15534,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol38_4_6_BookReview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol38_4_6_BookReview.pdf"
   },
   {
@@ -14621,6 +15551,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol38_4_7_Conference.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol38_4_7_Conference.pdf"
   },
   {
@@ -14637,6 +15568,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol38_4_8_News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol38_4_8_News.pdf"
   },
   {
@@ -14653,6 +15585,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol38_4_9_CHAMANewsletter.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol38_4_9_CHAMANewsletter.pdf"
   },
   {
@@ -14669,6 +15602,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol39_1_1_RSatyanarayana.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol39_1_1_RSatyanarayana.pdf"
   },
   {
@@ -14685,6 +15619,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol39_1_2_RNIyengar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol39_1_2_RNIyengar.pdf"
   },
   {
@@ -14701,6 +15636,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol39_1_3_MIDass.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol39_1_3_MIDass.pdf"
   },
   {
@@ -14717,6 +15653,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol39_1_4_JWisniak.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol39_1_4_JWisniak.pdf"
   },
   {
@@ -14733,6 +15670,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol39_1_5_JNSinha.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol39_1_5_JNSinha.pdf"
   },
   {
@@ -14749,6 +15687,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol39_1_6_BookReview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol39_1_6_BookReview.pdf"
   },
   {
@@ -14765,6 +15704,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol39_1_9_SRSarma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol39_1_9_SRSarma.pdf"
   },
   {
@@ -14781,6 +15721,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol39_1_10_News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol39_1_10_News.pdf"
   },
   {
@@ -14797,6 +15738,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol39_2_1_SKAcharya.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol39_2_1_SKAcharya.pdf"
   },
   {
@@ -14813,6 +15755,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol39_2_2_KCHari.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol39_2_2_KCHari.pdf"
   },
   {
@@ -14829,6 +15772,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol39_2_3_RBalasubramaniam.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol39_2_3_RBalasubramaniam.pdf"
   },
   {
@@ -14845,6 +15789,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol39_2_4_NAthiyaman.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol39_2_4_NAthiyaman.pdf"
   },
   {
@@ -14861,6 +15806,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol39_2_5_HistoricalNotes.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol39_2_5_HistoricalNotes.pdf"
   },
   {
@@ -14877,6 +15823,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol39_2_6_NRathnasree.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol39_2_6_NRathnasree.pdf"
   },
   {
@@ -14893,6 +15840,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol39_2_7_BookReviews.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol39_2_7_BookReviews.pdf"
   },
   {
@@ -14909,6 +15857,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol39_2_8_Notices.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol39_2_8_Notices.pdf"
   },
   {
@@ -14925,6 +15874,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol39_2_9_Supplement.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol39_2_9_Supplement.pdf"
   },
   {
@@ -14941,6 +15891,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol39_3_1_ARBasu.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol39_3_1_ARBasu.pdf"
   },
   {
@@ -14957,6 +15908,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol39_3_2_TVVenkateswaran.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol39_3_2_TVVenkateswaran.pdf"
   },
   {
@@ -14973,6 +15925,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol39_3_3_ASDhumatkar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol39_3_3_ASDhumatkar.pdf"
   },
   {
@@ -14989,6 +15942,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol39_3_4_ABasu.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol39_3_4_ABasu.pdf"
   },
   {
@@ -15005,6 +15959,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol39_3_5_HistoricalNotes.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol39_3_5_HistoricalNotes.pdf"
   },
   {
@@ -15021,6 +15976,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol39_3_6_SKMajumdar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol39_3_6_SKMajumdar.pdf"
   },
   {
@@ -15037,6 +15993,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol39_3_7_BookReview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol39_3_7_BookReview.pdf"
   },
   {
@@ -15053,6 +16010,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol39_4_1_RRajan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol39_4_1_RRajan.pdf"
   },
   {
@@ -15069,6 +16027,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol39_4_2_ANThakur.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol39_4_2_ANThakur.pdf"
   },
   {
@@ -15085,6 +16044,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol39_4_3_KDAbhyankar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol39_4_3_KDAbhyankar.pdf"
   },
   {
@@ -15101,6 +16061,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol39_4_4_SBRao.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol39_4_4_SBRao.pdf"
   },
   {
@@ -15117,6 +16078,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol39_4_5_GDYoung.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol39_4_5_GDYoung.pdf"
   },
   {
@@ -15133,6 +16095,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol39_4_6_HistoricalNotes.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol39_4_6_HistoricalNotes.pdf"
   },
   {
@@ -15149,6 +16112,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol39_4_7_CmdSKChatterjee.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol39_4_7_CmdSKChatterjee.pdf"
   },
   {
@@ -15165,6 +16129,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol39_4_8_JNSinha.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol39_4_8_JNSinha.pdf"
   },
   {
@@ -15181,6 +16146,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol39_4_9_News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol39_4_9_News.pdf"
   },
   {
@@ -15197,6 +16163,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol1_2005_01.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol1_2005_01.pdf"
   },
   {
@@ -15213,6 +16180,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol1_2005_02_ENVIRONMENT%20AND%20ECOLOGY%20IN%20THE%20RAMAYANA.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol1_2005_02_ENVIRONMENT%20AND%20ECOLOGY%20IN%20THE%20RAMAYANA.pdf"
   },
   {
@@ -15229,6 +16197,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol1_2005_03_MYSTICAL%20MATHEMATICS%20IN%20ANCIENT%20PLANETS.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol1_2005_03_MYSTICAL%20MATHEMATICS%20IN%20ANCIENT%20PLANETS.pdf"
   },
   {
@@ -15245,6 +16214,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol1_2005_04_CONGRESS%20AND%20CONSERVATION.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol1_2005_04_CONGRESS%20AND%20CONSERVATION.pdf"
   },
   {
@@ -15261,6 +16231,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol40_1_5_SSen.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol40_1_5_SSen.pdf"
   },
   {
@@ -15277,6 +16248,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol40_1_6_HistoricalNotes.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol40_1_6_HistoricalNotes.pdf"
   },
   {
@@ -15293,6 +16265,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol40_1_7_KCHari.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol40_1_7_KCHari.pdf"
   },
   {
@@ -15309,6 +16282,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol40_1_8_BookReview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol40_1_8_BookReview.pdf"
   },
   {
@@ -15325,6 +16299,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol1_2005_08_NEWS.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol1_2005_08_NEWS.pdf"
   },
   {
@@ -15341,6 +16316,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol40_1_10_SupplementScientificPeriodicals.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol40_1_10_SupplementScientificPeriodicals.pdf"
   },
   {
@@ -15357,6 +16333,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol2_2005_01.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol2_2005_01.pdf"
   },
   {
@@ -15373,6 +16350,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol2_2005_02_MANAGEMENT%20OF%20FISTULA%20IN%20ANO%20IN%20ANCIENT%20GREEK%20AND%20AYURVEDIC%20MEDICINE%20A%20HISTORICAL%20AN.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol2_2005_02_MANAGEMENT%20OF%20FISTULA%20IN%20ANO%20IN%20ANCIENT%20GREEK%20AND%20AYURVEDIC%20MEDICINE%20A%20HISTORICAL%20AN.pdf"
   },
   {
@@ -15389,6 +16367,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol2_2005_03_HIPPARCHUS'S%203600%20BASED%20CHORD%20TABLE%20AND%20ITS%20PLACE%20IN%20THE%20HISTORY%20OF%20ANCIENT%20GREEK%20AN.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol2_2005_03_HIPPARCHUS'S%203600%20BASED%20CHORD%20TABLE%20AND%20ITS%20PLACE%20IN%20THE%20HISTORY%20OF%20ANCIENT%20GREEK%20AN.pdf"
   },
   {
@@ -15405,6 +16384,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol2_2005_04_HINDUS%20SCIENTIFIC%20CONTRIBUTIONS%20IN%20INDO%20CALENDAR.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol2_2005_04_HINDUS%20SCIENTIFIC%20CONTRIBUTIONS%20IN%20INDO%20CALENDAR.pdf"
   },
   {
@@ -15421,6 +16401,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol2_2005_05_HISTORICAL%20NOTES_1.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol2_2005_05_HISTORICAL%20NOTES_1.pdf"
   },
   {
@@ -15437,6 +16418,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol2_2005_05_HISTORICAL%20NOTES_2.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol2_2005_05_HISTORICAL%20NOTES_2.pdf"
   },
   {
@@ -15453,6 +16435,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol2_2005_06_BOOK%20REVIEW.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol2_2005_06_BOOK%20REVIEW.pdf"
   },
   {
@@ -15469,6 +16452,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol2_2005_07_NEWS.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol2_2005_07_NEWS.pdf"
   },
   {
@@ -15485,6 +16469,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol2_2005_08_SUPPLEMENT.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol2_2005_08_SUPPLEMENT.pdf"
   },
   {
@@ -15501,6 +16486,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol3_2005_01_THE%20FIRST%20CATALOGUE%20ON%20FORGE%20WELDED%20IRON%20CANNONS%20BY%20NEOGI.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol3_2005_01_THE%20FIRST%20CATALOGUE%20ON%20FORGE%20WELDED%20IRON%20CANNONS%20BY%20NEOGI.pdf"
   },
   {
@@ -15517,6 +16503,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol3_2005_02_RAJAGOPALA%20THE%20MASSIVE%20IRON%20CANNON%20AT%20THANJAVUR%20IN%20TAMIL%20NADU.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol3_2005_02_RAJAGOPALA%20THE%20MASSIVE%20IRON%20CANNON%20AT%20THANJAVUR%20IN%20TAMIL%20NADU.pdf"
   },
   {
@@ -15533,6 +16520,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol3_2005_03_DAL%20MARDAN%20THE%20FORGE%20WELDED%20IRON%20CANNON%20AT%20BISHNUPUR.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol3_2005_03_DAL%20MARDAN%20THE%20FORGE%20WELDED%20IRON%20CANNON%20AT%20BISHNUPUR.pdf"
   },
   {
@@ -15549,6 +16537,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol3_2005_04_THE%20FORGE%20WELDED%20IRON%20CANNON%20AT%20BADA%20BURJ%20OF%20GOLCONDA%20FORT%20RAMPART.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol3_2005_04_THE%20FORGE%20WELDED%20IRON%20CANNON%20AT%20BADA%20BURJ%20OF%20GOLCONDA%20FORT%20RAMPART.pdf"
   },
   {
@@ -15565,6 +16554,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol3_2005_05_THE%20FORGE%20WELDED%20IRON%20CANNON%20AT%20FATEH%20BURJ%20OF%20GOLCONDA%20FORST%20RAMPART.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol3_2005_05_THE%20FORGE%20WELDED%20IRON%20CANNON%20AT%20FATEH%20BURJ%20OF%20GOLCONDA%20FORST%20RAMPART.pdf"
   },
   {
@@ -15581,6 +16571,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol3_2005_06_BHAVANI%20SANKAR%20THE%20FORGE%20WELDED%20IRON%20CANNON%20AT%20JHANSI%20FORT.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol3_2005_06_BHAVANI%20SANKAR%20THE%20FORGE%20WELDED%20IRON%20CANNON%20AT%20JHANSI%20FORT.pdf"
   },
   {
@@ -15597,6 +16588,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol3_2005_07_KADAK%20BIJLI%20THE%20FORGE%20WELDED%20IRON%20CANNON%20AT%20JHANSI%20FORT.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol3_2005_07_KADAK%20BIJLI%20THE%20FORGE%20WELDED%20IRON%20CANNON%20AT%20JHANSI%20FORT.pdf"
   },
   {
@@ -15613,6 +16605,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol3_2005_08_AZDAHA%20PAIKAR%20THE%20COMPOSITE%20IRON%20BROZE%20CANNON%20AT%20MUSA%20BURJ%20OF%20GOLCONDA%20FORT.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol3_2005_08_AZDAHA%20PAIKAR%20THE%20COMPOSITE%20IRON%20BROZE%20CANNON%20AT%20MUSA%20BURJ%20OF%20GOLCONDA%20FORT.pdf"
   },
   {
@@ -15629,6 +16622,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol3_2005_09_FATH%20RAIHBAR%20THE%20MASSIVE%20BRONZE%20CANNON%20AT%20PETLA%20BURJ%20OF%20GOLCONDA%20FORT.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol3_2005_09_FATH%20RAIHBAR%20THE%20MASSIVE%20BRONZE%20CANNON%20AT%20PETLA%20BURJ%20OF%20GOLCONDA%20FORT.pdf"
   },
   {
@@ -15645,6 +16639,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol3_2005_10_HISTORICAL%20NOTES.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol3_2005_10_HISTORICAL%20NOTES.pdf"
   },
   {
@@ -15661,6 +16656,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol3_2005_11_SUPPELMENT.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol3_2005_11_SUPPELMENT.pdf"
   },
   {
@@ -15677,6 +16673,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol4_2005_01_IRON%20CANNONS%20OF%20CHINA.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol4_2005_01_IRON%20CANNONS%20OF%20CHINA.pdf"
   },
   {
@@ -15693,6 +16690,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol4_2005_02_MONSTER%20CANNON%20WROUGHT%20IRON%20BOMBARDS%20OF%20EUROPE.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol4_2005_02_MONSTER%20CANNON%20WROUGHT%20IRON%20BOMBARDS%20OF%20EUROPE.pdf"
   },
   {
@@ -15709,6 +16707,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol4_2005_03_CANNONS%20OF%20EASTERN%20INDIA.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol4_2005_03_CANNONS%20OF%20EASTERN%20INDIA.pdf"
   },
   {
@@ -15725,6 +16724,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol4_2005_04_FORGE%20WELDED%20CANNONS%20IN%20THE%20FORTS%20OF%20KARIMNAGAR%20DISTRICT%20IN%20THE%20ANDHRA%20PRADESH.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol4_2005_04_FORGE%20WELDED%20CANNONS%20IN%20THE%20FORTS%20OF%20KARIMNAGAR%20DISTRICT%20IN%20THE%20ANDHRA%20PRADESH.pdf"
   },
   {
@@ -15741,6 +16741,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol4_2005_05_DEVELOPMENT%20OF%20CANNON%20TECHNOLOGY%20IN%20INDIA.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol4_2005_05_DEVELOPMENT%20OF%20CANNON%20TECHNOLOGY%20IN%20INDIA.pdf"
   },
   {
@@ -15757,6 +16758,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol4_2005_06_EPIC%20OF%20SALTPETRE%20TO%20GUNPOWDER.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol4_2005_06_EPIC%20OF%20SALTPETRE%20TO%20GUNPOWDER.pdf"
   },
   {
@@ -15773,6 +16775,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol4_2005_07_GUNPOWDER%20ARTILLERY%20AND%20MILITARY%20ARCHITECTURE%20IN%20SOUTH%20INDIA%20(15-18TH%20CENTURY).pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol4_2005_07_GUNPOWDER%20ARTILLERY%20AND%20MILITARY%20ARCHITECTURE%20IN%20SOUTH%20INDIA%20(15-18TH%20CENTURY).pdf"
   },
   {
@@ -15789,6 +16792,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol4_2005_08_FIREPOWER%20CENTRIC%20WARFARE%20IN%20INDIA%20AND%20MILITARY%20MODERNIZATION%20OF%20THE%20MARATHAS%201740-1.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol4_2005_08_FIREPOWER%20CENTRIC%20WARFARE%20IN%20INDIA%20AND%20MILITARY%20MODERNIZATION%20OF%20THE%20MARATHAS%201740-1.pdf"
   },
   {
@@ -15805,6 +16809,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol4_2005_09_ROCKETS%20UNDER%20HAIDAR%20ALI%20AND%20TIPU%20SULTAN'.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol4_2005_09_ROCKETS%20UNDER%20HAIDAR%20ALI%20AND%20TIPU%20SULTAN'.pdf"
   },
   {
@@ -15821,6 +16826,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Pages%20from%20Vol4_2005_10_HISTORICAL%20NOTES_1.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Pages%20from%20Vol4_2005_10_HISTORICAL%20NOTES_1.pdf"
   },
   {
@@ -15837,6 +16843,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol4_2005_10_HISTORICAL%20NOTES_2.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol4_2005_10_HISTORICAL%20NOTES_2.pdf"
   },
   {
@@ -15853,6 +16860,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol4_2005_10_HISTORICAL%20NOTES_3.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol4_2005_10_HISTORICAL%20NOTES_3.pdf"
   },
   {
@@ -15869,6 +16877,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol4_2005_11_BOOK%20REVIEW.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol4_2005_11_BOOK%20REVIEW.pdf"
   },
   {
@@ -15885,6 +16894,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol4_2005_12_NEWS.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol4_2005_12_NEWS.pdf"
   },
   {
@@ -15901,6 +16911,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol4_2005_13_SUUPPLEMENT.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol4_2005_13_SUUPPLEMENT.pdf"
   },
   {
@@ -15917,6 +16928,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol41_1_1_RNIyengar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol41_1_1_RNIyengar.pdf"
   },
   {
@@ -15933,6 +16945,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol41_1_2_PSensarma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol41_1_2_PSensarma.pdf"
   },
   {
@@ -15949,6 +16962,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol41_1_3_KCHari.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol41_1_3_KCHari.pdf"
   },
   {
@@ -15965,6 +16979,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol41_1_4_DBhattacharya.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol41_1_4_DBhattacharya.pdf"
   },
   {
@@ -15981,6 +16996,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol41_1_5_JAshraf.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol41_1_5_JAshraf.pdf"
   },
   {
@@ -15997,6 +17013,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol41_1_6_HistoricalNotes.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol41_1_6_HistoricalNotes.pdf"
   },
   {
@@ -16013,6 +17030,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol41_1_7_Einstien.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol41_1_7_Einstien.pdf"
   },
   {
@@ -16029,6 +17047,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol41_1_8_Magic%20Square.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol41_1_8_Magic%20Square.pdf"
   },
   {
@@ -16045,6 +17064,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol41_1_9_BookReview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol41_1_9_BookReview.pdf"
   },
   {
@@ -16061,6 +17081,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol41_1_10_Notices.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol41_1_10_Notices.pdf"
   },
   {
@@ -16077,6 +17098,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol41_1_11_Supplement_Grahalaghavam.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol41_1_11_Supplement_Grahalaghavam.pdf"
   },
   {
@@ -16093,6 +17115,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol41_2_1_SBhujle.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol41_2_1_SBhujle.pdf"
   },
   {
@@ -16109,6 +17132,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol41_2_2_KDAbhyankar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol41_2_2_KDAbhyankar.pdf"
   },
   {
@@ -16125,6 +17149,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol41_2_3_AKBiswas.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol41_2_3_AKBiswas.pdf"
   },
   {
@@ -16141,6 +17166,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol41_2_4_VNSharma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol41_2_4_VNSharma.pdf"
   },
   {
@@ -16157,6 +17183,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol41_2_5_HistoricalNotes.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol41_2_5_HistoricalNotes.pdf"
   },
   {
@@ -16173,6 +17200,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol41_2_6_BookReview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol41_2_6_BookReview.pdf"
   },
   {
@@ -16189,6 +17217,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol41_2_7_Obituary.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol41_2_7_Obituary.pdf"
   },
   {
@@ -16205,6 +17234,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol41_2_8_SupplementGrahalaghvam.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol41_2_8_SupplementGrahalaghvam.pdf"
   },
   {
@@ -16221,6 +17251,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol41_3_1_AKMishra.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol41_3_1_AKMishra.pdf"
   },
   {
@@ -16237,6 +17268,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol41_3_2_KCHari.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol41_3_2_KCHari.pdf"
   },
   {
@@ -16253,6 +17285,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol41_3_3_NRaghavan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol41_3_3_NRaghavan.pdf"
   },
   {
@@ -16269,6 +17302,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol41_3_4_RKDube.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol41_3_4_RKDube.pdf"
   },
   {
@@ -16285,6 +17319,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol41_3_5_RNIyengar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol41_3_5_RNIyengar.pdf"
   },
   {
@@ -16301,6 +17336,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol41_3_6_RCGupta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol41_3_6_RCGupta.pdf"
   },
   {
@@ -16317,6 +17353,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol41_3_7_SisirKMajumdar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol41_3_7_SisirKMajumdar.pdf"
   },
   {
@@ -16333,6 +17370,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol41_3_8_BookReview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol41_3_8_BookReview.pdf"
   },
   {
@@ -16349,6 +17387,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol41_3_9_SupplementGrahalaghavam.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol41_3_9_SupplementGrahalaghavam.pdf"
   },
   {
@@ -16365,6 +17404,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_1_1_RKDubey.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_1_1_RKDubey.pdf"
   },
   {
@@ -16381,6 +17421,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_1_2_JKozhmthadan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_1_2_JKozhmthadan.pdf"
   },
   {
@@ -16397,6 +17438,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_1_3_DRaina.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_1_3_DRaina.pdf"
   },
   {
@@ -16413,6 +17455,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_1_4_SSahoo.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_1_4_SSahoo.pdf"
   },
   {
@@ -16429,6 +17472,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_1_5_BSahai.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_1_5_BSahai.pdf"
   },
   {
@@ -16445,6 +17489,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_1_6_HJoglekar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_1_6_HJoglekar.pdf"
   },
   {
@@ -16461,6 +17506,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_1_7_NRatnasree.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_1_7_NRatnasree.pdf"
   },
   {
@@ -16477,6 +17523,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_1_8_BSShyalaja.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_1_8_BSShyalaja.pdf"
   },
   {
@@ -16493,6 +17540,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_1_9_BookReview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol42_1_9_BookReview.pdf"
   },
   {
@@ -16509,6 +17557,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_1_10_Supplement.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_1_10_Supplement.pdf"
   },
   {
@@ -16525,6 +17574,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_2_1_PSensarma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_2_1_PSensarma.pdf"
   },
   {
@@ -16541,6 +17591,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_2_2_ASule.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_2_2_ASule.pdf"
   },
   {
@@ -16557,6 +17608,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_2_3_AParekh.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_2_3_AParekh.pdf"
   },
   {
@@ -16573,6 +17625,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_2_4_RCGupta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_2_4_RCGupta.pdf"
   },
   {
@@ -16589,6 +17642,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_2_5_RBalasubramaniam.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_2_5_RBalasubramaniam.pdf"
   },
   {
@@ -16605,6 +17659,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_2_6_KDAbhyankar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_2_6_KDAbhyankar.pdf"
   },
   {
@@ -16621,6 +17676,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_2_7_KCHari.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_2_7_KCHari.pdf"
   },
   {
@@ -16637,6 +17693,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_2_8_RRanade.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_2_8_RRanade.pdf"
   },
   {
@@ -16653,6 +17710,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_2_9_SKMajumdar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_2_9_SKMajumdar.pdf"
   },
   {
@@ -16669,6 +17727,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_2_10_BookReviewDWajastyk.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol42_2_10_BookReviewDWajastyk.pdf"
   },
   {
@@ -16685,6 +17744,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_2_11_BookReviewMSSriram.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol42_2_11_BookReviewMSSriram.pdf"
   },
   {
@@ -16701,6 +17761,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_2_12_BookReviewJNSinha.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol42_2_12_BookReviewJNSinha.pdf"
   },
   {
@@ -16717,6 +17778,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_2_13_Obituary.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol42_2_13_Obituary.pdf"
   },
   {
@@ -16733,6 +17795,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_2_14_News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol42_2_14_News.pdf"
   },
   {
@@ -16749,6 +17812,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_2_15_Supplement.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_2_15_Supplement.pdf"
   },
   {
@@ -16765,6 +17829,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_3_1_DBWagner.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_3_1_DBWagner.pdf"
   },
   {
@@ -16781,6 +17846,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_3_2_AFeuerbach.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_3_2_AFeuerbach.pdf"
   },
   {
@@ -16797,6 +17863,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_3_3_JLCoze.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_3_3_JLCoze.pdf"
   },
   {
@@ -16813,6 +17880,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_3_4_AFeuerbach.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_3_4_AFeuerbach.pdf"
   },
   {
@@ -16829,6 +17897,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_3_5_PKChattopadhyay.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_3_5_PKChattopadhyay.pdf"
   },
   {
@@ -16845,6 +17914,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_3_6_VTripathi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_3_6_VTripathi.pdf"
   },
   {
@@ -16861,6 +17931,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_3_7_RBalasubramaniam.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_3_7_RBalasubramaniam.pdf"
   },
   {
@@ -16877,6 +17948,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_3_8_SJaikishan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_3_8_SJaikishan.pdf"
   },
   {
@@ -16893,6 +17965,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_3_9_SJaikishan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_3_9_SJaikishan.pdf"
   },
   {
@@ -16909,6 +17982,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_3_10_SJaikishan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_3_10_SJaikishan.pdf"
   },
   {
@@ -16925,6 +17999,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_3_11_RBalasubramaniam.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_3_11_RBalasubramaniam.pdf"
   },
   {
@@ -16941,6 +18016,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_3_12_HistoricalNoteRBalasubramaniam.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_3_12_HistoricalNoteRBalasubramaniam.pdf"
   },
   {
@@ -16957,6 +18033,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_3_13_HistoricalNoteGJuleff.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_3_13_HistoricalNoteGJuleff.pdf"
   },
   {
@@ -16973,6 +18050,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_3_14_HistoricalNoteLPandey.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_3_14_HistoricalNoteLPandey.pdf"
   },
   {
@@ -16989,6 +18067,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_3_15_Historical%20NoteRBalasubramaniam.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_3_15_Historical%20NoteRBalasubramaniam.pdf"
   },
   {
@@ -17005,6 +18084,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_4_1_JWadsworth.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_4_1_JWadsworth.pdf"
   },
   {
@@ -17021,6 +18101,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_4_2_JVerhoeven.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_4_2_JVerhoeven.pdf"
   },
   {
@@ -17037,6 +18118,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_4_3_JLCoze.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_4_3_JLCoze.pdf"
   },
   {
@@ -17053,6 +18135,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_4_4_PTCraddock.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_4_4_PTCraddock.pdf"
   },
   {
@@ -17069,6 +18152,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_4_5_VKumar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_4_5_VKumar.pdf"
   },
   {
@@ -17085,6 +18169,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_4_6_MRBarnett.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_4_6_MRBarnett.pdf"
   },
   {
@@ -17101,6 +18186,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_4_7_RBalasubramaniam.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_4_7_RBalasubramaniam.pdf"
   },
   {
@@ -17117,6 +18203,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_4_8_SSrinivasan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_4_8_SSrinivasan.pdf"
   },
   {
@@ -17133,6 +18220,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_4_9_HistoricalNotes.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_4_9_HistoricalNotes.pdf"
   },
   {
@@ -17149,6 +18237,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_4_10_SJaikishan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_4_10_SJaikishan.pdf"
   },
   {
@@ -17165,6 +18254,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_4_11_BookReview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol42_4_11_BookReview.pdf"
   },
   {
@@ -17181,6 +18271,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol42_4_12_Supplement.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol42_4_12_Supplement.pdf"
   },
   {
@@ -17197,6 +18288,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_1_1_RNIyengar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol43_1_1_RNIyengar.pdf"
   },
   {
@@ -17213,6 +18305,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_1_2_SSantra.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol43_1_2_SSantra.pdf"
   },
   {
@@ -17229,6 +18322,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_1_3_JDeloche.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol43_1_3_JDeloche.pdf"
   },
   {
@@ -17245,6 +18339,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_1_4_PKBondyopadhyay.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol43_1_4_PKBondyopadhyay.pdf"
   },
   {
@@ -17261,6 +18356,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_1_5_KDAbhyankar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol43_1_5_KDAbhyankar.pdf"
   },
   {
@@ -17277,6 +18373,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_1_6_RCGupta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol43_1_6_RCGupta.pdf"
   },
   {
@@ -17293,6 +18390,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_1_7_DBhattacharya.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol43_1_7_DBhattacharya.pdf"
   },
   {
@@ -17309,6 +18407,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_1_8_DNUkidwe.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol43_1_8_DNUkidwe.pdf"
   },
   {
@@ -17325,6 +18424,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_1_9_DBhattacharya.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol43_1_9_DBhattacharya.pdf"
   },
   {
@@ -17341,6 +18441,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_1_10_SKMajumdar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol43_1_10_SKMajumdar.pdf"
   },
   {
@@ -17357,6 +18458,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_1_11_BookReview_CPalit.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol43_1_11_BookReview_CPalit.pdf"
   },
   {
@@ -17373,6 +18475,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_1_12_BookReview_AKBiswas.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol43_1_12_BookReview_AKBiswas.pdf"
   },
   {
@@ -17389,6 +18492,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_1_13_Obituary.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol43_1_13_Obituary.pdf"
   },
   {
@@ -17405,6 +18509,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_1_14_News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol43_1_14_News.pdf"
   },
   {
@@ -17421,6 +18526,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_1_15_Supplement.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol43_1_15_Supplement.pdf"
   },
   {
@@ -17437,6 +18543,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_2_1_VJDeshpande.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol43_2_1_VJDeshpande.pdf"
   },
   {
@@ -17453,6 +18560,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_2_2_JBhattacharya.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol43_2_2_JBhattacharya.pdf"
   },
   {
@@ -17469,6 +18577,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_2_3_RAkhtar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol43_2_3_RAkhtar.pdf"
   },
   {
@@ -17485,6 +18594,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_2_4_HSingh.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol43_2_4_HSingh.pdf"
   },
   {
@@ -17501,6 +18611,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_2_5_SKAcharya.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol43_2_5_SKAcharya.pdf"
   },
   {
@@ -17517,6 +18628,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_2_6_CPalit.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol43_2_6_CPalit.pdf"
   },
   {
@@ -17533,6 +18645,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_2_7_RKDube.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol43_2_7_RKDube.pdf"
   },
   {
@@ -17549,6 +18662,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_2_8_SKMjumdar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol43_2_8_SKMjumdar.pdf"
   },
   {
@@ -17565,6 +18679,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_2_9_BookReview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol43_2_9_BookReview.pdf"
   },
   {
@@ -17581,6 +18696,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_2_10_Obituary.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol43_2_10_Obituary.pdf"
   },
   {
@@ -17597,6 +18713,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_3_1_PGondhalekar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol43_3_1_PGondhalekar.pdf"
   },
   {
@@ -17613,6 +18730,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_3_2_ACohen.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol43_3_2_ACohen.pdf"
   },
   {
@@ -17629,6 +18747,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_3_3_PKDatta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol43_3_3_PKDatta.pdf"
   },
   {
@@ -17645,6 +18764,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_3_4_DBhattacharya.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol43_3_4_DBhattacharya.pdf"
   },
   {
@@ -17661,6 +18781,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_3_5_NRatnasree.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol43_3_5_NRatnasree.pdf"
   },
   {
@@ -17677,6 +18798,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_3_6_RSingh.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol43_3_6_RSingh.pdf"
   },
   {
@@ -17693,6 +18815,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_3_7_BookReview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol43_3_7_BookReview.pdf"
   },
   {
@@ -17709,6 +18832,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_3_8_Obituary.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol43_3_8_Obituary.pdf"
   },
   {
@@ -17725,6 +18849,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_3_9_News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol43_3_9_News.pdf"
   },
   {
@@ -17741,6 +18866,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_3_10_Supplement.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol43_3_10_Supplement.pdf"
   },
   {
@@ -17757,6 +18883,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_4_1_PGondhalekar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol43_4_1_PGondhalekar.pdf"
   },
   {
@@ -17773,6 +18900,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_4_2_Sbalachandrarao.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol43_4_2_Sbalachandrarao.pdf"
   },
   {
@@ -17789,6 +18917,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_4_3_VMMallayya.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol43_4_3_VMMallayya.pdf"
   },
   {
@@ -17805,6 +18934,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_4_4_SDucheyne.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol43_4_4_SDucheyne.pdf"
   },
   {
@@ -17821,6 +18951,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_4_5_HSingh.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol43_4_5_HSingh.pdf"
   },
   {
@@ -17837,6 +18968,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_4_6_SKMajumdar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol43_4_6_SKMajumdar.pdf"
   },
   {
@@ -17853,6 +18985,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_4_7_BookReviewKRajan.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol43_4_7_BookReviewKRajan.pdf"
   },
   {
@@ -17869,6 +19002,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_4_8_BookReviewBPrakash.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol43_4_8_BookReviewBPrakash.pdf"
   },
   {
@@ -17885,6 +19019,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_4_9_News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol43_4_9_News.pdf"
   },
   {
@@ -17901,6 +19036,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol43_4_10_BooksreceivedforReview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol43_4_10_BooksreceivedforReview.pdf"
   },
   {
@@ -17917,6 +19053,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_1_0_Editorial.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol44_1_0_Editorial.pdf"
   },
   {
@@ -17933,6 +19070,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_1_1_MRoy.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol44_1_1_MRoy.pdf"
   },
   {
@@ -17949,6 +19087,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_1_2_PSensarma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol44_1_2_PSensarma.pdf"
   },
   {
@@ -17965,6 +19104,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_1_3_RBalasubramaniam.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol44_1_3_RBalasubramaniam.pdf"
   },
   {
@@ -17981,6 +19121,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_1_4_BPrakash.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol44_1_4_BPrakash.pdf"
   },
   {
@@ -17997,6 +19138,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_1_5_KRoy.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol44_1_5_KRoy.pdf"
   },
   {
@@ -18013,6 +19155,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_1_6_Historical%20Notes.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol44_1_6_Historical%20Notes.pdf"
   },
   {
@@ -18029,6 +19172,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_1_7_KCHari.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol44_1_7_KCHari.pdf"
   },
   {
@@ -18045,6 +19189,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_1_8_SKMajumdar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol44_1_8_SKMajumdar.pdf"
   },
   {
@@ -18061,6 +19206,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_1_9_Book%20Review.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol44_1_9_Book%20Review.pdf"
   },
   {
@@ -18077,6 +19223,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_2_0_Editorial.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol44_2_0_Editorial.pdf"
   },
   {
@@ -18093,6 +19240,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_2_1_CPechhia.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol44_2_1_CPechhia.pdf"
   },
   {
@@ -18109,6 +19257,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_2_2_PAMaas.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol44_2_2_PAMaas.pdf"
   },
   {
@@ -18125,6 +19274,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_2_3_DWujastyk.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol44_2_3_DWujastyk.pdf"
   },
   {
@@ -18141,6 +19291,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_2_4_KGZysk.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol44_2_4_KGZysk.pdf"
   },
   {
@@ -18157,6 +19308,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_2_5_PT%20Craddock.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol44_2_5_PT%20Craddock.pdf"
   },
   {
@@ -18173,6 +19325,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_2_6_ACerulli.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol44_2_6_ACerulli.pdf"
   },
   {
@@ -18189,6 +19342,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_2_7_MSankaranarayana.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol44_2_7_MSankaranarayana.pdf"
   },
   {
@@ -18205,6 +19359,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_2_8_KPrasendanz.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol44_2_8_KPrasendanz.pdf"
   },
   {
@@ -18221,6 +19376,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_2_9_HistoricalNotes.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol44_2_9_HistoricalNotes.pdf"
   },
   {
@@ -18237,6 +19393,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_2_10_SPrema.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol44_2_10_SPrema.pdf"
   },
   {
@@ -18253,6 +19410,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_2_11_RSarkar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol44_2_11_RSarkar.pdf"
   },
   {
@@ -18269,6 +19427,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_2_12_SDas.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol44_2_12_SDas.pdf"
   },
   {
@@ -18285,6 +19444,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_2_13_Supplement.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol44_2_13_Supplement.pdf"
   },
   {
@@ -18301,6 +19461,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_3_1_RNIyengar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol44_3_1_RNIyengar.pdf"
   },
   {
@@ -18317,6 +19478,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_3_2_WLox.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol44_3_2_WLox.pdf"
   },
   {
@@ -18333,6 +19495,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_3_3_RBalasubramaniampdf.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol44_3_3_RBalasubramaniampdf.pdf"
   },
   {
@@ -18349,6 +19512,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_3_4_KRoy.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol44_3_4_KRoy.pdf"
   },
   {
@@ -18365,6 +19529,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_3_5_Historical%20Notes.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol44_3_5_Historical%20Notes.pdf"
   },
   {
@@ -18381,6 +19546,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_3_6_RBhattacharya.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol44_3_6_RBhattacharya.pdf"
   },
   {
@@ -18397,6 +19563,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_3_7_AKBag.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol44_3_7_AKBag.pdf"
   },
   {
@@ -18413,6 +19580,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_3_8_AKBiswaspdf.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol44_3_8_AKBiswaspdf.pdf"
   },
   {
@@ -18429,6 +19597,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_3_9_News.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol44_3_9_News.pdf"
   },
   {
@@ -18445,6 +19614,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_3_10_SShuklapdf.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol44_3_10_SShuklapdf.pdf"
   },
   {
@@ -18461,6 +19631,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_11_SupplementRasaprakasasudhakara.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol44_11_SupplementRasaprakasasudhakara.pdf"
   },
   {
@@ -18477,6 +19648,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_4_1_PGondhalekar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol44_4_1_PGondhalekar.pdf"
   },
   {
@@ -18493,6 +19665,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_4_2_MRoy.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol44_4_2_MRoy.pdf"
   },
   {
@@ -18509,6 +19682,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_4_3_RBalasubramaniam.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol44_4_3_RBalasubramaniam.pdf"
   },
   {
@@ -18525,6 +19699,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_4_4_JDeloche.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol44_4_4_JDeloche.pdf"
   },
   {
@@ -18541,6 +19716,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_4_5_HSingh.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol44_4_5_HSingh.pdf"
   },
   {
@@ -18557,6 +19733,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_4_6_Historical%20Notes.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol44_4_6_Historical%20Notes.pdf"
   },
   {
@@ -18573,6 +19750,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_4_7_AKBag.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol44_4_7_AKBag.pdf"
   },
   {
@@ -18589,6 +19767,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_4_8_SeminarReport.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol44_4_8_SeminarReport.pdf"
   },
   {
@@ -18605,6 +19784,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_4_9_SShukla.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol44_4_9_SShukla.pdf"
   },
   {
@@ -18621,6 +19801,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_4_10_CPecchia.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol44_4_10_CPecchia.pdf"
   },
   {
@@ -18637,6 +19818,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_4_11_News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol44_4_11_News.pdf"
   },
   {
@@ -18653,6 +19835,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_4_12_Reminiscenses.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol44_4_12_Reminiscenses.pdf"
   },
   {
@@ -18669,6 +19852,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol44_13_SupplementRasaprakasasudhakara.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol44_13_SupplementRasaprakasasudhakara.pdf"
   },
   {
@@ -18685,6 +19869,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_1_0_Contents.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol45_1_0_Contents.pdf"
   },
   {
@@ -18701,6 +19886,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_1_1_RNIyengar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_1_1_RNIyengar.pdf"
   },
   {
@@ -18717,6 +19903,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_1_2_JDeloche.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_1_2_JDeloche.pdf"
   },
   {
@@ -18733,6 +19920,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_1_4_RCGupta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_1_4_RCGupta.pdf"
   },
   {
@@ -18749,6 +19937,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_1_5_BMandalarticle.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_1_5_BMandalarticle.pdf"
   },
   {
@@ -18765,6 +19954,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_1_6_SKMajumdar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_1_6_SKMajumdar.pdf"
   },
   {
@@ -18781,6 +19971,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_1_7_Bookreview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol45_1_7_Bookreview.pdf"
   },
   {
@@ -18797,6 +19988,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_1_8_SeminarReport.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_1_8_SeminarReport.pdf"
   },
   {
@@ -18813,6 +20005,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_1_9_News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol45_1_9_News.pdf"
   },
   {
@@ -18829,6 +20022,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_1_10_Awards.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol45_1_10_Awards.pdf"
   },
   {
@@ -18845,6 +20039,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_1_11_1_Supplement.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_1_11_1_Supplement.pdf"
   },
   {
@@ -18861,6 +20056,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_1_11_2_Supplement.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_1_11_2_Supplement.pdf"
   },
   {
@@ -18877,6 +20073,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_1_11_3_Supplement.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_1_11_3_Supplement.pdf"
   },
   {
@@ -18893,6 +20090,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_1_11_4_Supplement.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_1_11_4_Supplement.pdf"
   },
   {
@@ -18909,6 +20107,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_1_11_5_Supplement.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_1_11_5_Supplement.pdf"
   },
   {
@@ -18925,6 +20124,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_2_0_Contents.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol45_2_0_Contents.pdf"
   },
   {
@@ -18941,6 +20141,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_2_1_NSingh.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_2_1_NSingh.pdf"
   },
   {
@@ -18957,6 +20158,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_2_2_PTaneja.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_2_2_PTaneja.pdf"
   },
   {
@@ -18973,6 +20175,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_2_3_AKPanda.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_2_3_AKPanda.pdf"
   },
   {
@@ -18989,6 +20192,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_2_4_SSen.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_2_4_SSen.pdf"
   },
   {
@@ -19005,6 +20209,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_2_5_AKBiswas.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_2_5_AKBiswas.pdf"
   },
   {
@@ -19021,6 +20226,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_2_6_RKochar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_2_6_RKochar.pdf"
   },
   {
@@ -19037,6 +20243,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_2_7_AKBag.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_2_7_AKBag.pdf"
   },
   {
@@ -19053,6 +20260,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_2_8_Bookreview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol45_2_8_Bookreview.pdf"
   },
   {
@@ -19069,6 +20277,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_2_9_News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol45_2_9_News.pdf"
   },
   {
@@ -19085,6 +20294,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_2_10_Obituary.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol45_2_10_Obituary.pdf"
   },
   {
@@ -19101,6 +20311,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_2_11_1_Supplement_cover.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_2_11_1_Supplement_cover.pdf"
   },
   {
@@ -19117,6 +20328,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_2_11_2_Supplement_text.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol45_2_11_2_Supplement_text.pdf"
   },
   {
@@ -19133,6 +20345,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_3_0_Contents.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol45_3_0_Contents.pdf"
   },
   {
@@ -19149,6 +20362,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_3_1_PGondalekha.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_3_1_PGondalekha.pdf"
   },
   {
@@ -19165,6 +20379,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_3_2_MNVahia.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_3_2_MNVahia.pdf"
   },
   {
@@ -19181,6 +20396,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_3_3_BSasisekara.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_3_3_BSasisekara.pdf"
   },
   {
@@ -19197,6 +20413,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_3_4_RKDubey.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_3_4_RKDubey.pdf"
   },
   {
@@ -19213,6 +20430,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_3_5_JLCoze.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_3_5_JLCoze.pdf"
   },
   {
@@ -19229,6 +20447,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_3_6_SRSarma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_3_6_SRSarma.pdf"
   },
   {
@@ -19245,6 +20464,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_3_7_HSingh.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_3_7_HSingh.pdf"
   },
   {
@@ -19261,6 +20481,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_3_8_SKSen.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_3_8_SKSen.pdf"
   },
   {
@@ -19277,6 +20498,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_3_9_NupurDasgup.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_3_9_NupurDasgup.pdf"
   },
   {
@@ -19293,6 +20515,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_3_10_NParthasar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_3_10_NParthasar.pdf"
   },
   {
@@ -19309,6 +20532,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_3_11_News.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_3_11_News.pdf"
   },
   {
@@ -19325,6 +20549,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_3_12_SupplementInn.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_3_12_SupplementInn.pdf"
   },
   {
@@ -19341,6 +20566,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_3_13_Sanskrittextc.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_3_13_Sanskrittextc.pdf"
   },
   {
@@ -19357,6 +20583,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_3_14_EnglishtextCha.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_3_14_EnglishtextCha.pdf"
   },
   {
@@ -19373,6 +20600,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_4_0_Contents.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol45_4_0_Contents.pdf"
   },
   {
@@ -19389,6 +20617,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_4_1_ANarayan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_4_1_ANarayan.pdf"
   },
   {
@@ -19405,6 +20634,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_4_2_ASharan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_4_2_ASharan.pdf"
   },
   {
@@ -19421,6 +20651,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_4_3_RCKapoor.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_4_3_RCKapoor.pdf"
   },
   {
@@ -19437,6 +20668,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_4_4_GKhan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_4_4_GKhan.pdf"
   },
   {
@@ -19453,6 +20685,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_4_5_HSingh.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_4_5_HSingh.pdf"
   },
   {
@@ -19469,6 +20702,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_4_6_JNSinha.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_4_6_JNSinha.pdf"
   },
   {
@@ -19485,6 +20719,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_4_7_Historicalnotes.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_4_7_Historicalnotes.pdf"
   },
   {
@@ -19501,6 +20736,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_4_8_Bookreview.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_4_8_Bookreview.pdf"
   },
   {
@@ -19517,6 +20753,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_4_9_ReportsDPAgarwal.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_4_9_ReportsDPAgarwal.pdf"
   },
   {
@@ -19533,6 +20770,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_4_10_ReportsJayanta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_4_10_ReportsJayanta.pdf"
   },
   {
@@ -19549,6 +20787,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_4_11_ReportShukla.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_4_11_ReportShukla.pdf"
   },
   {
@@ -19565,6 +20804,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_4_12_ReportMNarayan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_4_12_ReportMNarayan.pdf"
   },
   {
@@ -19581,6 +20821,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_4_13_Bookreceived.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol45_4_13_Bookreceived.pdf"
   },
   {
@@ -19597,6 +20838,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_4_14_SupplementInner.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_4_14_SupplementInner.pdf"
   },
   {
@@ -19613,6 +20855,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_4_15_SupChap9English.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_4_15_SupChap9English.pdf"
   },
   {
@@ -19629,6 +20872,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_4_16_SupChap9Sankrit.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_4_16_SupChap9Sankrit.pdf"
   },
   {
@@ -19645,6 +20889,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_4_17_SupChap10Sankrit.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_4_17_SupChap10Sankrit.pdf"
   },
   {
@@ -19661,6 +20906,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_4_18_SupChap10English.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_4_18_SupChap10English.pdf"
   },
   {
@@ -19677,6 +20923,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_4_19_SupChap11Sankrit.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_4_19_SupChap11Sankrit.pdf"
   },
   {
@@ -19693,6 +20940,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_4_20_SupChap11English.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_4_20_SupChap11English.pdf"
   },
   {
@@ -19709,6 +20957,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_4_21_SupChap12Sankrit.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_4_21_SupChap12Sankrit.pdf"
   },
   {
@@ -19725,6 +20974,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_4_22_SupChap12English.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_4_22_SupChap12English.pdf"
   },
   {
@@ -19741,6 +20991,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_4_23_SupChap13Sankrit.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_4_23_SupChap13Sankrit.pdf"
   },
   {
@@ -19757,6 +21008,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_4_24_SupChap13English.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_4_24_SupChap13English.pdf"
   },
   {
@@ -19773,6 +21025,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_4_25_Appendices.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol45_4_25_Appendices.pdf"
   },
   {
@@ -19789,6 +21042,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_4_26_Index.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol45_4_26_Index.pdf"
   },
   {
@@ -19805,6 +21059,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_4_27_Cumulativeindex.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol45_4_27_Cumulativeindex.pdf"
   },
   {
@@ -19821,6 +21076,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol45_4_28_AnnualContents.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol45_4_28_AnnualContents.pdf"
   },
   {
@@ -19837,6 +21093,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_1_1_PGondalekhar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol46_1_1_PGondalekhar.pdf"
   },
   {
@@ -19853,6 +21110,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_1_2_RNIyenger.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol46_1_2_RNIyenger.pdf"
   },
   {
@@ -19869,6 +21127,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_1_3_OPJaiswal.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol46_1_3_OPJaiswal.pdf"
   },
   {
@@ -19885,6 +21144,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_1_4_VMishra.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol46_1_4_VMishra.pdf"
   },
   {
@@ -19901,6 +21161,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_1_5_JBhattacharyya.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol46_1_5_JBhattacharyya.pdf"
   },
   {
@@ -19917,6 +21178,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_1_6_AKBiswas.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol46_1_6_AKBiswas.pdf"
   },
   {
@@ -19933,6 +21195,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_1_7_SKMajumdar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol46_1_7_SKMajumdar.pdf"
   },
   {
@@ -19949,6 +21212,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_1_8_SRSarma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol46_1_8_SRSarma.pdf"
   },
   {
@@ -19965,6 +21229,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_1_9_Bookreview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol46_1_9_Bookreview.pdf"
   },
   {
@@ -19981,6 +21246,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_1_10_Project%20reportAKSeth.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol46_1_10_Project%20reportAKSeth.pdf"
   },
   {
@@ -19997,6 +21263,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_1_11_Project%20reportSSen.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol46_1_11_Project%20reportSSen.pdf"
   },
   {
@@ -20013,6 +21280,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_1_12_News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol46_1_12_News.pdf"
   },
   {
@@ -20029,6 +21297,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_1_14_Supplement.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol46_1_14_Supplement.pdf"
   },
   {
@@ -20045,6 +21314,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_1_15_Supplement.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol46_1_15_Supplement.pdf"
   },
   {
@@ -20061,6 +21331,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_2_0_Contents.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol46_2_0_Contents.pdf"
   },
   {
@@ -20077,6 +21348,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_2_1_KJaouiche.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol46_2_1_KJaouiche.pdf"
   },
   {
@@ -20093,6 +21365,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_2_2_AKeller.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol46_2_2_AKeller.pdf"
   },
   {
@@ -20109,6 +21382,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_2_3_DRaina.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol46_2_3_DRaina.pdf"
   },
   {
@@ -20125,6 +21399,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_2_4_1_MJDurandRichard.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol46_2_4_1_MJDurandRichard.pdf"
   },
   {
@@ -20141,6 +21416,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_2_7_SKMajumdar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol46_2_7_SKMajumdar.pdf"
   },
   {
@@ -20157,6 +21433,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_2_8_BShailaja.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol46_2_8_BShailaja.pdf"
   },
   {
@@ -20173,6 +21450,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_2_9_Bookreview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol46_2_9_Bookreview.pdf"
   },
   {
@@ -20189,6 +21467,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_2_10_AKThakur.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol46_2_10_AKThakur.pdf"
   },
   {
@@ -20205,6 +21484,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_2_11_SuktaDas.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol46_2_11_SuktaDas.pdf"
   },
   {
@@ -20221,6 +21501,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_2_12_NewsSRSarma.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol46_2_12_NewsSRSarma.pdf"
   },
   {
@@ -20237,6 +21518,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_2_13_NewsKnudsen.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol46_2_13_NewsKnudsen.pdf"
   },
   {
@@ -20253,6 +21535,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_2_14_NewsShukla.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol46_2_14_NewsShukla.pdf"
   },
   {
@@ -20269,6 +21552,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_2_15_Supplement.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol46_2_15_Supplement.pdf"
   },
   {
@@ -20285,6 +21569,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_3_0_Contents.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol47_3_0_Contents.pdf"
   },
   {
@@ -20301,6 +21586,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_3_1_ANarayanan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol47_3_1_ANarayanan.pdf"
   },
   {
@@ -20317,6 +21603,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_3_1_BPrakash.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol46_3_1_BPrakash.pdf"
   },
   {
@@ -20333,6 +21620,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_3_2_ANarayanan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol46_3_2_ANarayanan.pdf"
   },
   {
@@ -20349,6 +21637,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_3_2_SSen.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol47_3_2_SSen.pdf"
   },
   {
@@ -20365,6 +21654,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_3_3_AKBiswas.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol47_3_3_AKBiswas.pdf"
   },
   {
@@ -20381,6 +21671,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_3_3_AKBiswas.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol46_3_3_AKBiswas.pdf"
   },
   {
@@ -20397,6 +21688,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_3_4_SNBiswas.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol46_3_4_SNBiswas.pdf"
   },
   {
@@ -20413,6 +21705,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_3_4(1)_PKBandyopadhyay.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol47_3_4(1)_PKBandyopadhyay.pdf"
   },
   {
@@ -20429,6 +21722,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_3_5_RCGupta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol46_3_5_RCGupta.pdf"
   },
   {
@@ -20445,6 +21739,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_3_6_SKMajumdar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol46_3_6_SKMajumdar.pdf"
   },
   {
@@ -20461,6 +21756,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_3_5_AKBag.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol47_3_5_AKBag.pdf"
   },
   {
@@ -20477,6 +21773,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_3_6_RNIyengar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol47_3_6_RNIyengar.pdf"
   },
   {
@@ -20493,6 +21790,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_3_7_Bookreview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol46_3_7_Bookreview.pdf"
   },
   {
@@ -20509,6 +21807,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_3_8_SVSingh.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol46_3_8_SVSingh.pdf"
   },
   {
@@ -20525,6 +21824,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_3_7_UBTewari.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol47_3_7_UBTewari.pdf"
   },
   {
@@ -20541,6 +21841,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_3_8_Bookreview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol47_3_8_Bookreview.pdf"
   },
   {
@@ -20557,6 +21858,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_3_10_News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol46_3_10_News.pdf"
   },
   {
@@ -20573,6 +21875,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_3_9_Projectreports.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol47_3_9_Projectreports.pdf"
   },
   {
@@ -20589,6 +21892,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_3_10_ASBhat.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol47_3_10_ASBhat.pdf"
   },
   {
@@ -20605,6 +21909,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_3_11_Supplement.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol46_3_11_Supplement.pdf"
   },
   {
@@ -20621,6 +21926,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_3_12_Supplement.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol46_3_12_Supplement.pdf"
   },
   {
@@ -20637,6 +21943,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_3_11_Announcements.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol47_3_11_Announcements.pdf"
   },
   {
@@ -20653,6 +21960,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_4_0_Contents.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol46_4_0_Contents.pdf"
   },
   {
@@ -20669,6 +21977,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_4_1_TRSPrasanna.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol46_4_1_TRSPrasanna.pdf"
   },
   {
@@ -20685,6 +21994,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_4_2_BVenkateswarlu.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol46_4_2_BVenkateswarlu.pdf"
   },
   {
@@ -20701,6 +22011,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_4_3_RCGupta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol46_4_3_RCGupta.pdf"
   },
   {
@@ -20717,6 +22028,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_4_4_SKMajumdar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol46_4_4_SKMajumdar.pdf"
   },
   {
@@ -20733,6 +22045,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_4_5_Purabi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol46_4_5_Purabi.pdf"
   },
   {
@@ -20749,6 +22062,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_4_6_Bookreview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol46_4_6_Bookreview.pdf"
   },
   {
@@ -20765,6 +22079,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_4_7_VJDeshpande.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol46_4_7_VJDeshpande.pdf"
   },
   {
@@ -20781,6 +22096,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_4_8_PPDeshpande.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol46_4_8_PPDeshpande.pdf"
   },
   {
@@ -20797,6 +22113,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_4_9_News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol46_4_9_News.pdf"
   },
   {
@@ -20813,6 +22130,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_4_10_Supplement.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol46_4_10_Supplement.pdf"
   },
   {
@@ -20829,6 +22147,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_4_12_Cumulativeindex.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol46_4_12_Cumulativeindex.pdf"
   },
   {
@@ -20845,6 +22164,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol46_4_13_Annualcontent.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol46_4_13_Annualcontent.pdf"
   },
   {
@@ -20861,6 +22181,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_1_0_Contents.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol47_1_0_Contents.pdf"
   },
   {
@@ -20877,6 +22198,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_1_1_LDi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol47_1_1_LDi.pdf"
   },
   {
@@ -20893,6 +22215,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_1_2_DVDwivedi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol47_1_2_DVDwivedi.pdf"
   },
   {
@@ -20909,6 +22232,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_1_3_SRSarma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol47_1_3_SRSarma.pdf"
   },
   {
@@ -20925,6 +22249,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_1_4_JNSinha.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol47_1_4_JNSinha.pdf"
   },
   {
@@ -20941,6 +22266,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_1_5_SKMajumdar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol47_1_5_SKMajumdar.pdf"
   },
   {
@@ -20957,6 +22283,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_1_6_SKSaha.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol47_1_6_SKSaha.pdf"
   },
   {
@@ -20973,6 +22300,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_1_7_Bookreview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol47_1_7_Bookreview.pdf"
   },
   {
@@ -20989,6 +22317,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_1_8_KRoy.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol47_1_8_KRoy.pdf"
   },
   {
@@ -21005,6 +22334,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_1_9_PKChattopadhyay.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol47_1_9_PKChattopadhyay.pdf"
   },
   {
@@ -21021,6 +22351,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_1_10_News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol47_1_10_News.pdf"
   },
   {
@@ -21037,6 +22368,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_1_12_Supplement_cover.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol47_1_12_Supplement_cover.pdf"
   },
   {
@@ -21053,6 +22385,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_1_14_Announcement.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol47_1_14_Announcement.pdf"
   },
   {
@@ -21069,6 +22402,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_2_0_Contents.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol47_2_0_Contents.pdf"
   },
   {
@@ -21085,6 +22419,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_2_1_Sdas.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol47_2_1_Sdas.pdf"
   },
   {
@@ -21101,6 +22436,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_2_2_NKodlady.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol47_2_2_NKodlady.pdf"
   },
   {
@@ -21117,6 +22453,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_2_3_ASamanta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol47_2_3_ASamanta.pdf"
   },
   {
@@ -21133,6 +22470,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_2_4_VMRavikumar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol47_2_4_VMRavikumar.pdf"
   },
   {
@@ -21149,6 +22487,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_2_5_JDeloche.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol47_2_5_JDeloche.pdf"
   },
   {
@@ -21165,6 +22504,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_2_6_BSShylaja.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol47_2_6_BSShylaja.pdf"
   },
   {
@@ -21181,6 +22521,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_2_7_VRRaghvan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol47_2_7_VRRaghvan.pdf"
   },
   {
@@ -21197,6 +22538,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_2_8_SKMajumdar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol47_2_8_SKMajumdar.pdf"
   },
   {
@@ -21213,6 +22555,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_2_9_Bookreview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol47_2_9_Bookreview.pdf"
   },
   {
@@ -21229,6 +22572,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_2_10_AKBiswas.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol47_2_10_AKBiswas.pdf"
   },
   {
@@ -21245,6 +22589,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_2_11_CPalit.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol47_2_11_CPalit.pdf"
   },
   {
@@ -21261,6 +22606,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_2_12_News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol47_2_12_News.pdf"
   },
   {
@@ -21277,6 +22623,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_4_0_Editorial.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol47_4_0_Editorial.pdf"
   },
   {
@@ -21293,6 +22640,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_4_1_Contents.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol47_4_1_Contents.pdf"
   },
   {
@@ -21309,6 +22657,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_4_2_PRamManohar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol47_4_2_PRamManohar.pdf"
   },
   {
@@ -21325,6 +22674,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_4_3_DPKaundinya.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol47_4_3_DPKaundinya.pdf"
   },
   {
@@ -21341,6 +22691,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_4_4_RSridhan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol47_4_4_RSridhan.pdf"
   },
   {
@@ -21357,6 +22708,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_4_5_RSridhan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol47_4_5_RSridhan.pdf"
   },
   {
@@ -21373,6 +22725,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_4_6_ADutta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol47_4_6_ADutta.pdf"
   },
   {
@@ -21389,6 +22742,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_4_7_AKBag.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol47_4_7_AKBag.pdf"
   },
   {
@@ -21405,6 +22759,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_4_8_SMadhavan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol47_4_8_SMadhavan.pdf"
   },
   {
@@ -21421,6 +22776,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_4_9_MSSriram.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol47_4_9_MSSriram.pdf"
   },
   {
@@ -21437,6 +22793,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_4_10_Malaya.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol47_4_10_Malaya.pdf"
   },
   {
@@ -21453,6 +22810,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_4_11_PPDivakaran.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol47_4_11_PPDivakaran.pdf"
   },
   {
@@ -21469,6 +22827,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_4_12_Booksreceived.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol47_4_12_Booksreceived.pdf"
   },
   {
@@ -21485,6 +22844,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_4_13_Cumulativeindex.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol47_4_13_Cumulativeindex.pdf"
   },
   {
@@ -21501,6 +22861,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_4_14_Annualcontent.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol47_4_14_Annualcontent.pdf"
   },
   {
@@ -21517,6 +22878,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_1_0_Contents.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol48_1_0_Contents.pdf"
   },
   {
@@ -21533,6 +22895,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_1_1_PTCraddock.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol48_1_1_PTCraddock.pdf"
   },
   {
@@ -21549,6 +22912,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_1_2_JBhattacharya.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol48_1_2_JBhattacharya.pdf"
   },
   {
@@ -21565,6 +22929,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_1_3_AKBiswas.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol48_1_3_AKBiswas.pdf"
   },
   {
@@ -21581,6 +22946,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_1_4_Rsingh.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol48_1_4_Rsingh.pdf"
   },
   {
@@ -21597,6 +22963,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_1_5_Ssar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol48_1_5_Ssar.pdf"
   },
   {
@@ -21613,6 +22980,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_1_6_Pchakrabarti.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol48_1_6_Pchakrabarti.pdf"
   },
   {
@@ -21629,6 +22997,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_1_7_Bookreview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol48_1_7_Bookreview.pdf"
   },
   {
@@ -21645,6 +23014,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_1_8_APPandey.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol48_1_8_APPandey.pdf"
   },
   {
@@ -21661,6 +23031,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_1_9_Msarkar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol48_1_9_Msarkar.pdf"
   },
   {
@@ -21677,6 +23048,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_1_10_News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol48_1_10_News.pdf"
   },
   {
@@ -21693,6 +23065,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_1_12_Supplement.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol48_1_12_Supplement.pdf"
   },
   {
@@ -21709,6 +23082,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_1_13_Form%20IV.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol48_1_13_Form%20IV.pdf"
   },
   {
@@ -21725,6 +23099,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_2_0_Contents.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol48_2_0_Contents.pdf"
   },
   {
@@ -21741,6 +23116,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_2_1_NCShah.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol48_2_1_NCShah.pdf"
   },
   {
@@ -21757,6 +23133,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_2_2_VDeshpande.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol48_2_2_VDeshpande.pdf"
   },
   {
@@ -21773,6 +23150,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_2_3_JDeloche.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol48_2_3_JDeloche.pdf"
   },
   {
@@ -21789,6 +23167,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_2_4_AKBiswas.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol48_2_4_AKBiswas.pdf"
   },
   {
@@ -21805,6 +23184,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_2_5_JWisniak.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol48_2_5_JWisniak.pdf"
   },
   {
@@ -21821,6 +23201,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_2_6_BSShylaja.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol48_2_6_BSShylaja.pdf"
   },
   {
@@ -21837,6 +23218,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_2_7_KBBasant.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol48_2_7_KBBasant.pdf"
   },
   {
@@ -21853,6 +23235,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_2_8_Correspondence.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol48_2_8_Correspondence.pdf"
   },
   {
@@ -21869,6 +23252,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_2_9_BookReview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol48_2_9_BookReview.pdf"
   },
   {
@@ -21885,6 +23269,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_2_10_VTripathi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol48_2_10_VTripathi.pdf"
   },
   {
@@ -21901,6 +23286,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_2_11_MBhattacharjee.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol48_2_11_MBhattacharjee.pdf"
   },
   {
@@ -21917,6 +23303,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_2_12_News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol48_2_12_News.pdf"
   },
   {
@@ -21933,6 +23320,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_2_13_Supplement_inner.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol48_2_13_Supplement_inner.pdf"
   },
   {
@@ -21949,6 +23337,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_3_0_Contents.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol48_3_0_Contents.pdf"
   },
   {
@@ -21965,6 +23354,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_3_1_ANarayanan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol48_3_1_ANarayanan.pdf"
   },
   {
@@ -21981,6 +23371,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_3_2_CYJagtap.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol48_3_2_CYJagtap.pdf"
   },
   {
@@ -21997,6 +23388,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_3_3_RCKapoor.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol48_3_3_RCKapoor.pdf"
   },
   {
@@ -22013,6 +23405,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_3_4_SSarkar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol48_3_4_SSarkar.pdf"
   },
   {
@@ -22029,6 +23422,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_3_5_CPalit.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol48_3_5_CPalit.pdf"
   },
   {
@@ -22045,6 +23439,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_3_6_SKMajumdar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol48_3_6_SKMajumdar.pdf"
   },
   {
@@ -22061,6 +23456,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_3_7_Correspondence.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol48_3_7_Correspondence.pdf"
   },
   {
@@ -22077,6 +23473,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_3_8_Bookreview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol48_3_8_Bookreview.pdf"
   },
   {
@@ -22093,6 +23490,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_3_9_Project%20Reports.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol48_3_9_Project%20Reports.pdf"
   },
   {
@@ -22109,6 +23507,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_3_10_SSen.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol48_3_10_SSen.pdf"
   },
   {
@@ -22125,6 +23524,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_3_11_News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol48_3_11_News.pdf"
   },
   {
@@ -22141,6 +23541,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_3_12_Supplement_cover.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol48_3_12_Supplement_cover.pdf"
   },
   {
@@ -22157,6 +23558,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_3_13_Supplement_text.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol48_3_13_Supplement_text.pdf"
   },
   {
@@ -22173,6 +23575,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_4_0_Contents.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol48_4_0_Contents.pdf"
   },
   {
@@ -22189,6 +23592,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_4_1_BBaware.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol48_4_1_BBaware.pdf"
   },
   {
@@ -22205,6 +23609,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_4_2_VNSharma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol48_4_2_VNSharma.pdf"
   },
   {
@@ -22221,6 +23626,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_4_3_%20AMSharan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol48_4_3_%20AMSharan.pdf"
   },
   {
@@ -22237,6 +23643,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_4_4_PMandal.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol48_4_4_PMandal.pdf"
   },
   {
@@ -22253,6 +23660,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_4_5_SuktaDas.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol48_4_5_SuktaDas.pdf"
   },
   {
@@ -22269,6 +23677,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_4_6_%20RCGupta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol48_4_6_%20RCGupta.pdf"
   },
   {
@@ -22285,6 +23694,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_4_7_Correspondence.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol48_4_7_Correspondence.pdf"
   },
   {
@@ -22301,6 +23711,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_4_8_Book%20Review.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol48_4_8_Book%20Review.pdf"
   },
   {
@@ -22317,6 +23728,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_4_9_Project%20Report_%20Jbhattacharyya.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol48_4_9_Project%20Report_%20Jbhattacharyya.pdf"
   },
   {
@@ -22333,6 +23745,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_4_10_ProjectReport_%20BKSen.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol48_4_10_ProjectReport_%20BKSen.pdf"
   },
   {
@@ -22349,6 +23762,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_4_11_%20News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol48_4_11_%20News.pdf"
   },
   {
@@ -22365,6 +23779,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_4_12_BookReceivedForReview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol48_4_12_BookReceivedForReview.pdf"
   },
   {
@@ -22381,6 +23796,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_4_13_CumulativeIndex.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol48_4_13_CumulativeIndex.pdf"
   },
   {
@@ -22397,6 +23813,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol48_4_14_AnnualContent.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol48_4_14_AnnualContent.pdf"
   },
   {
@@ -22413,6 +23830,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_1_0_Contents.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol49_1_0_Contents.pdf"
   },
   {
@@ -22429,6 +23847,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_1_1_PKChattopadhyay.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol49_1_1_PKChattopadhyay.pdf"
   },
   {
@@ -22445,6 +23864,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_1_2_SNDhundi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol49_1_2_SNDhundi.pdf"
   },
   {
@@ -22461,6 +23881,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_1_3_Sdasgupta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol49_1_3_Sdasgupta.pdf"
   },
   {
@@ -22477,6 +23898,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_1_4_SKJain.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol49_1_4_SKJain.pdf"
   },
   {
@@ -22493,6 +23915,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_1_5_Kmishra.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol49_1_5_Kmishra.pdf"
   },
   {
@@ -22509,6 +23932,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_1_6_Sbhowmik.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol49_1_6_Sbhowmik.pdf"
   },
   {
@@ -22525,6 +23949,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_1_7_SKMajumdar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol49_1_7_SKMajumdar.pdf"
   },
   {
@@ -22541,6 +23966,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_1_8_JJShah.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol49_1_8_JJShah.pdf"
   },
   {
@@ -22557,6 +23983,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_1_9_Pmukherji.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol49_1_9_Pmukherji.pdf"
   },
   {
@@ -22573,6 +24000,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_1_10_Book%20Review.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol49_1_10_Book%20Review.pdf"
   },
   {
@@ -22589,6 +24017,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_1_11_SKGeorge.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol49_1_11_SKGeorge.pdf"
   },
   {
@@ -22605,6 +24034,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_1_12_Sbiswas.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol49_1_12_Sbiswas.pdf"
   },
   {
@@ -22621,6 +24051,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_1_13_News.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol49_1_13_News.pdf"
   },
   {
@@ -22637,6 +24068,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_3_0_Contents.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol49_3_0_Contents.pdf"
   },
   {
@@ -22653,6 +24085,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_3_1_RN_Iyengar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol49_3_1_RN_Iyengar.pdf"
   },
   {
@@ -22669,6 +24102,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_2_1_Editorial.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol49_2_1_Editorial.pdf"
   },
   {
@@ -22685,6 +24119,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_2_2_GuestEditorial.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol49_2_2_GuestEditorial.pdf"
   },
   {
@@ -22701,6 +24136,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_3_2_Dwivedi.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol49_3_2_Dwivedi.pdf"
   },
   {
@@ -22717,6 +24153,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_3_3_NHanda.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol49_3_3_NHanda.pdf"
   },
   {
@@ -22733,6 +24170,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_2_3_KPlofker.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol49_2_3_KPlofker.pdf"
   },
   {
@@ -22749,6 +24187,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_2_4_AKeller.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol49_2_4_AKeller.pdf"
   },
   {
@@ -22765,6 +24204,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_3_4_DJadhav.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol49_3_4_DJadhav.pdf"
   },
   {
@@ -22781,6 +24221,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_3_5_Pustynski.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol49_3_5_Pustynski.pdf"
   },
   {
@@ -22797,6 +24238,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_2_5_TKnudsen.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol49_2_5_TKnudsen.pdf"
   },
   {
@@ -22813,6 +24255,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_2_6_VMallayya.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol49_2_6_VMallayya.pdf"
   },
   {
@@ -22829,6 +24272,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_3_6_NShah.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol49_3_6_NShah.pdf"
   },
   {
@@ -22845,6 +24289,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_3_7_DBhatacharya.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol49_3_7_DBhatacharya.pdf"
   },
   {
@@ -22861,6 +24306,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_2_7_KMahesh.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol49_2_7_KMahesh.pdf"
   },
   {
@@ -22877,6 +24323,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_2_8_CMontelle.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol49_2_8_CMontelle.pdf"
   },
   {
@@ -22893,6 +24340,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_3_8_RSridharan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol49_3_8_RSridharan.pdf"
   },
   {
@@ -22909,6 +24357,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_3_9_SKMajumdar.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol49_3_9_SKMajumdar.pdf"
   },
   {
@@ -22925,6 +24374,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_2_9_KRupa.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol49_2_9_KRupa.pdf"
   },
   {
@@ -22941,6 +24391,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_2_10_BookReview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol49_2_10_BookReview.pdf"
   },
   {
@@ -22957,6 +24408,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_3_10_KBBasant.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol49_3_10_KBBasant.pdf"
   },
   {
@@ -22973,6 +24425,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_3_11_RCGupta.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol49_3_11_RCGupta.pdf"
   },
   {
@@ -22989,6 +24442,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_3_12_SNellickappilly.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol49_3_12_SNellickappilly.pdf"
   },
   {
@@ -23005,6 +24459,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_3_13_PMandal.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol49_3_13_PMandal.pdf"
   },
   {
@@ -23021,6 +24476,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_3_14_NEWS.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol49_3_14_NEWS.pdf"
   },
   {
@@ -23037,6 +24493,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_4_0_Contents.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol49_4_0_Contents.pdf"
   },
   {
@@ -23053,6 +24510,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_4_1_Editorial.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol49_4_1_Editorial.pdf"
   },
   {
@@ -23069,6 +24527,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_4_2_Guest_Editorial.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol49_4_2_Guest_Editorial.pdf"
   },
   {
@@ -23085,6 +24544,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_4_3_AChakravorty.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol49_4_3_AChakravorty.pdf"
   },
   {
@@ -23101,6 +24561,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_4_4_KBhattacharyya.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol49_4_4_KBhattacharyya.pdf"
   },
   {
@@ -23117,6 +24578,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_4_5_KNagarajan.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol49_4_5_KNagarajan.pdf"
   },
   {
@@ -23133,6 +24595,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_4_6_AVRRao.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol49_4_6_AVRRao.pdf"
   },
   {
@@ -23149,6 +24612,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_4_7_HSingh.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol49_4_7_HSingh.pdf"
   },
   {
@@ -23165,6 +24629,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_4_8_AKShukla.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol49_4_8_AKShukla.pdf"
   },
   {
@@ -23181,6 +24646,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_4_9_MRoy.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol49_4_9_MRoy.pdf"
   },
   {
@@ -23197,6 +24663,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_4_10_BKSen.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol49_4_10_BKSen.pdf"
   },
   {
@@ -23213,6 +24680,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_4_11_DRaina.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol49_4_11_DRaina.pdf"
   },
   {
@@ -23229,6 +24697,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_4_12_PKBasu.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol49_4_12_PKBasu.pdf"
   },
   {
@@ -23245,6 +24714,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_4_13_Bookreview.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol49_4_13_Bookreview.pdf"
   },
   {
@@ -23261,6 +24731,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_4_14_Bookreceived.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol49_4_14_Bookreceived.pdf"
   },
   {
@@ -23277,6 +24748,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_4_15_CumulativeIndex.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol49_4_15_CumulativeIndex.pdf"
   },
   {
@@ -23293,6 +24765,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol49_4_16_AnnualContents2014.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol49_4_16_AnnualContents2014.pdf"
   },
   {
@@ -23309,6 +24782,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_1_Contents.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_1_Contents.pdf"
   },
   {
@@ -23325,6 +24799,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_1_Message_President.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_1_Message_President.pdf"
   },
   {
@@ -23341,6 +24816,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_1_Art01.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_1_Art01.pdf"
   },
   {
@@ -23357,6 +24833,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_1_Art02.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_1_Art02.pdf"
   },
   {
@@ -23373,6 +24850,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_1_Art03.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_1_Art03.pdf"
   },
   {
@@ -23389,6 +24867,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_1_Art04.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_1_Art04.pdf"
   },
   {
@@ -23405,6 +24884,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_1_Art05.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_1_Art05.pdf"
   },
   {
@@ -23421,6 +24901,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_1_Art06.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_1_Art06.pdf"
   },
   {
@@ -23437,6 +24918,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_1_Art07.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_1_Art07.pdf"
   },
   {
@@ -23453,6 +24935,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_1_Art08.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_1_Art08.pdf"
   },
   {
@@ -23469,6 +24952,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_1_Art09.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_1_Art09.pdf"
   },
   {
@@ -23485,6 +24969,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_1_Art10.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_1_Art10.pdf"
   },
   {
@@ -23501,6 +24986,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_1_Art11.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_1_Art11.pdf"
   },
   {
@@ -23517,6 +25003,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_1_Art12.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_1_Art12.pdf"
   },
   {
@@ -23533,6 +25020,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_1_Art13.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_1_Art13.pdf"
   },
   {
@@ -23549,6 +25037,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_1_Art14.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_1_Art14.pdf"
   },
   {
@@ -23565,6 +25054,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_1_Art15.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_1_Art15.pdf"
   },
   {
@@ -23581,6 +25071,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_2_Contents.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_2_Contents.pdf"
   },
   {
@@ -23597,6 +25088,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_2_Art01.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_2_Art01.pdf"
   },
   {
@@ -23613,6 +25105,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_2_Art02.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_2_Art02.pdf"
   },
   {
@@ -23629,6 +25122,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_2_Art03.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_2_Art03.pdf"
   },
   {
@@ -23645,6 +25139,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_2_Art04.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_2_Art04.pdf"
   },
   {
@@ -23661,6 +25156,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_2_Art05.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_2_Art05.pdf"
   },
   {
@@ -23677,6 +25173,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_2_Art06.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_2_Art06.pdf"
   },
   {
@@ -23693,6 +25190,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_2_Art07.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_2_Art07.pdf"
   },
   {
@@ -23709,6 +25207,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_2_Art08.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_2_Art08.pdf"
   },
   {
@@ -23725,6 +25224,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_2_Art09.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_2_Art09.pdf"
   },
   {
@@ -23741,6 +25241,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_2_Art10.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_2_Art10.pdf"
   },
   {
@@ -23757,6 +25258,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_2_Art11.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_2_Art11.pdf"
   },
   {
@@ -23773,6 +25275,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_2_Art12.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_2_Art12.pdf"
   },
   {
@@ -23789,6 +25292,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_2_Art13.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_2_Art13.pdf"
   },
   {
@@ -23805,6 +25309,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_2_Art14.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_2_Art14.pdf"
   },
   {
@@ -23821,6 +25326,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_2_Art15.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_2_Art15.pdf"
   },
   {
@@ -23837,6 +25343,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_3_CONTENTS.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_3_CONTENTS.pdf"
   },
   {
@@ -23853,6 +25360,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_3_Art01.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_3_Art01.pdf"
   },
   {
@@ -23869,6 +25377,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_3_Art02.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_3_Art02.pdf"
   },
   {
@@ -23885,6 +25394,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_3_Art03.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_3_Art03.pdf"
   },
   {
@@ -23901,6 +25411,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_3_Art04.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_3_Art04.pdf"
   },
   {
@@ -23917,6 +25428,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_3_Art05.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_3_Art05.pdf"
   },
   {
@@ -23933,6 +25445,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_3_Art06.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_3_Art06.pdf"
   },
   {
@@ -23949,6 +25462,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_3_Art07.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_3_Art07.pdf"
   },
   {
@@ -23965,6 +25479,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_3_Art08.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_3_Art08.pdf"
   },
   {
@@ -23981,6 +25496,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_3_Art09.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_3_Art09.pdf"
   },
   {
@@ -23997,6 +25513,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_3_Art10.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_3_Art10.pdf"
   },
   {
@@ -24013,6 +25530,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_3_Art11.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_3_Art11.pdf"
   },
   {
@@ -24029,6 +25547,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_3_Art12.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_3_Art12.pdf"
   },
   {
@@ -24045,6 +25564,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_3_Art13.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_3_Art13.pdf"
   },
   {
@@ -24061,6 +25581,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_3_Art14.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_3_Art14.pdf"
   },
   {
@@ -24077,6 +25598,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_4_CONTENTS.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_4_CONTENTS.pdf"
   },
   {
@@ -24093,6 +25615,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_4_Art01.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_4_Art01.pdf"
   },
   {
@@ -24109,6 +25632,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_4_Art02.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_4_Art02.pdf"
   },
   {
@@ -24125,6 +25649,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_4_Art03.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_4_Art03.pdf"
   },
   {
@@ -24141,6 +25666,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_4_Art04.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_4_Art04.pdf"
   },
   {
@@ -24157,6 +25683,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_4_Art05.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_4_Art05.pdf"
   },
   {
@@ -24173,6 +25700,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_4_Art06.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_4_Art06.pdf"
   },
   {
@@ -24189,6 +25717,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_4_Art07.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_4_Art07.pdf"
   },
   {
@@ -24205,6 +25734,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_4_Art08.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_4_Art08.pdf"
   },
   {
@@ -24221,6 +25751,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_4_Art09.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_4_Art09.pdf"
   },
   {
@@ -24237,6 +25768,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_4_Art10.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_4_Art10.pdf"
   },
   {
@@ -24253,6 +25785,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_4_Art11.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_4_Art11.pdf"
   },
   {
@@ -24269,6 +25802,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_4_Art12.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_4_Art12.pdf"
   },
   {
@@ -24285,6 +25819,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_4_Art13.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_4_Art13.pdf"
   },
   {
@@ -24301,6 +25836,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol50_2015_4_Art14.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol50_2015_4_Art14.pdf"
   },
   {
@@ -24317,6 +25853,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_1_Art01.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_1_Art01.pdf"
   },
   {
@@ -24333,6 +25870,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_1_Art02.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_1_Art02.pdf"
   },
   {
@@ -24349,6 +25887,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_1_Art03.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_1_Art03.pdf"
   },
   {
@@ -24365,6 +25904,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_1_Art04.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_1_Art04.pdf"
   },
   {
@@ -24381,6 +25921,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_1_Art05.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_1_Art05.pdf"
   },
   {
@@ -24397,6 +25938,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_1_Art06.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_1_Art06.pdf"
   },
   {
@@ -24413,6 +25955,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_1_Art07.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_1_Art07.pdf"
   },
   {
@@ -24429,6 +25972,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_1_Art08.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_1_Art08.pdf"
   },
   {
@@ -24445,6 +25989,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_1_Art09.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_1_Art09.pdf"
   },
   {
@@ -24461,6 +26006,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_1_Art10.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_1_Art10.pdf"
   },
   {
@@ -24477,6 +26023,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_1_Art11.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_1_Art11.pdf"
   },
   {
@@ -24493,6 +26040,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_1_Art12.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_1_Art12.pdf"
   },
   {
@@ -24509,6 +26057,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_1_Art13.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_1_Art13.pdf"
   },
   {
@@ -24525,6 +26074,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_1_Art14.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_1_Art14.pdf"
   },
   {
@@ -24541,6 +26091,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_1_Art15.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_1_Art15.pdf"
   },
   {
@@ -24557,6 +26108,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_1_Art16.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_1_Art16.pdf"
   },
   {
@@ -24573,6 +26125,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_1_Art17.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_1_Art17.pdf"
   },
   {
@@ -24589,6 +26142,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_1_Art18.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_1_Art18.pdf"
   },
   {
@@ -24605,6 +26159,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_2_1_Art00.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_1_Art00.pdf"
   },
   {
@@ -24621,6 +26176,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_2_1_Art01.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_1_Art01.pdf"
   },
   {
@@ -24637,6 +26193,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_2_1_Art02.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_1_Art02.pdf"
   },
   {
@@ -24653,6 +26210,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_2_1_Art03.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_1_Art03.pdf"
   },
   {
@@ -24669,6 +26227,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_2_1_Art04.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_1_Art04.pdf"
   },
   {
@@ -24685,6 +26244,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_2_1_Art05.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_1_Art05.pdf"
   },
   {
@@ -24701,6 +26261,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_2_1_Art06.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_1_Art06.pdf"
   },
   {
@@ -24717,6 +26278,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_2_1_Art07.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_1_Art07.pdf"
   },
   {
@@ -24733,6 +26295,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_2_1_Art08.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_1_Art08.pdf"
   },
   {
@@ -24749,6 +26312,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_2_1_Art09.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_1_Art09.pdf"
   },
   {
@@ -24765,6 +26329,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_2_1_Art10.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_1_Art10.pdf"
   },
   {
@@ -24781,6 +26346,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_2_1_Art11.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_1_Art11.pdf"
   },
   {
@@ -24797,6 +26363,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_2_1_Art12.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_1_Art12.pdf"
   },
   {
@@ -24813,6 +26380,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_2_1_Art13.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_1_Art13.pdf"
   },
   {
@@ -24829,6 +26397,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_2_2_Art00.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_2_Art00.pdf"
   },
   {
@@ -24845,6 +26414,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_2_2_Art01.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_2_Art01.pdf"
   },
   {
@@ -24861,6 +26431,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_2_2_Art02.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_2_Art02.pdf"
   },
   {
@@ -24877,6 +26448,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_2_2_Art03.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_2_Art03.pdf"
   },
   {
@@ -24893,6 +26465,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_2_2_Art04.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_2_Art04.pdf"
   },
   {
@@ -24909,6 +26482,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_2_2_Art05.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_2_Art05.pdf"
   },
   {
@@ -24925,6 +26499,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_2_2_Art06.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_2_Art06.pdf"
   },
   {
@@ -24941,6 +26516,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_2_2_Art07.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_2_Art07.pdf"
   },
   {
@@ -24957,6 +26533,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_2_2_Art08.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_2_Art08.pdf"
   },
   {
@@ -24973,6 +26550,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_2_2_Art09.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_2_Art09.pdf"
   },
   {
@@ -24989,6 +26567,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_2_2_Art10.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_2_Art10.pdf"
   },
   {
@@ -25005,6 +26584,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_2_2_Art11.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_2_Art11.pdf"
   },
   {
@@ -25021,6 +26601,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_2_2_Art12.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_2_Art12.pdf"
   },
   {
@@ -25037,6 +26618,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_2_2_Art13.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_2_Art13.pdf"
   },
   {
@@ -25053,6 +26635,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_2_2_Art14.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_2_2_Art14.pdf"
   },
   {
@@ -25069,6 +26652,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_3_Art00.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_3_Art00.pdf"
   },
   {
@@ -25085,6 +26669,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_3_Art01.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_3_Art01.pdf"
   },
   {
@@ -25101,6 +26686,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_3_Art02.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_3_Art02.pdf"
   },
   {
@@ -25117,6 +26703,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_3_Art03.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_3_Art03.pdf"
   },
   {
@@ -25133,6 +26720,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_3_Art04.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_3_Art04.pdf"
   },
   {
@@ -25149,6 +26737,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_3_Art05.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_3_Art05.pdf"
   },
   {
@@ -25165,6 +26754,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_3_Art06.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_3_Art06.pdf"
   },
   {
@@ -25181,6 +26771,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_3_Art07.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_3_Art07.pdf"
   },
   {
@@ -25197,6 +26788,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_3_Art08.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_3_Art08.pdf"
   },
   {
@@ -25213,6 +26805,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_3_Art09.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_3_Art09.pdf"
   },
   {
@@ -25229,6 +26822,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_3_Art10.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_3_Art10.pdf"
   },
   {
@@ -25245,6 +26839,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_2016_3_Art11.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_2016_3_Art11.pdf"
   },
   {
@@ -25261,6 +26856,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_4_2016_Contents.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol51_4_2016_Contents.pdf"
   },
   {
@@ -25277,6 +26873,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_4_2016_Art01.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol51_4_2016_Art01.pdf"
   },
   {
@@ -25293,6 +26890,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_4_2016_Art02.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol51_4_2016_Art02.pdf"
   },
   {
@@ -25309,6 +26907,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_4_2016_Art03.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_4_2016_Art03.pdf"
   },
   {
@@ -25325,6 +26924,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_4_2016_Art04.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_4_2016_Art04.pdf"
   },
   {
@@ -25341,6 +26941,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_4_2016_Art05.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_4_2016_Art05.pdf"
   },
   {
@@ -25357,6 +26958,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_4_2016_Art06.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_4_2016_Art06.pdf"
   },
   {
@@ -25373,6 +26975,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_4_2016_Art07.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_4_2016_Art07.pdf"
   },
   {
@@ -25389,6 +26992,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_4_2016_Art08.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_4_2016_Art08.pdf"
   },
   {
@@ -25405,6 +27009,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_4_2016_Art09.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_4_2016_Art09.pdf"
   },
   {
@@ -25421,6 +27026,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_4_2016_Art10.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_4_2016_Art10.pdf"
   },
   {
@@ -25437,6 +27043,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_4_2016_Art11.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_4_2016_Art11.pdf"
   },
   {
@@ -25453,6 +27060,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_4_2016_Art12.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_4_2016_Art12.pdf"
   },
   {
@@ -25469,6 +27077,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_4_2016_Art13.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_4_2016_Art13.pdf"
   },
   {
@@ -25485,6 +27094,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_4_2016_Art14.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol51_4_2016_Art14.pdf"
   },
   {
@@ -25501,6 +27111,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_4_2016_Art15.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol51_4_2016_Art15.pdf"
   },
   {
@@ -25517,6 +27128,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol51_4_2016_Art16.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol51_4_2016_Art16.pdf"
   },
   {
@@ -25533,6 +27145,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_1_2017_Art00.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol52_1_2017_Art00.pdf"
   },
   {
@@ -25549,6 +27162,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_1_2017_Art01.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol52_1_2017_Art01.pdf"
   },
   {
@@ -25565,6 +27179,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_1_2017_Art02.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol52_1_2017_Art02.pdf"
   },
   {
@@ -25581,6 +27196,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_1_2017_Art03.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol52_1_2017_Art03.pdf"
   },
   {
@@ -25597,6 +27213,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_1_2017_Art04.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol52_1_2017_Art04.pdf"
   },
   {
@@ -25613,6 +27230,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_1_2017_Art05.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol52_1_2017_Art05.pdf"
   },
   {
@@ -25629,6 +27247,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_1_2017_Art06.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol52_1_2017_Art06.pdf"
   },
   {
@@ -25645,6 +27264,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_1_2017_Art07.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol52_1_2017_Art07.pdf"
   },
   {
@@ -25661,6 +27281,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_1_2017_Art08.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol52_1_2017_Art08.pdf"
   },
   {
@@ -25677,6 +27298,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_1_2017_Art09.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol52_1_2017_Art09.pdf"
   },
   {
@@ -25693,6 +27315,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_1_2017_Art10.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol52_1_2017_Art10.pdf"
   },
   {
@@ -25709,6 +27332,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_1_2017_Art11.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol52_1_2017_Art11.pdf"
   },
   {
@@ -25725,6 +27349,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_2_2017__Contents.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol52_2_2017__Contents.pdf"
   },
   {
@@ -25741,6 +27366,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_2_2017__Art01.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol52_2_2017__Art01.pdf"
   },
   {
@@ -25757,6 +27383,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_2_2017__Art02.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol52_2_2017__Art02.pdf"
   },
   {
@@ -25773,6 +27400,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_2_2017__Art03.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol52_2_2017__Art03.pdf"
   },
   {
@@ -25789,6 +27417,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_2_2017__Art04.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol52_2_2017__Art04.pdf"
   },
   {
@@ -25805,6 +27434,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_2_2017__Art05.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol52_2_2017__Art05.pdf"
   },
   {
@@ -25821,6 +27451,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_2_2017__Art06.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol52_2_2017__Art06.pdf"
   },
   {
@@ -25837,6 +27468,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_2_2017__Art07.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol52_2_2017__Art07.pdf"
   },
   {
@@ -25853,6 +27485,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_2_2017__Art08.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol52_2_2017__Art08.pdf"
   },
   {
@@ -25869,6 +27502,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_2_2017__Art09.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol52_2_2017__Art09.pdf"
   },
   {
@@ -25885,6 +27519,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_2_2017__Art10.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol52_2_2017__Art10.pdf"
   },
   {
@@ -25901,6 +27536,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_2_2017__Art12.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol52_2_2017__Art12.pdf"
   },
   {
@@ -25917,6 +27553,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_2_2017__Art13.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol52_2_2017__Art13.pdf"
   },
   {
@@ -25933,6 +27570,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_2_2017__Art11.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol52_2_2017__Art11.pdf"
   },
   {
@@ -25949,6 +27587,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_3_2017__Art01.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol52_3_2017__Art01.pdf"
   },
   {
@@ -25965,6 +27604,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_3_2017__Art02.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol52_3_2017__Art02.pdf"
   },
   {
@@ -25981,6 +27621,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_3_2017__Art03.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol52_3_2017__Art03.pdf"
   },
   {
@@ -25997,6 +27638,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_3_2017__Art04.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol52_3_2017__Art04.pdf"
   },
   {
@@ -26013,6 +27655,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_3_2017__Art05.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol52_3_2017__Art05.pdf"
   },
   {
@@ -26029,6 +27672,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_3_2017__Art06.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol52_3_2017__Art06.pdf"
   },
   {
@@ -26045,6 +27689,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_3_2017__Art07.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol52_3_2017__Art07.pdf"
   },
   {
@@ -26061,6 +27706,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_3_2017__Art08.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol52_3_2017__Art08.pdf"
   },
   {
@@ -26077,6 +27723,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_3_2017__Art09.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol52_3_2017__Art09.pdf"
   },
   {
@@ -26093,6 +27740,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_3_2017__Art10.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol52_3_2017__Art10.pdf"
   },
   {
@@ -26109,6 +27757,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_3_2017__Art11.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol52_3_2017__Art11.pdf"
   },
   {
@@ -26125,6 +27774,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_3_2017__Art12.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol52_3_2017__Art12.pdf"
   },
   {
@@ -26141,6 +27791,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Contents.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Contents.pdf"
   },
   {
@@ -26157,6 +27808,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_4_2017__Art01.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol52_4_2017__Art01.pdf"
   },
   {
@@ -26173,6 +27825,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_4_2017__Art02.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol52_4_2017__Art02.pdf"
   },
   {
@@ -26189,6 +27842,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_4_2017__Art03.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol52_4_2017__Art03.pdf"
   },
   {
@@ -26205,6 +27859,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_4_2017__Art04.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol52_4_2017__Art04.pdf"
   },
   {
@@ -26221,6 +27876,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_4_2017__Art05.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol52_4_2017__Art05.pdf"
   },
   {
@@ -26237,6 +27893,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_4_2017__Art06.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol52_4_2017__Art06.pdf"
   },
   {
@@ -26253,6 +27910,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_4_2017__Art07.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol52_4_2017__Art07.pdf"
   },
   {
@@ -26269,6 +27927,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_4_2017__Art08.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol52_4_2017__Art08.pdf"
   },
   {
@@ -26285,6 +27944,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_4_2017__Art09.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol52_4_2017__Art09.pdf"
   },
   {
@@ -26301,6 +27961,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_4_2017__Art10.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol52_4_2017__Art10.pdf"
   },
   {
@@ -26317,6 +27978,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_4_2017__Art11.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol52_4_2017__Art11.pdf"
   },
   {
@@ -26333,6 +27995,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_4_2017__Art12.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol52_4_2017__Art12.pdf"
   },
   {
@@ -26349,6 +28012,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/13-Books%20Received%20for%20Review.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/13-Books%20Received%20for%20Review.pdf"
   },
   {
@@ -26365,6 +28029,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol52_4_2017__Art13.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol52_4_2017__Art13.pdf"
   },
   {
@@ -26381,6 +28046,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/17-Cumulativeindex.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/17-Cumulativeindex.pdf"
   },
   {
@@ -26397,6 +28063,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/18-Contentsall.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/18-Contentsall.pdf"
   },
   {
@@ -26413,6 +28080,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_1_2018__Contents.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol53_1_2018__Contents.pdf"
   },
   {
@@ -26429,6 +28097,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_1_2018__Art01.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_1_2018__Art01.pdf"
   },
   {
@@ -26445,6 +28114,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_1_2018__Art02.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_1_2018__Art02.pdf"
   },
   {
@@ -26461,6 +28131,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_1_2018__Art03.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_1_2018__Art03.pdf"
   },
   {
@@ -26477,6 +28148,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_1_2018__Art04.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_1_2018__Art04.pdf"
   },
   {
@@ -26493,6 +28165,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_1_2018__Art05.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_1_2018__Art05.pdf"
   },
   {
@@ -26509,6 +28182,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_1_2018__Art06.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_1_2018__Art06.pdf"
   },
   {
@@ -26525,6 +28199,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_1_2018__Art07.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_1_2018__Art07.pdf"
   },
   {
@@ -26541,6 +28216,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_1_2018__Art08.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_1_2018__Art08.pdf"
   },
   {
@@ -26557,6 +28233,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_1_2018__Art09.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol53_1_2018__Art09.pdf"
   },
   {
@@ -26573,6 +28250,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_1_2018__Art10.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol53_1_2018__Art10.pdf"
   },
   {
@@ -26589,6 +28267,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_1_2018__Art11.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol53_1_2018__Art11.pdf"
   },
   {
@@ -26605,6 +28284,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_1_2018__Art12.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_1_2018__Art12.pdf"
   },
   {
@@ -26621,6 +28301,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_2_2018__Contents.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol53_2_2018__Contents.pdf"
   },
   {
@@ -26637,6 +28318,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_2_2018__Art01.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_2_2018__Art01.pdf"
   },
   {
@@ -26653,6 +28335,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_2_2018__Art02.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_2_2018__Art02.pdf"
   },
   {
@@ -26669,6 +28352,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_2_2018__Art03.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_2_2018__Art03.pdf"
   },
   {
@@ -26685,6 +28369,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_2_2018__Art04.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_2_2018__Art04.pdf"
   },
   {
@@ -26701,6 +28386,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_2_2018__Art05.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_2_2018__Art05.pdf"
   },
   {
@@ -26717,6 +28403,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_2_2018__Art06.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_2_2018__Art06.pdf"
   },
   {
@@ -26733,6 +28420,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_2_2018__Art07.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol53_2_2018__Art07.pdf"
   },
   {
@@ -26749,6 +28437,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_2_2018__Art08.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_2_2018__Art08.pdf"
   },
   {
@@ -26765,6 +28454,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_2_2018__Art09.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_2_2018__Art09.pdf"
   },
   {
@@ -26781,6 +28471,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_2_2018__Art10.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_2_2018__Art10.pdf"
   },
   {
@@ -26797,6 +28488,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_2_2018__Art11.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol53_2_2018__Art11.pdf"
   },
   {
@@ -26813,6 +28505,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_3_2018__Art01.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_3_2018__Art01.pdf"
   },
   {
@@ -26829,6 +28522,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_3_2018__Art02.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_3_2018__Art02.pdf"
   },
   {
@@ -26845,6 +28539,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_3_2018__Art03.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_3_2018__Art03.pdf"
   },
   {
@@ -26861,6 +28556,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_3_2018__Art04.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_3_2018__Art04.pdf"
   },
   {
@@ -26877,6 +28573,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_3_2018__Art05.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_3_2018__Art05.pdf"
   },
   {
@@ -26893,6 +28590,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_3_2018__Art06.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_3_2018__Art06.pdf"
   },
   {
@@ -26909,6 +28607,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_3_2018__Art07.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_3_2018__Art07.pdf"
   },
   {
@@ -26925,6 +28624,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_3_2018__Art08.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_3_2018__Art08.pdf"
   },
   {
@@ -26941,6 +28641,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_3_2018__Art09.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_3_2018__Art09.pdf"
   },
   {
@@ -26957,6 +28658,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_3_2018__Art10.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_3_2018__Art10.pdf"
   },
   {
@@ -26973,6 +28675,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_3_2018__Art11.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol53_3_2018__Art11.pdf"
   },
   {
@@ -26989,6 +28692,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_3_2018__Art12.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol53_3_2018__Art12.pdf"
   },
   {
@@ -27005,6 +28709,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_3_2018__Art13.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_3_2018__Art13.pdf"
   },
   {
@@ -27021,6 +28726,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_4_2018__Contents.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Contents.pdf"
   },
   {
@@ -27037,6 +28743,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_4_2018__Art01.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art01.pdf"
   },
   {
@@ -27053,6 +28760,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_4_2018__Art02.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art02.pdf"
   },
   {
@@ -27069,6 +28777,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_4_2018__Art03.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art03.pdf"
   },
   {
@@ -27085,6 +28794,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_4_2018__Art04.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art04.pdf"
   },
   {
@@ -27101,6 +28811,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_4_2018__Art05.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art05.pdf"
   },
   {
@@ -27117,6 +28828,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_4_2018__Art06.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art06.pdf"
   },
   {
@@ -27133,6 +28845,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_4_2018__Art07.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art07.pdf"
   },
   {
@@ -27149,6 +28862,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_4_2018__Art08.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art08.pdf"
   },
   {
@@ -27165,6 +28879,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_4_2018__Art09.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art09.pdf"
   },
   {
@@ -27181,6 +28896,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_4_2018__Art10.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art10.pdf"
   },
   {
@@ -27197,6 +28913,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_4_2018__Art11.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art11.pdf"
   },
   {
@@ -27213,6 +28930,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_4_2018__Art12.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art12.pdf"
   },
   {
@@ -27229,6 +28947,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_4_2018__Art13.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art13.pdf"
   },
   {
@@ -27245,6 +28964,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_4_2018__Art14.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art14.pdf"
   },
   {
@@ -27261,6 +28981,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_4_2018__Art15.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art15.pdf"
   },
   {
@@ -27277,6 +28998,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_4_2018__Art16.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art16.pdf"
   },
   {
@@ -27293,6 +29015,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_4_2018__Art17.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art17.pdf"
   },
   {
@@ -27309,6 +29032,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_4_2018__Art18.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art18.pdf"
   },
   {
@@ -27325,6 +29049,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_4_2018__Art19.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art19.pdf"
   },
   {
@@ -27341,6 +29066,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_4_2018__Art20.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art20.pdf"
   },
   {
@@ -27357,6 +29083,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_4_2018__Art21.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art21.pdf"
   },
   {
@@ -27373,6 +29100,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_4_2018__Art22.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art22.pdf"
   },
   {
@@ -27389,6 +29117,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_4_2018__Art23.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art23.pdf"
   },
   {
@@ -27405,6 +29134,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_4_2018__Art24.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art24.pdf"
   },
   {
@@ -27421,6 +29151,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_4_2018__Art25.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art25.pdf"
   },
   {
@@ -27437,6 +29168,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_4_2018__Art26.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art26.pdf"
   },
   {
@@ -27453,6 +29185,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_4_2018__Art27.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art27.pdf"
   },
   {
@@ -27469,6 +29202,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_4_2018__Art28.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art28.pdf"
   },
   {
@@ -27485,6 +29219,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_4_2018__Art29.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art29.pdf"
   },
   {
@@ -27501,6 +29236,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_4_2018__Art30.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art30.pdf"
   },
   {
@@ -27517,6 +29253,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_4_2018__Art31.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art31.pdf"
   },
   {
@@ -27533,6 +29270,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_4_2018__Art32.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Art32.pdf"
   },
   {
@@ -27549,6 +29287,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_4_2018-Index.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018-Index.pdf"
   },
   {
@@ -27565,6 +29304,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_4_2018-Cumulativeindex.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018-Cumulativeindex.pdf"
   },
   {
@@ -27581,6 +29321,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/35-Contentsall.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/35-Contentsall.pdf"
   },
   {
@@ -27597,6 +29338,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol53_4_2018__Books.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol53_4_2018__Books.pdf"
   },
   {
@@ -27613,6 +29355,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_1_2019__Contents.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol54_1_2019__Contents.pdf"
   },
   {
@@ -27629,6 +29372,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_1_2019__Art01.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol54_1_2019__Art01.pdf"
   },
   {
@@ -27645,6 +29389,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_1_2019__Art02.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol54_1_2019__Art02.pdf"
   },
   {
@@ -27661,6 +29406,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_1_2019__Art03.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol54_1_2019__Art03.pdf"
   },
   {
@@ -27677,6 +29423,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_1_2019__Art04.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol54_1_2019__Art04.pdf"
   },
   {
@@ -27693,6 +29440,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_1_2019__Art05.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol54_1_2019__Art05.pdf"
   },
   {
@@ -27709,6 +29457,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_1_2019__Art06.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol54_1_2019__Art06.pdf"
   },
   {
@@ -27725,6 +29474,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_1_2019__Art07.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol54_1_2019__Art07.pdf"
   },
   {
@@ -27741,6 +29491,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_1_2019__Art08.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol54_1_2019__Art08.pdf"
   },
   {
@@ -27757,6 +29508,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_1_2019__Art09.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol54_1_2019__Art09.pdf"
   },
   {
@@ -27773,6 +29525,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_1_2019__Art10.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol54_1_2019__Art10.pdf"
   },
   {
@@ -27789,6 +29542,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_1_2019__Art11.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol54_1_2019__Art11.pdf"
   },
   {
@@ -27805,6 +29559,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_1_2019__Art12.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol54_1_2019__Art12.pdf"
   },
   {
@@ -27821,6 +29576,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_1_2019__Art13.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol54_1_2019__Art13.pdf"
   },
   {
@@ -27837,6 +29593,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_1_2019__Art14.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol54_1_2019__Art14.pdf"
   },
   {
@@ -27853,6 +29610,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_2_2019__Contents.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol54_2_2019__Contents.pdf"
   },
   {
@@ -27869,6 +29627,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_2_2019__Art01.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol54_2_2019__Art01.pdf"
   },
   {
@@ -27885,6 +29644,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_2_2019__Art02.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol54_2_2019__Art02.pdf"
   },
   {
@@ -27901,6 +29661,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_2_2019__Art03.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol54_2_2019__Art03.pdf"
   },
   {
@@ -27917,6 +29678,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_2_2019__Art04.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol54_2_2019__Art04.pdf"
   },
   {
@@ -27933,6 +29695,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_2_2019__Art05.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol54_2_2019__Art05.pdf"
   },
   {
@@ -27949,6 +29712,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_2_2019__Art06.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol54_2_2019__Art06.pdf"
   },
   {
@@ -27965,6 +29729,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_2_2019__Art07.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol54_2_2019__Art07.pdf"
   },
   {
@@ -27981,6 +29746,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_2_2019__Art08.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol54_2_2019__Art08.pdf"
   },
   {
@@ -27997,6 +29763,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_2_2019__Art09.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol54_2_2019__Art09.pdf"
   },
   {
@@ -28013,6 +29780,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_2_2019__Art10.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol54_2_2019__Art10.pdf"
   },
   {
@@ -28029,6 +29797,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_2_2019__Art11.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol54_2_2019__Art11.pdf"
   },
   {
@@ -28045,6 +29814,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_2_2019__Art12.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol54_2_2019__Art12.pdf"
   },
   {
@@ -28061,6 +29831,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_2_2019__Art13.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol54_2_2019__Art13.pdf"
   },
   {
@@ -28077,6 +29848,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_2_2019__Art14.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol54_2_2019__Art14.pdf"
   },
   {
@@ -28093,6 +29865,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_3_2019__Art01.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol54_3_2019__Art01.pdf"
   },
   {
@@ -28109,6 +29882,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_3_2019__Art02.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol54_3_2019__Art02.pdf"
   },
   {
@@ -28125,6 +29899,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_3_2019__Art03.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol54_3_2019__Art03.pdf"
   },
   {
@@ -28141,6 +29916,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_3_2019__Art04.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol54_3_2019__Art04.pdf"
   },
   {
@@ -28157,6 +29933,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_3_2019__Art05.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol54_3_2019__Art05.pdf"
   },
   {
@@ -28173,6 +29950,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_3_2019__Art06.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol54_3_2019__Art06.pdf"
   },
   {
@@ -28189,6 +29967,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_3_2019__Art07.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol54_3_2019__Art07.pdf"
   },
   {
@@ -28205,6 +29984,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_3_2019__Art08.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol54_3_2019__Art08.pdf"
   },
   {
@@ -28221,6 +30001,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_3_2019__Art10.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol54_3_2019__Art10.pdf"
   },
   {
@@ -28237,6 +30018,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_3_2019__Art11.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol54_3_2019__Art11.pdf"
   },
   {
@@ -28253,6 +30035,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_3_2019__Art12.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol54_3_2019__Art12.pdf"
   },
   {
@@ -28269,6 +30052,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_3_2019__Art13.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol54_3_2019__Art13.pdf"
   },
   {
@@ -28285,6 +30069,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_3_2019__Art14.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol54_3_2019__Art14.pdf"
   },
   {
@@ -28301,6 +30086,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Contents_Vol54_4.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Contents_Vol54_4.pdf"
   },
   {
@@ -28317,6 +30103,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_4_2019__Art01.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol54_4_2019__Art01.pdf"
   },
   {
@@ -28333,6 +30120,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_4_2019__Art02.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol54_4_2019__Art02.pdf"
   },
   {
@@ -28349,6 +30137,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_4_2019__Art03.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol54_4_2019__Art03.pdf"
   },
   {
@@ -28365,6 +30154,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_4_2019__Art04.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol54_4_2019__Art04.pdf"
   },
   {
@@ -28381,6 +30171,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_4_2019__Art05.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol54_4_2019__Art05.pdf"
   },
   {
@@ -28397,6 +30188,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_4_2019__Art06.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol54_4_2019__Art06.pdf"
   },
   {
@@ -28413,6 +30205,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_4_2019__Art08.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol54_4_2019__Art08.pdf"
   },
   {
@@ -28429,6 +30222,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol54_4_2019__Art09.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol54_4_2019__Art09.pdf"
   },
   {
@@ -28445,6 +30239,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol55_1_2020__contents.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol55_1_2020__contents.pdf"
   },
   {
@@ -28461,6 +30256,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol55_1_2020__Art01.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol55_1_2020__Art01.pdf"
   },
   {
@@ -28477,6 +30273,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol55_1_2020__Art02.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol55_1_2020__Art02.pdf"
   },
   {
@@ -28493,6 +30290,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol55_1_2020__Art03.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol55_1_2020__Art03.pdf"
   },
   {
@@ -28509,6 +30307,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol55_1_2020__Art04.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol55_1_2020__Art04.pdf"
   },
   {
@@ -28525,6 +30324,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol55_1_2020__Art05.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol55_1_2020__Art05.pdf"
   },
   {
@@ -28541,6 +30341,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol55_1_2020__Art06.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol55_1_2020__Art06.pdf"
   },
   {
@@ -28557,6 +30358,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol55_1_2020__Art07.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol55_1_2020__Art07.pdf"
   },
   {
@@ -28573,6 +30375,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol55_1_2020__Art08.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol55_1_2020__Art08.pdf"
   },
   {
@@ -28589,6 +30392,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol55_2_2020__Contents.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol55_2_2020__Contents.pdf"
   },
   {
@@ -28605,6 +30409,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol55_2_2020__Art01.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol55_2_2020__Art01.pdf"
   },
   {
@@ -28621,6 +30426,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol55_2_2020__Art02.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol55_2_2020__Art02.pdf"
   },
   {
@@ -28637,6 +30443,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol55_2_2020__Art03.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol55_2_2020__Art03.pdf"
   },
   {
@@ -28653,6 +30460,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol55_2_2020__Art04.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol55_2_2020__Art04.pdf"
   },
   {
@@ -28669,6 +30477,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol55_2_2020__Art05.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol55_2_2020__Art05.pdf"
   },
   {
@@ -28685,6 +30494,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol55_2_2020__Art06.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol55_2_2020__Art06.pdf"
   },
   {
@@ -28701,6 +30511,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol55_2_2020__Art07.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol55_2_2020__Art07.pdf"
   },
   {
@@ -28717,6 +30528,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol55_2_2020__Art08.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol55_2_2020__Art08.pdf"
   },
   {
@@ -28733,6 +30545,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol55_3_2020__Contents.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol55_3_2020__Contents.pdf"
   },
   {
@@ -28749,6 +30562,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol55_3_2020__Art01.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol55_3_2020__Art01.pdf"
   },
   {
@@ -28765,6 +30579,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol55_3_2020__Art02.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol55_3_2020__Art02.pdf"
   },
   {
@@ -28781,6 +30596,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol55_3_2020__Art03.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol55_3_2020__Art03.pdf"
   },
   {
@@ -28797,6 +30613,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol55_3_2020__Art04.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol55_3_2020__Art04.pdf"
   },
   {
@@ -28813,6 +30630,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol55_3_2020__Art05.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol55_3_2020__Art05.pdf"
   },
   {
@@ -28829,6 +30647,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol55_3_2020__Art06.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol55_3_2020__Art06.pdf"
   },
   {
@@ -28845,6 +30664,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol55_3_2020__Art07.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol55_3_2020__Art07.pdf"
   },
   {
@@ -28861,6 +30681,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol55_3_2020__Art08.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol55_3_2020__Art08.pdf"
   },
   {
@@ -28877,6 +30698,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol55_4Contents.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol55_4Contents.pdf"
   },
   {
@@ -28893,6 +30715,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol55_4_2020__Art01.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol55_4_2020__Art01.pdf"
   },
   {
@@ -28909,6 +30732,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol55_4_2020__Art02.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol55_4_2020__Art02.pdf"
   },
   {
@@ -28925,6 +30749,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol55_4_2020__Art03.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol55_4_2020__Art03.pdf"
   },
   {
@@ -28941,6 +30766,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol55_4_2020__Art04.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol55_4_2020__Art04.pdf"
   },
   {
@@ -28957,6 +30783,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol55_4_2020__Art05.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol55_4_2020__Art05.pdf"
   },
   {
@@ -28973,6 +30800,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol55_4_2020__Art10.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol55_4_2020__Art10.pdf"
   },
   {
@@ -28989,6 +30817,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol55_4_2020__Art06.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol55_4_2020__Art06.pdf"
   },
   {
@@ -29005,6 +30834,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol55_4_2020__Art07.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol55_4_2020__Art07.pdf"
   },
   {
@@ -29021,6 +30851,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol55_4_2020__Art08.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol55_4_2020__Art08.pdf"
   },
   {
@@ -29037,6 +30868,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol55_4_2020__Art09.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol55_4_2020__Art09.pdf"
   },
   {
@@ -29053,6 +30885,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol55_4_2020__CIndex.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol55_4_2020__CIndex.pdf"
   },
   {
@@ -29069,6 +30902,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol55_4_2020__AnnualContents.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Vol55_4_2020__AnnualContents.pdf"
   },
   {
@@ -29085,6 +30919,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Content.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Content.pdf"
   },
   {
@@ -29101,6 +30936,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/1-13.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/1-13.pdf"
   },
   {
@@ -29117,6 +30953,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/14-19.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/14-19.pdf"
   },
   {
@@ -29133,6 +30970,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/20-27.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/20-27.pdf"
   },
   {
@@ -29149,6 +30987,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/28-36.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/28-36.pdf"
   },
   {
@@ -29165,6 +31004,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/37-48.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/37-48.pdf"
   },
   {
@@ -29181,6 +31021,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/49-59.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/49-59.pdf"
   },
   {
@@ -29197,6 +31038,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/60-64.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/60-64.pdf"
   },
   {
@@ -29213,6 +31055,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/65-69.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/65-69.pdf"
   },
   {
@@ -29229,6 +31072,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/0__Content.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/0__Content.pdf"
   },
   {
@@ -29245,6 +31089,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/1__Mahesh.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/1__Mahesh.pdf"
   },
   {
@@ -29261,6 +31106,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/2__Chauthaiwale.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/2__Chauthaiwale.pdf"
   },
   {
@@ -29277,6 +31123,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/3__Thomas.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/3__Thomas.pdf"
   },
   {
@@ -29293,6 +31140,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/4__Sasisekaran.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/4__Sasisekaran.pdf"
   },
   {
@@ -29309,6 +31157,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/5__Jitendra.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/5__Jitendra.pdf"
   },
   {
@@ -29325,6 +31174,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/6__Arnab%20Rai%20Choudhuri.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/6__Arnab%20Rai%20Choudhuri.pdf"
   },
   {
@@ -29341,6 +31191,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/7__Satyanad.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/7__Satyanad.pdf"
   },
   {
@@ -29357,6 +31208,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/8__Maidul.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/8__Maidul.pdf"
   },
   {
@@ -29373,6 +31225,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/1.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/1.pdf"
   },
   {
@@ -29389,6 +31242,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/2.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/2.pdf"
   },
   {
@@ -29405,6 +31259,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/3.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/3.pdf"
   },
   {
@@ -29421,6 +31276,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/4.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/4.pdf"
   },
   {
@@ -29437,6 +31293,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/5.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/5.pdf"
   },
   {
@@ -29453,6 +31310,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/6.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/6.pdf"
   },
   {
@@ -29469,6 +31327,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/7.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/7.pdf"
   },
   {
@@ -29485,6 +31344,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/8.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/8.pdf"
   },
   {
@@ -29501,6 +31361,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/1_PM%20Dolas.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/1_PM%20Dolas.pdf"
   },
   {
@@ -29517,6 +31378,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol31_4_7_BookReview.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol31_4_7_BookReview.pdf"
   },
   {
@@ -29533,6 +31395,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Vol47_3_4_PKBandyopadhyay.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Vol47_3_4_PKBandyopadhyay.pdf"
   },
   {
@@ -29549,6 +31412,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/sadratnamaala-ihjs-2001-issue3&4.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/sadratnamaala-ihjs-2001-issue3&4.pdf"
   },
   {
@@ -29565,6 +31429,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/2_NC%20Shah.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/2_NC%20Shah.pdf"
   },
   {
@@ -29581,6 +31446,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/3_F%20Di%20Giacomo.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/3_F%20Di%20Giacomo.pdf"
   },
   {
@@ -29597,6 +31463,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/4_S%20Dasgupta.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/4_S%20Dasgupta.pdf"
   },
   {
@@ -29613,6 +31480,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/5_P%20Sharma.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/5_P%20Sharma.pdf"
   },
   {
@@ -29629,6 +31497,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/6_R%20Ghosh.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/6_R%20Ghosh.pdf"
   },
   {
@@ -29645,6 +31514,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/7_MA%20Wani.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/7_MA%20Wani.pdf"
   },
   {
@@ -29661,6 +31531,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/8_S%20Kulangara.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/8_S%20Kulangara.pdf"
   },
   {
@@ -29677,6 +31548,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/9_B%20Goswami.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/9_B%20Goswami.pdf"
   },
   {
@@ -29693,6 +31565,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/57_2_Content.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/57_2_Content.pdf"
   },
   {
@@ -29709,6 +31582,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/57_2_1.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/57_2_1.pdf"
   },
   {
@@ -29725,6 +31599,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/57_2_2.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/57_2_2.pdf"
   },
   {
@@ -29741,6 +31616,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/57_2_3.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/57_2_3.pdf"
   },
   {
@@ -29757,6 +31633,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/57_2_4.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/57_2_4.pdf"
   },
   {
@@ -29773,6 +31650,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/57_2_5.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/57_2_5.pdf"
   },
   {
@@ -29789,6 +31667,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/57_2_6.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/57_2_6.pdf"
   },
   {
@@ -29805,6 +31684,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/57_2_7.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/57_2_7.pdf"
   },
   {
@@ -29821,6 +31701,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/57_2_8.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/57_2_8.pdf"
   },
   {
@@ -29837,6 +31718,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/57_2_9.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/57_2_9.pdf"
   },
   {
@@ -29853,6 +31735,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/57_2_10.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/57_2_10.pdf"
   },
   {
@@ -29869,6 +31752,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/57_3_Content.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/57_3_Content.pdf"
   },
   {
@@ -29885,6 +31769,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/57_3_1.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/57_3_1.pdf"
   },
   {
@@ -29901,6 +31786,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/57_3_2.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/57_3_2.pdf"
   },
   {
@@ -29917,6 +31803,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/57_3_3.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/57_3_3.pdf"
   },
   {
@@ -29933,6 +31820,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/57_3_4.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/57_3_4.pdf"
   },
   {
@@ -29949,6 +31837,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/57_3_5.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/57_3_5.pdf"
   },
   {
@@ -29965,6 +31854,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/57_3_6.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/57_3_6.pdf"
   },
   {
@@ -29981,6 +31871,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/57_3_7.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/57_3_7.pdf"
   },
   {
@@ -29997,6 +31888,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/57_3_8.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/57_3_8.pdf"
   },
   {
@@ -30013,6 +31905,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/S1-IndusZoomorphicIconCatalogue.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/S1-IndusZoomorphicIconCatalogue.pdf"
   },
   {
@@ -30029,6 +31922,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/57_4_Content.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/57_4_Content.pdf"
   },
   {
@@ -30045,6 +31939,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/57_4_1.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/57_4_1.pdf"
   },
   {
@@ -30061,6 +31956,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/57_4_2.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/57_4_2.pdf"
   },
   {
@@ -30077,6 +31973,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/57_4_3.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/57_4_3.pdf"
   },
   {
@@ -30093,6 +31990,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/57_4_4.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/57_4_4.pdf"
   },
   {
@@ -30109,6 +32007,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/57_4_5.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/57_4_5.pdf"
   },
   {
@@ -30125,6 +32024,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/57_4_6.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/57_4_6.pdf"
   },
   {
@@ -30141,6 +32041,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/57_4_7.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/57_4_7.pdf"
   },
   {
@@ -30157,6 +32058,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/57_4_8.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/57_4_8.pdf"
   },
   {
@@ -30173,6 +32075,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/57_4_9.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/57_4_9.pdf"
   },
   {
@@ -30189,6 +32092,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/57_4_10.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/57_4_10.pdf"
   },
   {
@@ -30205,6 +32109,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/58_1_Content.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/58_1_Content.pdf"
   },
   {
@@ -30221,6 +32126,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/58_1_1.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/58_1_1.pdf"
   },
   {
@@ -30237,6 +32143,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/58_1_2.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/58_1_2.pdf"
   },
   {
@@ -30253,6 +32160,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/58_1_3.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/58_1_3.pdf"
   },
   {
@@ -30269,6 +32177,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/58_1_4.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/58_1_4.pdf"
   },
   {
@@ -30285,6 +32194,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/58_1_5.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/58_1_5.pdf"
   },
   {
@@ -30301,6 +32211,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/58_1_6.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/58_1_6.pdf"
   },
   {
@@ -30317,6 +32228,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/58_1_7.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/58_1_7.pdf"
   },
   {
@@ -30333,6 +32245,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/58_1_8.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/58_1_8.pdf"
   },
   {
@@ -30349,6 +32262,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/58_1_9.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/58_1_9.pdf"
   },
   {
@@ -30365,6 +32279,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/58_1_10.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/58_1_10.pdf"
   },
   {
@@ -30381,6 +32296,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/58-1_11.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/58-1_11.pdf"
   },
   {
@@ -30397,6 +32313,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_58_2_Contents.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/IJHS_58_2_Contents.pdf"
   },
   {
@@ -30413,6 +32330,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_58_2_1.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_58_2_1.pdf"
   },
   {
@@ -30429,6 +32347,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_58_2_2.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_58_2_2.pdf"
   },
   {
@@ -30445,6 +32364,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_58_2_3.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_58_2_3.pdf"
   },
   {
@@ -30461,6 +32381,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS58_2_4.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS58_2_4.pdf"
   },
   {
@@ -30477,6 +32398,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_58_2_5.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_58_2_5.pdf"
   },
   {
@@ -30493,6 +32415,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_58_2_6.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_58_2_6.pdf"
   },
   {
@@ -30509,6 +32432,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS58_2_7.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS58_2_7.pdf"
   },
   {
@@ -30525,6 +32449,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_58_2_8.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_58_2_8.pdf"
   },
   {
@@ -30541,6 +32466,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Contents_58-3.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Contents_58-3.pdf"
   },
   {
@@ -30557,6 +32483,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_58_3_1.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_58_3_1.pdf"
   },
   {
@@ -30573,6 +32500,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_58_3_2.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_58_3_2.pdf"
   },
   {
@@ -30589,6 +32517,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_58_3_3.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_58_3_3.pdf"
   },
   {
@@ -30605,6 +32534,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_58_3_4.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_58_3_4.pdf"
   },
   {
@@ -30621,6 +32551,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_58_3_5.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_58_3_5.pdf"
   },
   {
@@ -30637,6 +32568,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_58_3_6.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_58_3_6.pdf"
   },
   {
@@ -30653,6 +32585,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_58_3_7.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_58_3_7.pdf"
   },
   {
@@ -30669,6 +32602,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_58_3_8.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/IJHS_58_3_8.pdf"
   },
   {
@@ -30685,6 +32619,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_58_3_9.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/IJHS_58_3_9.pdf"
   },
   {
@@ -30701,6 +32636,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_58_3_10.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_58_3_10.pdf"
   },
   {
@@ -30717,6 +32653,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Contents_58_4IJHS.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Contents_58_4IJHS.pdf"
   },
   {
@@ -30733,6 +32670,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/01_58_4.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/01_58_4.pdf"
   },
   {
@@ -30749,6 +32687,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/02-58_4.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/02-58_4.pdf"
   },
   {
@@ -30765,6 +32704,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/03-58_4.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/03-58_4.pdf"
   },
   {
@@ -30781,6 +32721,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/04-58_4.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/04-58_4.pdf"
   },
   {
@@ -30797,6 +32738,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/05-58_4.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/05-58_4.pdf"
   },
   {
@@ -30813,6 +32755,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/06-58_4.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/06-58_4.pdf"
   },
   {
@@ -30829,6 +32772,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/07-58_4.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/07-58_4.pdf"
   },
   {
@@ -30845,6 +32789,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/08-58_4.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/08-58_4.pdf"
   },
   {
@@ -30861,6 +32806,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/09-58_4.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/09-58_4.pdf"
   },
   {
@@ -30877,6 +32823,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/10-58_4.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/10-58_4.pdf"
   },
   {
@@ -30893,6 +32840,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Cumulative%20Index_58_ijhs.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Cumulative%20Index_58_ijhs.pdf"
   },
   {
@@ -30909,6 +32857,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Contents_59_1_ijhs.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Contents_59_1_ijhs.pdf"
   },
   {
@@ -30925,6 +32874,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/01-IJHS59_1.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/01-IJHS59_1.pdf"
   },
   {
@@ -30941,6 +32891,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/02-IJHS59_2.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/02-IJHS59_2.pdf"
   },
   {
@@ -30957,6 +32908,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/03-IJHS59_1.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/03-IJHS59_1.pdf"
   },
   {
@@ -30973,6 +32925,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/04-IJHS59_1.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/04-IJHS59_1.pdf"
   },
   {
@@ -30989,6 +32942,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/05-IJHS59_1.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/05-IJHS59_1.pdf"
   },
   {
@@ -31005,6 +32959,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/06-IJHS59_1.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/06-IJHS59_1.pdf"
   },
   {
@@ -31021,6 +32976,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/07-IJHS59_1.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/07-IJHS59_1.pdf"
   },
   {
@@ -31037,6 +32993,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/08-IJHS59_1.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/08-IJHS59_1.pdf"
   },
   {
@@ -31053,6 +33010,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/09-IJHS59_1.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/09-IJHS59_1.pdf"
   },
   {
@@ -31069,6 +33027,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/10-IJHS59_1.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/10-IJHS59_1.pdf"
   },
   {
@@ -31085,6 +33044,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/11-IJHS59_1.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/11-IJHS59_1.pdf"
   },
   {
@@ -31101,6 +33061,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Corrigendum_59_1.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/Corrigendum_59_1.pdf"
   },
   {
@@ -31117,6 +33078,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Contents_59_2_ijhs.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Contents_59_2_ijhs.pdf"
   },
   {
@@ -31133,6 +33095,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/01-43539_2024_127_OnlinePDF123-142.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/01-43539_2024_127_OnlinePDF123-142.pdf"
   },
   {
@@ -31149,6 +33112,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/02-43539_2024_121_OnlinePDF143-158.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/02-43539_2024_121_OnlinePDF143-158.pdf"
   },
   {
@@ -31165,6 +33129,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/03-43539_2024_123_OnlinePDF159-164.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/03-43539_2024_123_OnlinePDF159-164.pdf"
   },
   {
@@ -31181,6 +33146,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/04-43539_2024_126_OnlinePDF165-177.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/04-43539_2024_126_OnlinePDF165-177.pdf"
   },
   {
@@ -31197,6 +33163,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/05-43539_2024_122_OnlinePDF178-191.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/05-43539_2024_122_OnlinePDF178-191.pdf"
   },
   {
@@ -31213,6 +33180,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/06-43539_2024_120_OnlinePDF192-203.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/06-43539_2024_120_OnlinePDF192-203.pdf"
   },
   {
@@ -31229,6 +33197,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/07-43539_2024_125_OnlinePDF204-215.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/07-43539_2024_125_OnlinePDF204-215.pdf"
   },
   {
@@ -31245,6 +33214,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/08-43539_2024_124_OnlinePDF216-222.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/08-43539_2024_124_OnlinePDF216-222.pdf"
   },
   {
@@ -31261,6 +33231,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/09-43539_2024_129_OnlinePDF223-224.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/09-43539_2024_129_OnlinePDF223-224.pdf"
   },
   {
@@ -31277,6 +33248,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/10-43539_2024_128_OnlinePDF225-232.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/10-43539_2024_128_OnlinePDF225-232.pdf"
   },
   {
@@ -31293,6 +33265,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/Contents_IJHS_59_3.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/Contents_IJHS_59_3.pdf"
   },
   {
@@ -31309,6 +33282,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_59_3_1.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_59_3_1.pdf"
   },
   {
@@ -31325,6 +33299,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_59_3_2.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_59_3_2.pdf"
   },
   {
@@ -31341,6 +33316,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_59_3_3.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_59_3_3.pdf"
   },
   {
@@ -31357,6 +33333,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_59_3_4.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_59_3_4.pdf"
   },
   {
@@ -31373,6 +33350,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_59_3_5.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_59_3_5.pdf"
   },
   {
@@ -31389,6 +33367,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_59_3_6.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_59_3_6.pdf"
   },
   {
@@ -31405,6 +33384,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_59_3_7.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_59_3_7.pdf"
   },
   {
@@ -31421,6 +33401,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_59_3_8.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/IJHS_59_3_8.pdf"
   },
   {
@@ -31437,6 +33418,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_59_3_9.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_59_3_9.pdf"
   },
   {
@@ -31453,6 +33435,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_59_3_10.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/IJHS_59_3_10.pdf"
   },
   {
@@ -31469,6 +33452,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_59_4Contents.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/IJHS_59_4Contents.pdf"
   },
   {
@@ -31485,6 +33469,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/01_IJHS59_4.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/01_IJHS59_4.pdf"
   },
   {
@@ -31501,6 +33486,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/02_IJHS59_4.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/02_IJHS59_4.pdf"
   },
   {
@@ -31517,6 +33503,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/03_IJHS59_4.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/03_IJHS59_4.pdf"
   },
   {
@@ -31533,6 +33520,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/04_IJHS59_4.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/04_IJHS59_4.pdf"
   },
   {
@@ -31549,6 +33537,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/05_IJHS59_4.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/05_IJHS59_4.pdf"
   },
   {
@@ -31565,6 +33554,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/06_IJHS59_4.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/06_IJHS59_4.pdf"
   },
   {
@@ -31581,6 +33571,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/07_IJHS59_4.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/07_IJHS59_4.pdf"
   },
   {
@@ -31597,6 +33588,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/08_IJHS59_4.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/08_IJHS59_4.pdf"
   },
   {
@@ -31613,6 +33605,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/09_IJHS59_4.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/09_IJHS59_4.pdf"
   },
   {
@@ -31629,6 +33622,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_60_1_1.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_60_1_1.pdf"
   },
   {
@@ -31645,6 +33639,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_60_1_2.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_60_1_2.pdf"
   },
   {
@@ -31661,6 +33656,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_60_1_3.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_60_1_3.pdf"
   },
   {
@@ -31677,6 +33673,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_60_1_4.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_60_1_4.pdf"
   },
   {
@@ -31693,6 +33690,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_60_1_5.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_60_1_5.pdf"
   },
   {
@@ -31709,6 +33707,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_60_1_6.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_60_1_6.pdf"
   },
   {
@@ -31725,6 +33724,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_60_1_7.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_60_1_7.pdf"
   },
   {
@@ -31741,6 +33741,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_60_1_8.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_60_1_8.pdf"
   },
   {
@@ -31757,6 +33758,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_60_1_9.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_60_1_9.pdf"
   },
   {
@@ -31773,6 +33775,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_60_1_10.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/IJHS_60_1_10.pdf"
   },
   {
@@ -31789,6 +33792,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_60_1_11.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_60_1_11.pdf"
   },
   {
@@ -31805,6 +33809,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_60_2_1.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_60_2_1.pdf"
   },
   {
@@ -31821,6 +33826,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_60_2_2.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_60_2_2.pdf"
   },
   {
@@ -31837,6 +33843,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_60_2_3.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_60_2_3.pdf"
   },
   {
@@ -31853,6 +33860,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_60_2_4.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_60_2_4.pdf"
   },
   {
@@ -31869,6 +33877,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_60_2_5.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_60_2_5.pdf"
   },
   {
@@ -31885,6 +33894,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_60_2_6.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_60_2_6.pdf"
   },
   {
@@ -31901,6 +33911,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_60_2_7.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_60_2_7.pdf"
   },
   {
@@ -31917,6 +33928,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_60_2_8.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_60_2_8.pdf"
   },
   {
@@ -31933,6 +33945,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_60_2_9.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_60_2_9.pdf"
   },
   {
@@ -31949,6 +33962,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_60_2_10.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_60_2_10.pdf"
   },
   {
@@ -31965,6 +33979,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_60_2_11.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/IJHS_60_2_11.pdf"
   },
   {
@@ -31981,6 +33996,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_60_2_12.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_60_2_12.pdf"
   },
   {
@@ -31997,6 +34013,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_60_3_0.pdf",
+    "content_kind": "news",
     "localPath": "assets/pdfs/ijhs/IJHS_60_3_0.pdf"
   },
   {
@@ -32013,6 +34030,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_60_3_1.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_60_3_1.pdf"
   },
   {
@@ -32029,6 +34047,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_60_3_2.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_60_3_2.pdf"
   },
   {
@@ -32045,6 +34064,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_60_3_3.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_60_3_3.pdf"
   },
   {
@@ -32061,6 +34081,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_60_3_4.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_60_3_4.pdf"
   },
   {
@@ -32077,6 +34098,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_60_3_5.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_60_3_5.pdf"
   },
   {
@@ -32093,6 +34115,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_60_3_6.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_60_3_6.pdf"
   },
   {
@@ -32109,6 +34132,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_60_3_7.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_60_3_7.pdf"
   },
   {
@@ -32125,6 +34149,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_60_3_8.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_60_3_8.pdf"
   },
   {
@@ -32141,6 +34166,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_60_3_9.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_60_3_9.pdf"
   },
   {
@@ -32157,6 +34183,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_60_3_10.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_60_3_10.pdf"
   },
   {
@@ -32173,6 +34200,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_60_3_11.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_60_3_11.pdf"
   },
   {
@@ -32189,6 +34217,7 @@ const PAPERS = [
     "entry_type": "pdf",
     "source": "insa",
     "gcs_key": "ijhs/IJHS_60_3_12.pdf",
+    "content_kind": "paper",
     "localPath": "assets/pdfs/ijhs/IJHS_60_3_12.pdf"
   }
 ];
