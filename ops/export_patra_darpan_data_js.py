@@ -146,11 +146,11 @@ def p60_sort_key(row):
         year = int(float(row.get("year") or 0))
     except (TypeError, ValueError):
         year = 0
-    return (-year, row.get("source", ""), row.get("title", ""))
+    return (-year, -int(row.get("_source_index", 0)))
 
 def build_p60_projection(papers):
     rows = []
-    for paper in papers:
+    for source_index, paper in enumerate(papers):
         if not paper.get("cahc_authored"):
             continue
 
@@ -168,10 +168,13 @@ def build_p60_projection(papers):
                 "url": url,
                 "entry_type": paper.get("entry_type", ""),
                 "content_kind": paper.get("content_kind", "paper"),
+                "_source_index": source_index,
             }
         )
 
     rows.sort(key=p60_sort_key)
+    for row in rows:
+        row.pop("_source_index", None)
     return {
         "generatedAt": datetime.now(UTC).isoformat().replace("+00:00", "Z"),
         "rowCount": len(rows),
