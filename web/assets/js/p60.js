@@ -1,24 +1,24 @@
 window.PATRA_DARPAN_P60 = {
-  "generatedAt": "2026-04-23T13:05:34.176764Z",
+  "generatedAt": "2026-04-23T13:44:49.576549Z",
   "rowCount": 76,
   "rows": [
     {
       "year": "2026",
       "category": "Culture",
-      "title": "A Forgotten Indian Theory Of How Power Turns Comic Before It Turns Cruel",
-      "author": "R. S. Hariharan",
+      "title": "Vivaan, Aarav, Kalu, Chhotu... India's Naming Crisis That Rajasthan Is Trying To Fix",
+      "author": "Nishtha Anushree, R. S. Hariharan",
       "source": "SwarajyaMag",
-      "url": "https://swarajyamag.com/culture/a-forgotten-indian-theory-of-how-power-turns-comic-before-it-turns-cruel",
+      "url": "https://swarajyamag.com/ideas/indias-naming-crisis-rajasthan-is-trying-to-fix-it-urban-india-doesnt-even-know-it-has-the-problem",
       "entry_type": "link",
       "content_kind": "article"
     },
     {
       "year": "2026",
       "category": "Culture",
-      "title": "Did India Lack Historical Consciousness, Or Is It Just That India Understood Time Differently?",
+      "title": "Krishna Is Shiva: A Philosophical Secret Hidden in a Sanskrit Poem",
       "author": "R. S. Hariharan",
       "source": "SwarajyaMag",
-      "url": "https://swarajyamag.com/ideas/did-india-lack-historical-consciousness-or-is-it-just-that-india-understood-time-differently",
+      "url": "https://swarajyamag.com/ideas/krishna-is-shiva-a-philosophical-secret-hidden-in-a-sanskrit-poem",
       "entry_type": "link",
       "content_kind": "article"
     },
@@ -35,32 +35,32 @@ window.PATRA_DARPAN_P60 = {
     {
       "year": "2026",
       "category": "Culture",
-      "title": "Krishna Is Shiva: A Philosophical Secret Hidden in a Sanskrit Poem",
+      "title": "Did India Lack Historical Consciousness, Or Is It Just That India Understood Time Differently?",
       "author": "R. S. Hariharan",
       "source": "SwarajyaMag",
-      "url": "https://swarajyamag.com/ideas/krishna-is-shiva-a-philosophical-secret-hidden-in-a-sanskrit-poem",
+      "url": "https://swarajyamag.com/ideas/did-india-lack-historical-consciousness-or-is-it-just-that-india-understood-time-differently",
       "entry_type": "link",
       "content_kind": "article"
     },
     {
       "year": "2026",
       "category": "Culture",
-      "title": "Vivaan, Aarav, Kalu, Chhotu... India's Naming Crisis That Rajasthan Is Trying To Fix",
-      "author": "Nishtha Anushree, R. S. Hariharan",
+      "title": "A Forgotten Indian Theory Of How Power Turns Comic Before It Turns Cruel",
+      "author": "R. S. Hariharan",
       "source": "SwarajyaMag",
-      "url": "https://swarajyamag.com/ideas/indias-naming-crisis-rajasthan-is-trying-to-fix-it-urban-india-doesnt-even-know-it-has-the-problem",
+      "url": "https://swarajyamag.com/culture/a-forgotten-indian-theory-of-how-power-turns-comic-before-it-turns-cruel",
       "entry_type": "link",
       "content_kind": "article"
     },
     {
       "year": "2025",
-      "category": "MindSciences",
-      "title": "Stupidity is not a laughing matter",
-      "author": "Warija Adiga",
-      "source": "AJPEM",
-      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/ajpem_2025_no_laugh.pdf",
+      "category": "Culture",
+      "title": "The Scope of A\u1e63\u1e6d\u0101da\u015bavar\u1e47ana in the Mah\u0101k\u0101vya Mathur\u0101bhyudaya",
+      "author": "R. S. Hariharan",
+      "source": "Karnataka Sanskrit 8.1",
+      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/The_Scope_of_Ashtadashavarnana.pdf",
       "entry_type": "pdf",
-      "content_kind": "article"
+      "content_kind": "paper"
     },
     {
       "year": "2025",
@@ -84,13 +84,13 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2025",
-      "category": "Culture",
-      "title": "The Scope of A\u1e63\u1e6d\u0101da\u015bavar\u1e47ana in the Mah\u0101k\u0101vya Mathur\u0101bhyudaya",
-      "author": "R. S. Hariharan",
-      "source": "Karnataka Sanskrit 8.1",
-      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/The_Scope_of_Ashtadashavarnana.pdf",
+      "category": "MindSciences",
+      "title": "Stupidity is not a laughing matter",
+      "author": "Warija Adiga",
+      "source": "AJPEM",
+      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/ajpem_2025_no_laugh.pdf",
       "entry_type": "pdf",
-      "content_kind": "paper"
+      "content_kind": "article"
     },
     {
       "year": "2025",
@@ -124,6 +124,16 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2025",
+      "category": "Books",
+      "title": "R\u0101m\u0101nuy\u0101tram: The Modern Ratha Yatra In Classical Sanskrit",
+      "author": "R. S. Hariharan",
+      "source": "SwarajyaMag",
+      "url": "https://swarajyamag.com/books/rmnuytram-the-modern-ratha-yatra-in-classical-sanskrit",
+      "entry_type": "link",
+      "content_kind": "article"
+    },
+    {
+      "year": "2025",
       "category": "Arts",
       "title": "How A Sanskrit Play Brings Ancient Theatre Into Today\u2019s Bengaluru",
       "author": "R. S. Hariharan",
@@ -143,14 +153,14 @@ window.PATRA_DARPAN_P60 = {
       "content_kind": "article"
     },
     {
-      "year": "2025",
-      "category": "Books",
-      "title": "R\u0101m\u0101nuy\u0101tram: The Modern Ratha Yatra In Classical Sanskrit",
-      "author": "R. S. Hariharan",
-      "source": "SwarajyaMag",
-      "url": "https://swarajyamag.com/books/rmnuytram-the-modern-ratha-yatra-in-classical-sanskrit",
-      "entry_type": "link",
-      "content_kind": "article"
+      "year": "2024",
+      "category": "Culture",
+      "title": "A Comparative Analysis of the Ka\u1e41savadha Episode Across Various Pur\u0101\u1e47ic Texts",
+      "author": "R. S. Hariharan, Shankar Rajaraman",
+      "source": "Shodhsamhita XI.2",
+      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/A_Comparitive_analysis_of_Kamsavadha_episode_in_Puranic_Texts.pdf",
+      "entry_type": "pdf",
+      "content_kind": "paper"
     },
     {
       "year": "2024",
@@ -159,16 +169,6 @@ window.PATRA_DARPAN_P60 = {
       "author": "R. S. Hariharan, Shankar Rajaraman",
       "source": "Mahasvini Vol. 2",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/mahisvini_2024_kamsavadha.pdf",
-      "entry_type": "pdf",
-      "content_kind": "paper"
-    },
-    {
-      "year": "2024",
-      "category": "Culture",
-      "title": "A Comparative Analysis of the Ka\u1e41savadha Episode Across Various Pur\u0101\u1e47ic Texts",
-      "author": "R. S. Hariharan, Shankar Rajaraman",
-      "source": "Shodhsamhita XI.2",
-      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/A_Comparitive_analysis_of_Kamsavadha_episode_in_Puranic_Texts.pdf",
       "entry_type": "pdf",
       "content_kind": "paper"
     },
@@ -194,16 +194,6 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2021",
-      "category": "Culture",
-      "title": "Indian Heritage of Gurukula System Ethics, Student-Teacher Relationship",
-      "author": "R.N. Iyengar",
-      "source": "Asian Journal of Professional Ethics and Management",
-      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Indian_Heritage_of_Gurukula_System_Ethic.pdf",
-      "entry_type": "pdf",
-      "content_kind": "article"
-    },
-    {
-      "year": "2021",
       "category": "Astronomy",
       "title": "Transit of sun through the seasonal naksatra cycle in the Vrddha-G\u0101rg\u012bya Jyotisa",
       "author": "R. N. Iyengar and Sunder Chakravarty",
@@ -211,6 +201,16 @@ window.PATRA_DARPAN_P60 = {
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/1.pdf",
       "entry_type": "pdf",
       "content_kind": "paper"
+    },
+    {
+      "year": "2021",
+      "category": "Culture",
+      "title": "Indian Heritage of Gurukula System Ethics, Student-Teacher Relationship",
+      "author": "R.N. Iyengar",
+      "source": "Asian Journal of Professional Ethics and Management",
+      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Indian_Heritage_of_Gurukula_System_Ethic.pdf",
+      "entry_type": "pdf",
+      "content_kind": "article"
     },
     {
       "year": "2020",
@@ -225,10 +225,10 @@ window.PATRA_DARPAN_P60 = {
     {
       "year": "2019",
       "category": "Astronomy",
-      "title": "V\u1e5bddhag\u0101rg\u012bya Jyoti\u1e63a (Part 1): Introduction",
+      "title": "V\u1e5bddhag\u0101rg\u012bya Jyoti\u1e63a (Part 3): Tithi-karma-gu\u1e47a",
       "author": "R.N. Iyengar, H.S. Sudarshan, Anand Viswanathan",
-      "source": "Tattvadipa 25 (1)",
-      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/$T_A_T_T_V_A_D_E_P_A_H_Journal_of_Academy.pdf",
+      "source": "Tattvadipa 25 (3-4)",
+      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/vddhagargiya_jyotisa_3.pdf",
       "entry_type": "pdf",
       "content_kind": "paper"
     },
@@ -245,20 +245,10 @@ window.PATRA_DARPAN_P60 = {
     {
       "year": "2019",
       "category": "Astronomy",
-      "title": "V\u1e5bddhag\u0101rg\u012bya Jyoti\u1e63a (Part 3): Tithi-karma-gu\u1e47a",
+      "title": "V\u1e5bddhag\u0101rg\u012bya Jyoti\u1e63a (Part 1): Introduction",
       "author": "R.N. Iyengar, H.S. Sudarshan, Anand Viswanathan",
-      "source": "Tattvadipa 25 (3-4)",
-      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/vddhagargiya_jyotisa_3.pdf",
-      "entry_type": "pdf",
-      "content_kind": "paper"
-    },
-    {
-      "year": "2018",
-      "category": "Astronomy",
-      "title": "Archaeo astronomy and Ancient Indian Chronology",
-      "author": "R.N. Iyengar",
-      "source": "ICHR National Conference",
-      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/rni-ichr-archaeo-astronomy-2018.pdf",
+      "source": "Tattvadipa 25 (1)",
+      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/$T_A_T_T_V_A_D_E_P_A_H_Journal_of_Academy.pdf",
       "entry_type": "pdf",
       "content_kind": "paper"
     },
@@ -293,6 +283,16 @@ window.PATRA_DARPAN_P60 = {
       "content_kind": "paper"
     },
     {
+      "year": "2018",
+      "category": "Astronomy",
+      "title": "Archaeo astronomy and Ancient Indian Chronology",
+      "author": "R.N. Iyengar",
+      "source": "ICHR National Conference",
+      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/rni-ichr-archaeo-astronomy-2018.pdf",
+      "entry_type": "pdf",
+      "content_kind": "paper"
+    },
+    {
       "year": "2017",
       "category": "Astronomy",
       "title": "The Units of Time in Ancient and Medieval India",
@@ -315,20 +315,20 @@ window.PATRA_DARPAN_P60 = {
     {
       "year": "2016",
       "category": "Astronomy",
-      "title": "Ancient Indian Astronomy in Vedic Texts",
+      "title": "Comets and meteorites in the \u1e5agveda",
       "author": "R.N. Iyengar",
       "source": "International Conference on Oriental Astronomy",
-      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/$Ancient_Indian_Astronomy_in_Vedic_Texts.pdf",
+      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/rni-extract-comets-meteors-vedas-2016.pdf",
       "entry_type": "pdf",
       "content_kind": "paper"
     },
     {
       "year": "2016",
       "category": "Astronomy",
-      "title": "Comets and meteorites in the \u1e5agveda",
+      "title": "Ancient Indian Astronomy in Vedic Texts",
       "author": "R.N. Iyengar",
       "source": "International Conference on Oriental Astronomy",
-      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/rni-extract-comets-meteors-vedas-2016.pdf",
+      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/$Ancient_Indian_Astronomy_in_Vedic_Texts.pdf",
       "entry_type": "pdf",
       "content_kind": "paper"
     },
@@ -424,21 +424,21 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2009",
-      "category": "Other",
-      "title": "Monsoon rainfall cycles as depicted in ancient Sanskrit texts",
-      "author": "R.N. Iyengar",
-      "source": "Current Science 97.3",
-      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Rainfall_cycles_in_Ancient_Sanskrit_Text.pdf",
-      "entry_type": "pdf",
-      "content_kind": "paper"
-    },
-    {
-      "year": "2009",
       "category": "Astronomy",
       "title": "Connections Between The Vedanga Jyotisa And Other Vedic Literature",
       "author": "R N Iyengar",
       "source": "IJHS-44-2009-Issue-3",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vol44_3_1_RNIyengar.pdf",
+      "entry_type": "pdf",
+      "content_kind": "paper"
+    },
+    {
+      "year": "2009",
+      "category": "Other",
+      "title": "Monsoon rainfall cycles as depicted in ancient Sanskrit texts",
+      "author": "R.N. Iyengar",
+      "source": "Current Science 97.3",
+      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Rainfall_cycles_in_Ancient_Sanskrit_Text.pdf",
       "entry_type": "pdf",
       "content_kind": "paper"
     },
@@ -454,11 +454,11 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2007",
-      "category": "Astronomy",
-      "title": "A Profile of Indian Astronomy before the Siddh\u0101ntic Period",
-      "author": "R.N. Iyengar",
-      "source": "ASERVE Conference Hyderabad",
-      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/profile_of_indian_astronomy_before_siddhantic_period.pdf",
+      "category": "Other",
+      "title": "Geographical location of Vedic Iri\u1e47a in Southern Rajasthan",
+      "author": "R.N. Iyengar, B.P. Radhakrishna",
+      "source": "J. Geol. Soc. India 70.5",
+      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/geographical_location_of_vedic_irina_in_southern_rajasthan.pdf",
       "entry_type": "pdf",
       "content_kind": "paper"
     },
@@ -474,41 +474,11 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2007",
-      "category": "Other",
-      "title": "Geographical location of Vedic Iri\u1e47a in Southern Rajasthan",
-      "author": "R.N. Iyengar, B.P. Radhakrishna",
-      "source": "J. Geol. Soc. India 70.5",
-      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/geographical_location_of_vedic_irina_in_southern_rajasthan.pdf",
-      "entry_type": "pdf",
-      "content_kind": "paper"
-    },
-    {
-      "year": "2006",
-      "category": "Other",
-      "title": "Seismic hazard estimation for Mumbai city",
-      "author": "S.T.G. Raghu Kanth, R.N. Iyengar",
-      "source": "Current Science 91.11",
-      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Seismic_hazard_estimation_for_Mumbai_cit.pdf",
-      "entry_type": "pdf",
-      "content_kind": "paper"
-    },
-    {
-      "year": "2006",
-      "category": "Other",
-      "title": "Forecasting of seasonal monsoon rainfall at subdivisional level",
-      "author": "R.N. Iyengar, S.T.G. Raghu Kanth",
-      "source": "Current Science 91.3",
-      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Forecasting_of_seasonal_monsoon_rainfall.pdf",
-      "entry_type": "pdf",
-      "content_kind": "paper"
-    },
-    {
-      "year": "2006",
       "category": "Astronomy",
-      "title": "Some Celestial Observations associated with Krsna\u2013lore",
-      "author": "R N Iyengar",
-      "source": "IJHS-41-2006-Issue-1",
-      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vol41_1_1_RNIyengar.pdf",
+      "title": "A Profile of Indian Astronomy before the Siddh\u0101ntic Period",
+      "author": "R.N. Iyengar",
+      "source": "ASERVE Conference Hyderabad",
+      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/profile_of_indian_astronomy_before_siddhantic_period.pdf",
       "entry_type": "pdf",
       "content_kind": "paper"
     },
@@ -525,10 +495,10 @@ window.PATRA_DARPAN_P60 = {
     {
       "year": "2006",
       "category": "Astronomy",
-      "title": "On some comet observations in ancient India",
-      "author": "R.N. Iyengar",
-      "source": "J. Geol. Soc. India 67.3",
-      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/on_some_comet_observations_in_ancient_india.pdf",
+      "title": "Some Celestial Observations associated with Krsna\u2013lore",
+      "author": "R N Iyengar",
+      "source": "IJHS-41-2006-Issue-1",
+      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vol41_1_1_RNIyengar.pdf",
       "entry_type": "pdf",
       "content_kind": "paper"
     },
@@ -543,12 +513,32 @@ window.PATRA_DARPAN_P60 = {
       "content_kind": "paper"
     },
     {
-      "year": "2005",
+      "year": "2006",
       "category": "Other",
-      "title": "Interview with Prof RN Iyengar",
-      "author": "B.K. Raghu Prasad, C.S. Manohar, D.Roy",
-      "source": "Article",
-      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Interview_with_Prof_RN_Iyengar.pdf",
+      "title": "Seismic hazard estimation for Mumbai city",
+      "author": "S.T.G. Raghu Kanth, R.N. Iyengar",
+      "source": "Current Science 91.11",
+      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Seismic_hazard_estimation_for_Mumbai_cit.pdf",
+      "entry_type": "pdf",
+      "content_kind": "paper"
+    },
+    {
+      "year": "2006",
+      "category": "Astronomy",
+      "title": "On some comet observations in ancient India",
+      "author": "R.N. Iyengar",
+      "source": "J. Geol. Soc. India 67.3",
+      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/on_some_comet_observations_in_ancient_india.pdf",
+      "entry_type": "pdf",
+      "content_kind": "paper"
+    },
+    {
+      "year": "2006",
+      "category": "Other",
+      "title": "Forecasting of seasonal monsoon rainfall at subdivisional level",
+      "author": "R.N. Iyengar, S.T.G. Raghu Kanth",
+      "source": "Current Science 91.3",
+      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Forecasting_of_seasonal_monsoon_rainfall.pdf",
       "entry_type": "pdf",
       "content_kind": "paper"
     },
@@ -559,16 +549,6 @@ window.PATRA_DARPAN_P60 = {
       "author": "RN Iyengar",
       "source": "IJHS-40-2005-Issue-2",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vol2_2005_01.pdf",
-      "entry_type": "pdf",
-      "content_kind": "paper"
-    },
-    {
-      "year": "2005",
-      "category": "Other",
-      "title": "Evolution of the Western Coastline of India and the Probable Location of Dwaraka of Krishna",
-      "author": "R.N. Iyengar, B.P. Radhakrishna",
-      "source": "J. Geol. Soc. India 66.3",
-      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/evolution_of_the_western_coastline_of_india_and_the_probable_location_of_dwaraka_of_krishna.pdf",
       "entry_type": "pdf",
       "content_kind": "paper"
     },
@@ -593,12 +573,32 @@ window.PATRA_DARPAN_P60 = {
       "content_kind": "paper"
     },
     {
+      "year": "2005",
+      "category": "Other",
+      "title": "Interview with Prof RN Iyengar",
+      "author": "B.K. Raghu Prasad, C.S. Manohar, D.Roy",
+      "source": "Article",
+      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Interview_with_Prof_RN_Iyengar.pdf",
+      "entry_type": "pdf",
+      "content_kind": "paper"
+    },
+    {
+      "year": "2005",
+      "category": "Other",
+      "title": "Evolution of the Western Coastline of India and the Probable Location of Dwaraka of Krishna",
+      "author": "R.N. Iyengar, B.P. Radhakrishna",
+      "source": "J. Geol. Soc. India 66.3",
+      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/evolution_of_the_western_coastline_of_india_and_the_probable_location_of_dwaraka_of_krishna.pdf",
+      "entry_type": "pdf",
+      "content_kind": "paper"
+    },
+    {
       "year": "2004",
-      "category": "Astronomy",
-      "title": "Description of rainfall variability in B\u1e5bhat Sa\u1e43hit\u0101 of Var\u0101hamihira",
-      "author": "R.N. Iyengar",
-      "source": "Current Science 87.4",
-      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Description_of_rainfall_variability_in_B.pdf",
+      "category": "Other",
+      "title": "Profile of A Natural Disaster in Ancient Sanskrit Literature",
+      "author": "R N Iyengar",
+      "source": "IJHS-39-2004-Issue-1",
+      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vol39_1_2_RNIyengar.pdf",
       "entry_type": "pdf",
       "content_kind": "paper"
     },
@@ -614,11 +614,11 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2004",
-      "category": "Other",
-      "title": "Profile of A Natural Disaster in Ancient Sanskrit Literature",
-      "author": "R N Iyengar",
-      "source": "IJHS-39-2004-Issue-1",
-      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vol39_1_2_RNIyengar.pdf",
+      "category": "Astronomy",
+      "title": "Description of rainfall variability in B\u1e5bhat Sa\u1e43hit\u0101 of Var\u0101hamihira",
+      "author": "R.N. Iyengar",
+      "source": "Current Science 87.4",
+      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Description_of_rainfall_variability_in_B.pdf",
       "entry_type": "pdf",
       "content_kind": "paper"
     },
@@ -655,20 +655,20 @@ window.PATRA_DARPAN_P60 = {
     {
       "year": "1999",
       "category": "Other",
-      "title": "Earthquakes in ancient India",
-      "author": "R.N. Iyengar",
-      "source": "Current Science 77.6",
-      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Earthquakes_in_ancient_India.pdf",
+      "title": "Earthquake History of India in Medieval Times",
+      "author": "R N Iyengar et al.",
+      "source": "IJHS-34-1999-Issue-3",
+      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vol34_3_2_RNIyengar.pdf",
       "entry_type": "pdf",
       "content_kind": "paper"
     },
     {
       "year": "1999",
       "category": "Other",
-      "title": "Earthquake History of India in Medieval Times",
-      "author": "R N Iyengar et al.",
-      "source": "IJHS-34-1999-Issue-3",
-      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vol34_3_2_RNIyengar.pdf",
+      "title": "Earthquakes in ancient India",
+      "author": "R.N. Iyengar",
+      "source": "Current Science 77.6",
+      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Earthquakes_in_ancient_India.pdf",
       "entry_type": "pdf",
       "content_kind": "paper"
     },

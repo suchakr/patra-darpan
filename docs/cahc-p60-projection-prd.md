@@ -114,7 +114,9 @@ filter or group `article` and `news` rows separately.
 The default sort should match the current `P60` reader expectation:
 
 - newest year first
-- stable secondary ordering from the Patra Darpan export where possible
+- then latest Patra Darpan export position first, so newly appended same-year
+  corpus additions appear above older same-year rows even without day-level
+  metadata
 
 ## URL Policy
 
