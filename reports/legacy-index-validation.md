@@ -4,30 +4,31 @@
 - legacy path: `/Users/sunder/projects/patra-darpan/reference/legacy/index.tsv`
 
 ## Row Counts
-- exported rows: 2013
+- exported rows: 2015
 - legacy rows: 2005
 
 ## Headers
 - exported header matches legacy: True
 
 ## Entry Type Counts
-- exported: {'link': 9, 'pdf': 2004}
+- exported: {'link': 10, 'pdf': 2005}
 - legacy: {'pdf': 2000, 'link': 5}
 
 ## Enrichment Coverage
-- exported non-empty `subject`: 2013
+- exported non-empty `subject`: 2014
 - legacy non-empty `subject`: 2005
-- exported non-empty `category`: 2013
+- exported non-empty `category`: 2014
 - legacy non-empty `category`: 2005
 
 ## Keyed Row Presence
 - missing from export by `(journal, paper, url, entry_type)`: 1
-- extra in export by `(journal, paper, url, entry_type)`: 9
+- extra in export by `(journal, paper, url, entry_type)`: 11
 
 ### Missing From Export
 - journal='IJHS 43.1', paper='Archaic Astronomy of Parāśara and Vṛddha Garga', url='https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vol43_1_1_RNIyengar.pdf', entry_type='pdf'
 
 ### Extra In Export
+- journal='AJPEM', paper='The Whispering Halls', url='https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/ajpem_2026_the_whispering_halls.pdf', entry_type='pdf'
 - journal='IJHS-31-1996-Issue-4', paper='BookReview', url='https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol31_4_7_BookReview.pdf', entry_type='pdf'
 - journal='IJHS-36-2001-Issue-3&4', paper='SADRATNAMĀLĀ OF ŚANKARAVARMAN', url='https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/sadratnamaala-ihjs-2001-issue3&4.pdf', entry_type='pdf'
 - journal='IJHS-47-2012-Issue-3', paper='The Violin and the Genesis of the Bose Institute in Calcutta', url='https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_3_4_PKBandyopadhyay.pdf', entry_type='pdf'
@@ -37,3 +38,4 @@
 - journal='SwarajyaMag', paper='How Ancient India Predicted Rains Before The Arrival Of Modern Science', url='https://swarajyamag.com/ideas/how-ancient-india-predicted-rains-before-the-arrogance-of-modern-science', entry_type='link'
 - journal='SwarajyaMag', paper='Krishna Is Shiva: A Philosophical Secret Hidden in a Sanskrit Poem', url='https://swarajyamag.com/ideas/krishna-is-shiva-a-philosophical-secret-hidden-in-a-sanskrit-poem', entry_type='link'
 - journal='SwarajyaMag', paper="Vivaan, Aarav, Kalu, Chhotu... India's Naming Crisis That Rajasthan Is Trying To Fix", url='https://swarajyamag.com/ideas/indias-naming-crisis-rajasthan-is-trying-to-fix-it-urban-india-doesnt-even-know-it-has-the-problem', entry_type='link'
+- journal='SwarajyaMag', paper='When Time Was Measured In Sound', url='https://swarajyamag.com/ideas/when-time-was-measured-in-sound', entry_type='link'

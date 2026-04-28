@@ -52,6 +52,7 @@ ajpem_2022_silence.pdf
 ajpem_2025_ethical_project.pdf
 ajpem_2025_no_laugh.pdf
 ajpem_2025_sukanasopdesa.pdf
+ajpem_2026_the_whispering_halls.pdf
 alt_2013_madhura_vijaya.pdf
 evolution_of_the_western_coastline_of_india_and_the_probable_location_of_dwaraka_of_krishna.pdf
 geographical_location_of_vedic_irina_in_southern_rajasthan.pdf
@@ -80,3 +81,4 @@ https://swarajyamag.com/ideas/did-india-lack-historical-consciousness-or-is-it-j
 https://swarajyamag.com/ideas/how-ancient-india-predicted-rains-before-the-arrogance-of-modern-science
 https://swarajyamag.com/ideas/krishna-is-shiva-a-philosophical-secret-hidden-in-a-sanskrit-poem
 https://swarajyamag.com/ideas/indias-naming-crisis-rajasthan-is-trying-to-fix-it-urban-india-doesnt-even-know-it-has-the-problem
+https://swarajyamag.com/ideas/when-time-was-measured-in-sound

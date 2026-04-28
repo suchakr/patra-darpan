@@ -153,6 +153,23 @@ const PAPERS = [
     "localPath": null
   },
   {
+    "journal": "SwarajyaMag",
+    "title": "When Time Was Measured In Sound",
+    "author": "R. S. Hariharan",
+    "category": "Indic",
+    "subject": "Astronomy",
+    "year": "2026",
+    "remoteUrl": "https://swarajyamag.com/ideas/when-time-was-measured-in-sound",
+    "juUrl": "",
+    "size": 0.0,
+    "cahc_authored": true,
+    "entry_type": "link",
+    "source": "swarajya",
+    "gcs_key": "",
+    "content_kind": "article",
+    "localPath": null
+  },
+  {
     "journal": "QJMS 116.2",
     "title": "Characterisation of Elapsed Time as Historical Past in Hinduism",
     "author": "R.N. Iyengar",
@@ -865,6 +882,23 @@ const PAPERS = [
     "gcs_key": "other/ajpem_2025_ethical_project.pdf",
     "content_kind": "article",
     "localPath": "assets/pdfs/other/ajpem_2025_ethical_project.pdf"
+  },
+  {
+    "journal": "AJPEM",
+    "title": "The Whispering Halls",
+    "author": "Warija Adiga",
+    "category": "",
+    "subject": "",
+    "year": "2026",
+    "remoteUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/ajpem_2026_the_whispering_halls.pdf",
+    "juUrl": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/ajpem_2026_the_whispering_halls.pdf",
+    "size": 389.7666015625,
+    "cahc_authored": true,
+    "entry_type": "pdf",
+    "source": "insa",
+    "gcs_key": "other/ajpem_2026_the_whispering_halls.pdf",
+    "content_kind": "article",
+    "localPath": "assets/pdfs/other/ajpem_2026_the_whispering_halls.pdf"
   },
   {
     "journal": "Mahasvini Vol. 2",

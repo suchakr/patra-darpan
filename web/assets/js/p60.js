@@ -1,7 +1,27 @@
 window.PATRA_DARPAN_P60 = {
-  "generatedAt": "2026-04-23T13:44:49.576549Z",
-  "rowCount": 76,
+  "generatedAt": "2026-04-28T10:37:29.282475Z",
+  "rowCount": 78,
   "rows": [
+    {
+      "year": "2026",
+      "category": "General",
+      "title": "The Whispering Halls",
+      "author": "Warija Adiga",
+      "source": "AJPEM",
+      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/ajpem_2026_the_whispering_halls.pdf",
+      "entry_type": "pdf",
+      "content_kind": "article"
+    },
+    {
+      "year": "2026",
+      "category": "Astronomy",
+      "title": "When Time Was Measured In Sound",
+      "author": "R. S. Hariharan",
+      "source": "SwarajyaMag",
+      "url": "https://swarajyamag.com/ideas/when-time-was-measured-in-sound",
+      "entry_type": "link",
+      "content_kind": "article"
+    },
     {
       "year": "2026",
       "category": "Culture",
