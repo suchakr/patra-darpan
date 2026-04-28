@@ -60,6 +60,12 @@ INDEX_ENRICHMENT_FALLBACKS: dict[
         "link",
     ): {"subject": "Culture", "category": "Indic"},
     (
+        "SwarajyaMag",
+        "When Time Was Measured In Sound",
+        "https://swarajyamag.com/ideas/when-time-was-measured-in-sound",
+        "link",
+    ): {"subject": "Astronomy", "category": "Indic"},
+    (
         "IJHS-31-1996-Issue-4",
         "BookReview",
         "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol31_4_7_BookReview.pdf",

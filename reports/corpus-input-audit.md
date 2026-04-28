@@ -6,12 +6,12 @@
 
 ## root_inventory
 - ijhs_rows: 1954
-- curated_pdf_rows: 50
-- curated_link_rows: 9
-- registry_entries: 76
+- curated_pdf_rows: 51
+- curated_link_rows: 10
+- registry_entries: 78
 - mirror_rows: 17
 - shared_ijhs_files: 1954
-- shared_other_files: 50
+- shared_other_files: 51
 - issue_count: 0
 
 ## root_input_validation
@@ -24,7 +24,7 @@
 - curated_pdfs_missing_required: 0
 - curated_pdfs_non_pdf_url: 0
 - curated_pdfs_non_numeric_year: 0
-- curated_pdfs_blank_size_in_kb: 46
+- curated_pdfs_blank_size_in_kb: 47
 - curated_pdfs_unmatched_local_filename: 0
 - curated_links_missing_required: 0
 - curated_links_non_numeric_year: 0
@@ -47,11 +47,11 @@
 - [info] IJHS root row has blank author outside the expected procedural patterns (row_number=1376, paper='Book Review: R N Iyengar - Parasaratantra: Ancient Sanskrit Text on Astronomy and Natural Sciences', journal='IJHS-49-2014-Issue-2')
 
 ## canonical_inventory
-- documents: 2013
-- document_sources: 2013
-- asset_refs: 2030
-- documents_by_source: {'curated-links.tsv': 9, 'curated-pdfs.tsv': 50, 'ijhs.tsv': 1954}
-- documents_by_entry_type: {'link': 9, 'pdf': 2004}
+- documents: 2015
+- document_sources: 2015
+- asset_refs: 2032
+- documents_by_source: {'curated-links.tsv': 10, 'curated-pdfs.tsv': 51, 'ijhs.tsv': 1954}
+- documents_by_entry_type: {'link': 10, 'pdf': 2005}
 - issue_count: 0
 
 ## core_field_quality
@@ -75,8 +75,8 @@
 - [warning] Missing core field `author_display` (doc_id='Vol49_2_10_BookReview', source_root='ijhs.tsv')
 
 ## deferred_field_status
-- documents_by_source_root: {'curated-links.tsv': 9, 'curated-pdfs.tsv': 50, 'ijhs.tsv': 1954}
-- cahc_authored_true_by_source_root: {'curated-links.tsv': 9, 'curated-pdfs.tsv': 50, 'ijhs.tsv': 17}
+- documents_by_source_root: {'curated-links.tsv': 10, 'curated-pdfs.tsv': 51, 'ijhs.tsv': 1954}
+- cahc_authored_true_by_source_root: {'curated-links.tsv': 10, 'curated-pdfs.tsv': 51, 'ijhs.tsv': 17}
 - subject_status: deferred; export currently leaves subject blank
 - category_status: deferred; export currently leaves category blank
 - cahc_authored_status: present as a curated label in documents; still needs clearer long-term placement
