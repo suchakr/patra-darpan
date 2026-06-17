@@ -66,6 +66,18 @@ INDEX_ENRICHMENT_FALLBACKS: dict[
         "link",
     ): {"subject": "Astronomy", "category": "Indic"},
     (
+        "SwarajyaMag",
+        "Can You Mock God? This Sanskrit Poet Did - And That's Worship",
+        "https://swarajyamag.com/ideas/can-you-mock-god-this-sanskrit-poet-did-and-thats-worship",
+        "link",
+    ): {"subject": "Culture", "category": "Indic"},
+    (
+        "TechVaidya Global",
+        "ಧ್ರುವ ನಕ್ಷತ್ರ: ಕೇವಲ ಭಕ್ತಿಯ ಕಥೆಯೋ ಅಥವಾ 5000 ವರ್ಷಗಳ ಹಿಂದಿನ ಖಗೋಳ ವಿಸ್ಮಯವೋ?",
+        "https://www.techvaidyaglobal.com/news/dhruva-nakshatra-ancient-indian-astronomy-thuban-star-science",
+        "link",
+    ): {"subject": "Astronomy", "category": "Indic"},
+    (
         "IJHS-31-1996-Issue-4",
         "BookReview",
         "https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol31_4_7_BookReview.pdf",
@@ -127,6 +139,8 @@ def _source_label(source_type: str, remote_url: str) -> str:
         host = urlparse(remote_url).netloc.lower()
         if "swarajyamag.com" in host:
             return "swarajya"
+        if "techvaidyaglobal.com" in host:
+            return "techvaidya"
         return "curated_link"
     return source_type
 

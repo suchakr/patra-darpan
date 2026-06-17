@@ -4,25 +4,25 @@
 - legacy path: `/Users/sunder/projects/patra-darpan/reference/legacy/index.tsv`
 
 ## Row Counts
-- exported rows: 2015
+- exported rows: 2017
 - legacy rows: 2005
 
 ## Headers
 - exported header matches legacy: True
 
 ## Entry Type Counts
-- exported: {'link': 10, 'pdf': 2005}
+- exported: {'link': 12, 'pdf': 2005}
 - legacy: {'pdf': 2000, 'link': 5}
 
 ## Enrichment Coverage
-- exported non-empty `subject`: 2014
+- exported non-empty `subject`: 2016
 - legacy non-empty `subject`: 2005
-- exported non-empty `category`: 2014
+- exported non-empty `category`: 2016
 - legacy non-empty `category`: 2005
 
 ## Keyed Row Presence
 - missing from export by `(journal, paper, url, entry_type)`: 1
-- extra in export by `(journal, paper, url, entry_type)`: 11
+- extra in export by `(journal, paper, url, entry_type)`: 13
 
 ### Missing From Export
 - journal='IJHS 43.1', paper='Archaic Astronomy of Parāśara and Vṛddha Garga', url='https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vol43_1_1_RNIyengar.pdf', entry_type='pdf'
@@ -34,8 +34,10 @@
 - journal='IJHS-47-2012-Issue-3', paper='The Violin and the Genesis of the Bose Institute in Calcutta', url='https://insa.nic.in/(S(eh1ucortlbqqezipwgliy3mn))/writereaddata/UpLoadedFiles/IJHS/Vol47_3_4_PKBandyopadhyay.pdf', entry_type='pdf'
 - journal='Karnataka Sanskrit 8.1', paper='The Scope of Aṣṭādaśavarṇana in the Mahākāvya Mathurābhyudaya', url='https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/The_Scope_of_Ashtadashavarnana.pdf', entry_type='pdf'
 - journal='Shodhsamhita XI.2', paper='A Comparative Analysis of the Kaṁsavadha Episode Across Various Purāṇic Texts', url='https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/A_Comparitive_analysis_of_Kamsavadha_episode_in_Puranic_Texts.pdf', entry_type='pdf'
+- journal='SwarajyaMag', paper="Can You Mock God? This Sanskrit Poet Did - And That's Worship", url='https://swarajyamag.com/ideas/can-you-mock-god-this-sanskrit-poet-did-and-thats-worship', entry_type='link'
 - journal='SwarajyaMag', paper='Did India Lack Historical Consciousness, Or Is It Just That India Understood Time Differently?', url='https://swarajyamag.com/ideas/did-india-lack-historical-consciousness-or-is-it-just-that-india-understood-time-differently', entry_type='link'
 - journal='SwarajyaMag', paper='How Ancient India Predicted Rains Before The Arrival Of Modern Science', url='https://swarajyamag.com/ideas/how-ancient-india-predicted-rains-before-the-arrogance-of-modern-science', entry_type='link'
 - journal='SwarajyaMag', paper='Krishna Is Shiva: A Philosophical Secret Hidden in a Sanskrit Poem', url='https://swarajyamag.com/ideas/krishna-is-shiva-a-philosophical-secret-hidden-in-a-sanskrit-poem', entry_type='link'
 - journal='SwarajyaMag', paper="Vivaan, Aarav, Kalu, Chhotu... India's Naming Crisis That Rajasthan Is Trying To Fix", url='https://swarajyamag.com/ideas/indias-naming-crisis-rajasthan-is-trying-to-fix-it-urban-india-doesnt-even-know-it-has-the-problem', entry_type='link'
 - journal='SwarajyaMag', paper='When Time Was Measured In Sound', url='https://swarajyamag.com/ideas/when-time-was-measured-in-sound', entry_type='link'
+- journal='TechVaidya Global', paper='ಧ್ರುವ ನಕ್ಷತ್ರ: ಕೇವಲ ಭಕ್ತಿಯ ಕಥೆಯೋ ಅಥವಾ 5000 ವರ್ಷಗಳ ಹಿಂದಿನ ಖಗೋಳ ವಿಸ್ಮಯವೋ?', url='https://www.techvaidyaglobal.com/news/dhruva-nakshatra-ancient-indian-astronomy-thuban-star-science', entry_type='link'
