@@ -1,6 +1,6 @@
 window.PATRA_DARPAN_P60 = {
-  "generatedAt": "2026-04-28T10:37:29.282475Z",
-  "rowCount": 78,
+  "generatedAt": "2026-05-19T08:56:05.997240Z",
+  "rowCount": 80,
   "rows": [
     {
       "year": "2026",
@@ -10,6 +10,26 @@ window.PATRA_DARPAN_P60 = {
       "source": "AJPEM",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/ajpem_2026_the_whispering_halls.pdf",
       "entry_type": "pdf",
+      "content_kind": "article"
+    },
+    {
+      "year": "2026",
+      "category": "Astronomy",
+      "title": "\u0ca7\u0ccd\u0cb0\u0cc1\u0cb5 \u0ca8\u0c95\u0ccd\u0cb7\u0ca4\u0ccd\u0cb0: \u0c95\u0cc7\u0cb5\u0cb2 \u0cad\u0c95\u0ccd\u0ca4\u0cbf\u0caf \u0c95\u0ca5\u0cc6\u0caf\u0ccb \u0c85\u0ca5\u0cb5\u0cbe 5000 \u0cb5\u0cb0\u0ccd\u0cb7\u0c97\u0cb3 \u0cb9\u0cbf\u0c82\u0ca6\u0cbf\u0ca8 \u0c96\u0c97\u0ccb\u0cb3 \u0cb5\u0cbf\u0cb8\u0ccd\u0cae\u0caf\u0cb5\u0ccb?",
+      "author": "R. S. Hariharan",
+      "source": "TechVaidya Global",
+      "url": "https://www.techvaidyaglobal.com/news/dhruva-nakshatra-ancient-indian-astronomy-thuban-star-science",
+      "entry_type": "link",
+      "content_kind": "article"
+    },
+    {
+      "year": "2026",
+      "category": "Culture",
+      "title": "Can You Mock God? This Sanskrit Poet Did - And That's Worship",
+      "author": "R. S. Hariharan",
+      "source": "SwarajyaMag",
+      "url": "https://swarajyamag.com/ideas/can-you-mock-god-this-sanskrit-poet-did-and-thats-worship",
+      "entry_type": "link",
       "content_kind": "article"
     },
     {
