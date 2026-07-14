@@ -58,6 +58,8 @@ Legacy scripts still exist in the repo, but the intended authority flow is now:
   untracked helpers and one-offs
 - `web/`
   Patra Darpan SPA, Netlify function, and local web testing docs
+- `deploy.sh`
+  root wrapper for corpus preparation, GCS synchronization, and Netlify modes
 
 ## Root Inputs
 
@@ -113,12 +115,72 @@ Then open:
 For Netlify-function testing:
 
 ```bash
-cd web
-npm install
-netlify dev
+npm --prefix web install
+./deploy.sh local
 ```
 
 See [web/README.md](web/README.md).
+
+### Prepare And Deploy
+
+Use the root deployment wrapper for corpus preparation, GCS synchronization,
+local Netlify testing, and Netlify deploys:
+
+```bash
+./deploy.sh prepare
+./deploy.sh gcs-sync
+./deploy.sh local
+./deploy.sh stage
+./deploy.sh prod
+```
+
+`prepare` rebuilds the canonical corpus and projections, runs validation and
+audit commands, checks the generated JavaScript, and reports GCS drift. It does
+not upload PDFs or deploy the site.
+
+`gcs-sync` is the explicit mutating GCS operation. It shows the diff, asks for
+confirmation, uploads pending PDFs, and finishes with a read-only consistency
+check. Netlify deployment never uploads PDFs implicitly.
+
+`stage` creates a Netlify preview deploy. `prod` checks the generated
+JavaScript, verifies that `web/` is linked to the expected Patra Darpan site,
+and blocks when local PDFs have not been uploaded to GCS. Git branch and
+worktree state are displayed but remain advisory, which permits intentionally
+decoupled commits and deploys. Use the stricter release policy when needed:
+
+```bash
+./deploy.sh prod --strict
+```
+
+Strict production deployment requires branch `main` and a clean worktree.
+Both stage and production deploy messages record the current branch, commit,
+and whether the worktree was dirty. Pass additional Netlify arguments after
+`--`, for example:
+
+```bash
+./deploy.sh stage -- --message "corpus preview"
+```
+
+Local mode defaults to `http://127.0.0.1:8888/`. If either the public port or
+Netlify's internal static-server port is occupied, the wrapper selects the next
+available port and prints the resolved URL. Use `--port` or `--static-port` to
+choose different starting ports. The older `--target-port` spelling remains an
+accepted wrapper alias, but Netlify's simple static server requires its
+`staticServerPort` setting internally.
+
+The linked production site ID is pinned by the wrapper. A different expected
+site may be supplied explicitly through `PATRA_DARPAN_NETLIFY_SITE_ID`.
+
+For automation and deployment checks, the GCS utility also provides a
+read-only exit-status contract:
+
+```bash
+uv run python ops/sync_gcs.py --check
+```
+
+It exits nonzero when local corpus roots are missing, PDFs need to be uploaded,
+or GCS cannot be queried. Remote orphans are reported as warnings because they
+do not make currently published corpus links unavailable.
 
 ## Branching From Here
 
@@ -307,12 +369,11 @@ SwarajyaMag	Did India Lack Historical Consciousness, Or Is It Just That India Un
 From the repository root:
 
 ```bash
-uv run python scripts/build_corpus_metadata.py
-uv run python scripts/export_index_tsv.py
-uv run python scripts/validate_legacy_index.py
-uv run python scripts/audit_corpus_inputs.py
-uv run python ops/export_patra_darpan_data_js.py
+./deploy.sh prepare
 ```
+
+For a PDF-backed addition, follow `prepare` with `./deploy.sh gcs-sync`. URL-only
+entries do not require a GCS upload.
 
 ### Deleting Or Retiring Items
 

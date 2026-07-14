@@ -131,6 +131,10 @@ bundled with the deployed site. They remain on their original source sites
 where possible, and some are mirrored on a peer site and/or in GCS to improve
 availability and work around source-site outages.
 
+The preferred maintainer interface is the root `deploy.sh` wrapper documented
+in the repository `README.md`. The direct Netlify commands below remain useful
+as low-level equivalents and for troubleshooting.
+
 ### 1. Test Locally (`netlify dev`)
 
 Simulates the Netlify environment locally.
