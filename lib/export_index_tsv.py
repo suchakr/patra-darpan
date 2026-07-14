@@ -78,6 +78,12 @@ INDEX_ENRICHMENT_FALLBACKS: dict[
         "link",
     ): {"subject": "Culture", "category": "Indic"},
     (
+        "The Atharva Forum",
+        "Kaṁsavadha | Twenty-Four Literary Treatments of a Single Narrative Episode",
+        "https://atharvaforum.substack.com/p/kamsavadha-twenty-four-literary-treatments",
+        "link",
+    ): {"subject": "Culture", "category": "Indic"},
+    (
         "TechVaidya Global",
         "ಧ್ರುವ ನಕ್ಷತ್ರ: ಕೇವಲ ಭಕ್ತಿಯ ಕಥೆಯೋ ಅಥವಾ 5000 ವರ್ಷಗಳ ಹಿಂದಿನ ಖಗೋಳ ವಿಸ್ಮಯವೋ?",
         "https://www.techvaidyaglobal.com/news/dhruva-nakshatra-ancient-indian-astronomy-thuban-star-science",
@@ -175,6 +181,8 @@ def _source_label(source_type: str, remote_url: str) -> str:
         host = urlparse(remote_url).netloc.lower()
         if "swarajyamag.com" in host:
             return "swarajya"
+        if "atharvaforum.substack.com" in host:
+            return "atharvaforum"
         if "techvaidyaglobal.com" in host:
             return "techvaidya"
         return "curated_link"

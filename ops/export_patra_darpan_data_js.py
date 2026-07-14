@@ -32,7 +32,7 @@ CORPUS_ROOT = resolve_shared_asset_root()
 CORPUS_IJHS = CORPUS_ROOT / "ijhs"
 CORPUS_OTHER = CORPUS_ROOT / "other"
 
-ARTICLE_SOURCES = {"swarajya", "techvaidya"}
+ARTICLE_SOURCES = {"atharvaforum", "swarajya", "techvaidya"}
 ARTICLE_JOURNALS = {
     "AJPEM",
     "APJEM",

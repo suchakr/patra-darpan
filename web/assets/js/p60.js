@@ -1,6 +1,6 @@
 window.PATRA_DARPAN_P60 = {
-  "generatedAt": "2026-07-14T10:13:38.674740Z",
-  "rowCount": 82,
+  "generatedAt": "2026-07-14T10:25:44.733982Z",
+  "rowCount": 83,
   "rows": [
     {
       "year": "2026",
@@ -19,6 +19,16 @@ window.PATRA_DARPAN_P60 = {
       "author": "R. S. Hariharan",
       "source": "TechVaidya Global",
       "url": "https://www.techvaidyaglobal.com/news/dhruva-nakshatra-ancient-indian-astronomy-thuban-star-science",
+      "entry_type": "link",
+      "content_kind": "article"
+    },
+    {
+      "year": "2026",
+      "category": "Culture",
+      "title": "Ka\u1e41savadha | Twenty-Four Literary Treatments of a Single Narrative Episode",
+      "author": "R. S. Hariharan",
+      "source": "The Atharva Forum",
+      "url": "https://atharvaforum.substack.com/p/kamsavadha-twenty-four-literary-treatments",
       "entry_type": "link",
       "content_kind": "article"
     },

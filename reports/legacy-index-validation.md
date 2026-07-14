@@ -4,25 +4,25 @@
 - legacy path: `/Users/sunder/projects/patra-darpan/reference/legacy/index.tsv`
 
 ## Row Counts
-- exported rows: 2023
+- exported rows: 2024
 - legacy rows: 2005
 
 ## Headers
 - exported header matches legacy: True
 
 ## Entry Type Counts
-- exported: {'link': 13, 'pdf': 2010}
+- exported: {'link': 14, 'pdf': 2010}
 - legacy: {'pdf': 2000, 'link': 5}
 
 ## Enrichment Coverage
-- exported non-empty `subject`: 2022
+- exported non-empty `subject`: 2023
 - legacy non-empty `subject`: 2005
-- exported non-empty `category`: 2022
+- exported non-empty `category`: 2023
 - legacy non-empty `category`: 2005
 
 ## Keyed Row Presence
 - missing from export by `(journal, paper, url, entry_type)`: 1
-- extra in export by `(journal, paper, url, entry_type)`: 19
+- extra in export by `(journal, paper, url, entry_type)`: 20
 
 ### Missing From Export
 - journal='IJHS 43.1', paper='Archaic Astronomy of Parāśara and Vṛddha Garga', url='https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/Vol43_1_1_RNIyengar.pdf', entry_type='pdf'
@@ -46,4 +46,5 @@
 - journal='SwarajyaMag', paper="Vivaan, Aarav, Kalu, Chhotu... India's Naming Crisis That Rajasthan Is Trying To Fix", url='https://swarajyamag.com/ideas/indias-naming-crisis-rajasthan-is-trying-to-fix-it-urban-india-doesnt-even-know-it-has-the-problem', entry_type='link'
 - journal='SwarajyaMag', paper='When Time Was Measured In Sound', url='https://swarajyamag.com/ideas/when-time-was-measured-in-sound', entry_type='link'
 - journal='TechVaidya Global', paper='ಧ್ರುವ ನಕ್ಷತ್ರ: ಕೇವಲ ಭಕ್ತಿಯ ಕಥೆಯೋ ಅಥವಾ 5000 ವರ್ಷಗಳ ಹಿಂದಿನ ಖಗೋಳ ವಿಸ್ಮಯವೋ?', url='https://www.techvaidyaglobal.com/news/dhruva-nakshatra-ancient-indian-astronomy-thuban-star-science', entry_type='link'
+- journal='The Atharva Forum', paper='Kaṁsavadha | Twenty-Four Literary Treatments of a Single Narrative Episode', url='https://atharvaforum.substack.com/p/kamsavadha-twenty-four-literary-treatments', entry_type='link'
 - journal='WSC-CSDH 2025', paper='An introduction to computational identification and classification of Upamā alaṅkāra', url='https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/slc-2025.wsc-csdh.1.pdf', entry_type='pdf'
