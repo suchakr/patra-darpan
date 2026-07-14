@@ -1,6 +1,6 @@
 window.PATRA_DARPAN_P60 = {
-  "generatedAt": "2026-05-19T08:56:05.997240Z",
-  "rowCount": 80,
+  "generatedAt": "2026-07-14T10:13:38.674740Z",
+  "rowCount": 82,
   "rows": [
     {
       "year": "2026",
@@ -19,6 +19,16 @@ window.PATRA_DARPAN_P60 = {
       "author": "R. S. Hariharan",
       "source": "TechVaidya Global",
       "url": "https://www.techvaidyaglobal.com/news/dhruva-nakshatra-ancient-indian-astronomy-thuban-star-science",
+      "entry_type": "link",
+      "content_kind": "article"
+    },
+    {
+      "year": "2026",
+      "category": "Culture",
+      "title": "The Queen Who Wrote The War: Gang\u0101dev\u012b And Her Madhur\u0101vijayam",
+      "author": "R. S. Hariharan",
+      "source": "SwarajyaMag",
+      "url": "https://swarajyamag.com/culture/the-queen-who-wrote-the-war-gangdev-and-her-madhurvijayam",
       "entry_type": "link",
       "content_kind": "article"
     },
@@ -219,6 +229,16 @@ window.PATRA_DARPAN_P60 = {
       "author": "R. N. Iyengar, Sunder Chakravarty",
       "source": "IJHS-58-2023-Issue-4",
       "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/01_58_4.pdf",
+      "entry_type": "pdf",
+      "content_kind": "paper"
+    },
+    {
+      "year": "2023",
+      "category": "Arts",
+      "title": "V\u0101stuvidy\u0101 of Garga; Review of the Manuscript V\u1e5bddhagarga Sa\u1e41hit\u0101 from Nepal",
+      "author": "R. N. Iyengar, Warija Adiga",
+      "source": "Shodhasamhita X.1",
+      "url": "https://storage.googleapis.com/cahcblr-pdfs/assets/other/shodhasamhita_2023_vastuvidya_of_garga.pdf",
       "entry_type": "pdf",
       "content_kind": "paper"
     },
