@@ -11,7 +11,7 @@
 - exported header matches legacy: True
 
 ## Entry Type Counts
-- exported: {'link': 14, 'pdf': 2010}
+- exported: {'link': 13, 'pdf': 2011}
 - legacy: {'pdf': 2000, 'link': 5}
 
 ## Enrichment Coverage
@@ -46,5 +46,5 @@
 - journal='SwarajyaMag', paper="Vivaan, Aarav, Kalu, Chhotu... India's Naming Crisis That Rajasthan Is Trying To Fix", url='https://swarajyamag.com/ideas/indias-naming-crisis-rajasthan-is-trying-to-fix-it-urban-india-doesnt-even-know-it-has-the-problem', entry_type='link'
 - journal='SwarajyaMag', paper='When Time Was Measured In Sound', url='https://swarajyamag.com/ideas/when-time-was-measured-in-sound', entry_type='link'
 - journal='TechVaidya Global', paper='ಧ್ರುವ ನಕ್ಷತ್ರ: ಕೇವಲ ಭಕ್ತಿಯ ಕಥೆಯೋ ಅಥವಾ 5000 ವರ್ಷಗಳ ಹಿಂದಿನ ಖಗೋಳ ವಿಸ್ಮಯವೋ?', url='https://www.techvaidyaglobal.com/news/dhruva-nakshatra-ancient-indian-astronomy-thuban-star-science', entry_type='link'
-- journal='The Atharva Forum', paper='Kaṁsavadha | Twenty-Four Literary Treatments of a Single Narrative Episode', url='https://atharvaforum.substack.com/p/kamsavadha-twenty-four-literary-treatments', entry_type='link'
+- journal='The Atharva Forum', paper='Why Retell a Story Everyone Knows?', url='https://zenodo.org/records/21870633/files/Why_Retell_a_Story_Everyone_Knows.pdf?download=1', entry_type='pdf'
 - journal='WSC-CSDH 2025', paper='An introduction to computational identification and classification of Upamā alaṅkāra', url='https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/slc-2025.wsc-csdh.1.pdf', entry_type='pdf'

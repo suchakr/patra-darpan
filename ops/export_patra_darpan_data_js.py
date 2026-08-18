@@ -37,6 +37,7 @@ ARTICLE_JOURNALS = {
     "AJPEM",
     "APJEM",
     "Asian Journal of Professional Ethics and Management",
+    "The Atharva Forum",
 }
 NEWS_TITLE_PATTERNS = [
     r"^contents?$",

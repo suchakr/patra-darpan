@@ -1,7 +1,17 @@
 window.PATRA_DARPAN_P60 = {
-  "generatedAt": "2026-07-14T10:25:44.733982Z",
+  "generatedAt": "2026-08-18T10:38:04.480912Z",
   "rowCount": 83,
   "rows": [
+    {
+      "year": "2026",
+      "category": "Culture",
+      "title": "Why Retell a Story Everyone Knows?",
+      "author": "R. S. Hariharan",
+      "source": "The Atharva Forum",
+      "url": "https://zenodo.org/records/21870633/files/Why_Retell_a_Story_Everyone_Knows.pdf?download=1",
+      "entry_type": "pdf",
+      "content_kind": "article"
+    },
     {
       "year": "2026",
       "category": "General",
@@ -19,16 +29,6 @@ window.PATRA_DARPAN_P60 = {
       "author": "R. S. Hariharan",
       "source": "TechVaidya Global",
       "url": "https://www.techvaidyaglobal.com/news/dhruva-nakshatra-ancient-indian-astronomy-thuban-star-science",
-      "entry_type": "link",
-      "content_kind": "article"
-    },
-    {
-      "year": "2026",
-      "category": "Culture",
-      "title": "Ka\u1e41savadha | Twenty-Four Literary Treatments of a Single Narrative Episode",
-      "author": "R. S. Hariharan",
-      "source": "The Atharva Forum",
-      "url": "https://atharvaforum.substack.com/p/kamsavadha-twenty-four-literary-treatments",
       "entry_type": "link",
       "content_kind": "article"
     },

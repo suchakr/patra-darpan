@@ -79,9 +79,9 @@ INDEX_ENRICHMENT_FALLBACKS: dict[
     ): {"subject": "Culture", "category": "Indic"},
     (
         "The Atharva Forum",
-        "Kaṁsavadha | Twenty-Four Literary Treatments of a Single Narrative Episode",
-        "https://atharvaforum.substack.com/p/kamsavadha-twenty-four-literary-treatments",
-        "link",
+        "Why Retell a Story Everyone Knows?",
+        "https://zenodo.org/records/21870633/files/Why_Retell_a_Story_Everyone_Knows.pdf?download=1",
+        "pdf",
     ): {"subject": "Culture", "category": "Indic"},
     (
         "TechVaidya Global",
