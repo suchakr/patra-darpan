@@ -161,10 +161,12 @@ and whether the worktree was dirty. Pass additional Netlify arguments after
 ./deploy.sh stage -- --message "corpus preview"
 ```
 
-Local mode defaults to `http://127.0.0.1:8888/`. If either the public port or
+Local mode defaults to `http://127.0.0.1:8890/` with internal static port
+`8891`. If either the public port or
 Netlify's internal static-server port is occupied, the wrapper selects the next
-available port and prints the resolved URL. Use `--port` or `--static-port` to
-choose different starting ports. The older `--target-port` spelling remains an
+available port inside this project's reserved `8890`-`8899` block and prints
+the resolved URL. Use `--port` or `--static-port` to choose different starting
+ports. The older `--target-port` spelling remains an
 accepted wrapper alias, but Netlify's simple static server requires its
 `staticServerPort` setting internally.
 

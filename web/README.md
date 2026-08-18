@@ -147,7 +147,7 @@ npm install
 netlify dev
 ```
 
-- access at `http://localhost:8888`
+- access at `http://localhost:8890` when started through the repository wrapper
 - App label should show the **Simulation Mode** badge by default.
 
 In this mode:

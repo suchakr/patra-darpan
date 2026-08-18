@@ -7,8 +7,9 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 WEB_DIR="$ROOT_DIR/web"
 EXPECTED_SITE_ID="${PATRA_DARPAN_NETLIFY_SITE_ID:-27e273a3-bc69-4619-b387-9cc64bbc0563}"
-DEFAULT_PORT="8888"
-DEFAULT_STATIC_SERVER_PORT="3999"
+DEFAULT_PORT="8890"
+DEFAULT_STATIC_SERVER_PORT="8891"
+PORT_BLOCK_SIZE="10"
 
 usage() {
   cat <<'EOF'
@@ -25,8 +26,8 @@ Modes:
 
 Options:
   --strict                For prod, require clean main branch.
-  -p, --port PORT         Local Netlify URL port. Default: 8888.
-  --static-port PORT      Local static-server port. Default: 3999.
+  -p, --port PORT         Local Netlify URL port. Default: 8890.
+  --static-port PORT      Local static-server port. Default: 8891.
   -y, --yes               Bypass wrapper confirmations.
   -n, --dry-run           Print resolved commands without running them.
   -h, --help              Show this help.
@@ -34,7 +35,7 @@ Options:
 Examples:
   ./deploy.sh prepare
   ./deploy.sh gcs-sync
-  ./deploy.sh local --port 8899
+  ./deploy.sh --dev --port 8894 --static-port 8895
   ./deploy.sh stage -- --message "corpus preview"
   ./deploy.sh prod
   ./deploy.sh prod --strict
@@ -259,7 +260,7 @@ port_is_busy() {
 find_open_port() {
   local candidate="$1"
   local excluded="${2:-0}"
-  local limit=$((candidate + 100))
+  local limit=$((candidate + PORT_BLOCK_SIZE))
   while [[ "$candidate" -le 65535 && "$candidate" -lt "$limit" ]]; do
     if [[ "$candidate" -ne "$excluded" ]] && ! port_is_busy "$candidate"; then
       printf '%s\n' "$candidate"
