@@ -1,0 +1,136 @@
+{
+  "schema_version": "iscls.ontology.v1",
+  "ontology_id": "jyotisha",
+  "version": "0.1.0",
+  "status": "pilot",
+  "label": "Jyotisha starter ontology",
+  "languages": ["sa", "en"],
+  "scripts": ["Devanagari", "IAST", "Latin"],
+  "normalization": {
+    "unicode_form": "NFC",
+    "latin_casefold": true,
+    "preserve_display_form": true,
+    "aliases_are_explicit": true
+  },
+  "entity_types": [
+    {"id": "celestial_body", "label": "Celestial body"},
+    {"id": "lunar_mansion", "label": "Lunar mansion / nakshatra"},
+    {"id": "zodiac_sign", "label": "Zodiac sign / rashi"},
+    {"id": "jyotisha_concept", "label": "Jyotisha concept"},
+    {"id": "astronomical_event", "label": "Astronomical event"},
+    {"id": "person", "label": "Person"},
+    {"id": "work", "label": "Text or work"},
+    {"id": "place", "label": "Place"}
+  ],
+  "relation_types": [
+    {"id": "mentions", "from": "document", "to": "entity"},
+    {"id": "alias_of", "from": "entity", "to": "entity"},
+    {"id": "associated_with", "from": "entity", "to": "entity"},
+    {"id": "described_in", "from": "entity", "to": "work"}
+  ],
+  "topic_labels": [
+    {"id": "astronomy", "label": "Astronomy"},
+    {"id": "calendrics", "label": "Calendrics"},
+    {"id": "horoscopy", "label": "Horoscopy"},
+    {"id": "muhurta", "label": "Muhurta"},
+    {"id": "textual_tradition", "label": "Textual tradition"}
+  ],
+  "entities": [
+    {
+      "id": "jyotisha:sun",
+      "type": "celestial_body",
+      "preferred_label": "Sūrya",
+      "aliases": ["सूर्य", "Surya", "Aditya", "Āditya", "आदित्य"]
+    },
+    {
+      "id": "jyotisha:moon",
+      "type": "celestial_body",
+      "preferred_label": "Candra",
+      "aliases": ["चन्द्र", "चंद्र", "Candra", "Chandra", "Soma", "सोम"]
+    },
+    {
+      "id": "jyotisha:mars",
+      "type": "celestial_body",
+      "preferred_label": "Maṅgala",
+      "aliases": ["मंगल", "Maṅgala", "Mangala", "Kuja", "कुज"]
+    },
+    {
+      "id": "jyotisha:mercury",
+      "type": "celestial_body",
+      "preferred_label": "Budha",
+      "aliases": ["बुध", "Budha"]
+    },
+    {
+      "id": "jyotisha:jupiter",
+      "type": "celestial_body",
+      "preferred_label": "Bṛhaspati",
+      "aliases": ["बृहस्पति", "Bṛhaspati", "Brihaspati"]
+    },
+    {
+      "id": "jyotisha:venus",
+      "type": "celestial_body",
+      "preferred_label": "Śukra",
+      "aliases": ["शुक्र", "Śukra", "Shukra"]
+    },
+    {
+      "id": "jyotisha:saturn",
+      "type": "celestial_body",
+      "preferred_label": "Śani",
+      "aliases": ["शनि", "Śani", "Shani"]
+    },
+    {
+      "id": "jyotisha:rahu",
+      "type": "celestial_body",
+      "preferred_label": "Rāhu",
+      "aliases": ["राहु", "Rāhu", "Rahu"]
+    },
+    {
+      "id": "jyotisha:ketu",
+      "type": "celestial_body",
+      "preferred_label": "Ketu",
+      "aliases": ["केतु", "Ketu"]
+    },
+    {
+      "id": "jyotisha:lagna",
+      "type": "jyotisha_concept",
+      "preferred_label": "Lagna",
+      "aliases": ["लग्न", "Lagna", "Ascendant"]
+    },
+    {
+      "id": "jyotisha:tithi",
+      "type": "jyotisha_concept",
+      "preferred_label": "Tithi",
+      "aliases": ["तिथि", "Tithi", "Lunar day"]
+    },
+    {
+      "id": "jyotisha:nakshatra",
+      "type": "lunar_mansion",
+      "preferred_label": "Nakṣatra",
+      "aliases": ["नक्षत्र", "Nakṣatra", "Nakshatra"]
+    },
+    {
+      "id": "jyotisha:solar_eclipse",
+      "type": "astronomical_event",
+      "preferred_label": "Solar eclipse",
+      "aliases": ["सूर्यग्रहण", "Sūryagrahaṇa", "Surya grahan"]
+    },
+    {
+      "id": "jyotisha:lunar_eclipse",
+      "type": "astronomical_event",
+      "preferred_label": "Lunar eclipse",
+      "aliases": ["चन्द्रग्रहण", "चंद्रग्रहण", "Candragrahaṇa", "Chandra grahan"]
+    },
+    {
+      "id": "jyotisha:aryabhata",
+      "type": "person",
+      "preferred_label": "Āryabhaṭa",
+      "aliases": ["आर्यभट", "Āryabhaṭa", "Aryabhata"]
+    },
+    {
+      "id": "jyotisha:varahamihira",
+      "type": "person",
+      "preferred_label": "Varāhamihira",
+      "aliases": ["वराहमिहिर", "Varāhamihira", "Varahamihira"]
+    }
+  ]
+}
