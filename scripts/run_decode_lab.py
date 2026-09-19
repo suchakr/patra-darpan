@@ -29,6 +29,15 @@ def main() -> None:
             print(f"Assembled {path}")
         return
 
+    if args.history_only:
+        from lib.config import REPORTS_DIR
+        from lib.decode_lab.costs import write_run_history
+
+        output_path = REPORTS_DIR / "decode-run-history.tsv"
+        write_run_history(args.out_root, output_path)
+        print(f"Wrote {output_path}")
+        return
+
     run_dir = run_decode_lab(args)
     print(f"Wrote {run_dir}")
 

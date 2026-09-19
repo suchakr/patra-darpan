@@ -33,6 +33,7 @@ from typing import Any
 from datetime import UTC, datetime
 
 from lib.config import PROJECT_ROOT
+from lib.decode_lab.costs import call_cost_fields, pricing_snapshot
 from lib.decode_lab.model_configs import ModelConfig
 from lib.decode_lab.nakshatra_lookup import apply_nakshatra_corrections
 
@@ -209,10 +210,17 @@ def _call_gemini(
             service_tier=service_tier,
         )
         if cached is not None:
+            cost_fields = call_cost_fields(
+                model_name=config.model_name,
+                service_tier=service_tier,
+                response=None,
+                cache_hit=True,
+            )
             return cached, {
                 "cache_hit": True,
                 "legacy_cache_hit": cache_meta["legacy_cache_hit"],
                 "elapsed_seconds": 0.0,
+                **cost_fields,
             }
 
     from google import genai  # deferred import — only on cache miss
@@ -258,10 +266,17 @@ def _call_gemini(
     if text is None:
         raise RuntimeError(_empty_response_reason(response))
     _cache_put(cache_meta["cache_key"], text, config.model_name, service_tier)
+    cost_fields = call_cost_fields(
+        model_name=config.model_name,
+        service_tier=service_tier,
+        response=response,
+        cache_hit=False,
+    )
     return text, {
         "cache_hit": False,
         "legacy_cache_hit": False,
         "elapsed_seconds": round(elapsed, 3),
+        **cost_fields,
     }
 
 
@@ -498,6 +513,15 @@ def extract_document(
             "cache_hit": call_meta["cache_hit"],
             "bypass_cache": bypass_cache,
             "elapsed_seconds": call_meta["elapsed_seconds"],
+            "usage": call_meta.get("usage", {}),
+            "pricing": call_meta.get("pricing"),
+            "estimated_cost_usd": call_meta.get("estimated_cost_usd"),
+            "cost_status": call_meta.get("cost_status", "unknown"),
+            "billable_input_tokens": call_meta.get("billable_input_tokens"),
+            "billable_output_tokens": call_meta.get("billable_output_tokens"),
+            "input_cost_usd": call_meta.get("input_cost_usd"),
+            "cached_input_cost_usd": call_meta.get("cached_input_cost_usd"),
+            "output_cost_usd": call_meta.get("output_cost_usd"),
         }
         fallback_records.append(gemini_record)
 
@@ -587,6 +611,9 @@ def _error_record(
         "service_tier_requested": service_tier,
         "cache_hit": False,
         "elapsed_seconds": None,
+        "pricing": pricing_snapshot(config.model_name, service_tier),
+        "estimated_cost_usd": None,
+        "cost_status": "failed",
         "retryable": retryable,
         "created_at": _utc_now(),
     }

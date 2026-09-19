@@ -330,7 +330,7 @@ Required file roles:
 
 | Artifact | Role |
 | --- | --- |
-| `run-manifest.json` | Run identity, schema version, command, tool versions, environment hints, started/finished timestamps, and selected document IDs. |
+| `run-manifest.json` | Run identity, schema version, command, tool versions, environment hints, started/finished timestamps, duration, cost summary, and selected document IDs. |
 | `audit.md` | Human-readable result: coverage, failures, risky pages, fallback outcomes, sample chunks, and sample retrieval citations. |
 | `documents.jsonl` | One row per input PDF with document metadata, local path, size, checksum, page count, and high-level extraction status. |
 | `pages.jsonl` | One row per page with page-level text coverage, image count, table candidates, risk summary, and best available text source. |
@@ -338,7 +338,7 @@ Required file roles:
 | `risks.jsonl` | One row per detected risk, such as missing Unicode map, private-use glyph, control-character span, low text density, or suspected OCR need. |
 | `images.jsonl` | Image inventory with `doc_id`, page, bounding box when available, dimensions, and extraction source. |
 | `tables.jsonl` | Table candidate inventory with `doc_id`, page, bounding box when available, extraction source, and confidence/status. |
-| `fallbacks.jsonl` | Targeted fallback attempts, including page/crop, tool or model, prompt hash when relevant, cost/time when known, output hash, and status. |
+| `fallbacks.jsonl` | Targeted fallback attempts, including page/crop, tool or model, prompt hash when relevant, usage and pricing metadata when available, cost/time when known, output hash, and status. |
 | `retrieval-samples.jsonl` | A small fixed set of lexical queries and returned chunks with citations; embeddings are optional. |
 | `by-doc/<doc_id>/source.pdf` | Symlink to the local source PDF so a reviewer can open the exact input from the packet. |
 | `by-doc/<doc_id>/review.md` | Human review view for one document: profile summary, page coverage, high-risk spans, table/image inventory, sample chunks, fallback outcomes, and reviewer notes. |
@@ -366,7 +366,8 @@ risks.jsonl:
 fallbacks.jsonl:
   fallback_id, doc_id, page_number, bbox, fallback_type,
   tool_or_model, tool_or_model_version, prompt_sha256,
-  input_sha256, output_sha256, status, status_reason
+  input_sha256, output_sha256, status, status_reason,
+  usage, pricing, estimated_cost_usd, cost_status
 ```
 
 Validation rule: a run is not acceptable if it produces `chunks.jsonl` rows for a page with serious unaddressed extraction risks but does not also emit corresponding `risks.jsonl` evidence. The lab may produce partial chunks, but it must not silently convert extraction garbage into indexable text.

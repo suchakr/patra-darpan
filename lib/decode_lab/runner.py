@@ -15,11 +15,22 @@ from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
-from lib.config import BUILD_DIR, EXPORTS_DIR, PROJECT_ROOT, resolve_shared_asset_root
+from lib.config import (
+    BUILD_DIR,
+    EXPORTS_DIR,
+    PROJECT_ROOT,
+    REPORTS_DIR,
+    resolve_shared_asset_root,
+)
 from lib.decode_lab.campaign_sets import (
     DEFAULT_CAMPAIGN_SET,
     list_campaign_sets,
     resolve_doc_selection,
+)
+from lib.decode_lab.costs import (
+    duration_seconds as calculate_duration_seconds,
+    summarize_fallbacks,
+    write_run_history,
 )
 
 
@@ -73,7 +84,11 @@ def build_arg_parser() -> argparse.ArgumentParser:
             "      --force --assemble\n\n"
             "  After a repair run, update decoded-corpus/ with:\n"
             "    uv run python scripts/build_decoded_corpus.py --from-run repair-DOC_ID \\\n"
-            "      --replace-doc DOC_ID"
+            "      --replace-doc DOC_ID\n\n"
+            "  Rebuild history from existing run packets without extraction:\n"
+            "    uv run python scripts/run_decode_lab.py --history-only\n\n"
+            "Each run records timing, cache, and available usage/cost metadata in\n"
+            "run-manifest.json and refreshes reports/decode-run-history.tsv."
         ),
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
@@ -190,6 +205,13 @@ def build_arg_parser() -> argparse.ArgumentParser:
         help="Skip extraction entirely and assemble document.md from an "
         "existing run directory. Requires --run-id pointing to a previous run. "
         "Useful for re-assembling after manual edits to fallback outputs.",
+    )
+    parser.add_argument(
+        "--history-only",
+        action="store_true",
+        default=False,
+        help="Regenerate reports/decode-run-history.tsv from existing run packets. "
+        "Does not extract, call Gemini, or modify corpus artifacts.",
     )
     parser.add_argument(
         "--batch-size",
@@ -427,6 +449,8 @@ def run_decode_lab(args: argparse.Namespace) -> Path:
     )
 
     finished_at = _utc_now()
+    run_duration_seconds = calculate_duration_seconds(started_at, finished_at)
+    cost_summary = summarize_fallbacks(fallbacks)
 
     # Resolve model config for logging (if Gemini extractor is used)
     extractor_flag = getattr(args, 'extractor', 'local')
@@ -446,30 +470,31 @@ def run_decode_lab(args: argparse.Namespace) -> Path:
             "prompt_template": _cfg.prompt_template,
         }
 
-    _write_json(
-        run_dir / "run-manifest.json",
-        {
-            "schema_version": SCHEMA_VERSION,
-            "run_id": run_id,
-            "started_at": started_at,
-            "finished_at": finished_at,
-            "command": sys.argv,
-            "project_root": str(PROJECT_ROOT),
-            "index_tsv": str(args.index_tsv),
-            "pdf_root": str(args.pdf_root),
-            "out_root": str(args.out_root),
-            "selected_doc_ids": selected_doc_ids,
-            "campaign_sets": resolved_sets,
-            "tool_paths": available_tools,
-            "pymupdf_available": _pymupdf_available(),
-            "extractor": extractor_flag,
-            "model_config": model_config_log or None,
-            "service_tier_requested": getattr(args, "tier", "standard"),
-            "bypass_gemini_cache": getattr(args, "bypass_gemini_cache", False),
-            "gemini_chunk_size_override": getattr(args, "gemini_chunk_size", None),
-            "fallback_mode": getattr(args, 'fallback', 'none'),
-        },
-    )
+    run_manifest = {
+        "schema_version": SCHEMA_VERSION,
+        "run_id": run_id,
+        "started_at": started_at,
+        "finished_at": finished_at,
+        "duration_seconds": run_duration_seconds,
+        "command": sys.argv,
+        "project_root": str(PROJECT_ROOT),
+        "index_tsv": str(args.index_tsv),
+        "pdf_root": str(args.pdf_root),
+        "out_root": str(args.out_root),
+        "selected_doc_ids": selected_doc_ids,
+        "campaign_sets": resolved_sets,
+        "tool_paths": available_tools,
+        "pymupdf_available": _pymupdf_available(),
+        "extractor": extractor_flag,
+        "model_config": model_config_log or None,
+        "service_tier_requested": getattr(args, "tier", "standard"),
+        "bypass_gemini_cache": getattr(args, "bypass_gemini_cache", False),
+        "gemini_chunk_size_override": getattr(args, "gemini_chunk_size", None),
+        "fallback_mode": getattr(args, "fallback", "none"),
+        "cost_summary": cost_summary,
+    }
+    _write_json(run_dir / "run-manifest.json", run_manifest)
+    write_run_history(args.out_root, REPORTS_DIR / "decode-run-history.tsv")
     _write_audit_md(
         run_dir / "audit.md",
         selected_doc_ids=selected_doc_ids,
@@ -482,6 +507,10 @@ def run_decode_lab(args: argparse.Namespace) -> Path:
         extractor=extractor_flag,
         model_config_log=model_config_log,
         fallbacks=fallbacks,
+        started_at=started_at,
+        finished_at=finished_at,
+        duration_seconds=run_duration_seconds,
+        cost_summary=cost_summary,
     )
     _progress(f"decode run done run_id={run_id} run_dir={run_dir}")
     return run_dir
@@ -1360,6 +1389,10 @@ def _write_audit_md(
     extractor: str = "local",
     model_config_log: dict[str, Any] | None = None,
     fallbacks: list[dict[str, Any]] | None = None,
+    started_at: str | None = None,
+    finished_at: str | None = None,
+    duration_seconds: float | None = None,
+    cost_summary: dict[str, Any] | None = None,
 ) -> None:
     risk_counts: dict[str, int] = {}
     for risk in risks:
@@ -1389,6 +1422,33 @@ def _write_audit_md(
             f"- prompt template SHA-256: `{model_config_log.get('prompt_template_sha256', '')[:16]}...`",
             "",
         ])
+    lines.extend([
+        "## Run Timing and Cost",
+        "",
+        f"- started at: `{started_at or 'unknown'}`",
+        f"- finished at: `{finished_at or 'unknown'}`",
+        f"- duration seconds: {duration_seconds if duration_seconds is not None else 'unknown'}",
+    ])
+    if cost_summary:
+        estimated_cost = cost_summary.get("estimated_cost_usd")
+        estimated_cost_display = (
+            f"${estimated_cost:.8f}"
+            if isinstance(estimated_cost, (int, float))
+            else "unknown"
+        )
+        lines.extend([
+            f"- cost status: `{cost_summary.get('status', 'unknown')}`",
+            f"- Gemini calls: {cost_summary.get('gemini_calls', 0)} "
+            f"({cost_summary.get('api_calls', 0)} API, "
+            f"{cost_summary.get('cache_hits', 0)} local cache hits)",
+            f"- API elapsed seconds: {cost_summary.get('api_elapsed_seconds', 0)}",
+            f"- recorded tokens: input {cost_summary.get('recorded_input_tokens', 0)}, "
+            f"cached input {cost_summary.get('recorded_cached_input_tokens', 0)}, "
+            f"output {cost_summary.get('recorded_output_tokens', 0)}, "
+            f"thinking {cost_summary.get('recorded_thinking_tokens', 0)}",
+            f"- estimated cost USD: {estimated_cost_display}",
+        ])
+    lines.append("")
     lines.extend([
         "## Documents",
         "",

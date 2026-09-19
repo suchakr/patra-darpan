@@ -1,0 +1,13 @@
+# Batch 01 of 05 from astro-math-indic-50.
+# 10 documents: 5 digital, 5 raster.
+
+Vol54_4_2019__Art02
+Vol47_3_10_ASBhat
+IJHS_60_3_1
+Vol52_4_2017__Art02
+Vol51_2016_3_Art06
+Vol35_3_4_VNSharma
+Vol34_4_2_SRSarma
+Vol28_1_5_SRSarma
+Vol34_2_6_SRSarma
+Vol38_1_1_RCGupta

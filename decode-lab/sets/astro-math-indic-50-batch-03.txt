@@ -1,0 +1,13 @@
+# Batch 03 of 05 from astro-math-indic-50.
+# 10 documents: 5 digital, 5 raster.
+
+Vol43_3_4_DBhattacharya
+IJHS_60_1_3
+Vol51_2016_2_1_Art02
+Vol55_2_2020__Art04
+IJHS_59_3_2
+Vol04_1And2_12_TSKShastri
+Vol41_2_1_SBhujle
+Vol24_3_5_LCJain
+Vol38_3_4_SBRao
+Vol42_2_2_ASule
