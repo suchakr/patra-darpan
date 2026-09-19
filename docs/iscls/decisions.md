@@ -172,6 +172,16 @@ full registry into model context.
 **Reason:** The host needs a vocabulary to plan useful calls, while the full
 registry would be noisy, expensive, and a poor substitute for lookup.
 
+### D18 — Local validation before production
+
+**Decision:** The first implementation milestone uses a local Sanchaya
+worktree, local Docker Zoekt, local vector/entity projections, and a local MCP
+server. Production endpoint and deployment work waits for the local gates.
+
+**Reason:** It isolates contract and data-quality failures from network,
+authentication, and deployment failures. The same adapters can be pointed at a
+production service later.
+
 ## Provisional decisions
 
 ### P1 — Physical catalog and registry format

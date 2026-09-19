@@ -57,6 +57,10 @@ The pilot contains:
 - structured entity extraction and a minimal entity lookup projection; and
 - read-only MCP tools.
 
+The first implementation and evaluation run locally. Production Zoekt hosting,
+MCP deployment, authentication, and scheduling are follow-on work after the
+local exporter and index gates pass.
+
 The initial subject slice is Jyotisha-oriented, but the document and index
 contracts must not encode Jyotisha as a special case.
 

@@ -52,6 +52,9 @@ Zoekt can cover the full lexical corpus early. The pilot vector build starts
 with the 120 papers and a selected Jyotisha slice of Sanchaya, then widens after
 Devanagari/IAST quality and cost measurements.
 
+Implementation is local-first: exporter, Zoekt, vector/entity projections, and
+MCP are validated on the workstation before production endpoints are considered.
+
 ## Existing design references
 
 This package integrates and extends the component work already documented in:

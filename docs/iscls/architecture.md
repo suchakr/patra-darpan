@@ -377,6 +377,35 @@ canonical entity or leave it unresolved.
 The entity registry is built after extraction and can be regenerated without
 re-running PDF decoding or vector embedding.
 
+## Local validation order
+
+The local path is intentionally sequential. Each projection is tested directly
+before the next one is introduced; none of the index builders calls another
+builder to discover content.
+
+```mermaid
+sequenceDiagram
+    participant X as Exporter
+    participant S as Sanchaya worktree
+    participant Z as Local Zoekt
+    participant V as Local vector builder
+    participant E as Local entity builder
+    participant Q as Gate tests
+
+    X->>S: Export accepted papers, media, manifest
+    S->>Q: Validate snapshot and links
+    Q-->>X: Pass / repair export
+    S->>Z: Build lexical projection
+    Z->>Q: Lexical smoke and exclusion checks
+    Q-->>Z: Pass / repair lexical build
+    S->>V: Chunk and embed eligible sources
+    V->>Q: Vector identity and script-quality checks
+    Q-->>V: Pass / repair vector build
+    S->>E: Extract mentions and build registry
+    E->>Q: Schema, alias, span, and evidence checks
+    Q-->>E: Pass / repair entity build
+```
+
 ## Online query path
 
 ChatGPT or Codex owns conversation, planning, and answer synthesis. MCP owns
@@ -423,10 +452,10 @@ All pilot tools are read-only, stateless, and bounded.
 The MCP server talks to backend adapters; it does not open arbitrary index
 files on behalf of the chat host.
 
-- **Zoekt:** in local development, the adapter calls the local Docker service
-  over its configured HTTP/RPC endpoint. In production, the same adapter calls
-  the private or authenticated Sanchaya Zoekt endpoint (for example,
-  `sanchaya.rasowwhi.us`) through configuration. The MCP contract does not
+- **Zoekt:** the next implementation phase uses the local Docker service over
+  its configured HTTP/RPC endpoint. A later production deployment can use the
+  private or authenticated Sanchaya Zoekt endpoint (for example,
+  `sanchaya.rasowshi.us`) through configuration. The MCP contract does not
   depend on whether the endpoint is local or remote.
 - **Vector index:** the adapter uses the selected local library/database in
   development, and a service or database client in production if needed. It
@@ -477,11 +506,12 @@ then use `lookup_entity` for actual candidate resolution. This gives the model
 enough vocabulary to form useful calls without making the ontology a mutable
 chat state or consuming the context window with the full registry.
 
-## Development and production topology
+## Development topology (next)
 
-The developer topology supports local review and rebuilds. The production
-topology consumes a reviewed Sanchaya commit and publishes versioned index
-artifacts. The two topologies share contracts, not mutable local state.
+The next implementation phase is local only. It consumes a reviewed Sanchaya
+worktree, builds each projection locally, and connects a local MCP server to
+local backend adapters. Production scheduling, endpoint hosting, and
+authentication are deferred until this path passes the pilot gates.
 
 ```mermaid
 flowchart LR
@@ -497,7 +527,7 @@ flowchart LR
         CH <-->|MCP| LM
     end
 
-    subgraph PROD[Reviewed deployment]
+    subgraph PROD[Deferred production deployment]
         GH[Sanchaya Git remote]
         JOB[Scheduled or manual build job]
         IA[Versioned index artifacts]

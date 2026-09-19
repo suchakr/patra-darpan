@@ -7,6 +7,14 @@ Proposed implementation sequence for the contract in [prd.md](prd.md) and
 first vertical slice proves the joins and evidence path before the corpus or
 the physical index stores are enlarged.
 
+## Local-first rule
+
+The next milestone is entirely local. Do not configure the production Zoekt
+endpoint, production MCP host, or production artifact scheduler while the
+exporter and local projections are still changing. Every stage below has a
+unit-test gate and a small integration smoke test before the next index is
+built.
+
 ## Ownership boundaries
 
 | Area | Owns | Does not own |
@@ -72,6 +80,27 @@ the Sanchaya projection.
 **Commit boundary:** exporter and validation code in the semantic repository;
 reviewed corpus projection in the Sanchaya repository.
 
+### Exporter behavior in concrete terms
+
+The exporter is a one-way, deterministic projection from accepted semantic
+documents into a Sanchaya staging worktree. It:
+
+1. reads accepted-document state and assembled Markdown from the semantic repo;
+2. assigns or verifies the stable `pd:` document ID;
+3. copies `document.md` and rewrites/validates only relative media references;
+4. writes one manifest row with categories, hashes, quality, extraction data,
+   and typed INSA/IJHS, CAHC, and GCS source references;
+5. emits a dry-run/audit report for missing media, collisions, and omissions; and
+6. leaves the Sanchaya commit to explicit review and Git commit.
+
+It does not build an index, edit the source Markdown, copy decoder run caches,
+or publish anything. Start its tests with a three-to-five-document fixture,
+then run the same exporter against the 120-paper selection.
+
+**Exporter unit/integration gate:** stable IDs, manifest schema, source refs,
+category handling, media-link safety, idempotence, duplicate detection, and no
+absolute paths all pass before any index build begins.
+
 ### Stage 2 — Build and verify the lexical projection
 
 **Purpose:** preserve the existing Sanchaya-Zoekt path while adding exported
@@ -83,10 +112,10 @@ files, and derived entity artifacts from the user-facing lexical corpus. Keep
 the exclusion in the builder/search configuration and enforce it again in the
 MCP adapter.
 
-In local development, the MCP adapter calls the local Sanchaya-Zoekt Docker
-service. In production, it calls the configured private Sanchaya Zoekt endpoint
-(for example, `sanchaya.rasowwhi.us`). The adapter interface is the same in
-both environments; the MCP server does not read Zoekt index files directly.
+For this milestone, the MCP adapter calls only the local Sanchaya-Zoekt Docker
+service. A later production adapter can call the configured private Sanchaya
+Zoekt endpoint (for example, `sanchaya.rasowshi.us`); that is not part of the
+local gate. The MCP server does not read Zoekt index files directly.
 
 The manifest is still available for filters and display metadata; it is not
 required to be lexical content. This gives the user clean search results while
@@ -101,6 +130,10 @@ retaining structured metadata for later retrieval.
 - paper image links remain usable after a lexical hit is fetched.
 
 **Commit boundary:** Zoekt configuration and smoke checks.
+
+**Lexical unit/integration gate:** path allowlisting, catalog/ontology
+exclusion, query-result identity, existing Sanchaya phrase search, and a
+paper-only phrase search pass against the local Docker service.
 
 ### Stage 3 — Establish the chunk and vector projection
 
@@ -149,6 +182,12 @@ contract.
 **Commit boundary:** chunker, vector builder/adapter, and a small local index
 fixture. Do not commit a vendor-specific production decision yet.
 
+**Vector unit/integration gate:** deterministic chunk IDs, Unicode/script
+preservation, revision/hash invalidation, model-adapter behavior, vector lookup,
+and a small Devanagari/IAST/mixed-script quality set pass locally. The build
+report records token count, chunk count, duration, cost/accounting, vector size,
+latency, and coverage policy.
+
 ### Stage 4 — Add the starter ontology and entity projection
 
 **Purpose:** make entity lookup useful for the demo without pretending that the
@@ -190,6 +229,11 @@ where possible, nearby chunks.
 derived mention/registry artifacts may be versioned or retained in a build
 artifact store, but must always carry the Sanchaya revision.
 
+**Entity unit/integration gate:** ontology schema validation, alias lookup,
+Unicode span offsets, unresolved mentions, registry rebuilds, pagination, and
+document/chunk evidence links pass locally. The pilot can load JSONL into memory
+or SQLite; it does not need a production entity service yet.
+
 ### Stage 5 — Expose the read-only MCP boundary
 
 **Purpose:** give ChatGPT/Codex a small, inspectable online interface.
@@ -225,6 +269,12 @@ names, topic labels, normalization rules, and examples, not the full registry.
 
 **Commit boundary:** MCP schemas, adapters, local server, and integration
 smoke tests.
+
+MCP work starts only after the three backend gates pass. MCP tests then cover
+tool schemas, bounded limits, catalog/path rejection, revision mismatch,
+backend error mapping, and the sequence `ontology_context` → `lookup_entity` →
+`search_corpus` → `fetch_passage`. A local end-to-end smoke test must complete
+before any production endpoint or deployment work is scheduled.
 
 ### Stage 6 — Demo evaluation and review
 
