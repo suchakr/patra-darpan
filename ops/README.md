@@ -9,7 +9,7 @@ directory as part of the current default build path.
 | Script | Status | Purpose |
 |---|---|---|
 | `export_patra_darpan_data_js.py` | current | Reads `exports/index.tsv`, writes `web/assets/js/data.js`, and refreshes the local `web/assets/pdfs` symlink. |
-| `sync_gcs.py` | manual operational utility | Compares local `corpus/ijhs/` and `corpus/other/` PDFs with the configured GCS bucket. Run `--diff` first; upload and orphan deletion modes are intentionally manual. |
+| `sync_gcs.py` | manual operational utility | Compares local `corpus/ijhs/` and `corpus/other/` PDFs with the configured GCS bucket. Use `--diff` for a report and `--check` for a read-only deployment gate; upload and orphan deletion modes are intentionally manual. |
 | `generate_juni_embeds.py` | manual sidecar utility | Generates iframe snippets for the sibling JUNI site and the local iframe sandbox. This assumes a maintainer-local `~/projects/cahcblr.github.io` checkout. |
 
 ## Legacy / Retained For Reference

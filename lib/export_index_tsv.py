@@ -72,6 +72,18 @@ INDEX_ENRICHMENT_FALLBACKS: dict[
         "link",
     ): {"subject": "Culture", "category": "Indic"},
     (
+        "SwarajyaMag",
+        "The Queen Who Wrote The War: Gangādevī And Her Madhurāvijayam",
+        "https://swarajyamag.com/culture/the-queen-who-wrote-the-war-gangdev-and-her-madhurvijayam",
+        "link",
+    ): {"subject": "Culture", "category": "Indic"},
+    (
+        "The Atharva Forum",
+        "Why Retell a Story Everyone Knows?",
+        "https://zenodo.org/records/21870633/files/Why_Retell_a_Story_Everyone_Knows.pdf?download=1",
+        "pdf",
+    ): {"subject": "Culture", "category": "Indic"},
+    (
         "TechVaidya Global",
         "ಧ್ರುವ ನಕ್ಷತ್ರ: ಕೇವಲ ಭಕ್ತಿಯ ಕಥೆಯೋ ಅಥವಾ 5000 ವರ್ಷಗಳ ಹಿಂದಿನ ಖಗೋಳ ವಿಸ್ಮಯವೋ?",
         "https://www.techvaidyaglobal.com/news/dhruva-nakshatra-ancient-indian-astronomy-thuban-star-science",
@@ -107,6 +119,36 @@ INDEX_ENRICHMENT_FALLBACKS: dict[
         "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/A_Comparitive_analysis_of_Kamsavadha_episode_in_Puranic_Texts.pdf",
         "pdf",
     ): {"subject": "Culture", "category": "Indic"},
+    (
+        "ICON 2023",
+        "Issues in the computational processing of Upamā alaṅkāra",
+        "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/slc-2023.icon-1.18.pdf",
+        "pdf",
+    ): {"subject": "Linguistics", "category": "Indic"},
+    (
+        "Saṃbhāṣā 39",
+        "A Study of the Vaiyākaraṇa Śābdabodha of the Sentences Having Upamā Alaṅkāra",
+        "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/slc-sambh_39_29.pdf",
+        "pdf",
+    ): {"subject": "Linguistics", "category": "Indic"},
+    (
+        "WSC-CSDH 2025",
+        "An introduction to computational identification and classification of Upamā alaṅkāra",
+        "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/slc-2025.wsc-csdh.1.pdf",
+        "pdf",
+    ): {"subject": "Linguistics", "category": "Indic"},
+    (
+        "SLC",
+        "IC analysis in Encyclopaedic Dictionary of Sanskrit on Historical Principles with special reference to Upamā alaṅkāra",
+        "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/slc-upama-analysis.pdf",
+        "pdf",
+    ): {"subject": "Linguistics", "category": "Indic"},
+    (
+        "Shodhasamhita X.1",
+        "Vāstuvidyā of Garga; Review of the Manuscript Vṛddhagarga Saṁhitā from Nepal",
+        "https://storage.googleapis.com/cahcblr-pdfs/assets/other/shodhasamhita_2023_vastuvidya_of_garga.pdf",
+        "pdf",
+    ): {"subject": "Arts", "category": "Indic"},
 }
 
 
@@ -139,6 +181,8 @@ def _source_label(source_type: str, remote_url: str) -> str:
         host = urlparse(remote_url).netloc.lower()
         if "swarajyamag.com" in host:
             return "swarajya"
+        if "atharvaforum.substack.com" in host:
+            return "atharvaforum"
         if "techvaidyaglobal.com" in host:
             return "techvaidya"
         return "curated_link"

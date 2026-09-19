@@ -1,89 +1,103 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# Deployment policy: corpus/GCS validity is enforced; Git cleanliness is
+# advisory unless production is invoked with --strict.
+
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-WORK_DIR="$ROOT_DIR/web"
-PROJECT_NAME="Patra Darpan semantic-index checkout"
-PUBLISH_DIR="."
-FUNCTIONS_DIR="netlify/functions"
-EXPECTED_SITE_ID=""
-DEFAULT_PORT="8900"
+WEB_DIR="$ROOT_DIR/web"
+EXPECTED_SITE_ID="${PATRA_DARPAN_NETLIFY_SITE_ID:-27e273a3-bc69-4619-b387-9cc64bbc0563}"
+DEFAULT_PORT="8890"
+DEFAULT_STATIC_SERVER_PORT="8891"
 PORT_BLOCK_SIZE="10"
 
 usage() {
-  cat <<EOF
-Usage: ./deploy.sh [--dev|--stage|--prod] [options] [-- netlify-args...]
+  cat <<'EOF'
+Usage:
+  ./deploy.sh [prepare|gcs-sync|stage|prod|local] [options] [-- netlify args...]
 
 Modes:
-  --dev, dev        Start Netlify Dev. Uses this project's reserved port block.
-  --stage, stage    Create a draft/preview deployment (default).
-  --prod, prod      Deploy to production after confirmation.
-  --help, -h        Show this help without contacting Netlify.
+  prepare                 Rebuild, validate, and report GCS drift.
+  gcs-sync                Explicitly upload pending corpus PDFs to GCS.
+  stage, --stage          Create a Netlify preview deploy. Default mode.
+  prod, --prod            Deploy the current web snapshot to production.
+  local, --local          Start the local Netlify development server.
+  dev, --dev              Alias for local.
 
 Options:
-  -p, --port PORT   Preferred public port (default: 8900).
-  --static-port N   Preferred internal static-server port (default: PORT + 1).
-  -n, --dry-run     Print resolved commands without executing them.
-  -y, --yes         Skip the production confirmation.
-  --                Pass all remaining arguments directly to Netlify CLI.
+  --strict                For prod, require clean main branch.
+  -p, --port PORT         Local Netlify URL port. Default: 8890.
+  --static-port PORT      Local static-server port. Default: 8891.
+  -y, --yes               Bypass wrapper confirmations.
+  -n, --dry-run           Print resolved commands without running them.
+  -h, --help              Show this help.
 
-Reserved block: 8900-$(( 8900 + 9 ))
-Publish path: .
 Examples:
-  ./deploy.sh --dev
-  ./deploy.sh --stage
-  ./deploy.sh --prod
-  ./deploy.sh --dev --port 8900
-  ./deploy.sh --stage -- --message "preview"
+  ./deploy.sh prepare
+  ./deploy.sh gcs-sync
+  ./deploy.sh --dev --port 8894 --static-port 8895
+  ./deploy.sh stage -- --message "corpus preview"
+  ./deploy.sh prod
+  ./deploy.sh prod --strict
 EOF
 }
 
-mode=""
+mode="stage"
 port="$DEFAULT_PORT"
-static_port=""
-dry_run=0
+static_server_port="$DEFAULT_STATIC_SERVER_PORT"
+strict=0
 assume_yes=0
+dry_run=0
 passthrough=()
-
-set_mode() {
-  local requested="$1"
-  if [[ -n "$mode" && "$mode" != "$requested" ]]; then
-    echo "Choose exactly one mode; received --$mode and --$requested." >&2
-    exit 2
-  fi
-  mode="$requested"
-}
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
-    --dev|dev|--local|local)
-      set_mode dev
+    prepare)
+      mode="prepare"
       shift
       ;;
-    --stage|stage)
-      set_mode stage
+    gcs-sync|gcs)
+      mode="gcs-sync"
       shift
       ;;
-    --prod|prod)
-      set_mode prod
+    prod|--prod)
+      mode="prod"
+      shift
+      ;;
+    stage|--stage)
+      mode="stage"
+      shift
+      ;;
+    local|--local|dev|--dev)
+      mode="local"
+      shift
+      ;;
+    --strict)
+      strict=1
       shift
       ;;
     -p|--port)
-      [[ $# -ge 2 && "$2" != -* ]] || { echo "Missing port after $1." >&2; exit 2; }
+      if [[ $# -lt 2 || "$2" == -* ]]; then
+        echo "Missing port after $1" >&2
+        exit 2
+      fi
       port="$2"
       shift 2
       ;;
-    --static-port|--static-server-port|--staticServerPort|--target-port)
-      [[ $# -ge 2 && "$2" != -* ]] || { echo "Missing static port after $1." >&2; exit 2; }
-      static_port="$2"
+    --static-port|--static-server-port|--target-port)
+      if [[ $# -lt 2 || "$2" == -* ]]; then
+        echo "Missing port after $1" >&2
+        exit 2
+      fi
+      static_server_port="$2"
       shift 2
-      ;;
-    -n|--dry-run)
-      dry_run=1
-      shift
       ;;
     -y|--yes)
       assume_yes=1
+      shift
+      ;;
+    -n|--dry-run)
+      dry_run=1
       shift
       ;;
     -h|--help)
@@ -96,96 +110,28 @@ while [[ $# -gt 0 ]]; do
       break
       ;;
     *)
-      echo "Unknown wrapper option: $1" >&2
-      echo "Put raw Netlify arguments after --." >&2
-      exit 2
+      passthrough+=("$1")
+      shift
       ;;
   esac
 done
 
-mode="${mode:-stage}"
-
-valid_port() {
-  [[ "$1" =~ ^[0-9]+$ && "$1" -ge 1 && "$1" -le 65535 ]]
+validate_port() {
+  local value="$1"
+  local label="$2"
+  if [[ ! "$value" =~ ^[0-9]+$ || "$value" -lt 1 || "$value" -gt 65535 ]]; then
+    echo "Invalid $label: $value" >&2
+    exit 2
+  fi
 }
-valid_port "$port" || { echo "Invalid public port: $port" >&2; exit 2; }
-if [[ -n "$static_port" ]]; then
-  valid_port "$static_port" || { echo "Invalid static port: $static_port" >&2; exit 2; }
+
+validate_port "$port" "port"
+validate_port "$static_server_port" "static server port"
+
+if [[ "$strict" -eq 1 && "$mode" != "prod" ]]; then
+  echo "--strict is only valid with prod" >&2
+  exit 2
 fi
-
-resolve_netlify() {
-  if command -v netlify >/dev/null 2>&1; then
-    NETLIFY=(netlify)
-  elif [[ -x "$WORK_DIR/node_modules/.bin/netlify" ]]; then
-    NETLIFY=("$WORK_DIR/node_modules/.bin/netlify")
-  elif [[ -x "$ROOT_DIR/node_modules/.bin/netlify" ]]; then
-    NETLIFY=("$ROOT_DIR/node_modules/.bin/netlify")
-  else
-    echo "Netlify CLI not found. Install it globally or in this project." >&2
-    exit 1
-  fi
-}
-
-listener_for() {
-  command -v lsof >/dev/null 2>&1 || return 0
-  lsof -nP -iTCP:"$1" -sTCP:LISTEN 2>/dev/null | sed -n '2p' || true
-}
-
-port_busy() {
-  local candidate="$1"
-  if command -v lsof >/dev/null 2>&1 &&
-     lsof -nP -iTCP:"$candidate" -sTCP:LISTEN >/dev/null 2>&1; then
-    return 0
-  fi
-  if command -v nc >/dev/null 2>&1 &&
-     nc -z 127.0.0.1 "$candidate" >/dev/null 2>&1; then
-    return 0
-  fi
-  if command -v nc >/dev/null 2>&1 &&
-     nc -z ::1 "$candidate" >/dev/null 2>&1; then
-    return 0
-  fi
-  return 1
-}
-
-report_conflict() {
-  local candidate="$1"
-  local listener
-  listener="$(listener_for "$candidate")"
-  if [[ -n "$listener" ]]; then
-    printf 'Port %s is occupied: %s\n' "$candidate" "$listener" >&2
-  else
-    printf 'Port %s is occupied.\n' "$candidate" >&2
-  fi
-}
-
-choose_port_pair() {
-  local candidate="$port"
-  local limit=$((port + PORT_BLOCK_SIZE))
-  if [[ -n "$static_port" ]]; then
-    if port_busy "$port"; then report_conflict "$port"; return 1; fi
-    if [[ "$static_port" == "$port" ]]; then
-      echo "Public and static ports must differ." >&2
-      return 1
-    fi
-    if port_busy "$static_port"; then report_conflict "$static_port"; return 1; fi
-    chosen_port="$port"
-    chosen_static_port="$static_port"
-    return 0
-  fi
-  while [[ $((candidate + 1)) -lt "$limit" && $((candidate + 1)) -le 65535 ]]; do
-    if ! port_busy "$candidate" && ! port_busy "$((candidate + 1))"; then
-      chosen_port="$candidate"
-      chosen_static_port="$((candidate + 1))"
-      return 0
-    fi
-    port_busy "$candidate" && report_conflict "$candidate"
-    port_busy "$((candidate + 1))" && report_conflict "$((candidate + 1))"
-    candidate=$((candidate + 2))
-  done
-  echo "No free port pair in this project's block: $port-$((limit - 1))." >&2
-  return 1
-}
 
 print_command() {
   printf 'Resolved command:'
@@ -193,65 +139,210 @@ print_command() {
   printf '\n'
 }
 
-run_in_workdir() {
-  printf 'Project: %s\n' "$PROJECT_NAME"
-  printf 'Working directory: %s\n' "$WORK_DIR"
+run() {
   print_command "$@"
   if [[ "$dry_run" -eq 0 ]]; then
-    (cd "$WORK_DIR" && "$@")
+    "$@"
   fi
 }
 
-verify_site_link() {
-  local state_file="$WORK_DIR/.netlify/state.json"
+run_in_web() {
+  printf 'Working directory: %s\n' "$WEB_DIR"
+  print_command "$@"
+  if [[ "$dry_run" -eq 0 ]]; then
+    (cd "$WEB_DIR" && "$@")
+  fi
+}
+
+confirm() {
+  local prompt="$1"
+  if [[ "$assume_yes" -eq 1 || "$dry_run" -eq 1 ]]; then
+    return 0
+  fi
+  read -r -p "$prompt [y/N] " reply
+  [[ "$reply" =~ ^[Yy]$ ]]
+}
+
+resolve_netlify() {
+  if command -v netlify >/dev/null 2>&1; then
+    NETLIFY=(netlify)
+  elif [[ -x "$WEB_DIR/node_modules/.bin/netlify" ]]; then
+    NETLIFY=("$WEB_DIR/node_modules/.bin/netlify")
+  else
+    echo "Netlify CLI not found. Run npm install in web/ or install netlify-cli." >&2
+    exit 1
+  fi
+}
+
+git_snapshot() {
+  branch="$(git -C "$ROOT_DIR" branch --show-current)"
+  [[ -n "$branch" ]] || branch="detached"
+  short_sha="$(git -C "$ROOT_DIR" rev-parse --short HEAD)"
+  changed_count="$(git -C "$ROOT_DIR" status --porcelain | wc -l | tr -d ' ')"
+  if [[ "$changed_count" -gt 0 ]]; then
+    worktree_state="DIRTY ($changed_count paths)"
+    deploy_suffix="+dirty"
+  else
+    worktree_state="clean"
+    deploy_suffix=""
+  fi
+  printf 'Branch: %s\n' "$branch"
+  printf 'HEAD: %s\n' "$short_sha"
+  printf 'Worktree: %s\n' "$worktree_state"
+}
+
+set_deploy_message() {
+  local default_message="$1"
+  local arg
+  deploy_message_args=(--message "$default_message")
+  for arg in "${passthrough[@]}"; do
+    case "$arg" in
+      -m|--message|--message=*)
+        deploy_message_args=()
+        return 0
+        ;;
+    esac
+  done
+}
+
+enforce_strict_git() {
+  if [[ "$branch" != "main" ]]; then
+    echo "Strict production deploy requires branch main; found $branch." >&2
+    exit 1
+  fi
+  if [[ "$changed_count" -gt 0 ]]; then
+    echo "Strict production deploy requires a clean worktree." >&2
+    exit 1
+  fi
+}
+
+ensure_site_link() {
+  local state_file="$WEB_DIR/.netlify/state.json"
+  if [[ "$dry_run" -eq 1 ]]; then
+    printf 'Expected Netlify site: %s\n' "$EXPECTED_SITE_ID"
+    return 0
+  fi
   if [[ ! -f "$state_file" ]]; then
-    echo "Refusing remote deployment: this app is not linked to a Netlify site." >&2
-    echo "Run 'cd $WORK_DIR && netlify link', verify the site, then retry." >&2
+    echo "Netlify site is not linked in web/. Run 'cd web && netlify link'." >&2
     exit 1
   fi
-  local linked_id
-  linked_id="$(sed -nE 's/.*"siteId"[[:space:]]*:[[:space:]]*"([^"]+)".*/\1/p' "$state_file" | head -1)"
-  if [[ -z "$linked_id" ]]; then
-    echo "Refusing remote deployment: $state_file contains no siteId." >&2
+  if ! grep -Eq "\"siteId\"[[:space:]]*:[[:space:]]*\"$EXPECTED_SITE_ID\"" "$state_file"; then
+    echo "Refusing deploy: web/ is linked to an unexpected Netlify site." >&2
+    echo "Expected site ID: $EXPECTED_SITE_ID" >&2
     exit 1
   fi
-  if [[ -n "$EXPECTED_SITE_ID" && "$linked_id" != "$EXPECTED_SITE_ID" ]]; then
-    echo "Refusing remote deployment: linked Netlify site does not match this wrapper." >&2
-    exit 1
-  fi
-  echo "Netlify site link verified."
+  printf 'Netlify site: %s\n' "$EXPECTED_SITE_ID"
 }
 
-deploy_args=(deploy --dir "$PUBLISH_DIR")
-if [[ -n "$FUNCTIONS_DIR" ]]; then
-  deploy_args+=(--functions "$FUNCTIONS_DIR")
-fi
+web_syntax_check() {
+  run node --check "$WEB_DIR/assets/js/app.js"
+  run node --check "$WEB_DIR/assets/js/data.js"
+  run node --check "$WEB_DIR/assets/js/p60.js"
+}
+
+port_is_busy() {
+  local check_port="$1"
+  if command -v lsof >/dev/null 2>&1 &&
+     lsof -nP -iTCP:"$check_port" -sTCP:LISTEN >/dev/null 2>&1; then
+    return 0
+  fi
+  if command -v nc >/dev/null 2>&1 &&
+     nc -z 127.0.0.1 "$check_port" >/dev/null 2>&1; then
+    return 0
+  fi
+  if command -v nc >/dev/null 2>&1 &&
+     nc -z ::1 "$check_port" >/dev/null 2>&1; then
+    return 0
+  fi
+  return 1
+}
+
+find_open_port() {
+  local candidate="$1"
+  local excluded="${2:-0}"
+  local limit=$((candidate + PORT_BLOCK_SIZE))
+  while [[ "$candidate" -le 65535 && "$candidate" -lt "$limit" ]]; do
+    if [[ "$candidate" -ne "$excluded" ]] && ! port_is_busy "$candidate"; then
+      printf '%s\n' "$candidate"
+      return 0
+    fi
+    candidate=$((candidate + 1))
+  done
+  echo "No open port found near $1" >&2
+  return 1
+}
+
+prepare() {
+  run uv run python "$ROOT_DIR/scripts/build_corpus_metadata.py"
+  run uv run python "$ROOT_DIR/scripts/export_index_tsv.py"
+  run uv run python "$ROOT_DIR/scripts/validate_legacy_index.py"
+  run uv run python "$ROOT_DIR/scripts/audit_corpus_inputs.py"
+  run uv run python "$ROOT_DIR/ops/export_patra_darpan_data_js.py"
+  web_syntax_check
+  run uv run python "$ROOT_DIR/ops/sync_gcs.py" --diff
+}
+
+gcs_sync() {
+  run uv run python "$ROOT_DIR/ops/sync_gcs.py" --diff
+  if ! confirm "Upload all pending corpus PDFs to GCS?"; then
+    echo "GCS upload cancelled."
+    return 0
+  fi
+  run uv run python "$ROOT_DIR/ops/sync_gcs.py" -y
+  run uv run python "$ROOT_DIR/ops/sync_gcs.py" --check
+}
+
+cd "$ROOT_DIR"
 
 case "$mode" in
-  dev)
+  prepare)
+    prepare
+    ;;
+  gcs-sync)
+    gcs_sync
+    ;;
+  local)
     resolve_netlify
-    choose_port_pair
-    if [[ "$chosen_port" != "$port" ]]; then
-      echo "Preferred pair is occupied; using $chosen_port/$chosen_static_port within the reserved block."
+    public_port="$(find_open_port "$port")"
+    local_static_port="$(find_open_port "$static_server_port" "$public_port")"
+    if [[ "$public_port" != "$port" ]]; then
+      printf 'Port %s is busy; using %s for the local URL.\n' "$port" "$public_port"
     fi
-    echo "Local URL: http://127.0.0.1:$chosen_port/"
-    run_in_workdir "${NETLIFY[@]}" dev --dir "$PUBLISH_DIR" \
-      --port "$chosen_port" --staticServerPort "$chosen_static_port" \
-      "${passthrough[@]}"
+    if [[ "$local_static_port" != "$static_server_port" ]]; then
+      printf 'Static server port %s is busy; using %s.\n' \
+        "$static_server_port" "$local_static_port"
+    fi
+    printf 'Local URL: http://127.0.0.1:%s/\n' "$public_port"
+    run_in_web "${NETLIFY[@]}" dev --dir . --port "$public_port" \
+      --staticServerPort "$local_static_port" "${passthrough[@]}"
     ;;
   stage)
     resolve_netlify
-    verify_site_link
-    run_in_workdir "${NETLIFY[@]}" "${deploy_args[@]}" "${passthrough[@]}"
+    git_snapshot
+    set_deploy_message "$branch@$short_sha$deploy_suffix"
+    ensure_site_link
+    web_syntax_check
+    run_in_web "${NETLIFY[@]}" deploy --dir . \
+      "${deploy_message_args[@]}" "${passthrough[@]}"
     ;;
   prod)
     resolve_netlify
-    verify_site_link
-    if [[ "$assume_yes" -eq 0 && "$dry_run" -eq 0 ]]; then
-      read -r -p "Deploy $PROJECT_NAME to production? [y/N] " reply
-      [[ "$reply" =~ ^[Yy]$ ]] || { echo "Production deployment cancelled."; exit 0; }
+    git_snapshot
+    set_deploy_message "$branch@$short_sha$deploy_suffix"
+    if [[ "$strict" -eq 1 ]]; then
+      enforce_strict_git
+    elif [[ "$changed_count" -gt 0 || "$branch" != "main" ]]; then
+      echo "Git state is advisory for this deploy; use --strict to enforce clean main."
     fi
-    run_in_workdir "${NETLIFY[@]}" "${deploy_args[@]}" --prod "${passthrough[@]}"
+    ensure_site_link
+    web_syntax_check
+    run uv run python "$ROOT_DIR/ops/sync_gcs.py" --check
+    printf 'Target: Patra Darpan production\n'
+    if ! confirm "Deploy this snapshot to production?"; then
+      echo "Production deploy cancelled."
+      exit 0
+    fi
+    run_in_web "${NETLIFY[@]}" deploy --dir . --prod \
+      "${deploy_message_args[@]}" "${passthrough[@]}"
     ;;
 esac
-

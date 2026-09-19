@@ -13,6 +13,7 @@ Syncs two prefixes:
 
 Usage:
   python ops/sync_gcs.py --diff          # dry-run: show what would change
+  python ops/sync_gcs.py --check         # read-only: fail if uploads are pending
   python ops/sync_gcs.py                 # upload new/changed files
   python ops/sync_gcs.py --detailed      # show all files, not trimmed
 """
@@ -36,7 +37,13 @@ SYNC_MAP = [
 ]
 
 
-def sync_gcs(force_yes=False, diff_only=False, delete_orphans=False, detailed=False):
+def sync_gcs(
+    force_yes=False,
+    diff_only=False,
+    check_only=False,
+    delete_orphans=False,
+    detailed=False,
+):
     print(f"Connecting to GCS bucket: {BUCKET_NAME} in project {PROJECT_ID}...")
 
     try:
@@ -44,12 +51,16 @@ def sync_gcs(force_yes=False, diff_only=False, delete_orphans=False, detailed=Fa
         bucket = storage_client.bucket(BUCKET_NAME)
 
         total_uploaded = 0
-        total_orphans = 0
+        total_deleted = 0
+        total_found_orphans = 0
+        total_pending = 0
+        missing_local_roots = 0
 
         for local_dir, gcs_prefix in SYNC_MAP:
             local_dir = os.path.abspath(local_dir)
             if not os.path.isdir(local_dir):
                 print(f"\nSkipping {gcs_prefix} — local dir not found: {local_dir}")
+                missing_local_roots += 1
                 continue
 
             print(f"\n{'='*60}")
@@ -87,6 +98,8 @@ def sync_gcs(force_yes=False, diff_only=False, delete_orphans=False, detailed=Fa
             local_names = {f for f, _ in local_pdfs}
             orphans = [(name, blob) for name, blob in remote_by_name.items()
                        if name not in local_names]
+            total_pending += len(to_upload)
+            total_found_orphans += len(orphans)
 
             print(f"\n  Up-to-date:    {up_to_date}")
             print(f"  Pending upload: {len(to_upload)}")
@@ -111,7 +124,7 @@ def sync_gcs(force_yes=False, diff_only=False, delete_orphans=False, detailed=Fa
                 if not detailed and len(orphans) > 10:
                     print(f"    ... and {len(orphans) - 10} more")
 
-            if diff_only:
+            if diff_only or check_only:
                 continue
 
             # Upload
@@ -138,15 +151,28 @@ def sync_gcs(force_yes=False, diff_only=False, delete_orphans=False, detailed=Fa
                 for name, blob in orphans:
                     print(f"  (DELETE) {gcs_prefix}{name}")
                     blob.delete()
-                    total_orphans += 1
+                    total_deleted += 1
 
         print(f"\n{'='*60}")
-        print(f"Done. Uploaded: {total_uploaded}  Deleted: {total_orphans}")
+        print(f"Done. Uploaded: {total_uploaded}  Deleted: {total_deleted}")
+
+        if check_only:
+            if missing_local_roots:
+                print(f"CHECK FAILED: {missing_local_roots} local corpus root(s) missing.")
+                return 1
+            if total_pending:
+                print(f"CHECK FAILED: {total_pending} GCS upload(s) pending.")
+                return 1
+            if total_found_orphans:
+                print(f"CHECK WARNING: {total_found_orphans} GCS orphan(s) found.")
+            print("CHECK PASSED: all local corpus PDFs are synchronized.")
+        return 0
 
     except Exception as e:
         print(f"Error: {e}")
         print("\nIf you see a 403 or Auth error, ensure you have run:")
         print("  gcloud auth application-default login")
+        return 2
 
 
 if __name__ == "__main__":
@@ -156,21 +182,34 @@ if __name__ == "__main__":
         epilog="""
 Examples:
   python ops/sync_gcs.py --diff            # See what's pending
+  python ops/sync_gcs.py --check           # Exit nonzero if uploads are pending
   python ops/sync_gcs.py                   # Upload interactively
   python ops/sync_gcs.py -y                # Upload without prompts
   python ops/sync_gcs.py --delete-orphans  # Also remove GCS orphans
 """
     )
     parser.add_argument("-y", "--yes", action="store_true", help="Bypass confirmation prompts.")
-    parser.add_argument("--diff", action="store_true", help="Dry-run: only show differences.")
+    read_only = parser.add_mutually_exclusive_group()
+    read_only.add_argument("--diff", action="store_true", help="Dry-run: only show differences.")
+    read_only.add_argument(
+        "--check",
+        action="store_true",
+        help="Read-only check: exit nonzero if local PDFs are missing from GCS.",
+    )
     parser.add_argument("--detailed", action="store_true", help="Show all files (no trimming).")
     parser.add_argument("--delete-orphans", action="store_true", help="Delete GCS files missing locally.")
 
     args = parser.parse_args()
 
-    sync_gcs(
-        force_yes=args.yes,
-        diff_only=args.diff,
-        delete_orphans=args.delete_orphans,
-        detailed=args.detailed,
+    if args.check and args.delete_orphans:
+        parser.error("--check cannot be combined with --delete-orphans")
+
+    raise SystemExit(
+        sync_gcs(
+            force_yes=args.yes,
+            diff_only=args.diff,
+            check_only=args.check,
+            delete_orphans=args.delete_orphans,
+            detailed=args.detailed,
+        )
     )
