@@ -128,8 +128,11 @@ def main() -> int:
     all_chunks = load_chunks(args.chunks)
     chunks = select_chunks(all_chunks, args.max_chunks)
     started = time.monotonic()
+    model_started = time.monotonic()
     model = SentenceTransformer(args.model, device=args.device)
+    model_load_seconds = time.monotonic() - model_started
     texts = [model_text(args.model, str(chunk["embed_text"])) for chunk in chunks]
+    encode_started = time.monotonic()
     vectors = model.encode(
         texts,
         batch_size=args.batch_size,
@@ -137,6 +140,7 @@ def main() -> int:
         normalize_embeddings=True,
         convert_to_numpy=True,
     )
+    encode_seconds = time.monotonic() - encode_started
     dimension = int(vectors.shape[1])
     collection = args.collection or collection_name(args.model)
     client = QdrantClient(url=args.qdrant_url)
@@ -169,8 +173,10 @@ def main() -> int:
                 payload=payload,
             )
         )
+    upsert_started = time.monotonic()
     for start in range(0, len(points), args.batch_size):
         client.upsert(collection_name=collection, points=points[start : start + args.batch_size], wait=True)
+    upsert_seconds = time.monotonic() - upsert_started
 
     run_dir = args.output_dir / collection
     run_dir.mkdir(parents=True, exist_ok=True)
@@ -185,8 +191,19 @@ def main() -> int:
         "full_chunk_count": len(all_chunks),
         "chunk_count": len(chunks),
         "sample_limit": args.max_chunks,
+        "token_estimate_total": sum(int(chunk.get("token_estimate") or 0) for chunk in chunks),
         "dimensions": dimension,
         "normalized": True,
+        "model_load_seconds": round(model_load_seconds, 3),
+        "encode_seconds": round(encode_seconds, 3),
+        "upsert_seconds": round(upsert_seconds, 3),
+        "encode_chunks_per_second": round(len(chunks) / encode_seconds, 3) if encode_seconds else None,
+        "encode_tokens_per_second": round(
+            sum(int(chunk.get("token_estimate") or 0) for chunk in chunks) / encode_seconds, 3
+        )
+        if encode_seconds
+        else None,
+        "raw_vector_bytes": len(chunks) * dimension * 4,
         "elapsed_seconds": round(time.monotonic() - started, 3),
     }
     (run_dir / "run.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")

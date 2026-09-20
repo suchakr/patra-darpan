@@ -192,8 +192,10 @@ uv run --with sentence-transformers --with qdrant-client \
   --collection iscls_e5_calibration_512 --max-chunks 512 --recreate
 ```
 
-Record cold and warm wall time, chunks per second, estimated tokens per second,
-embedding dimensions, peak process memory, and Qdrant collection size. The
+The run manifest records cold model-load time, encode/upsert time, chunks per
+second, estimated tokens per second, embedding dimensions, and raw vector
+bytes. Add peak process memory (`/usr/bin/time -l` on macOS) and Qdrant
+collection size to the run record. The
 round-robin selector covers every source before taking a second chunk, so the
 calibration is more useful than timing the first directory slice. The same
 command without `--max-chunks` seeds the full current bakeoff. Quality scoring
