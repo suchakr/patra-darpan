@@ -284,6 +284,16 @@ written to Qdrant. No Gemini quality score is reported. E5 remains the only
 complete, evaluated semantic index until the Gemini account quota or a longer
 batch window is available.
 
+### Deferred activity: reuse judged pairs for Sanskrit adaptation
+
+The bakeoff judgments are candidates for a later domain-adaptation dataset. Before
+fine-tuning, convert each accepted document-level judgment into one or more exact
+positive `chunk_id` pairs, add reviewed hard-negative chunks, and retain the query
+script/language, source path, and provenance. The current set is useful as a seed
+and evaluation contract; it is too small and too document-level to serve as a
+complete training set. Keep a held-out set so any Sanskrit/Devanagari adaptation
+is measured rather than assumed.
+
 After a candidate collection is built, evaluate it with:
 
 ```bash
