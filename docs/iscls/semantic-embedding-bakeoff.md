@@ -145,6 +145,16 @@ If the full probe exceeds the cap, retain the full 29-paper judged run and
 reduce the paid probe selection. Do not send PDFs or images in this text
 embedding bakeoff.
 
+The no-network preflight is:
+
+```bash
+python3 scripts/estimate_iscls_gemini_budget.py --split all
+```
+
+It uses the same chunk/query inventory and exits non-zero if the hard cap would
+be exceeded. An `over_stop` result requires reducing the paid selection before
+the API runner is allowed to start.
+
 ## Local vector infrastructure
 
 Run Qdrant in a standalone local Compose profile owned by the semantic

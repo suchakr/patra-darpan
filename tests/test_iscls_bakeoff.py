@@ -9,6 +9,7 @@ from lib.iscls_bakeoff import (
     parse_blocks,
 )
 from lib.iscls_eval import rank_metrics, summarize_judged
+from lib.iscls_budget import estimate_embedding_budget
 
 
 class IsclsBakeoffChunkTests(unittest.TestCase):
@@ -53,6 +54,14 @@ class IsclsBakeoffChunkTests(unittest.TestCase):
         summary = summarize_judged([{"script": "Devanagari", "metrics": metrics}])
         self.assertEqual(summary["judged_count"], 1)
         self.assertEqual(summary["by_script"]["Devanagari"]["recall_at_5"], 1.0)
+
+    def test_gemini_budget_preflight_has_stop_and_cap_states(self) -> None:
+        estimate = estimate_embedding_budget(1_000_000, 100_000)
+        self.assertAlmostEqual(estimate.estimated_cost_usd, 0.22)
+        self.assertTrue(estimate.under_stop)
+        over_stop = estimate_embedding_budget(2_100_000)
+        self.assertFalse(over_stop.under_stop)
+        self.assertTrue(over_stop.under_cap)
 
 
 if __name__ == "__main__":
