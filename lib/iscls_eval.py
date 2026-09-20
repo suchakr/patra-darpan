@@ -18,7 +18,9 @@ def rank_metrics(hit_documents: list[str], expected_documents: list[str], k: int
     """Return binary Recall@k and nDCG@k for a document-level judgment."""
 
     expected = list(dict.fromkeys(expected_documents))
-    top = hit_documents[:k]
+    # Qdrant returns chunks. Document-level judgments must not reward five
+    # chunks from one document as five independent relevant results.
+    top = list(dict.fromkeys(hit_documents))[:k]
     relevance = [1 if document in expected else 0 for document in top]
     ideal = [1] * min(len(expected), k)
     return {

@@ -169,7 +169,7 @@ The checked-in local profile is `docker-compose.iscls-bakeoff.yml`:
 
 ```bash
 docker compose -f docker-compose.iscls-bakeoff.yml up -d qdrant
-uv run --with sentence-transformers --with qdrant-client \
+uv run --with sentence-transformers --with qdrant-client==1.14.1 \
   python scripts/run_iscls_vector_build.py \
   --model intfloat/multilingual-e5-base --recreate
 ```
@@ -188,7 +188,7 @@ sample is still useful as a cheap integration smoke test when installing a new
 model or Qdrant runtime:
 
 ```bash
-uv run --with sentence-transformers --with qdrant-client \
+uv run --with sentence-transformers --with qdrant-client==1.14.1 \
   python scripts/run_iscls_vector_build.py \
   --model intfloat/multilingual-e5-base \
   --collection iscls_e5_calibration_512 --max-chunks 512 --recreate
@@ -209,10 +209,31 @@ The current text volume is small enough to measure Gemini end to end under the
 approved cap; the recorded local and paid rates then provide the basis for
 120-, 200-, and 2,000-paper estimates.
 
+### Execution record
+
+The first local baseline used `intfloat/multilingual-e5-base` with Qdrant
+`v1.14.1` and 768-dimensional normalized vectors:
+
+| Run | Chunks | Encode time | Throughput | Raw vectors | Qdrant storage |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Smoke | 512 | 36.9 s | 13.9 chunks/s; 4,885 tokens/s | 1.5 MiB | — |
+| Full | 3,625 | 230.0 s | 15.8 chunks/s; 5,628 tokens/s | 11.1 MB | 33 MiB |
+
+The full E5 collection scored Recall@5 **1.00** and nDCG@5 **1.00** on the
+20 closed document-level judgments. Twelve open-ended questions remain
+qualitative; their source-path coverage was 0.214. These numbers are a first
+baseline, not a model-selection decision, because the judged set is small and
+manual top-chunk review remains.
+
+BGE-M3 loaded successfully, but its first CPU batch of 32 stalled for more
+than three minutes on the same 512-chunk smoke input and was stopped. Do not
+start a full BGE run on this host until a smaller batch or an accelerator is
+available; this is a measured resource constraint, not a quality result.
+
 After a candidate collection is built, evaluate it with:
 
 ```bash
-uv run --with sentence-transformers --with qdrant-client \
+uv run --with sentence-transformers --with qdrant-client==1.14.1 \
   python scripts/evaluate_iscls_vectors.py \
   --run .local/iscls-bakeoff/runs/iscls_intfloat_multilingual_e5_base/run.json
 ```
