@@ -155,6 +155,10 @@ It uses the same chunk/query inventory and exits non-zero if the hard cap would
 be exceeded. An `over_stop` result requires reducing the paid selection before
 the API runner is allowed to start.
 
+On the current inventory (3,625 chunks and 32 queries), the preflight estimates
+1,323,218 whitespace tokens and **$0.264644** at `$0.20/M`. This is below the
+stop threshold; the eventual API response usage remains the billing record.
+
 ## Local vector infrastructure
 
 Run Qdrant in a standalone local Compose profile owned by the semantic
