@@ -2,7 +2,9 @@
 
 ## Status
 
-Proposed contract. Implementation begins after this document set is reviewed.
+Contract checkpointed on `feat/pdf-semantic-index`; the offline bakeoff input,
+chunk inventory, evaluator, and Gemini cost preflight are implemented. Model
+runtime execution and manual quality review remain.
 
 ## Purpose
 
@@ -27,6 +29,8 @@ the data contracts.
    small non-empty Jyotisha seed to review before copying into Sanchaya.
 6. [semantic-embedding-bakeoff.md](semantic-embedding-bakeoff.md) — the
    offline model, chunking, Qdrant, query, budget, and timing plan.
+7. [semantic-embedding-bakeoff-queries.jsonl](semantic-embedding-bakeoff-queries.jsonl)
+   — the fixed development, held-out, and Sanchaya probe queries.
 
 ## The central idea
 
