@@ -8,6 +8,7 @@ from lib.iscls_bakeoff import (
     make_chunks_for_source,
     parse_blocks,
 )
+from lib.iscls_eval import rank_metrics, summarize_judged
 
 
 class IsclsBakeoffChunkTests(unittest.TestCase):
@@ -44,6 +45,14 @@ class IsclsBakeoffChunkTests(unittest.TestCase):
             chunk_blocks(parse_blocks("text"), target_tokens=0)
         with self.assertRaises(ValueError):
             chunk_blocks(parse_blocks("text"), target_tokens=10, max_tokens=10, overlap_tokens=10)
+
+    def test_rank_metrics_and_script_summary(self) -> None:
+        metrics = rank_metrics(["d2", "d1", "d3"], ["d1"], 5)
+        self.assertEqual(metrics["recall_at_k"], 1.0)
+        self.assertEqual(metrics["matched_count"], 1)
+        summary = summarize_judged([{"script": "Devanagari", "metrics": metrics}])
+        self.assertEqual(summary["judged_count"], 1)
+        self.assertEqual(summary["by_script"]["Devanagari"]["recall_at_5"], 1.0)
 
 
 if __name__ == "__main__":
