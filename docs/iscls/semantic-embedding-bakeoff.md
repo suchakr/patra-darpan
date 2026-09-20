@@ -179,11 +179,13 @@ run manifest under `.local/iscls-bakeoff/runs/`, records the chunk inventory
 hash, and stores only searchable payload/provenance in Qdrant; full chunk text
 continues to come from the chunk inventory and later shared chunk store.
 
-### Calibration before the full run
+### Optional smoke test before the full run
 
-Do not guess local velocity from model-card claims. First run a deterministic
-512-chunk round-robin sample per local candidate, then repeat with the complete
-3,625-chunk inventory:
+A separate calibration run is not required for this pilot. The current
+3,625-chunk inventory is small enough that the full run can provide the most
+useful velocity, resource, and cost measurement. A deterministic round-robin
+sample is still useful as a cheap integration smoke test when installing a new
+model or Qdrant runtime:
 
 ```bash
 uv run --with sentence-transformers --with qdrant-client \
@@ -195,12 +197,12 @@ uv run --with sentence-transformers --with qdrant-client \
 The run manifest records cold model-load time, encode/upsert time, chunks per
 second, estimated tokens per second, embedding dimensions, and raw vector
 bytes. Add peak process memory (`/usr/bin/time -l` on macOS) and Qdrant
-collection size to the run record. The
-round-robin selector covers every source before taking a second chunk, so the
-calibration is more useful than timing the first directory slice. The same
-command without `--max-chunks` seeds the full current bakeoff. Quality scoring
-comes after that collection is seeded; it uses the same query file and does
-not require embedding the eventual 120-paper expansion first.
+collection size to the run record. The round-robin selector covers every
+source before taking a second chunk, so a smoke test is more useful than timing
+the first directory slice. The same command without `--max-chunks` seeds the
+full current bakeoff. Quality scoring comes after that collection is seeded; it
+uses the same query file and does not require embedding the eventual 120-paper
+expansion first.
 
 For the paid arm, run the cost preflight before the full current inventory.
 The current text volume is small enough to measure Gemini end to end under the
