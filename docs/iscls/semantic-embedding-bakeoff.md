@@ -165,6 +165,14 @@ run manifest under `.local/iscls-bakeoff/runs/`, records the chunk inventory
 hash, and stores only searchable payload/provenance in Qdrant; full chunk text
 continues to come from the chunk inventory and later shared chunk store.
 
+After a candidate collection is built, evaluate it with:
+
+```bash
+uv run --with sentence-transformers --with qdrant-client \
+  python scripts/evaluate_iscls_vectors.py \
+  --run .local/iscls-bakeoff/runs/iscls_intfloat_multilingual_e5_base/run.json
+```
+
 Qdrant stores vectors, chunk IDs, corpus revision, and filterable provenance.
 The chunk store remains the source for full text and media references. The
 evaluator talks directly to Qdrant; MCP and the Zoekt adapter are out of scope
@@ -206,6 +214,22 @@ review, and discussion of failures, the calendar estimate is **4–7 days**.
 
 The main uncertainty is chunk and relevance review; embedding runtime itself
 should be shorter.
+
+## Implementation checkpoint
+
+The contract and first runnable scaffolding are committed separately:
+
+- `28543f6` — bakeoff contract, query file, budget and exit criteria;
+- `05fe09b` — read-only input manifest, deterministic chunk inventory, local
+  Qdrant profile, and optional local vector builder; and
+- `11a5760` — Qdrant evaluator with Recall@5, nDCG@5, script grouping, and
+  open-ended source-path coverage.
+
+Remaining hands-on work after this scaffold is approximately **2–4 working
+days**: inspect and, if needed, revise chunk boundaries; install and run the
+two local candidates; run the capped Gemini arm only if its preflight fits the
+approved budget; perform manual top-result judgments; and write the comparison
+report. Model downloads, hardware speed, and manual review are the variables.
 
 ## Exit criteria
 
