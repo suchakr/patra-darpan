@@ -10,6 +10,7 @@ from lib.iscls_bakeoff import (
 )
 from lib.iscls_eval import rank_metrics, summarize_judged
 from lib.iscls_budget import estimate_embedding_budget
+from scripts.run_iscls_vector_build import select_chunks
 
 
 class IsclsBakeoffChunkTests(unittest.TestCase):
@@ -62,6 +63,16 @@ class IsclsBakeoffChunkTests(unittest.TestCase):
         over_stop = estimate_embedding_budget(2_100_000)
         self.assertFalse(over_stop.under_stop)
         self.assertTrue(over_stop.under_cap)
+
+    def test_calibration_selection_is_round_robin_and_stable(self) -> None:
+        chunks = [
+            {"source_id": "b", "chunk_id": "b1"},
+            {"source_id": "b", "chunk_id": "b2"},
+            {"source_id": "a", "chunk_id": "a1"},
+            {"source_id": "a", "chunk_id": "a2"},
+        ]
+        selected = select_chunks(chunks, 3)
+        self.assertEqual([chunk["chunk_id"] for chunk in selected], ["a1", "b1", "a2"])
 
 
 if __name__ == "__main__":

@@ -179,6 +179,32 @@ run manifest under `.local/iscls-bakeoff/runs/`, records the chunk inventory
 hash, and stores only searchable payload/provenance in Qdrant; full chunk text
 continues to come from the chunk inventory and later shared chunk store.
 
+### Calibration before the full run
+
+Do not guess local velocity from model-card claims. First run a deterministic
+512-chunk round-robin sample per local candidate, then repeat with the complete
+3,625-chunk inventory:
+
+```bash
+uv run --with sentence-transformers --with qdrant-client \
+  python scripts/run_iscls_vector_build.py \
+  --model intfloat/multilingual-e5-base \
+  --collection iscls_e5_calibration_512 --max-chunks 512 --recreate
+```
+
+Record cold and warm wall time, chunks per second, estimated tokens per second,
+embedding dimensions, peak process memory, and Qdrant collection size. The
+round-robin selector covers every source before taking a second chunk, so the
+calibration is more useful than timing the first directory slice. The same
+command without `--max-chunks` seeds the full current bakeoff. Quality scoring
+comes after that collection is seeded; it uses the same query file and does
+not require embedding the eventual 120-paper expansion first.
+
+For the paid arm, run the cost preflight before the full current inventory.
+The current text volume is small enough to measure Gemini end to end under the
+approved cap; the recorded local and paid rates then provide the basis for
+120-, 200-, and 2,000-paper estimates.
+
 After a candidate collection is built, evaluate it with:
 
 ```bash

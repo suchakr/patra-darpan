@@ -15,6 +15,7 @@ import json
 import sys
 import time
 import uuid
+from collections import defaultdict
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
@@ -51,6 +52,35 @@ def load_chunks(path: Path) -> list[dict[str, Any]]:
     return rows
 
 
+def select_chunks(chunks: list[dict[str, Any]], max_chunks: int | None) -> list[dict[str, Any]]:
+    """Select a deterministic round-robin sample across source documents."""
+
+    if max_chunks is None or max_chunks >= len(chunks):
+        return chunks
+    if max_chunks <= 0:
+        raise ValueError("max_chunks must be positive")
+    groups: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for chunk in chunks:
+        groups[str(chunk.get("source_id"))].append(chunk)
+    selected: list[dict[str, Any]] = []
+    positions = {source_id: 0 for source_id in sorted(groups)}
+    source_ids = sorted(groups)
+    while len(selected) < max_chunks:
+        advanced = False
+        for source_id in source_ids:
+            position = positions[source_id]
+            if position >= len(groups[source_id]):
+                continue
+            selected.append(groups[source_id][position])
+            positions[source_id] = position + 1
+            advanced = True
+            if len(selected) == max_chunks:
+                break
+        if not advanced:
+            break
+    return selected
+
+
 def model_text(model_name: str, text: str) -> str:
     """Apply the documented input prefix for E5; other candidates use raw text."""
 
@@ -71,6 +101,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--collection", help="Override the deterministic collection name")
     parser.add_argument("--qdrant-url", default="http://127.0.0.1:6333")
     parser.add_argument("--batch-size", type=int, default=32)
+    parser.add_argument(
+        "--max-chunks",
+        type=int,
+        default=None,
+        help="Deterministic round-robin calibration sample; omit for the full inventory",
+    )
     parser.add_argument("--device", default=None)
     parser.add_argument("--output-dir", type=Path, default=ROOT / ".local/iscls-bakeoff/runs")
     parser.add_argument("--recreate", action="store_true", help="Delete and recreate this candidate collection")
@@ -89,7 +125,8 @@ def main() -> int:
             "sentence-transformers and qdrant-client in the bakeoff environment."
         ) from exc
 
-    chunks = load_chunks(args.chunks)
+    all_chunks = load_chunks(args.chunks)
+    chunks = select_chunks(all_chunks, args.max_chunks)
     started = time.monotonic()
     model = SentenceTransformer(args.model, device=args.device)
     texts = [model_text(args.model, str(chunk["embed_text"])) for chunk in chunks]
@@ -145,7 +182,9 @@ def main() -> int:
         "qdrant_url": args.qdrant_url,
         "chunks_path": str(args.chunks),
         "chunks_sha256": file_sha256(args.chunks),
+        "full_chunk_count": len(all_chunks),
         "chunk_count": len(chunks),
+        "sample_limit": args.max_chunks,
         "dimensions": dimension,
         "normalized": True,
         "elapsed_seconds": round(time.monotonic() - started, 3),
