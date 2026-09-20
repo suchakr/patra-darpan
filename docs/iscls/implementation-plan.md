@@ -140,6 +140,13 @@ paper-only phrase search pass against the local Docker service.
 **Purpose:** prove semantic retrieval against the same snapshot and identity
 contract.
 
+The first Stage 3 activity is the offline model and chunking bakeoff described
+in [semantic-embedding-bakeoff.md](semantic-embedding-bakeoff.md). It reads a
+clean, revision-pinned Sanchaya checkout directly, uses a standalone local
+Qdrant profile, and leaves Zoekt, MCP, and the production services unchanged.
+The bakeoff must select the chunk/model configuration before the vector
+projection is promoted into the normal online retrieval path.
+
 Implement a deterministic chunker with structure-aware boundaries (heading,
 paragraph, verse, table, or page marker) and a token limit/overlap fallback.
 Keep the exact chunk-size and embedding model as configuration recorded in the
@@ -275,6 +282,13 @@ tool schemas, bounded limits, catalog/path rejection, revision mismatch,
 backend error mapping, and the sequence `ontology_context` → `lookup_entity` →
 `search_corpus` → `fetch_passage`. A local end-to-end smoke test must complete
 before any production endpoint or deployment work is scheduled.
+
+The local smoke test must exercise both sides of the local Zoekt boundary: the
+HTML search page remains available and a `POST /api/search` request succeeds
+when the local webserver is run with `-rpc`. Production work must preserve the
+private-RPC boundary described in [architecture.md](architecture.md): MCP and
+Zoekt share the host's private network, Caddy serves the public HTML routes,
+and public `/api` paths are rejected before the catch-all proxy.
 
 ### Stage 6 — Demo evaluation and review
 

@@ -25,6 +25,8 @@ the data contracts.
 4. [decisions.md](decisions.md) — accepted, provisional, and deferred choices.
 5. [starter-ontology-v0.example.json](starter-ontology-v0.example.json) — a
    small non-empty Jyotisha seed to review before copying into Sanchaya.
+6. [semantic-embedding-bakeoff.md](semantic-embedding-bakeoff.md) — the
+   offline model, chunking, Qdrant, query, budget, and timing plan.
 
 ## The central idea
 

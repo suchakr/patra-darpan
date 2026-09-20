@@ -470,6 +470,51 @@ Thus lexical and entity retrieval are separate backend calls behind one MCP
 server. They need not share a process or programming language. They must share
 document IDs, corpus revision, and evidence locators.
 
+### Zoekt RPC deployment boundary
+
+Zoekt's `-rpc` flag enables its JSON search API (`POST /api/search` and
+`POST /api/list`) on the same listener as the HTML interface. It is a backend
+capability, not the public application boundary and not an MCP server.
+
+Development is local-first:
+
+- the local MCP server calls the local Zoekt Docker service through its local
+  HTTP endpoint;
+- the local profile may enable `-rpc` while preserving the HTML routes; and
+- the local gate tests both the HTML page and a bounded JSON search request.
+
+Production has a stricter network boundary:
+
+- MCP and Zoekt run on `sanchaya.rasowshi.us` on the same host, preferably as
+  services on the same private Docker network;
+- Zoekt's `-rpc` listener is not published as a host or public port;
+- MCP calls `http://zoekt-webserver:6070/api/search` (or a loopback-only port
+  when MCP is a host process), never the public website URL;
+- public Caddy continues to proxy the HTML search experience; and
+- Caddy rejects `/api` and `/api/*` before its public catch-all proxy.
+
+The production Caddy boundary is expressed as a route before the final public
+`handle`:
+
+```caddyfile
+@zoekt_rpc path /api /api/*
+handle @zoekt_rpc {
+    respond "Not found" 404
+}
+```
+
+If a future deployment needs an MCP client outside the host, replace the deny
+route with an authenticated, IP-restricted route and add rate limiting at the
+gateway. `-rpc` itself provides neither authentication nor rate limiting.
+
+```mermaid
+flowchart LR
+    U[Public user] -->|HTTPS /search| C[Caddy]
+    C -->|HTML routes only| Z[Zoekt webserver]
+    M[Production MCP] -->|private Docker or loopback| Z
+    C -.->|/api/* denied| X[No public RPC]
+```
+
 ### `lookup_entity`
 
 Reads the ontology and registry. Returns candidate IDs, labels, aliases, types,

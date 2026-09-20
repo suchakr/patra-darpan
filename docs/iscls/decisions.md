@@ -182,6 +182,20 @@ server. Production endpoint and deployment work waits for the local gates.
 authentication, and deployment failures. The same adapters can be pointed at a
 production service later.
 
+### D19 — Production Zoekt RPC is host-private
+
+**Decision:** Enable Zoekt JSON RPC for the local MCP test first. In
+production, MCP and Zoekt run on the same host, preferably on the same private
+Docker network. Zoekt's RPC is not published as a host or public port. Caddy
+continues to serve the public HTML search routes and rejects `/api` and
+`/api/*` before the public catch-all proxy. A host-process MCP may use a
+loopback-only port instead.
+
+**Reason:** The public site should remain reachable while raw search RPC stays
+inside the production trust boundary. MCP is the policy boundary for queries,
+limits, and evidence; Zoekt's `-rpc` flag does not provide authentication or
+rate limiting.
+
 ## Provisional decisions
 
 ### P1 — Physical catalog and registry format
@@ -245,8 +259,10 @@ duplicate documents based on categories until retrieval questions justify it.
 ### F3 — Production deployment and authentication
 
 The dev topology is local. Production scheduling, secret management,
-authentication, network placement, and artifact hosting follow after the MCP
-contract works locally.
+authentication details for any future cross-host client, scheduling, and
+artifact hosting follow after the MCP contract works locally. The host-private
+Zoekt RPC boundary in D19 is accepted now; a public authenticated RPC route is
+not part of the pilot.
 
 ### F4 — Custom chat application
 
