@@ -226,9 +226,12 @@ baseline, not a model-selection decision, because the judged set is small and
 manual top-chunk review remains.
 
 BGE-M3 loaded successfully, but its first CPU batch of 32 stalled for more
-than three minutes on the same 512-chunk smoke input and was stopped. Do not
-start a full BGE run on this host until a smaller batch or an accelerator is
-available; this is a measured resource constraint, not a quality result.
+than three minutes on the same 512-chunk smoke input and was stopped. The
+machine is an Apple M1 Pro with 32 GB RAM; PyTorch reports MPS available, but
+the first MPS batch of 8 took about 59 seconds, implying roughly an hour for
+the smoke set. Do not start a full BGE run on this host with this runtime;
+this is a measured resource constraint, not a quality result. A different
+runtime (for example, an optimized Metal/Ollama path) can be evaluated later.
 
 After a candidate collection is built, evaluate it with:
 
