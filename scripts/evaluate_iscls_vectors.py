@@ -15,10 +15,16 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from lib.iscls_eval import rank_metrics, summarize_judged
+from lib.iscls_gemini import embed_one, prepare_query
 
 
 def query_text(model_name: str, text: str) -> str:
-    return "query: " + text if "e5" in model_name.lower() else text
+    lowered = model_name.lower()
+    if "e5" in lowered:
+        return "query: " + text
+    if "gemini-embedding-2" in lowered:
+        return prepare_query(text)
+    return text
 
 
 def load_jsonl(path: Path) -> list[dict[str, Any]]:
@@ -46,24 +52,39 @@ def main() -> int:
     args = parse_args()
     try:
         from qdrant_client import QdrantClient
-        from sentence_transformers import SentenceTransformer
     except ImportError as exc:
-        raise SystemExit(
-            "Evaluation needs optional dependencies; install sentence-transformers and qdrant-client."
-        ) from exc
+        raise SystemExit("Evaluation needs qdrant-client in the bakeoff environment.") from exc
     run = json.loads(args.run.read_text(encoding="utf-8"))
     model_name = str(run["model"])
     collection = str(run["collection"])
     client = QdrantClient(url=args.qdrant_url or str(run.get("qdrant_url") or "http://127.0.0.1:6333"))
-    model = SentenceTransformer(model_name)
+    is_gemini = "gemini-embedding-2" in model_name.lower()
+    if is_gemini:
+        from google import genai
+
+        gemini_client = genai.Client()
+        dimensions = int(run.get("dimensions") or 768)
+        model = None
+    else:
+        try:
+            from sentence_transformers import SentenceTransformer
+        except ImportError as exc:
+            raise SystemExit("Local evaluation needs sentence-transformers in the bakeoff environment.") from exc
+        gemini_client = None
+        dimensions = None
+        model = SentenceTransformer(model_name)
     rows: list[dict[str, Any]] = []
     started = time.monotonic()
     for query in load_jsonl(args.queries):
-        vector = model.encode(
-            [query_text(model_name, str(query["text"]))],
-            normalize_embeddings=True,
-            convert_to_numpy=True,
-        )[0].tolist()
+        prepared_query = query_text(model_name, str(query["text"]))
+        if is_gemini:
+            vector = embed_one(gemini_client, prepared_query, model=model_name, dimensions=dimensions)
+        else:
+            vector = model.encode(
+                [prepared_query],
+                normalize_embeddings=True,
+                convert_to_numpy=True,
+            )[0].tolist()
         if hasattr(client, "query_points"):
             response = client.query_points(
                 collection_name=collection,

@@ -159,6 +159,41 @@ On the current inventory (3,625 chunks and 32 queries), the preflight estimates
 1,323,218 whitespace tokens and **$0.264644** at `$0.20/M`. This is below the
 stop threshold; the eventual API response usage remains the billing record.
 
+### Gemini token calibration and batch path
+
+Whitespace is a poor cost proxy for this corpus. A distributed 128-chunk
+sample sent to Gemini's free `count_tokens` endpoint measured 155,313 Gemini
+tokens versus 46,964 whitespace tokens (ratio **3.307**). Extrapolated to the
+full chunk inventory, a standard Gemini run would be about **$0.86**, so the
+standard full run is intentionally blocked by the $0.50 cap. The Gemini
+Embedding 2 Batch API is priced at half the standard embedding rate; its
+conservative full-run estimate is about **$0.45** using a 3.5x guard. This is
+within the approved hard cap but above the normal $0.40 stop threshold, so it
+requires an explicit one-off `--stop-usd 0.49` invocation and leaves only a
+small reserve for query embeddings. Tier 1 currently allows about 500,000
+embedding tokens enqueued per model, so the full inventory is partitioned into
+12 sequential jobs. Do not submit the same job twice.
+
+The implementation is split from the local runner:
+
+```bash
+# Cheap synchronous API smoke test.
+python scripts/run_iscls_gemini_build.py --max-chunks 32 \
+  --collection iscls_gemini_smoke_32 --recreate
+
+# Full run, using the discounted asynchronous Batch API and quota-safe jobs.
+python scripts/run_iscls_gemini_build.py --mode batch \
+  --collection iscls_gemini_batch_full --stop-usd 0.49 \
+  --hard-cap-usd 0.50 --max-retries 0 --resume-batches --recreate
+```
+
+The runner records the calibrated guard, uploaded request file, batch job
+name, result file, and Qdrant run manifest. It reuses completed per-batch
+result files with `--resume-batches` and can resume polling a single active
+job with `--batch-job-name` without creating a second paid job. The query
+evaluator uses the same Gemini retrieval prefix and embeds queries only after
+the corpus collection is complete.
+
 ## Local vector infrastructure
 
 Run Qdrant in a standalone local Compose profile owned by the semantic
@@ -205,9 +240,10 @@ uses the same query file and does not require embedding the eventual 120-paper
 expansion first.
 
 For the paid arm, run the cost preflight before the full current inventory.
-The current text volume is small enough to measure Gemini end to end under the
-approved cap; the recorded local and paid rates then provide the basis for
-120-, 200-, and 2,000-paper estimates.
+The current text volume is small enough to estimate Gemini under the approved
+cap with the discounted batch path, but the active account's queue quota makes
+the full run a multi-job operation. The recorded local and paid rates provide
+the basis for 120-, 200-, and 2,000-paper estimates.
 
 ### Execution record
 
@@ -232,6 +268,21 @@ the first MPS batch of 8 took about 59 seconds, implying roughly an hour for
 the smoke set. Do not start a full BGE run on this host with this runtime;
 this is a measured resource constraint, not a quality result. A different
 runtime (for example, an optimized Metal/Ollama path) can be evaluated later.
+
+Gemini smoke execution used the same chunk inventory and retrieval prefixes:
+
+| Run | Chunks | API mode | Embedding time | Dimensions | Guarded cost |
+| --- | ---: | --- | ---: | ---: | ---: |
+| Smoke | 32 | synchronous | 5.8 s | 768 | $0.002432 |
+| Batch probe | 2 | asynchronous Batch API | 67.2 s | 768 | $0.000232 |
+
+The first two full-run partitions completed (737 vectors, 495,775 actual
+Gemini tokens, approximately $0.0496 at the batch price). A third partition
+returned 324 responses, but 103 were marked `operation was cancelled` while
+the queued job was being stopped; it is not a valid collection and was not
+written to Qdrant. No Gemini quality score is reported. E5 remains the only
+complete, evaluated semantic index until the Gemini account quota or a longer
+batch window is available.
 
 After a candidate collection is built, evaluate it with:
 

@@ -10,6 +10,8 @@ from lib.iscls_bakeoff import (
 )
 from lib.iscls_eval import rank_metrics, summarize_judged
 from lib.iscls_budget import estimate_embedding_budget
+from lib.iscls_gemini import prepare_document, prepare_query
+from scripts.run_iscls_gemini_build import partition_chunks
 from scripts.run_iscls_vector_build import select_chunks
 
 
@@ -74,6 +76,29 @@ class IsclsBakeoffChunkTests(unittest.TestCase):
         ]
         selected = select_chunks(chunks, 3)
         self.assertEqual([chunk["chunk_id"] for chunk in selected], ["a1", "b1", "a2"])
+
+    def test_gemini_retrieval_format_is_shared_for_documents_and_queries(self) -> None:
+        document = prepare_document(
+            {
+                "title": "Fallback title",
+                "heading_path": ["Nakṣatra", "Maghā"],
+                "embed_text": "Sun at Maghā heralds the season.",
+            }
+        )
+        self.assertTrue(document.startswith("title: Nakṣatra / Maghā | text: "))
+        self.assertEqual(
+            prepare_query("What is the significance of Maghadi?"),
+            "task: search result | query: What is the significance of Maghadi?",
+        )
+
+    def test_gemini_batch_partition_respects_guarded_budget(self) -> None:
+        chunks = [
+            {"chunk_id": "a", "token_estimate": 100},
+            {"chunk_id": "b", "token_estimate": 100},
+            {"chunk_id": "c", "token_estimate": 100},
+        ]
+        groups = partition_chunks(chunks, safety_factor=2, token_budget=250)
+        self.assertEqual([[row["chunk_id"] for row in group] for group in groups], [["a"], ["b"], ["c"]])
 
 
 if __name__ == "__main__":
