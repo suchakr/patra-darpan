@@ -92,9 +92,10 @@ Extraction can emit unresolved mentions. Ontology edits happen through reviewed
 Git changes, never through MCP.
 
 **Reason:** Lookup needs prior structure to be useful, but the pilot should not
-pretend the vocabulary is complete or freeze a final taxonomy. An example
-non-empty seed is kept in `starter-ontology-v0.example.json`; an empty registry
-is still expected before the first extraction run.
+pretend the vocabulary is complete or freeze a final taxonomy. The active
+repository-owned snapshot is `ontology/jyotisha-v0.3.json`; earlier snapshots
+remain reference material. An empty registry is still expected before the first
+extraction run.
 
 ### D10 — Four read-only MCP tools
 
@@ -195,6 +196,16 @@ loopback-only port instead.
 inside the production trust boundary. MCP is the policy boundary for queries,
 limits, and evidence; Zoekt's `-rpc` flag does not provide authentication or
 rate limiting.
+
+### D20 — Pilot codename, neutral runtime namespace
+
+**Decision:** Keep `ISCLS` for the event-scoped documentation, bakeoff history,
+and eventual Git tag. Use neutral `retrieval` names for durable runtime
+contracts, Compose services, environment variables, and new artifact schemas.
+
+**Reason:** The pilot should retain its provenance without making an event name
+part of the long-lived retrieval platform. Existing `iscls.*` bakeoff records
+remain readable as historical artifacts; new releases use `retrieval.*`.
 
 ## Provisional decisions
 

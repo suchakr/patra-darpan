@@ -1,0 +1,72 @@
+{
+  "schema_version": "retrieval.release.v1",
+  "release_id": "sanchaya-retrieval-0123456-pd-abcdef0-onto-v0.3",
+  "status": "ready",
+  "created_at": "2026-09-21T00:00:00Z",
+  "built_at": "2026-09-21T00:30:00Z",
+  "source": {
+    "sanchaya_repo": "https://github.com/cahcblr/sanchaya",
+    "sanchaya_commit": "0123456789abcdef0123456789abcdef01234567",
+    "patra_darpan_repo": "git@github.com:suchakr/patra-darpan.git",
+    "patra_darpan_commit": "abcdef0123456789abcdef0123456789abcdef01",
+    "corpus_manifest_sha256": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
+  },
+  "pipeline": {
+    "ontology": {
+      "id": "jyotisha",
+      "version": "0.3.0",
+      "revision": "ontology/jyotisha-v0.3.json"
+    },
+    "chunker": {
+      "id": "structure-aware",
+      "version": "0.1.0",
+      "revision": "patra-darpan:abcdef0"
+    },
+    "embedding": {
+      "model": "intfloat/multilingual-e5-base",
+      "revision": "sentence-transformers revision pinned by builder",
+      "dimensions": 768,
+      "normalized": true
+    },
+    "entity_extractor": {
+      "id": "starter-gazetteer",
+      "version": "0.1.0",
+      "revision": "patra-darpan:abcdef0"
+    }
+  },
+  "artifacts": {
+    "corpus_manifest": {
+      "path": "corpus-manifest.jsonl",
+      "sha256": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
+    },
+    "chunks": {
+      "path": "chunks.jsonl",
+      "sha256": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
+    },
+    "entity_mentions": {
+      "path": "entity-mentions.jsonl",
+      "sha256": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
+    },
+    "entity_registry": {
+      "path": "entity-registry.jsonl",
+      "sha256": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
+    },
+    "lexical_index": {
+      "backend": "zoekt",
+      "repository": "sanchaya",
+      "corpus_commit": "0123456789abcdef0123456789abcdef01234567"
+    },
+    "vector_index": {
+      "backend": "qdrant",
+      "collection": "sanchaya-vector-0123456",
+      "dimensions": 768
+    }
+  },
+  "metrics": {
+    "document_count": 59,
+    "chunk_count": 3625,
+    "mention_count": 10231,
+    "vector_point_count": 3625
+  },
+  "notes": "Illustrative contract only; paths are relative to the release root."
+}

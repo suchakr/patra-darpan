@@ -24,6 +24,8 @@ Current milestone:
 - canonical corpus build works
 - legacy-compatible `index.tsv` regeneration works from canonical root inputs
 - Patra Darpan `data.js` can be regenerated from `exports/index.tsv`
+- the local three-index retrieval pilot is documented in
+  [`docs/iscls/README.md`](docs/iscls/README.md)
 
 Legacy scripts still exist in the repo, but the intended authority flow is now:
 
@@ -50,6 +52,12 @@ Legacy scripts still exist in the repo, but the intended authority flow is now:
   generated compatibility outputs such as `index.tsv`
 - `reports/`
   validation, audit, and migration reports
+- `docs/iscls/`
+  durable retrieval pilot contracts and release schemas
+- `reports/iscls/`
+  one-off retrieval bakeoff and ontology-generation records
+- `ontology/`
+  versioned, repository-owned ontology snapshots
 - `reference/legacy/`
   legacy comparison fixtures
 - `.build~/`
@@ -75,6 +83,32 @@ Current root metadata inputs are:
 Shared PDF asset roots live in the sibling `patra-darpan` checkout:
 - `corpus/ijhs`
 - `corpus/other`
+
+## Retrieval and MCP
+
+The local retrieval pilot builds three projections from one reviewed Sanchaya
+snapshot:
+
+- a Zoekt lexical index (the existing `sanchaya-zoekt` project)
+- an E5 semantic vector index in Qdrant
+- a v0.3 ontology-driven entity and mention projection
+
+A read-only MCP server adapts those projections for ChatGPT or Codex. It
+exposes `lookup_entity`, `search_corpus`, `fetch_passage`, and
+`list_entity_mentions`, plus read-only ontology and release resources. The
+chat host owns conversation and answer synthesis; the adapters own retrieval.
+
+The companion [retrieval Compose file](docker-compose.retrieval.yml) defines
+the local/prod deployment shape: `qdrant`, a one-shot `retrieval-builder`, and
+the `retrieval-mcp` runtime. Copy
+[`retrieval.env.example`](retrieval.env.example) to an untracked `.env` beside
+the Compose file to supply host paths and the Zoekt endpoint. Current local
+smoke checks run the builders and MCP server from the checkout; pinned images
+are a later packaging step.
+
+Start with [`docs/iscls/README.md`](docs/iscls/README.md) for commands and
+current status, then [`docs/iscls/architecture.md`](docs/iscls/architecture.md)
+for release lineage, adapters, data flow, and the production network boundary.
 
 ## Common Commands
 

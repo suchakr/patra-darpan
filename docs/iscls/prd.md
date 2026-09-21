@@ -2,8 +2,10 @@
 
 ## Status
 
-Proposed contract. This PRD defines the pilot and the scale target; it does
-not choose a final vector vendor, entity database, or chat application.
+Active pilot contract. The local vertical slice uses E5 with Qdrant, JSONL
+entity projections, and a read-only MCP server. The PRD still leaves the
+production vector topology, artifact retention, and custom chat application
+open.
 
 ## Problem
 
@@ -57,9 +59,11 @@ The pilot contains:
 - structured entity extraction and a minimal entity lookup projection; and
 - read-only MCP tools.
 
-The first implementation and evaluation run locally. Production Zoekt hosting,
-MCP deployment, authentication, and scheduling are follow-on work after the
-local exporter and index gates pass.
+The first implementation and evaluation run locally. The current local
+vertical slice covers 29 audit-set papers and 30 Sanchaya probe files; the
+reviewed pilot target is 120 accepted papers. Production Zoekt hosting, MCP
+deployment, authentication, and scheduling remain follow-on work after the
+local review gates pass.
 
 The initial subject slice is Jyotisha-oriented, but the document and index
 contracts must not encode Jyotisha as a special case.

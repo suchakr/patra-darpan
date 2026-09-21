@@ -53,17 +53,44 @@ The exporter does not copy local run directories, absolute local paths, or raw
 PDFs by default. Source PDF URLs, hashes, page mappings, and extraction run
 identifiers belong in metadata.
 
-### Canonical Sanchaya layout
+### Repository and runtime boundaries
 
-This is an illustrative pilot layout. The `catalog/` and entity-registry
-physical names remain provisional.
+The Patra Darpan repository is the single code home for the web GUI, exporter,
+retrieval builders, and MCP service. The current `feat/pdf-semantic-index` branch
+is a temporary pre-merge deployment source; after review, production uses the
+corresponding `main` commit or tag.
+
+The `sanchaya-zoekt` repository remains an independent lexical service. Its
+Zoekt containers own repository synchronization, lexical shards, web routes,
+and RPC. Retrieval runs as separate containers (builder, Qdrant, and MCP),
+optionally added through a Compose overlay/profile. The semantic builder reads
+the synchronized Sanchaya checkout read-only and never maintains a second
+corpus clone.
+
+Development mounts the existing local Sanchaya checkout. Production mounts the
+Zoekt-managed checkout. Both environments keep generated chunks, entity
+projections, and vector data outside the Git worktrees.
+
+A release record binds the Patra Darpan commit, Sanchaya commit, ontology,
+chunker, embedding model, and artifact/index identifiers. The semantic builder
+is run explicitly after a corpus or pipeline change; starting the web, Zoekt,
+or MCP services does not trigger a full embedding build.
+
+### Canonical corpus and artifact layout
+
+This is the pilot layout. The Sanchaya checkout contains corpus content and
+derived corpus catalogs; the Patra Darpan checkout owns the ontology and build
+code. Generated retrieval artifacts stay outside both Git worktrees.
 
 ```text
+patra-darpan-pdf-semantic-index/
+  ontology/
+    jyotisha-v0.3.json                # human-maintained active snapshot
+  docs/iscls/                         # durable pilot contracts
+  reports/iscls/                      # one-off generation/evaluation records
+
 sanchaya/
   <existing Indic text directories>/
-  ontology/
-    jyotisha-v0.json
-    seed-entities.jsonl              # optional separate seed file
   patra-darpan/
     papers/
       <safe-doc-id>/
@@ -73,8 +100,12 @@ sanchaya/
           ...
     catalog/
       corpus-manifest.jsonl          # required document catalog
-      entity-mentions.jsonl           # derived after EE is enabled
-      entity-registry.*               # logical output; physical form deferred
+
+.local/retrieval/
+  chunks.jsonl
+  entity-mentions.jsonl              # derived from chunks + ontology
+  entity-registry.jsonl              # rebuildable lookup projection
+  releases/<release-id>/              # immutable MCP input
 ```
 
 `document.md` remains clean Markdown. Relative image links are preserved. A
@@ -162,7 +193,7 @@ The pilot contract is:
 
 ```json
 {
-  "schema_version": "iscls.entity-mention.v1",
+  "schema_version": "retrieval.entity-mention.v1",
   "mention_id": "em:8d7...",
   "corpus_revision": "<sanchaya-commit-sha>",
   "document_id": "pd:Vol43_1_1_RNIyengar",
@@ -191,7 +222,7 @@ The pilot contract is:
     "version": "0.1.0",
     "method": "gazetteer"
   },
-  "ontology_version": "jyotisha-0.1.0",
+  "ontology_version": "jyotisha-0.3.0",
   "related_chunk_ids": ["chunk:..." ]
 }
 ```
@@ -215,8 +246,9 @@ The ontology is a human-maintained input, not an extraction result. The pilot
 needs a small versioned type/relation vocabulary and seed aliases. An empty
 ontology *schema* is valid as a file-format test, but it is not a useful
 starter: it cannot resolve aliases or provide meaningful type hints. The pilot
-therefore starts with a small non-empty Jyotisha vocabulary; the example is in
-[`starter-ontology-v0.example.json`](starter-ontology-v0.example.json).
+therefore starts with the repository-owned, non-empty snapshot
+[`jyotisha-v0.3.json`](../../ontology/jyotisha-v0.3.json). Earlier snapshots
+remain available in [`ontology/`](../../ontology/) for history and comparison.
 
 Entity extraction may still produce unresolved mentions when the vocabulary
 does not contain a confident match. An empty **registry** is different and is
@@ -452,8 +484,8 @@ All pilot tools are read-only, stateless, and bounded.
 The MCP server talks to backend adapters; it does not open arbitrary index
 files on behalf of the chat host.
 
-- **Zoekt:** the next implementation phase uses the local Docker service over
-  its configured HTTP/RPC endpoint. A later production deployment can use the
+- **Zoekt:** the local implementation uses the Docker service over its
+  configured HTTP/RPC endpoint. A later production deployment can use the
   private or authenticated Sanchaya Zoekt endpoint (for example,
   `sanchaya.rasowshi.us`) through configuration. The MCP contract does not
   depend on whether the endpoint is local or remote.
@@ -469,6 +501,16 @@ files on behalf of the chat host.
 Thus lexical and entity retrieval are separate backend calls behind one MCP
 server. They need not share a process or programming language. They must share
 document IDs, corpus revision, and evidence locators.
+
+The current local implementation is deliberately thin at this boundary:
+[`lib/retrieval_adapters.py`](../../lib/retrieval_adapters.py) contains the
+Zoekt, Qdrant, JSONL, passage, and fusion adapters;
+[`scripts/create_retrieval_release.py`](../../scripts/create_retrieval_release.py)
+materializes one immutable release; and
+[`scripts/retrieval_mcp_server.py`](../../scripts/retrieval_mcp_server.py)
+registers the four tools and two read-only resources. The adapter layer is the
+stable seam for later replacing JSONL with a keyed store or Qdrant with another
+vector service.
 
 ### Zoekt RPC deployment boundary
 
@@ -540,7 +582,7 @@ but does not change it.
 
 ### Ontology context resource
 
-The MCP server should expose a compact read-only `ontology_context` resource
+The MCP server exposes a compact read-only `ontology_context` resource
 (or an equivalent `get_ontology_context` tool for clients without resource
 support). It contains the ontology ID/version, entity types, relation names,
 topic labels, normalization rules, and a few seed examples. It is planning
@@ -551,12 +593,12 @@ then use `lookup_entity` for actual candidate resolution. This gives the model
 enough vocabulary to form useful calls without making the ontology a mutable
 chat state or consuming the context window with the full registry.
 
-## Development topology (next)
+## Development and production topology
 
-The next implementation phase is local only. It consumes a reviewed Sanchaya
-worktree, builds each projection locally, and connects a local MCP server to
-local backend adapters. Production scheduling, endpoint hosting, and
-authentication are deferred until this path passes the pilot gates.
+Development consumes a reviewed local Sanchaya worktree, builds each projection
+locally, and connects a local MCP server to local backend adapters. Production
+uses the same service boundaries with different mounts, credentials, and
+resource settings after the pilot gates pass.
 
 ```mermaid
 flowchart LR

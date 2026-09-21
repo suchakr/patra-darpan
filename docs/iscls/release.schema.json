@@ -1,0 +1,249 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:retrieval:release:v1",
+  "title": "Retrieval release record",
+  "description": "Lineage and artifact contract for one coherent retrieval index release.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "release_id",
+    "status",
+    "created_at",
+    "source",
+    "pipeline",
+    "artifacts"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "retrieval.release.v1"
+    },
+    "release_id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._-]{2,127}$"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["building", "ready", "failed", "retired"]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "built_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "source": {
+      "$ref": "#/$defs/source"
+    },
+    "pipeline": {
+      "$ref": "#/$defs/pipeline"
+    },
+    "artifacts": {
+      "$ref": "#/$defs/artifacts"
+    },
+    "metrics": {
+      "$ref": "#/$defs/metrics"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "$defs": {
+    "revision": {
+      "type": "string",
+      "pattern": "^[0-9a-fA-F]{7,64}$"
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-fA-F]{64}$"
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sanchaya_repo",
+        "sanchaya_commit",
+        "patra_darpan_repo",
+        "patra_darpan_commit"
+      ],
+      "properties": {
+        "sanchaya_repo": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sanchaya_commit": {
+          "$ref": "#/$defs/revision"
+        },
+        "patra_darpan_repo": {
+          "type": "string",
+          "minLength": 1
+        },
+        "patra_darpan_commit": {
+          "$ref": "#/$defs/revision"
+        },
+        "corpus_manifest_sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      }
+    },
+    "component": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "version"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "revision": {
+          "type": "string"
+        }
+      }
+    },
+    "embedding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["model", "revision", "dimensions"],
+      "properties": {
+        "model": {
+          "type": "string",
+          "minLength": 1
+        },
+        "revision": {
+          "type": "string",
+          "minLength": 1
+        },
+        "dimensions": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "normalized": {
+          "type": "boolean"
+        }
+      }
+    },
+    "pipeline": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ontology", "chunker", "embedding", "entity_extractor"],
+      "properties": {
+        "ontology": {
+          "$ref": "#/$defs/component"
+        },
+        "chunker": {
+          "$ref": "#/$defs/component"
+        },
+        "embedding": {
+          "$ref": "#/$defs/embedding"
+        },
+        "entity_extractor": {
+          "$ref": "#/$defs/component"
+        }
+      }
+    },
+    "file_artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path"],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^(?!/)(?!.*\\\\).+"
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      }
+    },
+    "artifacts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "corpus_manifest",
+        "chunks",
+        "entity_mentions",
+        "entity_registry",
+        "lexical_index",
+        "vector_index"
+      ],
+      "properties": {
+        "corpus_manifest": {
+          "$ref": "#/$defs/file_artifact"
+        },
+        "chunks": {
+          "$ref": "#/$defs/file_artifact"
+        },
+        "entity_mentions": {
+          "$ref": "#/$defs/file_artifact"
+        },
+        "entity_registry": {
+          "$ref": "#/$defs/file_artifact"
+        },
+        "lexical_index": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["backend", "repository", "corpus_commit"],
+          "properties": {
+            "backend": {
+              "const": "zoekt"
+            },
+            "repository": {
+              "type": "string",
+              "minLength": 1
+            },
+            "corpus_commit": {
+              "$ref": "#/$defs/revision"
+            }
+          }
+        },
+        "vector_index": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["backend", "collection", "dimensions"],
+          "properties": {
+            "backend": {
+              "const": "qdrant"
+            },
+            "collection": {
+              "type": "string",
+              "minLength": 1
+            },
+            "dimensions": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        }
+      }
+    },
+    "metrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "document_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "chunk_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "mention_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "vector_point_count": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    }
+  }
+}

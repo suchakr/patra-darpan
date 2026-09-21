@@ -2,9 +2,11 @@
 
 ## Status
 
-Planning note. This is an offline evaluation stage before the Zoekt/MCP
-adapter. It does not change the read-only online contract or production
-services.
+Historical evaluation record. The E5/Qdrant arm is the selected pilot baseline
+and is now used by the normal retrieval builder. BGE-M3 was inconclusive on the
+development machine, and the Gemini arm was stopped by its guarded batch/quota
+path; neither is a production dependency. This report remains the evidence for
+the selection and can be rerun when the model or corpus changes.
 
 ## Purpose
 
@@ -73,7 +75,8 @@ are visibly poor.
 
 ## Query set
 
-Create `docs/iscls/semantic-embedding-bakeoff-queries.jsonl` with:
+The fixed query fixture is
+`tests/fixtures/iscls/semantic-embedding-bakeoff-queries.jsonl` with:
 
 - 18 development queries;
 - 6 held-out queries; and
@@ -85,7 +88,7 @@ conceptual paraphrase, transliteration variation, Devanagari, IAST, mixed
 script, entity/work linkage, table or method questions, and open-ended source
 discovery.
 
-The checked-in query file currently contains those 32 rows. Generated input,
+The checked-in query file contains those 32 rows. Generated input,
 chunk, model, and Qdrant artifacts remain under `.local/iscls-bakeoff/` and
 are intentionally not committed.
 
@@ -200,10 +203,11 @@ Run Qdrant in a standalone local Compose profile owned by the semantic
 repository. Create one isolated collection per candidate model. Keep the
 Qdrant volume outside Git and publish no public port.
 
-The checked-in local profile is `docker-compose.iscls-bakeoff.yml`:
+The historical local profile is
+`reports/iscls/docker-compose.iscls-bakeoff.yml`:
 
 ```bash
-docker compose -f docker-compose.iscls-bakeoff.yml up -d qdrant
+docker compose -f reports/iscls/docker-compose.iscls-bakeoff.yml up -d qdrant
 uv run --with sentence-transformers --with qdrant-client==1.14.1 \
   python scripts/run_iscls_vector_build.py \
   --model intfloat/multilingual-e5-base --recreate
@@ -346,7 +350,7 @@ should be shorter.
 
 ## Implementation checkpoint
 
-The contract and first runnable scaffolding are committed separately:
+The contract and first runnable scaffolding were committed separately:
 
 - `28543f6` — bakeoff contract, query file, budget and exit criteria;
 - `05fe09b` — read-only input manifest, deterministic chunk inventory, local
@@ -354,23 +358,20 @@ The contract and first runnable scaffolding are committed separately:
 - `11a5760` — Qdrant evaluator with Recall@5, nDCG@5, script grouping, and
   open-ended source-path coverage.
 
-Remaining hands-on work after this scaffold is approximately **2–4 working
-days**: inspect and, if needed, revise chunk boundaries; install and run the
-two local candidates; run the capped Gemini arm only if its preflight fits the
-approved budget; perform manual top-result judgments; and write the comparison
-report. Model downloads, hardware speed, and manual review are the variables.
+The E5 baseline has now been measured and integrated into the retrieval release
+path. Remaining work is optional challenger evaluation, manual answer review,
+and reruns when the chunk policy or corpus scope changes.
 
 ## Exit criteria
 
-The bakeoff is complete when:
+The bakeoff was complete for the pilot when:
 
 - the input commit and file manifest are recorded;
 - every candidate uses identical chunks and queries;
 - the Gemini spend guard is tested and remains under the approved cap;
 - Qdrant collections are reproducible locally;
 - quality, script coverage, size, latency, and cost are reported; and
-- one model/chunker configuration is selected for the 120-paper plus selected
-  Jyotisha vector projection.
+- one model/chunker configuration is selected for the pilot vector projection.
 
-Only after this gate do we integrate the chosen vector projection into the
-normal ISCLS build path and add the thin Zoekt/MCP adapter.
+The selected E5 configuration is now the normal retrieval build path. Full
+120-paper coverage and production packaging are separate follow-on gates.
