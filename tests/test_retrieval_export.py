@@ -5,10 +5,10 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from lib.iscls_export import export_documents
+from lib.retrieval_export import export_documents
 
 
-class IsclsExportTests(unittest.TestCase):
+class RetrievalExportTests(unittest.TestCase):
     def _fixture(self, root: Path) -> tuple[Path, Path, Path]:
         decoded = root / "decoded-corpus"
         sanchaya = root / "sanchaya"

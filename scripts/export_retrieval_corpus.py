@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Export accepted decoded papers into a Sanchaya ISCLS worktree."""
+"""Export accepted decoded papers into a Sanchaya retrieval worktree."""
 
 from __future__ import annotations
 
@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from lib.iscls_export import DEFAULT_GCS_BUCKET, export_documents, write_audit
+from lib.retrieval_export import DEFAULT_GCS_BUCKET, export_documents, write_audit
 
 
 def parse_args() -> argparse.Namespace:

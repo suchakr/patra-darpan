@@ -1,4 +1,4 @@
-"""Deterministic Patra Darpan -> Sanchaya ISCLS exporter.
+"""Deterministic Patra Darpan -> Sanchaya retrieval exporter.
 
 The exporter deliberately stops at a reviewed corpus projection. It does not
 build Zoekt, vectors, entities, or MCP state. The latter stages consume the
@@ -20,7 +20,7 @@ from typing import Any, Iterable
 from urllib.parse import urlparse
 
 
-EXPORT_VERSION = "iscls-export.v0.1"
+EXPORT_VERSION = "retrieval-export.v0.1"
 DEFAULT_GCS_BUCKET = "cahcblr-pdfs"
 IMAGE_RE = re.compile(r"!\[[^\]]*\]\(([^)]+)\)")
 PLACEHOLDER_RE = re.compile(r"(?:placeholder|figure-[^/]+-(?:top|middle|bottom))", re.I)
@@ -293,7 +293,7 @@ def _source_row(
     document_sha = sha256_file(markdown_path)
     repo_paper = PurePosixPath("patra-darpan", "papers", doc_id)
     row: dict[str, Any] = {
-        "schema_version": "iscls.corpus-manifest.v1",
+        "schema_version": "retrieval.corpus-manifest.v1",
         "document_id": f"pd:{doc_id}",
         "source_kind": "patra-darpan",
         "source_doc_id": doc_id,
@@ -435,7 +435,7 @@ def export_documents(
     if apply:
         if not sanchaya_root.exists():
             raise FileNotFoundError(f"Sanchaya root does not exist: {sanchaya_root}")
-        with tempfile.TemporaryDirectory(prefix="iscls-export-", dir=str(sanchaya_root)) as temp_dir:
+        with tempfile.TemporaryDirectory(prefix="retrieval-export-", dir=str(sanchaya_root)) as temp_dir:
             staging_root = Path(temp_dir)
             staged_manifest = staging_root / "patra-darpan" / "catalog" / "corpus-manifest.jsonl"
             _write_jsonl(staged_manifest, manifest_rows)
@@ -467,7 +467,7 @@ def export_documents(
 
 def write_audit(path: Path, result: ExportResult) -> None:
     payload = {
-        "schema_version": "iscls.export-audit.v1",
+        "schema_version": "retrieval.export-audit.v1",
         "generated_at": utc_now(),
         "applied": result.applied,
         "selected": result.selected,
