@@ -1,0 +1,65 @@
+# Retrieval companion project.
+#
+# Run this Compose file separately from Sanchaya-Zoekt. RETRIEVAL_ZOEKT_URL must
+# point at the Zoekt RPC endpoint reachable from this project; no Docker
+# service-name or shared-network assumption is made. The host paths are
+# required so local development can mount the existing Sanchaya checkout
+# instead of cloning another copy.
+#
+# Required host variables:
+#   SANCHAYA_REPO_ROOT       existing Sanchaya checkout
+#   RETRIEVAL_RELEASE_ROOT       generated release directories
+#   RETRIEVAL_QDRANT_DATA_ROOT   persistent Qdrant storage
+#   RETRIEVAL_MODEL_CACHE_ROOT   persistent embedding-model cache
+#   RETRIEVAL_ONTOLOGY_ROOT      repository ontology directory
+#   RETRIEVAL_ZOEKT_URL          Zoekt RPC URL reachable from this project
+#
+# The builder and MCP images/entrypoints are implementation work in the
+# Patra-Darpan branch. Their names are configurable so the same overlay can
+# run local images or pinned production images.
+
+services:
+  qdrant:
+    image: ${RETRIEVAL_QDRANT_IMAGE:-qdrant/qdrant:v1.14.1}
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:${RETRIEVAL_QDRANT_PORT:-6333}:6333"
+    volumes:
+      - ${RETRIEVAL_QDRANT_DATA_ROOT:?Set RETRIEVAL_QDRANT_DATA_ROOT}:/qdrant/storage
+
+  retrieval-mcp:
+    image: ${RETRIEVAL_MCP_IMAGE:-patra-darpan-retrieval-mcp:dev}
+    profiles: [runtime]
+    restart: unless-stopped
+    depends_on:
+      - qdrant
+    environment:
+      RETRIEVAL_RELEASE_ROOT: /var/lib/retrieval/releases
+      RETRIEVAL_ACTIVE_RELEASE: /var/lib/retrieval/releases/active-release.json
+      RETRIEVAL_ONTOLOGY_PATH: /app/ontology/jyotisha-v0.3.json
+      QDRANT_URL: http://qdrant:6333
+      ZOEKT_URL: ${RETRIEVAL_ZOEKT_URL:?Set RETRIEVAL_ZOEKT_URL}
+    volumes:
+      - ${RETRIEVAL_RELEASE_ROOT:?Set RETRIEVAL_RELEASE_ROOT}:/var/lib/retrieval/releases:ro
+      - ${RETRIEVAL_ONTOLOGY_ROOT:?Set RETRIEVAL_ONTOLOGY_ROOT}:/app/ontology:ro
+    ports:
+      - "127.0.0.1:${RETRIEVAL_MCP_PORT:-8787}:8787"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  retrieval-builder:
+    image: ${RETRIEVAL_BUILDER_IMAGE:-patra-darpan-retrieval-builder:dev}
+    profiles: [build]
+    depends_on:
+      - qdrant
+    environment:
+      SANCHAYA_REPO_ROOT: /data/sanchaya
+      RETRIEVAL_RELEASE_ROOT: /var/lib/retrieval/releases
+      RETRIEVAL_ONTOLOGY_PATH: /app/ontology/jyotisha-v0.3.json
+      QDRANT_URL: http://qdrant:6333
+      HF_HOME: /cache/huggingface
+    volumes:
+      - ${SANCHAYA_REPO_ROOT:?Set SANCHAYA_REPO_ROOT}:/data/sanchaya:ro
+      - ${RETRIEVAL_RELEASE_ROOT:?Set RETRIEVAL_RELEASE_ROOT}:/var/lib/retrieval/releases
+      - ${RETRIEVAL_MODEL_CACHE_ROOT:?Set RETRIEVAL_MODEL_CACHE_ROOT}:/cache/huggingface
+      - ${RETRIEVAL_ONTOLOGY_ROOT:?Set RETRIEVAL_ONTOLOGY_ROOT}:/app/ontology:ro
