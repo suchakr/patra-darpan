@@ -32,7 +32,11 @@ def load_jsonl(path: Path) -> list[dict[str, Any]]:
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--chunks", type=Path, default=ROOT / ".local/iscls-bakeoff/chunks.jsonl")
-    parser.add_argument("--queries", type=Path, default=ROOT / "docs/iscls/semantic-embedding-bakeoff-queries.jsonl")
+    parser.add_argument(
+        "--queries",
+        type=Path,
+        default=ROOT / "tests/fixtures/iscls/semantic-embedding-bakeoff-queries.jsonl",
+    )
     parser.add_argument("--split", choices=["all", "dev", "heldout", "probe"], default="all")
     parser.add_argument("--hard-cap-usd", type=float, default=DEFAULT_HARD_CAP_USD)
     parser.add_argument("--stop-usd", type=float, default=DEFAULT_STOP_USD)

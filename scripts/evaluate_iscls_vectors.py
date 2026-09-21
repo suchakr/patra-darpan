@@ -35,7 +35,11 @@ def load_jsonl(path: Path) -> list[dict[str, Any]]:
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--run", type=Path, required=True, help="Vector run.json written by run_iscls_vector_build.py")
-    parser.add_argument("--queries", type=Path, default=ROOT / "docs/iscls/semantic-embedding-bakeoff-queries.jsonl")
+    parser.add_argument(
+        "--queries",
+        type=Path,
+        default=ROOT / "tests/fixtures/iscls/semantic-embedding-bakeoff-queries.jsonl",
+    )
     parser.add_argument("--qdrant-url", default=None)
     parser.add_argument("--output-dir", type=Path, default=ROOT / ".local/iscls-bakeoff/evaluations")
     parser.add_argument("--limit", type=int, default=5)
