@@ -8,6 +8,7 @@ __pycache__/
 .env
 *.json
 !package.json
+!web/package-lock.json
 !tsconfig.json
 !netlify.toml
 !web/assets/data/
