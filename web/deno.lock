@@ -12,7 +12,8 @@
     "packageJson": {
       "dependencies": [
         "npm:@google-cloud/storage@^7.18.0",
-        "npm:dotenv@^17.2.3"
+        "npm:dotenv@^17.2.3",
+        "npm:netlify-cli@^24.11.3"
       ]
     }
   }
