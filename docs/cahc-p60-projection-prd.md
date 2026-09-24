@@ -88,6 +88,7 @@ Patra Darpan should publish a small generated browser-consumable projection for
 The projected records should include:
 
 - `year`
+- `published_on`, an optional additive `YYYY-MM-DD` publication date
 - `category`, populated from Patra Darpan `subject` for the CAHC table display
 - `title`
 - `author`
@@ -114,9 +115,12 @@ filter or group `article` and `news` rows separately.
 The default sort should match the current `P60` reader expectation:
 
 - newest year first
-- then latest Patra Darpan export position first, so newly appended same-year
-  corpus additions appear above older same-year rows even without day-level
-  metadata
+- then exact `published_on` date when available
+- then latest Patra Darpan export position first as the deterministic fallback
+  for same-year rows without day-level metadata
+
+Consumers may ignore `published_on`. The projected row order remains canonical,
+so date-unaware consumers inherit the improved chronology without code changes.
 
 ## URL Policy
 

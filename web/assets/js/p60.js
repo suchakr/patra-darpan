@@ -1,9 +1,10 @@
 window.PATRA_DARPAN_P60 = {
-  "generatedAt": "2026-08-18T10:38:04.480912Z",
-  "rowCount": 83,
+  "generatedAt": "2026-09-24T07:44:23.075341Z",
+  "rowCount": 86,
   "rows": [
     {
       "year": "2026",
+      "published_on": "2026-07-10",
       "category": "Culture",
       "title": "Why Retell a Story Everyone Knows?",
       "author": "R. S. Hariharan",
@@ -14,26 +15,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2026",
-      "category": "General",
-      "title": "The Whispering Halls",
-      "author": "Warija Adiga",
-      "source": "AJPEM",
-      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/ajpem_2026_the_whispering_halls.pdf",
-      "entry_type": "pdf",
-      "content_kind": "article"
-    },
-    {
-      "year": "2026",
-      "category": "Astronomy",
-      "title": "\u0ca7\u0ccd\u0cb0\u0cc1\u0cb5 \u0ca8\u0c95\u0ccd\u0cb7\u0ca4\u0ccd\u0cb0: \u0c95\u0cc7\u0cb5\u0cb2 \u0cad\u0c95\u0ccd\u0ca4\u0cbf\u0caf \u0c95\u0ca5\u0cc6\u0caf\u0ccb \u0c85\u0ca5\u0cb5\u0cbe 5000 \u0cb5\u0cb0\u0ccd\u0cb7\u0c97\u0cb3 \u0cb9\u0cbf\u0c82\u0ca6\u0cbf\u0ca8 \u0c96\u0c97\u0ccb\u0cb3 \u0cb5\u0cbf\u0cb8\u0ccd\u0cae\u0caf\u0cb5\u0ccb?",
-      "author": "R. S. Hariharan",
-      "source": "TechVaidya Global",
-      "url": "https://www.techvaidyaglobal.com/news/dhruva-nakshatra-ancient-indian-astronomy-thuban-star-science",
-      "entry_type": "link",
-      "content_kind": "article"
-    },
-    {
-      "year": "2026",
+      "published_on": "2026-07-05",
       "category": "Culture",
       "title": "The Queen Who Wrote The War: Gang\u0101dev\u012b And Her Madhur\u0101vijayam",
       "author": "R. S. Hariharan",
@@ -44,6 +26,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2026",
+      "published_on": "2026-05-17",
       "category": "Culture",
       "title": "Can You Mock God? This Sanskrit Poet Did - And That's Worship",
       "author": "R. S. Hariharan",
@@ -54,6 +37,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2026",
+      "published_on": "2026-04-26",
       "category": "Astronomy",
       "title": "When Time Was Measured In Sound",
       "author": "R. S. Hariharan",
@@ -64,6 +48,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2026",
+      "published_on": "2026-04-22",
       "category": "Culture",
       "title": "Vivaan, Aarav, Kalu, Chhotu... India's Naming Crisis That Rajasthan Is Trying To Fix",
       "author": "Nishtha Anushree, R. S. Hariharan",
@@ -74,6 +59,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2026",
+      "published_on": "2026-04-19",
       "category": "Culture",
       "title": "Krishna Is Shiva: A Philosophical Secret Hidden in a Sanskrit Poem",
       "author": "R. S. Hariharan",
@@ -84,6 +70,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2026",
+      "published_on": "2026-04-12",
       "category": "Agriculture",
       "title": "How Ancient India Predicted Rains Before The Arrival Of Modern Science",
       "author": "R. S. Hariharan",
@@ -94,6 +81,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2026",
+      "published_on": "2026-03-15",
       "category": "Culture",
       "title": "Did India Lack Historical Consciousness, Or Is It Just That India Understood Time Differently?",
       "author": "R. S. Hariharan",
@@ -104,6 +92,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2026",
+      "published_on": "2026-02-20",
       "category": "Culture",
       "title": "A Forgotten Indian Theory Of How Power Turns Comic Before It Turns Cruel",
       "author": "R. S. Hariharan",
@@ -113,87 +102,41 @@ window.PATRA_DARPAN_P60 = {
       "content_kind": "article"
     },
     {
-      "year": "2025",
-      "category": "Culture",
-      "title": "The Scope of A\u1e63\u1e6d\u0101da\u015bavar\u1e47ana in the Mah\u0101k\u0101vya Mathur\u0101bhyudaya",
-      "author": "R. S. Hariharan",
-      "source": "Karnataka Sanskrit 8.1",
-      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/The_Scope_of_Ashtadashavarnana.pdf",
-      "entry_type": "pdf",
-      "content_kind": "paper"
-    },
-    {
-      "year": "2025",
-      "category": "Philosophy",
-      "title": "Visibility, a Tool to Ethical Project Management",
+      "year": "2026",
+      "published_on": "",
+      "category": "General",
+      "title": "The Whispering Halls",
       "author": "Warija Adiga",
       "source": "AJPEM",
-      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/ajpem_2025_ethical_project.pdf",
+      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/ajpem_2026_the_whispering_halls.pdf",
       "entry_type": "pdf",
       "content_kind": "article"
     },
     {
-      "year": "2025",
-      "category": "Philosophy",
-      "title": "\u015aukan\u0101\u015bopade\u015ba for Project Managers",
-      "author": "Warija Adiga",
-      "source": "AJPEM",
-      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/ajpem_2025_sukanasopdesa.pdf",
-      "entry_type": "pdf",
-      "content_kind": "article"
-    },
-    {
-      "year": "2025",
-      "category": "MindSciences",
-      "title": "Stupidity is not a laughing matter",
-      "author": "Warija Adiga",
-      "source": "AJPEM",
-      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/ajpem_2025_no_laugh.pdf",
-      "entry_type": "pdf",
-      "content_kind": "article"
-    },
-    {
-      "year": "2025",
-      "category": "Culture",
-      "title": "A Comparative Study of the Ka\u1e41savadha Episode in Select N\u0101\u1e6dakas, Camp\u016b-k\u0101vyas, Gadya-k\u0101vyas, and Kha\u1e47\u1e0da-k\u0101vyas",
-      "author": "R. S. Hariharan, Shankar Rajaraman",
-      "source": "QJMS 116.2",
-      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/QJMS_116_2_Kamasvada_compare.pdf",
-      "entry_type": "pdf",
-      "content_kind": "paper"
-    },
-    {
-      "year": "2025",
-      "category": "Culture",
-      "title": "Characterisation of Elapsed Time as Historical Past in Hinduism",
-      "author": "R.N. Iyengar",
-      "source": "QJMS 116.2",
-      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/QJMS_116_2_Hindu_Time.pdf",
-      "entry_type": "pdf",
-      "content_kind": "paper"
-    },
-    {
-      "year": "2025",
+      "year": "2026",
+      "published_on": "",
       "category": "Astronomy",
-      "title": "Before Space Science, There Was Mah\u0101salilam: Rediscovery Of India's Oldest Astronomical Text",
+      "title": "\u0ca7\u0ccd\u0cb0\u0cc1\u0cb5 \u0ca8\u0c95\u0ccd\u0cb7\u0ca4\u0ccd\u0cb0: \u0c95\u0cc7\u0cb5\u0cb2 \u0cad\u0c95\u0ccd\u0ca4\u0cbf\u0caf \u0c95\u0ca5\u0cc6\u0caf\u0ccb \u0c85\u0ca5\u0cb5\u0cbe 5000 \u0cb5\u0cb0\u0ccd\u0cb7\u0c97\u0cb3 \u0cb9\u0cbf\u0c82\u0ca6\u0cbf\u0ca8 \u0c96\u0c97\u0ccb\u0cb3 \u0cb5\u0cbf\u0cb8\u0ccd\u0cae\u0caf\u0cb5\u0ccb?",
       "author": "R. S. Hariharan",
-      "source": "SwarajyaMag",
-      "url": "https://swarajyamag.com/ideas/before-space-science-there-was-mahsalilam-rediscovery-of-indias-oldest-astronomical-text",
+      "source": "TechVaidya Global",
+      "url": "https://www.techvaidyaglobal.com/news/dhruva-nakshatra-ancient-indian-astronomy-thuban-star-science",
       "entry_type": "link",
       "content_kind": "article"
     },
     {
       "year": "2025",
-      "category": "Books",
-      "title": "R\u0101m\u0101nuy\u0101tram: The Modern Ratha Yatra In Classical Sanskrit",
+      "published_on": "2025-12-28",
+      "category": "Astronomy",
+      "title": "Pur\u0101\u1e47ic Dhruva Was Not A Myth: How Ancient India Remembered A Real Pole Star",
       "author": "R. S. Hariharan",
       "source": "SwarajyaMag",
-      "url": "https://swarajyamag.com/books/rmnuytram-the-modern-ratha-yatra-in-classical-sanskrit",
+      "url": "https://swarajyamag.com/ideas/puric-dhruva-was-not-a-myth-how-ancient-india-remembered-a-real-pole-star",
       "entry_type": "link",
       "content_kind": "article"
     },
     {
       "year": "2025",
+      "published_on": "2025-11-30",
       "category": "Arts",
       "title": "How A Sanskrit Play Brings Ancient Theatre Into Today\u2019s Bengaluru",
       "author": "R. S. Hariharan",
@@ -204,16 +147,106 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2025",
-      "category": "Astronomy",
-      "title": "Pur\u0101\u1e47ic Dhruva Was Not A Myth: How Ancient India Remembered A Real Pole Star",
+      "published_on": "2025-11-16",
+      "category": "Books",
+      "title": "R\u0101m\u0101nuy\u0101tram: The Modern Ratha Yatra In Classical Sanskrit",
       "author": "R. S. Hariharan",
       "source": "SwarajyaMag",
-      "url": "https://swarajyamag.com/ideas/puric-dhruva-was-not-a-myth-how-ancient-india-remembered-a-real-pole-star",
+      "url": "https://swarajyamag.com/books/rmnuytram-the-modern-ratha-yatra-in-classical-sanskrit",
+      "entry_type": "link",
+      "content_kind": "article"
+    },
+    {
+      "year": "2025",
+      "published_on": "2025-11-02",
+      "category": "Astronomy",
+      "title": "Before Space Science, There Was Mah\u0101salilam: Rediscovery Of India's Oldest Astronomical Text",
+      "author": "R. S. Hariharan",
+      "source": "SwarajyaMag",
+      "url": "https://swarajyamag.com/ideas/before-space-science-there-was-mahsalilam-rediscovery-of-indias-oldest-astronomical-text",
+      "entry_type": "link",
+      "content_kind": "article"
+    },
+    {
+      "year": "2025",
+      "published_on": "",
+      "category": "Culture",
+      "title": "The Scope of A\u1e63\u1e6d\u0101da\u015bavar\u1e47ana in the Mah\u0101k\u0101vya Mathur\u0101bhyudaya",
+      "author": "R. S. Hariharan",
+      "source": "Karnataka Sanskrit 8.1",
+      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/The_Scope_of_Ashtadashavarnana.pdf",
+      "entry_type": "pdf",
+      "content_kind": "paper"
+    },
+    {
+      "year": "2025",
+      "published_on": "",
+      "category": "Philosophy",
+      "title": "Visibility, a Tool to Ethical Project Management",
+      "author": "Warija Adiga",
+      "source": "AJPEM",
+      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/ajpem_2025_ethical_project.pdf",
+      "entry_type": "pdf",
+      "content_kind": "article"
+    },
+    {
+      "year": "2025",
+      "published_on": "",
+      "category": "Philosophy",
+      "title": "\u015aukan\u0101sopade\u015ba for Project Managers",
+      "author": "Warija Adiga",
+      "source": "AJPEM",
+      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/ajpem_2025_sukanasopdesa.pdf",
+      "entry_type": "pdf",
+      "content_kind": "article"
+    },
+    {
+      "year": "2025",
+      "published_on": "",
+      "category": "MindSciences",
+      "title": "Stupidity is not a laughing matter",
+      "author": "Warija Adiga",
+      "source": "AJPEM",
+      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/ajpem_2025_no_laugh.pdf",
+      "entry_type": "pdf",
+      "content_kind": "article"
+    },
+    {
+      "year": "2025",
+      "published_on": "",
+      "category": "Culture",
+      "title": "A Comparative Study of the Ka\u1e41savadha Episode in Select N\u0101\u1e6dakas, Camp\u016b-k\u0101vyas, Gadya-k\u0101vyas, and Kha\u1e47\u1e0da-k\u0101vyas",
+      "author": "R. S. Hariharan, Shankar Rajaraman",
+      "source": "QJMS 116.2",
+      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/QJMS_116_2_Kamasvada_compare.pdf",
+      "entry_type": "pdf",
+      "content_kind": "paper"
+    },
+    {
+      "year": "2025",
+      "published_on": "",
+      "category": "Culture",
+      "title": "Characterisation of Elapsed Time as Historical Past in Hinduism",
+      "author": "R.N. Iyengar",
+      "source": "QJMS 116.2",
+      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/QJMS_116_2_Hindu_Time.pdf",
+      "entry_type": "pdf",
+      "content_kind": "paper"
+    },
+    {
+      "year": "2025",
+      "published_on": "",
+      "category": "Math",
+      "title": "\u0938\u0941\u091c\u092f\u092d\u093e\u0930\u0924\u092e\u0928\u0903 (Sujayabh\u0101ratamana\u1e25)",
+      "author": "Warija Adiga",
+      "source": "Sa\u1e43sk\u1e5bta-Bhavitavyam 70.8",
+      "url": "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/bhavitavyam_2025_sujayabharatamanah.pdf",
       "entry_type": "link",
       "content_kind": "article"
     },
     {
       "year": "2024",
+      "published_on": "",
       "category": "Culture",
       "title": "A Comparative Analysis of the Ka\u1e41savadha Episode Across Various Pur\u0101\u1e47ic Texts",
       "author": "R. S. Hariharan, Shankar Rajaraman",
@@ -224,6 +257,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2024",
+      "published_on": "",
       "category": "Culture",
       "title": "A Comparative Analysis of the Ka\u1e41savadha Episode in Select Sanskrit Mah\u0101k\u0101vyas",
       "author": "R. S. Hariharan, Shankar Rajaraman",
@@ -233,7 +267,30 @@ window.PATRA_DARPAN_P60 = {
       "content_kind": "paper"
     },
     {
+      "year": "2024",
+      "published_on": "",
+      "category": "Culture",
+      "title": "Dysfunctional Meetings: Exploring ancient Sanskrit satires on meeting conundrums",
+      "author": "Warija Adiga",
+      "source": "AJPEM",
+      "url": "https://medium.com/@warija/dysfunctional-meetings-280a267e3208",
+      "entry_type": "link",
+      "content_kind": "article"
+    },
+    {
+      "year": "2024",
+      "published_on": "",
+      "category": "Culture",
+      "title": "Understanding Ethical Communication through the prism of Ancient Sanskrit Literature",
+      "author": "Warija Adiga",
+      "source": "AJPEM",
+      "url": "https://osf.io/gy7qs/files/qnf5u",
+      "entry_type": "link",
+      "content_kind": "article"
+    },
+    {
       "year": "2023",
+      "published_on": "",
       "category": "Astronomy",
       "title": "Equinoctial full moon of the Brahm\u0101\u1e47\u1e0da Pur\u0101\u1e47a and the nak\u1e63atra solar zodiac starting from summer...",
       "author": "R. N. Iyengar, Sunder Chakravarty",
@@ -244,6 +301,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2023",
+      "published_on": "",
       "category": "Arts",
       "title": "V\u0101stuvidy\u0101 of Garga; Review of the Manuscript V\u1e5bddhagarga Sa\u1e41hit\u0101 from Nepal",
       "author": "R. N. Iyengar, Warija Adiga",
@@ -254,6 +312,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2022",
+      "published_on": "",
       "category": "MindSciences",
       "title": "The Sound of Silence",
       "author": "Warija Adiga",
@@ -264,6 +323,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2021",
+      "published_on": "",
       "category": "Astronomy",
       "title": "Transit of sun through the seasonal naksatra cycle in the Vrddha-G\u0101rg\u012bya Jyotisa",
       "author": "R. N. Iyengar and Sunder Chakravarty",
@@ -274,6 +334,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2021",
+      "published_on": "",
       "category": "Culture",
       "title": "Indian Heritage of Gurukula System Ethics, Student-Teacher Relationship",
       "author": "R.N. Iyengar",
@@ -284,6 +345,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2020",
+      "published_on": "",
       "category": "Linguistics",
       "title": "Ak\u1e63ara the Basic Unit of Time Measure in Ancient India",
       "author": "R. N. Iyengar, H. S. Sudarshan, Anand Viswanathan",
@@ -294,6 +356,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2019",
+      "published_on": "",
       "category": "Astronomy",
       "title": "V\u1e5bddhag\u0101rg\u012bya Jyoti\u1e63a (Part 3): Tithi-karma-gu\u1e47a",
       "author": "R.N. Iyengar, H.S. Sudarshan, Anand Viswanathan",
@@ -304,6 +367,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2019",
+      "published_on": "",
       "category": "Astronomy",
       "title": "V\u1e5bddhag\u0101rg\u012bya Jyoti\u1e63a (Part 2): Nak\u1e63atra-karma-gu\u1e47a",
       "author": "R.N. Iyengar, H.S. Sudarshan, Anand Viswanathan",
@@ -314,6 +378,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2019",
+      "published_on": "",
       "category": "Astronomy",
       "title": "V\u1e5bddhag\u0101rg\u012bya Jyoti\u1e63a (Part 1): Introduction",
       "author": "R.N. Iyengar, H.S. Sudarshan, Anand Viswanathan",
@@ -324,6 +389,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2018",
+      "published_on": "",
       "category": "Music",
       "title": "Concept of Sruti, Svara and Raga of Classical Music in Sanskrit Texts",
       "author": "RN Iyengar",
@@ -334,6 +400,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2018",
+      "published_on": "",
       "category": "MindSciences",
       "title": "Well-being and Self-transformation in Indian Psychology",
       "author": "Sangeetha Menon, Shankar Rajaraman",
@@ -344,6 +411,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2018",
+      "published_on": "",
       "category": "Other",
       "title": "Narada Silpasastra Sanskrit Text on Archictectural Civil Engineering - Preface and TOC",
       "author": "R.N. Iyengar, K.S. Kannan, S.Y. Wakankar",
@@ -354,6 +422,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2018",
+      "published_on": "",
       "category": "Astronomy",
       "title": "Archaeo astronomy and Ancient Indian Chronology",
       "author": "R.N. Iyengar",
@@ -364,6 +433,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2017",
+      "published_on": "",
       "category": "Astronomy",
       "title": "The Units of Time in Ancient and Medieval India",
       "author": "Takao Hayashi",
@@ -374,6 +444,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2017",
+      "published_on": "",
       "category": "Math",
       "title": "Concept of Probability in Sanskrit Texts",
       "author": "R.N. Iyengar",
@@ -384,6 +455,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2016",
+      "published_on": "",
       "category": "Astronomy",
       "title": "Comets and meteorites in the \u1e5agveda",
       "author": "R.N. Iyengar",
@@ -394,6 +466,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2016",
+      "published_on": "",
       "category": "Astronomy",
       "title": "Ancient Indian Astronomy in Vedic Texts",
       "author": "R.N. Iyengar",
@@ -404,6 +477,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2015",
+      "published_on": "",
       "category": "Other",
       "title": "Location of the Vedic Iria and its Archaeo-geography",
       "author": "R.N. Iyengar",
@@ -414,6 +488,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2015",
+      "published_on": "",
       "category": "Other",
       "title": "Comparison of Seismic Qualification Challenges",
       "author": "R.N. Iyengar",
@@ -424,6 +499,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2014",
+      "published_on": "",
       "category": "General",
       "title": "Book Review: R N Iyengar - Parasaratantra: Ancient Sanskrit Text on Astronomy and Natural Sciences",
       "author": "",
@@ -434,6 +510,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2014",
+      "published_on": "",
       "category": "Astronomy",
       "title": "Parasara's Six Season Solar Zodiac and Heliacal Visibility of Star Agastya in 1350-1130 BC",
       "author": "R N Iyengar",
@@ -444,6 +521,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2014",
+      "published_on": "",
       "category": "Other",
       "title": "Parasara Tantra an Ancient Text on Natural Sciences",
       "author": "R N. Iyengar",
@@ -454,6 +532,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2013",
+      "published_on": "",
       "category": "Linguistics",
       "title": "Sound Play and the Madhur\u0101 Vijaya of Ga\u1e45g\u0101dev\u012b",
       "author": "Shankar Rajaraman, Venetia Kotamraju",
@@ -464,6 +543,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2012",
+      "published_on": "",
       "category": "Astronomy",
       "title": "Historical Notes: Archaeo-Astronomical Significance of the Vedic Darsapaurnamasa Altar",
       "author": "R N Iyengar and V H Satheeshkumar",
@@ -474,6 +554,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2011",
+      "published_on": "",
       "category": "Astronomy",
       "title": "Dhruva the Ancient Indian Pole Star: Fixity Rotation and Movement",
       "author": "R N Iyengar",
@@ -484,6 +565,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2010",
+      "published_on": "",
       "category": "Astronomy",
       "title": "Comets and Meteoritic Showers in the Rigveda and their significance",
       "author": "R.N. Iyengar",
@@ -494,6 +576,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2009",
+      "published_on": "",
       "category": "Astronomy",
       "title": "Connections Between The Vedanga Jyotisa And Other Vedic Literature",
       "author": "R N Iyengar",
@@ -504,6 +587,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2009",
+      "published_on": "",
       "category": "Other",
       "title": "Monsoon rainfall cycles as depicted in ancient Sanskrit texts",
       "author": "R.N. Iyengar",
@@ -514,6 +598,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2008",
+      "published_on": "",
       "category": "Astronomy",
       "title": "Archaic Astronomy of Parauara and Vrddha Garga",
       "author": "R N Iyengar",
@@ -524,6 +609,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2007",
+      "published_on": "",
       "category": "Other",
       "title": "Geographical location of Vedic Iri\u1e47a in Southern Rajasthan",
       "author": "R.N. Iyengar, B.P. Radhakrishna",
@@ -534,6 +620,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2007",
+      "published_on": "",
       "category": "Other",
       "title": "Estimation of seismic spectral acceleration in Peninsular India",
       "author": "S.T.G. Raghu Kanth, R.N. Iyengar",
@@ -544,6 +631,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2007",
+      "published_on": "",
       "category": "Astronomy",
       "title": "A Profile of Indian Astronomy before the Siddh\u0101ntic Period",
       "author": "R.N. Iyengar",
@@ -554,6 +642,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2006",
+      "published_on": "",
       "category": "Astronomy",
       "title": "Historical Notes: Eclipse Period 3339 in Rigveda in support of R N Iyrengar\u2019s Thesis",
       "author": "K D Abhyankar",
@@ -564,6 +653,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2006",
+      "published_on": "",
       "category": "Astronomy",
       "title": "Some Celestial Observations associated with Krsna\u2013lore",
       "author": "R N Iyengar",
@@ -574,6 +664,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2006",
+      "published_on": "",
       "category": "Other",
       "title": "Strong Ground Motion Estimation During the Kutch,India Earthquake",
       "author": "S.T.G. Raghu Kanth, R.N. Iyengar",
@@ -584,6 +675,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2006",
+      "published_on": "",
       "category": "Other",
       "title": "Seismic hazard estimation for Mumbai city",
       "author": "S.T.G. Raghu Kanth, R.N. Iyengar",
@@ -594,6 +686,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2006",
+      "published_on": "",
       "category": "Astronomy",
       "title": "On some comet observations in ancient India",
       "author": "R.N. Iyengar",
@@ -604,6 +697,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2006",
+      "published_on": "",
       "category": "Other",
       "title": "Forecasting of seasonal monsoon rainfall at subdivisional level",
       "author": "R.N. Iyengar, S.T.G. Raghu Kanth",
@@ -614,6 +708,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2005",
+      "published_on": "",
       "category": "Astronomy",
       "title": "Eclipse Period Number 3339 in the \u1e5agveda",
       "author": "RN Iyengar",
@@ -624,6 +719,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2005",
+      "published_on": "",
       "category": "Other",
       "title": "Vedic Irinn a and the Rann of kutch",
       "author": "R.N. Iyengar, B.P.Radhakrishna, S.S.Mishra",
@@ -634,6 +730,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2005",
+      "published_on": "",
       "category": "Other",
       "title": "Intrinsic mode functions and a strategy for forecasting Indian monsoon rainfall",
       "author": "R.N. Iyengar, S.T.G. Raghu Kanth",
@@ -644,6 +741,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2005",
+      "published_on": "",
       "category": "Other",
       "title": "Interview with Prof RN Iyengar",
       "author": "B.K. Raghu Prasad, C.S. Manohar, D.Roy",
@@ -654,6 +752,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2005",
+      "published_on": "",
       "category": "Other",
       "title": "Evolution of the Western Coastline of India and the Probable Location of Dwaraka of Krishna",
       "author": "R.N. Iyengar, B.P. Radhakrishna",
@@ -664,6 +763,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2004",
+      "published_on": "",
       "category": "Other",
       "title": "Profile of A Natural Disaster in Ancient Sanskrit Literature",
       "author": "R N Iyengar",
@@ -674,6 +774,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2004",
+      "published_on": "",
       "category": "Other",
       "title": "Microzonation of earthquake hazard in Greater Delhi area",
       "author": "R.N. Iyengar, S. Ghosh",
@@ -684,6 +785,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2004",
+      "published_on": "",
       "category": "Astronomy",
       "title": "Description of rainfall variability in B\u1e5bhat Sa\u1e43hit\u0101 of Var\u0101hamihira",
       "author": "R.N. Iyengar",
@@ -694,6 +796,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2003",
+      "published_on": "",
       "category": "Astronomy",
       "title": "Internal Consistency of Eclipses and Planetary Positions in Mahabharata",
       "author": "R N Iyengar",
@@ -704,6 +807,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2001",
+      "published_on": "",
       "category": "Other",
       "title": "Earthquake source model using strong motion displacement as response of finite elastic media",
       "author": "R.N. Iyengar, Shailesh KR Agrawal",
@@ -714,6 +818,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "2000",
+      "published_on": "",
       "category": "Other",
       "title": "Seismic status of Delhi megacity",
       "author": "R.N. Iyengar",
@@ -724,6 +829,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "1999",
+      "published_on": "",
       "category": "Other",
       "title": "Earthquake History of India in Medieval Times",
       "author": "R N Iyengar et al.",
@@ -734,6 +840,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "1999",
+      "published_on": "",
       "category": "Other",
       "title": "Earthquakes in ancient India",
       "author": "R.N. Iyengar",
@@ -744,6 +851,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "1996",
+      "published_on": "",
       "category": "Other",
       "title": "Some earthquakes of Kashmir from historical sources",
       "author": "R.N. Iyengar, Devendra Sharma",
@@ -754,6 +862,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "1993",
+      "published_on": "",
       "category": "Math",
       "title": "Dynamic response of a beam on elastic foundation of finite depth under a moving force",
       "author": "O.R. Jaiswal ,    R.N. Iyengar",
@@ -764,6 +873,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "1991",
+      "published_on": "",
       "category": "Math",
       "title": "Rocking response of rectangular rigid blocks under random noise base excitations",
       "author": "R.N. Iyengar",
@@ -774,6 +884,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "1991",
+      "published_on": "",
       "category": "Other",
       "title": "Application of principal component analysis to understand variability of rainfall",
       "author": "R.N. Iyengar",
@@ -784,6 +895,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "1986",
+      "published_on": "",
       "category": "Math",
       "title": "A nonlinear system under combined periodic and random excitation",
       "author": "R.N. Iyengar",
@@ -794,6 +906,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "1980",
+      "published_on": "",
       "category": "Other",
       "title": "Cluster analysis of rainfall stations of the Indian peninsula",
       "author": "Sulochana Gadgil, R.N. Iyengar",
@@ -804,6 +917,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "1975",
+      "published_on": "",
       "category": "Math",
       "title": "Random vibration of a second order non linear elastic system",
       "author": "R.N. Iyengar",
@@ -814,6 +928,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "1971",
+      "published_on": "",
       "category": "Other",
       "title": "Effect of self weight and vertical acceleration on the behaviour of tall structures during earthquake",
       "author": "R.N. Iyengar, M. Shinozuka",
@@ -824,6 +939,7 @@ window.PATRA_DARPAN_P60 = {
     },
     {
       "year": "1955",
+      "published_on": "",
       "category": "Astronomy",
       "title": "Report of the Calendar Reform Committee",
       "author": "M. N. Saha, Lahiri",

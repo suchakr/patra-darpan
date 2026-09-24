@@ -32,6 +32,7 @@ This contract is the working rule for phase 1.
 | `url` | primary asset `remote_url` | must match legacy by default | This is the primary source URL, not the mirror URL. |
 | `size_in_kb` | raw source metadata for PDFs; compatibility value for links | must match legacy by default | Keep as a projection field, not a canonical truth field. |
 | `year` | canonical year (`IJHS` derived from `journal`; curated from root input) | may intentionally improve | Correctness is preferred over reproducing legacy blanks. |
+| `published_on` | optional curated root metadata | additive | Use an authoritative `YYYY-MM-DD` date; leave blank rather than infer a day. |
 | `ju_url` | mirror asset `remote_url` | must match legacy by default | This remains a compatibility field backed by mirror registry data. |
 | `cahc_authored` | registry-derived label | must match legacy by default | This is a curated label, not a root bibliographic fact. |
 | `entry_type` | `documents.entry_type` | must match legacy by default | Current values are `pdf` and `link`. |

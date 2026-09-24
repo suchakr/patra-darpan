@@ -302,6 +302,7 @@ def main() -> None:
                 "category": clean_num(row.get("category", "Uncategorized")),
                 "subject": clean_num(row.get("subject", "General")),
                 "year": clean_num(row.get("year", "")),
+                "published_on": clean_num(row.get("published_on", "")),
                 "remoteUrl": row.get("url", ""),
                 "juUrl": clean_num(row.get("ju_url", "")),
                 "size": float_from_text(row.get("size_in_kb", 0)),

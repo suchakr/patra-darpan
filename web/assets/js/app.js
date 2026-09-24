@@ -867,18 +867,39 @@ function applyFilters() {
         return match ? parseInt(match[1]) : 0;
     };
 
+    const getPublishedOnVal = (paper) => {
+        const value = String(paper.published_on || '');
+        return /^\d{4}-\d{2}-\d{2}$/.test(value)
+            ? Number(value.replaceAll('-', ''))
+            : 0;
+    };
+
+    const comparePublishedOn = (a, b, newestFirst) => {
+        const dateA = getPublishedOnVal(a);
+        const dateB = getPublishedOnVal(b);
+        if (dateA && dateB && dateA !== dateB) {
+            return newestFirst ? dateB - dateA : dateA - dateB;
+        }
+        if (Boolean(dateA) !== Boolean(dateB)) return dateA ? -1 : 1;
+        return 0;
+    };
+
     State.filtered.sort((a, b) => {
         if (sortMode === 'newest') {
             const yA = parseInt(a.year) || 0;
             const yB = parseInt(b.year) || 0;
             if (yA !== yB) return yB - yA; // Primary: Year Desc
-            return getIssueVal(b.journal) - getIssueVal(a.journal); // Secondary: Issue Desc
+            const dateOrder = comparePublishedOn(a, b, true);
+            if (dateOrder !== 0) return dateOrder;
+            return getIssueVal(b.journal) - getIssueVal(a.journal);
         }
         if (sortMode === 'oldest') {
             const yA = parseInt(a.year) || 0;
             const yB = parseInt(b.year) || 0;
             if (yA !== yB) return yA - yB; // Primary: Year Asc
-            return getIssueVal(a.journal) - getIssueVal(b.journal); // Secondary: Issue Asc
+            const dateOrder = comparePublishedOn(a, b, false);
+            if (dateOrder !== 0) return dateOrder;
+            return getIssueVal(a.journal) - getIssueVal(b.journal);
         }
         if (sortMode === 'title') return a.title.localeCompare(b.title);
         if (sortMode === 'size') return (a.size || 0) - (b.size || 0); // Smallest first

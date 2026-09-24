@@ -28,6 +28,8 @@ def validate_legacy_index(
 
     exported_header = list(exported_rows[0].keys()) if exported_rows else []
     legacy_header = list(legacy_rows[0].keys()) if legacy_rows else []
+    preserves_legacy_header = exported_header[: len(legacy_header)] == legacy_header
+    additive_header = exported_header[len(legacy_header) :]
 
     exported_entry_types = Counter(row.get("entry_type", "") for row in exported_rows)
     legacy_entry_types = Counter(row.get("entry_type", "") for row in legacy_rows)
@@ -61,6 +63,8 @@ def validate_legacy_index(
         "",
         "## Headers",
         f"- exported header matches legacy: {exported_header == legacy_header}",
+        f"- exported header preserves legacy prefix: {preserves_legacy_header}",
+        f"- additive exported fields: {additive_header}",
         "",
         "## Entry Type Counts",
         f"- exported: {dict(exported_entry_types)}",

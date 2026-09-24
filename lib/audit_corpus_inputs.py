@@ -7,6 +7,7 @@ import re
 import sqlite3
 from collections import Counter, defaultdict
 from dataclasses import dataclass
+from datetime import date
 from pathlib import Path
 from typing import Any
 from urllib.parse import quote, urlparse
@@ -186,8 +187,12 @@ def _is_expected_authorless_procedural(doc: dict[str, Any]) -> bool:
 def check_root_inventory(ctx: AuditContext) -> dict[str, Any]:
     expected_headers = {
         "ijhs.tsv": ["journal", "paper", "url", "size_in_kb", "author"],
-        "curated-pdfs.tsv": ["journal", "paper", "url", "size_in_kb", "year", "author"],
-        "curated-links.tsv": ["journal", "paper", "url", "year", "author"],
+        "curated-pdfs.tsv": [
+            "journal", "paper", "url", "size_in_kb", "year", "author", "published_on"
+        ],
+        "curated-links.tsv": [
+            "journal", "paper", "url", "year", "author", "published_on"
+        ],
         "cahc-pdf-mirrors.tsv": ["source_url", "mirror_url"],
     }
     issues: list[dict[str, Any]] = []
@@ -249,10 +254,12 @@ def check_root_input_validation(ctx: AuditContext) -> dict[str, Any]:
         "curated_pdfs_missing_required": 0,
         "curated_pdfs_non_pdf_url": 0,
         "curated_pdfs_non_numeric_year": 0,
+        "curated_pdfs_invalid_published_on": 0,
         "curated_pdfs_blank_size_in_kb": 0,
         "curated_pdfs_unmatched_local_filename": 0,
         "curated_links_missing_required": 0,
         "curated_links_non_numeric_year": 0,
+        "curated_links_invalid_published_on": 0,
         "mirror_missing_required": 0,
         "mirror_non_pdf_url": 0,
         "mirror_same_source_and_target": 0,
@@ -377,6 +384,7 @@ def check_root_input_validation(ctx: AuditContext) -> dict[str, Any]:
         url = (row.get("url") or "").strip()
         size_in_kb = (row.get("size_in_kb") or "").strip()
         year = (row.get("year") or "").strip()
+        published_on = (row.get("published_on") or "").strip()
 
         missing_fields = [
             field
@@ -426,6 +434,26 @@ def check_root_input_validation(ctx: AuditContext) -> dict[str, Any]:
                 )
             )
 
+        if published_on:
+            try:
+                parsed_date = date.fromisoformat(published_on)
+                normalized_year = int(float(year))
+                valid_date = parsed_date.isoformat() == published_on and parsed_date.year == normalized_year
+            except (TypeError, ValueError):
+                valid_date = False
+            if not valid_date:
+                summary["curated_pdfs_invalid_published_on"] += 1
+                issues.append(
+                    _issue(
+                        "error",
+                        "Curated PDF published_on must be YYYY-MM-DD and match year",
+                        row_number=row_number,
+                        published_on=published_on,
+                        year=year,
+                        paper=paper,
+                    )
+                )
+
         if url:
             filename = Path(urlparse(url).path).name
             if filename and filename not in other_names:
@@ -445,6 +473,7 @@ def check_root_input_validation(ctx: AuditContext) -> dict[str, Any]:
         paper = (row.get("paper") or "").strip()
         url = (row.get("url") or "").strip()
         year = (row.get("year") or "").strip()
+        published_on = (row.get("published_on") or "").strip()
 
         missing_fields = [
             field
@@ -479,6 +508,26 @@ def check_root_input_validation(ctx: AuditContext) -> dict[str, Any]:
                     paper=paper,
                 )
             )
+
+        if published_on:
+            try:
+                parsed_date = date.fromisoformat(published_on)
+                normalized_year = int(float(year))
+                valid_date = parsed_date.isoformat() == published_on and parsed_date.year == normalized_year
+            except (TypeError, ValueError):
+                valid_date = False
+            if not valid_date:
+                summary["curated_links_invalid_published_on"] += 1
+                issues.append(
+                    _issue(
+                        "error",
+                        "Curated link published_on must be YYYY-MM-DD and match year",
+                        row_number=row_number,
+                        published_on=published_on,
+                        year=year,
+                        paper=paper,
+                    )
+                )
 
     seen_mirror_pairs: set[tuple[str, str]] = set()
     for row_number, row in enumerate(ctx.mirror_rows, start=1):

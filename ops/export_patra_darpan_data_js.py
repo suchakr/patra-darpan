@@ -37,6 +37,7 @@ ARTICLE_JOURNALS = {
     "AJPEM",
     "APJEM",
     "Asian Journal of Professional Ethics and Management",
+    "Saṃskṛta-Bhavitavyam 70.8",
     "The Atharva Forum",
 }
 NEWS_TITLE_PATTERNS = [
@@ -147,7 +148,12 @@ def p60_sort_key(row):
         year = int(float(row.get("year") or 0))
     except (TypeError, ValueError):
         year = 0
-    return (-year, -int(row.get("_source_index", 0)))
+    published_on = str(row.get("published_on") or "")
+    try:
+        published_value = int(published_on.replace("-", ""))
+    except ValueError:
+        published_value = 0
+    return (-year, -published_value, -int(row.get("_source_index", 0)))
 
 def build_p60_projection(papers):
     rows = []
@@ -162,6 +168,7 @@ def build_p60_projection(papers):
         rows.append(
             {
                 "year": paper.get("year", ""),
+                "published_on": paper.get("published_on", ""),
                 "category": paper.get("subject", "") or "General",
                 "title": paper.get("title", ""),
                 "author": paper.get("author", ""),
@@ -226,6 +233,7 @@ def main():
             "category": clean_num(row.get("category", "Uncategorized")),
             "subject": clean_num(row.get("subject", "General")),
             "year": clean_num(row.get("year", "")),
+            "published_on": clean_num(row.get("published_on", "")),
             "remoteUrl": row.get("url", ""),
             "juUrl": clean_num(row.get("ju_url", "")),
             "size": row.get("size_in_kb", 0),
