@@ -3,6 +3,7 @@ node_modules/
 decoded-corpus/
 *.bak
 *.tmp
+*.swp
 __pycache__/
 .env
 *.json
