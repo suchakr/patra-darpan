@@ -45,13 +45,30 @@ def main() -> int:
     mentions = service.entities.list_mentions(entity_id, limit=args.limit)
     first_chunk = next(iter(service.passages.by_id), None)
     passage = service.passages.fetch(chunk_id=first_chunk, limit=1) if first_chunk else {"passages": []}
+    batch = service.fetch_passages(
+        [{"chunk_id": first_chunk}, {"chunk_id": "missing-chunk"}]
+    ) if first_chunk else {"results": []}
+    first_document = next(iter(service.passages.by_document), None)
+    metadata = service.get_document_metadata(first_document) if first_document else None
+    author_works = service.get_author_works("R. N. Iyengar", limit=args.limit)
+    corpus_info = service.get_corpus_info()
 
     result: dict[str, object] = {
         "release_id": release.release_id,
         "corpus_revision": release.corpus_revision,
+        "catalog_revision": release.catalog_revision,
+        "catalog_backend": service.catalog.backend,
+        "catalog_document_count": corpus_info["document_count"],
+        "entity_index": corpus_info["entity_index"],
         "entity_id": entity_id,
         "mention_total": mentions["total"],
         "passage_fetch": len(passage["passages"]),
+        "batch_passage_fetch": {
+            "requested": batch.get("requested_count", 0),
+            "successful": sum(1 for row in batch.get("results", []) if row.get("passages")),
+        },
+        "metadata_fetch": bool(metadata),
+        "author_works": len(author_works.get("results", [])),
     }
     if args.skip_lexical:
         result["lexical"] = "skipped"

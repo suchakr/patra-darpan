@@ -14,11 +14,13 @@ Statuses:
 
 ## Accepted decisions
 
-### D1 — One canonical snapshot, three projections
+### D1 — One content snapshot, three projections, one release catalog
 
-**Decision:** Sanchaya is the reviewed corpus snapshot. Zoekt, vector, and
+**Decision:** Sanchaya is the reviewed content snapshot. Zoekt, vector, and
 entity/registry indexes are independent rebuildable projections of the same
-Sanchaya commit.
+Sanchaya commit. A retrieval release also contains a composite metadata
+catalog: Patra Darpan SQLite supplies `pd:*` paper rows and Sanchaya supplies
+`sanchaya:*` text rows.
 
 **Reason:** This preserves the existing Sanchaya lexical path while giving the
 other indexes a common identity and provenance join.
@@ -70,7 +72,7 @@ not a reason to discard the source document.
 
 ### D7 — Stable namespaced identities
 
-**Decision:** Use stable namespaced document IDs (`sc:` and `pd:`), stable
+**Decision:** Use stable namespaced document IDs (`sanchaya:` and `pd:`), stable
 chunk IDs, content hashes, and a recorded Sanchaya commit. A directory or
 category move does not silently create a new document.
 
@@ -97,14 +99,18 @@ repository-owned snapshot is `ontology/jyotisha-v0.3.json`; earlier snapshots
 remain reference material. An empty registry is still expected before the first
 extraction run.
 
-### D10 — Four read-only MCP tools
+### D10 — Read-only MCP tools with metadata-first shortcuts
 
-**Decision:** The initial MCP surface is `lookup_entity`, `search_corpus`,
-`fetch_passage`, and `list_entity_mentions`.
+**Decision:** The MCP surface includes entity and passage retrieval
+(`lookup_entity`, `list_entity_mentions`, `search_corpus`, `fetch_passage`,
+and `fetch_passages`) plus bounded catalog operations
+(`get_document_metadata`, `get_documents_metadata`, `search_documents`,
+`get_author_works`, and `get_corpus_info`).
 
-**Reason:** Together they cover known terms, conceptual questions, entity
-lookup, cross-document browsing, and evidence retrieval. They are stateless;
-conversation state belongs to ChatGPT/Codex.
+**Reason:** Metadata questions such as author bibliographies should be answered
+from the catalog in one call. Search follow-ups should use stable chunk or
+document references, and several evidence passages should be fetched in one
+batch. All tools remain stateless; conversation state belongs to ChatGPT/Codex.
 
 ### D11 — MCP is the online policy boundary
 
@@ -145,9 +151,10 @@ registry rebuilds. An extraction window can contain many mention rows.
 ### D15 — Staged vector coverage
 
 **Decision:** Zoekt may index all eligible Sanchaya content from the start. The
-pilot vector projection covers the 120 Patra Darpan papers plus a selected
-Jyotisha Sanchaya slice. Full Sanchaya vector coverage follows a measured
-Devanagari/IAST quality, cost, size, and latency review.
+initial vector projection covered the 120 Patra Darpan papers plus a selected
+Jyotisha Sanchaya slice. D23 now defines the repeatable default as all
+`Jyotisham` text plus fixed anchors; full Sanchaya vector coverage still
+requires a measured Devanagari/IAST quality, cost, size, and latency review.
 
 **Reason:** Vector build cost and semantic quality depend on token volume and
 model support, not file count. Staged coverage gives the demo enough breadth
@@ -207,17 +214,58 @@ contracts, Compose services, environment variables, and new artifact schemas.
 part of the long-lived retrieval platform. Existing `iscls.*` bakeoff records
 remain readable as historical artifacts; new releases use `retrieval.*`.
 
+### D21 — TLS terminates at the gateway
+
+**Decision:** Keep the MCP application on private HTTP inside Docker. Terminate
+HTTPS at Caddy: the local profile uses Caddy's internal CA, while production
+uses the existing Sanchaya-Zoekt Caddy certificate and private Docker network.
+Do not publish the MCP or Qdrant ports in production.
+
+**Reason:** Certificate renewal, authentication, and rate limiting belong at
+the gateway. The MCP image stays identical between local and production, and
+the external contract is a normal HTTPS Streamable HTTP endpoint.
+
+### D22 — Complete metadata with release coverage flag
+
+**Decision:** Materialize every canonical Patra Darpan metadata row in the
+release catalog. Add `indexed_in_release` to each document row; it is true
+when the current release has a content projection for that document and false
+when the row is metadata-only. Metadata tools return the complete catalog by
+default and accept the flag as an optional filter.
+
+**Reason:** Bibliographic questions should not be limited to the current
+120-paper content slice, while passage/vector/entity retrieval must still be
+honest about what has been built. The flag is release coverage, not a claim
+that lexical, vector, and entity indexes have identical coverage.
+
+### D23 — Jyotisham is a reproducible vector scope
+
+**Decision:** The default retrieval builder includes all UTF-8 text under
+`Sanchaya/Jyotisham` plus the six fixed Jyotisha anchor texts. It builds that
+scope through the same manifest, chunk, E5/Qdrant, entity, and release steps
+in development and production. The MCP service never embeds during a restart.
+
+**Reason:** Jyotisham coverage should not depend on a manually selected
+one-off sample, while a separate one-shot indexer preserves fast, predictable
+MCP startup and persistent Qdrant reuse.
+
 ## Provisional decisions
 
-### P1 — Physical catalog and registry format
+### P1 — Composite release catalog
 
-**Decision:** Use JSONL or a lightweight database for the pilot as convenient;
-keep the logical contracts independent of the choice.
+**Decision:** Patra Darpan's canonical SQLite database remains authoritative for
+`pd:*` paper metadata. Sanchaya remains authoritative for `sanchaya:*` text
+metadata. Each retrieval release materializes both into a read-only
+`retrieval-catalog.sqlite` artifact.
 
-`corpus-manifest.jsonl` is the document catalog written by export/normalization.
-`entity-mentions.jsonl` is derived extraction output. `entity-registry.*` is a
-logical lookup projection built from mentions and ontology. Their final storage
-and retention policy are not yet fixed.
+`corpus-manifest.jsonl` remains a portable export and audit projection;
+`entity-mentions.jsonl` remains derived extraction output; and
+`entity-registry.jsonl` remains the ontology lookup projection. None of these
+files is treated as a universal catalog by the online MCP process.
+
+Entity coverage is recorded separately from catalog coverage. An entity lookup
+with no mention in the active projection must not be interpreted as proof that
+the entity is absent from documents that were not extracted.
 
 ### P2 — Paper path and media layout
 
@@ -255,6 +303,17 @@ large derived object.
 hostname as deployment configuration. The MCP adapter must not hard-code either
 address or assume that the chat host can reach Zoekt directly.
 
+### D23 — Trusted-demo MCP authentication
+
+**Decision:** The pilot's Streamable HTTP MCP endpoint requires one shared
+bearer token supplied through the untracked deployment environment. The MCP
+service validates it; Caddy terminates TLS and routes `/mcp`, while Qdrant and
+Zoekt RPC remain private. OAuth and per-user identity are deferred.
+
+**Reason:** The event has a small trusted audience and needs a repeatable,
+low-ceremony deployment. The token is not suitable for attribution or a
+public service and must be rotated before broader use.
+
 ## Deferred decisions
 
 ### F1 — Full ontology design
@@ -267,13 +326,12 @@ questions reveal which types and relations earn their maintenance cost.
 Categories are metadata filters for now. Do not infer a final taxonomy or
 duplicate documents based on categories until retrieval questions justify it.
 
-### F3 — Production deployment and authentication
+### F3 — Long-term identity and authorization
 
-The dev topology is local. Production scheduling, secret management,
-authentication details for any future cross-host client, scheduling, and
-artifact hosting follow after the MCP contract works locally. The host-private
-Zoekt RPC boundary in D19 is accepted now; a public authenticated RPC route is
-not part of the pilot.
+Per-user OAuth, groups, token issuance, scheduling, and artifact hosting remain
+future work. The pilot's shared bearer token is intentionally not a long-term
+identity or authorization model. The host-private Zoekt RPC boundary in D19
+is accepted now; a public raw RPC route is not part of the pilot.
 
 ### F4 — Custom chat application
 

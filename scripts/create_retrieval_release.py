@@ -15,11 +15,16 @@ import json
 import os
 import shutil
 import subprocess
+import sys
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from lib.retrieval_catalog import CATALOG_SCHEMA_VERSION, build_retrieval_catalog
 
 
 def utc_now() -> str:
@@ -74,7 +79,18 @@ def require_file(path: Path) -> Path:
 
 def artifact(record_path: str, source: Path, destination: Path) -> dict[str, str]:
     shutil.copy2(require_file(source), destination)
-    return {"path": record_path, "sha256": sha256_file(destination)}
+    return file_artifact(record_path, destination)
+
+
+def file_artifact(record_path: str, path: Path) -> dict[str, str]:
+    return {"path": record_path, "sha256": sha256_file(require_file(path))}
+
+
+def default_catalog_path() -> Path:
+    configured = os.getenv("RETRIEVAL_CANONICAL_CATALOG")
+    if configured:
+        return Path(configured).expanduser()
+    return ROOT.parent / "patra-darpan" / ".build~" / "spasta-corpus.sqlite"
 
 
 def parse_args() -> argparse.Namespace:
@@ -83,6 +99,18 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--sanchaya-root", type=Path, default=Path(os.getenv("SANCHAYA_REPO_ROOT", "/Users/sunder/projects/sanchaya")))
     parser.add_argument("--patra-darpan-root", type=Path, default=ROOT)
     parser.add_argument("--input-manifest", type=Path, default=ROOT / ".local/retrieval/input-manifest.json")
+    parser.add_argument(
+        "--catalog-sqlite",
+        type=Path,
+        default=default_catalog_path(),
+        help="canonical Patra Darpan SQLite database used for pd:* metadata",
+    )
+    parser.add_argument(
+        "--source-manifest",
+        type=Path,
+        default=ROOT / ".local/retrieval/input-manifest.json",
+        help="release-scoped Sanchaya source manifest used for sanchaya:* metadata",
+    )
     parser.add_argument("--chunks", type=Path, default=ROOT / ".local/retrieval/chunks.jsonl")
     parser.add_argument("--mentions", type=Path, default=ROOT / ".local/retrieval/entity-mentions.jsonl")
     parser.add_argument("--registry", type=Path, default=ROOT / ".local/retrieval/entity-registry.jsonl")
@@ -107,8 +135,24 @@ def build_record(args: argparse.Namespace, release_id: str, release_dir: Path) -
     pd_commit = git_revision(args.patra_darpan_root)
 
     catalog_source = args.sanchaya_root / "patra-darpan/catalog/corpus-manifest.jsonl"
+    catalog_output = release_dir / "retrieval-catalog.sqlite"
+    catalog_stats = build_retrieval_catalog(
+        args.catalog_sqlite,
+        args.source_manifest,
+        catalog_output,
+        release_id=release_id,
+        sanchaya_commit=sanchaya_commit,
+        patra_darpan_commit=pd_commit,
+    )
+    catalog_revision = sha256_file(catalog_output)
     created_at = utc_now()
     artifacts = {
+        "input_manifest": artifact(
+            f"{release_id}/input-manifest.json",
+            args.input_manifest,
+            release_dir / "input-manifest.json",
+        ),
+        "retrieval_catalog": file_artifact(f"{release_id}/retrieval-catalog.sqlite", catalog_output),
         "corpus_manifest": artifact(f"{release_id}/corpus-manifest.jsonl", catalog_source, release_dir / "corpus-manifest.jsonl"),
         "chunks": artifact(f"{release_id}/chunks.jsonl", args.chunks, release_dir / "chunks.jsonl"),
         "entity_mentions": artifact(f"{release_id}/entity-mentions.jsonl", args.mentions, release_dir / "entity-mentions.jsonl"),
@@ -128,10 +172,20 @@ def build_record(args: argparse.Namespace, release_id: str, release_dir: Path) -
         raise ValueError("vector run does not contain collection and dimensions")
 
     pipeline = {
+        "source_scope": {
+            "paper_scope": str(input_manifest.get("selection", {}).get("paper_scope") or "unknown"),
+            "sanchaya_scope": str(input_manifest.get("selection", {}).get("sanchaya_scope") or "unknown"),
+            "source_count": len(input_manifest.get("sources") or []),
+        },
         "ontology": {
             "id": "jyotisha",
             "version": "0.3.0",
             "revision": str(args.ontology.relative_to(ROOT)),
+        },
+        "catalog": {
+            "id": "sqlite-composite-release-catalog",
+            "version": CATALOG_SCHEMA_VERSION,
+            "revision": catalog_revision,
         },
         "chunker": {
             "id": "structure-aware",
@@ -162,13 +216,20 @@ def build_record(args: argparse.Namespace, release_id: str, release_dir: Path) -
             "patra_darpan_repo": git_origin(args.patra_darpan_root),
             "patra_darpan_commit": pd_commit,
             "corpus_manifest_sha256": sha256_file(catalog_source),
+            "catalog_revision": catalog_revision,
         },
         "pipeline": pipeline,
         "artifacts": artifacts,
         "metrics": {
             "document_count": int(input_manifest.get("selection", {}).get("paper_count", 0)) + int(input_manifest.get("selection", {}).get("probe_count", 0)),
+            "catalog_document_count": int(catalog_stats["document_count"]),
+            "catalog_patra_darpan_document_count": int(catalog_stats["patra_darpan_document_count"]),
+            "catalog_sanchaya_document_count": int(catalog_stats["sanchaya_document_count"]),
+            "catalog_indexed_document_count": int(catalog_stats["indexed_document_count"]),
+            "catalog_metadata_only_document_count": int(catalog_stats["metadata_only_document_count"]),
             "chunk_count": int(chunk_build.get("chunk_count", count_jsonl(args.chunks))),
             "mention_count": int(entity_build.get("mention_count", count_jsonl(args.mentions))),
+            "entity_document_count": int(entity_build.get("document_count_with_mentions", 0)),
             "vector_point_count": int(vector_run.get("chunk_count", 0)),
         },
         "notes": args.notes,
@@ -180,6 +241,8 @@ def main() -> int:
     sanchaya_root = args.sanchaya_root.expanduser().resolve()
     args.sanchaya_root = sanchaya_root
     args.patra_darpan_root = args.patra_darpan_root.expanduser().resolve()
+    args.catalog_sqlite = args.catalog_sqlite.expanduser().resolve()
+    args.source_manifest = args.source_manifest.expanduser().resolve()
     args.release_root = args.release_root.expanduser().resolve()
     vector_run = read_json(require_file(args.vector_run.expanduser().resolve()))
     sanchaya_commit = str(read_json(require_file(args.input_manifest)).get("sanchaya", {}).get("commit") or git_revision(sanchaya_root))

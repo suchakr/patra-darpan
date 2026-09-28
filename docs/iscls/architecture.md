@@ -2,8 +2,10 @@
 
 ## Design stance
 
-ISCLS is a corpus snapshot with three rebuildable projections. The canonical
-content and provenance are versioned in Sanchaya; the lexical, vector, and
+ISCLS is a corpus snapshot with three rebuildable projections and a composite
+release catalog. The canonical content is versioned in Sanchaya. Patra Darpan
+SQLite remains authoritative for `pd:*` paper metadata, while the Sanchaya
+manifest describes `sanchaya:*` text documents. The lexical, vector, and
 entity indexes are derived artifacts.
 
 The architecture keeps logical roles stable while leaving physical stores
@@ -14,8 +16,8 @@ database or entity-registry database.
 
 1. **One content snapshot.** Zoekt, vector, and entity builds consume the same
    Sanchaya commit.
-2. **Metadata is separate.** Machine metadata is in manifests and catalogs, not
-   Markdown front matter.
+2. **Metadata is separate.** Machine metadata is in the release catalog and
+   source manifests, not Markdown front matter.
 3. **Identity is stable.** Paths and categories can change; document and chunk
    IDs should not.
 4. **Projections are disposable.** Indexes can be rebuilt from the corpus and
@@ -79,8 +81,9 @@ or MCP services does not trigger a full embedding build.
 ### Canonical corpus and artifact layout
 
 This is the pilot layout. The Sanchaya checkout contains corpus content and
-derived corpus catalogs; the Patra Darpan checkout owns the ontology and build
-code. Generated retrieval artifacts stay outside both Git worktrees.
+export manifests; the Patra Darpan checkout owns the canonical paper catalog,
+ontology, and build code. Generated retrieval artifacts stay outside both Git
+worktrees.
 
 ```text
 patra-darpan-pdf-semantic-index/
@@ -99,13 +102,14 @@ sanchaya/
           p04_page.png
           ...
     catalog/
-      corpus-manifest.jsonl          # required document catalog
+      corpus-manifest.jsonl          # export/audit projection for papers
 
 .local/retrieval/
   chunks.jsonl
   entity-mentions.jsonl              # derived from chunks + ontology
   entity-registry.jsonl              # rebuildable lookup projection
   releases/<release-id>/              # immutable MCP input
+    retrieval-catalog.sqlite          # pd:* + sanchaya:* metadata snapshot
 ```
 
 `document.md` remains clean Markdown. Relative image links are preserved. A
@@ -113,10 +117,18 @@ Markdown table remains text and is therefore available to lexical and vector
 processing. An image-only table needs OCR or vision extraction before it can be
 searched as text.
 
-### Corpus manifest
+### Corpus manifest and release catalog
 
-`corpus-manifest.jsonl` is the required document-level catalog. It is written
-by export/normalization and read by all builders and passage-fetch logic.
+`corpus-manifest.jsonl` is the normalized export and audit projection written
+by export/normalization. It is not the universal runtime catalog: it primarily
+describes exported Patra Darpan papers and may not contain every Sanchaya text.
+
+Each retrieval release materializes `retrieval-catalog.sqlite` from the
+canonical Patra Darpan SQLite database plus the release's Sanchaya source
+manifest. The Patra Darpan side is bibliographically complete; the
+`indexed_in_release` field marks whether a document also has content in the
+current release. Sanchaya rows remain release-scoped. See
+[catalog.md](catalog.md) for the schema and query contract.
 
 A row should carry at least:
 
@@ -298,12 +310,12 @@ sequenceDiagram
     participant D as Decode Lab / accepted runs
     participant X as Sanchaya exporter
     participant W as Sanchaya worktree
-    participant C as Corpus catalog
+    participant C as Source manifests
     participant G as Git review
 
     D->>X: Select accepted documents and media
     X->>W: Copy document.md and relative media
-    X->>C: Write normalized corpus-manifest.jsonl
+    X->>C: Write paper manifest and release source rows
     X-->>G: Report paths, hashes, quality, and omissions
     G->>W: Review diff and commit corpus snapshot
 ```
@@ -319,6 +331,7 @@ another to discover content.
 ```mermaid
 sequenceDiagram
     participant S as Sanchaya commit
+    participant C as Composite catalog builder
     participant Z as Zoekt builder
     participant V as Vector builder
     participant E as Entity extractor
@@ -326,6 +339,8 @@ sequenceDiagram
     participant A as Versioned index artifacts
 
     S->>Z: Content files and revision
+    S->>C: Source rows for release
+    C->>A: retrieval-catalog.sqlite with both source kinds
     S->>V: Markdown + corpus manifest
     S->>E: Markdown + ontology + manifest
     Z->>A: Lexical index tagged with revision
@@ -349,7 +364,7 @@ context size.
 
 The vector builder:
 
-1. reads the corpus manifest and Markdown;
+1. reads the release source rows and Markdown;
 2. applies deterministic, structure-aware chunking;
 3. writes chunk text and provenance to a logical chunk store;
 4. embeds each chunk using the chosen model; and
@@ -367,8 +382,8 @@ coverage:
 
 | Build profile | Vector corpus | Why |
 | --- | --- | --- |
-| Pilot | 120 Patra Darpan papers plus a deliberately chosen Jyotisha slice of Sanchaya | Tests paper prose, tables, and the Devanagari/IAST cases that the demo will ask about |
-| Expansion | 200 papers plus the full selected Jyotisha slice | Measures repeatability and model quality with a larger evidence pool |
+| Pilot | 120 Patra Darpan papers plus all `Jyotisham` text and fixed demo anchors | Tests paper prose, tables, and the Devanagari/IAST cases that the demo will ask about |
+| Expansion | 200 papers plus the same `Jyotisham` scope | Measures repeatability and model quality with a larger evidence pool |
 | Full | All eligible Sanchaya text plus the Patra Darpan corpus | Maximizes conceptual coverage after the model and chunking policy pass evaluation |
 
 Zoekt may cover the full Sanchaya corpus from the beginning. Vector coverage
@@ -502,13 +517,42 @@ Thus lexical and entity retrieval are separate backend calls behind one MCP
 server. They need not share a process or programming language. They must share
 document IDs, corpus revision, and evidence locators.
 
+### Catalog access
+
+The catalog adapter reads the immutable `retrieval-catalog.sqlite` artifact.
+`pd:*` rows retain Patra Darpan SQLite as their authority; `sanchaya:*` rows
+retain the Sanchaya source manifest as their authority. The composite file is a
+release snapshot, not a new upstream source of truth.
+
+Metadata-first MCP operations are bounded and deterministic:
+
+- `get_document_metadata`
+- `get_documents_metadata`
+- `search_documents`
+- `get_author_works`
+- `get_corpus_info`
+
+Retrieval operations are also bounded and reference-preserving:
+
+- `lookup_entity`
+- `list_entity_mentions`
+- `search_corpus`
+- `fetch_passage`
+- `fetch_passages`
+
+The catalog reports source counts and entity-index coverage separately, so a
+partial entity build cannot be mistaken for full-corpus absence.
+Document responses also report `indexed_in_release`; metadata lookup defaults
+to the complete Patra Darpan catalog, while content retrieval should use rows
+where that flag is true.
+
 The current local implementation is deliberately thin at this boundary:
 [`lib/retrieval_adapters.py`](../../lib/retrieval_adapters.py) contains the
-Zoekt, Qdrant, JSONL, passage, and fusion adapters;
+catalog, Zoekt, Qdrant, JSONL, passage, and fusion adapters;
 [`scripts/create_retrieval_release.py`](../../scripts/create_retrieval_release.py)
 materializes one immutable release; and
 [`scripts/retrieval_mcp_server.py`](../../scripts/retrieval_mcp_server.py)
-registers the four tools and two read-only resources. The adapter layer is the
+registers the retrieval and metadata tools plus two read-only resources. The adapter layer is the
 stable seam for later replacing JSONL with a keyed store or Qdrant with another
 vector service.
 
@@ -549,6 +593,23 @@ If a future deployment needs an MCP client outside the host, replace the deny
 route with an authenticated, IP-restricted route and add rate limiting at the
 gateway. `-rpc` itself provides neither authentication nor rate limiting.
 
+The public MCP route follows the same boundary but terminates TLS at Caddy.
+For the trusted pilot, the MCP service validates the shared bearer token from
+the host-only environment file:
+
+```caddyfile
+@mcp path /mcp /mcp/*
+handle @mcp {
+    reverse_proxy retrieval-mcp:8787
+}
+```
+
+The retrieval companion's production Compose overlay attaches `retrieval-mcp`
+to the existing private Zoekt network and removes host port publication. The
+external URL is therefore HTTPS at the Caddy hostname while the container hop
+remains HTTP. See [https.md](https.md) for the local `tls internal` profile and
+the production invocation.
+
 ```mermaid
 flowchart LR
     U[Public user] -->|HTTPS /search| C[Caddy]
@@ -573,6 +634,13 @@ references, excerpts, scores, and revision metadata.
 Accepts a document/chunk reference and context options. Returns text, logical
 location, page provenance, content hash, and safe media references. It rejects
 catalog paths and arbitrary filesystem paths.
+
+### `fetch_passages`
+
+Accepts up to 50 references in one call and returns one bounded result per
+reference. A stale reference is reported beside successful results rather than
+failing the whole batch. This is the preferred follow-up for a search response
+containing several evidence references.
 
 ### `list_entity_mentions`
 

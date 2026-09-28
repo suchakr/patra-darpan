@@ -1,0 +1,16 @@
+# Local HTTPS adapter for harnesses that require an https:// MCP URL.
+# Caddy terminates TLS; retrieval-mcp remains plain HTTP on the private
+# Compose network. The local CA is intentionally not a public certificate.
+
+localhost:8443 {
+	tls internal
+
+	@mcp path /mcp /mcp/*
+	handle @mcp {
+		reverse_proxy retrieval-mcp:8787
+	}
+
+	handle {
+		respond "Not found" 404
+	}
+}

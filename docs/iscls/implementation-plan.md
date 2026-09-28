@@ -3,10 +3,9 @@
 ## Status
 
 Active implementation sequence for the contract in [prd.md](prd.md) and
-[architecture.md](architecture.md). Stages 0–5 now have runnable local slices;
-Stage 6 is the current review gate, and Stage 7 covers expansion and production
-hardening. The first release is intentionally smaller than the 120-paper pilot
-target so joins and evidence can be reviewed before coverage is enlarged.
+[architecture.md](architecture.md). Stages 0–5 have runnable local slices;
+the composite release catalog is the current implementation step. Stage 6 is
+the review gate, and Stage 7 covers expansion and production hardening.
 
 ## Local-first rule
 
@@ -22,6 +21,7 @@ integration smoke test before a projection is promoted.
 | Patra Darpan semantic repository | PDF decoding, review state, repair, export, export validation | The live Zoekt/vector/entity services |
 | Sanchaya repository | The reviewed corpus snapshot: existing text, exported Markdown, media, and manifest | Ontology source, decoder run directories, and local absolute paths |
 | Offline index builders | Zoekt, vector, mention, and registry projections from one Sanchaya commit | Conversational state or ontology edits |
+| Release catalog builder | Read-only composite catalog with complete Patra Darpan metadata, Sanchaya release rows, and `indexed_in_release` coverage flag | Upstream metadata authority or full-text/index storage |
 | MCP server | Bounded read-only retrieval tools and policy checks | Corpus/index writes and answer synthesis |
 | ChatGPT or Codex | Conversation, query planning, tool sequencing, and grounded synthesis | Canonical corpus state |
 
@@ -155,22 +155,24 @@ Qdrant profile, and leaves Zoekt, MCP, and the production services unchanged.
 The bakeoff selected E5 with Qdrant for the pilot; its measured limits and
 inconclusive challenger runs remain in the report.
 
-**Status:** Deterministic chunks and the E5/Qdrant builder are implemented. The
-active release is a 64-point smoke collection over the 3,625-chunk local build
-input; the 120-paper vector release is the next coverage step.
+**Status:** Deterministic chunks, explicit source scopes, and the E5/Qdrant
+builder are implemented. The active release covers all exported papers plus
+all `Jyotisham` text and the six demo anchors (6,593 vectors). The earlier
+64-point collection remains as a calibration artifact.
 
 Implement a deterministic chunker with structure-aware boundaries (heading,
 paragraph, verse, table, or page marker) and a token limit/overlap fallback.
 Keep the exact chunk-size and embedding model as configuration recorded in the
 build metadata, not as a corpus identity rule.
 
-Treat vector coverage as a measured policy. Start with the 120 Patra Darpan
-papers and a selected Jyotisha slice of Sanchaya, while keeping the builder
-capable of reading all eligible Sanchaya text. Measure token volume, chunk
-count, build time, embedding cost, vector size, lookup latency, and quality on
-Devanagari, IAST, and mixed-script queries before widening coverage. Zoekt can
-cover all Sanchaya text independently; vector coverage does not need to match
-lexical coverage on day one.
+Treat vector coverage as a measured policy. The repeatable default is all
+exported Patra Darpan papers plus all `Jyotisham` text and the six demo
+anchors, while the builder remains capable of reading all eligible Sanchaya
+text. Measure token volume, chunk count, build time, embedding cost, vector
+size, lookup latency, and quality on Devanagari, IAST, and mixed-script
+queries before widening coverage. Zoekt can cover all Sanchaya text
+independently; vector coverage does not need to match lexical coverage on day
+one.
 
 For each chunk, persist:
 
@@ -214,10 +216,10 @@ latency, and coverage policy.
 ontology is complete.
 
 **Status:** The repository-owned v0.3 snapshot, deterministic alias extractor,
-mention JSONL, and 143-row registry projection are implemented. The current
-build has 10,231 mentions across 57 documents and observes 133 of 143 ontology
-entities. Morphology, unknown-entity discovery, and inferred relations remain
-iteration-0 limits.
+mention JSONL, and 143-row registry projection are implemented. The active
+Jyotisham release has 22,114 mentions across 152 documents and observes 133 of
+143 ontology entities. Morphology, unknown-entity discovery, and inferred
+relations remain iteration-0 limits.
 
 Create a small versioned Jyotisha starter ontology with categories, relations,
 and seed aliases. Keep it human-edited in the Patra Darpan repository under
@@ -227,7 +229,7 @@ may leave `canonical_entity_id` empty. A separate registry builder resolves
 accepted links and produces the logical lookup projection.
 
 Use the same pilot eligibility policy as vector search: the 120 papers and the
-selected Jyotisha slice first. The mention and registry builders should still
+repeatable `Jyotisham` scope. The mention and registry builders should still
 accept a broader manifest later, but a build record must state which documents
 and source files were processed.
 
@@ -269,8 +271,9 @@ uv run python scripts/build_retrieval_entities.py
 
 The original v0.1 smoke build over the frozen pilot snapshot produced 2,515
 resolved mentions across 51 documents and observed all 16 seed entities. The
-active v0.3 build produces 10,231 resolved mentions across 57 documents and
-observes 133 of 143 ontology entities. These figures validate plumbing and
+intermediate v0.3 calibration build produced 10,231 mentions across 57
+documents; the active full-scope build produces 22,114 across 152 documents
+and observes 133 of 143 ontology entities. These figures validate plumbing and
 span/chunk links, not ontology completeness. The extractor still does not
 discover unknown entities, perform Sanskrit morphology, or infer new relations;
 those remain explicit iteration-0 gaps.
@@ -284,8 +287,10 @@ or SQLite; it does not need a production entity service yet.
 
 **Purpose:** give ChatGPT/Codex a small, inspectable online interface.
 
-**Status:** The four tools, two read-only resources, release lineage, and local
-Streamable HTTP smoke client are implemented. Native client setup, production
+**Status:** The retrieval tools, metadata-first catalog tools, two read-only
+resources, release lineage, local Streamable HTTP smoke client, and Docker
+runtime are implemented on this branch. Batch passage retrieval and the
+optional HTTPS gateway are included; native client setup, production
 authentication, and public deployment remain outside the local gate.
 
 Implement these tools first:
@@ -295,7 +300,18 @@ Implement these tools first:
 | `lookup_entity` | ontology + registry | bounded candidates, no writes |
 | `search_corpus` | Zoekt/vector/hybrid adapters | allowlisted paths, filters, result/context limits, revision in response |
 | `fetch_passage` | chunk store + Sanchaya content/media | document/chunk references only, no arbitrary filesystem paths |
+| `fetch_passages` | chunk store + Sanchaya content/media | maximum batch size, per-item limits, isolated stale-reference errors |
 | `list_entity_mentions` | mention/registry projection | pagination, bounded spans, no writes |
+
+The catalog operations are deliberately separate from full-text retrieval:
+
+| Tool | Backend path | Required safeguards |
+| --- | --- | --- |
+| `get_document_metadata` | composite SQLite catalog | one stable ID, bounded response |
+| `get_documents_metadata` | composite SQLite catalog | maximum batch size, stable ordering |
+| `search_documents` | composite SQLite catalog | allowlisted filters, optional indexed-only filter, and result limit |
+| `get_author_works` | composite SQLite catalog | bounded author query, optional indexed-only filter, no arbitrary SQL |
+| `get_corpus_info` | catalog plus entity coverage | counts and revisions only |
 
 The MCP server is the only online API in the pilot. The underlying Zoekt RPC,
 vector store, registry files, and build directories remain private adapters.
@@ -324,28 +340,34 @@ smoke tests.
 implemented in [`lib/retrieval_adapters.py`](../../lib/retrieval_adapters.py),
 [`scripts/create_retrieval_release.py`](../../scripts/create_retrieval_release.py),
 and [`scripts/retrieval_mcp_server.py`](../../scripts/retrieval_mcp_server.py).
-The release script copies the current corpus manifest, chunks, mentions, and
-registry into a release directory, records the E5/Qdrant collection and source
-commits, and atomically selects `active-release.json`. The adapters cover:
+The release script materializes `retrieval-catalog.sqlite` from the canonical
+Patra Darpan SQLite database plus release-scoped Sanchaya source rows. It also
+copies the corpus manifest, chunks, mentions, and registry into a release
+directory, records the E5/Qdrant collection and source commits, and atomically
+selects `active-release.json`. The adapters cover:
 
 - Zoekt JSON RPC (`POST /api/search`) with catalog-path exclusion and decoded
   line snippets;
 - Qdrant query plus the configured E5 query prefix, loaded lazily only for a
   vector call;
+- composite SQLite metadata queries with explicit Patra Darpan/Sanchaya source
+  authority;
 - bounded JSONL entity lookup and mention pagination; and
 - chunk/provenance/media fetches without arbitrary filesystem access.
+- batched passage fetches and stable `document_id`/`chunk_id` references on
+  lexical results.
 
-The MCP server exposes the four read-only tools in this section plus the
-`retrieval://ontology-context` and `retrieval://release` resources. Run it
+The MCP server exposes the retrieval and metadata tools in this section plus
+the `retrieval://ontology-context` and `retrieval://release` resources. Run it
 locally with `uv run --with 'mcp<2' ...`; the v1 SDK pin is intentional because
-the installed MCP v2 package renamed the FastMCP API. The current local smoke
-release is deliberately a 64-vector calibration collection, so it proves the
-joins and protocol but is not yet the full vector coverage release.
+the installed MCP v2 package renamed the FastMCP API. The 64-vector
+calibration collection remains available for quick checks; the active local
+release is the full 6,593-vector Jyotisham scope.
 
 The MCP vertical slice now joins the three backend adapters. Its tests and smoke
 checks cover tool schemas, bounded limits, catalog/path rejection, revision
 lineage, backend error mapping, and the sequence `ontology_context` →
-`lookup_entity` → `search_corpus` → `fetch_passage`. A local end-to-end smoke
+`lookup_entity` → `search_corpus` → `fetch_passages`. A local end-to-end smoke
 test must complete before any production endpoint or deployment work is
 scheduled.
 
@@ -396,7 +418,12 @@ Every offline export or index build records:
 
 ```text
 corpus_revision       Sanchaya commit SHA
+catalog_revision      Patra Darpan catalog/build revision
 document_count        accepted documents included
+catalog_document_count documents represented in the composite release catalog
+catalog_indexed_document_count documents with content projections in this release
+catalog_metadata_only_document_count metadata rows without release content
+entity_document_count documents with extracted entity mentions
 vector_scope          eligible sources/files for this vector build
 token_count           source tokens included in vector build
 chunk_count           chunks emitted
@@ -418,13 +445,14 @@ Partial artifacts are never silently promoted to the active MCP revision.
 
 The implementation should remain reviewable through small boundaries:
 
-1. this documentation contract;
+1. this documentation and catalog contract;
 2. exporter and manifest validation;
 3. 120-paper Sanchaya projection and lexical configuration;
 4. deterministic chunker and local vector projection;
 5. starter ontology, mention extraction, and registry projection;
-6. MCP read-only tools and policy tests; and
-7. demo evaluation plus expansion hardening.
+6. composite release catalog and metadata-first MCP tools;
+7. retrieval MCP policy checks and demo evaluation; and
+8. expansion hardening.
 
 Each boundary should leave the previous path usable. A failed later stage must
 not require reverting the corpus export or lexical index.
@@ -444,7 +472,7 @@ These are the remaining decisions after the local vertical slice:
 
 The pilot defaults are now explicit: structure-aware chunking, E5
 `intfloat/multilingual-e5-base`, Qdrant, the v0.3 ontology, JSONL entity
-projections, and the four-tool MCP contract. Revisit them only with measured
+projections, and the read-only metadata/retrieval MCP contract. Revisit them only with measured
 evidence or a changed scale requirement.
 
 They are implementation choices unless they change the stable IDs, evidence

@@ -1,4 +1,4 @@
-"""Read-only adapters for the three retrieval projections.
+"""Read-only adapters for retrieval projections and the release catalog.
 
 The MCP layer calls these adapters rather than knowing whether a projection is
 served by Zoekt, Qdrant, or JSONL.  Every adapter is deliberately read-only;
@@ -22,6 +22,8 @@ from typing import Any, Iterable
 from urllib.parse import urljoin
 
 import requests
+
+from lib.retrieval_catalog import CatalogAdapter, CatalogError
 
 
 class RetrievalError(RuntimeError):
@@ -89,6 +91,12 @@ class Release:
 
     @property
     def root(self) -> Path:
+        # ``active-release.json`` lives at the release-root level, while a
+        # direct inspection may pass ``<release-id>/release.json``.  Artifact
+        # paths in the contract are relative to the release-root directory in
+        # both cases.
+        if self.path.name == "release.json" and self.path.parent.name == self.release_id:
+            return self.path.parent.parent
         return self.path.parent
 
     @property
@@ -98,6 +106,10 @@ class Release:
     @property
     def corpus_revision(self) -> str:
         return str(self.record.get("source", {}).get("sanchaya_commit") or "unknown")
+
+    @property
+    def catalog_revision(self) -> str:
+        return str(self.record.get("source", {}).get("catalog_revision") or "unknown")
 
     def artifact_path(self, name: str) -> Path:
         artifacts = self.record.get("artifacts")
@@ -293,6 +305,20 @@ class EntityAdapter:
                 result.update(str(value) for value in row.get("document_ids") or [] if value)
         return result
 
+    def coverage_info(self) -> dict[str, Any]:
+        document_ids = {
+            str(row.get("document_id"))
+            for row in self.mentions
+            if row.get("document_id")
+        }
+        return {
+            "registry_entity_count": len(self.registry),
+            "mention_count": len(self.mentions),
+            "document_count": len(document_ids),
+            "ontology_version": self.ontology.get("version"),
+            "corpus_revision": self.release.corpus_revision,
+        }
+
 
 IMAGE_RE = re.compile(r"!\[[^\]]*\]\(([^)]+)\)")
 
@@ -300,8 +326,9 @@ IMAGE_RE = re.compile(r"!\[[^\]]*\]\(([^)]+)\)")
 class PassageStore:
     """Bounded passage lookup over the chunk projection plus corpus metadata."""
 
-    def __init__(self, release: Release):
+    def __init__(self, release: Release, catalog: CatalogAdapter):
         self.release = release
+        self.catalog = catalog
         self.chunks = read_jsonl(release.artifact_path("chunks"))
         self.by_id = {str(row.get("chunk_id")): row for row in self.chunks if row.get("chunk_id")}
         self.by_repo_path: dict[str, list[dict[str, Any]]] = {}
@@ -311,16 +338,6 @@ class PassageStore:
                 self.by_repo_path.setdefault(str(row["repo_path"]), []).append(row)
             if row.get("document_id"):
                 self.by_document.setdefault(str(row["document_id"]), []).append(row)
-
-        self.catalog: dict[str, dict[str, Any]] = {}
-        try:
-            catalog_rows = read_jsonl(release.artifact_path("corpus_manifest"))
-        except RetrievalError:
-            catalog_rows = []
-        for row in catalog_rows:
-            for key in (row.get("document_id"), row.get("source_doc_id")):
-                if key:
-                    self.catalog[str(key)] = row
 
     def _media(self, chunk: dict[str, Any]) -> list[dict[str, str]]:
         repo_path = PurePosixPath(str(chunk.get("repo_path") or ""))
@@ -337,7 +354,7 @@ class PassageStore:
 
     def _format(self, chunk: dict[str, Any], *, lexical: dict[str, Any] | None = None) -> dict[str, Any]:
         document_id = str(chunk.get("document_id") or "")
-        catalog = self.catalog.get(document_id, {})
+        catalog = self.catalog.get_document(document_id) or {}
         result = {
             "chunk_id": chunk.get("chunk_id"),
             "document_id": document_id,
@@ -351,7 +368,10 @@ class PassageStore:
             "text": chunk.get("text"),
             "content_sha256": chunk.get("content_sha256"),
             "corpus_revision": self.release.corpus_revision,
+            "catalog_revision": self.release.catalog_revision,
             "source_refs": catalog.get("source_refs", []),
+            "metadata_status": catalog.get("metadata_status", "unavailable"),
+            "metadata_authority": catalog.get("authority"),
             "media": self._media(chunk),
         }
         if catalog.get("authors") is not None:
@@ -387,6 +407,41 @@ class PassageStore:
             "schema_version": "retrieval.passage.v1",
             "requested": {"chunk_id": chunk_id, "document_id": document_id, "repo_path": repo_path},
             "passages": [self._format(row, lexical=lexical if index == 0 else None) for index, row in enumerate(rows)],
+            "corpus_revision": self.release.corpus_revision,
+        }
+
+    def fetch_many(self, requests: Iterable[dict[str, Any]]) -> dict[str, Any]:
+        """Fetch several bounded references in one MCP round trip.
+
+        Each item is isolated so one stale reference does not discard useful
+        passages from the rest of a model-generated batch.  The request shape
+        intentionally mirrors ``fetch_passage`` and never accepts filesystem
+        paths or arbitrary SQL.
+        """
+
+        items = list(requests)
+        if len(items) > 50:
+            raise RetrievalError("requests is limited to 50 passage references per call")
+        output: list[dict[str, Any]] = []
+        for index, item in enumerate(items):
+            if not isinstance(item, dict):
+                output.append({"index": index, "error": "each request must be an object"})
+                continue
+            selector = {
+                "chunk_id": str(item.get("chunk_id") or "") or None,
+                "document_id": str(item.get("document_id") or "") or None,
+                "repo_path": str(item.get("repo_path") or "") or None,
+            }
+            try:
+                result = self.fetch(**selector, limit=item.get("limit", 5))
+            except (RetrievalError, TypeError, ValueError) as exc:
+                output.append({"index": index, "request": selector, "error": str(exc)})
+                continue
+            output.append({"index": index, "request": selector, "passages": result["passages"]})
+        return {
+            "schema_version": "retrieval.passages.v1",
+            "requested_count": len(items),
+            "results": output,
             "corpus_revision": self.release.corpus_revision,
         }
 
@@ -521,14 +576,29 @@ class VectorAdapter:
         text = f"query: {query}" if "e5" in self.model_name.lower() else query
         try:
             vector = model.encode([text], normalize_embeddings=True, convert_to_numpy=True)[0].tolist()
-            # Ask for extra candidates when an entity filter is applied; the
-            # release remains read-only and the post-filter is deterministic.
-            probe_limit = min(100, max(limit, limit * 5)) if allowed_chunk_ids else limit
+            # Apply entity restrictions in Qdrant itself.  Filtering only a
+            # shallow top-N result can return zero rows even when matching
+            # chunks exist lower in the unfiltered ranking.
+            query_filter = None
+            if allowed_chunk_ids:
+                try:
+                    from qdrant_client import models
+                except ImportError as exc:
+                    raise RetrievalError("entity-filtered vector search needs qdrant-client") from exc
+                query_filter = models.Filter(
+                    must=[
+                        models.FieldCondition(
+                            key="chunk_id",
+                            match=models.MatchAny(any=sorted(allowed_chunk_ids)),
+                        )
+                    ]
+                )
             if hasattr(client, "query_points"):
                 response = client.query_points(
                     collection_name=self.collection,
                     query=vector,
-                    limit=probe_limit,
+                    query_filter=query_filter,
+                    limit=limit,
                     with_payload=True,
                 )
                 points = getattr(response, "points", response)
@@ -536,7 +606,8 @@ class VectorAdapter:
                 points = client.search(
                     collection_name=self.collection,
                     query_vector=vector,
-                    limit=probe_limit,
+                    query_filter=query_filter,
+                    limit=limit,
                     with_payload=True,
                 )
         except Exception as exc:
@@ -590,10 +661,82 @@ class RetrievalService:
 
     def __init__(self, release: Release, *, ontology_path: str | Path, zoekt_url: str | None = None, qdrant_url: str | None = None):
         self.release = release
+        try:
+            self.catalog = CatalogAdapter(release)
+        except CatalogError as exc:
+            raise RetrievalError(str(exc)) from exc
         self.entities = EntityAdapter(release, ontology_path)
-        self.passages = PassageStore(release)
+        self.passages = PassageStore(release, self.catalog)
         self.zoekt = ZoektAdapter(zoekt_url)
         self.vector = VectorAdapter(release, qdrant_url=qdrant_url)
+
+    def get_document_metadata(self, document_id: str) -> dict[str, Any]:
+        row = self.catalog.get_document(document_id)
+        if row is None:
+            raise RetrievalError(f"unknown document ID: {document_id}")
+        return {
+            "schema_version": "retrieval.document-metadata.v1",
+            "document": row,
+            "release_id": self.release.release_id,
+            "catalog_revision": self.release.catalog_revision,
+        }
+
+    def get_documents_metadata(self, document_ids: Iterable[str]) -> dict[str, Any]:
+        requested = list(document_ids)
+        if len(requested) > 50:
+            raise RetrievalError("document_ids is limited to 50 IDs per call")
+        rows = self.catalog.get_documents(requested)
+        return {
+            "schema_version": "retrieval.documents-metadata.v1",
+            "documents": rows,
+            "requested_count": len(requested),
+            "release_id": self.release.release_id,
+            "corpus_revision": self.release.corpus_revision,
+            "catalog_revision": self.release.catalog_revision,
+        }
+
+    def search_documents(
+        self,
+        query: str = "",
+        *,
+        source_kind: str | None = None,
+        year: str | None = None,
+        category: str | None = None,
+        indexed_in_release: bool | None = None,
+        limit: int = 20,
+    ) -> dict[str, Any]:
+        try:
+            return self.catalog.search_documents(
+                query,
+                source_kind=source_kind,
+                year=year,
+                category=category,
+                indexed_in_release=indexed_in_release,
+                limit=limit,
+            )
+        except CatalogError as exc:
+            raise RetrievalError(str(exc)) from exc
+
+    def get_author_works(
+        self,
+        author: str,
+        *,
+        indexed_in_release: bool | None = None,
+        limit: int = 50,
+    ) -> dict[str, Any]:
+        try:
+            return self.catalog.author_works(
+                author,
+                indexed_in_release=indexed_in_release,
+                limit=limit,
+            )
+        except CatalogError as exc:
+            raise RetrievalError(str(exc)) from exc
+
+    def get_corpus_info(self) -> dict[str, Any]:
+        result = self.catalog.corpus_info()
+        result["entity_index"] = self.entities.coverage_info()
+        return result
 
     def search(
         self,
@@ -636,6 +779,7 @@ class RetrievalService:
                 )
             except RetrievalError as exc:
                 backend_errors["vector"] = str(exc)
+        lexical = self._enrich_lexical(lexical)
         if mode == "lexical":
             results = lexical
         elif mode == "vector":
@@ -653,3 +797,53 @@ class RetrievalService:
             "corpus_revision": self.release.corpus_revision,
             "release_id": self.release.release_id,
         }
+
+    def fetch_passages(self, requests: Iterable[dict[str, Any]]) -> dict[str, Any]:
+        return self.passages.fetch_many(requests)
+
+    def _enrich_lexical(self, rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+        """Attach stable release references to Zoekt file matches.
+
+        Zoekt quite correctly returns repository paths, while the online
+        passage adapter is keyed by release document/chunk IDs.  Enriching at
+        this seam lets a model fetch a lexical hit directly instead of doing a
+        second search to discover an opaque reference.
+        """
+
+        output: list[dict[str, Any]] = []
+        for row in rows:
+            enriched = dict(row)
+            repo_path = str(row.get("repo_path") or "")
+            chunks = self.passages.by_repo_path.get(repo_path, [])
+            selected = chunks[0] if chunks else None
+            matches = row.get("matches") or []
+            line_number = None
+            if matches and isinstance(matches[0], dict):
+                line_number = matches[0].get("line_number")
+            if chunks and line_number is not None:
+                try:
+                    line = int(line_number)
+                except (TypeError, ValueError):
+                    line = None
+                if line is not None:
+                    for candidate in chunks:
+                        location = str(candidate.get("logical_location") or "")
+                        match = re.search(r"block:(\d+)-(\d+)", location)
+                        if match and int(match.group(1)) <= line <= int(match.group(2)):
+                            selected = candidate
+                            break
+            if selected:
+                enriched.update(
+                    {
+                        "document_id": selected.get("document_id"),
+                        "chunk_id": selected.get("chunk_id"),
+                        "source_kind": selected.get("source_kind"),
+                        "title": selected.get("title"),
+                        "fetch_ref": {
+                            "chunk_id": selected.get("chunk_id"),
+                            "document_id": selected.get("document_id"),
+                        },
+                    }
+                )
+            output.append(enriched)
+        return output

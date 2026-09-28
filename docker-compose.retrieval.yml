@@ -12,7 +12,9 @@
 #   RETRIEVAL_QDRANT_DATA_ROOT   persistent Qdrant storage
 #   RETRIEVAL_MODEL_CACHE_ROOT   persistent embedding-model cache
 #   RETRIEVAL_ONTOLOGY_ROOT      repository ontology directory
+#   RETRIEVAL_CANONICAL_CATALOG  Patra Darpan .build~/spasta-corpus.sqlite
 #   RETRIEVAL_ZOEKT_URL          Zoekt RPC URL reachable from this project
+#   RETRIEVAL_HTTPS_PORT         optional local Caddy HTTPS port (default 8443)
 #
 # The builder and MCP images/entrypoints are implementation work in the
 # Patra-Darpan branch. Their names are configurable so the same overlay can
@@ -29,6 +31,10 @@ services:
 
   retrieval-mcp:
     image: ${RETRIEVAL_MCP_IMAGE:-patra-darpan-retrieval-mcp:dev}
+    build:
+      context: .
+      dockerfile: Dockerfile.retrieval
+      target: retrieval-runtime
     profiles: [runtime]
     restart: unless-stopped
     depends_on:
@@ -37,29 +43,70 @@ services:
       RETRIEVAL_RELEASE_ROOT: /var/lib/retrieval/releases
       RETRIEVAL_ACTIVE_RELEASE: /var/lib/retrieval/releases/active-release.json
       RETRIEVAL_ONTOLOGY_PATH: /app/ontology/jyotisha-v0.3.json
-      QDRANT_URL: http://qdrant:6333
+      QDRANT_URL: ${RETRIEVAL_QDRANT_URL:-http://qdrant:6333}
       ZOEKT_URL: ${RETRIEVAL_ZOEKT_URL:?Set RETRIEVAL_ZOEKT_URL}
+      MCP_HOST: 0.0.0.0
+      MCP_PORT: 8787
+      MCP_TRANSPORT: streamable-http
+      # The HTTP service fails closed when auth is required but this value is
+      # missing. Keep the secret in the untracked env file, never in Git.
+      MCP_AUTH_REQUIRED: ${MCP_AUTH_REQUIRED:-true}
+      MCP_BEARER_TOKEN: ${MCP_BEARER_TOKEN:-}
     volumes:
       - ${RETRIEVAL_RELEASE_ROOT:?Set RETRIEVAL_RELEASE_ROOT}:/var/lib/retrieval/releases:ro
+      - ${RETRIEVAL_MODEL_CACHE_ROOT:?Set RETRIEVAL_MODEL_CACHE_ROOT}:/cache/huggingface
       - ${RETRIEVAL_ONTOLOGY_ROOT:?Set RETRIEVAL_ONTOLOGY_ROOT}:/app/ontology:ro
     ports:
       - "127.0.0.1:${RETRIEVAL_MCP_PORT:-8787}:8787"
     extra_hosts:
       - "host.docker.internal:host-gateway"
 
+  # Optional local TLS terminator. Production uses the existing
+  # sanchaya-zoekt Caddy instance instead; see docker-compose.retrieval.prod.yml
+  # and docs/iscls/https.md.
+  retrieval-https:
+    image: caddy:2-alpine
+    profiles: [https]
+    restart: unless-stopped
+    depends_on:
+      - retrieval-mcp
+    ports:
+      - "127.0.0.1:${RETRIEVAL_HTTPS_PORT:-8443}:8443"
+    volumes:
+      - ./deploy/Caddyfile.retrieval.local:/etc/caddy/Caddyfile:ro
+      - retrieval_caddy_data:/data
+      - retrieval_caddy_config:/config
+
   retrieval-builder:
     image: ${RETRIEVAL_BUILDER_IMAGE:-patra-darpan-retrieval-builder:dev}
+    build:
+      context: .
+      dockerfile: Dockerfile.retrieval
+      target: retrieval-builder
     profiles: [build]
-    depends_on:
-      - qdrant
+    command: ["python", "scripts/build_retrieval_index.py"]
     environment:
       SANCHAYA_REPO_ROOT: /data/sanchaya
+      PATRA_DARPAN_ROOT: /data/patra-darpan
+      RETRIEVAL_CANONICAL_CATALOG: /var/lib/patra-darpan/spasta-corpus.sqlite
       RETRIEVAL_RELEASE_ROOT: /var/lib/retrieval/releases
+      RETRIEVAL_BUILD_ROOT: /var/lib/retrieval/build
       RETRIEVAL_ONTOLOGY_PATH: /app/ontology/jyotisha-v0.3.json
-      QDRANT_URL: http://qdrant:6333
+      RETRIEVAL_PAPER_SCOPE: ${RETRIEVAL_PAPER_SCOPE:-all}
+      RETRIEVAL_SANCHAYA_SCOPE: ${RETRIEVAL_SANCHAYA_SCOPE:-jyotisham}
+      RETRIEVAL_VECTOR_MODEL: ${RETRIEVAL_VECTOR_MODEL:-intfloat/multilingual-e5-base}
+      RETRIEVAL_VECTOR_BATCH_SIZE: ${RETRIEVAL_VECTOR_BATCH_SIZE:-32}
+      QDRANT_URL: ${RETRIEVAL_QDRANT_URL:-http://host.docker.internal:6333}
       HF_HOME: /cache/huggingface
     volumes:
+      - .:/data/patra-darpan:ro
       - ${SANCHAYA_REPO_ROOT:?Set SANCHAYA_REPO_ROOT}:/data/sanchaya:ro
+      - ${RETRIEVAL_CANONICAL_CATALOG:?Set RETRIEVAL_CANONICAL_CATALOG}:/var/lib/patra-darpan/spasta-corpus.sqlite:ro
       - ${RETRIEVAL_RELEASE_ROOT:?Set RETRIEVAL_RELEASE_ROOT}:/var/lib/retrieval/releases
+      - ${RETRIEVAL_RELEASE_ROOT:?Set RETRIEVAL_RELEASE_ROOT}/.build:/var/lib/retrieval/build
       - ${RETRIEVAL_MODEL_CACHE_ROOT:?Set RETRIEVAL_MODEL_CACHE_ROOT}:/cache/huggingface
       - ${RETRIEVAL_ONTOLOGY_ROOT:?Set RETRIEVAL_ONTOLOGY_ROOT}:/app/ontology:ro
+
+volumes:
+  retrieval_caddy_data:
+  retrieval_caddy_config:

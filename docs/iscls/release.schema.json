@@ -66,7 +66,8 @@
         "sanchaya_repo",
         "sanchaya_commit",
         "patra_darpan_repo",
-        "patra_darpan_commit"
+        "patra_darpan_commit",
+        "catalog_revision"
       ],
       "properties": {
         "sanchaya_repo": {
@@ -84,6 +85,9 @@
           "$ref": "#/$defs/revision"
         },
         "corpus_manifest_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "catalog_revision": {
           "$ref": "#/$defs/sha256"
         }
       }
@@ -131,9 +135,22 @@
     "pipeline": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["ontology", "chunker", "embedding", "entity_extractor"],
+      "required": ["ontology", "catalog", "chunker", "embedding", "entity_extractor"],
       "properties": {
+        "source_scope": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["paper_scope", "sanchaya_scope", "source_count"],
+          "properties": {
+            "paper_scope": {"type": "string", "minLength": 1},
+            "sanchaya_scope": {"type": "string", "minLength": 1},
+            "source_count": {"type": "integer", "minimum": 0}
+          }
+        },
         "ontology": {
+          "$ref": "#/$defs/component"
+        },
+        "catalog": {
           "$ref": "#/$defs/component"
         },
         "chunker": {
@@ -166,6 +183,7 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
+        "retrieval_catalog",
         "corpus_manifest",
         "chunks",
         "entity_mentions",
@@ -174,6 +192,12 @@
         "vector_index"
       ],
       "properties": {
+        "input_manifest": {
+          "$ref": "#/$defs/file_artifact"
+        },
+        "retrieval_catalog": {
+          "$ref": "#/$defs/file_artifact"
+        },
         "corpus_manifest": {
           "$ref": "#/$defs/file_artifact"
         },
@@ -231,11 +255,35 @@
           "type": "integer",
           "minimum": 0
         },
+        "catalog_document_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "catalog_patra_darpan_document_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "catalog_sanchaya_document_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "catalog_indexed_document_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "catalog_metadata_only_document_count": {
+          "type": "integer",
+          "minimum": 0
+        },
         "chunk_count": {
           "type": "integer",
           "minimum": 0
         },
         "mention_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "entity_document_count": {
           "type": "integer",
           "minimum": 0
         },

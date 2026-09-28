@@ -86,29 +86,60 @@ Shared PDF asset roots live in the sibling `patra-darpan` checkout:
 
 ## Retrieval and MCP
 
-The local retrieval pilot builds three projections from one reviewed Sanchaya
-snapshot:
+The local retrieval pilot builds a composite release catalog plus three
+projections from one reviewed source set:
 
+- a read-only SQLite catalog covering Patra Darpan papers and release-scoped
+  Sanchaya text files
 - a Zoekt lexical index (the existing `sanchaya-zoekt` project)
 - an E5 semantic vector index in Qdrant
 - a v0.3 ontology-driven entity and mention projection
 
 A read-only MCP server adapts those projections for ChatGPT or Codex. It
-exposes `lookup_entity`, `search_corpus`, `fetch_passage`, and
-`list_entity_mentions`, plus read-only ontology and release resources. The
-chat host owns conversation and answer synthesis; the adapters own retrieval.
+exposes entity, retrieval, batched passage, and metadata-first operations such as
+`get_document_metadata`, `get_documents_metadata`, `search_documents`,
+`get_author_works`, and `get_corpus_info`, plus read-only ontology and release
+resources. The chat host owns conversation and answer synthesis; the adapters
+own retrieval. Entity coverage is reported separately from catalog coverage.
+
+The online MCP application remains HTTP inside the private Docker network.
+Caddy provides HTTPS for harnesses: use the optional local `https` profile for
+development, or the existing Sanchaya-Zoekt Caddy route in production. See
+[`docs/iscls/https.md`](docs/iscls/https.md).
 
 The companion [retrieval Compose file](docker-compose.retrieval.yml) defines
-the local/prod deployment shape: `qdrant`, a one-shot `retrieval-builder`, and
-the `retrieval-mcp` runtime. Copy
-[`retrieval.env.example`](retrieval.env.example) to an untracked `.env` beside
-the Compose file to supply host paths and the Zoekt endpoint. Current local
-smoke checks run the builders and MCP server from the checkout; pinned images
-are a later packaging step.
+the local/prod deployment shape: `qdrant`, the `retrieval-mcp` runtime, and a
+separate build profile. `Dockerfile.retrieval` packages the MCP runtime with
+the Qdrant client and E5 query embedder; model weights remain in the mounted
+Hugging Face cache. Copy [`retrieval.env.example`](retrieval.env.example) to
+an untracked `.env` beside the Compose file for development. The repository
+Makefile uses that file by default and selects the production overlay through
+`PROD=1`, so the target names and order stay the same in both environments:
+
+```bash
+make check
+make build
+make index
+make inspect
+make smoke
+```
+
+For first-time production setup, create the private env file from the checked-in
+example, edit its paths/token, then use the same targets with `PROD=1`:
+
+```bash
+make PROD=1 prod-env
+make PROD=1 check
+make PROD=1 pilot
+```
+
+`make help` lists the targets and environment-file defaults. `ENV_FILE=...` can
+override the development or production default when needed.
 
 Start with [`docs/iscls/README.md`](docs/iscls/README.md) for commands and
-current status, then [`docs/iscls/architecture.md`](docs/iscls/architecture.md)
-for release lineage, adapters, data flow, and the production network boundary.
+current status, then [`docs/iscls/catalog.md`](docs/iscls/catalog.md) and
+[`docs/iscls/architecture.md`](docs/iscls/architecture.md) for the catalog,
+release lineage, adapters, data flow, and production network boundary.
 
 ## Common Commands
 

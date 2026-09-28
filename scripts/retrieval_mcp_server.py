@@ -14,6 +14,7 @@ three backend adapters.
 from __future__ import annotations
 
 import json
+import hmac
 import os
 import sys
 from pathlib import Path
@@ -41,6 +42,64 @@ def _error(exc: Exception) -> dict[str, Any]:
     }
 
 
+def _env_bool(name: str, default: bool = False) -> bool:
+    value = os.getenv(name)
+    if value is None:
+        return default
+    return value.strip().lower() in {"1", "true", "yes", "on"}
+
+
+class BearerAuthMiddleware:
+    """Protect an ASGI HTTP app with one shared bearer token.
+
+    Authentication is deliberately transport-level and read-only.  The token
+    is supplied through the environment, never through the release artifacts,
+    and is compared without logging or exposing it in an error response.
+    """
+
+    def __init__(self, app: Any, token: str):
+        self.app = app
+        self.token = token
+
+    @staticmethod
+    def _authorization(scope: dict[str, Any]) -> str:
+        for name, value in scope.get("headers", []):
+            if name.lower() == b"authorization":
+                return value.decode("latin-1")
+        return ""
+
+    async def __call__(self, scope: dict[str, Any], receive: Any, send: Any) -> None:
+        if scope.get("type") != "http":
+            await self.app(scope, receive, send)
+            return
+
+        authorization = self._authorization(scope)
+        scheme, separator, credentials = authorization.partition(" ")
+        valid = (
+            separator == " "
+            and scheme.casefold() == "bearer"
+            and hmac.compare_digest(credentials.strip(), self.token)
+        )
+        if valid:
+            await self.app(scope, receive, send)
+            return
+
+        body = b'{"error":"unauthorized"}'
+        await send(
+            {
+                "type": "http.response.start",
+                "status": 401,
+                "headers": [
+                    (b"content-type", b"application/json"),
+                    (b"content-length", str(len(body)).encode("ascii")),
+                    (b"www-authenticate", b'Bearer realm="retrieval-mcp"'),
+                    (b"cache-control", b"no-store"),
+                ],
+            }
+        )
+        await send({"type": "http.response.body", "body": body})
+
+
 def build_mcp(service: RetrievalService):
     try:
         from mcp.server.fastmcp import FastMCP
@@ -55,7 +114,10 @@ def build_mcp(service: RetrievalService):
         "Sanchaya Retrieval",
         instructions=(
             "Read-only retrieval over one release. Read ontology context first; "
-            "resolve entities before passing canonical IDs to search; cite fetched passages."
+            "use get_author_works or search_documents for metadata questions; "
+            "resolve entities before passing canonical IDs to search; use stable "
+            "chunk/document references and fetch_passages for multiple evidence "
+            "items; cite fetched passages."
         ),
         host=host,
         port=port,
@@ -88,6 +150,78 @@ def build_mcp(service: RetrievalService):
     def lookup_entity(name: str, type_hint: str | None = None, limit: int = 10) -> dict[str, Any]:
         try:
             return service.entities.lookup(name, type_hint=type_hint, limit=limit)
+        except RetrievalError as exc:
+            return _error(exc)
+
+    @server.tool(
+        name="get_document_metadata",
+        description="Return bounded catalog metadata and provenance for one stable document ID.",
+    )
+    def get_document_metadata(document_id: str) -> dict[str, Any]:
+        try:
+            return service.get_document_metadata(document_id)
+        except RetrievalError as exc:
+            return _error(exc)
+
+    @server.tool(
+        name="get_documents_metadata",
+        description="Batch-resolve bounded catalog metadata for stable document IDs.",
+    )
+    def get_documents_metadata(document_ids: list[str]) -> dict[str, Any]:
+        try:
+            return service.get_documents_metadata(document_ids[:50])
+        except RetrievalError as exc:
+            return _error(exc)
+
+    @server.tool(
+        name="search_documents",
+        description="Search the complete document metadata catalog without full-text retrieval. Results include indexed_in_release; set it true to restrict to documents with content in this release.",
+    )
+    def search_documents(
+        query: str = "",
+        source_kind: str | None = None,
+        year: str | None = None,
+        category: str | None = None,
+        indexed_in_release: bool | None = None,
+        limit: int = 20,
+    ) -> dict[str, Any]:
+        try:
+            return service.search_documents(
+                query,
+                source_kind=source_kind,
+                year=year,
+                category=category,
+                indexed_in_release=indexed_in_release,
+                limit=limit,
+            )
+        except RetrievalError as exc:
+            return _error(exc)
+
+    @server.tool(
+        name="get_author_works",
+        description="Find all cataloged works for an author without repeated full-text searches. Results include indexed_in_release; set it true to restrict to documents with content in this release.",
+    )
+    def get_author_works(
+        author: str,
+        indexed_in_release: bool | None = None,
+        limit: int = 50,
+    ) -> dict[str, Any]:
+        try:
+            return service.get_author_works(
+                author,
+                indexed_in_release=indexed_in_release,
+                limit=limit,
+            )
+        except RetrievalError as exc:
+            return _error(exc)
+
+    @server.tool(
+        name="get_corpus_info",
+        description="Return corpus source counts, catalog backend, release identity, and entity-index coverage.",
+    )
+    def get_corpus_info() -> dict[str, Any]:
+        try:
+            return service.get_corpus_info()
         except RetrievalError as exc:
             return _error(exc)
 
@@ -127,6 +261,16 @@ def build_mcp(service: RetrievalService):
             return _error(exc)
 
     @server.tool(
+        name="fetch_passages",
+        description="Fetch several bounded passages in one call using search result references.",
+    )
+    def fetch_passages(requests: list[dict[str, Any]]) -> dict[str, Any]:
+        try:
+            return service.fetch_passages(requests[:50])
+        except RetrievalError as exc:
+            return _error(exc)
+
+    @server.tool(
         name="list_entity_mentions",
         description="Browse resolved mentions and evidence links for a canonical entity ID.",
     )
@@ -156,7 +300,34 @@ def main() -> int:
     if transport not in {"stdio", "sse", "streamable-http"}:
         print(f"unsupported MCP_TRANSPORT: {transport}", file=sys.stderr)
         return 2
-    server.run(transport=transport)
+    if transport == "streamable-http":
+        token = os.getenv("MCP_BEARER_TOKEN", "").strip()
+        auth_required = _env_bool("MCP_AUTH_REQUIRED", default=True)
+        if auth_required and not token:
+            print(
+                "MCP_BEARER_TOKEN is required for streamable HTTP; "
+                "set MCP_AUTH_REQUIRED=false only for an explicitly local test",
+                file=sys.stderr,
+            )
+            return 2
+        app = server.streamable_http_app()
+        if token:
+            app = BearerAuthMiddleware(app, token)
+        try:
+            import uvicorn
+        except ModuleNotFoundError as exc:
+            print("streamable HTTP needs uvicorn", file=sys.stderr)
+            return 2
+        uvicorn.run(
+            app,
+            host=os.getenv("MCP_HOST", "127.0.0.1"),
+            port=int(os.getenv("MCP_PORT", "8787")),
+            log_level=os.getenv("MCP_LOG_LEVEL", "info"),
+        )
+    else:
+        # stdio and SSE are retained for local tooling.  The bearer-token
+        # boundary applies to the HTTP service exposed to MCP clients.
+        server.run(transport=transport)
     return 0
 
 

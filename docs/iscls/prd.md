@@ -54,14 +54,14 @@ The pilot contains:
 - deterministic, structure-aware retrieval chunks;
 - a small, versioned starter ontology and seed entities;
 - Zoekt lexical search;
-- a vector index over the 120 papers plus a selected Jyotisha slice of Sanchaya
-  (with a measured path to all eligible Sanchaya text);
+- a vector index over the 120 papers plus the repeatable `Jyotisham` Sanchaya
+  scope (with a measured path to all eligible Sanchaya text);
 - structured entity extraction and a minimal entity lookup projection; and
 - read-only MCP tools.
 
-The first implementation and evaluation run locally. The current local
-vertical slice covers 29 audit-set papers and 30 Sanchaya probe files; the
-reviewed pilot target is 120 accepted papers. Production Zoekt hosting, MCP
+The first implementation and evaluation run locally. The active local release
+covers all 120 accepted papers and the Jyotisham scope; the 29-paper audit set
+and probe scope remain calibration options. Production Zoekt hosting, MCP
 deployment, authentication, and scheduling remain follow-on work after the
 local review gates pass.
 
@@ -151,14 +151,20 @@ Codex.
 | `search_corpus` | Run lexical, vector, or hybrid retrieval with metadata filters | No |
 | `fetch_passage` | Return passage text, location, provenance, and media references | No |
 | `list_entity_mentions` | Browse mentions and links for a canonical entity | No |
+| `get_document_metadata` | Resolve one stable document ID through the release catalog | No |
+| `get_documents_metadata` | Batch-resolve stable document IDs | No |
+| `search_documents` | Search bounded metadata filters without full-text retrieval | No |
+| `get_author_works` | Resolve an author's cataloged works | No |
+| `get_corpus_info` | Report source counts, revisions, and entity coverage | No |
 
 The exact JSON schemas belong in the architecture document and are versioned
 with the MCP implementation. The server also exposes a compact read-only
 `ontology_context` resource (or compatibility tool) so the host can plan calls
 using the starter types and normalization rules.
 
-The corpus manifest carries typed source references for each paper, including
-INSA/IJHS, CAHC, and managed GCS references when applicable. A paper can have
+The release catalog carries typed source references for each document. Patra
+Darpan SQLite remains authoritative for `pd:*` paper metadata; Sanchaya source
+rows remain authoritative for `sanchaya:*` text metadata. A document can have
 multiple references; they are provenance, not duplicate corpus documents.
 
 ## Acceptance criteria
@@ -172,6 +178,9 @@ The pilot is ready for review when:
   semantic repository.
 - Markdown tables survive export and render in fetched evidence.
 - The Zoekt surface searches content files without exposing catalog metadata.
+- The active release contains a composite catalog covering every document
+  represented by its source rows, with Patra Darpan and Sanchaya authority
+  recorded separately.
 - Vector results return `document_id`, `chunk_id`, score, and provenance.
 - The vector build report states its source eligibility policy, token/chunk
   count, build time, model, and measured Devanagari/IAST quality.
@@ -180,6 +189,7 @@ The pilot is ready for review when:
   and nullable `canonical_entity_id`.
 - Entity lookup returns seed or resolved candidates with aliases and evidence
   links.
+- Entity-index document coverage is reported separately from catalog coverage.
 - The host can read compact ontology context before issuing entity/search calls.
 - All indexes identify the same Sanchaya commit.
 - MCP rejects metadata paths and arbitrary write operations.

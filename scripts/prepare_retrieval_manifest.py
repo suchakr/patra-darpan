@@ -61,6 +61,42 @@ ANCHOR_PROBE_PATHS = [
 ]
 
 
+def discover_text_paths(root: Path, prefix: str | None = None) -> list[str]:
+    """Return deterministic, UTF-8 corpus paths below a Sanchaya prefix.
+
+    The manifest is intentionally explicit.  Discovery happens once during a
+    build, after which hashes in the manifest make chunk and vector builds
+    reproducible.  Binary assets and the exported paper tree are not Sanchaya
+    text projections for this selector.
+    """
+
+    base = root / prefix if prefix else root
+    if not base.is_dir():
+        raise FileNotFoundError(f"Sanchaya source directory is missing: {base}")
+    ignored_roots = {".git", "patra-darpan"}
+    ignored_suffixes = {
+        ".pdf", ".png", ".jpg", ".jpeg", ".gif", ".webp", ".zip", ".gz",
+        ".sqlite", ".zoekt", ".pyc",
+    }
+    paths: list[str] = []
+    for path in sorted(base.rglob("*")):
+        if not path.is_file():
+            continue
+        relative = path.relative_to(root)
+        if any(part in ignored_roots for part in relative.parts):
+            continue
+        if path.suffix.lower() in ignored_suffixes:
+            continue
+        if prefix is None and relative.name == "README.md":
+            continue
+        # The builders consume Unicode text.  Fail during manifest creation,
+        # rather than halfway through a long embedding job, if a selected file
+        # is not decodable.
+        path.read_text(encoding="utf-8")
+        paths.append(relative.as_posix())
+    return paths
+
+
 def utc_now() -> str:
     return datetime.now(UTC).replace(microsecond=0).isoformat().replace("+00:00", "Z")
 
@@ -113,7 +149,13 @@ def load_audit_ids(path: Path) -> list[str]:
     return [line.strip() for line in path.read_text(encoding="utf-8").splitlines() if line.strip() and not line.startswith("#")]
 
 
-def build_manifest(sanchaya_root: Path, audit_set: Path) -> dict[str, Any]:
+def build_manifest(
+    sanchaya_root: Path,
+    audit_set: Path,
+    *,
+    paper_scope: str = "audit",
+    sanchaya_scope: str = "probe",
+) -> dict[str, Any]:
     status = run_git(sanchaya_root, "status", "--porcelain")
     if status:
         raise RuntimeError(
@@ -123,15 +165,23 @@ def build_manifest(sanchaya_root: Path, audit_set: Path) -> dict[str, Any]:
     corpus_manifest_path = sanchaya_root / "patra-darpan" / "catalog" / "corpus-manifest.jsonl"
     corpus_rows = read_jsonl(corpus_manifest_path)
     by_doc = {str(row.get("source_doc_id")): row for row in corpus_rows}
-    paper_ids = load_audit_ids(audit_set)
-    if len(paper_ids) != 29:
-        raise ValueError(f"expected 29 audit papers, found {len(paper_ids)} in {audit_set}")
-
     papers: list[dict[str, Any]] = []
-    for doc_id in paper_ids:
-        row = by_doc.get(doc_id)
-        if row is None:
-            raise ValueError(f"audit document is absent from Sanchaya manifest: {doc_id}")
+    if paper_scope == "audit":
+        paper_ids = load_audit_ids(audit_set)
+        if len(paper_ids) != 29:
+            raise ValueError(f"expected 29 audit papers, found {len(paper_ids)} in {audit_set}")
+        paper_rows = []
+        for doc_id in paper_ids:
+            row = by_doc.get(doc_id)
+            if row is None:
+                raise ValueError(f"audit document is absent from Sanchaya manifest: {doc_id}")
+            paper_rows.append(row)
+    elif paper_scope == "all":
+        paper_rows = sorted(corpus_rows, key=lambda row: str(row.get("document_id") or ""))
+    else:
+        raise ValueError(f"unsupported paper scope: {paper_scope}")
+
+    for row in paper_rows:
         repo_path = str(row["repo_path"])
         record = file_record(
             sanchaya_root,
@@ -139,7 +189,7 @@ def build_manifest(sanchaya_root: Path, audit_set: Path) -> dict[str, Any]:
             source_id=str(row["document_id"]),
             source_kind="patra-darpan",
             document_id=row.get("document_id"),
-            source_doc_id=doc_id,
+            source_doc_id=row.get("source_doc_id"),
             title=row.get("title"),
             categories=row.get("categories", []),
             quality_status=row.get("quality_status"),
@@ -151,7 +201,16 @@ def build_manifest(sanchaya_root: Path, audit_set: Path) -> dict[str, Any]:
         papers.append(record)
 
     probes: list[dict[str, Any]] = []
-    for repo_path in [*JYOTISHAM_PROBE_PATHS, *ANCHOR_PROBE_PATHS]:
+    if sanchaya_scope == "probe":
+        source_paths = [*JYOTISHAM_PROBE_PATHS, *ANCHOR_PROBE_PATHS]
+    elif sanchaya_scope == "jyotisham":
+        source_paths = [*discover_text_paths(sanchaya_root, "Jyotisham"), *ANCHOR_PROBE_PATHS]
+    elif sanchaya_scope == "all":
+        source_paths = discover_text_paths(sanchaya_root)
+    else:
+        raise ValueError(f"unsupported Sanchaya scope: {sanchaya_scope}")
+    source_paths = list(dict.fromkeys(source_paths))
+    for repo_path in source_paths:
         probes.append(
             file_record(
                 sanchaya_root,
@@ -177,8 +236,10 @@ def build_manifest(sanchaya_root: Path, audit_set: Path) -> dict[str, Any]:
             "audit_set": str(audit_set),
             "paper_count": len(papers),
             "probe_count": len(probes),
-            "jyotisham_probe_count": len(JYOTISHAM_PROBE_PATHS),
-            "anchor_probe_count": len(ANCHOR_PROBE_PATHS),
+            "paper_scope": paper_scope,
+            "sanchaya_scope": sanchaya_scope,
+            "jyotisham_probe_count": sum(path.startswith("Jyotisham/") for path in source_paths),
+            "anchor_probe_count": sum(path in ANCHOR_PROBE_PATHS for path in source_paths),
         },
         "sources": [*papers, *probes],
     }
@@ -193,6 +254,18 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--audit-set", type=Path, default=ROOT / "decode-lab" / "sets" / "audit-set.txt")
     parser.add_argument(
+        "--paper-scope",
+        choices=("audit", "all"),
+        default=os.environ.get("RETRIEVAL_PAPER_SCOPE", "audit"),
+        help="Patra Darpan rows to include: the 29-paper audit set or all exported papers",
+    )
+    parser.add_argument(
+        "--sanchaya-scope",
+        choices=("probe", "jyotisham", "all"),
+        default=os.environ.get("RETRIEVAL_SANCHAYA_SCOPE", "probe"),
+        help="Sanchaya text scope; jyotisham includes all Jyotisham files plus anchor probes",
+    )
+    parser.add_argument(
         "--output",
         type=Path,
         default=ROOT / ".local" / "retrieval" / "input-manifest.json",
@@ -202,7 +275,12 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> int:
     args = parse_args()
-    manifest = build_manifest(args.sanchaya_root.expanduser().resolve(), args.audit_set.resolve())
+    manifest = build_manifest(
+        args.sanchaya_root.expanduser().resolve(),
+        args.audit_set.resolve(),
+        paper_scope=args.paper_scope,
+        sanchaya_scope=args.sanchaya_scope,
+    )
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(

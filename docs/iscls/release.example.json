@@ -9,9 +9,20 @@
     "sanchaya_commit": "0123456789abcdef0123456789abcdef01234567",
     "patra_darpan_repo": "git@github.com:suchakr/patra-darpan.git",
     "patra_darpan_commit": "abcdef0123456789abcdef0123456789abcdef01",
-    "corpus_manifest_sha256": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
+    "corpus_manifest_sha256": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
+    "catalog_revision": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
   },
   "pipeline": {
+    "source_scope": {
+      "paper_scope": "all",
+      "sanchaya_scope": "jyotisham",
+      "source_count": 154
+    },
+    "catalog": {
+      "id": "sqlite-composite-release-catalog",
+      "version": "retrieval.catalog.v2",
+      "revision": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
+    },
     "ontology": {
       "id": "jyotisha",
       "version": "0.3.0",
@@ -35,6 +46,14 @@
     }
   },
   "artifacts": {
+    "input_manifest": {
+      "path": "input-manifest.json",
+      "sha256": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
+    },
+    "retrieval_catalog": {
+      "path": "retrieval-catalog.sqlite",
+      "sha256": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
+    },
     "corpus_manifest": {
       "path": "corpus-manifest.jsonl",
       "sha256": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
@@ -64,8 +83,14 @@
   },
   "metrics": {
     "document_count": 59,
+    "catalog_document_count": 59,
+    "catalog_patra_darpan_document_count": 29,
+    "catalog_sanchaya_document_count": 30,
+    "catalog_indexed_document_count": 59,
+    "catalog_metadata_only_document_count": 0,
     "chunk_count": 3625,
     "mention_count": 10231,
+    "entity_document_count": 59,
     "vector_point_count": 3625
   },
   "notes": "Illustrative contract only; paths are relative to the release root."
