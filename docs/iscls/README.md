@@ -105,6 +105,10 @@ when using a different env-file location.
 The Makefile derives its repository path from the Makefile itself. No `PD_DIR`
 or shell-profile setting is required. `SANCHAYA_REPO_ROOT` remains an explicit
 env-file setting because it points to the separately managed corpus checkout.
+`make catalog` builds or atomically refreshes the canonical Patra Darpan SQLite
+catalog in a one-shot container. `make index` runs it automatically before
+building retrieval projections. Run `make catalog` by itself when only the
+metadata catalog needs refreshing; it does not start Qdrant or build vectors.
 
 ## Local build and smoke path
 
@@ -116,8 +120,8 @@ uv run python scripts/prepare_retrieval_manifest.py
 uv run python scripts/build_retrieval_chunks.py
 uv run python scripts/build_retrieval_entities.py
 
-# Build/update the canonical Patra Darpan catalog in its own checkout first.
-(cd ../patra-darpan && uv run python scripts/build_corpus_metadata.py)
+# Build/update only the canonical metadata catalog when needed.
+make catalog
 ```
 
 For the repeatable path, build and activate one release with Docker Compose:

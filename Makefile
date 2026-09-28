@@ -1,7 +1,7 @@
 SHELL := /bin/bash
 
 .DEFAULT_GOAL := help
-.NOTPARALLEL: pilot smoke
+.NOTPARALLEL: index pilot smoke
 
 # Resolve paths from this Makefile, not from the caller's shell and not from a
 # global shell profile. This keeps `git clone && cd repo && make <target>`
@@ -27,7 +27,7 @@ COMPOSE := $(COMPOSE_BASE)
 MODE := development
 endif
 
-.PHONY: help prod-env check config test build qdrant wait-qdrant index inspect mcp up \
+.PHONY: help prod-env check config test build catalog qdrant wait-qdrant index inspect mcp up \
 	backend-smoke mcp-smoke smoke pilot https logs down
 
 help:
@@ -38,6 +38,7 @@ help:
 		"  make check                         Validate env, Compose, and whitespace" \
 		"  make test                          Run Python unit tests (development)" \
 		"  make build                         Build retrieval images" \
+		"  make catalog                       Build/refresh the canonical SQLite catalog" \
 		"  make qdrant                        Start persistent Qdrant" \
 		"  make wait-qdrant                   Start Qdrant and wait until ready (used by index)" \
 		"  make index                         Build chunks, entities, vectors, release" \
@@ -100,6 +101,25 @@ test:
 build: check
 	$(COMPOSE) --profile build build retrieval-builder retrieval-mcp
 
+# The catalog source tree stays read-only in the container. Mount only the
+# canonical catalog directory as writable so the atomic file replacement can
+# complete without granting write access to the checkout.
+catalog: build
+	@set -eu; \
+	  catalog_file="$$($(COMPOSE) --profile build config --format json | \
+	    python3 -c 'import json,sys; s=json.load(sys.stdin)["services"]; t="/var/lib/patra-darpan/spasta-corpus.sqlite"; print(next(v["source"] for v in s["retrieval-builder"]["volumes"] if v.get("target")==t and v.get("type")=="bind"))')"; \
+	  case "$$catalog_file" in */.build~/spasta-corpus.sqlite) ;; \
+	    *) echo "RETRIEVAL_CANONICAL_CATALOG must end in /.build~/spasta-corpus.sqlite: $$catalog_file" >&2; exit 2 ;; \
+	  esac; \
+	  catalog_root="$$(dirname "$$catalog_file")"; \
+	  mkdir -p "$$catalog_root"; \
+	  echo "Building canonical catalog at $$catalog_file"; \
+	  $(COMPOSE) --profile build run --rm --no-deps \
+	    --volume "$$catalog_root:/data/patra-darpan/.build~:rw" \
+	    retrieval-catalog-builder; \
+	  test -f "$$catalog_file" || { echo "Catalog build did not create $$catalog_file" >&2; exit 1; }; \
+	  echo "Canonical catalog ready: $$catalog_file"
+
 qdrant: check
 	$(COMPOSE) up -d qdrant
 
@@ -109,7 +129,7 @@ wait-qdrant: build qdrant
 	$(COMPOSE) --profile build run --rm --no-deps retrieval-builder \
 		python scripts/wait_for_qdrant.py
 
-index: wait-qdrant
+index: catalog wait-qdrant
 	$(COMPOSE) --profile build run --rm retrieval-builder
 
 inspect: check

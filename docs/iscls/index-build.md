@@ -28,8 +28,9 @@ make smoke
 The Makefile starts the Compose-owned Qdrant service and waits for its HTTP
 endpoint before the builder runs. Production uses the same targets with
 `PROD=1` and defaults to `/etc/patra-darpan/retrieval.env`. Set `ENV_FILE=...`
-to override that path. The production overlay keeps Qdrant private and supplies
-its service URL.
+to override that path. `make index` refreshes the canonical Patra Darpan SQLite
+catalog first; run `make catalog` alone to refresh only that metadata catalog.
+The production overlay keeps Qdrant private and supplies its service URL.
 
 The builder performs, in order:
 

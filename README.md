@@ -136,6 +136,10 @@ make PROD=1 pilot
 `make help` lists the targets and environment-file defaults. `ENV_FILE=...` can
 override the development or production default when needed.
 
+`make index` refreshes the canonical SQLite catalog before building retrieval
+projections. Run `make catalog` alone when only the metadata catalog needs an
+update; it does not start Qdrant or build vectors.
+
 Start with [`docs/iscls/README.md`](docs/iscls/README.md) for commands and
 current status, then [`docs/iscls/catalog.md`](docs/iscls/catalog.md) and
 [`docs/iscls/architecture.md`](docs/iscls/architecture.md) for the catalog,

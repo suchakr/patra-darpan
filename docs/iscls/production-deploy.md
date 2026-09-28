@@ -16,8 +16,9 @@ production repositories.
   `sanchaya-zoekt_default`.
 - The production Sanchaya checkout must be clean and contain the exported
   `patra-darpan/` Markdown tree. The builder rejects a dirty source checkout.
-- The Patra Darpan checkout must contain the canonical SQLite catalog at the
-  path supplied by `RETRIEVAL_CANONICAL_CATALOG`.
+- The Patra Darpan checkout must contain the catalog source files. `make
+  PROD=1 index` builds the canonical SQLite catalog first at the configured
+  `RETRIEVAL_CANONICAL_CATALOG` path.
 - The host-only env file must set `MCP_BEARER_TOKEN`. The pilot uses one shared
   trusted-demo token; do not commit it or place it in a URL.
 - Keep enough disk for the E5 model cache, the Docker image, Qdrant storage,
@@ -45,7 +46,7 @@ make PROD=1 prod-env  # first-time setup; preserves an existing env file
 
 1. Update the repositories and select the reviewed commits. The Sanchaya
    checkout used by the builder must be the same content revision used by
-   Zoekt. Rebuild the Patra Darpan canonical catalog if its metadata changed.
+   Zoekt.
 
 2. Validate the production overlay before changing services:
 
@@ -60,15 +61,11 @@ make PROD=1 prod-env  # first-time setup; preserves an existing env file
    make PROD=1 build
    ```
 
-4. Start private Qdrant. It has no host port in the production overlay:
-
-   ```bash
-   make PROD=1 qdrant
-   ```
-
-5. Run the one-shot release builder. This creates the manifest, chunks,
-   entity JSONL, E5 vectors, release catalog, and active release. It does not
-   start MCP and it does not change the Zoekt index.
+4. Run the one-shot release builder. `make index` refreshes the canonical
+   SQLite catalog atomically, starts private Qdrant, waits for it, and then
+   creates the manifest, chunks, entity JSONL, E5 vectors, release catalog,
+   and active release. It does not start MCP and it does not change the Zoekt
+   index. Run `make catalog` alone to refresh only the SQLite catalog.
 
    ```bash
    make PROD=1 index
@@ -78,13 +75,13 @@ make PROD=1 prod-env  # first-time setup; preserves an existing env file
    Sanchaya revision, ontology version, or build scope must produce a new
    release ID before activation.
 
-6. Inspect the release before exposing it:
+5. Inspect the release before exposing it:
 
    ```bash
    make PROD=1 inspect
    ```
 
-7. Start MCP on the private network. No MCP or Qdrant host ports are exposed:
+6. Start MCP on the private network. No MCP or Qdrant host ports are exposed:
 
    ```bash
    make PROD=1 mcp
@@ -93,7 +90,7 @@ make PROD=1 prod-env  # first-time setup; preserves an existing env file
      -f docker-compose.retrieval.prod.yml ps
    ```
 
-8. The MCP route and `/api` denial are committed in the Sanchaya-Zoekt
+7. The MCP route and `/api` denial are committed in the Sanchaya-Zoekt
    repository. Do not hand-edit them on the host. The MCP service validates
    the bearer token from the host-only env file. Reload Caddy using the
    existing Sanchaya-Zoekt procedure, then test the public URL with an MCP

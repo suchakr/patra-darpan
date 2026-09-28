@@ -107,6 +107,17 @@ services:
       - ${RETRIEVAL_MODEL_CACHE_ROOT:?Set RETRIEVAL_MODEL_CACHE_ROOT}:/cache/huggingface
       - ${RETRIEVAL_ONTOLOGY_ROOT:?Set RETRIEVAL_ONTOLOGY_ROOT}:/app/ontology:ro
 
+  # Reuses the builder image but mounts the source checkout read-only. The
+  # Makefile adds a writable mount for only the canonical catalog directory.
+  retrieval-catalog-builder:
+    image: ${RETRIEVAL_BUILDER_IMAGE:-patra-darpan-retrieval-builder:dev}
+    profiles: [build]
+    network_mode: none
+    read_only: true
+    command: ["python", "/data/patra-darpan/scripts/build_corpus_metadata.py"]
+    volumes:
+      - .:/data/patra-darpan:ro
+
 volumes:
   retrieval_caddy_data:
   retrieval_caddy_config:
