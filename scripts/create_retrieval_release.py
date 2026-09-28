@@ -40,8 +40,17 @@ def sha256_file(path: Path) -> str:
 
 
 def git_revision(root: Path) -> str:
+    trusted_root = root.resolve()
     return subprocess.run(
-        ["git", "-C", str(root), "rev-parse", "HEAD"],
+        [
+            "git",
+            "-c",
+            f"safe.directory={trusted_root}",
+            "-C",
+            str(trusted_root),
+            "rev-parse",
+            "HEAD",
+        ],
         check=True,
         text=True,
         capture_output=True,
