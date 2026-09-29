@@ -1,5 +1,8 @@
 # ISCLS Three-Index Retrieval Pilot PRD
 
+> Historical pilot contract. For the implemented system, see
+> [`../retrieval/README.md`](../retrieval/README.md).
+
 ## Status
 
 Active pilot contract. The local vertical slice uses E5 with Qdrant, JSONL

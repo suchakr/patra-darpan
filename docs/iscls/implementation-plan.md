@@ -1,9 +1,12 @@
 # ISCLS Implementation Plan
 
+> Historical staged plan. For current architecture and operations, see
+> [`../retrieval/README.md`](../retrieval/README.md).
+
 ## Status
 
 Active implementation sequence for the contract in [prd.md](prd.md) and
-[architecture.md](architecture.md). Stages 0–5 have runnable local slices;
+[`../retrieval/architecture.md`](../retrieval/architecture.md). Stages 0–5 have runnable local slices;
 the composite release catalog is the current implementation step. Stage 6 is
 the review gate, and Stage 7 covers expansion and production hardening.
 
@@ -40,7 +43,7 @@ cadences. A build records the Sanchaya commit so that the split is observable.
 - retain the checkpoint and `main` merge already made on
   `feat/pdf-semantic-index`;
 - choose a fixed set of representative questions and expected evidence; and
-- record unresolved choices in [decisions.md](decisions.md), rather than
+- record unresolved choices in [`../retrieval/decisions.md`](../retrieval/decisions.md), rather than
   hiding them in implementation defaults.
 
 **Gate:** the team can explain the same document, chunk, corpus revision, and
@@ -374,7 +377,8 @@ scheduled.
 The local smoke test must exercise both sides of the local Zoekt boundary: the
 HTML search page remains available and a `POST /api/search` request succeeds
 when the local webserver is run with `-rpc`. Production work must preserve the
-private-RPC boundary described in [architecture.md](architecture.md): MCP and
+private-RPC boundary described in
+[`../retrieval/architecture.md`](../retrieval/architecture.md): MCP and
 Zoekt share the host's private network, Caddy serves the public HTML routes,
 and public `/api` paths are rejected before the catch-all proxy.
 

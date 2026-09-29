@@ -24,8 +24,8 @@ Current milestone:
 - canonical corpus build works
 - legacy-compatible `index.tsv` regeneration works from canonical root inputs
 - Patra Darpan `data.js` can be regenerated from `exports/index.tsv`
-- the local three-index retrieval pilot is documented in
-  [`docs/iscls/README.md`](docs/iscls/README.md)
+- the deployed retrieval and MCP system is documented in
+  [`docs/retrieval/README.md`](docs/retrieval/README.md)
 
 Legacy scripts still exist in the repo, but the intended authority flow is now:
 
@@ -52,8 +52,10 @@ Legacy scripts still exist in the repo, but the intended authority flow is now:
   generated compatibility outputs such as `index.tsv`
 - `reports/`
   validation, audit, and migration reports
+- `docs/retrieval/`
+  current retrieval architecture, contracts, operations, and release schemas
 - `docs/iscls/`
-  durable retrieval pilot contracts and release schemas
+  historical pilot PRD and staged implementation record
 - `reports/iscls/`
   one-off retrieval bakeoff and ontology-generation records
 - `ontology/`
@@ -86,8 +88,8 @@ Shared PDF asset roots live in the sibling `patra-darpan` checkout:
 
 ## Retrieval and MCP
 
-The local retrieval pilot builds a composite release catalog plus three
-projections from one reviewed source set:
+The retrieval system builds a composite release catalog plus three projections
+from one reviewed source set:
 
 - a read-only SQLite catalog covering Patra Darpan papers and release-scoped
   Sanchaya text files
@@ -95,56 +97,22 @@ projections from one reviewed source set:
 - an E5 semantic vector index in Qdrant
 - a v0.3 ontology-driven entity and mention projection
 
-A read-only MCP server adapts those projections for ChatGPT or Codex. It
-exposes entity, retrieval, batched passage, and metadata-first operations such as
-`get_document_metadata`, `get_documents_metadata`, `search_documents`,
-`get_author_works`, and `get_corpus_info`, plus read-only ontology and release
-resources. The chat host owns conversation and answer synthesis; the adapters
-own retrieval. Entity coverage is reported separately from catalog coverage.
+A read-only MCP server adapts those projections for ChatGPT, Codex, Claude, and
+other MCP clients. The chat host owns conversation and answer synthesis; the
+adapters own bounded retrieval. Catalog, indexed-content, and entity coverage
+are reported separately.
 
 The online MCP applications remain HTTP inside the private Docker network.
-Caddy provides HTTPS for harnesses: the OAuth process is the default `/mcp`
-route, `/mcp-oauth` is an explicit alias, and the existing bearer process is
-kept at `/mcp-bearer`. See [`docs/iscls/https.md`](docs/iscls/https.md).
+Caddy provides the public HTTPS/OAuth boundary at `/mcp`; the raw Zoekt RPC and
+the data services remain private.
 
-The companion [retrieval Compose file](docker-compose.retrieval.yml) defines
-the local/prod deployment shape: `qdrant`, the `retrieval-mcp` runtime, and a
-separate build profile. `Dockerfile.retrieval` packages the MCP runtime with
-the Qdrant client and E5 query embedder; model weights remain in the mounted
-Hugging Face cache. Copy [`retrieval.env.example`](retrieval.env.example) to
-an untracked `.env` beside the Compose file for development. The repository
-Makefile uses that file by default. If the host-only production env exists, it
-selects the production overlay automatically; otherwise it uses the
-development `.env`, so the target names and order stay the same:
+`make help` is the command entry point for both development and production.
+The Makefile, Compose files, and checked-in environment examples are the
+authoritative operational sources.
 
-```bash
-make check
-make build
-make index
-make inspect
-make smoke
-```
-
-For first-time production setup, create the private env file from the checked-in
-example, edit its paths/tokens, then use the same targets:
-
-```bash
-make PROD=1 prod-env
-make check
-make pilot
-```
-
-`make help` lists the targets and environment-file defaults. `ENV_FILE=...` can
-override the development or production default when needed.
-
-`make index` refreshes the canonical SQLite catalog before building retrieval
-projections. Run `make catalog` alone when only the metadata catalog needs an
-update; it does not start Qdrant or build vectors.
-
-Start with [`docs/iscls/README.md`](docs/iscls/README.md) for commands and
-current status, then [`docs/iscls/catalog.md`](docs/iscls/catalog.md) and
-[`docs/iscls/architecture.md`](docs/iscls/architecture.md) for the catalog,
-release lineage, adapters, data flow, and production network boundary.
+Start with [`docs/retrieval/README.md`](docs/retrieval/README.md) for the current
+architecture, contracts, operations, authentication model, and decisions.
+[`docs/iscls/README.md`](docs/iscls/README.md) retains the pilot history.
 
 ## Common Commands
 
@@ -472,6 +440,10 @@ Do not casually remove root-input rows, shared PDFs, or GCS objects. Prefer to:
   CAHC `P60` projection and `P85` cleanup plan
 - [web/README.md](web/README.md)
   local web runtime, Netlify dev/deploy, and link behavior
+- [docs/retrieval/README.md](docs/retrieval/README.md)
+  current retrieval architecture, contracts, operations, and authentication
+- [docs/iscls/README.md](docs/iscls/README.md)
+  historical ISCLS pilot PRD, implementation plan, and experiment references
 
 ## Environment
 
