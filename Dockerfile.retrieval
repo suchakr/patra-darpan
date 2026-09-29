@@ -16,11 +16,23 @@ WORKDIR /app
 
 # sentence-transformers is needed at query time to embed vector-search
 # questions. qdrant-client talks to the separate Qdrant service; requests is
-# used by the Zoekt adapter.
-RUN python -m pip install --no-cache-dir \
+# used by the Zoekt adapter. The x86 production host has no CUDA runtime, so
+# use PyTorch's CPU wheel there; the generic Linux wheel pulls several GB of
+# NVIDIA libraries. Keep the generic package on other architectures, including
+# the ARM64 development container.
+ARG TARGETARCH
+RUN arch="${TARGETARCH}"; \
+    if [ -z "$arch" ]; then arch="$(dpkg --print-architecture)"; fi; \
+    if [ "$arch" = "amd64" ]; then \
+      python -m pip install --no-cache-dir \
+        --extra-index-url https://download.pytorch.org/whl/cpu \
+        "torch==2.5.1+cpu"; \
+    else \
+      python -m pip install --no-cache-dir "torch==2.5.1"; \
+    fi \
+    && python -m pip install --no-cache-dir \
       "mcp==1.30.0" \
       "qdrant-client==1.14.1" \
-      "torch==2.5.1" \
       "sentence-transformers==3.4.1" \
       "transformers==4.48.3" \
       "httpx==0.28.1" \
