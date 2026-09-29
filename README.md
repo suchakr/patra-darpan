@@ -102,10 +102,10 @@ exposes entity, retrieval, batched passage, and metadata-first operations such a
 resources. The chat host owns conversation and answer synthesis; the adapters
 own retrieval. Entity coverage is reported separately from catalog coverage.
 
-The online MCP application remains HTTP inside the private Docker network.
-Caddy provides HTTPS for harnesses: use the optional local `https` profile for
-development, or the existing Sanchaya-Zoekt Caddy route in production. See
-[`docs/iscls/https.md`](docs/iscls/https.md).
+The online MCP applications remain HTTP inside the private Docker network.
+Caddy provides HTTPS for harnesses: the OAuth process is the default `/mcp`
+route, `/mcp-oauth` is an explicit alias, and the existing bearer process is
+kept at `/mcp-bearer`. See [`docs/iscls/https.md`](docs/iscls/https.md).
 
 The companion [retrieval Compose file](docker-compose.retrieval.yml) defines
 the local/prod deployment shape: `qdrant`, the `retrieval-mcp` runtime, and a
@@ -113,8 +113,9 @@ separate build profile. `Dockerfile.retrieval` packages the MCP runtime with
 the Qdrant client and E5 query embedder; model weights remain in the mounted
 Hugging Face cache. Copy [`retrieval.env.example`](retrieval.env.example) to
 an untracked `.env` beside the Compose file for development. The repository
-Makefile uses that file by default and selects the production overlay through
-`PROD=1`, so the target names and order stay the same in both environments:
+Makefile uses that file by default. If the host-only production env exists, it
+selects the production overlay automatically; otherwise it uses the
+development `.env`, so the target names and order stay the same:
 
 ```bash
 make check
@@ -125,12 +126,12 @@ make smoke
 ```
 
 For first-time production setup, create the private env file from the checked-in
-example, edit its paths/token, then use the same targets with `PROD=1`:
+example, edit its paths/tokens, then use the same targets:
 
 ```bash
 make PROD=1 prod-env
-make PROD=1 check
-make PROD=1 pilot
+make check
+make pilot
 ```
 
 `make help` lists the targets and environment-file defaults. `ENV_FILE=...` can

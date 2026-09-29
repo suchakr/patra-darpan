@@ -303,16 +303,18 @@ large derived object.
 hostname as deployment configuration. The MCP adapter must not hard-code either
 address or assume that the chat host can reach Zoekt directly.
 
-### D23 — Trusted-demo MCP authentication
+### D23 — MCP authentication routes
 
-**Decision:** The pilot's Streamable HTTP MCP endpoint requires one shared
-bearer token supplied through the untracked deployment environment. The MCP
-service validates it; Caddy terminates TLS and routes `/mcp`, while Qdrant and
-Zoekt RPC remain private. OAuth and per-user identity are deferred.
+**Decision:** Keep the existing shared bearer process for compatibility at the
+`/mcp-bearer` route. Add a second process using the same retrieval image and
+tools, with Google OAuth and a server-side email allowlist, at `/mcp`; expose
+`/mcp-oauth` as an explicit path alias. Caddy terminates TLS and keeps Qdrant
+and Zoekt RPC private.
 
-**Reason:** The event has a small trusted audience and needs a repeatable,
-low-ceremony deployment. The token is not suitable for attribution or a
-public service and must be rotated before broader use.
+**Reason:** This preserves the trusted-demo bearer client while making the
+default route usable by OAuth-capable ChatGPT and other MCP clients. The
+allowlist is deliberately a simple operator-edited file; its cache is refreshed
+by a cheap stat check and does not affect releases or indexing.
 
 ## Deferred decisions
 
@@ -326,12 +328,14 @@ questions reveal which types and relations earn their maintenance cost.
 Categories are metadata filters for now. Do not infer a final taxonomy or
 duplicate documents based on categories until retrieval questions justify it.
 
-### F3 — Long-term identity and authorization
+### F3 — OAuth administration and long-term identity
 
-Per-user OAuth, groups, token issuance, scheduling, and artifact hosting remain
-future work. The pilot's shared bearer token is intentionally not a long-term
-identity or authorization model. The host-private Zoekt RPC boundary in D19
-is accepted now; a public raw RPC route is not part of the pilot.
+Google OAuth and per-user access are implemented for the pilot. A web UI for
+editing the allowlist, group-based policy, account lifecycle, audit history,
+and broader identity providers remain future work. The shared bearer token is
+compatibility-only and is not a long-term identity model. The host-private
+Zoekt RPC boundary in D19 remains accepted; a public raw RPC route is not part
+of the pilot.
 
 ### F4 — Custom chat application
 

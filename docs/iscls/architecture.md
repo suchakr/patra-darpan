@@ -593,22 +593,37 @@ If a future deployment needs an MCP client outside the host, replace the deny
 route with an authenticated, IP-restricted route and add rate limiting at the
 gateway. `-rpc` itself provides neither authentication nor rate limiting.
 
-The public MCP route follows the same boundary but terminates TLS at Caddy.
-For the trusted pilot, the MCP service validates the shared bearer token from
-the host-only environment file:
+The public MCP routes follow the same boundary but terminate TLS at Caddy. The
+OAuth process is the default route; the bearer process remains a compatibility
+route:
 
 ```caddyfile
-@mcp path /mcp /mcp/*
-handle @mcp {
+@oauth path /mcp /mcp/* /.well-known/* /authorize /token /register /revoke /oauth/callback
+handle @oauth {
+    reverse_proxy retrieval-mcp-oauth:8788
+}
+
+@oauth_alias path /mcp-oauth /mcp-oauth/*
+handle @oauth_alias {
+    handle_path /mcp-oauth* {
+        rewrite * /mcp
+        reverse_proxy retrieval-mcp-oauth:8788
+    }
+}
+
+@bearer path /mcp-bearer /mcp-bearer/*
+handle @bearer {
+    uri strip_prefix /mcp-bearer
+    rewrite * /mcp
     reverse_proxy retrieval-mcp:8787
 }
 ```
 
-The retrieval companion's production Compose overlay attaches `retrieval-mcp`
-to the existing private Zoekt network and removes host port publication. The
-external URL is therefore HTTPS at the Caddy hostname while the container hop
-remains HTTP. See [https.md](https.md) for the local `tls internal` profile and
-the production invocation.
+The retrieval companion's production Compose overlay attaches both MCP
+processes to the existing private Zoekt network and removes host port
+publication. The external URL is therefore HTTPS at the Caddy hostname while
+the container hop remains HTTP. See [https.md](https.md) for the local `tls
+internal` profile and the production invocation.
 
 ```mermaid
 flowchart LR

@@ -32,8 +32,9 @@ pilot history can later be retained as a Git tag without renaming the runtime.
 7. [release.schema.json](release.schema.json) and
    [release.example.json](release.example.json) — release lineage contract.
 8. [https.md](https.md) — local HTTPS test gateway and production Caddy boundary.
-9. [index-build.md](index-build.md) — repeatable Jyotisham/vector release build.
-10. [production-deploy.md](production-deploy.md) — production preconditions and
+9. [oauth.md](oauth.md) — Google OAuth, allowlist, and route lifecycle.
+10. [index-build.md](index-build.md) — repeatable Jyotisham/vector release build.
+11. [production-deploy.md](production-deploy.md) — production preconditions and
     deploy/build/activate sequence.
 
 The one-off experiment and generation records are kept separately:
@@ -91,12 +92,12 @@ make smoke
 `make pilot` runs that sequence as one ordered flow. For first-time production
 setup, create the private env file from the checked-in
 [production example](../../retrieval.env.prod.example), edit its host paths and
-token, then run:
+tokens, then run:
 
 ```bash
 make PROD=1 prod-env
-make PROD=1 check
-make PROD=1 pilot
+make check
+make pilot
 ```
 
 `make help` lists the targets and default env paths. Set `ENV_FILE=...` only
@@ -134,9 +135,9 @@ make inspect
 make smoke
 ```
 
-The same targets run in production with `PROD=1`; the default env file is
-`/etc/patra-darpan/retrieval.env`. `make PROD=1 pilot` runs the one-command
-production flow.
+When `/etc/patra-darpan/retrieval.env` exists, the same targets automatically
+select the production overlay. `make pilot` runs the one-command production
+flow; `PROD=1` is needed only for the guarded `prod-env` setup target.
 
 The low-level `run_retrieval_vector_build.py` and
 `create_retrieval_release.py` commands remain useful for calibration and

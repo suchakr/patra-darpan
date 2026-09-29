@@ -1,13 +1,33 @@
-# Local HTTPS adapter for harnesses that require an https:// MCP URL.
-# Caddy terminates TLS; retrieval-mcp remains plain HTTP on the private
-# Compose network. The local CA is intentionally not a public certificate.
+# Local HTTPS edge. OAuth is the default /mcp route; the bearer endpoint is
+# retained at /mcp-bearer for existing clients and rollback.
 
 localhost:8443 {
 	tls internal
 
+	@oauth_metadata path /.well-known/* /authorize /token /register /revoke /oauth/callback
+	handle @oauth_metadata {
+		reverse_proxy retrieval-mcp-oauth:8788
+	}
+
+	@oauth_alias path /mcp-oauth /mcp-oauth/*
+	handle @oauth_alias {
+		handle_path /mcp-oauth* {
+			rewrite * /mcp
+			reverse_proxy retrieval-mcp-oauth:8788
+		}
+	}
+
 	@mcp path /mcp /mcp/*
 	handle @mcp {
-		reverse_proxy retrieval-mcp:8787
+		reverse_proxy retrieval-mcp-oauth:8788
+	}
+
+	@bearer path /mcp-bearer /mcp-bearer/*
+	handle @bearer {
+		handle_path /mcp-bearer* {
+			rewrite * /mcp
+			reverse_proxy retrieval-mcp:8787
+		}
 	}
 
 	handle {

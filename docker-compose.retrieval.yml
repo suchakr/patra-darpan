@@ -15,6 +15,8 @@
 #   RETRIEVAL_CANONICAL_CATALOG  Patra Darpan .build~/spasta-corpus.sqlite
 #   RETRIEVAL_ZOEKT_URL          Zoekt RPC URL reachable from this project
 #   RETRIEVAL_HTTPS_PORT         optional local Caddy HTTPS port (default 8443)
+#   RETRIEVAL_AUTH_STATE_ROOT    writable OAuth client/token state directory
+#   MCP_OAUTH_ALLOWLIST_FILE     host path to the OAuth email allowlist
 #
 # The builder and MCP images/entrypoints are implementation work in the
 # Patra-Darpan branch. Their names are configurable so the same overlay can
@@ -61,6 +63,47 @@ services:
     extra_hosts:
       - "host.docker.internal:host-gateway"
 
+  # OAuth is a second MCP process using the same retrieval image and release.
+  # Keeping it separate preserves the existing bearer endpoint and keeps the
+  # tool implementation independent of the authentication mode.
+  retrieval-mcp-oauth:
+    image: ${RETRIEVAL_MCP_IMAGE:-patra-darpan-retrieval-mcp:dev}
+    build:
+      context: .
+      dockerfile: Dockerfile.retrieval
+      target: retrieval-runtime
+    profiles: [runtime, oauth]
+    restart: unless-stopped
+    depends_on:
+      - qdrant
+    environment:
+      RETRIEVAL_RELEASE_ROOT: /var/lib/retrieval/releases
+      RETRIEVAL_ACTIVE_RELEASE: /var/lib/retrieval/releases/active-release.json
+      RETRIEVAL_ONTOLOGY_PATH: /app/ontology/jyotisha-v0.3.json
+      QDRANT_URL: ${RETRIEVAL_QDRANT_URL:-http://qdrant:6333}
+      ZOEKT_URL: ${RETRIEVAL_ZOEKT_URL:?Set RETRIEVAL_ZOEKT_URL}
+      MCP_HOST: 0.0.0.0
+      MCP_PORT: 8788
+      MCP_TRANSPORT: streamable-http
+      MCP_AUTH_MODE: oauth
+      MCP_OAUTH_ISSUER_URL: ${MCP_OAUTH_ISSUER_URL:-}
+      MCP_OAUTH_RESOURCE_URL: ${MCP_OAUTH_RESOURCE_URL:-}
+      MCP_OAUTH_REDIRECT_URI: ${MCP_OAUTH_REDIRECT_URI:-}
+      MCP_OAUTH_GOOGLE_CLIENT_ID: ${MCP_OAUTH_GOOGLE_CLIENT_ID:-}
+      MCP_OAUTH_GOOGLE_CLIENT_SECRET: ${MCP_OAUTH_GOOGLE_CLIENT_SECRET:-}
+      MCP_OAUTH_GOOGLE_TOKENINFO_URL: ${MCP_OAUTH_GOOGLE_TOKENINFO_URL:-https://oauth2.googleapis.com/tokeninfo}
+      MCP_OAUTH_ALLOWLIST_FILE: /etc/retrieval-auth/allowlist.txt
+      MCP_OAUTH_STATE_DB: /var/lib/retrieval/auth/oauth.sqlite3
+      MCP_OAUTH_SCOPE: ${MCP_OAUTH_SCOPE:-mcp}
+    volumes:
+      - ${RETRIEVAL_RELEASE_ROOT:?Set RETRIEVAL_RELEASE_ROOT}:/var/lib/retrieval/releases:ro
+      - ${RETRIEVAL_MODEL_CACHE_ROOT:?Set RETRIEVAL_MODEL_CACHE_ROOT}:/cache/huggingface
+      - ${RETRIEVAL_ONTOLOGY_ROOT:?Set RETRIEVAL_ONTOLOGY_ROOT}:/app/ontology:ro
+      - ${RETRIEVAL_AUTH_STATE_ROOT:-/tmp/patra-darpan-auth}:/var/lib/retrieval/auth
+      - ${MCP_OAUTH_ALLOWLIST_FILE:-/dev/null}:/etc/retrieval-auth/allowlist.txt:ro
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
   # Optional local TLS terminator. Production uses the existing
   # sanchaya-zoekt Caddy instance instead; see docker-compose.retrieval.prod.yml
   # and docs/iscls/https.md.
@@ -70,6 +113,7 @@ services:
     restart: unless-stopped
     depends_on:
       - retrieval-mcp
+      - retrieval-mcp-oauth
     ports:
       - "127.0.0.1:${RETRIEVAL_HTTPS_PORT:-8443}:8443"
     volumes:

@@ -100,7 +100,7 @@ class BearerAuthMiddleware:
         await send({"type": "http.response.body", "body": body})
 
 
-def build_mcp(service: RetrievalService):
+def build_mcp(service: RetrievalService, *, oauth_provider: Any | None = None):
     try:
         from mcp.server.fastmcp import FastMCP
     except ModuleNotFoundError as exc:
@@ -110,6 +110,7 @@ def build_mcp(service: RetrievalService):
 
     host = os.getenv("MCP_HOST", "127.0.0.1")
     port = int(os.getenv("MCP_PORT", "8787"))
+    auth_settings = oauth_provider.auth_settings() if oauth_provider is not None else None
     server = FastMCP(
         "Sanchaya Retrieval",
         instructions=(
@@ -123,7 +124,15 @@ def build_mcp(service: RetrievalService):
         port=port,
         stateless_http=True,
         json_response=True,
+        auth_server_provider=oauth_provider,
+        auth=auth_settings,
     )
+
+    if oauth_provider is not None:
+
+        @server.custom_route("/oauth/callback", methods=["GET"], include_in_schema=False)
+        async def oauth_callback(request):
+            return await oauth_provider.handle_callback(request)
 
     @server.resource(
         "retrieval://ontology-context",
@@ -292,7 +301,15 @@ def main() -> int:
             zoekt_url=os.getenv("ZOEKT_URL") or os.getenv("RETRIEVAL_ZOEKT_URL"),
             qdrant_url=os.getenv("QDRANT_URL") or os.getenv("RETRIEVAL_QDRANT_URL"),
         )
-        server = build_mcp(service)
+        auth_mode = os.getenv("MCP_AUTH_MODE", "bearer").strip().lower()
+        if auth_mode not in {"bearer", "oauth"}:
+            raise ValueError("MCP_AUTH_MODE must be bearer or oauth")
+        oauth_provider = None
+        if auth_mode == "oauth":
+            from lib.retrieval_oauth import GoogleOAuthProvider
+
+            oauth_provider = GoogleOAuthProvider.from_env()
+        server = build_mcp(service, oauth_provider=oauth_provider)
     except (RetrievalError, OSError, ValueError) as exc:
         print(f"retrieval MCP configuration error: {exc}", file=sys.stderr)
         return 2
@@ -301,18 +318,19 @@ def main() -> int:
         print(f"unsupported MCP_TRANSPORT: {transport}", file=sys.stderr)
         return 2
     if transport == "streamable-http":
-        token = os.getenv("MCP_BEARER_TOKEN", "").strip()
-        auth_required = _env_bool("MCP_AUTH_REQUIRED", default=True)
-        if auth_required and not token:
-            print(
-                "MCP_BEARER_TOKEN is required for streamable HTTP; "
-                "set MCP_AUTH_REQUIRED=false only for an explicitly local test",
-                file=sys.stderr,
-            )
-            return 2
         app = server.streamable_http_app()
-        if token:
-            app = BearerAuthMiddleware(app, token)
+        if auth_mode == "bearer":
+            token = os.getenv("MCP_BEARER_TOKEN", "").strip()
+            auth_required = _env_bool("MCP_AUTH_REQUIRED", default=True)
+            if auth_required and not token:
+                print(
+                    "MCP_BEARER_TOKEN is required for streamable HTTP; "
+                    "set MCP_AUTH_REQUIRED=false only for an explicitly local test",
+                    file=sys.stderr,
+                )
+                return 2
+            if token:
+                app = BearerAuthMiddleware(app, token)
         try:
             import uvicorn
         except ModuleNotFoundError as exc:

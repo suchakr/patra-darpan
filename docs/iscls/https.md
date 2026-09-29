@@ -1,8 +1,8 @@
 # MCP HTTPS boundary
 
-The retrieval application speaks Streamable HTTP on its private container
-port. TLS terminates at Caddy. The MCP service enforces the pilot's shared
-bearer token; Caddy supplies the certificate and routing.
+The retrieval application speaks Streamable HTTP on private container ports.
+TLS terminates at Caddy. OAuth is the default `/mcp` route; the existing
+bearer flow remains available at `/mcp-bearer`.
 
 ## Local harness test
 
@@ -12,24 +12,31 @@ Keep the ordinary local endpoint for host-side smoke tests:
 http://127.0.0.1:8787/mcp
 ```
 
-When a harness insists on HTTPS, start the optional local Caddy terminator:
+When a harness insists on HTTPS, populate the OAuth values and allowlist in
+the untracked `.env`, then start the local edge:
 
 ```bash
-docker compose --env-file .env \
-  --profile runtime up -d --no-deps retrieval-mcp
-docker compose --env-file .env \
-  --profile runtime --profile https \
-  up -d --no-deps retrieval-https
+make oauth-config
+make edge
 ```
 
-The endpoint is then:
+The default endpoint is then:
 
 ```text
 https://localhost:8443/mcp
 ```
 
-The local MCP client must send `Authorization: Bearer <MCP_BEARER_TOKEN>`.
-The same token is configured in the untracked local `.env` file.
+`https://localhost:8443/mcp-oauth` is an explicit alias for the same OAuth
+process.
+
+The `/mcp` client performs OAuth. Existing bearer clients use:
+
+```text
+https://localhost:8443/mcp-bearer
+```
+
+`make edge-smoke` verifies discovery, protected-resource metadata, and the
+unauthenticated challenges. A real Google login remains a manual client test.
 
 The local certificate is issued by Caddy's internal CA and is not publicly
 trusted. A harness must trust that CA, or the endpoint is suitable only for a
@@ -61,22 +68,37 @@ and [local MCP guidance](https://support.anthropic.com/en/articles/10949351-gett
 ## Production
 
 The existing Sanchaya-Zoekt Caddy instance owns the public certificate. Start
-the retrieval companion with the production overlay so MCP and Caddy share a
-private Docker network and no MCP or Qdrant host ports are published:
+the retrieval companion with the production overlay so both MCP processes and
+Qdrant share a private Docker network and no MCP or Qdrant host ports are
+published:
 
-```bash
-docker compose --env-file /etc/patra-darpan/retrieval.env \
-  -f docker-compose.retrieval.yml \
-  -f docker-compose.retrieval.prod.yml \
-  --profile runtime up -d retrieval-mcp qdrant
+```text
+make mcp
+make oauth-config
+make edge
 ```
 
 The route is committed in the Sanchaya-Zoekt repository; do not hand-edit it
-on the production host:
+on the production host. It should map OAuth and bearer paths separately:
 
 ```caddyfile
-@mcp path /mcp /mcp/*
-handle @mcp {
+@oauth path /mcp /mcp/* /.well-known/* /authorize /token /register /revoke /oauth/callback
+handle @oauth {
+    reverse_proxy retrieval-mcp-oauth:8788
+}
+
+@oauth_alias path /mcp-oauth /mcp-oauth/*
+handle @oauth_alias {
+    handle_path /mcp-oauth* {
+        rewrite * /mcp
+        reverse_proxy retrieval-mcp-oauth:8788
+    }
+}
+
+@bearer path /mcp-bearer /mcp-bearer/*
+handle @bearer {
+    uri strip_prefix /mcp-bearer
+    rewrite * /mcp
     reverse_proxy retrieval-mcp:8787
 }
 ```
@@ -87,9 +109,10 @@ The external harness uses:
 https://sanchaya.rasowshi.us/mcp
 ```
 
-The MCP service validates `Authorization: Bearer <MCP_BEARER_TOKEN>` from the
-host-only env file. Requests without the token receive `401`. Keep Qdrant and
-Zoekt `/api/*` private.
+The OAuth process validates Google identity and the server-side allowlist.
+The bearer process continues to validate `Authorization: Bearer
+<MCP_BEARER_TOKEN>` from the host-only env file. Keep Qdrant and Zoekt `/api/*`
+private.
 
 The production overlay is deliberately separate from the local Compose file:
 the local file remains runnable with the existing host-side Zoekt and Qdrant,

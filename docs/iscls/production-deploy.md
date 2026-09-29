@@ -2,8 +2,8 @@
 
 This is the controlled deployment sequence for the retrieval companion on the
 Sanchaya host. The retrieval containers are structurally deployable, but the
-public endpoint is not ready until the Zoekt RPC flag, Caddy route, and
-bearer-token boundary have been tested locally and pulled into both
+public endpoint is not ready until the Zoekt RPC flag, Caddy routes, OAuth
+allowlist, and bearer compatibility boundary have been tested locally and pulled into both
 production repositories.
 
 ## Preconditions
@@ -16,11 +16,12 @@ production repositories.
   `sanchaya-zoekt_default`.
 - The production Sanchaya checkout must be clean and contain the exported
   `patra-darpan/` Markdown tree. The builder rejects a dirty source checkout.
-- The Patra Darpan checkout must contain the catalog source files. `make
-  PROD=1 index` builds the canonical SQLite catalog first at the configured
+- The Patra Darpan checkout must contain the catalog source files. `make index`
+  builds the canonical SQLite catalog first at the configured
   `RETRIEVAL_CANONICAL_CATALOG` path.
-- The host-only env file must set `MCP_BEARER_TOKEN`. The pilot uses one shared
-  trusted-demo token; do not commit it or place it in a URL.
+- The host-only env file must set the bearer token for compatibility and the
+  OAuth client URLs/secret and allowlist path before the OAuth route is exposed.
+  Do not commit secrets or place them in URLs.
 - Keep enough disk for the E5 model cache, the Docker image, Qdrant storage,
   and one release build. The first CPU build is a long-running offline job.
 
@@ -51,14 +52,14 @@ make PROD=1 prod-env  # first-time setup; preserves an existing env file
 2. Validate the production overlay before changing services:
 
    ```bash
-   make PROD=1 check
+   make check
    docker network inspect sanchaya-zoekt_default >/dev/null
    ```
 
 3. Build the images from the reviewed Patra Darpan checkout:
 
    ```bash
-   make PROD=1 build
+   make build
    ```
 
 4. Run the one-shot release builder. `make index` refreshes the canonical
@@ -68,7 +69,7 @@ make PROD=1 prod-env  # first-time setup; preserves an existing env file
    index. Run `make catalog` alone to refresh only the SQLite catalog.
 
    ```bash
-   make PROD=1 index
+   make index
    ```
 
    Re-running for the same active source revision is a no-op. A changed
@@ -78,21 +79,28 @@ make PROD=1 prod-env  # first-time setup; preserves an existing env file
 5. Inspect the release before exposing it:
 
    ```bash
-   make PROD=1 inspect
+   make inspect
    ```
 
 6. Start MCP on the private network. No MCP or Qdrant host ports are exposed:
 
    ```bash
-   make PROD=1 mcp
+   make mcp
    docker compose --env-file /etc/patra-darpan/retrieval.env \
      -f docker-compose.retrieval.yml \
      -f docker-compose.retrieval.prod.yml ps
    ```
 
-7. The MCP route and `/api` denial are committed in the Sanchaya-Zoekt
+7. Validate the OAuth settings and start the OAuth process:
+
+   ```bash
+   make oauth-config
+   make edge
+   ```
+
+8. The MCP routes and `/api` denial are committed in the Sanchaya-Zoekt
    repository. Do not hand-edit them on the host. The MCP service validates
-   the bearer token from the host-only env file. Reload Caddy using the
+   Google identity against the server-side allowlist. Reload Caddy using the
    existing Sanchaya-Zoekt procedure, then test the public URL with an MCP
    client:
 
@@ -100,8 +108,9 @@ make PROD=1 prod-env  # first-time setup; preserves an existing env file
    https://sanchaya.rasowshi.us/mcp
    ```
 
-   Send `Authorization: Bearer <MCP_BEARER_TOKEN>`. Requests without the
-   token receive `401`; the public Zoekt UI remains available.
+   The OAuth route is `/mcp`; the compatibility bearer route is
+   `/mcp-bearer`. Requests without credentials receive `401`; the public Zoekt
+   UI remains available.
 
 ## Subsequent corpus or code updates
 

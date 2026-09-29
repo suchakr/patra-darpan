@@ -23,6 +23,7 @@ RUN python -m pip install --no-cache-dir \
       "torch==2.5.1" \
       "sentence-transformers==3.4.1" \
       "transformers==4.48.3" \
+      "httpx==0.28.1" \
       "requests"
 
 COPY lib /app/lib

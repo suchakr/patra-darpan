@@ -7,28 +7,42 @@ SHELL := /bin/bash
 # global shell profile. This keeps `git clone && cd repo && make <target>`
 # portable across the development and production checkouts.
 REPO_DIR := $(abspath $(dir $(lastword $(MAKEFILE_LIST))))
-PROD ?= 0
 PROD_ENV_FILE ?= /etc/patra-darpan/retrieval.env
 
-ifneq ($(filter 1 true yes,$(strip $(PROD))),)
-ENV_FILE ?= $(PROD_ENV_FILE)
+ifneq ($(strip $(ENV_FILE)),)
+ENV_FILE := $(abspath $(ENV_FILE))
+ifneq ($(filter $(abspath $(PROD_ENV_FILE)),$(ENV_FILE)),)
+MODE := production
 else
-ENV_FILE ?= $(REPO_DIR)/.env
+MODE := development
+endif
+else ifneq ($(wildcard $(PROD_ENV_FILE)),)
+ENV_FILE := $(abspath $(PROD_ENV_FILE))
+MODE := production
+else
+ENV_FILE := $(REPO_DIR)/.env
+MODE := development
 endif
 
 COMPOSE_BASE := docker compose --env-file "$(ENV_FILE)" \
 	-f "$(REPO_DIR)/docker-compose.retrieval.yml"
 
-ifneq ($(filter 1 true yes,$(strip $(PROD))),)
+ifneq ($(filter production,$(MODE)),)
 COMPOSE := $(COMPOSE_BASE) -f "$(REPO_DIR)/docker-compose.retrieval.prod.yml"
-MODE := production
 else
 COMPOSE := $(COMPOSE_BASE)
-MODE := development
 endif
 
 .PHONY: help prod-env check config test build catalog qdrant wait-qdrant index inspect mcp up \
-	backend-smoke mcp-smoke smoke pilot https logs down
+	backend-smoke mcp-smoke smoke pilot oauth-config edge edge-smoke https logs down
+
+ifeq ($(MODE),development)
+EDGE_UP_SERVICES := retrieval-mcp-oauth retrieval-https
+EDGE_SMOKE_ARGS := --base-url "$${MCP_EDGE_URL:-https://retrieval-https:8443}" --allow-insecure
+else
+EDGE_UP_SERVICES := retrieval-mcp-oauth
+EDGE_SMOKE_ARGS := --base-url "$${MCP_EDGE_URL:?Set MCP_EDGE_URL for a production edge smoke test}"
+endif
 
 help:
 	@printf '%s\n' \
@@ -48,20 +62,24 @@ help:
 		"  make mcp-smoke                     Optional MCP check (included in smoke)" \
 		"  make smoke                         Run both checks against the active release" \
 		"  make pilot                         Full flow; includes the index build" \
-		"  make https                         Start the local HTTPS adapter (development)" \
+		"  make oauth-config                  Validate OAuth provider and allowlist settings" \
+		"  make edge                          Start the HTTPS/OAuth edge" \
+		"  make edge-smoke                    Check OAuth discovery, routes, and allowlist" \
+		"  make https                          Compatibility alias for edge" \
 		"  make logs                          Follow retrieval logs" \
 		"  make down                          Stop the retrieval Compose project" \
 		"" \
 		"Development env: $(REPO_DIR)/.env" \
 		"Production env:  $(PROD_ENV_FILE) (override with ENV_FILE=...)" \
-		"Production run:  make PROD=1 pilot"
+		"Selected env:     $(ENV_FILE)" \
+		"Production setup: make PROD=1 prod-env"
 
 prod-env:
-	@if [ "$(MODE)" != "production" ]; then \
+	@if ! echo "$(PROD)" | grep -Eiq '^(1|true|yes)$$'; then \
 		echo "Run this target as: make PROD=1 prod-env" >&2; exit 2; \
 	fi
 	@set -eu; \
-	  destination="$(ENV_FILE)"; \
+	  destination="$(PROD_ENV_FILE)"; \
 	  if [ -e "$$destination" ]; then \
 	    echo "Preserving existing env file: $$destination"; \
 	  else \
@@ -70,8 +88,8 @@ prod-env:
 	      "$(REPO_DIR)/retrieval.env.prod.example" "$$destination"; \
 	    echo "Created $$destination from retrieval.env.prod.example"; \
 	  fi; \
-	  echo "Set MCP_BEARER_TOKEN in $$destination before starting services."; \
-	  echo "Then validate with: make PROD=1 check"
+    echo "Set MCP_BEARER_TOKEN, OAuth client values, and the allowlist path in $$destination before starting services."; \
+	  echo "Then validate with: make check"
 
 config:
 	@test -f "$(ENV_FILE)" || { \
@@ -89,14 +107,14 @@ config:
 	    echo "Set a non-placeholder MCP_BEARER_TOKEN in $(ENV_FILE)." >&2; exit 2; \
 	  fi; \
 	fi
-	@$(COMPOSE) --profile build --profile runtime config --quiet
+	@$(COMPOSE) --profile build --profile runtime --profile oauth config --quiet
 
 check: config
 	@git -C "$(REPO_DIR)" diff --check
 	@echo "Compose and source checks passed ($(MODE))."
 
 test:
-	@cd "$(REPO_DIR)" && uv run python -m unittest discover -s tests -q
+	@cd "$(REPO_DIR)" && uv run --with 'mcp==1.30.0' --with httpx python -m unittest discover -s tests -q
 
 build: check
 	$(COMPOSE) --profile build build retrieval-builder retrieval-mcp
@@ -152,14 +170,34 @@ mcp-smoke: mcp
 smoke: backend-smoke mcp-smoke
 	@echo "Backend and MCP smoke checks passed."
 
+oauth-config: check
+	@set -eu; \
+	  for name in MCP_OAUTH_ISSUER_URL MCP_OAUTH_RESOURCE_URL MCP_OAUTH_REDIRECT_URI \
+	    MCP_OAUTH_GOOGLE_CLIENT_ID MCP_OAUTH_GOOGLE_CLIENT_SECRET \
+	    MCP_OAUTH_ALLOWLIST_FILE RETRIEVAL_AUTH_STATE_ROOT; do \
+	    value="$$(grep -E "^$${name}=" "$(ENV_FILE)" | tail -1 | cut -d= -f2-)"; \
+	    case "$$value" in ""|replace-*) echo "Set $$name in $(ENV_FILE)" >&2; exit 2;; esac; \
+	  done; \
+	  allowlist="$$(grep -E '^MCP_OAUTH_ALLOWLIST_FILE=' "$(ENV_FILE)" | tail -1 | cut -d= -f2-)"; \
+	  state_root="$$(grep -E '^RETRIEVAL_AUTH_STATE_ROOT=' "$(ENV_FILE)" | tail -1 | cut -d= -f2-)"; \
+	  test -r "$$allowlist" || { echo "OAuth allowlist is not readable: $$allowlist" >&2; exit 2; }; \
+	  mkdir -p "$$state_root"; \
+	  test -w "$$state_root" || { echo "OAuth state directory is not writable: $$state_root" >&2; exit 2; }
+
+edge: mcp oauth-config
+	$(COMPOSE) --profile runtime --profile oauth --profile https up -d $(EDGE_UP_SERVICES)
+
+edge-smoke: edge
+	$(COMPOSE) --profile runtime --profile oauth --profile https run --rm --no-deps retrieval-mcp-oauth \
+		python scripts/oauth_smoke.py $(EDGE_SMOKE_ARGS)
+
 pilot: check build index inspect smoke
 	@echo "Retrieval pilot flow completed ($(MODE))."
 
-https: mcp
-	$(COMPOSE) --profile runtime --profile https up -d retrieval-https
+https: edge
 
 logs:
-	$(COMPOSE) --profile runtime --profile https logs -f --tail=100
+	$(COMPOSE) --profile runtime --profile oauth --profile https logs -f --tail=100
 
 down:
-	$(COMPOSE) --profile runtime --profile https down
+	$(COMPOSE) --profile runtime --profile oauth --profile https down
