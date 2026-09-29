@@ -178,11 +178,9 @@ oauth-config: check
 	    value="$$(grep -E "^$${name}=" "$(ENV_FILE)" | tail -1 | cut -d= -f2-)"; \
 	    case "$$value" in ""|replace-*) echo "Set $$name in $(ENV_FILE)" >&2; exit 2;; esac; \
 	  done; \
-	  allowlist="$$(grep -E '^MCP_OAUTH_ALLOWLIST_FILE=' "$(ENV_FILE)" | tail -1 | cut -d= -f2-)"; \
-	  state_root="$$(grep -E '^RETRIEVAL_AUTH_STATE_ROOT=' "$(ENV_FILE)" | tail -1 | cut -d= -f2-)"; \
-	  test -r "$$allowlist" || { echo "OAuth allowlist is not readable: $$allowlist" >&2; exit 2; }; \
-	  mkdir -p "$$state_root"; \
-	  test -w "$$state_root" || { echo "OAuth state directory is not writable: $$state_root" >&2; exit 2; }
+	  $(COMPOSE) --profile runtime --profile oauth run --rm --no-deps \
+	    --entrypoint python retrieval-mcp-oauth \
+	    -c 'from pathlib import Path; import os, tempfile; a=Path("/etc/retrieval-auth/allowlist.txt"); s=Path("/var/lib/retrieval/auth"); a.read_text(encoding="utf-8"); assert s.is_dir(), f"OAuth state directory is not mounted: {s}"; fd,name=tempfile.mkstemp(prefix=".oauth-config-", dir=s); os.close(fd); Path(name).unlink(); print("OAuth bind mounts passed (container)")'
 
 edge: mcp oauth-config
 	$(COMPOSE) --profile runtime --profile oauth --profile https up -d $(EDGE_UP_SERVICES)
