@@ -1,7 +1,10 @@
 # Local HTTPS edge. OAuth is the default /mcp route; the bearer endpoint is
 # retained at /mcp-bearer for existing clients and rollback.
 
-localhost:8443 {
+# Serve the host-facing name and the Docker service name. The former is used
+# by local MCP clients; the latter lets the in-network OAuth smoke client
+# exercise the same TLS edge without bypassing Caddy.
+localhost:8443, retrieval-https:8443 {
 	tls internal
 
 	@oauth_metadata path /.well-known/* /authorize /token /register /revoke /oauth/callback
