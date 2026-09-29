@@ -1,5 +1,5 @@
 # One approved email per line.
 # A # character comments out the rest of that line.
 # Keep the real file outside Git and mount it as MCP_OAUTH_ALLOWLIST_FILE.
-# sunderchak@gmail.com
-# ramana.r.kumar@gmail.com
+# alice@example.org
+# bob@example.org

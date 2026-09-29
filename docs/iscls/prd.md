@@ -5,10 +5,9 @@
 
 ## Status
 
-Active pilot contract. The local vertical slice uses E5 with Qdrant, JSONL
-entity projections, and a read-only MCP server. The PRD still leaves the
-production vector topology, artifact retention, and custom chat application
-open.
+Historical pilot contract. It records the design state before the production
+retrieval release and OAuth edge. Current behavior is documented under
+[`../retrieval/`](../retrieval/).
 
 ## Problem
 
@@ -24,8 +23,9 @@ The missing layer is an inspectable retrieval path that can combine:
 - entity and alias lookup; and
 - passage, page, table, and image provenance.
 
-The first user interface is ChatGPT or Codex using MCP. A custom chat
-application is not part of this milestone.
+The pilot's first user interfaces were ChatGPT and Codex using MCP. The
+subsequent implementation is MCP-host-independent and is also used by Claude.
+A custom chat application was not part of this milestone.
 
 ## User outcome
 

@@ -54,8 +54,8 @@ Example:
 
 ```text
 # Demo users
-sunderchak@gmail.com
-ramana.r.kumar@gmail.com  # project collaborator
+alice@example.org
+bob@example.org  # project collaborator
 ```
 
 Addresses are normalized before comparison. The process caches the parsed set
