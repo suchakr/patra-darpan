@@ -27,6 +27,10 @@ lexical shards, the public search UI, and the production Caddy edge.
 4. [`auth.md`](auth.md) — OAuth, allowlist, and public route behavior.
 5. [`decisions.md`](decisions.md) — durable design decisions and deferred work.
 
+For MCP conversations, read [`search-guide.md`](search-guide.md): query syntax,
+filename-only results, script expansion, continuation and linked evidence. The
+same guide is exposed as `retrieval://search-guide`.
+
 The machine-readable release contract is
 [`release.schema.json`](release.schema.json); [`release.example.json`](release.example.json)
 is an illustrative record.

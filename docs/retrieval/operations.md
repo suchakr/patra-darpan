@@ -60,13 +60,17 @@ When a compatible active release and Qdrant collection already exist:
 
 ```bash
 make check
-make qdrant
-make inspect
-make mcp
+make up
 make smoke
+make search-smoke
 ```
 
-For the HTTPS/OAuth edge:
+`make up` builds the runtime image and starts bearer MCP, OAuth MCP, and the
+local HTTPS adapter in development. Production uses its existing external
+Caddy. It reuses release, Qdrant, model-cache, allowlist and OAuth-state data.
+The target requires the existing OAuth environment to be configured.
+
+For a separate HTTPS/OAuth edge check:
 
 ```bash
 make oauth-config
@@ -95,14 +99,35 @@ identity, or provenance referenced by chunks.
 
 ```bash
 make check
-make build
-make mcp
+make up
 make smoke
-make edge
+make search-smoke
 make edge-smoke
 ```
 
-This path does not rebuild vectors.
+This path does not rebuild vectors. For a clean runtime restart after pulling
+a reviewed commit:
+
+```bash
+git pull --ff-only
+make down
+make up
+make smoke
+make search-smoke
+```
+
+`down` is optional for a normal update: `up` rebuilds the runtime image and
+Compose recreates changed services. Neither command removes persistent data.
+No first-time setup, catalog build or index build is needed for the search
+interface changes. `make build` remains the target for building both runtime
+and builder images; `make runtime-build` builds only the online runtime.
+
+Existing clients retain the same URL, OAuth configuration and tool names.
+Additive tool options/resources appear when the client reconnects or refreshes
+its tool list. Some hosts cache tools/instructions in existing conversations;
+refresh or start a new conversation if new options are not visible. A runtime
+restart alone does not require a new OAuth registration, though normal token
+expiry may still require login.
 
 ### Corpus, chunking, ontology, entity, or embedding change
 
@@ -148,6 +173,10 @@ normal deployment.
 - `make backend-smoke`, which checks catalog, entity, passage, Zoekt, and
   Qdrant adapters; and
 - `make mcp-smoke`, which initializes MCP and exercises representative tools.
+
+`make search-smoke` verifies guide discovery, filename-only lexical search,
+script expansion, bounded match continuation, passage paging and source links
+through a real authenticated MCP session against the existing release.
 
 `make edge-smoke` separately checks OAuth discovery and public route
 protection. On production, also verify the Sanchaya UI returns `200` and public

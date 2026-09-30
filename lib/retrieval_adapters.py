@@ -16,14 +16,19 @@ import re
 import unicodedata
 import base64
 import binascii
+import time
+import uuid
+import threading
+from collections import OrderedDict
 from dataclasses import dataclass
 from pathlib import Path, PurePosixPath
 from typing import Any, Iterable
-from urllib.parse import urljoin
+from urllib.parse import urljoin, quote
 
 import requests
 
 from lib.retrieval_catalog import CatalogAdapter, CatalogError
+from lib.retrieval_query import prepare_lexical_query
 
 
 class RetrievalError(RuntimeError):
@@ -158,6 +163,29 @@ def load_release(path: str | Path | None = None) -> Release:
 
 def _normal_form(value: str) -> str:
     return unicodedata.normalize("NFC", value).replace("\u00a0", " ").casefold()
+
+
+def json_bytes(value: Any) -> int:
+    return len(json.dumps(value, ensure_ascii=False).encode("utf-8"))
+
+
+def source_links(release: Release, row: dict[str, Any], refs: Iterable[dict[str, Any]] = ()) -> dict[str, Any]:
+    path = str(row.get("repo_path") or "")
+    source_repo = str(release.record.get("source", {}).get("sanchaya_repo") or "")
+    revision = str(row.get("version") or release.corpus_revision)
+    source_url = None
+    if path and source_repo.startswith("https://github.com/") and revision != "unknown":
+        source_url = f"{source_repo.removesuffix('.git')}/blob/{quote(revision, safe='')}/{quote(path, safe='/')}"
+        matches = row.get("matches") or []
+        line = matches[0].get("line_number") if matches else None
+        try:
+            if line and int(line) > 0:
+                source_url += f"#L{int(line)}"
+        except (TypeError, ValueError):
+            pass
+    external = next((ref.get("uri") for ref in refs if str(ref.get("uri") or "").startswith(("https://", "http://"))), None)
+    # Filenames link to the text. Paper content links can prefer the original PDF.
+    return {"source_url": source_url, "citation_url": external or source_url}
 
 
 class EntityAdapter:
@@ -383,67 +411,82 @@ class PassageStore:
         return result
 
     def fetch(
-        self,
-        *,
-        chunk_id: str | None = None,
-        document_id: str | None = None,
-        repo_path: str | None = None,
-        limit: int = 5,
+        self, *, chunk_id: str | None = None, document_id: str | None = None,
+        repo_path: str | None = None, limit: int = 5, offset: int = 0,
+        text_offset: int = 0, max_chars: int = 4000,
         lexical: dict[str, Any] | None = None,
     ) -> dict[str, Any]:
         limit = max(1, min(int(limit), 20))
+        offset = max(0, int(offset))
+        text_offset = max(0, int(text_offset))
+        max_chars = max(80, min(int(max_chars), 12000))
+        if text_offset and not chunk_id:
+            raise RetrievalError("text_offset requires a chunk_id; use offset to page a document")
         if chunk_id:
             row = self.by_id.get(chunk_id)
             if row is None:
                 raise RetrievalError(f"unknown chunk ID: {chunk_id}")
-            rows = [row]
+            all_rows = [row]
         elif document_id:
-            rows = self.by_document.get(document_id, [])[:limit]
+            all_rows = self.by_document.get(document_id, [])
         elif repo_path:
-            rows = self.by_repo_path.get(repo_path, [])[:limit]
+            all_rows = self.by_repo_path.get(repo_path, [])
         else:
             raise RetrievalError("one of chunk_id, document_id, or repo_path is required")
+        passages = []
+        used = 0
+        for index, row in enumerate(all_rows[offset:offset + limit]):
+            formatted = self._format(row, lexical=lexical if index == 0 else None)
+            text = str(formatted.get("text") or "")
+            formatted["text"] = text[text_offset:text_offset + max_chars]
+            formatted.update(text_offset=text_offset, total_text_chars=len(text),
+                             text_truncated=text_offset > 0 or text_offset + max_chars < len(text),
+                             next_text_offset=text_offset + max_chars if text_offset + max_chars < len(text) else None)
+            formatted.update(source_links(self.release, row, formatted.get("source_refs", [])))
+            size = json_bytes(formatted)
+            if passages and used + size > 48000:
+                break
+            if size > 48000:
+                raise RetrievalError("passage metadata exceeds the response budget")
+            passages.append(formatted)
+            used += size
+        position = offset + len(passages)
+        more = position < len(all_rows)
         return {
             "schema_version": "retrieval.passage.v1",
             "requested": {"chunk_id": chunk_id, "document_id": document_id, "repo_path": repo_path},
-            "passages": [self._format(row, lexical=lexical if index == 0 else None) for index, row in enumerate(rows)],
+            "passages": passages, "offset": offset, "total_passages": len(all_rows),
+            "returned_count": len(passages), "has_more": more,
+            "next_offset": position if more else None,
+            "fetch_available": bool(all_rows),
             "corpus_revision": self.release.corpus_revision,
         }
 
     def fetch_many(self, requests: Iterable[dict[str, Any]]) -> dict[str, Any]:
-        """Fetch several bounded references in one MCP round trip.
-
-        Each item is isolated so one stale reference does not discard useful
-        passages from the rest of a model-generated batch.  The request shape
-        intentionally mirrors ``fetch_passage`` and never accepts filesystem
-        paths or arbitrary SQL.
-        """
-
+        """Batch reads share a byte budget; skipped requests stay explicit."""
         items = list(requests)
         if len(items) > 50:
             raise RetrievalError("requests is limited to 50 passage references per call")
-        output: list[dict[str, Any]] = []
+        output = []
         for index, item in enumerate(items):
             if not isinstance(item, dict):
                 output.append({"index": index, "error": "each request must be an object"})
                 continue
-            selector = {
-                "chunk_id": str(item.get("chunk_id") or "") or None,
-                "document_id": str(item.get("document_id") or "") or None,
-                "repo_path": str(item.get("repo_path") or "") or None,
-            }
+            selector = {name: str(item.get(name) or "") or None for name in ("chunk_id", "document_id", "repo_path")}
             try:
-                result = self.fetch(**selector, limit=item.get("limit", 5))
+                result = self.fetch(**selector, limit=item.get("limit", 5), offset=item.get("offset", 0),
+                                    text_offset=item.get("text_offset", 0), max_chars=item.get("max_chars", 4000))
+                row = {"index": index, "request": selector, **result}
             except (RetrievalError, TypeError, ValueError) as exc:
-                output.append({"index": index, "request": selector, "error": str(exc)})
-                continue
-            output.append({"index": index, "request": selector, "passages": result["passages"]})
-        return {
-            "schema_version": "retrieval.passages.v1",
-            "requested_count": len(items),
-            "results": output,
-            "corpus_revision": self.release.corpus_revision,
-        }
+                row = {"index": index, "request": selector, "error": str(exc)}
+            if json_bytes(output) + json_bytes(row) > 60000:
+                return {"schema_version": "retrieval.passages.v1", "requested_count": len(items),
+                        "results": output, "response_limited": True,
+                        "next_request_index": index, "corpus_revision": self.release.corpus_revision}
+            output.append(row)
+        return {"schema_version": "retrieval.passages.v1", "requested_count": len(items),
+                "results": output, "response_limited": False, "next_request_index": None,
+                "corpus_revision": self.release.corpus_revision}
 
 
 class ZoektAdapter:
@@ -452,66 +495,179 @@ class ZoektAdapter:
     def __init__(self, url: str | None = None, *, timeout: float = 10.0):
         self.url = (url or os.getenv("ZOEKT_URL") or os.getenv("RETRIEVAL_ZOEKT_URL") or "").rstrip("/")
         self.timeout = timeout
+        self._snapshots: OrderedDict[str, dict[str, Any]] = OrderedDict()
+        self._snapshot_lock = threading.Lock()
 
     @property
     def enabled(self) -> bool:
         return bool(self.url)
 
-    def search(self, query: str, *, limit: int = 10, context_lines: int = 2) -> list[dict[str, Any]]:
+    SNAPSHOT_TTL = 300
+    SNAPSHOT_LIMIT = 8
+    MAX_RAW_BYTES = 8 * 1024 * 1024
+    MAX_SNAPSHOT_BYTES = 4 * 1024 * 1024
+    MAX_WINDOWS = 5000
+
+    def search(self, query: str, *, limit: int = 10, context_lines: int = 0) -> list[dict[str, Any]]:
+        return self.search_page(query, limit=limit, context_lines=context_lines)["results"]
+
+    def search_page(self, query: str, *, limit: int = 10, context_lines: int = 0,
+                    snippet_chars: int = 400, match_limit: int = 20,
+                    cursor: str | None = None, allowed_paths: set[str] | None = None) -> dict[str, Any]:
         if not self.url:
-            return []
-        if not query.strip():
-            raise RetrievalError("query must not be empty")
+            raise RetrievalError("Zoekt RPC URL is not configured")
         limit = max(1, min(int(limit), 50))
-        context_lines = max(0, min(int(context_lines), 10))
-        # Catalog and entity JSONL paths are metadata, not the user-facing
-        # lexical corpus.  The exclusion is part of the adapter boundary.
-        protected_query = f"({query}) -file:patra-darpan/catalog/ -file:ontology/"
-        payload = {
-            "Q": protected_query,
-            "Opts": {
-                "MaxDocDisplayCount": limit,
-                "MaxMatchDisplayCount": limit * 5,
+        context_lines = max(0, min(int(context_lines), 3))
+        snippet_chars = max(80, min(int(snippet_chars), 1600))
+        match_limit = max(1, min(int(match_limit), 100))
+        signature = (query, context_lines, snippet_chars, tuple(sorted(allowed_paths)) if allowed_paths is not None else None)
+        if cursor:
+            try:
+                snapshot_id, offset_text = cursor.split(":", 1)
+                offset = int(offset_text)
+            except (ValueError, TypeError) as exc:
+                raise RetrievalError("invalid search cursor") from exc
+            with self._snapshot_lock:
+                snapshot = self._snapshots.get(snapshot_id)
+            if snapshot is None or snapshot["expires"] < time.monotonic():
+                raise RetrievalError("search cursor expired or server restarted; rerun the same query")
+            if signature != snapshot["signature"] or offset < 0 or offset >= len(snapshot["windows"]):
+                raise RetrievalError("cursor does not match this query, scope, or context")
+        else:
+            protected_query = f"({query}) -file:patra-darpan/catalog/ -file:ontology/"
+            payload = {"Q": protected_query, "Opts": {
+                "MaxDocDisplayCount": 500, "MaxMatchDisplayCount": 10000,
                 "NumContextLines": context_lines,
-            },
-        }
-        try:
-            response = requests.post(
-                urljoin(self.url + "/", "api/search"),
-                json=payload,
-                timeout=self.timeout,
-            )
-            response.raise_for_status()
-            body = response.json()
-        except (requests.RequestException, ValueError) as exc:
-            raise RetrievalError(f"Zoekt search failed: {exc}") from exc
-        result = body.get("Result") or body.get("result") or {}
-        files = result.get("Files") or result.get("FileMatches") or result.get("file_matches") or []
-        output: list[dict[str, Any]] = []
-        for file_match in files[:limit]:
-            if not isinstance(file_match, dict):
-                continue
-            # The JSON API uses Go's exported field names (Repository,
-            # LineMatches, ...), while older deployments and test doubles may
-            # use the shorter web-template names.  Normalize both here.
-            matches = file_match.get("LineMatches")
-            if matches is None:
-                matches = file_match.get("Matches", file_match.get("matches", []))
-            matches = [self._normalize_match(match) for match in matches if isinstance(match, dict)]
-            output.append(
-                {
-                    "backend": "zoekt",
-                    "score": file_match.get("Score", file_match.get("score")),
-                    "repo": file_match.get(
-                        "Repository",
-                        file_match.get("Repo", file_match.get("repo")),
-                    ),
-                    "repo_path": file_match.get("FileName", file_match.get("file_name")),
-                    "url": file_match.get("URL", file_match.get("url")),
-                    "matches": matches,
-                    "branches": file_match.get("Branches", file_match.get("branches", [])),
-                }
-            )
+            }}
+            try:
+                with requests.post(urljoin(self.url + "/", "api/search"), json=payload,
+                                   timeout=self.timeout, stream=True) as response:
+                    response.raise_for_status()
+                    raw = bytearray()
+                    for block in response.iter_content(chunk_size=65536):
+                        raw.extend(block)
+                        if len(raw) > self.MAX_RAW_BYTES:
+                            raise RetrievalError("Zoekt response exceeded 8 MiB; narrow the query with file_filter or use result_type='files'")
+                    body = json.loads(raw)
+            except (requests.RequestException, ValueError) as exc:
+                raise RetrievalError(f"Zoekt search failed: {exc}") from exc
+            result = body.get("Result") or body.get("result") or {}
+            files = result.get("Files") or result.get("FileMatches") or result.get("file_matches") or []
+            windows = []
+            memory_bytes = 0
+            capped = False
+            backend_fragments = 0
+            for file in files:
+                if not isinstance(file, dict):
+                    continue
+                path = file.get("FileName", file.get("file_name"))
+                base = {"backend": "zoekt", "score": file.get("Score", file.get("score")),
+                        "repo": file.get("Repository", file.get("Repo", file.get("repo"))),
+                        "repo_path": path, "url": file.get("URL", file.get("url")),
+                        "version": file.get("Version"), "branches": file.get("Branches", [])}
+                matches = file.get("LineMatches", file.get("Matches", file.get("matches", []))) or []
+                for match in matches:
+                    fragments = match.get("LineFragments") or match.get("fragments") or []
+                    backend_fragments += len(fragments) or 1
+                    if allowed_paths is not None and path not in allowed_paths:
+                        continue
+                    for window in self._match_windows(match, snippet_chars, context_lines):
+                        item = (base, window)
+                        size = len(json.dumps(item, ensure_ascii=False).encode("utf-8"))
+                        if len(windows) >= self.MAX_WINDOWS or memory_bytes + size > self.MAX_SNAPSHOT_BYTES:
+                            capped = True
+                            continue
+                        windows.append(item)
+                        memory_bytes += size
+            reported_files = result.get("FileCount")
+            reported_matches = result.get("MatchCount")
+            # Exactness requires that the displayed evidence accounts for all
+            # backend-reported matches and that no work was skipped or crashed.
+            exact = (reported_files is not None and reported_matches is not None
+                     and reported_files == len(files) and reported_matches == backend_fragments
+                     and not result.get("FilesSkipped") and not result.get("ShardsSkipped")
+                     and not result.get("FilesSkippedDueToCancellation")
+                     and result.get("FlushReason", 0) in (0, 2, "final_flush")
+                     and not result.get("Crashes") and not capped and allowed_paths is None)
+            stats = {"backend_file_count": reported_files, "backend_match_count": reported_matches,
+                     "counts_exact": exact, "cached_match_windows": len(windows),
+                     "backend_display_limited": reported_files is None or reported_matches is None
+                         or reported_files > len(files) or reported_matches > backend_fragments,
+                     "snapshot_limited": capped, "entity_filtered": allowed_paths is not None,
+                     "files_skipped": result.get("FilesSkipped", 0),
+                     "files_skipped_due_to_cancellation": result.get("FilesSkippedDueToCancellation", 0),
+                     "flush_reason": result.get("FlushReason", 0),
+                     "shards_skipped": result.get("ShardsSkipped", 0),
+                     "crashes": result.get("Crashes", 0)}
+            snapshot_id = uuid.uuid4().hex
+            snapshot = {"signature": signature, "windows": windows, "stats": stats,
+                        "expires": time.monotonic() + self.SNAPSHOT_TTL, "executed_query": protected_query}
+            with self._snapshot_lock:
+                for key in list(self._snapshots):
+                    if self._snapshots[key]["expires"] < time.monotonic():
+                        del self._snapshots[key]
+                self._snapshots[snapshot_id] = snapshot
+                while len(self._snapshots) > self.SNAPSHOT_LIMIT:
+                    self._snapshots.popitem(last=False)
+            offset = 0
+        rows = []
+        by_file = {}
+        position = offset
+        bytes_used = 0
+        while position < len(snapshot["windows"]) and position - offset < match_limit:
+            base, window = snapshot["windows"][position]
+            key = (base.get("repo"), base.get("repo_path"))
+            if key not in by_file and len(rows) >= limit:
+                break
+            cost = len(json.dumps((base, window), ensure_ascii=False).encode("utf-8"))
+            if rows and bytes_used + cost > 32000:
+                break
+            if key not in by_file:
+                row = {**base, "matches": [], "result_type": "files" if window["filename_match"] else "matches"}
+                by_file[key] = row
+                rows.append(row)
+            by_file[key]["matches"].append(window)
+            bytes_used += cost
+            position += 1
+        more = position < len(snapshot["windows"])
+        return {"results": rows, "stats": snapshot["stats"], "executed_query": snapshot["executed_query"],
+                "offset": offset, "next_cursor": f"{snapshot_id}:{position}" if more else None,
+                "has_more": more, "cursor_expires_in_seconds": max(0, int(snapshot["expires"] - time.monotonic())),
+                "returned_match_windows": position - offset, "page_cursor": f"{snapshot_id}:{offset}"}
+
+    @classmethod
+    def _match_windows(cls, match: dict[str, Any], chars: int, context_lines: int) -> list[dict[str, Any]]:
+        line = cls._decode(match.get("Line", match.get("line"))) or ""
+        fragments = match.get("LineFragments") or match.get("fragments") or []
+        byte_line = line.encode("utf-8")
+        output = []
+        for fragment in fragments or [None]:
+            if fragment:
+                byte_start = int(fragment.get("LineOffset", fragment.get("line_offset", 0)))
+                byte_end = byte_start + int(fragment.get("MatchLength", fragment.get("match_length", 0)))
+                start = len(byte_line[:byte_start].decode("utf-8", errors="ignore"))
+                end = len(byte_line[:byte_end].decode("utf-8", errors="ignore"))
+            else:
+                start = end = 0
+                byte_start = byte_end = 0
+            left = max(0, start - chars // 2)
+            right = min(len(line), left + chars)
+            left = max(0, right - chars)
+            row = {"line_number": match.get("LineNumber", match.get("line_number")),
+                   "line": line[left:right], "line_truncated": left > 0 or right < len(line),
+                   "window_start_byte": len(line[:left].encode("utf-8")),
+                   "window_end_byte": len(line[:right].encode("utf-8")),
+                   "original_line_bytes": len(byte_line),
+                   "filename_match": bool(match.get("FileName", match.get("filename_match", False))),
+                   "fragments": [fragment] if fragment else [],
+                   "match_start_byte": byte_start, "match_end_byte": byte_end,
+                   "match_truncated": end > right}
+            if context_lines:
+                before = cls._decode(match.get("Before", match.get("before"))) or ""
+                after = cls._decode(match.get("After", match.get("after"))) or ""
+                row.update(before=before[-chars:], after=after[:chars],
+                           context_truncated=len(before) > chars or len(after) > chars)
+            output.append(row)
         return output
 
     @staticmethod
@@ -524,18 +680,6 @@ class ZoektAdapter:
         except (ValueError, UnicodeDecodeError, binascii.Error):
             return value
 
-    @classmethod
-    def _normalize_match(cls, match: dict[str, Any]) -> dict[str, Any]:
-        """Turn Zoekt's base64 encoded byte fields into MCP-friendly text."""
-
-        fragments = match.get("LineFragments") or match.get("fragments") or []
-        return {
-            "line_number": match.get("LineNumber", match.get("line_number")),
-            "line": cls._decode(match.get("Line", match.get("line"))),
-            "before": cls._decode(match.get("Before", match.get("before"))),
-            "after": cls._decode(match.get("After", match.get("after"))),
-            "fragments": fragments,
-        }
 
 
 class VectorAdapter:
@@ -736,67 +880,130 @@ class RetrievalService:
     def get_corpus_info(self) -> dict[str, Any]:
         result = self.catalog.corpus_info()
         result["entity_index"] = self.entities.coverage_info()
+        result["indexes"] = {
+            "lexical": {"backend": "zoekt", "scope": "Zoekt-indexed Sanchaya files; broader than the release chunk scope",
+                        "coverage_verified": False, "supports_raw_query": True, "supports_filename_results": True},
+            "passages": {"chunk_count": len(self.passages.chunks), "document_count": len(self.passages.by_document),
+                         "scope": self.release.record.get("pipeline", {}).get("source_scope", {})},
+            "vector": {**self.release.record.get("artifacts", {}).get("vector_index", {}),
+                       "scope": "collection named by this release; do not assume full lexical coverage"},
+        }
+        result["search_guide"] = "retrieval://search-guide"
+        # Some hosts do not read MCP resources. Keep essential guidance
+        # discoverable through the existing information tool as well.
+        result["search_guidance"] = [
+            "Use metadata tools for paper lists; lexical for occurrences; vectors/hybrid for ranked conceptual discovery.",
+            "Raw Zoekt syntax is accepted in lexical mode: file:Jyo type:filename सूर्य returns filenames of matching files without content.",
+            "Script expansion is optional for plain terms; ASCII requires an explicit iast/harvard_kyoto choice. Keep complex queries raw.",
+            "Follow lexical next_cursor with identical query/options; inspect lexical_stats limits before claiming completeness.",
+            "Page document passages with next_offset; page shortened chunk text by chunk_id and next_text_offset.",
+            "Entity IDs restrict known mention coverage; they do not expand aliases or cover the full lexical corpus.",
+            "Propose declensions, joined/separated sandhi and whole/component samāsa forms as hypotheses; verify meanings in passages.",
+            "Present readable title/verse/line hyperlinks using citation_url or source_url; IDs are retrieval handles.",
+        ]
+        result["search_capabilities"] = {"script_expansion": ["none", "auto", "devanagari", "iast", "harvard_kyoto"],
+                                         "lexical_paging": True, "passage_paging": True,
+                                         "search_response_byte_limit": 64000, "cursor_ttl_seconds": 300}
         return result
 
     def search(
-        self,
-        query: str,
-        *,
-        mode: str = "hybrid",
-        limit: int = 10,
-        entity_ids: Iterable[str] = (),
+        self, query: str, *, mode: str = "hybrid", limit: int = 10,
+        entity_ids: Iterable[str] = (), result_type: str = "matches",
+        file_filter: str | None = None, script_expansion: str = "none",
+        context_lines: int = 0, snippet_chars: int = 400,
+        match_limit: int = 20, cursor: str | None = None,
     ) -> dict[str, Any]:
         mode = mode.lower().strip()
         if mode not in {"lexical", "vector", "hybrid"}:
             raise RetrievalError("mode must be lexical, vector, or hybrid")
+        if mode == "vector" and (file_filter or result_type != "matches" or script_expansion != "none"):
+            raise RetrievalError("file_filter, result_type, and script_expansion apply to lexical search; use mode='lexical' or 'hybrid'")
+        try:
+            lexical_query, query_forms, warnings = prepare_lexical_query(
+                query, script_expansion=script_expansion, file_filter=file_filter, result_type=result_type)
+        except ValueError as exc:
+            raise RetrievalError(str(exc)) from exc
+        filename_query = result_type == "files" or bool(re.search(r"(?:^|[\s(])type:(?:filename|file)\b", lexical_query))
+        if filename_query:
+            mode = "lexical"
+        if cursor and mode != "lexical":
+            raise RetrievalError("search cursors require mode='lexical'; hybrid and vector results are ranked top-k")
         limit = max(1, min(int(limit), 50))
         entity_ids = list(entity_ids)
+        unknown = [value for value in entity_ids if value not in self.entities._by_id]
+        if unknown:
+            raise RetrievalError(f"unknown entity IDs: {unknown}")
         allowed = self.entities.chunk_ids_for(entity_ids)
         allowed_documents = self.entities.document_ids_for(entity_ids)
-        backend_errors: dict[str, str] = {}
-        lexical: list[dict[str, Any]] = []
-        vector: list[dict[str, Any]] = []
+        paths = {path for path, chunks in self.passages.by_repo_path.items()
+                 if any(str(chunk.get("document_id")) in allowed_documents for chunk in chunks)} if entity_ids else None
+        if file_filter:
+            try:
+                path_pattern = re.compile(file_filter)
+            except re.error as exc:
+                raise RetrievalError(f"invalid file_filter regex: {exc}") from exc
+            scope_chunks = {str(chunk.get("chunk_id")) for path, chunks in self.passages.by_repo_path.items()
+                            if path_pattern.search(path) for chunk in chunks}
+            vector_allowed = allowed & scope_chunks if entity_ids else scope_chunks
+        else:
+            vector_allowed = allowed if entity_ids else None
+        backend_errors = {}
+        lexical = []
+        vector = []
+        page = None
         if mode in {"lexical", "hybrid"}:
             try:
-                lexical = self.zoekt.search(query, limit=limit)
-                if entity_ids:
-                    lexical = [
-                        row
-                        for row in lexical
-                        if any(
-                            str(chunk.get("document_id")) in allowed_documents
-                            for chunk in self.passages.by_repo_path.get(str(row.get("repo_path") or ""), [])
-                        )
-                    ]
+                page = self.zoekt.search_page(lexical_query, limit=limit, context_lines=context_lines,
+                                             snippet_chars=snippet_chars, match_limit=match_limit,
+                                             cursor=cursor, allowed_paths=paths)
+                lexical = self._enrich_lexical(page["results"])
             except RetrievalError as exc:
                 backend_errors["lexical"] = str(exc)
         if mode in {"vector", "hybrid"}:
             try:
-                vector = self.vector.search(
-                    query,
-                    limit=limit,
-                    allowed_chunk_ids=allowed if entity_ids else None,
-                )
-            except RetrievalError as exc:
+                vector = self.vector.search(query, limit=limit, allowed_chunk_ids=vector_allowed)
+                for row in vector:
+                    chunk = self.passages.by_id.get(str(row.get("chunk_id") or ""), {})
+                    catalog = self.catalog.get_document(str(row.get("document_id") or "")) or {}
+                    row.update(source_links(self.release, row, catalog.get("source_refs", [])))
+                    row.update(title=chunk.get("title") or catalog.get("title"), fetch_available=bool(chunk))
+            except (RetrievalError, re.error) as exc:
                 backend_errors["vector"] = str(exc)
-        lexical = self._enrich_lexical(lexical)
-        if mode == "lexical":
-            results = lexical
-        elif mode == "vector":
-            results = vector
-        else:
-            results = reciprocal_rank_fusion((lexical, vector), limit=limit)
-        return {
-            "schema_version": "retrieval.search.v1",
-            "query": query,
-            "mode": mode,
-            "entity_ids": list(entity_ids),
-            "results": results,
-            "backend_counts": {"lexical": len(lexical), "vector": len(vector)},
-            "backend_errors": backend_errors,
-            "corpus_revision": self.release.corpus_revision,
-            "release_id": self.release.release_id,
+        results = lexical if mode == "lexical" else vector if mode == "vector" else reciprocal_rank_fusion((lexical, vector), limit=limit)
+        result = {
+            "schema_version": "retrieval.search.v1", "query": query, "mode": mode,
+            "result_type": "files" if filename_query else result_type,
+            "lexical_query": page["executed_query"] if page else lexical_query,
+            "query_forms": query_forms, "warnings": warnings, "entity_ids": entity_ids,
+            "results": results, "backend_counts": {"lexical": len(lexical), "vector": len(vector)},
+            "backend_errors": backend_errors, "corpus_revision": self.release.corpus_revision,
+            "release_id": self.release.release_id, "lexical_stats": page["stats"] if page else None,
+            "next_cursor": page["next_cursor"] if page and mode == "lexical" else None,
+            "has_more": page["has_more"] if page and mode == "lexical" else False,
+            "cursor_expires_in_seconds": page["cursor_expires_in_seconds"] if page and mode == "lexical" else None,
+            "response_limited": False,
+            "returned_match_windows": sum(len(row.get("matches") or []) for row in results),
         }
+        if mode == "hybrid":
+            result["warnings"].append("Hybrid is a ranked top-k view; use lexical mode with the same query for match paging and counts")
+        # Enrichment and fusion share a final ceiling. Rewind lexical
+        # continuation over any windows removed by the final budget.
+        removed_windows = 0
+        while result["results"] and json_bytes(result) > 64000:
+            removed = result["results"].pop()
+            removed_windows += len(removed.get("matches") or [])
+            result["response_limited"] = True
+        if result["response_limited"] and not result["results"]:
+            raise RetrievalError("result metadata exceeds the response budget; use a narrower query")
+        result["returned_match_windows"] = sum(len(row.get("matches") or []) for row in result["results"])
+        if removed_windows and page and mode == "lexical":
+            token = page.get("next_cursor")
+            if not token:
+                token = page["page_cursor"]
+            prefix = token.split(":", 1)[0]
+            new_position = page["offset"] + page["returned_match_windows"] - removed_windows
+            result.update(next_cursor=f"{prefix}:{new_position}", has_more=True)
+        return result
 
     def fetch_passages(self, requests: Iterable[dict[str, Any]]) -> dict[str, Any]:
         return self.passages.fetch_many(requests)
@@ -845,5 +1052,10 @@ class RetrievalService:
                         },
                     }
                 )
+            document = self.catalog.get_document(str(enriched.get("document_id") or "")) or {}
+            enriched.update(source_links(self.release, enriched, document.get("source_refs", [])))
+            enriched["fetch_available"] = bool(selected)
+            if not selected:
+                enriched["fetch_unavailable_reason"] = "lexically indexed but outside this release's chunk coverage"
             output.append(enriched)
         return output

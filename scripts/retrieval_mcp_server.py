@@ -114,11 +114,15 @@ def build_mcp(service: RetrievalService, *, oauth_provider: Any | None = None):
     server = FastMCP(
         "Sanchaya Retrieval",
         instructions=(
-            "Read-only retrieval over one release. Read ontology context first; "
+            "Read-only retrieval over one release. Read retrieval://search-guide or "
+            "get_corpus_info for coverage, query syntax and paging. Read ontology context for entities; "
             "use get_author_works or search_documents for metadata questions; "
             "resolve entities before passing canonical IDs to search; use stable "
             "chunk/document references and fetch_passages for multiple evidence "
-            "items; cite fetched passages."
+            "items; cite fetched evidence using readable Markdown hyperlinks to citation_url "
+            "or source_url, naming the work/paper and location rather than presenting opaque IDs. "
+            "Raw Zoekt syntax is supported in lexical mode, including file:Jyo type:filename सूर्य "
+            "for filenames of matching files. Generated Sanskrit forms are search hypotheses."
         ),
         host=host,
         port=port,
@@ -142,6 +146,14 @@ def build_mcp(service: RetrievalService, *, oauth_provider: Any | None = None):
     )
     def ontology_context() -> str:
         return json.dumps(service.entities.ontology_context, ensure_ascii=False)
+
+    @server.resource(
+        "retrieval://search-guide", name="search_guide",
+        description="Index scope, Zoekt syntax, filename-only results, paging, script expansion, Sanskrit exploration and hyperlinks.",
+        mime_type="text/markdown",
+    )
+    def search_guide() -> str:
+        return (Path(__file__).resolve().parents[1] / "docs/retrieval/search-guide.md").read_text(encoding="utf-8")
 
     @server.resource(
         "retrieval://release",
@@ -226,7 +238,7 @@ def build_mcp(service: RetrievalService, *, oauth_provider: Any | None = None):
 
     @server.tool(
         name="get_corpus_info",
-        description="Return corpus source counts, catalog backend, release identity, and entity-index coverage.",
+        description="Report release/index coverage and search capabilities; read retrieval://search-guide for syntax and best practices.",
     )
     def get_corpus_info() -> dict[str, Any]:
         try:
@@ -236,35 +248,55 @@ def build_mcp(service: RetrievalService, *, oauth_provider: Any | None = None):
 
     @server.tool(
         name="search_corpus",
-        description="Search the lexical, vector, or hybrid corpus projection.",
+        description=("Search lexical Zoekt, semantic vectors, or ranked hybrid results. Read retrieval://search-guide. "
+                     "Lexical query accepts raw Zoekt syntax (AND, OR, regex, file:, exclusions, type:filename). "
+                     "result_type='files' returns filenames of matching files without content; it uses lexical mode. "
+                     "Optional script_expansion accepts plain Sanskrit terms in devanagari/iast/harvard_kyoto/auto; "
+                     "use file_filter for path scope. Follow next_cursor with identical lexical query/options; "
+                     "backend_counts are returned rows, not total occurrences. Cite citation_url/source_url."),
     )
     def search_corpus(
         query: str,
         mode: str = "hybrid",
         limit: int = 10,
         entity_ids: list[str] | None = None,
+        result_type: str = "matches",
+        file_filter: str | None = None,
+        script_expansion: str = "none",
+        context_lines: int = 0,
+        snippet_chars: int = 400,
+        match_limit: int = 20,
+        cursor: str | None = None,
     ) -> dict[str, Any]:
         try:
-            return service.search(query, mode=mode, limit=limit, entity_ids=entity_ids or [])
+            return service.search(query, mode=mode, limit=limit, entity_ids=entity_ids or [],
+                                  result_type=result_type, file_filter=file_filter,
+                                  script_expansion=script_expansion, context_lines=context_lines,
+                                  snippet_chars=snippet_chars, match_limit=match_limit, cursor=cursor)
         except RetrievalError as exc:
             return _error(exc)
 
     @server.tool(
         name="fetch_passage",
-        description="Fetch a bounded passage by chunk, document, or indexed repository path.",
+        description=("Fetch release passages by chunk, document or repo_path. Page documents with offset/next_offset; "
+                     "for shortened text, fetch its chunk_id with text_offset=next_text_offset. "
+                     "Only release-chunked documents are fetchable. Cite citation_url/source_url."),
     )
     def fetch_passage(
         chunk_id: str | None = None,
         document_id: str | None = None,
         repo_path: str | None = None,
         limit: int = 5,
+        offset: int = 0,
+        text_offset: int = 0,
+        max_chars: int = 4000,
     ) -> dict[str, Any]:
         try:
             return service.passages.fetch(
                 chunk_id=chunk_id or None,
                 document_id=document_id or None,
                 repo_path=repo_path or None,
-                limit=limit,
+                limit=limit, offset=offset, text_offset=text_offset, max_chars=max_chars,
             )
         except RetrievalError as exc:
             return _error(exc)
@@ -275,7 +307,7 @@ def build_mcp(service: RetrievalService, *, oauth_provider: Any | None = None):
     )
     def fetch_passages(requests: list[dict[str, Any]]) -> dict[str, Any]:
         try:
-            return service.fetch_passages(requests[:50])
+            return service.fetch_passages(requests)
         except RetrievalError as exc:
             return _error(exc)
 

@@ -14,6 +14,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--url", default=os.getenv("MCP_URL", "http://127.0.0.1:8787/mcp"))
     parser.add_argument("--entity", default="Śraviṣṭhā")
     parser.add_argument("--query", default="Maghādi")
+    parser.add_argument("--search-features", action="store_true", help="Verify bounded search, filename-only results, expansion, resources and passage paging")
     return parser.parse_args()
 
 
@@ -36,6 +37,7 @@ async def run(args: argparse.Namespace) -> int:
 
     timeout = httpx.Timeout(120.0, connect=10.0)
     headers = {"Authorization": f"Bearer {token}"}
+    features = {}
     async with httpx.AsyncClient(headers=headers, timeout=timeout) as client:
         async with streamable_http_client(args.url, http_client=client) as (read, write, _):
             async with ClientSession(read, write) as session:
@@ -49,6 +51,48 @@ async def run(args: argparse.Namespace) -> int:
                     "search_corpus",
                     {"query": args.query, "mode": "hybrid", "limit": 3},
                 )
+                if args.search_features:
+                    guide = await session.read_resource("retrieval://search-guide")
+                    guide_text = "\n".join(getattr(item, "text", "") for item in guide.contents)
+                    assert "type:filename" in guide_text and "citation_url" in guide_text
+                    search_tool = next(t for t in tools.tools if t.name == "search_corpus")
+                    assert "script_expansion" in search_tool.inputSchema["properties"]
+                    filename = structured(await session.call_tool("search_corpus", {
+                        "query": "file:Jyo type:filename सूर्य", "limit": 3}))
+                    assert filename.get("mode") == "lexical" and filename.get("results"), filename
+                    assert not filename.get("backend_errors"), filename
+                    assert all(m["filename_match"] for r in filename["results"] for m in r["matches"])
+                    assert all(r.get("source_url") for r in filename["results"])
+                    assert filename["backend_counts"]["vector"] == 0
+                    expanded = structured(await session.call_tool("search_corpus", {
+                        "query": "सूर्य", "mode": "lexical", "script_expansion": "devanagari",
+                        "file_filter": "Jyo", "match_limit": 1, "snippet_chars": 120}))
+                    assert not expanded.get("backend_errors") and expanded.get("results"), expanded
+                    assert "sūrya" in expanded["query_forms"][0]["forms"]
+                    assert len(json.dumps(expanded, ensure_ascii=False).encode()) <= 64000
+                    assert all(len(m["line"]) <= 120 for r in expanded["results"] for m in r["matches"])
+                    if expanded.get("next_cursor"):
+                        continued = structured(await session.call_tool("search_corpus", {
+                            "query": "सूर्य", "mode": "lexical", "script_expansion": "devanagari",
+                            "file_filter": "Jyo", "match_limit": 1, "snippet_chars": 120,
+                            "cursor": expanded["next_cursor"]}))
+                        assert not continued.get("backend_errors") and continued.get("results"), continued
+                        assert continued["results"] != expanded["results"]
+                    chunk_id = next((r.get("chunk_id") for r in structured(search).get("results", []) if r.get("chunk_id")), None)
+                    assert chunk_id, "hybrid smoke search must yield a fetchable chunk"
+                    fetched = structured(await session.call_tool("fetch_passage", {"chunk_id": chunk_id, "max_chars": 120}))
+                    assert fetched.get("passages"), fetched
+                    passage = fetched["passages"][0]
+                    assert passage.get("citation_url"), passage
+                    doc = structured(await session.call_tool("fetch_passage", {"document_id": passage["document_id"], "limit": 1}))
+                    assert doc.get("total_passages", 0) > 0
+                    if doc["has_more"]:
+                        later = structured(await session.call_tool("fetch_passage", {
+                            "document_id": passage["document_id"], "offset": doc["next_offset"], "limit": 1}))
+                        assert later["passages"][0]["chunk_id"] != doc["passages"][0]["chunk_id"]
+                    features = {"guide": "passed", "filename_only": "passed", "script_expansion": "passed",
+                                "match_continuation": "passed" if expanded.get("next_cursor") else "not needed for this query",
+                                "passage_paging": "passed", "source_links": "passed"}
 
     lookup_data = structured(lookup)
     search_data = structured(search)
@@ -67,6 +111,7 @@ async def run(args: argparse.Namespace) -> int:
             "backend_counts": search_data.get("backend_counts", {}),
             "errors": backend_errors,
         },
+        "search_features": features,
     }
     print(json.dumps(report, ensure_ascii=False, indent=2))
 

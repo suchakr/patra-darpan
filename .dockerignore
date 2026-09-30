@@ -20,3 +20,10 @@ docs
 *.jpeg
 *.pyc
 __pycache__
+
+# The MCP resource is built from the same guide readers see in the repository.
+!docs/
+docs/*
+!docs/retrieval/
+docs/retrieval/*
+!docs/retrieval/search-guide.md

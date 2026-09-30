@@ -20,6 +20,22 @@ the original staged plan remain under [`../iscls/`](../iscls/).
 | R13 | Let the production Sanchaya-Zoekt Caddy own public TLS and route dispatch | Accepted |
 | R14 | Make OAuth `/mcp` the preferred public endpoint and authorize Google identities through a reloadable email allowlist | Accepted |
 | R15 | Keep corpus and ontology writes outside online MCP calls | Accepted |
+| R16 | Preserve raw Zoekt syntax and advertise filename-only results; offer explicit script expansion for plain Sanskrit terms | Implemented |
+| R17 | Bound result bytes and expose continuation and completeness; link user-facing evidence to readable source hyperlinks | Implemented |
+| R18 | Deploy runtime-only changes with Git and `make up`, reusing persistent releases, indexes and OAuth state | Implemented |
+
+## Search iterations agreed on 2026-10-01
+
+Iterations 1–2 cover bounded search, honest counts, passage continuation,
+query/script guidance, and reusable Advanced Search transliteration behavior.
+Expansion is deterministic; LLM-proposed declensions, sandhi and samāsa forms
+remain hypotheses that require passage evidence. Raw queries remain available.
+
+Iteration 3 is the reviewed v0.4 ontology extension and contextual-synonym
+projection. It is not activated by runtime updates. Iteration 4 broadens
+fetchable passage scope and genre coverage, with measured artifact rebuilds.
+Quotas remain deferred. No deployment or ontology/index rebuild is included in
+iterations 1–2.
 
 ## Consequences
 

@@ -41,6 +41,7 @@ RUN arch="${TARGETARCH}"; \
 COPY lib /app/lib
 COPY scripts /app/scripts
 COPY ontology /app/ontology
+COPY docs/retrieval/search-guide.md /app/docs/retrieval/search-guide.md
 
 ENV MCP_HOST=0.0.0.0 \
     MCP_PORT=8787 \

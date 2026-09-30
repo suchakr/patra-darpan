@@ -94,6 +94,7 @@ batch fetch tools.
 | --- | --- |
 | `retrieval://ontology-context` | Compact ontology guidance for query planning |
 | `retrieval://release` | Active release identity and lineage |
+| `retrieval://search-guide` | Index coverage, query syntax, script expansion, continuation and linked evidence |
 
 ## Result behavior
 
@@ -101,6 +102,25 @@ Results include schema versions and the active corpus/release revision where
 appropriate. Search limits, passage sizes, and batch sizes are bounded by the
 tool implementation. Backend failures are returned explicitly so a client can
 distinguish a partial result from a complete one.
+
+`search_corpus` preserves raw Zoekt queries, including `type:filename`, and
+adds optional `result_type`, `file_filter`, `script_expansion`, `context_lines`,
+`snippet_chars`, `match_limit` and `cursor`. Filename-only results use lexical
+mode. Script expansion is explicit and restricted to plain terms; complex
+expressions retain raw Zoekt semantics. Vector queries keep the original text.
+
+Lexical pages expose `lexical_stats`, `next_cursor`, `has_more` and match
+windows with original UTF-8 offsets. Backend-reported totals carry an exactness
+flag; the bounded snapshot is not a guarantee of full-corpus enumeration.
+`backend_counts` retains its original meaning: adapter candidate rows before
+fusion, not occurrence totals. Cursors expire after five minutes or eviction.
+
+`fetch_passage` adds `offset`, `text_offset` and `max_chars`; results expose
+document continuation and chunk-text continuation separately. Batch requests
+accept the same fields and report unprocessed requests if the shared budget
+is reached. Search and passage results include `citation_url`/`source_url`
+where resolvable. Existing required arguments, tool names and response fields
+are retained. The [search guide](search-guide.md) contains defaults and usage.
 
 ## Sources of truth
 

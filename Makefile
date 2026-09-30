@@ -1,7 +1,7 @@
 SHELL := /bin/bash
 
 .DEFAULT_GOAL := help
-.NOTPARALLEL: index pilot smoke
+.NOTPARALLEL: index pilot smoke up
 
 # Resolve paths from this Makefile, not from the caller's shell and not from a
 # global shell profile. This keeps `git clone && cd repo && make <target>`
@@ -33,8 +33,8 @@ else
 COMPOSE := $(COMPOSE_BASE)
 endif
 
-.PHONY: help prod-env check config test build catalog qdrant wait-qdrant index inspect mcp up \
-	backend-smoke mcp-smoke smoke pilot oauth-config edge edge-smoke https logs down
+.PHONY: help prod-env check config test build runtime-build catalog qdrant wait-qdrant index inspect mcp up \
+	backend-smoke mcp-smoke search-smoke smoke pilot oauth-config edge edge-smoke https logs down
 
 ifeq ($(MODE),development)
 EDGE_UP_SERVICES := retrieval-mcp-oauth retrieval-https
@@ -52,6 +52,8 @@ help:
 		"  make check                         Validate env, Compose, and whitespace" \
 		"  make test                          Run Python unit tests (development)" \
 		"  make build                         Build retrieval images" \
+		"  make runtime-build                 Build only the MCP runtime image" \
+		"  make up                            Build/start MCP and configured OAuth/HTTPS; reuse indexes" \
 		"  make catalog                       Build/refresh the canonical SQLite catalog" \
 		"  make qdrant                        Start persistent Qdrant" \
 		"  make wait-qdrant                   Start Qdrant and wait until ready (used by index)" \
@@ -60,6 +62,7 @@ help:
 		"  make mcp                           Start the MCP runtime" \
 		"  make backend-smoke                 Optional backend check (included in smoke)" \
 		"  make mcp-smoke                     Optional MCP check (included in smoke)" \
+		"  make search-smoke                  Check search expansion, filenames, guide and passage paging" \
 		"  make smoke                         Run both checks against the active release" \
 		"  make pilot                         Full flow; includes the index build" \
 		"  make oauth-config                  Validate OAuth provider and allowlist settings" \
@@ -119,6 +122,9 @@ test:
 build: check
 	$(COMPOSE) --profile build build retrieval-builder retrieval-mcp
 
+runtime-build: check
+	$(COMPOSE) --profile runtime build retrieval-mcp
+
 # The catalog source tree stays read-only in the container. Mount only the
 # canonical catalog directory as writable so the atomic file replacement can
 # complete without granting write access to the checkout.
@@ -157,7 +163,10 @@ inspect: check
 mcp: qdrant inspect
 	$(COMPOSE) --profile runtime up -d retrieval-mcp
 
-up: mcp
+# Runtime update/start path: never reaches catalog, builder or index targets.
+# Both MCP processes use the freshly built runtime image. Production TLS is
+# still owned by Sanchaya-Zoekt; the development edge is part of this project.
+up: runtime-build edge
 
 backend-smoke: mcp
 	$(COMPOSE) --profile runtime run --rm --no-deps retrieval-mcp \
@@ -166,6 +175,10 @@ backend-smoke: mcp
 mcp-smoke: mcp
 	$(COMPOSE) --profile runtime run --rm --no-deps retrieval-mcp \
 		python scripts/mcp_smoke.py --url http://retrieval-mcp:8787/mcp
+
+search-smoke: mcp
+	$(COMPOSE) --profile runtime run --rm --no-deps retrieval-mcp \
+		python scripts/mcp_smoke.py --url http://retrieval-mcp:8787/mcp --search-features
 
 smoke: backend-smoke mcp-smoke
 	@echo "Backend and MCP smoke checks passed."
