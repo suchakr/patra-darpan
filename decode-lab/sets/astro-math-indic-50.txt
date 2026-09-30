@@ -1,0 +1,56 @@
+# Curated 50-document tranche for the astro/math Indic corpus.
+# Count: 50 (five resumable batches of 10)
+# Subjects: Astronomy, Math
+# Categories: Indic
+# Doc types: digital, raster
+
+Vol54_4_2019__Art02
+Vol47_3_10_ASBhat
+IJHS_60_3_1
+Vol52_4_2017__Art02
+Vol51_2016_3_Art06
+Vol52_4_2017__Art01
+Vol45_3_2_MNVahia
+57_4_1
+1__Mahesh
+Vol49_3_4_DJadhav
+Vol43_3_4_DBhattacharya
+IJHS_60_1_3
+Vol51_2016_2_1_Art02
+Vol55_2_2020__Art04
+IJHS_59_3_2
+08-IJHS59_1
+Concept_of_Probability_in_Sanskrit_Texts
+IJHS_60_3_2
+IJHS_60_1_1
+Vol44_3_6_RBhattacharya
+Vol49_3_8_RSridharan
+Vol45_4_1_ANarayan
+Vol54_3_2019__Art02
+Vol51_2016_3_Art08
+Vol52_2_2017__Art02
+Vol35_3_4_VNSharma
+Vol34_4_2_SRSarma
+Vol28_1_5_SRSarma
+Vol34_2_6_SRSarma
+Vol38_1_1_RCGupta
+Vol39_2_2_KCHari
+Vol35_1_1_BNNAchar
+Vol13_2_5_RCGupta
+Vol37_3_3_DJadhav
+Vol15_1_10_AKBag
+Vol04_1And2_12_TSKShastri
+Vol41_2_1_SBhujle
+Vol24_3_5_LCJain
+Vol38_3_4_SBRao
+Vol42_2_2_ASule
+Vol34_1_1_KCHari
+Vol33_3_1_SCKak
+Vol22_3_4_SCKak
+Vol19_1_1_PSingh
+Vol18_1_4_RCGupta
+Vol11_1_6_LCJain
+Vol43_4_3_VMMallayya
+Vol02_2_3_RCGupta
+Vol08_1and2_4_KSShukla
+Vol32_1_4_AMukhopadhyay

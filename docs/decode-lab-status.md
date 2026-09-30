@@ -270,6 +270,28 @@ is included to differentiate thinking levels on the same model
 Cache location: `.cache/gemini/<sha256_prefix>.json`.
 Re-runs with the same config and PDF are free.
 
+## Cost Tracking Addition (implemented)
+
+`run_decode_lab.py` now records timing and available Gemini usage/cost
+metadata without making a second provider call:
+
+- `run-manifest.json` includes `duration_seconds` and `cost_summary`, alongside
+  the existing UTC timestamps, model configuration, and requested service tier.
+- Gemini rows in `fallbacks.jsonl` include normalized input, cached-input,
+  output, and thinking token counts when the SDK returns them, plus a pricing
+  snapshot, `estimated_cost_usd`, and `cost_status`.
+- `reports/decode-run-history.tsv` is regenerated after every run from all run
+  manifests under the run output root.
+- Local response-cache hits are recorded as zero generation cost for that
+  runner call. Older runs remain time/cache auditable but report cost as
+  unknown when they have no usage metadata.
+
+The estimates use the versioned rates in `lib/decode_lab/costs.py`, currently
+for Gemini 3 Flash Preview, Gemini 2.5 Flash, and Gemini 2.5 Flash-Lite on the
+standard and flex tiers. The pricing source and table version are stored in
+each per-call pricing snapshot. Missing usage or an unsupported model leaves
+the estimate unknown rather than guessing.
+
 ## Current Design Decisions (updated 2026-04-15)
 
 - Campaign sets are tracked text files under `decode-lab/sets/`.
@@ -307,6 +329,7 @@ Re-runs with the same config and PDF are free.
 - `lib/decode_lab/nakshatra_lookup.py` — canonical nakṣatra variant dictionary
 - `lib/decode_lab/gemini_fallback.py` — legacy per-page PNG fallback pipeline
 - `lib/decode_lab/gemini_extract.py` — PDF-native page-chunk extraction
+- `lib/decode_lab/costs.py` — usage normalization, pricing snapshots, and run history
 - `lib/decode_lab/model_configs.py` — four Gemini model presets + prompt
 - `lib/decode_lab/image_extract.py` — image extraction, caching, placeholder replacement
 - `lib/decode_lab/assembler.py` — Markdown assembly from run artifacts
@@ -318,7 +341,7 @@ Re-runs with the same config and PDF are free.
 - `lib/decode_lab/runner.py` — `--extractor gemini:*`, `--fallback gemini`,
   `--assemble`, `--assemble-lazy`, `--assemble-only`, `--set`, `--resume`,
   `--repair`, and `--force` flags; image extraction + symlinks; model config
-  logging in run-manifest.json and audit.md
+  and cost logging in run-manifest.json and audit.md
 - `lib/schema.sql` — `asset_refs` file facts, `pdf_profiles`, and
   `primary_pdf_profiles`
 - `scripts/run_decode_lab.py` — assembly and extractor CLI integration

@@ -1,0 +1,377 @@
+# ISCLS Semantic Embedding Bakeoff
+
+## Status
+
+Historical evaluation record. The E5/Qdrant arm is the selected pilot baseline
+and is now used by the normal retrieval builder. BGE-M3 was inconclusive on the
+development machine, and the Gemini arm was stopped by its guarded batch/quota
+path; neither is a production dependency. This report remains the evidence for
+the selection and can be rerun when the model or corpus changes.
+
+## Purpose
+
+Choose a semantic indexing configuration that works for the actual Indic and
+Patra Darpan material, with measured quality, size, latency, and cost. The
+bakeoff must be repeatable and must use the same identity and provenance
+contracts that the later vector projection will use.
+
+## Working boundaries
+
+```text
+~/projects/patra-darpan-pdf-semantic-index   bakeoff code, docs, reports
+~/projects/sanchaya                        read-only corpus checkout
+~/projects/sanchaya-zoekt                  unchanged during the bakeoff
+```
+
+The runner reads the Sanchaya checkout directly at a recorded Git commit. It
+does not export, edit, or commit corpus files. “Frozen snapshot” means a clean,
+revision-pinned checkout, not a second copy of the repository.
+
+Generated chunks, embeddings, Qdrant data, and reports live under a
+gitignored local area such as `.local/iscls-bakeoff/`.
+
+## Evaluation inputs
+
+### Primary judged corpus
+
+Use the existing 29-document `decode-lab/sets/audit-set.txt` selection after
+its accepted Markdown has been projected into Sanchaya. These documents provide
+reviewed astronomy, mathematics, historical, table, IAST, and Devanagari
+material.
+
+### Sanchaya coverage probe
+
+Use 30 read-only Sanchaya files:
+
+- 24 representative `Jyotisham/` files covering Devanagari, IAST, mixed/OCR,
+  mathematical, astronomical, and translated material;
+- `Vedic texts/AV/atharvaveda parishishta.txt`;
+- `gretil/sa_atharvavedapariziSTas.txt`;
+- `Puranani/brahmanda purana.txt`;
+- `gretil/sa_brahmANDapurANa.txt`;
+- `Bauddha/shardula karnavadanam.txt`; and
+- `gretil/sa_zArdUlakarNAvadAna.txt`.
+
+The exact 24-file list is recorded in the input manifest before the first
+embedding run. The probe is reported separately from the primary relevance
+score so a large source file or an open-ended discovery query cannot distort
+the judged paper benchmark.
+
+The first input pass is now runnable with the read-only checkout:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 python3 scripts/prepare_iscls_bakeoff.py
+PYTHONDONTWRITEBYTECODE=1 python3 scripts/build_iscls_chunks.py
+```
+
+The current manifest records Sanchaya commit
+`c6d35eb057aec2e8d7aafc8c40a430ce8333e971`, 29 judged papers, and 30 probe
+files. The initial inventory contains 3,625 chunks and about 1.29 million
+whitespace-token estimates; 1,375 chunks use the long-block fallback and 112
+are table chunks. These are inventory measurements, not model-token counts.
+The fallback rate is a review gate: inspect representative verses, OCR text,
+and tables before embedding, and revise `chunker_v1` once if the boundaries
+are visibly poor.
+
+## Query set
+
+The fixed query fixture is
+`tests/fixtures/iscls/semantic-embedding-bakeoff-queries.jsonl` with:
+
+- 18 development queries;
+- 6 held-out queries; and
+- 8 Sanchaya probe queries.
+
+Each row records `query_id`, query text, query class, script, expected document
+IDs or source paths, and a short relevance note. Query classes include
+conceptual paraphrase, transliteration variation, Devanagari, IAST, mixed
+script, entity/work linkage, table or method questions, and open-ended source
+discovery.
+
+The checked-in query file contains those 32 rows. Generated input,
+chunk, model, and Qdrant artifacts remain under `.local/iscls-bakeoff/` and
+are intentionally not committed.
+
+The initial held-out questions include:
+
+1. Are nakṣatras only lunar mansions, or are they also used as solar, seasonal,
+   and calendrical markers?
+2. What is the significance of the Māghādi scheme, and how does the
+   Brahmāṇḍa Purāṇa calendar beginning with the Sun at Maghā relate to rain or
+   the summer solstice?
+3. Does the Atharvaveda Pariśiṣṭa list nakṣatra shapes and counts? Find other
+   sources, including Śārdūla sources, that make similar references.
+4. Find occurrences of Śraviṣṭhā and Dhaniṣṭhā, including Devanagari and
+   transliteration variants, and report how each source treats them.
+
+Closed questions receive document-level relevance judgments first. Finalist
+models receive chunk-level inspection. Open-ended occurrence and source-
+discovery questions receive a coverage report rather than a forced top-five
+gold label.
+
+## Common semantic input
+
+All candidate models use the same deterministic `chunker_v1` input:
+
+- preserve headings, paragraphs, verses, tables, page markers, and original
+  scripts;
+- embed title, heading path, and chunk text;
+- keep catalog metadata, URLs, IDs, and JSON out of the embedded text;
+- target approximately 384 tokens;
+- hard limit approximately 480 tokens;
+- use approximately 48-token overlap only when a long block must be split; and
+- derive stable chunk IDs from document identity, logical location, chunker
+  version, and text hash.
+
+The chunk inventory is measured before model comparison. If the inventory
+shows that this policy damages tables, verses, or short sections, revise the
+chunker once and rerun every candidate on the same revised chunks.
+
+## Candidate embedders
+
+Run three arms when the paid budget permits:
+
+1. `intfloat/multilingual-e5-base` as the local baseline;
+2. `BAAI/bge-m3` as the local challenger; and
+3. `gemini-embedding-2` as the paid challenger, using 768 output dimensions
+   initially.
+
+Pin exact model revisions and record them in every build. Gemini supports
+8,192-token text inputs and configurable output dimensions; the current Google
+standard text price is $0.20 per million tokens. See the [Gemini embedding
+documentation](https://ai.google.dev/gemini-api/docs/embeddings) and
+[pricing](https://ai.google.dev/gemini-api/docs/pricing).
+
+The Gemini arm has a hard budget cap of **$0.50**. Perform a token preflight
+before any API call and stop at **$0.40** to reserve retry and query headroom.
+If the full probe exceeds the cap, retain the full 29-paper judged run and
+reduce the paid probe selection. Do not send PDFs or images in this text
+embedding bakeoff.
+
+The no-network preflight is:
+
+```bash
+python3 scripts/estimate_iscls_gemini_budget.py --split all
+```
+
+It uses the same chunk/query inventory and exits non-zero if the hard cap would
+be exceeded. An `over_stop` result requires reducing the paid selection before
+the API runner is allowed to start.
+
+On the current inventory (3,625 chunks and 32 queries), the preflight estimates
+1,323,218 whitespace tokens and **$0.264644** at `$0.20/M`. This is below the
+stop threshold; the eventual API response usage remains the billing record.
+
+### Gemini token calibration and batch path
+
+Whitespace is a poor cost proxy for this corpus. A distributed 128-chunk
+sample sent to Gemini's free `count_tokens` endpoint measured 155,313 Gemini
+tokens versus 46,964 whitespace tokens (ratio **3.307**). Extrapolated to the
+full chunk inventory, a standard Gemini run would be about **$0.86**, so the
+standard full run is intentionally blocked by the $0.50 cap. The Gemini
+Embedding 2 Batch API is priced at half the standard embedding rate; its
+conservative full-run estimate is about **$0.45** using a 3.5x guard. This is
+within the approved hard cap but above the normal $0.40 stop threshold, so it
+requires an explicit one-off `--stop-usd 0.49` invocation and leaves only a
+small reserve for query embeddings. Tier 1 currently allows about 500,000
+embedding tokens enqueued per model, so the full inventory is partitioned into
+12 sequential jobs. Do not submit the same job twice.
+
+The implementation is split from the local runner:
+
+```bash
+# Cheap synchronous API smoke test.
+python scripts/run_iscls_gemini_build.py --max-chunks 32 \
+  --collection iscls_gemini_smoke_32 --recreate
+
+# Full run, using the discounted asynchronous Batch API and quota-safe jobs.
+python scripts/run_iscls_gemini_build.py --mode batch \
+  --collection iscls_gemini_batch_full --stop-usd 0.49 \
+  --hard-cap-usd 0.50 --max-retries 0 --resume-batches --recreate
+```
+
+The runner records the calibrated guard, uploaded request file, batch job
+name, result file, and Qdrant run manifest. It reuses completed per-batch
+result files with `--resume-batches` and can resume polling a single active
+job with `--batch-job-name` without creating a second paid job. The query
+evaluator uses the same Gemini retrieval prefix and embeds queries only after
+the corpus collection is complete.
+
+## Local vector infrastructure
+
+Run Qdrant in a standalone local Compose profile owned by the semantic
+repository. Create one isolated collection per candidate model. Keep the
+Qdrant volume outside Git and publish no public port.
+
+The historical local profile is
+`reports/iscls/docker-compose.iscls-bakeoff.yml`:
+
+```bash
+docker compose -f reports/iscls/docker-compose.iscls-bakeoff.yml up -d qdrant
+uv run --with sentence-transformers --with qdrant-client==1.14.1 \
+  python scripts/run_iscls_vector_build.py \
+  --model intfloat/multilingual-e5-base --recreate
+```
+
+The vector builder is deliberately separate from Zoekt and MCP. It writes a
+run manifest under `.local/iscls-bakeoff/runs/`, records the chunk inventory
+hash, and stores only searchable payload/provenance in Qdrant; full chunk text
+continues to come from the chunk inventory and later shared chunk store.
+
+### Optional smoke test before the full run
+
+A separate calibration run is not required for this pilot. The current
+3,625-chunk inventory is small enough that the full run can provide the most
+useful velocity, resource, and cost measurement. A deterministic round-robin
+sample is still useful as a cheap integration smoke test when installing a new
+model or Qdrant runtime:
+
+```bash
+uv run --with sentence-transformers --with qdrant-client==1.14.1 \
+  python scripts/run_iscls_vector_build.py \
+  --model intfloat/multilingual-e5-base \
+  --collection iscls_e5_calibration_512 --max-chunks 512 --recreate
+```
+
+The run manifest records cold model-load time, encode/upsert time, chunks per
+second, estimated tokens per second, embedding dimensions, and raw vector
+bytes. Add peak process memory (`/usr/bin/time -l` on macOS) and Qdrant
+collection size to the run record. The round-robin selector covers every
+source before taking a second chunk, so a smoke test is more useful than timing
+the first directory slice. The same command without `--max-chunks` seeds the
+full current bakeoff. Quality scoring comes after that collection is seeded; it
+uses the same query file and does not require embedding the eventual 120-paper
+expansion first.
+
+For the paid arm, run the cost preflight before the full current inventory.
+The current text volume is small enough to estimate Gemini under the approved
+cap with the discounted batch path, but the active account's queue quota makes
+the full run a multi-job operation. The recorded local and paid rates provide
+the basis for 120-, 200-, and 2,000-paper estimates.
+
+### Execution record
+
+The first local baseline used `intfloat/multilingual-e5-base` with Qdrant
+`v1.14.1` and 768-dimensional normalized vectors:
+
+| Run | Chunks | Encode time | Throughput | Raw vectors | Qdrant storage |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Smoke | 512 | 36.9 s | 13.9 chunks/s; 4,885 tokens/s | 1.5 MiB | — |
+| Full | 3,625 | 230.0 s | 15.8 chunks/s; 5,628 tokens/s | 11.1 MB | 33 MiB |
+
+The full E5 collection scored Recall@5 **1.00** and nDCG@5 **1.00** on the
+20 closed document-level judgments. Twelve open-ended questions remain
+qualitative; their source-path coverage was 0.214. These numbers are a first
+baseline, not a model-selection decision, because the judged set is small and
+manual top-chunk review remains.
+
+BGE-M3 loaded successfully, but its first CPU batch of 32 stalled for more
+than three minutes on the same 512-chunk smoke input and was stopped. The
+machine is an Apple M1 Pro with 32 GB RAM; PyTorch reports MPS available, but
+the first MPS batch of 8 took about 59 seconds, implying roughly an hour for
+the smoke set. Do not start a full BGE run on this host with this runtime;
+this is a measured resource constraint, not a quality result. A different
+runtime (for example, an optimized Metal/Ollama path) can be evaluated later.
+
+Gemini smoke execution used the same chunk inventory and retrieval prefixes:
+
+| Run | Chunks | API mode | Embedding time | Dimensions | Guarded cost |
+| --- | ---: | --- | ---: | ---: | ---: |
+| Smoke | 32 | synchronous | 5.8 s | 768 | $0.002432 |
+| Batch probe | 2 | asynchronous Batch API | 67.2 s | 768 | $0.000232 |
+
+The first two full-run partitions completed (737 vectors, 495,775 actual
+Gemini tokens, approximately $0.0496 at the batch price). A third partition
+returned 324 responses, but 103 were marked `operation was cancelled` while
+the queued job was being stopped; it is not a valid collection and was not
+written to Qdrant. No Gemini quality score is reported. E5 remains the only
+complete, evaluated semantic index until the Gemini account quota or a longer
+batch window is available.
+
+### Deferred activity: reuse judged pairs for Sanskrit adaptation
+
+The bakeoff judgments are candidates for a later domain-adaptation dataset. Before
+fine-tuning, convert each accepted document-level judgment into one or more exact
+positive `chunk_id` pairs, add reviewed hard-negative chunks, and retain the query
+script/language, source path, and provenance. The current set is useful as a seed
+and evaluation contract; it is too small and too document-level to serve as a
+complete training set. Keep a held-out set so any Sanskrit/Devanagari adaptation
+is measured rather than assumed.
+
+After a candidate collection is built, evaluate it with:
+
+```bash
+uv run --with sentence-transformers --with qdrant-client==1.14.1 \
+  python scripts/evaluate_iscls_vectors.py \
+  --run .local/iscls-bakeoff/runs/iscls_intfloat_multilingual_e5_base/run.json
+```
+
+Qdrant stores vectors, chunk IDs, corpus revision, and filterable provenance.
+The chunk store remains the source for full text and media references. The
+evaluator talks directly to Qdrant; MCP and the Zoekt adapter are out of scope
+until a model is selected.
+
+## Measurements and decision rule
+
+For every candidate, record:
+
+- Recall@5 and nDCG@5 on closed held-out queries;
+- results by English, IAST, Devanagari, and mixed-script groups;
+- top-chunk manual quality;
+- token count, build duration, and throughput;
+- peak memory and model download size;
+- vector/Qdrant collection size; and
+- query latency.
+
+Select a model only when it gives a clear held-out quality improvement without
+a serious Indic-script failure or an unacceptable resource/cost profile. A
+small quality difference favors the local model because it removes API
+dependency and recurring spend.
+
+## Task breakdown and estimate
+
+| Task | Output | Engineering time |
+| --- | --- | ---: |
+| Durable note and input contract | this note, query/schema decision | 2–4 hours |
+| Read-only Sanchaya validation | clean commit, 29-paper selection, 30-file probe manifest | 3–6 hours |
+| Chunk inventory and `chunker_v1` | token statistics, stable chunk fixture | 4–8 hours |
+| Query preparation and labels | 24 judged queries plus 8 probe queries and expected evidence | 4–8 hours |
+| Local embedder runner | E5/BGE build and evaluation commands | 4–8 hours |
+| Standalone Qdrant profile | persistent local collections and health checks | 2–4 hours |
+| Gemini capped run | token preflight, budget guard, third collection | 1–3 hours |
+| Evaluation report | quality/resource comparison and recommendation | 4–8 hours |
+
+These task ranges overlap; they are not additive. The active critical path is
+expected to be **3–5 working days**. With model downloads, manual relevance
+review, and discussion of failures, the calendar estimate is **4–7 days**.
+
+The main uncertainty is chunk and relevance review; embedding runtime itself
+should be shorter.
+
+## Implementation checkpoint
+
+The contract and first runnable scaffolding were committed separately:
+
+- `28543f6` — bakeoff contract, query file, budget and exit criteria;
+- `05fe09b` — read-only input manifest, deterministic chunk inventory, local
+  Qdrant profile, and optional local vector builder; and
+- `11a5760` — Qdrant evaluator with Recall@5, nDCG@5, script grouping, and
+  open-ended source-path coverage.
+
+The E5 baseline has now been measured and integrated into the retrieval release
+path. Remaining work is optional challenger evaluation, manual answer review,
+and reruns when the chunk policy or corpus scope changes.
+
+## Exit criteria
+
+The bakeoff was complete for the pilot when:
+
+- the input commit and file manifest are recorded;
+- every candidate uses identical chunks and queries;
+- the Gemini spend guard is tested and remains under the approved cap;
+- Qdrant collections are reproducible locally;
+- quality, script coverage, size, latency, and cost are reported; and
+- one model/chunker configuration is selected for the pilot vector projection.
+
+The selected E5 configuration is now the normal retrieval build path. Full
+120-paper coverage and production packaging are separate follow-on gates.

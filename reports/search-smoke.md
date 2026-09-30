@@ -1,27 +1,27 @@
 # Search Smoke Report
 
-- Generated at: `2026-04-23T15:52:24Z`
-- Document count: 29
-- Chunk count: 547
+- Generated at: `2026-09-19T04:48:10Z`
+- Document count: 120
+- Chunk count: 2529
 
 ## Yājñavalkya cycle
 
-- Top result: `Vol28_1_2_SCKak`
-- Title: Astronomy of the Satapatha Brahmana
-- Heading: ASTRONOMY OF THE ŚATAPATHA BRĀHMAṆA > 10. THE 95 YEAR YĀJÑAVALKYA PERIOD
-- Score: 52.0
-- Chunk: `Vol28_1_2_SCKak:c0013`
-- Snippet: ...nakṣatra year of 324 days. If each altar is taken to represent a yuga, the cycle would become 475 years. The use of the Yājñavalkya cycle at a later time is corroborated by the creation of the 2850 year cycle in the Romakasiddhānta, which is 30 times 95, or a "month" of such a cycle.
+- Top result: `Vol33_3_1_SCKak`
+- Title: The SunU+2019 ’s Orbit in the Brahmanas
+- Heading: THE SUN’S ORBIT IN THE BRĀHMAṆAS > INTRODUCTION
+- Score: 58.0
+- Chunk: `Vol33_3_1_SCKak:c0003`
+- Snippet: ...geling,5 the Śatapatha Brāhmaṇa represents the merging of two traditions, the first $9$ kāṇḍas are due to the school of Yājñavalkya and the kāṇḍas $10$-$14$ due to the school of Śāṇḍilya. If one were to accept this theory, then the $95$-year lunar-solar cycle of the fire altar astronomy should be called the Śāṇḍilya cycle rather than the Yājñavalkya cycle. B...
 - Credibility: likely relevant; human review recommended
 
 ## Saptarṣi era
 
-- Top result: `Vol28_1_2_SCKak`
-- Title: Astronomy of the Satapatha Brahmana
-- Heading: ASTRONOMY OF THE ŚATAPATHA BRĀHMAṆA > 7. THE SEVEN ṚṢIS AND THE SAPTARṢI ERA
-- Score: 46.0
-- Chunk: `Vol28_1_2_SCKak:c0010`
-- Snippet: ...tion of the Ṛṣis with the human head doubtless inspired by the identification of the primal person, puruṣa, in the sky. Saptarṣi Era SB 2.1.2.1-5 speaks of a marriage between the Ṛṣis and the nakṣatras; specifically it is mentioned that the Ṛṣis were married to the Kṛttikās. In the Purāṇas this notion of marriage is elaborated when it is clearly stated that...
+- Top result: `Vol42_2_2_ASule`
+- Title: Saptarsi' Visit to different Naksatras: Subtle Effect of Earth’s Precession
+- Heading: SAPTARṢI’ VISIT TO DIFFERENT NAKṢATRAS: SUBTLE EFFECT OF EARTH’S PRECESSION
+- Score: 54.0
+- Chunk: `Vol42_2_2_ASule:c0002`
+- Snippet: ...S}$* (Received 9 August 2005; revised 11 May 2006) In several ancient Indian texts a mention is made of movement of the Saptarṣi constellation (Big Bear or Big Dipper) in the sky, visiting each nakṣatra for 100 years. Saptarṣi is said to visit a nakṣatra if the nakṣatra is in the middle of the stars in the first part of Saptarṣi. Since astronomical objects e...
 - Credibility: likely relevant; human review recommended
 
 ## pandiagonal magic square
@@ -46,12 +46,12 @@
 
 ## Vedāṅga Jyotiṣa solstice
 
-- Top result: `Vol43_4_1_PGondhalekar`
-- Title: Intercalation in the Vedic Texts
-- Heading: INTERCALATION IN THE VEDIC TEXTS > 3. THE CALENDAR OF VEDĀNGA JYOTIṢA
-- Score: 47.0
-- Chunk: `Vol43_4_1_PGondhalekar:c0008`
-- Snippet: ...h.........". That is, the intercalation period starts when the star (or star group) Śraviṣṭhā rises helically at winter solstice. Apart from identifying the epoch (via the helical rising of Śraviṣṭhā) when this scheme of intercalation was formulated or more likely formalized, the start of a yuga in the Jyotiṣa is same as that inferred from TS.VII.4.8. Also t...
+- Top result: `Vol35_3_1_BNNAchar`
+- Title: A Case for Revising the Date of Vedanga Jyotisa
+- Heading: A CASE FOR REVISING THE DATE OF VEDĀṄGA JYOTIṢA > DISCUSSION
+- Score: 71.0
+- Chunk: `Vol35_3_1_BNNAchar:c0006`
+- Snippet: ...n the same manner as that of the previously accepted figure of 1180 BC on the basis of verses 5 and 6 of VJ. The winter solstice occurs when the sun and the moon are together in Dhaniṣṭha and the summer solstice occurs when the sun is in the middle of Āśleṣa. These two events occur in the months of Māgha and Śravaṇa respectively. The date of 1180 BC is based...
 - Credibility: likely relevant; human review recommended
 
 ## intercalary month Vedic texts

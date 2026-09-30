@@ -24,6 +24,8 @@ Current milestone:
 - canonical corpus build works
 - legacy-compatible `index.tsv` regeneration works from canonical root inputs
 - Patra Darpan `data.js` can be regenerated from `exports/index.tsv`
+- the deployed retrieval and MCP system is documented in
+  [`docs/retrieval/README.md`](docs/retrieval/README.md)
 
 Legacy scripts still exist in the repo, but the intended authority flow is now:
 
@@ -50,6 +52,14 @@ Legacy scripts still exist in the repo, but the intended authority flow is now:
   generated compatibility outputs such as `index.tsv`
 - `reports/`
   validation, audit, and migration reports
+- `docs/retrieval/`
+  current retrieval architecture, contracts, operations, and release schemas
+- `docs/iscls/`
+  historical pilot PRD and staged implementation record
+- `reports/iscls/`
+  one-off retrieval bakeoff and ontology-generation records
+- `ontology/`
+  versioned, repository-owned ontology snapshots
 - `reference/legacy/`
   legacy comparison fixtures
 - `.build~/`
@@ -75,6 +85,34 @@ Current root metadata inputs are:
 Shared PDF asset roots live in the sibling `patra-darpan` checkout:
 - `corpus/ijhs`
 - `corpus/other`
+
+## Retrieval and MCP
+
+The retrieval system builds a composite release catalog plus three projections
+from one reviewed source set:
+
+- a read-only SQLite catalog covering Patra Darpan papers and release-scoped
+  Sanchaya text files
+- a Zoekt lexical index (the existing `sanchaya-zoekt` project)
+- an E5 semantic vector index in Qdrant
+- a v0.3 ontology-driven entity and mention projection
+
+A read-only MCP server adapts those projections for ChatGPT, Codex, Claude, and
+other MCP clients. The chat host owns conversation and answer synthesis; the
+adapters own bounded retrieval. Catalog, indexed-content, and entity coverage
+are reported separately.
+
+The online MCP applications remain HTTP inside the private Docker network.
+Caddy provides the public HTTPS/OAuth boundary at `/mcp`; the raw Zoekt RPC and
+the data services remain private.
+
+`make help` is the command entry point for both development and production.
+The Makefile, Compose files, and checked-in environment examples are the
+authoritative operational sources.
+
+Start with [`docs/retrieval/README.md`](docs/retrieval/README.md) for the current
+architecture, contracts, operations, authentication model, and decisions.
+[`docs/iscls/README.md`](docs/iscls/README.md) retains the pilot history.
 
 ## Common Commands
 
@@ -404,6 +442,10 @@ Do not casually remove root-input rows, shared PDFs, or GCS objects. Prefer to:
   CAHC `P60` projection and `P85` cleanup plan
 - [web/README.md](web/README.md)
   local web runtime, Netlify dev/deploy, and link behavior
+- [docs/retrieval/README.md](docs/retrieval/README.md)
+  current retrieval architecture, contracts, operations, and authentication
+- [docs/iscls/README.md](docs/iscls/README.md)
+  historical ISCLS pilot PRD, implementation plan, and experiment references
 
 ## Environment
 

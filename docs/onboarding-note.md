@@ -1,6 +1,100 @@
 # Patra Darpan Semantic Index — Onboarding Note
 
-## Snapshot — 2026-04-18
+This note is the lightweight memory for humans and new agents. It should
+capture stable orientation, current operating rules, and a short decision log.
+It should not become a full progress journal.
+
+## Durable Memory
+
+### What this repo is for
+
+- Source PDFs live under the local corpus and are profiled into SQLite-backed
+  metadata and reports.
+- Decode Lab runs in `.build~/decode-lab/<run-id>/` are the working evidence
+  layer for extraction, assembly, and repair.
+- Accepted run output is materialized into `decoded-corpus/` via
+  `scripts/build_decoded_corpus.py`.
+- `decoded-corpus/` is the durable generated artifact that downstream indexing,
+  review, and search experiments should consume.
+- Search Lab is the current lightweight retrieval surface at
+  `web/search-lab.html`, backed by `web/assets/data/search-corpus.json` and the
+  shared lexical engine in `web/assets/js/search-core.js`.
+- `tools/audit-decoder/` is the local PDF/Markdown review workbench.
+
+### Canonical references
+
+- design contract: `docs/pdf-decoding-lab.md`
+- progress / running status: `docs/decode-lab-status.md`
+- durable corpus artifact contract: `docs/build-decoded-corpus-prd.md`
+- repo-wide operational policy: `README.md`
+
+### Operational conventions
+
+- Use `uv run python ...` for project Python commands; do not default to system
+  `python3` for repo workflows.
+- Treat `decoded-corpus/` as generated durable output, rebuilt from accepted
+  runs rather than hand-edited source.
+- Use `scratch~/` for disposable probes and experiment artifacts.
+- Use `.build~/` for generated run evidence and intermediate outputs.
+- Current recommended extractor for corpus-scale Decode Lab work is
+  `gemini:3-flash-med`; HIGH thinking remains available for hard documents.
+
+### Branch / worktree policy
+
+- Do not assume the current branch name in this note is still current; check
+  `git status --short --branch`.
+- Repo policy prefers a fresh worktree for new feature work. See `README.md`
+  before creating, reusing, renaming, or deleting worktrees.
+- If a task is intentionally staying on the current branch, say so explicitly in
+  the conversation rather than inferring it from old notes.
+
+### Layout that matters
+
+- `decode-lab/sets/` — tracked campaign-set definitions
+- `scripts/` — CLI entry points and build utilities
+- `lib/decode_lab/` — Decode Lab implementation
+- `decoded-corpus/` — durable generated corpus output
+- `tools/audit-decoder/` — local PDF/Markdown review UI
+- `tools/search-lab/` — local CLI/TUI retrieval validator
+- `web/` — static browser retrieval/demo surfaces
+- `scratch~/` — disposable experiments
+- `.build~/` — generated run evidence
+
+### Current accepted / rejected paths
+
+- Accepted: repo-controlled Decode Lab extraction feeding `decoded-corpus/`,
+  then deterministic or inspectable downstream retrieval surfaces.
+- Accepted: Search Lab as a lexical/static retrieval surface over decoded
+  chunks.
+- Rejected for now: Open WebUI Knowledge + local Ollama as the primary
+  scholarly RAG evaluation surface.
+
+## Brief Log
+
+### 2026-04-27
+
+- Open WebUI Knowledge with local Ollama was evaluated as a lightweight RAG
+  shell over the audited 29-document Markdown set and is currently a no-go for
+  controlled scholarly retrieval.
+- Failure mode: embedding-model selection and reindexing were not verifiable in
+  the UI, file-level citation behavior was unreliable, and answers could drift
+  to generic model knowledge even when relevant corpus evidence existed.
+- A later reingest appeared to improve one narrow retrieval case
+  (`Yajnavalkya cycle` against `Vol28_1_2_SCKak`), but the overall setup
+  remained too flaky to trust as a serious evaluation surface.
+- Practical conclusion: prefer repo-controlled retrieval and evaluation paths
+  instead of Open WebUI-driven RAG experiments.
+
+### 2026-04-23
+
+- Search Lab is live as an additive static retrieval surface over decoded
+  chunks.
+- The audited-set build is the current small, inspectable retrieval surface for
+  browser and CLI/TUI validation.
+
+## Historical Appendix
+
+### Snapshot — 2026-04-18
 
 Current working branch/worktree: `feat/pdf-semantic-index` in
 `/Users/sunder/projects/patra-darpan-pdf-semantic-index`.

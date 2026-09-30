@@ -1,0 +1,43 @@
+# Production companion overlay.
+#
+# The existing Sanchaya-Zoekt Caddy project owns public TLS. This overlay puts
+# retrieval services on that project's private Docker network and removes host
+# port publication. Caddy can then proxy the OAuth and bearer paths without
+# exposing MCP, Qdrant, or Zoekt RPC ports.
+
+services:
+  qdrant:
+    ports: !reset []
+
+  retrieval-mcp:
+    ports: !reset []
+    environment:
+      # Production Qdrant is private to this Compose project; never use the
+      # host.docker.internal development default on the production host.
+      QDRANT_URL: http://qdrant:6333
+    networks:
+      default: {}
+      sanchaya-zoekt:
+        aliases:
+          - retrieval-mcp
+
+  retrieval-mcp-oauth:
+    ports: !reset []
+    environment:
+      QDRANT_URL: http://qdrant:6333
+    networks:
+      default: {}
+      sanchaya-zoekt:
+        aliases:
+          - retrieval-mcp-oauth
+
+  retrieval-builder:
+    environment:
+      # The one-shot builder writes the release into the same private Qdrant
+      # service before MCP is activated.
+      QDRANT_URL: http://qdrant:6333
+
+networks:
+  sanchaya-zoekt:
+    external: true
+    name: ${RETRIEVAL_ZOEKT_NETWORK:-sanchaya-zoekt_default}

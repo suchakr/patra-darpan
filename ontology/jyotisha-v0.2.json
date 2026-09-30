@@ -1,0 +1,2925 @@
+{
+  "schema_version": "retrieval.ontology.v1",
+  "ontology_id": "jyotisha",
+  "version": "0.2.0",
+  "status": "pilot",
+  "label": "Jyotisha starter ontology",
+  "sources": [
+    {
+      "id": "cahc_n28_full_meta",
+      "path": "cahc-utils/datasets/n28_full_meta.csv",
+      "description": "28 Nakshatra metadata: devatas, margas, veethis, asterism shapes, star counts (Vedāṅga Jyotiṣa), and yogatārā identifications"
+    },
+    {
+      "id": "cahc_n28_devata",
+      "path": "cahc-utils/datasets/n28_devata.psv",
+      "description": "Vedic devatas and alternate Taittirīya Saṃhitā (TS 4.4.10) nakshatra names and notes"
+    },
+    {
+      "id": "stel_nakshatras_inc",
+      "path": "cahc-utils/stel_scripts/nakshatras.inc",
+      "description": "Stellarium definitions for nakshatras, rashis (zodiac signs), and yogatara anchors"
+    },
+    {
+      "id": "cahc_marga_veethi",
+      "path": "cahc-utils/datasets/nakshatras/naks-marga-veethi.tsv",
+      "description": "Classification of the 3 Mārgas and 9 Vīthīs"
+    },
+    {
+      "id": "cahc_vgj_explorer",
+      "path": "cahc-utils/jyotisha-2026/scripts/nakshatra_precession_explorer.py",
+      "description": "Ṛtus (seasons), special anchor stars (Agastya, Dhruva), and cosmographic asterisms (Śiṃśumāra, Matsya)"
+    },
+    {
+      "id": "cahc_vj_units",
+      "path": "cahc-utils/datasets/vj-units-ratios.csv",
+      "description": "Vedāṅga Jyotiṣa time and calendrical units"
+    },
+    {
+      "id": "patra_darpan_corpus",
+      "path": "sanchaya/patra-darpan/papers/**/document.md",
+      "description": "Corpus of 120 Indian Journal of History of Science (IJHS) research papers on Indian astronomy, mathematics, and instruments"
+    },
+    {
+      "id": "cahc_ss_units",
+      "path": "cahc-utils/datasets/ss-units-ratios.csv",
+      "description": "Surya Siddhanta time and yuga cycle ratios used by the enrichment pass"
+    },
+    {
+      "id": "starter_seed_v0",
+      "path": "ontology/jyotisha-v0.1.json#initial-16",
+      "description": "Original 16-entry starter vocabulary retained as the pilot seed baseline"
+    }
+  ],
+  "languages": [
+    "sa",
+    "en"
+  ],
+  "scripts": [
+    "Devanagari",
+    "IAST",
+    "Latin"
+  ],
+  "normalization": {
+    "unicode_form": "NFC",
+    "latin_casefold": true,
+    "preserve_display_form": true,
+    "aliases_are_explicit": true
+  },
+  "entity_types": [
+    {
+      "id": "celestial_body",
+      "label": "Celestial body"
+    },
+    {
+      "id": "lunar_mansion",
+      "label": "Lunar mansion / nakshatra"
+    },
+    {
+      "id": "zodiac_sign",
+      "label": "Zodiac sign / rashi"
+    },
+    {
+      "id": "jyotisha_concept",
+      "label": "Jyotisha concept"
+    },
+    {
+      "id": "astronomical_event",
+      "label": "Astronomical event"
+    },
+    {
+      "id": "person",
+      "label": "Person"
+    },
+    {
+      "id": "work",
+      "label": "Text or work"
+    },
+    {
+      "id": "place",
+      "label": "Place"
+    },
+    {
+      "id": "instrument",
+      "label": "Astronomical instrument / yantra"
+    }
+  ],
+  "relation_types": [
+    {
+      "id": "mentions",
+      "from": "document",
+      "to": "entity"
+    },
+    {
+      "id": "alias_of",
+      "from": "entity",
+      "to": "entity"
+    },
+    {
+      "id": "associated_with",
+      "from": "entity",
+      "to": "entity"
+    },
+    {
+      "id": "described_in",
+      "from": "entity",
+      "to": "work"
+    }
+  ],
+  "topic_labels": [
+    {
+      "id": "astronomy",
+      "label": "Astronomy"
+    },
+    {
+      "id": "calendrics",
+      "label": "Calendrics"
+    },
+    {
+      "id": "horoscopy",
+      "label": "Horoscopy"
+    },
+    {
+      "id": "muhurta",
+      "label": "Muhurta"
+    },
+    {
+      "id": "textual_tradition",
+      "label": "Textual tradition"
+    }
+  ],
+  "entities": [
+    {
+      "id": "jyotisha:sun",
+      "type": "celestial_body",
+      "preferred_label": "Sūrya",
+      "aliases": [
+        "सूर्य",
+        "Surya",
+        "Aditya",
+        "Āditya",
+        "आदित्य"
+      ],
+      "source_ref": "starter_seed_v0",
+      "comment": "Initial v0 seed retained from the original starter vocabulary.",
+      "attributes": {},
+      "curation_status": "seed"
+    },
+    {
+      "id": "jyotisha:moon",
+      "type": "celestial_body",
+      "preferred_label": "Candra",
+      "aliases": [
+        "चन्द्र",
+        "चंद्र",
+        "Candra",
+        "Chandra",
+        "Soma",
+        "सोम"
+      ],
+      "source_ref": "starter_seed_v0",
+      "comment": "Initial v0 seed retained from the original starter vocabulary.",
+      "attributes": {},
+      "curation_status": "seed"
+    },
+    {
+      "id": "jyotisha:mars",
+      "type": "celestial_body",
+      "preferred_label": "Maṅgala",
+      "aliases": [
+        "मंगल",
+        "Maṅgala",
+        "Mangala",
+        "Kuja",
+        "कुज"
+      ],
+      "source_ref": "starter_seed_v0",
+      "comment": "Initial v0 seed retained from the original starter vocabulary.",
+      "attributes": {},
+      "curation_status": "seed"
+    },
+    {
+      "id": "jyotisha:mercury",
+      "type": "celestial_body",
+      "preferred_label": "Budha",
+      "aliases": [
+        "बुध",
+        "Budha"
+      ],
+      "source_ref": "starter_seed_v0",
+      "comment": "Initial v0 seed retained from the original starter vocabulary.",
+      "attributes": {},
+      "curation_status": "seed"
+    },
+    {
+      "id": "jyotisha:jupiter",
+      "type": "celestial_body",
+      "preferred_label": "Bṛhaspati",
+      "aliases": [
+        "बृहस्पति",
+        "Bṛhaspati",
+        "Brihaspati"
+      ],
+      "source_ref": "starter_seed_v0",
+      "comment": "Initial v0 seed retained from the original starter vocabulary.",
+      "attributes": {},
+      "curation_status": "seed"
+    },
+    {
+      "id": "jyotisha:venus",
+      "type": "celestial_body",
+      "preferred_label": "Śukra",
+      "aliases": [
+        "शुक्र",
+        "Śukra",
+        "Shukra"
+      ],
+      "source_ref": "starter_seed_v0",
+      "comment": "Initial v0 seed retained from the original starter vocabulary.",
+      "attributes": {},
+      "curation_status": "seed"
+    },
+    {
+      "id": "jyotisha:saturn",
+      "type": "celestial_body",
+      "preferred_label": "Śani",
+      "aliases": [
+        "शनि",
+        "Śani",
+        "Shani"
+      ],
+      "source_ref": "starter_seed_v0",
+      "comment": "Initial v0 seed retained from the original starter vocabulary.",
+      "attributes": {},
+      "curation_status": "seed"
+    },
+    {
+      "id": "jyotisha:rahu",
+      "type": "celestial_body",
+      "preferred_label": "Rāhu",
+      "aliases": [
+        "राहु",
+        "Rāhu",
+        "Rahu"
+      ],
+      "source_ref": "starter_seed_v0",
+      "comment": "Initial v0 seed retained from the original starter vocabulary.",
+      "attributes": {},
+      "curation_status": "seed"
+    },
+    {
+      "id": "jyotisha:ketu",
+      "type": "celestial_body",
+      "preferred_label": "Ketu",
+      "aliases": [
+        "केतु",
+        "Ketu"
+      ],
+      "source_ref": "starter_seed_v0",
+      "comment": "Initial v0 seed retained from the original starter vocabulary.",
+      "attributes": {},
+      "curation_status": "seed"
+    },
+    {
+      "id": "jyotisha:lagna",
+      "type": "jyotisha_concept",
+      "preferred_label": "Lagna",
+      "aliases": [
+        "लग्न",
+        "Lagna",
+        "Ascendant"
+      ],
+      "source_ref": "starter_seed_v0",
+      "comment": "Initial v0 seed retained from the original starter vocabulary.",
+      "attributes": {},
+      "curation_status": "seed"
+    },
+    {
+      "id": "jyotisha:tithi",
+      "type": "jyotisha_concept",
+      "preferred_label": "Tithi",
+      "aliases": [
+        "तिथि",
+        "Tithi",
+        "Lunar day"
+      ],
+      "source_ref": "starter_seed_v0",
+      "comment": "Initial v0 seed retained from the original starter vocabulary.",
+      "attributes": {},
+      "curation_status": "seed"
+    },
+    {
+      "id": "jyotisha:nakshatra",
+      "type": "lunar_mansion",
+      "preferred_label": "Nakṣatra",
+      "aliases": [
+        "नक्षत्र",
+        "Nakṣatra",
+        "Nakshatra"
+      ],
+      "source_ref": "starter_seed_v0",
+      "comment": "Initial v0 seed retained from the original starter vocabulary.",
+      "attributes": {},
+      "curation_status": "seed"
+    },
+    {
+      "id": "jyotisha:solar_eclipse",
+      "type": "astronomical_event",
+      "preferred_label": "Solar eclipse",
+      "aliases": [
+        "सूर्यग्रहण",
+        "Sūryagrahaṇa",
+        "Surya grahan"
+      ],
+      "source_ref": "starter_seed_v0",
+      "comment": "Initial v0 seed retained from the original starter vocabulary.",
+      "attributes": {},
+      "curation_status": "seed"
+    },
+    {
+      "id": "jyotisha:lunar_eclipse",
+      "type": "astronomical_event",
+      "preferred_label": "Lunar eclipse",
+      "aliases": [
+        "चन्द्रग्रहण",
+        "चंद्रग्रहण",
+        "Candragrahaṇa",
+        "Chandra grahan"
+      ],
+      "source_ref": "starter_seed_v0",
+      "comment": "Initial v0 seed retained from the original starter vocabulary.",
+      "attributes": {},
+      "curation_status": "seed"
+    },
+    {
+      "id": "jyotisha:aryabhata",
+      "type": "person",
+      "preferred_label": "Āryabhaṭa",
+      "aliases": [
+        "आर्यभट",
+        "Āryabhaṭa",
+        "Aryabhata"
+      ],
+      "source_ref": "starter_seed_v0",
+      "comment": "Initial v0 seed retained from the original starter vocabulary.",
+      "attributes": {},
+      "curation_status": "seed"
+    },
+    {
+      "id": "jyotisha:varahamihira",
+      "type": "person",
+      "preferred_label": "Varāhamihira",
+      "aliases": [
+        "वराहमिहिर",
+        "Varāhamihira",
+        "Varahamihira"
+      ],
+      "source_ref": "starter_seed_v0",
+      "comment": "Initial v0 seed retained from the original starter vocabulary.",
+      "attributes": {},
+      "curation_status": "seed"
+    },
+    {
+      "id": "jyotisha:nakshatra_asvini",
+      "type": "lunar_mansion",
+      "preferred_label": "Aśvinī",
+      "aliases": [
+        "अश्विनी",
+        "Aśvayuk",
+        "Ashvini",
+        "Ashwini"
+      ],
+      "source_ref": "cahc_n28_full_meta#N01-Ash",
+      "comment": "Devatā: Aśvini | Mārga: Madhyama | Vīthī: Go | Shape: Horseneck | Count: 3 ((α,β,γ) Ari) | Yogatārā: Sheratan (HIP 8903) | Source: cahc_n28_full_meta#N01-Ash",
+      "attributes": {
+        "nid": "N01-Ash",
+        "number_28": 1,
+        "daivata": "Aśvini",
+        "marga": "Madhyama",
+        "veethi": "Go",
+        "shape": "Horseneck",
+        "star_count": 3,
+        "stars": "(α,β,γ) Ari",
+        "proxy": "β Ari",
+        "yogatara_name": "Sheratan",
+        "yogatara_hip": "HIP 8903"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:nakshatra_bharani",
+      "type": "lunar_mansion",
+      "preferred_label": "Bharaṇī",
+      "aliases": [
+        "भरणी",
+        "Bharani"
+      ],
+      "source_ref": "cahc_n28_full_meta#N02-Bha",
+      "comment": "Devatā: Yama | Mārga: Uttara | Vīthī: Naga | Shape: Bhaga (Perineum) | Count: 3 ((35,39,41) Ari) | Yogatārā: Bharani (HIP 13209) | Source: cahc_n28_full_meta#N02-Bha",
+      "attributes": {
+        "nid": "N02-Bha",
+        "number_28": 2,
+        "daivata": "Yama",
+        "marga": "Uttara",
+        "veethi": "Naga",
+        "shape": "Bhaga (Perineum)",
+        "star_count": 3,
+        "stars": "(35,39,41) Ari",
+        "proxy": "* 41 Ari",
+        "yogatara_name": "Bharani",
+        "yogatara_hip": "HIP 13209"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:nakshatra_krittika",
+      "type": "lunar_mansion",
+      "preferred_label": "Kṛttikā",
+      "aliases": [
+        "क्रित्तिका",
+        "कृत्तिका",
+        "Krittika"
+      ],
+      "source_ref": "cahc_n28_full_meta#N03-Kri",
+      "comment": "Devatā: Agni | Mārga: Uttara | Vīthī: Naga | Shape: Knife/Cleaver | Count: 6 ((17,19,20,23,27,η) Tau) | Yogatārā: Alcyone (HIP 17702) | Source: cahc_n28_full_meta#N03-Kri",
+      "attributes": {
+        "nid": "N03-Kri",
+        "number_28": 3,
+        "daivata": "Agni",
+        "marga": "Uttara",
+        "veethi": "Naga",
+        "shape": "Knife/Cleaver",
+        "star_count": 6,
+        "stars": "(17,19,20,23,27,η) Tau",
+        "proxy": "η Tau",
+        "yogatara_name": "Alcyone",
+        "yogatara_hip": "HIP 17702"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:nakshatra_rohini",
+      "type": "lunar_mansion",
+      "preferred_label": "Rohiṇī",
+      "aliases": [
+        "रोहिणी",
+        "Rohini"
+      ],
+      "source_ref": "cahc_n28_full_meta#N04-Roh",
+      "comment": "Devatā: Prajāpati | Mārga: Uttara | Vīthī: Gaja | Shape: Cart | Count: 5 ((α,γ,λ) Ori) | Yogatārā: Aldebaran (HIP 21421) | Source: cahc_n28_full_meta#N04-Roh",
+      "attributes": {
+        "nid": "N04-Roh",
+        "number_28": 4,
+        "daivata": "Prajāpati",
+        "marga": "Uttara",
+        "veethi": "Gaja",
+        "shape": "Cart",
+        "star_count": 5,
+        "stars": "(α,γ,λ) Ori",
+        "proxy": "α Tau",
+        "yogatara_name": "Aldebaran",
+        "yogatara_hip": "HIP 21421"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:nakshatra_mrigasira",
+      "type": "lunar_mansion",
+      "preferred_label": "Mṛgaśīrṣa",
+      "aliases": [
+        "मृगशीर्ष",
+        "Mṛgaśira",
+        "मृगशीर्षा",
+        "Mrigashira",
+        "Mrigasira",
+        "इन्वका",
+        "Invakā",
+        "Invaka"
+      ],
+      "source_ref": "cahc_n28_full_meta#N05-Mrg",
+      "comment": "Devatā: Soma | Mārga: Uttara | Vīthī: Gaja | Shape: Deer’s Head | Count: 3 ((γ) Gem) | Yogatārā: Meissa(Heka) (HIP 26207) | Source: cahc_n28_full_meta#N05-Mrg",
+      "attributes": {
+        "nid": "N05-Mrg",
+        "number_28": 5,
+        "daivata": "Soma",
+        "marga": "Uttara",
+        "veethi": "Gaja",
+        "shape": "Deer’s Head",
+        "star_count": 3,
+        "stars": "(γ) Gem",
+        "proxy": "λ Ori",
+        "yogatara_name": "Meissa(Heka)",
+        "yogatara_hip": "HIP 26207"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:nakshatra_ardra",
+      "type": "lunar_mansion",
+      "preferred_label": "Ārdrā",
+      "aliases": [
+        "आर्द्रा",
+        "Ardra",
+        "बाहू",
+        "Bāhū",
+        "Bahu"
+      ],
+      "source_ref": "cahc_n28_full_meta#N06-Ard",
+      "comment": "Devatā: Rudra | Mārga: Uttara | Vīthī: Gaja | Shape: Bāhuḥ (Arm)/Red Dot | Count: 1 ((α,γ,δ1,ε,θ2) Tau) | Yogatārā: Alhena(Almeisan) (HIP 31681) | Source: cahc_n28_full_meta#N06-Ard",
+      "attributes": {
+        "nid": "N06-Ard",
+        "number_28": 6,
+        "daivata": "Rudra",
+        "marga": "Uttara",
+        "veethi": "Gaja",
+        "shape": "Bāhuḥ (Arm)/Red Dot",
+        "star_count": 1,
+        "stars": "(α,γ,δ1,ε,θ2) Tau",
+        "proxy": "γ Gem",
+        "yogatara_name": "Alhena(Almeisan)",
+        "yogatara_hip": "HIP 31681"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:nakshatra_punarvasu",
+      "type": "lunar_mansion",
+      "preferred_label": "Punarvasu",
+      "aliases": [
+        "पुनर्वसू",
+        "पुनर्वसु"
+      ],
+      "source_ref": "cahc_n28_full_meta#N07-Pun",
+      "comment": "Devatā: Aditi | Mārga: Uttara | Vīthī: Airavati | Shape: Balance | Count: 2 ((α,β) Gem) | Yogatārā: Pollux (HIP 37826) | Source: cahc_n28_full_meta#N07-Pun",
+      "attributes": {
+        "nid": "N07-Pun",
+        "number_28": 7,
+        "daivata": "Aditi",
+        "marga": "Uttara",
+        "veethi": "Airavati",
+        "shape": "Balance",
+        "star_count": 2,
+        "stars": "(α,β) Gem",
+        "proxy": "β Gem",
+        "yogatara_name": "Pollux",
+        "yogatara_hip": "HIP 37826"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:nakshatra_pushya",
+      "type": "lunar_mansion",
+      "preferred_label": "Puṣya",
+      "aliases": [
+        "पुष्य",
+        "पुष्या",
+        "Pushya"
+      ],
+      "source_ref": "cahc_n28_full_meta#N08-Pus",
+      "comment": "Devatā: Bṛhaspati | Mārga: Uttara | Vīthī: Airavati | Shape: Śarāva (Pot-lid) | Count: 1 ((δ) Cnc) | Yogatārā: Asellus Australis (HIP 42911) | Source: cahc_n28_full_meta#N08-Pus",
+      "attributes": {
+        "nid": "N08-Pus",
+        "number_28": 8,
+        "daivata": "Bṛhaspati",
+        "marga": "Uttara",
+        "veethi": "Airavati",
+        "shape": "Śarāva (Pot-lid)",
+        "star_count": 1,
+        "stars": "(δ) Cnc",
+        "proxy": "δ Cnc",
+        "yogatara_name": "Asellus Australis",
+        "yogatara_hip": "HIP 42911"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:nakshatra_aslesha",
+      "type": "lunar_mansion",
+      "preferred_label": "Āśleṣā",
+      "aliases": [
+        "आश्लेषा",
+        "Ashlesha",
+        "Aslesha"
+      ],
+      "source_ref": "cahc_n28_full_meta#N09-Asl",
+      "comment": "Devatā: Sarpa | Mārga: Uttara | Vīthī: Airavati | Shape: Snake Head/Flag | Count: 6 ((δ,ε,ζ,η,ρ,σ) Hya) | Yogatārā: Minazal V (HIP 43813) | Source: cahc_n28_full_meta#N09-Asl",
+      "attributes": {
+        "nid": "N09-Asl",
+        "number_28": 9,
+        "daivata": "Sarpa",
+        "marga": "Uttara",
+        "veethi": "Airavati",
+        "shape": "Snake Head/Flag",
+        "star_count": 6,
+        "stars": "(δ,ε,ζ,η,ρ,σ) Hya",
+        "proxy": "ζ Hya",
+        "yogatara_name": "Minazal V",
+        "yogatara_hip": "HIP 43813"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:nakshatra_magha",
+      "type": "lunar_mansion",
+      "preferred_label": "Maghā",
+      "aliases": [
+        "मघा",
+        "Magha"
+      ],
+      "source_ref": "cahc_n28_full_meta#N10-Mag",
+      "comment": "Devatā: Pitṛ | Mārga: Uttara | Vīthī: Airavati | Shape: Enclosure | Count: 6 ((α,γ1,ε,ζ,η,μ) Leo) | Yogatārā: Adhafera (HIP 50335) | Source: cahc_n28_full_meta#N10-Mag",
+      "attributes": {
+        "nid": "N10-Mag",
+        "number_28": 10,
+        "daivata": "Pitṛ",
+        "marga": "Uttara",
+        "veethi": "Airavati",
+        "shape": "Enclosure",
+        "star_count": 6,
+        "stars": "(α,γ1,ε,ζ,η,μ) Leo",
+        "proxy": "ζ Leo",
+        "yogatara_name": "Adhafera",
+        "yogatara_hip": "HIP 50335"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:nakshatra_purva_phalguni",
+      "type": "lunar_mansion",
+      "preferred_label": "Pūrvaphalgunī",
+      "aliases": [
+        "पूर्वफल्गुनी",
+        "P Phalgunī",
+        "Purva Phalguni",
+        "Poorva Phalguni"
+      ],
+      "source_ref": "cahc_n28_full_meta#N11-PPal",
+      "comment": "Devatā: Bhaga | Mārga: Madhyama | Vīthī: Arshabi | Shape: Half-chair | Count: 2 ((δ,θ) Leo) | Yogatārā: Zosma (HIP 54872) | Source: cahc_n28_full_meta#N11-PPal",
+      "attributes": {
+        "nid": "N11-PPal",
+        "number_28": 11,
+        "daivata": "Bhaga",
+        "marga": "Madhyama",
+        "veethi": "Arshabi",
+        "shape": "Half-chair",
+        "star_count": 2,
+        "stars": "(δ,θ) Leo",
+        "proxy": "δ Leo",
+        "yogatara_name": "Zosma",
+        "yogatara_hip": "HIP 54872"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:nakshatra_uttara_phalguni",
+      "type": "lunar_mansion",
+      "preferred_label": "Uttaraphalgunī",
+      "aliases": [
+        "उत्तरफल्गुनी",
+        "U Phalgunī",
+        "Uttara Phalguni"
+      ],
+      "source_ref": "cahc_n28_full_meta#N12-UPal",
+      "comment": "Devatā: Aryaman | Mārga: Madhyama | Vīthī: Arshabi | Shape: Half-chair | Count: 2 ((93,β) Leo) | Yogatārā: Denebola (HIP 57632) | Source: cahc_n28_full_meta#N12-UPal",
+      "attributes": {
+        "nid": "N12-UPal",
+        "number_28": 12,
+        "daivata": "Aryaman",
+        "marga": "Madhyama",
+        "veethi": "Arshabi",
+        "shape": "Half-chair",
+        "star_count": 2,
+        "stars": "(93,β) Leo",
+        "proxy": "β Leo",
+        "yogatara_name": "Denebola",
+        "yogatara_hip": "HIP 57632"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:nakshatra_hasta",
+      "type": "lunar_mansion",
+      "preferred_label": "Hasta",
+      "aliases": [
+        "हस्त",
+        "हस्ता",
+        "Hastā"
+      ],
+      "source_ref": "cahc_n28_full_meta#N13-Has",
+      "comment": "Devatā: Savitṛ | Mārga: Dakshina | Vīthī: Mrga | Shape: Hasta (hand) | Count: 5 ((α,β,γ,δ,ε) Crv) | Yogatārā: Algorab (HIP 60965) | Source: cahc_n28_full_meta#N13-Has",
+      "attributes": {
+        "nid": "N13-Has",
+        "number_28": 13,
+        "daivata": "Savitṛ",
+        "marga": "Dakshina",
+        "veethi": "Mrga",
+        "shape": "Hasta (hand)",
+        "star_count": 5,
+        "stars": "(α,β,γ,δ,ε) Crv",
+        "proxy": "δ Crv",
+        "yogatara_name": "Algorab",
+        "yogatara_hip": "HIP 60965"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:nakshatra_citra",
+      "type": "lunar_mansion",
+      "preferred_label": "Citrā",
+      "aliases": [
+        "चित्रा",
+        "Chitra",
+        "Citra"
+      ],
+      "source_ref": "cahc_n28_full_meta#N14-Chi",
+      "comment": "Devatā: Tvaṣṭṛ | Mārga: Dakshina | Vīthī: Mrga | Shape: Madhupuṣpa (Flower) | Count: 1 ((α) Vir) | Yogatārā: Spica (HIP 65474) | Source: cahc_n28_full_meta#N14-Chi",
+      "attributes": {
+        "nid": "N14-Chi",
+        "number_28": 14,
+        "daivata": "Tvaṣṭṛ",
+        "marga": "Dakshina",
+        "veethi": "Mrga",
+        "shape": "Madhupuṣpa (Flower)",
+        "star_count": 1,
+        "stars": "(α) Vir",
+        "proxy": "α Vir",
+        "yogatara_name": "Spica",
+        "yogatara_hip": "HIP 65474"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:nakshatra_svati",
+      "type": "lunar_mansion",
+      "preferred_label": "Svātī",
+      "aliases": [
+        "स्वाती",
+        "Svati",
+        "Swati",
+        "निष्ठ्या",
+        "Niṣṭyā",
+        "Nishtya"
+      ],
+      "source_ref": "cahc_n28_full_meta#N15-Swa",
+      "comment": "Devatā: Vāyu | Mārga: Uttara | Vīthī: Naga | Shape: Kīlaka (Wedge) | Count: 1 ((α) Boo) | Yogatārā: Arcturus (HIP 69673) | Source: cahc_n28_full_meta#N15-Swa",
+      "attributes": {
+        "nid": "N15-Swa",
+        "number_28": 15,
+        "daivata": "Vāyu",
+        "marga": "Uttara",
+        "veethi": "Naga",
+        "shape": "Kīlaka (Wedge)",
+        "star_count": 1,
+        "stars": "(α) Boo",
+        "proxy": "α Boo",
+        "yogatara_name": "Arcturus",
+        "yogatara_hip": "HIP 69673"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:nakshatra_visakha",
+      "type": "lunar_mansion",
+      "preferred_label": "Viśākhā",
+      "aliases": [
+        "विशाखे",
+        "विशाखा",
+        "Visakha",
+        "Vishakha"
+      ],
+      "source_ref": "cahc_n28_full_meta#N16-Vis",
+      "comment": "Devatā: Indrāgnī | Mārga: Dakshina | Vīthī: Ajaavika | Shape: Divider Rope | Count: 2 ((α1,α2) Lib) | Yogatārā: Zubenelgenubi (HIP 72622) | Source: cahc_n28_full_meta#N16-Vis",
+      "attributes": {
+        "nid": "N16-Vis",
+        "number_28": 16,
+        "daivata": "Indrāgnī",
+        "marga": "Dakshina",
+        "veethi": "Ajaavika",
+        "shape": "Divider Rope",
+        "star_count": 2,
+        "stars": "(α1,α2) Lib",
+        "proxy": "α2 Lib",
+        "yogatara_name": "Zubenelgenubi",
+        "yogatara_hip": "HIP 72622"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:nakshatra_anuradha",
+      "type": "lunar_mansion",
+      "preferred_label": "Anurādhā",
+      "aliases": [
+        "अनूराधा",
+        "Anūrādhā",
+        "अनुराधा",
+        "Anuradha"
+      ],
+      "source_ref": "cahc_n28_full_meta#N17-Anu",
+      "comment": "Devatā: Mitra | Mārga: Dakshina | Vīthī: Ajaavika | Shape: Necklace | Count: 4 ((β1,δ,π,ω1) Sco) | Yogatārā: Dschubba (HIP 78401) | Source: cahc_n28_full_meta#N17-Anu",
+      "attributes": {
+        "nid": "N17-Anu",
+        "number_28": 17,
+        "daivata": "Mitra",
+        "marga": "Dakshina",
+        "veethi": "Ajaavika",
+        "shape": "Necklace",
+        "star_count": 4,
+        "stars": "(β1,δ,π,ω1) Sco",
+        "proxy": "δ Sco",
+        "yogatara_name": "Dschubba",
+        "yogatara_hip": "HIP 78401"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:nakshatra_jyeshtha",
+      "type": "lunar_mansion",
+      "preferred_label": "Jyeṣṭhā",
+      "aliases": [
+        "ज्येष्ठा",
+        "Jyeshtha",
+        "Jyestha"
+      ],
+      "source_ref": "cahc_n28_full_meta#N18-Jye",
+      "comment": "Devatā: Indra | Mārga: Dakshina | Vīthī: Vaishvaanari | Shape: Elephant Tusk | Count: 3 ((α,ε,σ,(τ)) Sco) | Yogatārā: Larawag (HIP 82396) | Source: cahc_n28_full_meta#N18-Jye",
+      "attributes": {
+        "nid": "N18-Jye",
+        "number_28": 18,
+        "daivata": "Indra",
+        "marga": "Dakshina",
+        "veethi": "Vaishvaanari",
+        "shape": "Elephant Tusk",
+        "star_count": 3,
+        "stars": "(α,ε,σ,(τ)) Sco",
+        "proxy": "ε Sco",
+        "yogatara_name": "Larawag",
+        "yogatara_hip": "HIP 82396"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:nakshatra_mula",
+      "type": "lunar_mansion",
+      "preferred_label": "Mūla",
+      "aliases": [
+        "मूल",
+        "मूला",
+        "Mula",
+        "विचृतौ",
+        "Vicṛtau"
+      ],
+      "source_ref": "cahc_n28_full_meta#N19-Mul",
+      "comment": "Devatā: Nirṛti | Mārga: Dakshina | Vīthī: Vaishvaanari | Shape: Root/Scorpion Tail | Count: 6 ((ζ2,θ,ι1,κ,λ,ν) Sco) | Yogatārā: Mula (HIP 86670) | Source: cahc_n28_full_meta#N19-Mul",
+      "attributes": {
+        "nid": "N19-Mul",
+        "number_28": 19,
+        "daivata": "Nirṛti",
+        "marga": "Dakshina",
+        "veethi": "Vaishvaanari",
+        "shape": "Root/Scorpion Tail",
+        "star_count": 6,
+        "stars": "(ζ2,θ,ι1,κ,λ,ν) Sco",
+        "proxy": "κ Sco",
+        "yogatara_name": "Mula",
+        "yogatara_hip": "HIP 86670"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:nakshatra_purva_ashadha",
+      "type": "lunar_mansion",
+      "preferred_label": "Pūrvāṣāḍhā",
+      "aliases": [
+        "पूर्वाषाढा",
+        "P Aṣāḍhā",
+        "Purva Ashadha",
+        "Poorva Ashadha"
+      ],
+      "source_ref": "cahc_n28_full_meta#N20-PAsh",
+      "comment": "Devatā: Ap | Mārga: Dakshina | Vīthī: Vaishvaanari | Shape: Gajavikrama (Elephant Step) | Count: 4 ((γ,δ,ε,λ) Sgr) | Yogatārā: Kaus Borealis (HIP 90496) | Source: cahc_n28_full_meta#N20-PAsh",
+      "attributes": {
+        "nid": "N20-PAsh",
+        "number_28": 20,
+        "daivata": "Ap",
+        "marga": "Dakshina",
+        "veethi": "Vaishvaanari",
+        "shape": "Gajavikrama (Elephant Step)",
+        "star_count": 4,
+        "stars": "(γ,δ,ε,λ) Sgr",
+        "proxy": "λ Sgr",
+        "yogatara_name": "Kaus Borealis",
+        "yogatara_hip": "HIP 90496"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:nakshatra_uttara_ashadha",
+      "type": "lunar_mansion",
+      "preferred_label": "Uttarāṣāḍhā",
+      "aliases": [
+        "उत्तराषाढा",
+        "U Aṣāḍhā",
+        "Uttara Ashadha"
+      ],
+      "source_ref": "cahc_n28_full_meta#N21-UAsh",
+      "comment": "Devatā: Viśvedevā | Mārga: Dakshina | Vīthī: Vaishvaanari | Shape: Siṁhaniṣadya (Lion seat) | Count: 4 ((ζ,σ,τ,φ) Sgr) | Yogatārā: Namalsadirah II (HIP 93864) | Source: cahc_n28_full_meta#N21-UAsh",
+      "attributes": {
+        "nid": "N21-UAsh",
+        "number_28": 21,
+        "daivata": "Viśvedevā",
+        "marga": "Dakshina",
+        "veethi": "Vaishvaanari",
+        "shape": "Siṁhaniṣadya (Lion seat)",
+        "star_count": 4,
+        "stars": "(ζ,σ,τ,φ) Sgr",
+        "proxy": "τ Sgr",
+        "yogatara_name": "Namalsadirah II",
+        "yogatara_hip": "HIP 93864"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:nakshatra_abhijit",
+      "type": "lunar_mansion",
+      "preferred_label": "Abhijit",
+      "aliases": [
+        "अभिजीत",
+        "Abhijīt",
+        "अभिजित्"
+      ],
+      "source_ref": "cahc_n28_full_meta#N22-Abi",
+      "comment": "Devatā: ब्रह्मा | Count: 4 ((α) Lyr) | Yogatārā: Vega (HIP 91262) | Source: cahc_n28_full_meta#N22-Abi",
+      "attributes": {
+        "nid": "N22-Abi",
+        "number_28": 22,
+        "daivata": "ब्रह्मा",
+        "marga": null,
+        "veethi": null,
+        "shape": null,
+        "star_count": 4,
+        "stars": "(α) Lyr",
+        "proxy": "α Lyr",
+        "yogatara_name": "Vega",
+        "yogatara_hip": "HIP 91262"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:nakshatra_sravana",
+      "type": "lunar_mansion",
+      "preferred_label": "Śravaṇa",
+      "aliases": [
+        "श्रवण",
+        "श्रवणा",
+        "Śravaṇā",
+        "Shravana",
+        "Sravana"
+      ],
+      "source_ref": "cahc_n28_full_meta#N23-Shr",
+      "comment": "Devatā: Viṣṇu | Mārga: Madhyama | Vīthī: Jaradgavi | Shape: Ear/Yavamadhya (Barleyseed) | Count: 3 ((α,β,γ) Aql) | Yogatārā: Altair (HIP 97649) | Source: cahc_n28_full_meta#N23-Shr",
+      "attributes": {
+        "nid": "N23-Shr",
+        "number_28": 23,
+        "daivata": "Viṣṇu",
+        "marga": "Madhyama",
+        "veethi": "Jaradgavi",
+        "shape": "Ear/Yavamadhya (Barleyseed)",
+        "star_count": 3,
+        "stars": "(α,β,γ) Aql",
+        "proxy": "α Aql",
+        "yogatara_name": "Altair",
+        "yogatara_hip": "HIP 97649"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:nakshatra_dhanishtha",
+      "type": "lunar_mansion",
+      "preferred_label": "Dhaniṣṭhā",
+      "aliases": [
+        "धनिष्ठा",
+        "Dhanishtha",
+        "श्रविष्ठा",
+        "Śraviṣṭhā",
+        "Shravishta"
+      ],
+      "source_ref": "cahc_n28_full_meta#N24-Dha",
+      "comment": "Devatā: Vasu | Mārga: Madhyama | Vīthī: Jaradgavi | Shape: Śakuni-pañjara (Bird cage) | Count: 4 ((α,β,γ2,δ) Del) | Yogatārā: Rotanev (HIP 101769) | Source: cahc_n28_full_meta#N24-Dha",
+      "attributes": {
+        "nid": "N24-Dha",
+        "number_28": 24,
+        "daivata": "Vasu",
+        "marga": "Madhyama",
+        "veethi": "Jaradgavi",
+        "shape": "Śakuni-pañjara (Bird cage)",
+        "star_count": 4,
+        "stars": "(α,β,γ2,δ) Del",
+        "proxy": "β Del",
+        "yogatara_name": "Rotanev",
+        "yogatara_hip": "HIP 101769"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:nakshatra_satabhishak",
+      "type": "lunar_mansion",
+      "preferred_label": "Śatabhiṣak",
+      "aliases": [
+        "शतभिषक्",
+        "शतभिषा",
+        "Śatabhiṣā",
+        "Shatabhisha",
+        "Satabhisha",
+        "Śatabhiṣaj",
+        "शतविषक्",
+        "Śataviṣā"
+      ],
+      "source_ref": "cahc_n28_full_meta#N25-Sha",
+      "comment": "Devatā: Varuṇa | Mārga: Madhyama | Vīthī: Jaradgavi | Shape: Puṣpopacāra (Flower Boquet) | Count: 1 ((λ) Aqr) | Yogatārā: Hydor (HIP 112961) | Source: cahc_n28_full_meta#N25-Sha",
+      "attributes": {
+        "nid": "N25-Sha",
+        "number_28": 25,
+        "daivata": "Varuṇa",
+        "marga": "Madhyama",
+        "veethi": "Jaradgavi",
+        "shape": "Puṣpopacāra (Flower Boquet)",
+        "star_count": 1,
+        "stars": "(λ) Aqr",
+        "proxy": "λ Aqr",
+        "yogatara_name": "Hydor",
+        "yogatara_hip": "HIP 112961"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:nakshatra_purva_bhadrapada",
+      "type": "lunar_mansion",
+      "preferred_label": "Pūrvabhādrapadā",
+      "aliases": [
+        "पूर्वाभाद्रपदा",
+        "P Proṣṭapada",
+        "Pūrvaproṣṭhapadā",
+        "Purva Bhadrapada",
+        "Poorva Bhadrapada"
+      ],
+      "source_ref": "cahc_n28_full_meta#N26-PBha",
+      "comment": "Devatā: Aja | Mārga: Madhyama | Vīthī: Go | Shape: Cow’s Foot | Count: 2 ((α,β) Peg) | Yogatārā: Markab (HIP 113963) | Source: cahc_n28_full_meta#N26-PBha",
+      "attributes": {
+        "nid": "N26-PBha",
+        "number_28": 26,
+        "daivata": "Aja",
+        "marga": "Madhyama",
+        "veethi": "Go",
+        "shape": "Cow’s Foot",
+        "star_count": 2,
+        "stars": "(α,β) Peg",
+        "proxy": "α Peg",
+        "yogatara_name": "Markab",
+        "yogatara_hip": "HIP 113963"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:nakshatra_uttara_bhadrapada",
+      "type": "lunar_mansion",
+      "preferred_label": "Uttarabhādrapadā",
+      "aliases": [
+        "उत्तराभाद्रपदा",
+        "U Proṣṭapada",
+        "Uttaraproṣṭhapadā",
+        "Uttara Bhadrapada"
+      ],
+      "source_ref": "cahc_n28_full_meta#N26-UBha",
+      "comment": "Devatā: Ahirbudhnya | Mārga: Madhyama | Vīthī: Go | Shape: Cow’s Foot | Count: 2 (γ Peg, α And) | Yogatārā: Algenib (HIP 1067) | Source: cahc_n28_full_meta#N26-UBha",
+      "attributes": {
+        "nid": "N26-UBha",
+        "number_28": 27,
+        "daivata": "Ahirbudhnya",
+        "marga": "Madhyama",
+        "veethi": "Go",
+        "shape": "Cow’s Foot",
+        "star_count": 2,
+        "stars": "γ Peg, α And",
+        "proxy": "γ Peg",
+        "yogatara_name": "Algenib",
+        "yogatara_hip": "HIP 1067"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:nakshatra_revati",
+      "type": "lunar_mansion",
+      "preferred_label": "Revatī",
+      "aliases": [
+        "रेवती",
+        "Revati"
+      ],
+      "source_ref": "cahc_n28_full_meta#N28-Rev",
+      "comment": "Devatā: Pūṣan | Mārga: Madhyama | Vīthī: Go | Shape: Boat2 | Count: 1 ((ε,(α,ζ)) Psc) | Yogatārā: epsPsc (HIP 4906) | Source: cahc_n28_full_meta#N28-Rev",
+      "attributes": {
+        "nid": "N28-Rev",
+        "number_28": 28,
+        "daivata": "Pūṣan",
+        "marga": "Madhyama",
+        "veethi": "Go",
+        "shape": "Boat2",
+        "star_count": 1,
+        "stars": "(ε,(α,ζ)) Psc",
+        "proxy": "ε Psc",
+        "yogatara_name": "epsPsc",
+        "yogatara_hip": "HIP 4906"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:rasi_mesa",
+      "type": "zodiac_sign",
+      "preferred_label": "Meṣa",
+      "aliases": [
+        "मेष",
+        "मेषः",
+        "Mesa",
+        "Mesha",
+        "Aries"
+      ],
+      "source_ref": "stel_nakshatras_inc",
+      "comment": "Zodiac sign 1/12. Source: stel_scripts/nakshatras.inc",
+      "attributes": {
+        "order": 1,
+        "span_deg": 30.0,
+        "start_deg": 0.0,
+        "end_deg": 30.0
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:rasi_vrsabha",
+      "type": "zodiac_sign",
+      "preferred_label": "Vṛṣabha",
+      "aliases": [
+        "वृषभ",
+        "वृषभः",
+        "Vrsabha",
+        "Vrishabha",
+        "Taurus"
+      ],
+      "source_ref": "stel_nakshatras_inc",
+      "comment": "Zodiac sign 2/12. Source: stel_scripts/nakshatras.inc",
+      "attributes": {
+        "order": 2,
+        "span_deg": 30.0,
+        "start_deg": 30.0,
+        "end_deg": 60.0
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:rasi_mithuna",
+      "type": "zodiac_sign",
+      "preferred_label": "Mithuna",
+      "aliases": [
+        "मिथुन",
+        "मिथुनः",
+        "Gemini"
+      ],
+      "source_ref": "stel_nakshatras_inc",
+      "comment": "Zodiac sign 3/12. Source: stel_scripts/nakshatras.inc",
+      "attributes": {
+        "order": 3,
+        "span_deg": 30.0,
+        "start_deg": 60.0,
+        "end_deg": 90.0
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:rasi_karka",
+      "type": "zodiac_sign",
+      "preferred_label": "Karka",
+      "aliases": [
+        "कर्क",
+        "कर्कः",
+        "कर्कट",
+        "Karkaṭa",
+        "Karkata",
+        "Cancer"
+      ],
+      "source_ref": "stel_nakshatras_inc",
+      "comment": "Zodiac sign 4/12. Source: stel_scripts/nakshatras.inc",
+      "attributes": {
+        "order": 4,
+        "span_deg": 30.0,
+        "start_deg": 90.0,
+        "end_deg": 120.0
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:rasi_simha",
+      "type": "zodiac_sign",
+      "preferred_label": "Siṃha",
+      "aliases": [
+        "सिंह",
+        "सिंहः",
+        "Simha",
+        "Leo"
+      ],
+      "source_ref": "stel_nakshatras_inc",
+      "comment": "Zodiac sign 5/12. Source: stel_scripts/nakshatras.inc",
+      "attributes": {
+        "order": 5,
+        "span_deg": 30.0,
+        "start_deg": 120.0,
+        "end_deg": 150.0
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:rasi_kanya",
+      "type": "zodiac_sign",
+      "preferred_label": "Kanyā",
+      "aliases": [
+        "कन्या",
+        "Kanya",
+        "Virgo"
+      ],
+      "source_ref": "stel_nakshatras_inc",
+      "comment": "Zodiac sign 6/12. Source: stel_scripts/nakshatras.inc",
+      "attributes": {
+        "order": 6,
+        "span_deg": 30.0,
+        "start_deg": 150.0,
+        "end_deg": 180.0
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:rasi_tula",
+      "type": "zodiac_sign",
+      "preferred_label": "Tulā",
+      "aliases": [
+        "तुला",
+        "Tula",
+        "Libra"
+      ],
+      "source_ref": "stel_nakshatras_inc",
+      "comment": "Zodiac sign 7/12. Source: stel_scripts/nakshatras.inc",
+      "attributes": {
+        "order": 7,
+        "span_deg": 30.0,
+        "start_deg": 180.0,
+        "end_deg": 210.0
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:rasi_vrscika",
+      "type": "zodiac_sign",
+      "preferred_label": "Vṛścika",
+      "aliases": [
+        "वृश्चिक",
+        "वृश्चिकः",
+        "वृश्चिका",
+        "Vrscika",
+        "Vrischika",
+        "Scorpio",
+        "Scorpius"
+      ],
+      "source_ref": "stel_nakshatras_inc",
+      "comment": "Zodiac sign 8/12. Source: stel_scripts/nakshatras.inc",
+      "attributes": {
+        "order": 8,
+        "span_deg": 30.0,
+        "start_deg": 210.0,
+        "end_deg": 240.0
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:rasi_dhanus",
+      "type": "zodiac_sign",
+      "preferred_label": "Dhanus",
+      "aliases": [
+        "धनुस्",
+        "धनुः",
+        "धनु",
+        "Dhanu",
+        "Sagittarius"
+      ],
+      "source_ref": "stel_nakshatras_inc",
+      "comment": "Zodiac sign 9/12. Source: stel_scripts/nakshatras.inc",
+      "attributes": {
+        "order": 9,
+        "span_deg": 30.0,
+        "start_deg": 240.0,
+        "end_deg": 270.0
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:rasi_makara",
+      "type": "zodiac_sign",
+      "preferred_label": "Makara",
+      "aliases": [
+        "मकर",
+        "मकरः",
+        "Capricorn"
+      ],
+      "source_ref": "stel_nakshatras_inc",
+      "comment": "Zodiac sign 10/12. Source: stel_scripts/nakshatras.inc",
+      "attributes": {
+        "order": 10,
+        "span_deg": 30.0,
+        "start_deg": 270.0,
+        "end_deg": 300.0
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:rasi_kumbha",
+      "type": "zodiac_sign",
+      "preferred_label": "Kumbha",
+      "aliases": [
+        "कुम्भ",
+        "कुम्भः",
+        "Aquarius"
+      ],
+      "source_ref": "stel_nakshatras_inc",
+      "comment": "Zodiac sign 11/12. Source: stel_scripts/nakshatras.inc",
+      "attributes": {
+        "order": 11,
+        "span_deg": 30.0,
+        "start_deg": 300.0,
+        "end_deg": 330.0
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:rasi_mina",
+      "type": "zodiac_sign",
+      "preferred_label": "Mīna",
+      "aliases": [
+        "मीन",
+        "मीना",
+        "Mina",
+        "Pisces"
+      ],
+      "source_ref": "stel_nakshatras_inc",
+      "comment": "Zodiac sign 12/12. Source: stel_scripts/nakshatras.inc",
+      "attributes": {
+        "order": 12,
+        "span_deg": 30.0,
+        "start_deg": 330.0,
+        "end_deg": 360.0
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:marga_uttaramarga",
+      "type": "jyotisha_concept",
+      "preferred_label": "Uttaramārga",
+      "aliases": [
+        "उत्तरमार्ग",
+        "उत्तर मार्ग",
+        "Uttara Marga",
+        "Airāvata Mārga",
+        "Airavata Marga"
+      ],
+      "source_ref": "cahc_marga_veethi",
+      "comment": "Northern celestial highway covering Nāga, Gaja, and Airāvatī vīthīs. Source: datasets/nakshatras/naks-marga-veethi.tsv",
+      "attributes": {
+        "category": "celestial_path",
+        "description": "Northern celestial highway covering Nāga, Gaja, and Airāvatī vīthīs"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:marga_madhyamamarga",
+      "type": "jyotisha_concept",
+      "preferred_label": "Madhyamamārga",
+      "aliases": [
+        "मध्यममार्ग",
+        "मध्यम मार्ग",
+        "Madhyama Marga",
+        "Jaradgava Mārga",
+        "Jaradgava Marga"
+      ],
+      "source_ref": "cahc_marga_veethi",
+      "comment": "Central celestial highway covering Ārṣabhī, Go, and Jāradgavī vīthīs. Source: datasets/nakshatras/naks-marga-veethi.tsv",
+      "attributes": {
+        "category": "celestial_path",
+        "description": "Central celestial highway covering Ārṣabhī, Go, and Jāradgavī vīthīs"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:marga_daksinamarga",
+      "type": "jyotisha_concept",
+      "preferred_label": "Dakṣiṇamārga",
+      "aliases": [
+        "दक्षिणमार्ग",
+        "दक्षिण मार्ग",
+        "Dakshina Marga",
+        "Vaiśvānara Mārga",
+        "Vaishvanara Marga"
+      ],
+      "source_ref": "cahc_marga_veethi",
+      "comment": "Southern celestial highway covering Mṛga, Ajāvīka, and Vaiśvānarī vīthīs. Source: datasets/nakshatras/naks-marga-veethi.tsv",
+      "attributes": {
+        "category": "celestial_path",
+        "description": "Southern celestial highway covering Mṛga, Ajāvīka, and Vaiśvānarī vīthīs"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:veethi_naga",
+      "type": "jyotisha_concept",
+      "preferred_label": "Nāgavīthī",
+      "aliases": [
+        "नागवीथी",
+        "नाग वीथी",
+        "Naga Veethi",
+        "Naga Vithi"
+      ],
+      "source_ref": "cahc_marga_veethi",
+      "comment": "Vīthī in Uttaramārga, containing nakshatras: Bharaṇī, Kṛttikā, Svātī. Source: datasets/nakshatras/naks-marga-veethi.tsv",
+      "attributes": {
+        "marga": "Uttaramārga",
+        "nakshatras": [
+          "Bharaṇī",
+          "Kṛttikā",
+          "Svātī"
+        ]
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:veethi_gaja",
+      "type": "jyotisha_concept",
+      "preferred_label": "Gajavīthī",
+      "aliases": [
+        "गजवीथी",
+        "गज वीथी",
+        "Gaja Veethi",
+        "Gaja Vithi"
+      ],
+      "source_ref": "cahc_marga_veethi",
+      "comment": "Vīthī in Uttaramārga, containing nakshatras: Rohiṇī, Mṛgaśira, Ārdrā. Source: datasets/nakshatras/naks-marga-veethi.tsv",
+      "attributes": {
+        "marga": "Uttaramārga",
+        "nakshatras": [
+          "Rohiṇī",
+          "Mṛgaśira",
+          "Ārdrā"
+        ]
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:veethi_airavati",
+      "type": "jyotisha_concept",
+      "preferred_label": "Airāvatīvīthī",
+      "aliases": [
+        "ऐरावतीवीथी",
+        "ऐरावती वीथी",
+        "Airavati Veethi",
+        "Airavati Vithi"
+      ],
+      "source_ref": "cahc_marga_veethi",
+      "comment": "Vīthī in Uttaramārga, containing nakshatras: Punarvasu, Puṣya, Āśleṣā, Maghā. Source: datasets/nakshatras/naks-marga-veethi.tsv",
+      "attributes": {
+        "marga": "Uttaramārga",
+        "nakshatras": [
+          "Punarvasu",
+          "Puṣya",
+          "Āśleṣā",
+          "Maghā"
+        ]
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:veethi_arsabhi",
+      "type": "jyotisha_concept",
+      "preferred_label": "Ārṣabhīvīthī",
+      "aliases": [
+        "आर्षभीवीथी",
+        "आर्षभी वीथी",
+        "Arshabhi Veethi",
+        "Arshabi Veethi"
+      ],
+      "source_ref": "cahc_marga_veethi",
+      "comment": "Vīthī in Madhyamamārga, containing nakshatras: Pūrvaphalgunī, Uttaraphalgunī. Source: datasets/nakshatras/naks-marga-veethi.tsv",
+      "attributes": {
+        "marga": "Madhyamamārga",
+        "nakshatras": [
+          "Pūrvaphalgunī",
+          "Uttaraphalgunī"
+        ]
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:veethi_go",
+      "type": "jyotisha_concept",
+      "preferred_label": "Govīthī",
+      "aliases": [
+        "गोवीथी",
+        "गो वीथी",
+        "Go Veethi",
+        "Go Vithi"
+      ],
+      "source_ref": "cahc_marga_veethi",
+      "comment": "Vīthī in Madhyamamārga, containing nakshatras: Aśvinī, Pūrvabhādrapadā, Uttarabhādrapadā, Revatī. Source: datasets/nakshatras/naks-marga-veethi.tsv",
+      "attributes": {
+        "marga": "Madhyamamārga",
+        "nakshatras": [
+          "Aśvinī",
+          "Pūrvabhādrapadā",
+          "Uttarabhādrapadā",
+          "Revatī"
+        ]
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:veethi_jaradgavi",
+      "type": "jyotisha_concept",
+      "preferred_label": "Jāradgavīvīthī",
+      "aliases": [
+        "जारद्गवीवीथी",
+        "जारद्गवी वीथी",
+        "Jaradgavi Veethi",
+        "Jaradgavi Vithi"
+      ],
+      "source_ref": "cahc_marga_veethi",
+      "comment": "Vīthī in Madhyamamārga, containing nakshatras: Śravaṇa, Dhaniṣṭhā, Śatabhiṣak. Source: datasets/nakshatras/naks-marga-veethi.tsv",
+      "attributes": {
+        "marga": "Madhyamamārga",
+        "nakshatras": [
+          "Śravaṇa",
+          "Dhaniṣṭhā",
+          "Śatabhiṣak"
+        ]
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:veethi_mrga",
+      "type": "jyotisha_concept",
+      "preferred_label": "Mṛgavīthī",
+      "aliases": [
+        "मृगवीथी",
+        "मृग वीथी",
+        "Mrga Veethi",
+        "Mriga Vithi"
+      ],
+      "source_ref": "cahc_marga_veethi",
+      "comment": "Vīthī in Dakṣiṇamārga, containing nakshatras: Hasta, Citrā. Source: datasets/nakshatras/naks-marga-veethi.tsv",
+      "attributes": {
+        "marga": "Dakṣiṇamārga",
+        "nakshatras": [
+          "Hasta",
+          "Citrā"
+        ]
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:veethi_ajaavika",
+      "type": "jyotisha_concept",
+      "preferred_label": "Ajāvīkavīthī",
+      "aliases": [
+        "अजावीकवीथी",
+        "अजावीक वीथी",
+        "Ajaavika Veethi",
+        "Ajavika Vithi"
+      ],
+      "source_ref": "cahc_marga_veethi",
+      "comment": "Vīthī in Dakṣiṇamārga, containing nakshatras: Viśākhā, Anūrādhā. Source: datasets/nakshatras/naks-marga-veethi.tsv",
+      "attributes": {
+        "marga": "Dakṣiṇamārga",
+        "nakshatras": [
+          "Viśākhā",
+          "Anūrādhā"
+        ]
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:veethi_vaishvaanari",
+      "type": "jyotisha_concept",
+      "preferred_label": "Vaiśvānarīvīthī",
+      "aliases": [
+        "वैश्वानरीवीथी",
+        "वैश्वानरी वीथी",
+        "Vaishvaanari Veethi",
+        "Vaishvanari Vithi"
+      ],
+      "source_ref": "cahc_marga_veethi",
+      "comment": "Vīthī in Dakṣiṇamārga, containing nakshatras: Jyeṣṭhā, Mūla, Pūrvāṣāḍhā, Uttarāṣāḍhā. Source: datasets/nakshatras/naks-marga-veethi.tsv",
+      "attributes": {
+        "marga": "Dakṣiṇamārga",
+        "nakshatras": [
+          "Jyeṣṭhā",
+          "Mūla",
+          "Pūrvāṣāḍhā",
+          "Uttarāṣāḍhā"
+        ]
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:rtu_vasanta",
+      "type": "jyotisha_concept",
+      "preferred_label": "Vasanta",
+      "aliases": [
+        "वसन्त",
+        "वसंत",
+        "Vasanta ṛtu",
+        "Spring"
+      ],
+      "source_ref": "cahc_vgj_explorer",
+      "comment": "Spring season in the Vedic 6-season cycle. Source: jyotisha-2026/scripts/nakshatra_precession_explorer.py",
+      "attributes": {
+        "category": "season"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:rtu_grishma",
+      "type": "jyotisha_concept",
+      "preferred_label": "Grīṣma",
+      "aliases": [
+        "ग्रीष्म",
+        "Grishma",
+        "Summer"
+      ],
+      "source_ref": "cahc_vgj_explorer",
+      "comment": "Summer season in the Vedic 6-season cycle. Source: jyotisha-2026/scripts/nakshatra_precession_explorer.py",
+      "attributes": {
+        "category": "season"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:rtu_varsha",
+      "type": "jyotisha_concept",
+      "preferred_label": "Varṣā",
+      "aliases": [
+        "वर्षा",
+        "Varsha",
+        "Monsoon",
+        "Rainy season"
+      ],
+      "source_ref": "cahc_vgj_explorer",
+      "comment": "Rainy season in the Vedic 6-season cycle. Source: jyotisha-2026/scripts/nakshatra_precession_explorer.py",
+      "attributes": {
+        "category": "season"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:rtu_sharat",
+      "type": "jyotisha_concept",
+      "preferred_label": "Śarat",
+      "aliases": [
+        "शरत्",
+        "शरद्",
+        "Śarad",
+        "Sharat",
+        "Autumn"
+      ],
+      "source_ref": "cahc_vgj_explorer",
+      "comment": "Autumn season in the Vedic 6-season cycle. Source: jyotisha-2026/scripts/nakshatra_precession_explorer.py",
+      "attributes": {
+        "category": "season"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:rtu_hemanta",
+      "type": "jyotisha_concept",
+      "preferred_label": "Hemanta",
+      "aliases": [
+        "हेमन्त",
+        "हेमंत",
+        "Pre-winter"
+      ],
+      "source_ref": "cahc_vgj_explorer",
+      "comment": "Pre-winter / dewy season in the Vedic 6-season cycle. Source: jyotisha-2026/scripts/nakshatra_precession_explorer.py",
+      "attributes": {
+        "category": "season"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:rtu_shishira",
+      "type": "jyotisha_concept",
+      "preferred_label": "Śiśira",
+      "aliases": [
+        "शिशिर",
+        "Shishira",
+        "Winter"
+      ],
+      "source_ref": "cahc_vgj_explorer",
+      "comment": "Winter season in the Vedic 6-season cycle. Source: jyotisha-2026/scripts/nakshatra_precession_explorer.py",
+      "attributes": {
+        "category": "season"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:star_agastya",
+      "type": "celestial_body",
+      "preferred_label": "Agastya",
+      "aliases": [
+        "अगस्त्य",
+        "अगस्त्यः",
+        "Canopus",
+        "HIP 30438",
+        "Alpha Carinae"
+      ],
+      "source_ref": "cahc_vgj_explorer",
+      "comment": "Southern marker star Canopus, key for epoch dating and visibility limits. Source: jyotisha-2026/scripts/nakshatra_precession_explorer.py",
+      "attributes": {
+        "category": "star_or_asterism",
+        "description": "Southern marker star Canopus, key for epoch dating and visibility limits"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:star_dhruva",
+      "type": "celestial_body",
+      "preferred_label": "Dhruva",
+      "aliases": [
+        "ध्रुव",
+        "ध्रुवः",
+        "Dhruvatārā",
+        "Pole Star",
+        "Polaris"
+      ],
+      "source_ref": "cahc_vgj_explorer",
+      "comment": "The celestial pole star / axis anchor in ancient Indian cosmography. Source: jyotisha-2026/scripts/nakshatra_precession_explorer.py",
+      "attributes": {
+        "category": "star_or_asterism",
+        "description": "The celestial pole star / axis anchor in ancient Indian cosmography"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:star_simsumara",
+      "type": "celestial_body",
+      "preferred_label": "Śiṃśumāra",
+      "aliases": [
+        "शिशुमार",
+        "शिशुमारः",
+        "Simsumara",
+        "Shishumara",
+        "Shiṁśumāra"
+      ],
+      "source_ref": "cahc_vgj_explorer",
+      "comment": "Cosmic dolphin / porpoise constellation (Draco/Ursa Minor) anchoring the stellar axis. Source: jyotisha-2026/scripts/nakshatra_precession_explorer.py",
+      "attributes": {
+        "category": "star_or_asterism",
+        "description": "Cosmic dolphin / porpoise constellation (Draco/Ursa Minor) anchoring the stellar axis"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:star_matsya",
+      "type": "celestial_body",
+      "preferred_label": "Matsya",
+      "aliases": [
+        "मत्स्य",
+        "मत्स्यः",
+        "Matsya constellation"
+      ],
+      "source_ref": "cahc_vgj_explorer",
+      "comment": "Fish asterism in ancient cosmography. Source: jyotisha-2026/scripts/nakshatra_precession_explorer.py",
+      "attributes": {
+        "category": "star_or_asterism",
+        "description": "Fish asterism in ancient cosmography"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:star_saptarsi",
+      "type": "celestial_body",
+      "preferred_label": "Saptarṣi",
+      "aliases": [
+        "सप्तर्षि",
+        "सप्तर्षयः",
+        "Saptarshi",
+        "Seven Sages",
+        "Ursa Major"
+      ],
+      "source_ref": "cahc_vgj_explorer",
+      "comment": "The Great Bear / Seven Sages constellation and century calendar marker. Source: jyotisha-2026/scripts/nakshatra_precession_explorer.py",
+      "attributes": {
+        "category": "star_or_asterism",
+        "description": "The Great Bear / Seven Sages constellation and century calendar marker"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:star_lubdhaka",
+      "type": "celestial_body",
+      "preferred_label": "Lubdhaka",
+      "aliases": [
+        "लुब्धक",
+        "लुब्धकः",
+        "Mṛgavyādha",
+        "Sirius",
+        "HIP 32349",
+        "Alpha Canis Majoris"
+      ],
+      "source_ref": "cahc_vgj_explorer",
+      "comment": "Sirius / The Hunter star, brightest in the night sky. Source: jyotisha-2026/scripts/nakshatra_precession_explorer.py",
+      "attributes": {
+        "category": "star_or_asterism",
+        "description": "Sirius / The Hunter star, brightest in the night sky"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:work_vedanga_jyotisa",
+      "type": "work",
+      "preferred_label": "Vedāṅga Jyotiṣa",
+      "aliases": [
+        "वेदाङ्ग ज्योतिष",
+        "वेदांग ज्योतिष",
+        "Vedanga Jyotisa",
+        "Vedanga Jyotish"
+      ],
+      "source_ref": "cahc_vgj_explorer",
+      "comment": "Foundational text of Vedic observational astronomy attributed to Sage Lagadha. Preserved and analyzed in cahc-utils corpus.",
+      "attributes": {
+        "description": "Foundational text of Vedic observational astronomy attributed to Sage Lagadha"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:work_vrddha_gargiya_jyotisa",
+      "type": "work",
+      "preferred_label": "Vṛddha Gārgīya Jyotiṣa",
+      "aliases": [
+        "वृद्धगार्गीय ज्योतिष",
+        "Vrddhagargiya Jyotisa",
+        "Garga Samhita"
+      ],
+      "source_ref": "cahc_vgj_explorer",
+      "comment": "Early astronomical treatise by Garga containing Adityacara and Rtusvabhava chapters. Preserved and analyzed in cahc-utils corpus.",
+      "attributes": {
+        "description": "Early astronomical treatise by Garga containing Adityacara and Rtusvabhava chapters"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:work_suryaprajnapti",
+      "type": "work",
+      "preferred_label": "Sūryaprajñapti",
+      "aliases": [
+        "सूर्यप्रज्ञप्ति",
+        "Suryaprajnapti"
+      ],
+      "source_ref": "cahc_vgj_explorer",
+      "comment": "Canonical Jain astronomical text describing solar/nakshatra kinematics and the two-sun model. Preserved and analyzed in cahc-utils corpus.",
+      "attributes": {
+        "description": "Canonical Jain astronomical text describing solar/nakshatra kinematics and the two-sun model"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:work_candraprajnapti",
+      "type": "work",
+      "preferred_label": "Candraprajñapti",
+      "aliases": [
+        "चन्द्रप्रज्ञप्ति",
+        "चंद्रप्रज्ञप्ति",
+        "Candraprajnapti"
+      ],
+      "source_ref": "cahc_vgj_explorer",
+      "comment": "Canonical Jain astronomical treatise on lunar motions. Preserved and analyzed in cahc-utils corpus.",
+      "attributes": {
+        "description": "Canonical Jain astronomical treatise on lunar motions"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:work_brahmanda_purana",
+      "type": "work",
+      "preferred_label": "Brahmāṇḍa Purāṇa",
+      "aliases": [
+        "ब्रह्माण्ड पुराण",
+        "Brahmanda Purana"
+      ],
+      "source_ref": "cahc_vgj_explorer",
+      "comment": "Purana containing Chapter 21 astronomical verses describing equinoctial full moons. Preserved and analyzed in cahc-utils corpus.",
+      "attributes": {
+        "description": "Purana containing Chapter 21 astronomical verses describing equinoctial full moons"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:work_paripadal",
+      "type": "work",
+      "preferred_label": "Pari-pāṭal",
+      "aliases": [
+        "परिपाडल",
+        "Paripadal",
+        "Paripatal"
+      ],
+      "source_ref": "cahc_vgj_explorer",
+      "comment": "Sangam Tamil anthology with specific planetary configurations and eclipse records for Madurai. Preserved and analyzed in cahc-utils corpus.",
+      "attributes": {
+        "description": "Sangam Tamil anthology with specific planetary configurations and eclipse records for Madurai"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:person_lagadha",
+      "type": "person",
+      "preferred_label": "Lagadha",
+      "aliases": [
+        "लगध",
+        "Sage Lagadha",
+        "Lagadhācārya"
+      ],
+      "source_ref": "cahc_vj_units",
+      "comment": "Vedic astronomer and sage associated with the Vedāṅga Jyotiṣa. Cited extensively in cahc-utils and IJHS index.",
+      "attributes": {
+        "role": "astronomer_or_scholar",
+        "description": "Vedic astronomer and sage associated with the Vedāṅga Jyotiṣa"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:person_garga",
+      "type": "person",
+      "preferred_label": "Garga",
+      "aliases": [
+        "गर्ग",
+        "वृद्धगर्ग",
+        "Vṛddha Garga",
+        "Sage Garga"
+      ],
+      "source_ref": "cahc_vj_units",
+      "comment": "Ancient astronomical authority and author of Gārgī-saṃhitā. Cited extensively in cahc-utils and IJHS index.",
+      "attributes": {
+        "role": "astronomer_or_scholar",
+        "description": "Ancient astronomical authority and author of Gārgī-saṃhitā"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:person_abhyankar_kd",
+      "type": "person",
+      "preferred_label": "K. D. Abhyankar",
+      "aliases": [
+        "Abhyankar",
+        "K.D. Abhyankar",
+        "Kashinath D. Abhyankar"
+      ],
+      "source_ref": "cahc_vj_units",
+      "comment": "Prominent Indian astrophysicist and historian of astronomy, author of seminal papers on nakshatra identification and Vedic calendars in IJHS. Cited extensively in cahc-utils and IJHS index.",
+      "attributes": {
+        "role": "astronomer_or_scholar",
+        "description": "Prominent Indian astrophysicist and historian of astronomy, author of seminal papers on nakshatra identification and Vedic calendars in IJHS"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:person_iyengar_rn",
+      "type": "person",
+      "preferred_label": "R. N. Iyengar",
+      "aliases": [
+        "Iyengar",
+        "R.N. Iyengar"
+      ],
+      "source_ref": "cahc_vj_units",
+      "comment": "Distinguished civil engineer and archaeoastronomy scholar, founder of CAHC and authority on ancient Indian astronomical records and eclipses. Cited extensively in cahc-utils and IJHS index.",
+      "attributes": {
+        "role": "astronomer_or_scholar",
+        "description": "Distinguished civil engineer and archaeoastronomy scholar, founder of CAHC and authority on ancient Indian astronomical records and eclipses"
+      },
+      "curation_status": "source_derived"
+    },
+    {
+      "id": "jyotisha:work_aryabhatiya",
+      "type": "work",
+      "preferred_label": "Āryabhaṭīya",
+      "aliases": [
+        "आर्यभटीय",
+        "Aryabhatiya",
+        "Āryabhaṭīyam",
+        "Aryabhatiyam"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "Foundational 5th-century treatise by Āryabhaṭa covering Gitikapada, Ganitapada, Kalakriyapada, and Golapada. Frequently referenced across IJHS papers.",
+      "attributes": {
+        "description": "Foundational 5th-century treatise by Āryabhaṭa covering Gitikapada, Ganitapada, Kalakriyapada, and Golapada"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:work_surya_siddhanta",
+      "type": "work",
+      "preferred_label": "Sūrya Siddhānta",
+      "aliases": [
+        "सूर्यसिद्धान्त",
+        "सूर्य सिद्धान्त",
+        "Surya Siddhanta",
+        "Suryasiddhanta",
+        "Sūryasiddhānta"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "Premier canonical astronomical treatise of classical Indian astronomy. Frequently referenced across IJHS papers.",
+      "attributes": {
+        "description": "Premier canonical astronomical treatise of classical Indian astronomy"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:work_khandakhadyaka",
+      "type": "work",
+      "preferred_label": "Khaṇḍakhādyaka",
+      "aliases": [
+        "खण्डखाद्यक",
+        "Khandakhadyaka"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "Astronomical treatise by Brahmagupta based on the ardharatrika system. Frequently referenced across IJHS papers.",
+      "attributes": {
+        "description": "Astronomical treatise by Brahmagupta based on the ardharatrika system"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:work_brahmasphuta_siddhanta",
+      "type": "work",
+      "preferred_label": "Brahmasphuṭasiddhānta",
+      "aliases": [
+        "ब्राह्मस्फुटसिद्धान्त",
+        "Brahmasphutasiddhanta",
+        "BSS"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "Magnum opus of Brahmagupta (628 CE) establishing comprehensive planetary kinematics and zero algebra. Frequently referenced across IJHS papers.",
+      "attributes": {
+        "description": "Magnum opus of Brahmagupta (628 CE) establishing comprehensive planetary kinematics and zero algebra"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:work_siddhanta_siromani",
+      "type": "work",
+      "preferred_label": "Siddhānta-Śiromaṇi",
+      "aliases": [
+        "सिद्धान्तशिरोमणि",
+        "Siddhanta Siromani",
+        "Siddhantasiromani"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "Major work by Bhāskara II comprising Grahaganita, Goladhyaya, Lilavati, and Bijaganita. Frequently referenced across IJHS papers.",
+      "attributes": {
+        "description": "Major work by Bhāskara II comprising Grahaganita, Goladhyaya, Lilavati, and Bijaganita"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:work_yuktibhasa",
+      "type": "work",
+      "preferred_label": "Yuktibhāṣā",
+      "aliases": [
+        "युक्तिभाषा",
+        "Yuktibhasa",
+        "Ganita-Yuktibhasa"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "16th-century Malayalam/Sanskrit exposition of Kerala calculus and planetary proofs by Jyeṣṭhadeva. Frequently referenced across IJHS papers.",
+      "attributes": {
+        "description": "16th-century Malayalam/Sanskrit exposition of Kerala calculus and planetary proofs by Jyeṣṭhadeva"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:work_tantrasangraha",
+      "type": "work",
+      "preferred_label": "Tantrasaṅgraha",
+      "aliases": [
+        "तन्त्रसङ्ग्रह",
+        "तन्त्रसंग्रह",
+        "Tantrasangraha"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "Core astronomical treatise by Nīlakaṇṭha Somayājī formulating quasi-heliocentric inner-planet revisions. Frequently referenced across IJHS papers.",
+      "attributes": {
+        "description": "Core astronomical treatise by Nīlakaṇṭha Somayājī formulating quasi-heliocentric inner-planet revisions"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:work_sadratnamala",
+      "type": "work",
+      "preferred_label": "Sadratnamālā",
+      "aliases": [
+        "सद्रत्नमाला",
+        "Sadratnamala"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "Astronomical treatise by Śaṅkara Varman detailing Kerala trigonometric series and algorithms. Frequently referenced across IJHS papers.",
+      "attributes": {
+        "description": "Astronomical treatise by Śaṅkara Varman detailing Kerala trigonometric series and algorithms"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:work_karanapaddhati",
+      "type": "work",
+      "preferred_label": "Karaṇapaddhati",
+      "aliases": [
+        "करणपद्धति",
+        "Karanapaddhati"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "15th-century astronomical handbook by Putumana Somayājī. Frequently referenced across IJHS papers.",
+      "attributes": {
+        "description": "15th-century astronomical handbook by Putumana Somayājī"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:work_mahabhaskariya",
+      "type": "work",
+      "preferred_label": "Mahābhāskarīya",
+      "aliases": [
+        "महाभास्करीय",
+        "Mahabhaskariya"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "Comprehensive astronomical treatise by Bhāskara I explaining Aryabhata's system. Frequently referenced across IJHS papers.",
+      "attributes": {
+        "description": "Comprehensive astronomical treatise by Bhāskara I explaining Aryabhata's system"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:work_laghubhaskariya",
+      "type": "work",
+      "preferred_label": "Laghubhāskarīya",
+      "aliases": [
+        "लघुभास्करीय",
+        "Laghubhaskariya"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "Abridged practical manual by Bhāskara I. Frequently referenced across IJHS papers.",
+      "attributes": {
+        "description": "Abridged practical manual by Bhāskara I"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:work_karanakutuhala",
+      "type": "work",
+      "preferred_label": "Karaṇakutūhala",
+      "aliases": [
+        "करणकुतूहल",
+        "Karanakutuhala"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "Popular practical astronomical handbook composed by Bhāskara II in 1183 CE. Frequently referenced across IJHS papers.",
+      "attributes": {
+        "description": "Popular practical astronomical handbook composed by Bhāskara II in 1183 CE"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:person_brahmagupta",
+      "type": "person",
+      "preferred_label": "Brahmagupta",
+      "aliases": [
+        "ब्रह्मगुप्त",
+        "Brahmaguptācārya"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "7th-century astronomer and mathematician, author of Brahmasphutasiddhanta and Khandakhadyaka. Prominently discussed across IJHS papers.",
+      "attributes": {
+        "description": "7th-century astronomer and mathematician, author of Brahmasphutasiddhanta and Khandakhadyaka"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:person_bhaskara_i",
+      "type": "person",
+      "preferred_label": "Bhāskara I",
+      "aliases": [
+        "भास्कर १",
+        "Bhaskara I",
+        "Bhāskara-I"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "7th-century commentator on Aryabhata and author of Mahabhaskariya and Laghubhaskariya. Prominently discussed across IJHS papers.",
+      "attributes": {
+        "description": "7th-century commentator on Aryabhata and author of Mahabhaskariya and Laghubhaskariya"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:person_bhaskara_ii",
+      "type": "person",
+      "preferred_label": "Bhāskara II",
+      "aliases": [
+        "भास्कराचार्य",
+        "Bhāskarācārya",
+        "Bhaskara II",
+        "Bhaskara-II"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "12th-century astronomer and author of Siddhanta-Siromani and Karanakutuhala. Prominently discussed across IJHS papers.",
+      "attributes": {
+        "description": "12th-century astronomer and author of Siddhanta-Siromani and Karanakutuhala"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:person_madhava",
+      "type": "person",
+      "preferred_label": "Mādhava of Saṅgamagrāma",
+      "aliases": [
+        "माधव",
+        "Madhava",
+        "Madhava of Sangamagrama"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "14th-century founder of the Kerala School of Astronomy and pioneer of infinite series. Prominently discussed across IJHS papers.",
+      "attributes": {
+        "description": "14th-century founder of the Kerala School of Astronomy and pioneer of infinite series"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:person_nilakantha",
+      "type": "person",
+      "preferred_label": "Nīlakaṇṭha Somayājī",
+      "aliases": [
+        "नीलकण्ठ सोमयाजी",
+        "Nilakantha Somayaji",
+        "Nilakantha"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "15th-century Kerala astronomer and author of Tantrasangraha and Aryabhatiya-Bhasya. Prominently discussed across IJHS papers.",
+      "attributes": {
+        "description": "15th-century Kerala astronomer and author of Tantrasangraha and Aryabhatiya-Bhasya"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:person_paramesvara",
+      "type": "person",
+      "preferred_label": "Parameśvara",
+      "aliases": [
+        "परमेश्वर",
+        "Paramesvara"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "14th-15th century Kerala astronomer who instituted the Drgganita observational reform. Prominently discussed across IJHS papers.",
+      "attributes": {
+        "description": "14th-15th century Kerala astronomer who instituted the Drgganita observational reform"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:person_jyesthadeva",
+      "type": "person",
+      "preferred_label": "Jyeṣṭhadeva",
+      "aliases": [
+        "ज्येष्ठदेव",
+        "Jyesthadeva"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "16th-century author of Yuktibhasa. Prominently discussed across IJHS papers.",
+      "attributes": {
+        "description": "16th-century author of Yuktibhasa"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:person_lalla",
+      "type": "person",
+      "preferred_label": "Lalla",
+      "aliases": [
+        "लल्ल",
+        "Lallācārya"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "8th-century astronomer and author of Sisyadhivrddhida. Prominently discussed across IJHS papers.",
+      "attributes": {
+        "description": "8th-century astronomer and author of Sisyadhivrddhida"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:person_munisvara",
+      "type": "person",
+      "preferred_label": "Munīśvara",
+      "aliases": [
+        "मुनीश्वर",
+        "Munisvara"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "17th-century astronomer and author of Siddhantasarvabhauma. Prominently discussed across IJHS papers.",
+      "attributes": {
+        "description": "17th-century astronomer and author of Siddhantasarvabhauma"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:person_sripati",
+      "type": "person",
+      "preferred_label": "Śrīpati",
+      "aliases": [
+        "श्रीपति",
+        "Sripati"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "11th-century astronomer and author of Siddhantasekhara. Prominently discussed across IJHS papers.",
+      "attributes": {
+        "description": "11th-century astronomer and author of Siddhantasekhara"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:person_ganesa_daivajna",
+      "type": "person",
+      "preferred_label": "Gaṇeśa Daivajña",
+      "aliases": [
+        "गणेश दैवज्ञ",
+        "Ganesa Daivajna",
+        "Ganesha Daivajna"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "16th-century author of Grahalaghava. Prominently discussed across IJHS papers.",
+      "attributes": {
+        "description": "16th-century author of Grahalaghava"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:person_kamalakara",
+      "type": "person",
+      "preferred_label": "Kamalākara",
+      "aliases": [
+        "कमलाकर",
+        "Kamalakara"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "17th-century Varanasi astronomer and author of Siddhantatattvaviveka. Prominently discussed across IJHS papers.",
+      "attributes": {
+        "description": "17th-century Varanasi astronomer and author of Siddhantatattvaviveka"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:person_jai_singh",
+      "type": "person",
+      "preferred_label": "Sawai Jai Singh II",
+      "aliases": [
+        "सवाई जयसिंह",
+        "Jai Singh",
+        "Sawai Jai Singh",
+        "Raja Jai Singh"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "Astronomer-king of Amber/Jaipur and builder of the five Jantar Mantar observatories. Prominently discussed across IJHS papers.",
+      "attributes": {
+        "description": "Astronomer-king of Amber/Jaipur and builder of the five Jantar Mantar observatories"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:instrument_sanku",
+      "type": "instrument",
+      "preferred_label": "Śaṅku",
+      "aliases": [
+        "शङ्कु",
+        "शंकु",
+        "Sanku",
+        "Shanku",
+        "Gnomon"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "Vertical gnomon used for observing solar shadows, finding cardinal directions, local latitude, and time. Analyzed extensively in IJHS instrument literature.",
+      "attributes": {
+        "category": "observational_instrument",
+        "description": "Vertical gnomon used for observing solar shadows, finding cardinal directions, local latitude, and time"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:instrument_yantraraja",
+      "type": "instrument",
+      "preferred_label": "Yantrarāja",
+      "aliases": [
+        "यन्त्रराज",
+        "यंत्रराज",
+        "Yantraraja",
+        "Astrolabe",
+        "Usturlab"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "Equinoctial planispheric astrolabe, subject of Mahendra Suri's 14th-century treatise Yantraraja. Analyzed extensively in IJHS instrument literature.",
+      "attributes": {
+        "category": "observational_instrument",
+        "description": "Equinoctial planispheric astrolabe, subject of Mahendra Suri's 14th-century treatise Yantraraja"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:instrument_ghatikayantra",
+      "type": "instrument",
+      "preferred_label": "Ghaṭikā-yantra",
+      "aliases": [
+        "घटिकायन्त्र",
+        "घटीयन्त्र",
+        "Ghatika yantra",
+        "Clepsydra",
+        "Water clock"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "Sinking bowl clepsydra calibrated to measure 1 ghatika (24 minutes). Analyzed extensively in IJHS instrument literature.",
+      "attributes": {
+        "category": "observational_instrument",
+        "description": "Sinking bowl clepsydra calibrated to measure 1 ghatika (24 minutes)"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:instrument_turiyayantra",
+      "type": "instrument",
+      "preferred_label": "Turīya-yantra",
+      "aliases": [
+        "तुरीययन्त्र",
+        "Turiya yantra",
+        "Quadrant"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "Graduated astronomical quadrant for altitude and zenith distance measurements. Analyzed extensively in IJHS instrument literature.",
+      "attributes": {
+        "category": "observational_instrument",
+        "description": "Graduated astronomical quadrant for altitude and zenith distance measurements"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:instrument_golayantra",
+      "type": "instrument",
+      "preferred_label": "Gola-yantra",
+      "aliases": [
+        "गोलयन्त्र",
+        "Golayantra",
+        "Armillary sphere"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "Spherical ring model representing the celestial sphere, ecliptic, horizon, and planetary orbits. Analyzed extensively in IJHS instrument literature.",
+      "attributes": {
+        "category": "observational_instrument",
+        "description": "Spherical ring model representing the celestial sphere, ecliptic, horizon, and planetary orbits"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:instrument_phalakayantra",
+      "type": "instrument",
+      "preferred_label": "Phalaka-yantra",
+      "aliases": [
+        "फलकयन्त्र",
+        "Phalaka yantra"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "Board instrument invented by Bhaskara II for computing time from solar altitude. Analyzed extensively in IJHS instrument literature.",
+      "attributes": {
+        "category": "observational_instrument",
+        "description": "Board instrument invented by Bhaskara II for computing time from solar altitude"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:instrument_yastiyantra",
+      "type": "instrument",
+      "preferred_label": "Yaṣṭi-yantra",
+      "aliases": [
+        "यष्टियन्त्र",
+        "Yasti yantra",
+        "Staff"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "Graduated sighting staff or cross-staff for angular distance measurements. Analyzed extensively in IJHS instrument literature.",
+      "attributes": {
+        "category": "observational_instrument",
+        "description": "Graduated sighting staff or cross-staff for angular distance measurements"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:concept_ahargana",
+      "type": "jyotisha_concept",
+      "preferred_label": "Ahargaṇa",
+      "aliases": [
+        "अहर्गण",
+        "Ahargana",
+        "Civil day count"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "Count of mean solar days elapsed from the epoch (such as Kaliyuga or epoch of a Karana) to a given day. Fundamental technical concept in classical Indian mathematical astronomy.",
+      "attributes": {
+        "category": "mathematical_astronomy",
+        "description": "Count of mean solar days elapsed from the epoch (such as Kaliyuga or epoch of a Karana) to a given day"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:concept_bhagana",
+      "type": "jyotisha_concept",
+      "preferred_label": "Bhagaṇa",
+      "aliases": [
+        "भगण",
+        "Bhagana",
+        "Revolutions"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "Number of complete circular revolutions made by a planet within a Mahayuga. Fundamental technical concept in classical Indian mathematical astronomy.",
+      "attributes": {
+        "category": "mathematical_astronomy",
+        "description": "Number of complete circular revolutions made by a planet within a Mahayuga"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:concept_mandaphala",
+      "type": "jyotisha_concept",
+      "preferred_label": "Mandaphala",
+      "aliases": [
+        "मन्दफल",
+        "Equation of center"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "Correction applied to mean planetary position to account for elliptical orbital anomaly. Fundamental technical concept in classical Indian mathematical astronomy.",
+      "attributes": {
+        "category": "mathematical_astronomy",
+        "description": "Correction applied to mean planetary position to account for elliptical orbital anomaly"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:concept_sighraphala",
+      "type": "jyotisha_concept",
+      "preferred_label": "Śīghraphala",
+      "aliases": [
+        "शीघ्रफल",
+        "Sighraphala",
+        "Equation of conjunction"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "Correction applied to account for the relative heliocentric motion of the Earth and planet. Fundamental technical concept in classical Indian mathematical astronomy.",
+      "attributes": {
+        "category": "mathematical_astronomy",
+        "description": "Correction applied to account for the relative heliocentric motion of the Earth and planet"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:concept_lambana",
+      "type": "jyotisha_concept",
+      "preferred_label": "Lambana",
+      "aliases": [
+        "लम्बन",
+        "Longitudinal parallax"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "Parallax in longitude, fundamental for timing solar eclipses. Fundamental technical concept in classical Indian mathematical astronomy.",
+      "attributes": {
+        "category": "mathematical_astronomy",
+        "description": "Parallax in longitude, fundamental for timing solar eclipses"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:concept_nati",
+      "type": "jyotisha_concept",
+      "preferred_label": "Nati",
+      "aliases": [
+        "नति",
+        "Latitudinal parallax"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "Parallax in celestial latitude in solar eclipse computation. Fundamental technical concept in classical Indian mathematical astronomy.",
+      "attributes": {
+        "category": "mathematical_astronomy",
+        "description": "Parallax in celestial latitude in solar eclipse computation"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:concept_valana",
+      "type": "jyotisha_concept",
+      "preferred_label": "Valana",
+      "aliases": [
+        "वलन",
+        "Deflection"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "Deflection of the ecliptic with respect to the prime vertical, crucial for depicting eclipse phases. Fundamental technical concept in classical Indian mathematical astronomy.",
+      "attributes": {
+        "category": "mathematical_astronomy",
+        "description": "Deflection of the ecliptic with respect to the prime vertical, crucial for depicting eclipse phases"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:concept_drkkarma",
+      "type": "jyotisha_concept",
+      "preferred_label": "Dṛkkarma",
+      "aliases": [
+        "दृक्कर्म",
+        "Drkkarma",
+        "Visibility reduction"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "Operation to convert celestial coordinates to apparent local horizon coordinates for heliacal rising. Fundamental technical concept in classical Indian mathematical astronomy.",
+      "attributes": {
+        "category": "mathematical_astronomy",
+        "description": "Operation to convert celestial coordinates to apparent local horizon coordinates for heliacal rising"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:concept_jya",
+      "type": "jyotisha_concept",
+      "preferred_label": "Jyā",
+      "aliases": [
+        "ज्या",
+        "Jya",
+        "R-sine"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "Indian sine function based on the chord of an arc of radius R (typically R=3438'). Fundamental technical concept in classical Indian mathematical astronomy.",
+      "attributes": {
+        "category": "mathematical_astronomy",
+        "description": "Indian sine function based on the chord of an arc of radius R (typically R=3438')"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:concept_kotijya",
+      "type": "jyotisha_concept",
+      "preferred_label": "Kotijyā",
+      "aliases": [
+        "कोटिज्या",
+        "Kotijya",
+        "Cosine"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "Indian cosine function corresponding to the complementary arc. Fundamental technical concept in classical Indian mathematical astronomy.",
+      "attributes": {
+        "category": "mathematical_astronomy",
+        "description": "Indian cosine function corresponding to the complementary arc"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:concept_utkramajya",
+      "type": "jyotisha_concept",
+      "preferred_label": "Utkramajyā",
+      "aliases": [
+        "उत्क्रमज्या",
+        "Utkramajya",
+        "Versine"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "Versed sine (R - Kotijya) used in Indian trigonometry. Fundamental technical concept in classical Indian mathematical astronomy.",
+      "attributes": {
+        "category": "mathematical_astronomy",
+        "description": "Versed sine (R - Kotijya) used in Indian trigonometry"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:concept_ayanamsa",
+      "type": "jyotisha_concept",
+      "preferred_label": "Ayanāṃśa",
+      "aliases": [
+        "अयनांश",
+        "Ayanamsa"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "Angular precessional difference between the fixed sidereal zodiac (Nirayana) and tropical frame (Sayana). Fundamental technical concept in classical Indian mathematical astronomy.",
+      "attributes": {
+        "category": "mathematical_astronomy",
+        "description": "Angular precessional difference between the fixed sidereal zodiac (Nirayana) and tropical frame (Sayana)"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:concept_vakra",
+      "type": "jyotisha_concept",
+      "preferred_label": "Vakra",
+      "aliases": [
+        "वक्र",
+        "Vakragati",
+        "Retrograde"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "Apparent retrograde motion of planets. Fundamental technical concept in classical Indian mathematical astronomy.",
+      "attributes": {
+        "category": "mathematical_astronomy",
+        "description": "Apparent retrograde motion of planets"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:concept_pata",
+      "type": "jyotisha_concept",
+      "preferred_label": "Pāta",
+      "aliases": [
+        "पात",
+        "Pata",
+        "Node"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "Ascending or descending orbital node of the Moon or planets (Rāhu and Ketu). Fundamental technical concept in classical Indian mathematical astronomy.",
+      "attributes": {
+        "category": "mathematical_astronomy",
+        "description": "Ascending or descending orbital node of the Moon or planets (Rāhu and Ketu)"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:place_ujjayini",
+      "type": "place",
+      "preferred_label": "Ujjayinī",
+      "aliases": [
+        "उज्जयिनी",
+        "उज्जैन",
+        "Ujjain",
+        "Avanti",
+        "Avantika"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "Prime meridian (0° longitude) and premier observatory capital of ancient Indian astronomy. Prominent astronomical reference location.",
+      "attributes": {
+        "category": "astronomical_site",
+        "description": "Prime meridian (0° longitude) and premier observatory capital of ancient Indian astronomy"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:place_kusumapura",
+      "type": "place",
+      "preferred_label": "Kusumapura",
+      "aliases": [
+        "कुसुमपुर",
+        "पाटलिपुत्र",
+        "Pāṭaliputra",
+        "Pataliputra",
+        "Patna"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "Ancient educational capital and astronomical center of Āryabhaṭa I. Prominent astronomical reference location.",
+      "attributes": {
+        "category": "astronomical_site",
+        "description": "Ancient educational capital and astronomical center of Āryabhaṭa I"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:place_sangamagrama",
+      "type": "place",
+      "preferred_label": "Saṅgamagrāma",
+      "aliases": [
+        "सङ्गमग्राम",
+        "संगमग्राम",
+        "Sangamagrama",
+        "Irinjalakuda"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "Birthplace of Mādhava and spiritual cradle of the Kerala School of Astronomy. Prominent astronomical reference location.",
+      "attributes": {
+        "category": "astronomical_site",
+        "description": "Birthplace of Mādhava and spiritual cradle of the Kerala School of Astronomy"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:place_varanasi",
+      "type": "place",
+      "preferred_label": "Vārāṇasī",
+      "aliases": [
+        "वाराणसी",
+        "काशी",
+        "Kāśī",
+        "Kashi",
+        "Benares",
+        "Banaras"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "Major late medieval astronomical center where Kamalākara and Munīśvara worked. Prominent astronomical reference location.",
+      "attributes": {
+        "category": "astronomical_site",
+        "description": "Major late medieval astronomical center where Kamalākara and Munīśvara worked"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:place_lanka",
+      "type": "place",
+      "preferred_label": "Laṅkā",
+      "aliases": [
+        "लङ्का",
+        "लंका",
+        "Lanka"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "Equatorial zero-latitude reference point at the intersection of the Ujjayinī prime meridian. Prominent astronomical reference location.",
+      "attributes": {
+        "category": "astronomical_site",
+        "description": "Equatorial zero-latitude reference point at the intersection of the Ujjayinī prime meridian"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:place_kuruksetra",
+      "type": "place",
+      "preferred_label": "Kurukṣetra",
+      "aliases": [
+        "कुरुक्षेत्र",
+        "Kurukshetra"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "Ancient northern astronomical observation site referenced in Mahabharata and Purana eclipse horizons. Prominent astronomical reference location.",
+      "attributes": {
+        "category": "astronomical_site",
+        "description": "Ancient northern astronomical observation site referenced in Mahabharata and Purana eclipse horizons"
+      },
+      "curation_status": "corpus_candidate"
+    },
+    {
+      "id": "jyotisha:place_jantar_mantar",
+      "type": "place",
+      "preferred_label": "Jantar Mantar",
+      "aliases": [
+        "जन्तर मन्तर",
+        "जंतर मंतर",
+        "Yantra Mandir"
+      ],
+      "source_ref": "patra_darpan_corpus",
+      "comment": "Astronomical masonry observatories built in Jaipur, Delhi, Varanasi, Ujjain, and Mathura by Jai Singh II. Prominent astronomical reference location.",
+      "attributes": {
+        "category": "astronomical_site",
+        "description": "Astronomical masonry observatories built in Jaipur, Delhi, Varanasi, Ujjain, and Mathura by Jai Singh II"
+      },
+      "curation_status": "corpus_candidate"
+    }
+  ],
+  "artifact_role": "starter_candidate",
+  "generation": {
+    "method": "Source-driven extraction, deterministic corpus scan, and explicit alias normalization",
+    "process_report": "docs/iscls/ontology-creation.md",
+    "input_artifact": "ontology/jyotisha-v0.1.json",
+    "reported_patra_darpan_document_count": 120,
+    "validation": {
+      "entity_count": 143,
+      "explicit_alias_entries": 502,
+      "unique_normalized_aliases_including_preferred_labels": 632,
+      "cross_entity_alias_collisions": 0,
+      "duplicate_entity_ids": 0,
+      "curation_status_counts": {
+        "corpus_candidate": 53,
+        "seed": 16,
+        "source_derived": 74
+      },
+      "entity_type_counts": {
+        "astronomical_event": 2,
+        "celestial_body": 15,
+        "instrument": 7,
+        "jyotisha_concept": 34,
+        "lunar_mansion": 29,
+        "person": 19,
+        "place": 7,
+        "work": 18,
+        "zodiac_sign": 12
+      },
+      "source_ref_counts": {
+        "cahc_marga_veethi": 12,
+        "cahc_n28_full_meta": 28,
+        "cahc_vgj_explorer": 18,
+        "cahc_vj_units": 4,
+        "patra_darpan_corpus": 53,
+        "starter_seed_v0": 16,
+        "stel_nakshatras_inc": 12
+      }
+    },
+    "audit_note": "Source repositories were treated as read-only; this artifact was written separately from the generated candidate.",
+    "output_artifact": "ontology/jyotisha-v0.2.json"
+  }
+}

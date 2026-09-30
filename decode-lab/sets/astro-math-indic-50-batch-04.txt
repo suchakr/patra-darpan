@@ -1,0 +1,13 @@
+# Batch 04 of 05 from astro-math-indic-50.
+# 10 documents: 5 digital, 5 raster.
+
+08-IJHS59_1
+Concept_of_Probability_in_Sanskrit_Texts
+IJHS_60_3_2
+IJHS_60_1_1
+Vol44_3_6_RBhattacharya
+Vol34_1_1_KCHari
+Vol33_3_1_SCKak
+Vol22_3_4_SCKak
+Vol19_1_1_PSingh
+Vol18_1_4_RCGupta

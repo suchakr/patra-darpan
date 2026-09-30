@@ -1,0 +1,16 @@
+# Manually curated campaign set for calendrical and computational astronomy.
+# Count: 10
+# Subjects: Astronomy
+# Categories: Indic
+# Doc types: raster
+
+Vol07_2_4_SDSharma
+Vol35_1_2_KCHari
+Vol37_3_1_KDAbhyankar
+Vol33_2_2_BNNAchar
+Vol15_2_3_SSLishk
+Vol35_3_1_BNNAchar
+Vol34_2_5_KCHari
+Vol28_1_1_KDAbhyankar
+Vol20-1to4_9_KSShukla
+Vol20-1to4_7_ASomayaji
