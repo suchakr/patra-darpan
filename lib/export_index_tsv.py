@@ -79,6 +79,12 @@ INDEX_ENRICHMENT_FALLBACKS: dict[
         "link",
     ): {"subject": "Culture", "category": "Indic"},
     (
+        "SwarajyaMag",
+        "The Proofs Historians Said Indian Mathematics Lacked",
+        "https://swarajyamag.com/ideas/the-proofs-historians-said-indian-mathematics-lacked",
+        "link",
+    ): {"subject": "Math", "category": "Indic"},
+    (
         "The Atharva Forum",
         "Why Retell a Story Everyone Knows?",
         "https://zenodo.org/records/21870633/files/Why_Retell_a_Story_Everyone_Knows.pdf?download=1",

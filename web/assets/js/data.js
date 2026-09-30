@@ -216,6 +216,24 @@ const PAPERS = [
     "localPath": null
   },
   {
+    "journal": "SwarajyaMag",
+    "title": "The Proofs Historians Said Indian Mathematics Lacked",
+    "author": "R. S. Hariharan",
+    "category": "Indic",
+    "subject": "Math",
+    "year": "2026",
+    "published_on": "2026-09-30",
+    "remoteUrl": "https://swarajyamag.com/ideas/the-proofs-historians-said-indian-mathematics-lacked",
+    "juUrl": "",
+    "size": 0.0,
+    "cahc_authored": true,
+    "entry_type": "link",
+    "source": "swarajya",
+    "gcs_key": "",
+    "content_kind": "article",
+    "localPath": null
+  },
+  {
     "journal": "TechVaidya Global",
     "title": "\u0ca7\u0ccd\u0cb0\u0cc1\u0cb5 \u0ca8\u0c95\u0ccd\u0cb7\u0ca4\u0ccd\u0cb0: \u0c95\u0cc7\u0cb5\u0cb2 \u0cad\u0c95\u0ccd\u0ca4\u0cbf\u0caf \u0c95\u0ca5\u0cc6\u0caf\u0ccb \u0c85\u0ca5\u0cb5\u0cbe 5000 \u0cb5\u0cb0\u0ccd\u0cb7\u0c97\u0cb3 \u0cb9\u0cbf\u0c82\u0ca6\u0cbf\u0ca8 \u0c96\u0c97\u0ccb\u0cb3 \u0cb5\u0cbf\u0cb8\u0ccd\u0cae\u0caf\u0cb5\u0ccb?",
     "author": "R. S. Hariharan",

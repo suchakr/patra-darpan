@@ -4,7 +4,7 @@
 - legacy path: `/Users/sunder/projects/patra-darpan/reference/legacy/index.tsv`
 
 ## Row Counts
-- exported rows: 2027
+- exported rows: 2028
 - legacy rows: 2005
 
 ## Headers
@@ -13,18 +13,18 @@
 - additive exported fields: ['published_on']
 
 ## Entry Type Counts
-- exported: {'link': 16, 'pdf': 2011}
+- exported: {'link': 17, 'pdf': 2011}
 - legacy: {'pdf': 2000, 'link': 5}
 
 ## Enrichment Coverage
-- exported non-empty `subject`: 2026
+- exported non-empty `subject`: 2027
 - legacy non-empty `subject`: 2005
-- exported non-empty `category`: 2026
+- exported non-empty `category`: 2027
 - legacy non-empty `category`: 2005
 
 ## Keyed Row Presence
 - missing from export by `(journal, paper, url, entry_type)`: 2
-- extra in export by `(journal, paper, url, entry_type)`: 24
+- extra in export by `(journal, paper, url, entry_type)`: 25
 
 ### Missing From Export
 - journal='AJPEM', paper='Śukanāśopadeśa for Project Managers', url='https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/ajpem_2025_sukanasopdesa.pdf', entry_type='pdf'
@@ -49,5 +49,5 @@
 - journal='SwarajyaMag', paper='Did India Lack Historical Consciousness, Or Is It Just That India Understood Time Differently?', url='https://swarajyamag.com/ideas/did-india-lack-historical-consciousness-or-is-it-just-that-india-understood-time-differently', entry_type='link'
 - journal='SwarajyaMag', paper='How Ancient India Predicted Rains Before The Arrival Of Modern Science', url='https://swarajyamag.com/ideas/how-ancient-india-predicted-rains-before-the-arrogance-of-modern-science', entry_type='link'
 - journal='SwarajyaMag', paper='Krishna Is Shiva: A Philosophical Secret Hidden in a Sanskrit Poem', url='https://swarajyamag.com/ideas/krishna-is-shiva-a-philosophical-secret-hidden-in-a-sanskrit-poem', entry_type='link'
+- journal='SwarajyaMag', paper='The Proofs Historians Said Indian Mathematics Lacked', url='https://swarajyamag.com/ideas/the-proofs-historians-said-indian-mathematics-lacked', entry_type='link'
 - journal='SwarajyaMag', paper='The Queen Who Wrote The War: Gangādevī And Her Madhurāvijayam', url='https://swarajyamag.com/culture/the-queen-who-wrote-the-war-gangdev-and-her-madhurvijayam', entry_type='link'
-- journal='SwarajyaMag', paper="Vivaan, Aarav, Kalu, Chhotu... India's Naming Crisis That Rajasthan Is Trying To Fix", url='https://swarajyamag.com/ideas/indias-naming-crisis-rajasthan-is-trying-to-fix-it-urban-india-doesnt-even-know-it-has-the-problem', entry_type='link'

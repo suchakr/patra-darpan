@@ -1,7 +1,18 @@
 window.PATRA_DARPAN_P60 = {
-  "generatedAt": "2026-09-24T07:44:23.075341Z",
-  "rowCount": 86,
+  "generatedAt": "2026-09-30T13:17:24.824561Z",
+  "rowCount": 87,
   "rows": [
+    {
+      "year": "2026",
+      "published_on": "2026-09-30",
+      "category": "Math",
+      "title": "The Proofs Historians Said Indian Mathematics Lacked",
+      "author": "R. S. Hariharan",
+      "source": "SwarajyaMag",
+      "url": "https://swarajyamag.com/ideas/the-proofs-historians-said-indian-mathematics-lacked",
+      "entry_type": "link",
+      "content_kind": "article"
+    },
     {
       "year": "2026",
       "published_on": "2026-07-10",
