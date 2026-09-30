@@ -369,7 +369,8 @@ Example workflow:
 cp /path/to/The_Scope_of_Ashtadashavarnana.pdf ../patra-darpan/corpus/other/
 ```
 
-Append to `corpus/curated-pdfs.tsv`:
+Append to `corpus/curated-pdfs.tsv`. Set the optional trailing `published_on`
+field to an authoritative `YYYY-MM-DD` date when one is available:
 
 ```tsv
 Karnataka Sanskrit 8.1	The Scope of Aṣṭādaśavarṇana in the Mahākāvya Mathurābhyudaya	https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/The_Scope_of_Ashtadashavarnana.pdf	320.0	2025.0	R. S. Hariharan
@@ -398,10 +399,11 @@ Use this when there is no managed local PDF:
 - add the row to `corpus/curated-links.tsv`
 - if the item is CAHC-authored, add it to `corpus/cahc_authored_registry.txt`
 
-Example `corpus/curated-links.tsv` row:
+Example `corpus/curated-links.tsv` row with its authoritative publication
+date:
 
 ```tsv
-SwarajyaMag	Did India Lack Historical Consciousness, Or Is It Just That India Understood Time Differently?	https://swarajyamag.com/ideas/did-india-lack-historical-consciousness-or-is-it-just-that-india-understood-time-differently	2026	R. S. Hariharan
+SwarajyaMag	Did India Lack Historical Consciousness, Or Is It Just That India Understood Time Differently?	https://swarajyamag.com/ideas/did-india-lack-historical-consciousness-or-is-it-just-that-india-understood-time-differently	2026	R. S. Hariharan	2026-03-15
 ```
 
 ### After Adding

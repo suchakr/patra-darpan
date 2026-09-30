@@ -14,6 +14,7 @@ __pycache__/
 !docs/iscls/release.schema.json
 !docs/iscls/release.example.json
 !package.json
+!web/package-lock.json
 !tsconfig.json
 !netlify.toml
 !web/assets/data/

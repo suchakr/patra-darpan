@@ -117,9 +117,12 @@ Current root shapes are:
 - `corpus/ijhs.tsv`
   - `journal, paper, url, size_in_kb, author`
 - `corpus/curated-pdfs.tsv`
-  - `journal, paper, url, size_in_kb, year, author`
+  - `journal, paper, url, size_in_kb, year, author, published_on`
 - `corpus/curated-links.tsv`
-  - `journal, paper, url, year, author`
+  - `journal, paper, url, year, author, published_on`
+
+`published_on` is optional. When present it must be an authoritative
+`YYYY-MM-DD` date whose year matches `year`.
 
 Additional rules:
 - IJHS `year` is derived from the journal naming convention during assembly

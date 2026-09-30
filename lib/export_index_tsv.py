@@ -24,12 +24,13 @@ INDEX_COLUMNS = [
     "source",
     "gcs_key",
     "gcs_synced",
+    "published_on",
 ]
 
 
 LEGACY_INDEX_PATH = REFERENCE_LEGACY_DIR / "index.tsv"
 
-# Projection-only fallback for rows that do not exist in legacy index.tsv.
+# Projection-only fallback for rows without a key match in legacy index.tsv.
 # Keep this small. If it grows beyond a handful of entries, promote it into a
 # more explicit enrichment source.
 INDEX_ENRICHMENT_FALLBACKS: dict[
@@ -78,6 +79,12 @@ INDEX_ENRICHMENT_FALLBACKS: dict[
         "link",
     ): {"subject": "Culture", "category": "Indic"},
     (
+        "SwarajyaMag",
+        "The Proofs Historians Said Indian Mathematics Lacked",
+        "https://swarajyamag.com/ideas/the-proofs-historians-said-indian-mathematics-lacked",
+        "link",
+    ): {"subject": "Math", "category": "Indic"},
+    (
         "The Atharva Forum",
         "Why Retell a Story Everyone Knows?",
         "https://zenodo.org/records/21870633/files/Why_Retell_a_Story_Everyone_Knows.pdf?download=1",
@@ -89,6 +96,30 @@ INDEX_ENRICHMENT_FALLBACKS: dict[
         "https://www.techvaidyaglobal.com/news/dhruva-nakshatra-ancient-indian-astronomy-thuban-star-science",
         "link",
     ): {"subject": "Astronomy", "category": "Indic"},
+    (
+        "Saṃskṛta-Bhavitavyam 70.8",
+        "सुजयभारतमनः (Sujayabhāratamanaḥ)",
+        "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/bhavitavyam_2025_sujayabharatamanah.pdf",
+        "link",
+    ): {"subject": "Math", "category": "Indic"},
+    (
+        "AJPEM",
+        "Understanding Ethical Communication through the prism of Ancient Sanskrit Literature",
+        "https://osf.io/gy7qs/files/qnf5u",
+        "link",
+    ): {"subject": "Culture", "category": "Indic"},
+    (
+        "AJPEM",
+        "Dysfunctional Meetings: Exploring ancient Sanskrit satires on meeting conundrums",
+        "https://medium.com/@warija/dysfunctional-meetings-280a267e3208",
+        "link",
+    ): {"subject": "Culture", "category": "Indic"},
+    (
+        "AJPEM",
+        "Śukanāsopadeśa for Project Managers",
+        "https://cahc.jainuniversity.ac.in/assets/cached_papers/rni/ajpem_2025_sukanasopdesa.pdf",
+        "pdf",
+    ): {"subject": "Philosophy", "category": "Indic"},
     (
         "IJHS-31-1996-Issue-4",
         "BookReview",
@@ -263,6 +294,7 @@ def export_index_tsv(output_path: Path | None = None) -> Path:
                     "url": remote_url,
                     "size_in_kb": size_in_kb,
                     "year": row["year"] or "",
+                    "published_on": raw.get("published_on", "") or "",
                     "ju_url": row["mirror_url"] or "",
                     "cahc_authored": "true" if row["cahc_authored"] else "false",
                     "entry_type": row["entry_type"] or "",
