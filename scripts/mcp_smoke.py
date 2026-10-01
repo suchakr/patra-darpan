@@ -47,6 +47,26 @@ async def run(args: argparse.Namespace) -> int:
                 lookup = await session.call_tool(
                     "lookup_entity", {"name": args.entity, "limit": 1}
                 )
+                lookup_data = structured(lookup)
+                assert not lookup.isError and lookup_data.get("results"), lookup_data
+                assert len(json.dumps(lookup_data, ensure_ascii=False).encode()) <= 64000
+                for row in lookup_data["results"]:
+                    assert isinstance(row.get("attributes"), dict) and isinstance(row.get("relations"), list)
+                    assert row.get("ontology", {}).get("version")
+                    assert "source_ref" in row and "curation_status" in row
+                    assert len(row["relations"]) <= 20
+                    for relation in row["relations"]:
+                        assert relation["direction"] in {"incoming", "outgoing"}
+                        assert relation["target_entity_id"] and relation["target_preferred_label"]
+                context_resource = await session.read_resource("retrieval://ontology-context")
+                context = json.loads(next(item.text for item in context_resource.contents if getattr(item, "text", None)))
+                assert context["knowledge_lookup"]["tool"] == "lookup_entity"
+                assert {"attributes", "relations"} <= set(context["knowledge_lookup"]["fields"])
+                assert context["version"] == lookup_data["results"][0]["ontology"]["version"]
+                lookup_tool = next(t for t in tools.tools if t.name == "lookup_entity")
+                assert set(lookup_tool.inputSchema["properties"]) == {"name", "type_hint", "limit"}
+                assert lookup_tool.inputSchema["required"] == ["name"]
+                assert lookup_tool.outputSchema.get("additionalProperties") is not False
                 search = await session.call_tool(
                     "search_corpus",
                     {"query": args.query, "mode": "hybrid", "limit": 3},
@@ -112,6 +132,7 @@ async def run(args: argparse.Namespace) -> int:
             "errors": backend_errors,
         },
         "search_features": features,
+        "entity_knowledge": {"lookup": "passed", "context": "passed", "input_schema": "unchanged"},
     }
     print(json.dumps(report, ensure_ascii=False, indent=2))
 

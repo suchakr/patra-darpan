@@ -55,17 +55,21 @@ new complete release.
 ## Entity artifacts
 
 `entity-registry.jsonl` has one canonical entity per row. It contains IDs,
-types, preferred labels, aliases, ontology status, and relation data needed by
-the resolver.
+types, preferred labels, aliases, ontology status, and occurrence statistics
+and document/chunk links needed by the resolver. The current registry builder
+does not copy ontology attributes or relations into this artifact.
 
 `entity-mentions.jsonl` has one resolved occurrence per row. It links an entity
 ID to a document, chunk, matched surface form, character span, and evidence
-context. Mention rows are evidence links; ontology relations are stored with
-the ontology/registry and are not inferred merely from co-occurrence.
+context. Mention rows are evidence links; ontology relations are stored in the
+versioned ontology and are not inferred merely from co-occurrence.
 
 The versioned ontology is the reviewed seed vocabulary and relationship graph.
-MCP exposes it as read-only context. Ontology changes happen in Git and take
-effect through a rebuilt entity projection and release.
+MCP reads its knowledge by entity ID alongside the release's occurrence
+statistics. Top-level `relations` is canonical; node-local relations are a
+cached projection. Ontology changes happen in Git and take effect through a
+rebuilt entity projection and release. Exposing already-present knowledge
+from an unchanged ontology requires only a runtime update, not reindexing.
 
 ## MCP tools
 
@@ -73,7 +77,7 @@ All tools are read-only and bounded.
 
 | Tool | Purpose |
 | --- | --- |
-| `lookup_entity` | Resolve a name or alias to canonical entity IDs |
+| `lookup_entity` | Resolve a name/alias; return occurrence counts and bounded ontology knowledge |
 | `list_entity_mentions` | Browse evidence occurrences for one entity |
 | `search_corpus` | Search lexical, vector, or hybrid projections |
 | `fetch_passage` | Fetch one bounded passage using a stable reference |
@@ -102,6 +106,31 @@ Results include schema versions and the active corpus/release revision where
 appropriate. Search limits, passage sizes, and batch sizes are bounded by the
 tool implementation. Backend failures are returned explicitly so a client can
 distinguish a partial result from a complete one.
+
+`lookup_entity` retains its arguments and `retrieval.entity-lookup.v1` schema.
+Each result adds `attributes`, `relations`, `ontology` (ID/version),
+`source_ref`, and `curation_status`. Relation records include type, direction,
+the canonical `from_entity_id`/`to_entity_id`, and the related entity's
+`target_entity_id`/`target_preferred_label`. For an incoming relation the related
+entity is the edge's source. Follow its preferred label with `lookup_entity`;
+authorship and composition-location relations remain attached to the work.
+
+Knowledge is limited to 20 relations and 8 KiB per entity, including its
+knowledge metadata. Complete attribute values are retained or omitted;
+strings are not cut into partial values. Counts and `attributes_truncated`,
+`relations_truncated`, and `knowledge_truncated` report omissions.
+`relation_projection_consistent=false` identifies a stale node-local edge
+projection; the canonical table still supplies returned relations. The whole
+lookup JSON is limited to 64,000 UTF-8 bytes. `total_results` counts resolved
+matching entities before limits, `results_truncated` reports fewer results,
+and `byte_limit_reached` distinguishes the byte cap from the requested limit.
+
+`retrieval://ontology-context` remains a compact discovery vocabulary with
+`knowledge_lookup` guidance instead of repeated attributes and graph edges.
+It retains `retrieval.ontology-context.v1`; `entity_count` and
+`entities_truncated` describe its 64,000-byte vocabulary limit. Ontology
+assertions and coarse entity source references are not passage evidence or
+edge-level citations. Use mention browsing and fetched passages for evidence.
 
 `search_corpus` preserves raw Zoekt queries, including `type:filename`, and
 adds optional `result_type`, `file_filter`, `script_expansion`, `context_lines`,

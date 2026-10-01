@@ -20,6 +20,7 @@ import time
 import uuid
 import threading
 from collections import OrderedDict
+from copy import deepcopy
 from dataclasses import dataclass
 from pathlib import Path, PurePosixPath
 from typing import Any, Iterable
@@ -188,8 +189,14 @@ def source_links(release: Release, row: dict[str, Any], refs: Iterable[dict[str,
     return {"source_url": source_url, "citation_url": external or source_url}
 
 
+ENTITY_KNOWLEDGE_BYTE_LIMIT = 8 * 1024
+ENTITY_RELATION_LIMIT = 20
+ENTITY_LOOKUP_BYTE_LIMIT = 64000
+ONTOLOGY_CONTEXT_BYTE_LIMIT = 64000
+
+
 class EntityAdapter:
-    """Lookup and mention browsing over the release JSONL projections."""
+    """Join release occurrence statistics to the versioned ontology knowledge."""
 
     def __init__(self, release: Release, ontology_path: str | Path):
         self.release = release
@@ -212,6 +219,48 @@ class EntityAdapter:
             if revision and str(revision) != release.corpus_revision:
                 raise RetrievalError("entity projection corpus revision does not match active release")
         self._by_id = {str(row.get("entity_id")): row for row in self.registry if row.get("entity_id")}
+        self._ontology_by_id: dict[str, dict[str, Any]] = {}
+        for entity in self.ontology.get("entities") or []:
+            entity_id = str(entity.get("id") or "")
+            if not entity_id or entity_id in self._ontology_by_id:
+                raise RetrievalError("ontology entities require unique IDs")
+            self._ontology_by_id[entity_id] = entity
+        self._relations_by_id: dict[str, list[dict[str, Any]]] = {
+            entity_id: [] for entity_id in self._ontology_by_id
+        }
+        canonical_outgoing: dict[str, set[tuple[str, str]]] = {
+            entity_id: set() for entity_id in self._ontology_by_id
+        }
+        # The top-level table is canonical; node-local edges are only a cached
+        # projection. Never turn text co-occurrence into an ontology relation.
+        for relation in self.ontology.get("relations") or []:
+            source_id, target_id = relation.get("from"), relation.get("to")
+            if source_id not in self._ontology_by_id or target_id not in self._ontology_by_id:
+                raise RetrievalError("ontology relation references an unknown entity")
+            relation_type = str(relation.get("type") or "")
+            if not relation_type:
+                raise RetrievalError("ontology relation requires a type")
+            canonical_outgoing[source_id].add((relation_type, target_id))
+            for entity_id, other_id, direction in (
+                (source_id, target_id, "outgoing"), (target_id, source_id, "incoming")
+            ):
+                self._relations_by_id[entity_id].append({
+                    "relation_id": relation.get("id"),
+                    "type": relation_type,
+                    "direction": direction,
+                    "from_entity_id": source_id,
+                    "to_entity_id": target_id,
+                    "target_entity_id": other_id,
+                    "target_preferred_label": self._ontology_by_id[other_id].get("preferred_label"),
+                })
+        self._relation_projection_consistent = {}
+        for entity_id, entity in self._ontology_by_id.items():
+            local = {(str(r.get("type") or ""), str(r.get("target") or ""))
+                     for r in entity.get("relations") or []}
+            self._relation_projection_consistent[entity_id] = local == canonical_outgoing[entity_id]
+            self._relations_by_id[entity_id].sort(key=lambda r: (
+                r["direction"], r["type"], r["target_entity_id"], str(r["relation_id"] or "")
+            ))
         self._mentions_by_id: dict[str, list[dict[str, Any]]] = {}
         for row in self.mentions:
             entity_id = row.get("canonical_entity_id")
@@ -230,28 +279,78 @@ class EntityAdapter:
     @property
     def ontology_context(self) -> dict[str, Any]:
         entities = self.ontology.get("entities") or []
-        compact_entities = []
-        for row in entities:
-            if not isinstance(row, dict):
-                continue
-            compact_entities.append(
-                {
-                    "id": row.get("id"),
-                    "type": row.get("type"),
-                    "preferred_label": row.get("preferred_label"),
-                    "aliases": list(row.get("aliases") or []),
-                }
-            )
-        return {
+        result = {
             "schema_version": "retrieval.ontology-context.v1",
             "ontology_id": self.ontology.get("ontology_id"),
             "version": self.ontology.get("version"),
             "normalization": self.ontology.get("normalization", {}),
             "entity_types": self.ontology.get("entity_types", []),
             "relation_types": self.ontology.get("relation_types", []),
-            "entities": compact_entities,
+            "entities": [],
+            "entity_count": len(entities),
+            "entities_truncated": False,
+            "knowledge_lookup": {
+                "tool": "lookup_entity",
+                "fields": ["attributes", "relations", "ontology", "source_ref", "curation_status"],
+                "relation_source": "ontology.relations",
+                "max_relations_per_entity": ENTITY_RELATION_LIMIT,
+                "knowledge_byte_limit": ENTITY_KNOWLEDGE_BYTE_LIMIT,
+                "response_byte_limit": ENTITY_LOOKUP_BYTE_LIMIT,
+            },
+            "guidance": [
+                "Use lookup_entity for bounded attributes and labelled incoming/outgoing relations; this resource is the discovery vocabulary.",
+                "Knowledge is a curated/pilot ontology assertion, not proof from a corpus passage. Entity source_ref is not an edge-level citation.",
+                "An outgoing edge starts at the queried entity; an incoming edge ends there. target_entity_id and target_preferred_label name the related entity; follow its preferred label with lookup_entity.",
+                "Use list_entity_mentions and fetched passages for corpus evidence. Entity-ID search filters restrict known mentions; they do not expand aliases or imply full-corpus coverage.",
+                "Check attributes_truncated, relations_truncated and results_truncated before assuming complete knowledge. Canonical edges win over a stale node-local projection, reported by relation_projection_consistent.",
+            ],
             "corpus_revision": self.release.corpus_revision,
         }
+        if json_bytes(result) > ONTOLOGY_CONTEXT_BYTE_LIMIT:
+            raise RetrievalError("ontology context metadata exceeds the response byte limit")
+        for row in entities:
+            if not isinstance(row, dict):
+                continue
+            compact = {"id": row.get("id"), "type": row.get("type"),
+                       "preferred_label": row.get("preferred_label"),
+                       "aliases": list(row.get("aliases") or [])}
+            result["entities"].append(compact)
+            if json_bytes(result) > ONTOLOGY_CONTEXT_BYTE_LIMIT:
+                result["entities"].pop()
+                result["entities_truncated"] = True
+                break
+        return deepcopy(result)
+
+    def _knowledge(self, entity_id: str) -> dict[str, Any]:
+        entity = self._ontology_by_id.get(entity_id) or {}
+        attributes = entity.get("attributes") or {}
+        if not isinstance(attributes, dict):
+            raise RetrievalError("ontology entity attributes must be an object")
+        relations = self._relations_by_id.get(entity_id, [])
+        result = {
+            "ontology": {"id": self.ontology.get("ontology_id"), "version": self.ontology.get("version")},
+            "source_ref": entity.get("source_ref"),
+            "curation_status": entity.get("curation_status"),
+            "attributes": {}, "attribute_count": len(attributes), "attributes_truncated": False,
+            "relations": [], "relation_count": len(relations), "relations_truncated": False,
+            "relation_projection_consistent": self._relation_projection_consistent.get(entity_id, True),
+            "knowledge_truncated": False,
+        }
+        if json_bytes(result) > ENTITY_KNOWLEDGE_BYTE_LIMIT:
+            raise RetrievalError("ontology entity provenance exceeds the knowledge byte limit")
+        for key, value in sorted(attributes.items()):
+            result["attributes"][key] = value
+            if json_bytes(result) > ENTITY_KNOWLEDGE_BYTE_LIMIT:
+                del result["attributes"][key]
+        result["attributes_truncated"] = len(result["attributes"]) < len(attributes)
+        for relation in relations[:ENTITY_RELATION_LIMIT]:
+            result["relations"].append(relation)
+            if json_bytes(result) > ENTITY_KNOWLEDGE_BYTE_LIMIT:
+                result["relations"].pop()
+                break
+        result["relations_truncated"] = len(result["relations"]) < len(relations)
+        result["knowledge_truncated"] = result["attributes_truncated"] or result["relations_truncated"]
+        return deepcopy(result)
 
     def lookup(self, name: str, *, type_hint: str | None = None, limit: int = 10) -> dict[str, Any]:
         query = _normal_form(name.strip())
@@ -268,7 +367,15 @@ class EntityAdapter:
                 continue
             ranked.append((rank, label, entity_id))
         seen: set[str] = set()
-        results: list[dict[str, Any]] = []
+        total = len({entity_id for _, _, entity_id in ranked})
+        response = {
+            "schema_version": "retrieval.entity-lookup.v1", "query": name, "type_hint": type_hint,
+            "results": [], "total_results": total, "limit": limit,
+            "results_truncated": total > limit, "byte_limit_reached": False,
+            "corpus_revision": self.release.corpus_revision,
+        }
+        if json_bytes(response) > ENTITY_LOOKUP_BYTE_LIMIT:
+            raise RetrievalError("lookup request metadata exceeds the response byte limit")
         for rank, matched_label, entity_id in sorted(ranked, key=lambda item: (item[0], item[2], item[1])):
             if entity_id in seen:
                 continue
@@ -288,16 +395,16 @@ class EntityAdapter:
                 "matched_label": matched_label,
                 "match_rank": rank,
             }
-            results.append(row)
-            if len(results) >= limit:
+            row.update(self._knowledge(entity_id))
+            response["results"].append(row)
+            if json_bytes(response) > ENTITY_LOOKUP_BYTE_LIMIT:
+                response["results"].pop()
+                response["results_truncated"] = True
+                response["byte_limit_reached"] = True
                 break
-        return {
-            "schema_version": "retrieval.entity-lookup.v1",
-            "query": name,
-            "type_hint": type_hint,
-            "results": results,
-            "corpus_revision": self.release.corpus_revision,
-        }
+            if len(response["results"]) >= limit:
+                break
+        return response
 
     def list_mentions(self, entity_id: str, *, offset: int = 0, limit: int = 20) -> dict[str, Any]:
         limit = max(1, min(int(limit), 100))

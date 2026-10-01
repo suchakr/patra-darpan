@@ -14,12 +14,33 @@ guide once per conversation; resources need not be reread before every call.
   corpus. Semantic similarity is not an exhaustive occurrence inventory.
 - **Hybrid:** the default merges ranked lexical and vector results. It is a
   top-k view. Use lexical mode for match counts and continuation.
-- **Entities:** `lookup_entity` resolves explicit ontology aliases;
+- **Entities:** `lookup_entity` resolves explicit ontology aliases and returns
+  bounded attributes, labelled incoming/outgoing relations and curation references.
   `list_entity_mentions` pages known mentions in the entity projection.
   `entity_ids` filters search to known entity documents/chunks; it does not
   expand aliases or guarantee mentions beyond that subset.
 - **Passages:** only documents with release chunks can be fetched. Check
   `fetch_available`. An unavailable fetch does not mean the text lacks a match.
+
+## Explore ontology knowledge
+
+Read `retrieval://ontology-context` once to discover entity vocabulary and the
+`knowledge_lookup` pointer. Use `lookup_entity(name=..., limit=1)` for knowledge
+about a resolved entity. It includes the active ontology ID/version, attributes,
+curation status and relations with related entity IDs and preferred labels.
+For outgoing relations the queried entity is the source; for incoming relations
+it is the destination. Follow `target_preferred_label` with another lookup.
+For example, follow a person's incoming `authored_by` link to the work before
+reading that work's `composed_at` relation; do not treat a work's location as
+the person's birthplace or a general biographical fact.
+
+These are curated/pilot ontology assertions, not new facts extracted from the
+current corpus. `source_ref` describes entity curation, not an edge-level
+citation. Use `list_entity_mentions` and fetched passages to seek evidence.
+Check `attributes_truncated`, `relations_truncated`, `knowledge_truncated`,
+and `results_truncated`; limits can omit knowledge or results. A false
+`relation_projection_consistent` means the node-local projection is stale;
+the canonical relation table is used. Ontology v0.4 remains deferred.
 
 ## Zoekt queries and filename-only results
 

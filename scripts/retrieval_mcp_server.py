@@ -117,7 +117,9 @@ def build_mcp(service: RetrievalService, *, oauth_provider: Any | None = None):
             "Read-only retrieval over one release. Read retrieval://search-guide or "
             "get_corpus_info for coverage, query syntax and paging. Read ontology context for entities; "
             "use get_author_works or search_documents for metadata questions; "
-            "resolve entities before passing canonical IDs to search; use stable "
+            "lookup_entity also returns bounded ontology attributes and labelled incoming/outgoing relations. "
+            "Treat these as curated/pilot assertions, not passage evidence; follow related entities by preferred label "
+            "and check truncation flags. Resolve entities before passing canonical IDs to search; use stable "
             "chunk/document references and fetch_passages for multiple evidence "
             "items; cite fetched evidence using readable Markdown hyperlinks to citation_url "
             "or source_url, naming the work/paper and location rather than presenting opaque IDs. "
@@ -141,7 +143,7 @@ def build_mcp(service: RetrievalService, *, oauth_provider: Any | None = None):
     @server.resource(
         "retrieval://ontology-context",
         name="ontology_context",
-        description="Compact read-only starter ontology and normalization guide.",
+        description="Compact ontology vocabulary and normalization; use lookup_entity for bounded attributes, labelled relations and curation references.",
         mime_type="application/json",
     )
     def ontology_context() -> str:
@@ -166,7 +168,10 @@ def build_mcp(service: RetrievalService, *, oauth_provider: Any | None = None):
 
     @server.tool(
         name="lookup_entity",
-        description="Resolve an entity name or alias to canonical IDs from the starter registry.",
+        description=("Resolve a name/alias to canonical IDs and corpus occurrence counts; return bounded "
+                     "ontology attributes, labelled incoming/outgoing relations, ontology version and curation references. "
+                     "These are ontology assertions, not passage evidence. Follow related entities using "
+                     "target_preferred_label; check knowledge/results truncation flags."),
     )
     def lookup_entity(name: str, type_hint: str | None = None, limit: int = 10) -> dict[str, Any]:
         try:
