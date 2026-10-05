@@ -1,11 +1,18 @@
-# Sanchaya MCP Explorer
+# Patra Darpaṇa MCP Explorer
 
 ## Purpose and boundary
 
-`web/mcp-explorer.html` is a separate static SPA in the Patra Darpan main web
-app, linked as **Sanchaya MCP**. It helps users understand retrieval, connect
+`web/mcp-explorer.html` is a separate static SPA in the Patra Darpaṇa main web
+app, linked as **Patra Darpaṇa MCP**. It helps users understand retrieval, connect
 an assistant and explore the curated ontology. It shares no application state
 with the paper browser and requires no MCP containers or authentication to view.
+
+The service display name is **Patra Darpaṇa**; its corpus is **Sañcaya**.
+URLs, repository slugs and the MCP identifier `patra-darpan` remain unchanged.
+Example prompts consistently start with **Using Patra Darpan MCP,** to match
+the client-facing name. The public citation URL is
+`https://patra-darpan.netlify.app/mcp-explorer`; the static source file retains
+its `.html` extension. The page declares that public URL as canonical.
 
 Four URL-addressable sections: **Overview**, **Explore ontology**, **Connect
 and try**, and **Coverage and limits**. The connection section gives the
