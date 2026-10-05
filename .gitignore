@@ -19,6 +19,7 @@ __pycache__/
 !netlify.toml
 !web/assets/data/
 !web/assets/data/search-corpus.json
+!web/assets/data/mcp-ontology.json
 # Specifically exclude service account keys
 gcs-key.json
 ops/gcs-key.json

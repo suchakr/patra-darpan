@@ -26,6 +26,7 @@ lexical shards, the public search UI, and the production Caddy edge.
    commands.
 4. [`auth.md`](auth.md) — OAuth, allowlist, and public route behavior.
 5. [`decisions.md`](decisions.md) — durable design decisions and deferred work.
+6. [`mcp-explorer.md`](mcp-explorer.md) — static MCP guide and ontology explorer.
 
 For MCP conversations, read [`search-guide.md`](search-guide.md): query syntax,
 filename-only results, script expansion, continuation and linked evidence. The

@@ -238,6 +238,9 @@ web_syntax_check() {
   run node --check "$WEB_DIR/assets/js/app.js"
   run node --check "$WEB_DIR/assets/js/data.js"
   run node --check "$WEB_DIR/assets/js/p60.js"
+  run node --check "$WEB_DIR/assets/js/mcp-explorer-core.js"
+  run node --check "$WEB_DIR/assets/js/mcp-explorer.js"
+  run python3 "$ROOT_DIR/ops/export_mcp_explorer.py" --check
 }
 
 port_is_busy() {
@@ -278,6 +281,7 @@ prepare() {
   run uv run python "$ROOT_DIR/scripts/validate_legacy_index.py"
   run uv run python "$ROOT_DIR/scripts/audit_corpus_inputs.py"
   run uv run python "$ROOT_DIR/ops/export_patra_darpan_data_js.py"
+  run python3 "$ROOT_DIR/ops/export_mcp_explorer.py"
   web_syntax_check
   run uv run python "$ROOT_DIR/ops/sync_gcs.py" --diff
 }
@@ -302,6 +306,7 @@ case "$mode" in
     gcs_sync
     ;;
   local)
+    run python3 "$ROOT_DIR/ops/export_mcp_explorer.py"
     resolve_netlify
     public_port="$(find_open_port "$port")"
     local_static_port="$(find_open_port "$static_server_port" "$public_port")"
@@ -321,6 +326,7 @@ case "$mode" in
     git_snapshot
     set_deploy_message "$branch@$short_sha$deploy_suffix"
     ensure_site_link
+    run python3 "$ROOT_DIR/ops/export_mcp_explorer.py"
     web_syntax_check
     run_in_web "${NETLIFY[@]}" deploy --dir . \
       "${deploy_message_args[@]}" "${passthrough[@]}"
@@ -335,6 +341,7 @@ case "$mode" in
       echo "Git state is advisory for this deploy; use --strict to enforce clean main."
     fi
     ensure_site_link
+    run python3 "$ROOT_DIR/ops/export_mcp_explorer.py"
     web_syntax_check
     run uv run python "$ROOT_DIR/ops/sync_gcs.py" --check
     printf 'Target: Patra Darpan production\n'

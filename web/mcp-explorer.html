@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sanchaya MCP Explorer · Patra Darpan</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%2317664f%27/%3E%3Cpath d=%27M9 22L16 9l7 13M9 22h14%27 fill=%27none%27 stroke=%27white%27 stroke-width=%272%27/%3E%3C/svg%3E">
+  <meta name="description" content="Understand Sanchaya retrieval, explore its curated Jyotiṣa ontology, and connect your assistant.">
+  <link rel="stylesheet" href="assets/css/mcp-explorer.css">
+  <script defer src="assets/js/mcp-explorer-core.js"></script>
+  <script defer src="assets/js/mcp-explorer.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="shell">
+    <header class="site-header">
+      <a class="brand" href="index.html">Patra <strong>Darpan</strong> <span> / Sanchaya</span></a>
+      <a class="quiet-link" href="search-lab.html">Search Lab ↗</a>
+    </header>
+    <main id="main">
+      <div class="page-heading">
+        <div><p class="eyebrow">A guide to the corpus and its connections</p><h1>Sanchaya MCP Explorer</h1></div>
+        <span class="snapshot-badge" id="version-badge">Static ontology snapshot</span>
+      </div>
+      <nav class="section-nav" aria-label="Explorer sections">
+        <a href="#section=overview" data-section="overview">Overview</a>
+        <a href="#section=ontology" data-section="ontology">Explore ontology</a>
+        <a href="#section=connect" data-section="connect">Connect and try</a>
+        <a href="#section=coverage" data-section="coverage">Coverage and limits</a>
+      </nav>
+
+      <section id="overview" class="page-section" aria-labelledby="overview-title">
+        <div class="hero panel">
+          <div><p class="eyebrow">Ask. Find. Follow the evidence.</p><h2 id="overview-title">One conversation.<br>Several ways into the texts.</h2>
+            <p class="lead">Sanchaya MCP lets a connected assistant explore Indic texts and research papers through complementary retrieval tools.</p>
+            <div class="actions"><a class="button primary" href="#section=ontology">Explore the ontology →</a><a class="button" href="#section=connect">Connect your assistant</a></div>
+          </div>
+          <div class="retrieval-stack" aria-label="Four retrieval layers"><div><b>Catalog</b><span>Find papers and their metadata</span></div><div><b>Lexical</b><span>Find words, patterns and matching files</span></div><div><b>Semantic</b><span>Find passages similar in meaning</span></div><div><b>Entities</b><span>Follow names, mentions and curated connections</span></div></div>
+        </div>
+        <div class="three-cards">
+          <article class="panel"><span class="step">01 / Discover</span><h3>Start with a question</h3><p>Find an author’s papers, ask about a calendrical scheme, or locate a Sanskrit expression.</p></article>
+          <article class="panel"><span class="step">02 / Explore</span><h3>Follow useful connections</h3><p>Resolve names and aliases. Explore the ontology, then search the corpus for supporting passages.</p></article>
+          <article class="panel"><span class="step">03 / Verify</span><h3>Return to the source</h3><p>Ask for readable links and locations. A curated relationship or similar passage is a starting point, not proof.</p></article>
+        </div>
+        <p class="scope-note">This page is an informational, read-only explorer. It does not connect to your assistant, perform an OAuth login, or report live MCP health.</p>
+      </section>
+
+      <section id="ontology" class="page-section" aria-labelledby="ontology-title" hidden>
+        <div class="section-intro"><div><h2 id="ontology-title">Names, ideas and their connections</h2><p>Curated ontology assertions. Arrows read from source to destination; they are not relationships extracted from corpus occurrences.</p></div><span id="ontology-counts" class="small-meta">Loading ontology…</span></div>
+        <p id="data-error" class="error" role="alert" hidden></p>
+        <div class="explorer-layout">
+          <aside class="panel entity-browser" aria-label="Find an entity">
+            <label for="entity-search">Find an entity</label><input id="entity-search" type="search" placeholder="Dhaniṣṭhā, धनिष्ठा, Aryabhata…" autocomplete="off">
+            <div class="examples"><button data-example="jyotisha:nakshatra_dhanishtha">Dhaniṣṭhā</button><button data-example="jyotisha:aryabhata">Āryabhaṭa</button><button data-example="jyotisha:work_aryabhatiya">Āryabhaṭīya</button></div>
+            <label for="type-filter">Entity type</label><select id="type-filter"><option value="">All types</option></select>
+            <label for="relation-filter">Relationship</label><select id="relation-filter"><option value="">All relationships</option></select>
+            <label for="direction-filter">Direction from explored entities</label><select id="direction-filter"><option value="both">Both directions</option><option value="outgoing">Outgoing</option><option value="incoming">Incoming</option></select>
+            <p id="search-count" class="small-meta" aria-live="polite"></p><ul id="entity-results" class="entity-results" aria-label="Matching entities"></ul>
+          </aside>
+          <div class="graph-column">
+            <div class="panel graph-panel">
+              <div class="graph-heading"><h3 id="graph-title">Entity neighbourhood</h3><div class="segmented"><button id="neighbourhood-button" aria-pressed="true">Neighbourhood</button><button id="overview-button" aria-pressed="false">Full overview</button></div></div>
+              <div class="graph-toolbar" aria-label="Graph controls"><button id="zoom-in" aria-label="Zoom in">＋</button><button id="zoom-out" aria-label="Zoom out">−</button><button id="fit-graph">Fit</button><button id="reset-graph">Reset</button><button id="share-view">Copy view link</button><label><input id="show-labels" type="checkbox" checked> Node labels</label></div>
+              <svg id="ontology-graph" viewBox="0 0 1200 850" role="group" aria-label="Ontology graph. Select a node to inspect it; the relationship table below is an alternative."></svg>
+              <p id="graph-summary" class="small-meta" aria-live="polite"></p><p class="graph-hint">Drag the background to pan. Use the zoom buttons or Ctrl + scroll. Select a node for details.</p>
+              <div id="graph-legend" class="legend" aria-label="Entity type colours"></div>
+            </div>
+            <div class="panel relationship-panel"><h3>Visible relationships</h3><p class="small-meta">The table follows the same filters as the graph. Select either endpoint to explore it.</p><div class="table-scroll"><table><thead><tr><th scope="col">Source</th><th scope="col">Relationship →</th><th scope="col">Destination</th></tr></thead><tbody id="relationship-rows"></tbody></table></div></div>
+          </div>
+          <aside id="entity-details" class="panel details-panel" aria-label="Selected entity details"><p>Select an entity to inspect its attributes and provenance.</p></aside>
+        </div>
+      </section>
+
+      <section id="connect" class="page-section" aria-labelledby="connect-title" hidden>
+        <div class="section-intro"><div><h2 id="connect-title">Bring the corpus into your conversation</h2><p>Use an MCP-compatible client that supports remote HTTP transport and OAuth.</p></div></div>
+        <div class="connect-grid"><article class="panel"><p class="eyebrow">Preferred OAuth endpoint</p><h3>Connect your assistant</h3><div class="endpoint"><code id="endpoint">https://sanchaya.rasowshi.us/mcp</code><button data-copy-target="endpoint">Copy URL</button></div><ol><li>In your client’s MCP or connector settings, add the URL above.</li><li>Choose OAuth and sign in with Google when prompted.</li><li>Your Google email must be on the service’s allowlist. Ask the service operator for access.</li><li>Ask your assistant to use Sanchaya MCP explicitly.</li></ol><p class="small-meta">OAuth identifies you; the allowlist determines access. A Google account alone does not grant access. Client support varies by product and plan.</p><a href="https://modelcontextprotocol.io/docs/learn/client-concepts" target="_blank" rel="noopener noreferrer">About MCP clients ↗</a></article>
+        <article class="panel"><p class="eyebrow">A productive first conversation</p><h3>Ask for evidence, not just identifiers</h3><p>Tell your assistant to read the search guide and inspect coverage before searching. Ask it to cite work or paper titles with hyperlinks and verse, section or line locations.</p><p>For metadata, use author and catalog tools first. For occurrences, use lexical search and paging. For meaning, try semantic search and verify its passages.</p><p class="small-meta">Useful MCP resources: <code>retrieval://search-guide</code> and <code>retrieval://ontology-context</code>. Your assistant reads these through MCP.</p></article></div>
+        <h3 class="prompt-heading">Try a conversation</h3>
+        <div class="prompt-grid">
+          <article class="panel prompt-card"><span class="step">Paper metadata</span><p id="prompt-author">Using Sanchaya MCP, list papers by R. N. Iyengar. Use get_author_works and give readable source links. Distinguish catalog coverage from indexed content.</p><button data-copy-target="prompt-author">Copy prompt</button></article>
+          <article class="panel prompt-card"><span class="step">Matching filenames</span><p id="prompt-files">Using Sanchaya MCP, search lexically for file:Jyo type:filename सूर्य. Return the filenames of matching files without content snippets.</p><button data-copy-target="prompt-files">Copy prompt</button></article>
+          <article class="panel prompt-card"><span class="step">Ontology knowledge</span><p id="prompt-entity">Using Sanchaya MCP, look up Dhaniṣṭhā. Show its ontology attributes and labelled relationships. Keep curated assertions separate from corpus evidence.</p><button data-copy-target="prompt-entity">Copy prompt</button></article>
+          <article class="panel prompt-card"><span class="step">Passage evidence</span><p id="prompt-evidence">Using Sanchaya MCP, find passages about Śraviṣṭhā and Dhaniṣṭhā in texts and papers. Try explicit script and spelling variants, follow continuation when available, and cite sources. Explain the limits of the search.</p><button data-copy-target="prompt-evidence">Copy prompt</button></article>
+        </div>
+      </section>
+
+      <section id="coverage" class="page-section" aria-labelledby="coverage-title" hidden>
+        <div class="section-intro"><div><h2 id="coverage-title">Different indexes, different coverage</h2><p>Published configuration summary · 5 October 2026. This is not a live release inventory.</p></div></div>
+        <div class="panel table-scroll"><table class="coverage-table"><thead><tr><th scope="col">Layer</th><th scope="col">What it covers</th><th scope="col">Best used for</th></tr></thead><tbody>
+          <tr><th scope="row">Catalog · SQLite</th><td>Full assembled paper metadata; text records in the release catalog. Having metadata does not imply indexed content.</td><td>Authors, titles, years and source URLs</td></tr>
+          <tr><th scope="row">Lexical · Zoekt</th><td>Configured Sanchaya files, including exported paper Markdown. Wider scope than the passage and entity projections.</td><td>Words, regex, counts, continuation and filenames</td></tr>
+          <tr><th scope="row">Semantic · E5 / Qdrant</th><td>Release-selected paper and Sanskrit text chunks, including Jyotisham and selected anchor texts. Not all Sanchaya.</td><td>Passages similar to a natural-language question</td></tr>
+          <tr><th scope="row">Entity projection</th><td>Explicit ontology aliases matched within release chunks; a registry and paged mentions.</td><td>Name resolution and known occurrences</td></tr>
+          <tr><th scope="row">Ontology · Jyotiṣa</th><td>Curated entities, attributes and canonical relationships. The versioned snapshot on this page is separate from live release data.</td><td>Connections to explore and assertions to verify</td></tr>
+        </tbody></table></div>
+        <div class="three-cards"><article class="panel"><h3>Check the active release</h3><p>Ask your connected assistant to call <code>get_corpus_info</code>. Use its actual scope, revision and counts rather than treating this page as the deployed inventory.</p></article><article class="panel"><h3>Zero does not mean absent</h3><p>Missing aliases, case endings, OCR and partial chunk coverage can yield zero entity mentions even when lexical search finds relevant text.</p></article><article class="panel"><h3>Similarity is not proof</h3><p>E5’s Sanskrit quality was assessed in a small pilot. Semantic results are ranked suggestions, not a complete occurrence inventory or historical verification.</p></article></div>
+        <div class="panel limitations"><h3>Explore Sanskrit carefully</h3><p>Try script equivalents, plausible declensions and joined or separated sandhi forms. Treat generated forms and compound components as hypotheses; verify their sense in passages.</p><p>Fetch only where passages are available, follow paging, and check response limits before claiming completeness. Ontology provenance is often entity-level curation, not a citation for every edge.</p><a href="https://github.com/suchakr/patra-darpan/blob/main/docs/retrieval/search-guide.md" target="_blank" rel="noopener noreferrer">Read the search guide ↗</a></div>
+      </section>
+    </main>
+    <footer><span>Sanchaya MCP · a Patra Darpan retrieval service</span><span id="snapshot-source">Static page · no live health check</span></footer>
+    <div id="notification" role="status" aria-live="polite"></div>
+    <noscript><p class="error">JavaScript is required for section navigation and ontology exploration.</p></noscript>
+  </div>
+</body>
+</html>
