@@ -41,7 +41,8 @@ EDGE_UP_SERVICES := retrieval-mcp-oauth retrieval-https
 EDGE_SMOKE_ARGS := --base-url "$${MCP_EDGE_URL:-https://retrieval-https:8443}" --allow-insecure
 else
 EDGE_UP_SERVICES := retrieval-mcp-oauth
-EDGE_SMOKE_ARGS := --base-url "$${MCP_EDGE_URL:?Set MCP_EDGE_URL for a production edge smoke test}"
+# The OAuth container already receives the issuer from the selected env file.
+EDGE_SMOKE_ARGS := --base-url "$${MCP_EDGE_URL:-$${MCP_OAUTH_ISSUER_URL:?Set MCP_OAUTH_ISSUER_URL}}"
 endif
 
 help:
@@ -199,8 +200,9 @@ edge: mcp oauth-config
 	$(COMPOSE) --profile runtime --profile oauth --profile https up -d $(EDGE_UP_SERVICES)
 
 edge-smoke: edge
-	$(COMPOSE) --profile runtime --profile oauth --profile https run --rm --no-deps retrieval-mcp-oauth \
-		python scripts/oauth_smoke.py $(EDGE_SMOKE_ARGS)
+	$(COMPOSE) --profile runtime --profile oauth --profile https run --rm --no-deps \
+		--env "MCP_EDGE_URL=$${MCP_EDGE_URL:-}" --entrypoint sh retrieval-mcp-oauth \
+		-c 'exec python scripts/oauth_smoke.py $(EDGE_SMOKE_ARGS)'
 
 pilot: check build index inspect smoke
 	@echo "Retrieval pilot flow completed ($(MODE))."
