@@ -119,10 +119,15 @@ class ServiceTests(unittest.TestCase):
     def service(self):
         service = RetrievalService.__new__(RetrievalService)
         service.release = SimpleNamespace(corpus_revision="abc123", release_id="r", catalog_revision="cat",
-                                          record={"source": {"sanchaya_repo": "https://github.com/cahcblr/sanchaya.git"}})
-        service.entities = SimpleNamespace(_by_id={}, chunk_ids_for=lambda ids: set(), document_ids_for=lambda ids: set())
-        service.catalog = SimpleNamespace(get_document=lambda doc: None)
-        service.passages = SimpleNamespace(by_repo_path={}, by_id={})
+                                          lexical_revision="declared-lexical",
+                                          record={"source": {"sanchaya_repo": "https://github.com/cahcblr/sanchaya.git"},
+                                                  "artifacts": {"lexical_index": {"backend": "zoekt",
+                                                                                     "repository": "sanchaya",
+                                                                                     "corpus_commit": "declared-lexical"}}})
+        service.entities = SimpleNamespace(_by_id={}, chunk_ids_for=lambda ids: set(), document_ids_for=lambda ids: set(),
+                                           coverage_info=lambda: {})
+        service.catalog = SimpleNamespace(get_document=lambda doc: None, corpus_info=lambda: {})
+        service.passages = SimpleNamespace(by_repo_path={}, by_id={}, chunks=[], by_document={})
         service.zoekt = ZoektAdapter("http://zoekt")
         service.vector = Mock()
         return service
@@ -141,6 +146,28 @@ class ServiceTests(unittest.TestCase):
         self.assertFalse(row["fetch_available"])
         self.assertTrue(row["matches"][0]["filename_match"])
         self.assertNotIn("before", row["matches"][0])
+
+    @patch("lib.retrieval_adapters.requests.post")
+    def test_search_reports_observed_lexical_revision_and_declared_split(self, post):
+        post.return_value = response([file_row("Jyotisham/a.txt", [match("sun", [(0, 3)])])])
+        service = self.service()
+
+        result = service.search("sun", mode="lexical")
+
+        self.assertEqual(result["corpus_revision"], "abc123")
+        self.assertEqual(result["lexical_revision"], "abc123")
+        self.assertEqual(result["lexical_revision_declared"], "declared-lexical")
+        self.assertEqual(result["lexical_revision_source"], "zoekt_results")
+        self.assertEqual(result["lexical_revisions_observed"], ["abc123"])
+        self.assertIn("differs from the release-declared", result["warnings"][-1])
+        self.assertEqual(result["results"][0]["lexical_revision"], "abc123")
+
+    def test_corpus_info_exposes_declared_lexical_revision(self):
+        info = self.service().get_corpus_info()
+
+        self.assertEqual(info["indexes"]["lexical"]["revision"], "declared-lexical")
+        self.assertEqual(info["indexes"]["lexical"]["revision_source"], "release_metadata")
+        self.assertFalse(info["indexes"]["lexical"]["revision_verified"])
 
     @patch("lib.retrieval_adapters.requests.post")
     def test_vector_receives_original_query_and_prefiltered_scope(self, post):

@@ -6,6 +6,8 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
+from lib.retrieval_adapters import Release
+
 
 ROOT = Path(__file__).resolve().parents[1]
 MODULE_PATH = ROOT / "scripts/create_retrieval_release.py"
@@ -16,6 +18,14 @@ SPEC.loader.exec_module(MODULE)
 
 
 class RetrievalReleaseGitTests(unittest.TestCase):
+    def test_release_exposes_declared_lexical_revision(self) -> None:
+        release = Release(
+            Path("/tmp/active-release.json"),
+            {"artifacts": {"lexical_index": {"corpus_commit": "lexical123"}}},
+        )
+
+        self.assertEqual(release.lexical_revision, "lexical123")
+
     def test_git_revision_trusts_the_mounted_checkout_only(self) -> None:
         checkout = Path("/tmp/patra-darpan-test-checkout")
         completed = subprocess.CompletedProcess(

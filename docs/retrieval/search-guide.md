@@ -8,7 +8,10 @@ guide once per conversation; resources need not be reread before every call.
 - **Catalog:** `get_author_works`, `search_documents` and batch metadata lookup
   answer paper metadata questions. The full paper catalog exceeds content coverage.
 - **Lexical:** `search_corpus(mode="lexical")` searches the Zoekt-indexed
-  Sanchaya corpus, including files outside the release's chunk scope.
+  Sanchaya corpus, including files outside the release's chunk scope. Its
+  `lexical_revision` is independent of the release `corpus_revision`; when
+  results are returned, it is observed from Zoekt and any mismatch with the
+  release-declared revision appears in `warnings`.
 - **Vector:** `mode="vector"` searches the release's named Qdrant collection
   with multilingual E5. Its Sanskrit/paper scope is smaller than the lexical
   corpus. Semantic similarity is not an exhaustive occurrence inventory.

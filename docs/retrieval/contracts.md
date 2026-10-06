@@ -48,6 +48,15 @@ The release record binds:
 - vector model, dimensions, collection, and point count; and
 - coverage metrics for documents, chunks, vectors, and entities.
 
+`corpus_revision` identifies the Sanchaya revision used for the release's
+catalog, chunks, entities, and vector projection. The independently operated
+Zoekt lexical index has its own revision in
+`artifacts.lexical_index.corpus_commit`; `get_corpus_info()` exposes this as
+`indexes.lexical.revision`. Its `revision_source` is `release_metadata` and
+`revision_verified` is false unless a live backend check has been performed.
+This prevents a release declaration from being mistaken for proof of the
+currently deployed Zoekt shard revision.
+
 [`release.schema.json`](release.schema.json) is authoritative for its shape.
 Activation is atomic: clients either read the previous complete release or the
 new complete release.
@@ -103,8 +112,15 @@ batch fetch tools.
 ## Result behavior
 
 Results include schema versions and the active corpus/release revision where
-appropriate. Search limits, passage sizes, and batch sizes are bounded by the
-tool implementation. Backend failures are returned explicitly so a client can
+appropriate. Search responses also include `lexical_revision`, the observed
+Zoekt `Version` when lexical results are present, plus
+`lexical_revision_declared`, `lexical_revision_source`, and
+`lexical_revisions_observed`. Lexical result rows expose the same observed
+revision as `lexical_revision`; source links remain pinned to that row's
+revision. A mismatch between observed and declared revisions is reported in
+`warnings`, rather than being silently presented as one coherent release.
+Search limits, passage sizes, and batch sizes are bounded by the tool
+implementation. Backend failures are returned explicitly so a client can
 distinguish a partial result from a complete one.
 
 `lookup_entity` retains its arguments and `retrieval.entity-lookup.v1` schema.

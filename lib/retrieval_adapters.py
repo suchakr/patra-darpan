@@ -114,6 +114,17 @@ class Release:
         return str(self.record.get("source", {}).get("sanchaya_commit") or "unknown")
 
     @property
+    def lexical_revision(self) -> str:
+        """The revision declared for the independently operated Zoekt index."""
+
+        artifacts = self.record.get("artifacts")
+        lexical = artifacts.get("lexical_index") if isinstance(artifacts, dict) else None
+        if not isinstance(lexical, dict):
+            return "unknown"
+        value = lexical.get("corpus_commit") or lexical.get("revision")
+        return str(value) if value else "unknown"
+
+    @property
     def catalog_revision(self) -> str:
         return str(self.record.get("source", {}).get("catalog_revision") or "unknown")
 
@@ -987,9 +998,22 @@ class RetrievalService:
     def get_corpus_info(self) -> dict[str, Any]:
         result = self.catalog.corpus_info()
         result["entity_index"] = self.entities.coverage_info()
+        artifacts = self.release.record.get("artifacts")
+        lexical_artifact = artifacts.get("lexical_index", {}) if isinstance(artifacts, dict) else {}
+        if not isinstance(lexical_artifact, dict):
+            lexical_artifact = {}
         result["indexes"] = {
-            "lexical": {"backend": "zoekt", "scope": "Zoekt-indexed Sanchaya files; broader than the release chunk scope",
-                        "coverage_verified": False, "supports_raw_query": True, "supports_filename_results": True},
+            "lexical": {
+                "backend": lexical_artifact.get("backend") or "zoekt",
+                "repository": lexical_artifact.get("repository") or "sanchaya",
+                "revision": self.release.lexical_revision,
+                "revision_source": "release_metadata",
+                "revision_verified": False,
+                "scope": "Zoekt-indexed Sanchaya files; broader than the release chunk scope",
+                "coverage_verified": False,
+                "supports_raw_query": True,
+                "supports_filename_results": True,
+            },
             "passages": {"chunk_count": len(self.passages.chunks), "document_count": len(self.passages.by_document),
                          "scope": self.release.record.get("pipeline", {}).get("source_scope", {})},
             "vector": {**self.release.record.get("artifacts", {}).get("vector_index", {}),
@@ -1077,6 +1101,35 @@ class RetrievalService:
             except (RetrievalError, re.error) as exc:
                 backend_errors["vector"] = str(exc)
         results = lexical if mode == "lexical" else vector if mode == "vector" else reciprocal_rank_fusion((lexical, vector), limit=limit)
+        observed_lexical_revisions = sorted(
+            {
+                str(row.get("version"))
+                for row in lexical
+                if row.get("version")
+            }
+        )
+        observed_lexical_revision = (
+            observed_lexical_revisions[0]
+            if len(observed_lexical_revisions) == 1
+            else None
+        )
+        lexical_revision = observed_lexical_revision or self.release.lexical_revision
+        lexical_revision_source = "zoekt_results" if observed_lexical_revision else "release_metadata"
+        if len(observed_lexical_revisions) > 1:
+            warnings.append(
+                "Lexical results came from multiple Zoekt revisions: "
+                + ", ".join(observed_lexical_revisions)
+            )
+        elif (
+            observed_lexical_revision
+            and self.release.lexical_revision != "unknown"
+            and observed_lexical_revision != self.release.lexical_revision
+        ):
+            warnings.append(
+                "Observed lexical Zoekt revision "
+                f"{observed_lexical_revision} differs from the release-declared "
+                f"revision {self.release.lexical_revision}"
+            )
         result = {
             "schema_version": "retrieval.search.v1", "query": query, "mode": mode,
             "result_type": "files" if filename_query else result_type,
@@ -1084,7 +1137,12 @@ class RetrievalService:
             "query_forms": query_forms, "warnings": warnings, "entity_ids": entity_ids,
             "results": results, "backend_counts": {"lexical": len(lexical), "vector": len(vector)},
             "backend_errors": backend_errors, "corpus_revision": self.release.corpus_revision,
-            "release_id": self.release.release_id, "lexical_stats": page["stats"] if page else None,
+            "release_id": self.release.release_id,
+            "lexical_revision": lexical_revision,
+            "lexical_revision_declared": self.release.lexical_revision,
+            "lexical_revision_source": lexical_revision_source,
+            "lexical_revisions_observed": observed_lexical_revisions,
+            "lexical_stats": page["stats"] if page else None,
             "next_cursor": page["next_cursor"] if page and mode == "lexical" else None,
             "has_more": page["has_more"] if page and mode == "lexical" else False,
             "cursor_expires_in_seconds": page["cursor_expires_in_seconds"] if page and mode == "lexical" else None,
@@ -1159,6 +1217,8 @@ class RetrievalService:
                         },
                     }
                 )
+            if row.get("version"):
+                enriched["lexical_revision"] = str(row["version"])
             document = self.catalog.get_document(str(enriched.get("document_id") or "")) or {}
             enriched.update(source_links(self.release, enriched, document.get("source_refs", [])))
             enriched["fetch_available"] = bool(selected)
