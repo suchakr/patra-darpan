@@ -425,6 +425,32 @@ def activate_release(release_root: Path, release_path: Path, expected_current_id
     os.replace(active_tmp, active_path)
 
 
+def validate_reused_release(
+    release: Any,
+    *,
+    expected_release_id: str,
+    previous_release_id: str,
+    sanchaya_revision: str,
+    collection: str,
+    inventory_sha256: str,
+    point_count: int,
+) -> None:
+    if release.release_id != expected_release_id:
+        raise ValueError(
+            f"staged release ID mismatch: expected {expected_release_id} found {release.release_id}"
+        )
+    if release.corpus_revision != sanchaya_revision:
+        raise ValueError("staged release does not declare the refreshed Sanchaya revision")
+    vector = release.record.get("artifacts", {}).get("vector_index", {})
+    if vector.get("collection") != collection:
+        raise ValueError("staged release points at a different Qdrant collection")
+    if vector.get("reused_from_release") != previous_release_id or vector.get("reuse_verified") is not True:
+        raise ValueError("staged release lacks verified vector reuse provenance")
+    basis = vector.get("reuse_basis") or {}
+    if basis.get("chunk_inventory_sha256") != inventory_sha256 or int(basis.get("point_count") or -1) != point_count:
+        raise ValueError("staged release vector reuse proof does not match the current audit")
+
+
 def main() -> int:
     args = parse_args()
     for name in (
@@ -492,11 +518,46 @@ def main() -> int:
 
     release_id = args.release_id or release_id_for_revision(old_release_id, old_revision, new_revision)
     release_dir = args.release_root / release_id
-    if release_dir.exists():
-        raise FileExistsError(f"refresh release already exists: {release_dir}")
     work_dir = args.work_root / "refresh" / release_id
-    if work_dir.exists():
-        raise FileExistsError(f"refresh work directory already exists: {work_dir}")
+    if release_dir.exists() or work_dir.exists():
+        staged_path = release_dir / "release.json"
+        if not args.activate or not release_dir.is_dir() or not staged_path.is_file() or not work_dir.is_dir():
+            raise FileExistsError(
+                f"refresh artifacts already exist; inspect or use the matching staged release: {release_dir}"
+            )
+        staged_release = load_release(staged_path)
+        validate_reused_release(
+            staged_release,
+            expected_release_id=release_id,
+            previous_release_id=old_release_id,
+            sanchaya_revision=new_revision,
+            collection=collection,
+            inventory_sha256=inventory_sha256,
+            point_count=reuse_audit["point_count"],
+        )
+        activate_release(args.release_root, staged_path, old_release_id)
+        print(
+            json.dumps(
+                {
+                    "release_id": release_id,
+                    "previous_release_id": old_release_id,
+                    "sanchaya_revision": new_revision,
+                    "active": True,
+                    "source_count": source_stats["source_count"],
+                    "chunk_count": len(old_chunks),
+                    "entity_mention_count": int(
+                        current_release.record.get("metrics", {}).get("mention_count", 0)
+                    ),
+                    "vector_collection": collection,
+                    "vector_point_count": reuse_audit["point_count"],
+                    "vector_rebuilt": False,
+                    "work_dir": str(work_dir),
+                },
+                ensure_ascii=False,
+                indent=2,
+            )
+        )
+        return 0
     work_dir.mkdir(parents=True)
 
     manifest_path = work_dir / "input-manifest.json"
@@ -597,8 +658,15 @@ def main() -> int:
     # Validate every copied file and the release shape before changing the
     # active pointer.  The old release remains untouched on any failure.
     new_release = load_release(new_release_path)
-    if new_release.record.get("source", {}).get("sanchaya_commit") != new_revision:
-        raise ValueError("new release does not declare the refreshed Sanchaya revision")
+    validate_reused_release(
+        new_release,
+        expected_release_id=release_id,
+        previous_release_id=old_release_id,
+        sanchaya_revision=new_revision,
+        collection=collection,
+        inventory_sha256=inventory_sha256,
+        point_count=reuse_audit["point_count"],
+    )
     if args.activate:
         activate_release(args.release_root, new_release_path, old_release_id)
 
