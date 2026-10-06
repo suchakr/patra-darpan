@@ -1,7 +1,7 @@
 SHELL := /bin/bash
 
 .DEFAULT_GOAL := help
-.NOTPARALLEL: index pilot smoke up
+.NOTPARALLEL: index pilot smoke up refresh-release
 
 # Resolve paths from this Makefile, not from the caller's shell and not from a
 # global shell profile. This keeps `git clone && cd repo && make <target>`
@@ -34,7 +34,7 @@ COMPOSE := $(COMPOSE_BASE)
 endif
 
 .PHONY: help prod-env check config test build runtime-build catalog qdrant wait-qdrant index inspect mcp up \
-	backend-smoke mcp-smoke search-smoke smoke pilot oauth-config edge edge-smoke https logs down
+	refresh-release backend-smoke mcp-smoke search-smoke smoke pilot oauth-config edge edge-smoke https logs down
 
 ifeq ($(MODE),development)
 EDGE_UP_SERVICES := retrieval-mcp-oauth retrieval-https
@@ -59,6 +59,7 @@ help:
 		"  make qdrant                        Start persistent Qdrant" \
 		"  make wait-qdrant                   Start Qdrant and wait until ready (used by index)" \
 		"  make index                         Build chunks, entities, vectors, release" \
+		"  make refresh-release               Refresh provenance/release; reuse verified vectors" \
 		"  make inspect                       Inspect the active release" \
 		"  make mcp                           Start the MCP runtime" \
 		"  make backend-smoke                 Optional backend check (included in smoke)" \
@@ -156,6 +157,10 @@ wait-qdrant: build qdrant
 
 index: catalog wait-qdrant
 	$(COMPOSE) --profile build run --rm retrieval-builder
+
+refresh-release: check build wait-qdrant
+	$(COMPOSE) --profile build run --rm retrieval-builder \
+		python scripts/refresh_retrieval_release.py --activate
 
 inspect: check
 	$(COMPOSE) --profile runtime run --rm --no-deps retrieval-mcp \

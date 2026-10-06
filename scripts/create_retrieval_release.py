@@ -177,6 +177,9 @@ def build_record(args: argparse.Namespace, release_id: str, release_dir: Path) -
             "dimensions": int(vector_run.get("dimensions") or 0),
         },
     }
+    for key in ("reused_from_release", "reuse_verified", "reuse_basis"):
+        if key in vector_run:
+            artifacts["vector_index"][key] = vector_run[key]
     if not artifacts["vector_index"]["collection"] or not artifacts["vector_index"]["dimensions"]:
         raise ValueError("vector run does not contain collection and dimensions")
 

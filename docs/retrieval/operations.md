@@ -95,6 +95,29 @@ make mcp-smoke
 Rebuild projections as well if the metadata change affects source selection,
 identity, or provenance referenced by chunks.
 
+### Sanchaya revision with unchanged selected bytes
+
+If a Sanchaya cleanup changes Git history or lexical/catalog provenance but a
+read-only source-hash audit proves that every selected source byte is
+unchanged, use the metadata-only release refresh:
+
+```bash
+make refresh-release
+```
+
+The builder verifies all selected source hashes, rewrites only the
+`corpus_revision` fields in the entity projections, checks the existing
+Qdrant collection's deterministic point IDs and payload keys, and assembles a
+new release.  It does not run `make index`, does not call the vector builder,
+and does not delete or recreate the collection.  The previous release remains
+on disk for rollback.  To stage the release without switching the active
+pointer, run the script directly with `--no-activate` and inspect the printed
+release/work paths before rerunning with `--activate`.
+
+This path is invalid when selected content, chunk boundaries, chunker
+settings, embedding inputs, model, vector dimensions, or normalization have
+changed; use the full corpus/index path below in those cases.
+
 ### Patra Darpan runtime or MCP code change
 
 ```bash

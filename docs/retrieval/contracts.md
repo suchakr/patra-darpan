@@ -48,6 +48,15 @@ The release record binds:
 - vector model, dimensions, collection, and point count; and
 - coverage metrics for documents, chunks, vectors, and entities.
 
+When a Sanchaya Git revision changes without changing any selected source
+bytes, a release may mark its existing vector collection with
+`reused_from_release`, `reuse_verified`, and `reuse_basis`.  Reuse is valid
+only after the selected source hashes, deterministic chunk-key inventory, and
+Qdrant point IDs/payload keys have been checked.  The refresh still creates a
+new catalog, release, and entity-artifact revision so catalog and provenance
+adapters do not depend on the retired release directory.  It must not be used
+for a content, chunker, model, dimension, or embedding-input change.
+
 `corpus_revision` identifies the Sanchaya revision used for the release's
 catalog, chunks, entities, and vector projection. The independently operated
 Zoekt lexical index has its own revision in

@@ -242,6 +242,30 @@
             "dimensions": {
               "type": "integer",
               "minimum": 1
+            },
+            "reused_from_release": {
+              "type": "string",
+              "minLength": 1
+            },
+            "reuse_verified": {
+              "type": "boolean"
+            },
+            "reuse_basis": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["chunk_key", "chunk_inventory_sha256", "point_count"],
+              "properties": {
+                "chunk_key": {
+                  "const": "chunk_id,content_sha256,repo_path,logical_location"
+                },
+                "chunk_inventory_sha256": {
+                  "$ref": "#/$defs/sha256"
+                },
+                "point_count": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              }
             }
           }
         }
