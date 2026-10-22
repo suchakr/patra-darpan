@@ -129,6 +129,12 @@
         },
         "normalized": {
           "type": "boolean"
+        },
+        "fingerprint": {
+          "$ref": "#/$defs/sha256"
+        },
+        "configuration": {
+          "type": "object"
         }
       }
     },
@@ -202,6 +208,12 @@
           "$ref": "#/$defs/file_artifact"
         },
         "chunks": {
+          "$ref": "#/$defs/file_artifact"
+        },
+        "ontology_snapshot": {
+          "$ref": "#/$defs/file_artifact"
+        },
+        "vector_build": {
           "$ref": "#/$defs/file_artifact"
         },
         "entity_mentions": {

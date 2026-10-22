@@ -824,8 +824,19 @@ class VectorAdapter:
             except ImportError as exc:
                 raise RetrievalError("vector search needs qdrant-client and sentence-transformers") from exc
             try:
-                self._client = QdrantClient(url=self.qdrant_url)
-                self._model = SentenceTransformer(self.model_name, device=self.device)
+                client = QdrantClient(url=self.qdrant_url)
+                pipeline = self.release.record.get("pipeline", {}).get("embedding", {})
+                configuration = pipeline.get("configuration")
+                if configuration:
+                    from lib.retrieval_vectors import embedding_configuration, digest
+                    model = SentenceTransformer(self.model_name, device=self.device,
+                                                revision=configuration.get("resolved_revision"),
+                                                local_files_only=True)
+                    if digest(embedding_configuration(model, self.model_name)) != pipeline.get("fingerprint"):
+                        raise RetrievalError("query embedding model differs from the active release fingerprint")
+                else:
+                    model = SentenceTransformer(self.model_name, device=self.device)
+                self._client, self._model = client, model
             except Exception as exc:  # SDK errors vary by version/backend.
                 raise RetrievalError(f"cannot initialize vector backend: {exc}") from exc
         return self._client, self._model

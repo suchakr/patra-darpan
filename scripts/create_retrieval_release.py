@@ -25,6 +25,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from lib.retrieval_catalog import CATALOG_SCHEMA_VERSION, build_retrieval_catalog
+from lib.retrieval_release_state import activate_record
 
 
 def utc_now() -> str:
@@ -77,7 +78,8 @@ def read_json(path: Path) -> dict[str, Any]:
 
 
 def count_jsonl(path: Path) -> int:
-    return sum(1 for line in path.open("r", encoding="utf-8") if line.strip())
+    with path.open("r", encoding="utf-8") as handle:
+        return sum(1 for line in handle if line.strip())
 
 
 def require_file(path: Path) -> Path:
@@ -130,6 +132,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--release-id")
     parser.add_argument("--notes", default="Local retrieval release; all online projections are read-only.")
     parser.add_argument("--activate", action=argparse.BooleanOptionalAction, default=True)
+    parser.add_argument("--expected-active-sha256", help="Compare active pointer under the shared activation lock")
     return parser.parse_args()
 
 
@@ -164,6 +167,8 @@ def build_record(args: argparse.Namespace, release_id: str, release_dir: Path) -
         "retrieval_catalog": file_artifact(f"{release_id}/retrieval-catalog.sqlite", catalog_output),
         "corpus_manifest": artifact(f"{release_id}/corpus-manifest.jsonl", catalog_source, release_dir / "corpus-manifest.jsonl"),
         "chunks": artifact(f"{release_id}/chunks.jsonl", args.chunks, release_dir / "chunks.jsonl"),
+        "ontology_snapshot": artifact(f"{release_id}/ontology.json", args.ontology, release_dir / "ontology.json"),
+        "vector_build": artifact(f"{release_id}/vector-build.json", args.vector_run, release_dir / "vector-build.json"),
         "entity_mentions": artifact(f"{release_id}/entity-mentions.jsonl", args.mentions, release_dir / "entity-mentions.jsonl"),
         "entity_registry": artifact(f"{release_id}/entity-registry.jsonl", args.registry, release_dir / "entity-registry.jsonl"),
         "lexical_index": {
@@ -216,6 +221,16 @@ def build_record(args: argparse.Namespace, release_id: str, release_dir: Path) -
             "revision": "patra-darpan:working-tree",
         },
     }
+    if vector_run.get("embedding_configuration"):
+        from lib.retrieval_vectors import digest
+        configuration = vector_run["embedding_configuration"]
+        if vector_run.get("embedding_fingerprint") != digest(configuration):
+            raise ValueError("vector run embedding fingerprint does not match configuration")
+        if configuration.get("model") != pipeline["embedding"]["model"] or configuration.get("dimensions") != pipeline["embedding"]["dimensions"]:
+            raise ValueError("vector run embedding model/dimensions mismatch")
+        pipeline["embedding"].update(configuration=configuration,
+                                     fingerprint=digest(configuration),
+                                     revision=configuration.get("resolved_revision") or configuration["weights_sha256"])
     return {
         "schema_version": "retrieval.release.v1",
         "release_id": release_id,
@@ -270,9 +285,7 @@ def main() -> int:
         release_json = json.dumps(record, ensure_ascii=False, indent=2) + "\n"
         (release_dir / "release.json").write_text(release_json, encoding="utf-8")
         if args.activate:
-            active_tmp = args.release_root / ".active-release.json.tmp"
-            active_tmp.write_text(release_json, encoding="utf-8")
-            os.replace(active_tmp, args.release_root / "active-release.json")
+            activate_record(args.release_root, record, expected_sha256=args.expected_active_sha256)
     except Exception:
         shutil.rmtree(release_dir, ignore_errors=True)
         raise

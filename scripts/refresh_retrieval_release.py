@@ -414,15 +414,8 @@ def create_release(
 
 
 def activate_release(release_root: Path, release_path: Path, expected_current_id: str) -> None:
-    active_path = release_root / "active-release.json"
-    if active_path.is_file():
-        current = read_json(active_path)
-        if str(current.get("release_id") or "") != expected_current_id:
-            raise RuntimeError("active release changed while refresh was being assembled")
-    release_json = release_path.read_text(encoding="utf-8")
-    active_tmp = release_root / f".active-release.{os.getpid()}.tmp"
-    active_tmp.write_text(release_json, encoding="utf-8")
-    os.replace(active_tmp, active_path)
+    from lib.retrieval_release_state import activate_record
+    activate_record(release_root, read_json(release_path), expected_release_id=expected_current_id)
 
 
 def validate_reused_release(
@@ -634,6 +627,9 @@ def main() -> int:
             "chunk_count": len(old_chunks),
             "dimensions": dimensions,
             "normalized": bool(embedding.get("normalized", True)),
+            **({"embedding_configuration": embedding["configuration"],
+                "embedding_fingerprint": embedding["fingerprint"]}
+               if embedding.get("configuration") else {}),
             "reused_from_release": old_release_id,
             "reuse_verified": True,
             "reuse_basis": {

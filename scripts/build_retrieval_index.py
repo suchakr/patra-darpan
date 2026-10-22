@@ -28,7 +28,7 @@ from scripts.build_retrieval_entities import build_summary, iter_mentions, regis
 from scripts.prepare_retrieval_manifest import build_manifest
 
 
-def parse_args() -> argparse.Namespace:
+def parse_args(argv: list[str] | None = None, *, incremental: bool = False) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--sanchaya-root",
@@ -91,7 +91,14 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--release-id")
     parser.add_argument("--force", action="store_true", help="rebuild an existing deterministic release")
     parser.add_argument("--no-activate", action="store_true")
-    return parser.parse_args()
+    if incremental:
+        parser.description = "Plan or build an isolated, resumable incremental retrieval release."
+        parser.add_argument("--apply", action="store_true", help="Build candidate; default is read-only planning")
+        parser.add_argument("--activate", action="store_true", help="Activate verified candidate (requires --apply)")
+        parser.add_argument("--model-revision", default=os.getenv("RETRIEVAL_VECTOR_MODEL_REVISION"))
+        parser.add_argument("--legacy-model-attestation", help="Explicitly attest the displayed fingerprint for a legacy release")
+        parser.add_argument("--max-embed-chunks", type=int, default=2000)
+    return parser.parse_args(argv)
 
 
 def write_json(path: Path, value: Any) -> None:
@@ -170,6 +177,8 @@ def run_release_build(args: argparse.Namespace, *, manifest: Path, chunks: Path,
     ]
     if args.no_activate:
         command.append("--no-activate")
+    if getattr(args, "expected_active_sha256", None):
+        command.extend(["--expected-active-sha256", args.expected_active_sha256])
     subprocess.run(command, check=True)
 
 

@@ -24,6 +24,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+from lib.retrieval_vectors import embedding_configuration, digest, payload_for
 
 def utc_now() -> str:
     return datetime.now(UTC).replace(microsecond=0).isoformat().replace("+00:00", "Z")
@@ -131,6 +132,7 @@ def main() -> int:
     model_started = time.monotonic()
     model = SentenceTransformer(args.model, device=args.device)
     model_load_seconds = time.monotonic() - model_started
+    configuration = embedding_configuration(model, args.model)
     texts = [model_text(args.model, str(chunk["embed_text"])) for chunk in chunks]
     encode_started = time.monotonic()
     vectors = model.encode(
@@ -154,18 +156,7 @@ def main() -> int:
 
     points = []
     for chunk, vector in zip(chunks, vectors, strict=True):
-        payload = {
-            "chunk_id": chunk["chunk_id"],
-            "source_id": chunk["source_id"],
-            "document_id": chunk["document_id"],
-            "source_kind": chunk.get("source_kind"),
-            "repo_path": chunk["repo_path"],
-            "heading_path": chunk.get("heading_path", []),
-            "logical_location": chunk["logical_location"],
-            "content_sha256": chunk["content_sha256"],
-            "chunker_version": chunk["chunker_version"],
-            "script_counts": chunk.get("script_counts", {}),
-        }
+        payload = payload_for(chunk, configuration)
         points.append(
             qmodels.PointStruct(
                 id=str(uuid.uuid5(uuid.NAMESPACE_URL, str(chunk["chunk_id"]))),
@@ -194,6 +185,8 @@ def main() -> int:
         "token_estimate_total": sum(int(chunk.get("token_estimate") or 0) for chunk in chunks),
         "dimensions": dimension,
         "normalized": True,
+        "embedding_configuration": configuration,
+        "embedding_fingerprint": digest(configuration),
         "model_load_seconds": round(model_load_seconds, 3),
         "encode_seconds": round(encode_seconds, 3),
         "upsert_seconds": round(upsert_seconds, 3),

@@ -84,6 +84,65 @@ Google account.
 
 ## Update paths
 
+### Incremental corpus/vector update
+
+Use this for reviewed additions or edits. Unlike `make index`, it never deletes
+or writes the serving collection. It copies compatible vectors into a separate
+candidate, embeds only misses, rebuilds inexpensive chunk/entity/catalog
+projections, and verifies the exact target point inventory before release.
+
+```bash
+make index-incremental                         # plan; no embedding or activation
+make index-incremental APPLY=1                 # build/resume a staged candidate
+make index-incremental APPLY=1 ACTIVATE=1      # verify and activate the candidate
+```
+
+The default plan builds the local builder image, but does not start Qdrant,
+download models, or write corpus/release/vector data. It requires an existing
+active release, running Qdrant and the model already in the shared model cache.
+`APPLY=1` also refreshes the canonical catalog and starts/waits for Qdrant.
+No command here restarts MCP, operates Zoekt, or changes the production host
+from a development checkout. After an approved production activation, restart
+both MCP services (`make up`) and run `make smoke`, `make search-smoke`, and
+`make edge-smoke`. Refresh Zoekt separately to the same Sanchaya commit before
+activation so lexical/retrieval provenance agrees.
+
+Reuse keys cover the actual prefixed embedding text (including title and
+headings), loaded weight hash, tokenizer hash, model revision, pooling/module
+configuration, sequence length/truncation, normalization and library versions.
+Changed model/configuration means cache misses, not silent reuse. Query-time
+loading verifies the same identity for new fingerprinted releases.
+
+The default guard allows at most 2,000 cache misses. A reviewed override is:
+
+```bash
+make index-incremental APPLY=1 INCREMENTAL_ARGS='--max-embed-chunks 2500'
+```
+
+**Legacy bootstrap:** old releases did not record exact weights/tokenizer
+identity. Their plans show *provisional* reuse and
+`legacy_attestation_required: true`; apply refuses to proceed. First verify
+that the old build used the same cached weights and embedding settings, then
+explicitly attest the fingerprint displayed by the plan:
+
+```bash
+make index-incremental APPLY=1 \
+  INCREMENTAL_ARGS='--legacy-model-attestation <displayed-64-character-fingerprint>'
+```
+
+This is an operator attestation, not retrospective cryptographic proof. If the
+old identity cannot be established, do not attest it: use a deliberate full
+build instead. New releases retain exact configuration and input fingerprints,
+so later reuse needs no attestation.
+
+Build checkpoints live below `RETRIEVAL_BUILD_ROOT/incremental/<release-id>/`,
+on the persistent build mount. Repeating the same command resumes by validating
+acknowledged candidate points, including writes completed just before a crash.
+Changed inputs, foreign collections, corrupt payloads, invalid vectors and
+concurrent incremental builds fail closed. Completed staged releases can be
+activated without recomputing embeddings; unchanged active inputs are a no-op.
+Old releases/collections are retained for rollback; nothing is garbage-collected.
+
 ### Metadata-only change
 
 ```bash
