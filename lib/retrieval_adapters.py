@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import math
 import os
 import re
 import unicodedata
@@ -27,6 +28,7 @@ from typing import Any, Iterable
 from urllib.parse import urljoin, quote
 
 import requests
+from urllib3.exceptions import ReadTimeoutError
 
 from lib.retrieval_catalog import CatalogAdapter, CatalogError
 from lib.retrieval_query import prepare_lexical_query
@@ -34,6 +36,15 @@ from lib.retrieval_query import prepare_lexical_query
 
 class RetrievalError(RuntimeError):
     """A bounded, user-safe retrieval failure."""
+
+
+class ZoektSearchError(RetrievalError):
+    """A search failure with a safe explanation and the exact submitted query."""
+
+    def __init__(self, message: str, *, code: str, executed_query: str):
+        super().__init__(message)
+        self.code = code
+        self.executed_query = executed_query
 
 
 def read_json(path: Path) -> dict[str, Any]:
@@ -610,9 +621,13 @@ class PassageStore:
 class ZoektAdapter:
     """Small client for Zoekt's read-only JSON RPC endpoint."""
 
-    def __init__(self, url: str | None = None, *, timeout: float = 10.0):
+    def __init__(self, url: str | None = None, *, timeout: float = 10.0,
+                 search_timeout: float = 5.0):
         self.url = (url or os.getenv("ZOEKT_URL") or os.getenv("RETRIEVAL_ZOEKT_URL") or "").rstrip("/")
-        self.timeout = timeout
+        self.timeout, self.search_timeout = float(timeout), float(search_timeout)
+        if not (math.isfinite(self.timeout) and math.isfinite(self.search_timeout)
+                and 0 < self.search_timeout < self.timeout):
+            raise RetrievalError("Zoekt search_timeout must be positive and less than the finite HTTP timeout")
         self._snapshots: OrderedDict[str, dict[str, Any]] = OrderedDict()
         self._snapshot_lock = threading.Lock()
 
@@ -625,6 +640,26 @@ class ZoektAdapter:
     MAX_RAW_BYTES = 8 * 1024 * 1024
     MAX_SNAPSHOT_BYTES = 4 * 1024 * 1024
     MAX_WINDOWS = 5000
+
+    RETRY_HINT = (
+        "Narrow with file_filter or split alternatives into separate queries. "
+        "For literal alternatives, use lowercase 'or' (not uppercase 'OR'). "
+        "The original regex has not been rewritten; an incomplete response is not evidence of no matches."
+    )
+
+    @staticmethod
+    def protected_query(query: str) -> str:
+        return f"({query}) -file:patra-darpan/catalog/ -file:ontology/"
+
+    def failure_stats(self) -> dict[str, Any]:
+        """No backend response means unknown counts, not a successful zero."""
+        return {"status": "failed", "counts_exact": False, "search_incomplete": True,
+                "backend_file_count": None, "backend_match_count": None,
+                "cached_match_windows": 0, "backend_display_limited": None,
+                "backend_work_limited": None, "snapshot_limited": False,
+                "files_skipped": None, "files_skipped_due_to_cancellation": None,
+                "shards_skipped": None, "crashes": None, "flush_reason": None,
+                "backend_duration_seconds": None, "backend_timeout_seconds": self.search_timeout}
 
     def search(self, query: str, *, limit: int = 10, context_lines: int = 0) -> list[dict[str, Any]]:
         return self.search_page(query, limit=limit, context_lines=context_lines)["results"]
@@ -652,24 +687,53 @@ class ZoektAdapter:
             if signature != snapshot["signature"] or offset < 0 or offset >= len(snapshot["windows"]):
                 raise RetrievalError("cursor does not match this query, scope, or context")
         else:
-            protected_query = f"({query}) -file:patra-darpan/catalog/ -file:ontology/"
+            protected_query = self.protected_query(query)
             payload = {"Q": protected_query, "Opts": {
                 "MaxDocDisplayCount": 500, "MaxMatchDisplayCount": 10000,
                 "NumContextLines": context_lines,
+                # Go time.Duration uses integer nanoseconds in this JSON API.
+                # Verify on the deployed Zoekt build; HTTP read timeout is a
+                # backstop, not the search-work budget or a hard wall deadline.
+                "MaxWallTime": int(self.search_timeout * 1_000_000_000),
             }}
             try:
                 with requests.post(urljoin(self.url + "/", "api/search"), json=payload,
-                                   timeout=self.timeout, stream=True) as response:
+                                   timeout=(min(2.0, self.timeout), self.timeout), stream=True) as response:
                     response.raise_for_status()
                     raw = bytearray()
                     for block in response.iter_content(chunk_size=65536):
                         raw.extend(block)
                         if len(raw) > self.MAX_RAW_BYTES:
-                            raise RetrievalError("Zoekt response exceeded 8 MiB; narrow the query with file_filter or use result_type='files'")
+                            raise ZoektSearchError(
+                                "Zoekt response exceeded 8 MiB; narrow with file_filter or use result_type='files'.",
+                                code="response_too_large", executed_query=protected_query)
                     body = json.loads(raw)
-            except (requests.RequestException, ValueError) as exc:
-                raise RetrievalError(f"Zoekt search failed: {exc}") from exc
-            result = body.get("Result") or body.get("result") or {}
+            except requests.Timeout as exc:
+                raise ZoektSearchError(
+                    "Zoekt search timed out before a usable response arrived; match counts are unknown. " + self.RETRY_HINT,
+                    code="timeout", executed_query=protected_query) from exc
+            except requests.RequestException as exc:
+                # requests wraps a read timeout during iter_content() in
+                # ConnectionError, unlike a timeout waiting for headers.
+                if isinstance(exc, requests.ConnectionError) and exc.args and isinstance(exc.args[0], ReadTimeoutError):
+                    raise ZoektSearchError(
+                        "Zoekt search timed out while reading its response; match counts are unknown. " + self.RETRY_HINT,
+                        code="timeout", executed_query=protected_query) from exc
+                raise ZoektSearchError(
+                    "Zoekt search request failed; match counts are unknown. Check backend availability and query syntax. " + self.RETRY_HINT,
+                    code="transport_error", executed_query=protected_query) from exc
+            except ValueError as exc:
+                raise ZoektSearchError("Zoekt returned invalid JSON; match counts are unknown.",
+                                       code="invalid_response", executed_query=protected_query) from exc
+            if not isinstance(body, dict):
+                raise ZoektSearchError("Zoekt returned an invalid response object; match counts are unknown.",
+                                       code="invalid_response", executed_query=protected_query)
+            result = body.get("Result", body.get("result"))
+            if not isinstance(result, dict):
+                raise ZoektSearchError("Zoekt returned no usable search result; match counts are unknown. " + self.RETRY_HINT,
+                                       code="backend_error" if body.get("Error") or body.get("error") else "invalid_response",
+                                       executed_query=protected_query)
+            backend_error = bool(body.get("Error") or body.get("error"))
             files = result.get("Files") or result.get("FileMatches") or result.get("file_matches") or []
             windows = []
             memory_bytes = 0
@@ -699,6 +763,9 @@ class ZoektAdapter:
                         memory_bytes += size
             reported_files = result.get("FileCount")
             reported_matches = result.get("MatchCount")
+            backend_limited = bool(result.get("FilesSkipped") or result.get("ShardsSkipped")
+                                   or result.get("FilesSkippedDueToCancellation")
+                                   or result.get("FlushReason", 0) not in (0, 2, "final_flush"))
             # Exactness requires that the displayed evidence accounts for all
             # backend-reported matches and that no work was skipped or crashed.
             exact = (reported_files is not None and reported_matches is not None
@@ -706,9 +773,14 @@ class ZoektAdapter:
                      and not result.get("FilesSkipped") and not result.get("ShardsSkipped")
                      and not result.get("FilesSkippedDueToCancellation")
                      and result.get("FlushReason", 0) in (0, 2, "final_flush")
-                     and not result.get("Crashes") and not capped and allowed_paths is None)
+                     and not result.get("Crashes") and not backend_error and not capped and allowed_paths is None)
             stats = {"backend_file_count": reported_files, "backend_match_count": reported_matches,
                      "counts_exact": exact, "cached_match_windows": len(windows),
+                     "status": "complete" if exact else "partial", "search_incomplete": not exact,
+                     "backend_work_limited": backend_limited, "backend_reported_error": backend_error,
+                     "backend_timeout_seconds": self.search_timeout,
+                     "backend_duration_seconds": result["Duration"] / 1_000_000_000
+                         if isinstance(result.get("Duration"), (int, float)) else None,
                      "backend_display_limited": reported_files is None or reported_matches is None
                          or reported_files > len(files) or reported_matches > backend_fragments,
                      "snapshot_limited": capped, "entity_filtered": allowed_paths is not None,
@@ -1036,6 +1108,8 @@ class RetrievalService:
         result["search_guidance"] = [
             "Use metadata tools for paper lists; lexical for occurrences; vectors/hybrid for ranked conceptual discovery.",
             "Raw Zoekt syntax is accepted in lexical mode: file:Jyo type:filename सूर्य returns filenames of matching files without content.",
+            "Use lowercase 'or' for Boolean alternatives; uppercase 'OR' is not equivalent. Broad literal regex alternations can be slower.",
+            "Lexical search has a backend time budget. Inspect search_incomplete, lexical_error and lexical_stats; failed/partial results do not establish absence.",
             "Script expansion is optional for plain terms; ASCII requires an explicit iast/harvard_kyoto choice. Keep complex queries raw.",
             "Follow lexical next_cursor with identical query/options; inspect lexical_stats limits before claiming completeness.",
             "Page document passages with next_offset; page shortened chunk text by chunk_id and next_text_offset.",
@@ -1045,6 +1119,7 @@ class RetrievalService:
         ]
         result["search_capabilities"] = {"script_expansion": ["none", "auto", "devanagari", "iast", "harvard_kyoto"],
                                          "lexical_paging": True, "passage_paging": True,
+                                         "lexical_backend_timeout_seconds": self.zoekt.search_timeout,
                                          "search_response_byte_limit": 64000, "cursor_ttl_seconds": 300}
         return result
 
@@ -1093,7 +1168,10 @@ class RetrievalService:
         lexical = []
         vector = []
         page = None
+        lexical_error = None
+        executed_lexical_query = lexical_query
         if mode in {"lexical", "hybrid"}:
+            executed_lexical_query = self.zoekt.protected_query(lexical_query)
             try:
                 page = self.zoekt.search_page(lexical_query, limit=limit, context_lines=context_lines,
                                              snippet_chars=snippet_chars, match_limit=match_limit,
@@ -1101,6 +1179,14 @@ class RetrievalService:
                 lexical = self._enrich_lexical(page["results"])
             except RetrievalError as exc:
                 backend_errors["lexical"] = str(exc)
+                if isinstance(exc, ZoektSearchError):
+                    executed_lexical_query = exc.executed_query
+                lexical_error = {"code": getattr(exc, "code", "search_error"), "message": str(exc),
+                                 "retry_hint": self.zoekt.RETRY_HINT if isinstance(exc, ZoektSearchError) else
+                                     "Check the error and rerun the query without an expired or invalid cursor."}
+            if lexical_error or (page and page["stats"]["search_incomplete"]):
+                warnings.append("Lexical search is incomplete; returned counts are not exhaustive. "
+                                + (lexical_error["retry_hint"] if lexical_error else self.zoekt.RETRY_HINT))
         if mode in {"vector", "hybrid"}:
             try:
                 vector = self.vector.search(query, limit=limit, allowed_chunk_ids=vector_allowed)
@@ -1144,7 +1230,7 @@ class RetrievalService:
         result = {
             "schema_version": "retrieval.search.v1", "query": query, "mode": mode,
             "result_type": "files" if filename_query else result_type,
-            "lexical_query": page["executed_query"] if page else lexical_query,
+            "lexical_query": page["executed_query"] if page else executed_lexical_query,
             "query_forms": query_forms, "warnings": warnings, "entity_ids": entity_ids,
             "results": results, "backend_counts": {"lexical": len(lexical), "vector": len(vector)},
             "backend_errors": backend_errors, "corpus_revision": self.release.corpus_revision,
@@ -1153,7 +1239,10 @@ class RetrievalService:
             "lexical_revision_declared": self.release.lexical_revision,
             "lexical_revision_source": lexical_revision_source,
             "lexical_revisions_observed": observed_lexical_revisions,
-            "lexical_stats": page["stats"] if page else None,
+            "lexical_stats": page["stats"] if page else self.zoekt.failure_stats() if lexical_error else None,
+            "lexical_error": lexical_error,
+            "search_incomplete": (bool(lexical_error) or bool(page and page["stats"]["search_incomplete"]))
+                if mode in {"lexical", "hybrid"} else None,
             "next_cursor": page["next_cursor"] if page and mode == "lexical" else None,
             "has_more": page["has_more"] if page and mode == "lexical" else False,
             "cursor_expires_in_seconds": page["cursor_expires_in_seconds"] if page and mode == "lexical" else None,

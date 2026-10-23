@@ -84,7 +84,8 @@ the canonical relation table is used. Ontology v0.4 remains deferred.
 
 The lexical query accepts Zoekt's query language. Terms separated by spaces
 are ANDed at file scope, so they need not occur on the same line. Parentheses,
-`OR`, regex alternatives, exclusions and qualifiers can express exploration.
+lowercase `or`, regex alternatives, exclusions and qualifiers can express exploration.
+Uppercase `OR` is not an equivalent Boolean operator on the deployed parser.
 Use `\s` for whitespace inside a regex; ordinary query spaces separate terms.
 
 | Question | `search_corpus` arguments |
@@ -92,6 +93,7 @@ Use `\s` for whitespace inside a regex; ordinary query spaces separate terms.
 | Which Jyotiṣa files contain सूर्य? | `query="file:Jyo type:filename सूर्य", mode="lexical"` |
 | Same question with structured options | `query="सूर्य", file_filter="Jyo", result_type="files"` |
 | References in either script | `query="(श्रविष्ठा|Śraviṣṭhā)", mode="lexical"` |
+| Literal alternatives when a broad regex is slow | `query="(धनिष्ठ or धनिष्ट or धनीष्ठ or dhaniṣṭ or dhanishta) -file:patra-darpan/papers", mode="lexical", result_type="files"` |
 | Purāṇa occurrences excluding one path | `query="सूर्य file:Puranani -file:gretil", mode="lexical"` |
 | Case-sensitive IAST | `query="case:yes Śraviṣṭhā", mode="lexical"` |
 | A specific textual sequence | `query="सूर्य\s+चन्द्र", mode="lexical"` |
@@ -101,6 +103,9 @@ without content. To match the filename itself, use `file:`. Filename-only
 requests use lexical search even if the caller leaves the default hybrid mode.
 Catalog and ontology paths are excluded by the adapter. Returned
 `lexical_query` records the actual expression sent to Zoekt.
+Literal alternatives joined by lowercase `or` can be faster than a broad regex
+alternation. This is a user-selected retry, not a general regex rewrite: retain
+the same scope and semantics. The server never silently rewrites raw regexes.
 
 ## Script expansion
 
@@ -128,10 +133,29 @@ Lexical responses default to 400-character windows and no surrounding lines.
 `limit` bounds files per page; `match_limit` bounds match windows per page.
 Byte limits may make a page smaller than requested.
 
+The adapter supplies a five-second Zoekt search-work budget (`MaxWallTime`).
+Its ten-second HTTP read timeout is an inactivity backstop, not a guaranteed
+end-to-end deadline. `limit=1` reduces displayed rows, not backend search work.
+Budget-limited responses retain any returned hits and set `search_incomplete=true`
+and `lexical_stats.status="partial"`. Check skipped files/shards, cancellation,
+display/snapshot limits and `counts_exact` before using totals.
+
+If no usable response arrives, `lexical_error` supplies a safe code, message and
+retry hint; `lexical_stats.status="failed"`, backend counts are `null` (unknown),
+and `search_incomplete=true`. Existing `backend_errors.lexical` remains available.
+An empty failed/partial response is **not** evidence of no matches. Narrow with
+`file_filter`, retry literal alternatives with lowercase `or`, or run separate
+queries. Do not sum separate-query file counts without deduplicating overlaps.
+In hybrid mode these flags describe the lexical branch; vector results can
+still be returned. Vector-only responses leave lexical status fields `null`.
+
 For lexical continuation, repeat the same query, expansion, file filter,
 entity IDs, snippet size and context with `next_cursor`. Cursors refer to a
 bounded in-memory snapshot, expire after five minutes, and are lost on a
 server restart or cache eviction. Restart the search if a cursor expires.
+Continuation pages drain the retained snapshot; they do not resume backend work.
+Even the last page (`has_more=false`) remains incomplete if that snapshot was
+partial. A complete empty response has `counts_exact=true` and no lexical error.
 
 `backend_counts` counts adapter candidate rows before fusion, not total occurrences. `lexical_stats`
 reports backend file/match counts, whether evidence accounts for those counts,

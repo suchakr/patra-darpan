@@ -312,11 +312,12 @@ def build_mcp(service: RetrievalService, *, oauth_provider: Any | None = None):
     @server.tool(
         name="search_corpus",
         description=("Search lexical Zoekt, semantic vectors, or ranked hybrid results. Read retrieval://search-guide. "
-                     "Lexical query accepts raw Zoekt syntax (AND, OR, regex, file:, exclusions, type:filename). "
+                     "Lexical query accepts raw Zoekt syntax (space-separated AND, lowercase 'or', regex, file:, exclusions, type:filename); uppercase OR is not equivalent. "
                      "result_type='files' returns filenames of matching files without content; it uses lexical mode. "
                      "Optional script_expansion accepts plain Sanskrit terms in devanagari/iast/harvard_kyoto/auto; "
                      "use file_filter for path scope. Follow next_cursor with identical lexical query/options; "
-                     "backend_counts are returned rows, not total occurrences. Cite citation_url/source_url."),
+                     "backend_counts are returned rows, not total occurrences. Inspect search_incomplete, lexical_error and lexical_stats: "
+                     "bounded partial results or unknown counts do not establish absence, even after the last cursor page. Cite citation_url/source_url."),
     )
     def search_corpus(
         query: str,

@@ -289,6 +289,44 @@ protection. On production, also verify the Sanchaya UI returns `200` and public
 
 ## Recovery principles
 
+### F06 lexical runtime verification (no index rebuild)
+
+The bounded-search change only affects MCP runtime code and its baked-in search
+guide. It requires neither catalogue/vector release creation nor Zoekt reindexing.
+Keep the existing release, collection and rollback image. Rollout remains an
+explicit operator decision after candidate verification.
+
+The adapter sends Zoekt `Opts.MaxWallTime=5000000000` (Go nanoseconds), leaving
+headroom before the ten-second HTTP read timeout. This is a cooperative backend
+work budget, not a hard end-to-end deadline. On the deployed Zoekt revision
+`2cb19912a407`, a read-only three-second probe returned partial F06 hits in about
+3.1 seconds, with `FilesSkipped` and `ShardsSkipped` nonzero but `FlushReason=0`.
+Never infer completeness from `FlushReason` alone.
+
+Verify the candidate against the existing backend with the original query:
+
+```text
+(धनिष्ठ|धनिष्ट|धनीष्ठ|dhaniṣṭ|dhanishta) -file:patra-darpan/papers
+```
+
+Use lexical mode, `result_type="files"`, `limit=1`. A complete answer or an
+explicitly partial/failed answer is acceptable; an unlabelled empty success is
+not. Check `lexical_query` includes both `-file:patra-darpan/catalog/` and
+`-file:ontology/`, including on errors. For partial hits, follow a cursor and
+confirm the final page still reports incompleteness. Retry the literal branches
+joined by lowercase `or` with the same scope; uppercase `OR` is not equivalent.
+Do not require a fixed count: the live lexical corpus can change independently.
+
+`python scripts/smoke_lexical_limits.py` performs these candidate checks through
+an in-process MCP client against live Zoekt, using the configured existing
+release. Run it in an isolated runtime container with read-only release mounts;
+it does not test HTTP authentication or interactive OAuth. It requires the
+lowercase-`or` retry to return an exact, nonempty response, without pinning a count.
+
+After approved runtime-only rollout, repeat these checks through both MCP
+routes and run the existing search/SQL/auth smoke checks. Record serving image,
+active release/catalogue hashes and unchanged Qdrant collection/point count.
+
 - Inspect before rebuilding. `make inspect` and Qdrant collection information
   show whether expensive artifacts already exist.
 - If embeddings completed but release assembly failed, repair and rerun release
