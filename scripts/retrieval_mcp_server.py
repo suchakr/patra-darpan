@@ -81,7 +81,13 @@ class BearerAuthMiddleware:
             and hmac.compare_digest(credentials.strip(), self.token)
         )
         if valid:
-            await self.app(scope, receive, send)
+            from lib.retrieval_catalog_sql import BEARER_SQL_ID, token_identifier
+
+            identity = BEARER_SQL_ID.set(token_identifier(credentials.strip()))
+            try:
+                await self.app(scope, receive, send)
+            finally:
+                BEARER_SQL_ID.reset(identity)
             return
 
         body = b'{"error":"unauthorized"}'
@@ -124,7 +130,9 @@ def build_mcp(service: RetrievalService, *, oauth_provider: Any | None = None):
             "items; cite fetched evidence using readable Markdown hyperlinks to citation_url "
             "or source_url, naming the work/paper and location rather than presenting opaque IDs. "
             "Raw Zoekt syntax is supported in lexical mode, including file:Jyo type:filename सूर्य "
-            "for filenames of matching files. Generated Sanskrit forms are search hypotheses."
+            "for filenames of matching files. Generated Sanskrit forms are search hypotheses. "
+            "If run_sql is advertised, use it for catalogue-wide metadata aggregates after reading "
+            "retrieval://catalog-schema. Never total capped search_documents samples."
         ),
         host=host,
         port=port,
@@ -133,6 +141,56 @@ def build_mcp(service: RetrievalService, *, oauth_provider: Any | None = None):
         auth_server_provider=oauth_provider,
         auth=auth_settings,
     )
+
+    # One feature gate covers every transport; existing tools remain unchanged.
+    if _env_bool("MCP_CATALOG_SQL_ENABLED"):
+        from lib.retrieval_catalog_sql import (
+            BEARER_SQL_ID, CatalogSQLService, mcp_envelope, token_identifier,
+        )
+        from mcp.types import CallToolResult
+
+        sql_service = CatalogSQLService(service.catalog)
+
+        @server.resource(
+            "retrieval://catalog-schema", name="catalog_schema",
+            description="Approved catalogue SQL views, columns, revisions, examples and counted metadata limitations.",
+            mime_type="application/json",
+        )
+        def catalog_schema() -> str:
+            return json.dumps(sql_service.schema(), ensure_ascii=False)
+
+        @server.tool(
+            name="run_sql",
+            description=(
+                "Read-only metadata aggregates over documents_v, authors_v, subjects_v, coverage_v. "
+                "Read retrieval://catalog-schema first for columns and missing-data caveats. "
+                "Example: SELECT year, COUNT(*) AS records FROM documents_v "
+                "WHERE source_kind='patra-darpan' GROUP BY year ORDER BY year. "
+                "One SELECT (WITH allowed); 5-second deadline; default 500, maximum 1000 rows; "
+                "response under 64000 bytes. Returns SQL and revisions. Check truncated; "
+                "catalogue records are not necessarily papers, and subjects/authors are incomplete."
+            ),
+        )
+        async def run_sql(query: str, max_rows: int = 500) -> Any:
+            import anyio
+            from mcp.server.auth.middleware.auth_context import get_access_token
+
+            access = get_access_token() if oauth_provider is not None else None
+            identity = token_identifier(access.token) if access is not None else BEARER_SQL_ID.get()
+            local = oauth_provider is None and (
+                os.getenv("MCP_TRANSPORT", "streamable-http") == "stdio"
+                or not _env_bool("MCP_AUTH_REQUIRED", default=True)
+            )
+            if identity is None and not local:
+                return CallToolResult(
+                    content=[], isError=True,
+                    structuredContent={"error": {"code": "authentication_required",
+                                                 "message": "Catalogue SQL requires an authenticated request."}},
+                )
+            result = await anyio.to_thread.run_sync(
+                sql_service.run_sql, query, max_rows, identity or "local",
+            )
+            return CallToolResult(**mcp_envelope(result))
 
     if oauth_provider is not None:
 

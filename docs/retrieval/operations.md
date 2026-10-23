@@ -54,6 +54,29 @@ make pilot
 Qdrant, then builds chunks, entity artifacts, vectors, and the release record.
 It can be expensive because embedding work scales with selected chunks.
 
+## Optional catalogue SQL
+
+The [catalogue SQL PRD](catalog-sql-prd.md) defines one optional read-only tool
+and schema resource. Existing tools/routes continue unchanged with it disabled.
+After local security/regression tests pass, set `MCP_CATALOG_SQL_ENABLED=true`
+in the operator-managed env file and rebuild/recreate the relevant MCP runtime
+processes. The same flag is passed to bearer and OAuth services. Disabling the
+flag and recreating the processes removes the capability.
+
+This derives an in-memory projection from the existing hash-verified release
+catalogue: do **not** run `make index`, `make catalog`, or a vector rebuild to
+enable it. No release files are rewritten. Read-only local verification:
+
+```bash
+uv run python scripts/smoke_catalog_sql.py --release /absolute/path/to/active-release.json
+```
+
+For a configured bearer runtime, `scripts/mcp_smoke.py --catalog-sql` checks
+discovery, reads the schema, and reconciles SQL coverage with `get_corpus_info`
+in addition to its existing checks. OAuth uses the identical tool implementation;
+an intended-client OAuth tool call is still required for end-to-end deployment
+verification. Quotas are process-local; multiple replicas do not share counters.
+
 ## Start an existing release
 
 When a compatible active release and Qdrant collection already exist:

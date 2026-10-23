@@ -15,6 +15,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--entity", default="Śraviṣṭhā")
     parser.add_argument("--query", default="Maghādi")
     parser.add_argument("--search-features", action="store_true", help="Verify bounded search, filename-only results, expansion, resources and passage paging")
+    parser.add_argument("--catalog-sql", action="store_true", help="Require the optional catalogue SQL tool/resource and reconcile SQL coverage with corpus info")
     return parser.parse_args()
 
 
@@ -38,12 +39,29 @@ async def run(args: argparse.Namespace) -> int:
     timeout = httpx.Timeout(120.0, connect=10.0)
     headers = {"Authorization": f"Bearer {token}"}
     features = {}
+    catalog_sql = {}
     async with httpx.AsyncClient(headers=headers, timeout=timeout) as client:
         async with streamable_http_client(args.url, http_client=client) as (read, write, _):
             async with ClientSession(read, write) as session:
                 init = await session.initialize()
                 tools = await session.list_tools()
                 resources = await session.list_resources()
+                if getattr(args, "catalog_sql", False):
+                    assert "run_sql" in {tool.name for tool in tools.tools}, "Catalogue SQL is not enabled"
+                    schema_result = await session.read_resource("retrieval://catalog-schema")
+                    schema = json.loads(next(item.text for item in schema_result.contents if getattr(item, "text", None)))
+                    result = await session.call_tool("run_sql", {"query":
+                        "SELECT SUM(document_count) AS catalogued, "
+                        "SUM(CASE WHEN indexed_in_release=1 THEN document_count ELSE 0 END) AS indexed "
+                        "FROM coverage_v"})
+                    data = structured(result)
+                    assert not result.isError and not data["truncated"], data
+                    assert len(result.model_dump_json().encode()) < 64000
+                    info = structured(await session.call_tool("get_corpus_info", {}))
+                    assert data["rows"] == [[info["document_count"], info["indexed_document_count"]]], data
+                    assert data["catalog_revision"] == info["catalog_revision"] == schema["catalog_revision"]
+                    catalog_sql = {"status": "passed", "catalog_revision": data["catalog_revision"],
+                                   "analytics_revision": data["analytics_revision"], "coverage": data["rows"][0]}
                 lookup = await session.call_tool(
                     "lookup_entity", {"name": args.entity, "limit": 1}
                 )
@@ -132,6 +150,7 @@ async def run(args: argparse.Namespace) -> int:
             "errors": backend_errors,
         },
         "search_features": features,
+        "catalog_sql": catalog_sql,
         "entity_knowledge": {"lookup": "passed", "context": "passed", "input_schema": "unchanged"},
     }
     print(json.dumps(report, ensure_ascii=False, indent=2))

@@ -6,7 +6,10 @@ guide once per conversation; resources need not be reread before every call.
 ## Choose the index and tool
 
 - **Catalog:** `get_author_works`, `search_documents` and batch metadata lookup
-  answer paper metadata questions. The full paper catalog exceeds content coverage.
+  answer document metadata questions. The full catalogue exceeds content coverage.
+  When `run_sql` is advertised, read `retrieval://catalog-schema` and use grouped
+  SQL for catalogue-wide author/year/coverage aggregates; do not aggregate the
+  first 50 `search_documents` results.
 - **Lexical:** `search_corpus(mode="lexical")` searches the Zoekt-indexed
   Sanchaya corpus, including files outside the release's chunk scope. Its
   `lexical_revision` is independent of the release `corpus_revision`; when
@@ -24,6 +27,38 @@ guide once per conversation; resources need not be reread before every call.
   expand aliases or guarantee mentions beyond that subset.
 - **Passages:** only documents with release chunks can be fetched. Check
   `fetch_available`. An unavailable fetch does not mean the text lacks a match.
+
+## Catalogue aggregates (when enabled)
+
+`run_sql(query, max_rows=500)` queries `documents_v`, `authors_v`, `subjects_v`
+and `coverage_v`. The resource `retrieval://catalog-schema` describes their
+columns, counted data issues, restrictions, and examples. These additions are
+absent when the operator has not enabled catalogue SQL.
+
+For example, “Which authors have the most works, and how many have full text?”:
+
+```sql
+SELECT a.author_id, a.author_norm,
+       COUNT(DISTINCT a.document_id) AS catalogued,
+       COUNT(DISTINCT CASE WHEN d.indexed_in_release = 1 THEN a.document_id END) AS full_text
+FROM authors_v a JOIN documents_v d USING (document_id)
+WHERE a.author_id IS NOT NULL AND d.source_kind = 'patra-darpan'
+GROUP BY a.author_id, a.author_norm
+ORDER BY catalogued DESC, a.author_id
+LIMIT 20
+```
+
+Report the SQL and catalogue revision with an aggregate answer. Do not call all
+catalogue records papers: acquisition provenance does not classify scholarly
+document type. Author IDs normalize names, not fully disambiguated people;
+disclose unreviewed/ambiguous and missing names. Include unknown years in decade
+totals, and report untagged documents before interpreting subject counts.
+
+Inspect `truncated` and `truncation_reason`; `row_count` is returned rows, not
+the total number of matches. Row/byte-limited results are not complete lists.
+Use deterministic ORDER BY and keyset predicates for further pages. One SELECT
+with optional WITH is accepted, but only listed views and safe functions are
+allowed. SQL cannot fetch document content or access the filesystem.
 
 ## Explore ontology knowledge
 

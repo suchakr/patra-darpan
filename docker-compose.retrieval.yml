@@ -54,6 +54,7 @@ services:
       # missing. Keep the secret in the untracked env file, never in Git.
       MCP_AUTH_REQUIRED: ${MCP_AUTH_REQUIRED:-true}
       MCP_BEARER_TOKEN: ${MCP_BEARER_TOKEN:-}
+      MCP_CATALOG_SQL_ENABLED: ${MCP_CATALOG_SQL_ENABLED:-false}
     volumes:
       - ${RETRIEVAL_RELEASE_ROOT:?Set RETRIEVAL_RELEASE_ROOT}:/var/lib/retrieval/releases:ro
       - ${RETRIEVAL_MODEL_CACHE_ROOT:?Set RETRIEVAL_MODEL_CACHE_ROOT}:/cache/huggingface
@@ -86,6 +87,7 @@ services:
       MCP_PORT: 8788
       MCP_TRANSPORT: streamable-http
       MCP_AUTH_MODE: oauth
+      MCP_CATALOG_SQL_ENABLED: ${MCP_CATALOG_SQL_ENABLED:-false}
       MCP_OAUTH_ISSUER_URL: ${MCP_OAUTH_ISSUER_URL:-}
       MCP_OAUTH_RESOURCE_URL: ${MCP_OAUTH_RESOURCE_URL:-}
       MCP_OAUTH_REDIRECT_URI: ${MCP_OAUTH_REDIRECT_URI:-}
