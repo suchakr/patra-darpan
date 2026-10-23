@@ -16,7 +16,7 @@ from unittest.mock import patch
 from lib.retrieval_catalog import CATALOG_SCHEMA, CatalogAdapter
 from lib.retrieval_catalog_sql import (
     AUTHOR_ALIASES, BEARER_SQL_ID, CatalogSQLService, MAX_ROWS, WIRE_BUDGET,
-    CatalogSQLError, _split_authors, mcp_envelope, token_identifier,
+    CatalogSQLError, _authorize, _private_identifier, _split_authors, mcp_envelope, token_identifier,
 )
 
 
@@ -166,6 +166,21 @@ class CatalogSQLTests(unittest.TestCase):
                             "SELECT COUNT(*) FROM x JOIN authors_v USING(document_id)")
         self.assertGreater(result["rows"][0][0], 0)
         self.assertEqual(self.query("SELECT '; DROP TABLE x;' AS harmless;")["rows"], [["; DROP TABLE x;"]])
+
+    def test_sqlite_346_and_350_optimized_count_callback_variants(self):
+        # Production 3.46 omits the database name; macOS 3.50 supplies "main".
+        # This callback is safe only after the separate private-identifier gate.
+        for database in (None, "main"):
+            self.assertEqual(_authorize(sqlite3.SQLITE_READ, "_documents", "", database, None),
+                             sqlite3.SQLITE_OK)
+        for table, column, database in (("_documents", "title", None), ("sqlite_schema", "", None),
+                                        ("_documents", "", "other")):
+            self.assertEqual(_authorize(sqlite3.SQLITE_READ, table, column, database, None),
+                             sqlite3.SQLITE_DENY)
+        for sql in ("SELECT COUNT(*) FROM _documents", "SELECT COUNT(*) FROM main.\"_documents\"",
+                    "WITH documents_v AS (SELECT * FROM [_documents]) SELECT COUNT(*) FROM documents_v"):
+            self.assertTrue(_private_identifier(sql))
+            self.assertIn("error", self.sql.run_sql(sql))
 
     def test_row_limit_detects_truncation_without_claiming_total(self):
         result = self.query("SELECT document_id FROM documents_v ORDER BY document_id", max_rows=2)

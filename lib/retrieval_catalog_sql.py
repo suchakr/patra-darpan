@@ -213,13 +213,14 @@ def _authorize(action: int, arg1: str | None, arg2: str | None,
                database: str | None, source: str | None) -> int:
     if action == sqlite3.SQLITE_SELECT:
         return sqlite3.SQLITE_OK
-    if action == sqlite3.SQLITE_READ and database == "main":
-        if arg1 in VIEW_COLUMNS or (source in _TABLES and arg1 == _TABLES[source]):
+    if action == sqlite3.SQLITE_READ:
+        if database == "main" and (arg1 in VIEW_COLUMNS or (source in _TABLES and arg1 == _TABLES[source])):
             return sqlite3.SQLITE_OK
         # SQLite's COUNT(*) / constant projection optimization produces a
-        # column-less base read without view provenance. Private identifier
+        # column-less base read without view provenance. SQLite 3.46 also
+        # omits the database name here; 3.50 reports "main". Private identifier
         # validation has already ruled out direct references to these tables.
-        if arg1 in _TABLES.values() and arg2 == "" and source is None:
+        if database in (None, "main") and arg1 in _TABLES.values() and arg2 == "" and source is None:
             return sqlite3.SQLITE_OK
     if action == sqlite3.SQLITE_FUNCTION and (arg2 or "").lower() in _FUNCTIONS:
         return sqlite3.SQLITE_OK

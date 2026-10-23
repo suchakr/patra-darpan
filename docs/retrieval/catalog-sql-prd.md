@@ -168,3 +168,19 @@ database download access, and changes to the existing search tool contracts.
   whitespace checks pass.
 - Existing source databases, saved releases and live indexes were not modified. No production deployment,
   interactive Google login, model download, paid call, commit or push was performed.
+
+### Linux rollout preflight compatibility correction
+
+The initial feature was committed as `7de544b`. Before replacing either serving
+container, the new image's SQL tests were run on the production Linux runtime.
+SQLite 3.46.1 reported an optimized view COUNT(*) base-read callback with both
+database and view provenance NULL; macOS SQLite 3.50.4 supplied database `main`.
+The default-deny authorizer therefore rejected legitimate counts on Linux.
+
+The correction accepts only that specific column-less private-table read for
+NULL/`main` database, still behind the independent private-identifier gate.
+Ordinary raw-column reads, schema reads, other databases and direct private-table
+SQL remain denied. A regression explicitly exercises both callback variants and
+the private-table/CTE spoofing rejection. The SQL suite now has 21 tests. Linux
+image tests and production-catalogue reconciliation must pass before enablement;
+macOS-only verification is insufficient for this SQL authorization boundary.
