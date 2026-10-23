@@ -1,6 +1,7 @@
 # Catalogue SQL access — PRD and implementation contract
 
-Status: implemented locally; production enablement is a separate operator action.
+Status: implemented, tested and enabled in production on 2026-10-23.
+The opt-in default remains off for new installations.
 
 ## Purpose
 
@@ -184,3 +185,34 @@ SQL remain denied. A regression explicitly exercises both callback variants and
 the private-table/CTE spoofing rejection. The SQL suite now has 21 tests. Linux
 image tests and production-catalogue reconciliation must pass before enablement;
 macOS-only verification is insufficient for this SQL authorization boundary.
+
+### Production rollout — 2026-10-23
+
+- Feature commit `7de544b`; SQLite compatibility correction `d4926e1`.
+  Both were pushed to main and fast-forwarded on `sourcegraph-spot`.
+- Final local retrieval/auth/release suite: 96 tests passed. All 21 SQL tests
+  passed inside the production Linux image before either serving container was
+  replaced. Production read-only catalogue smoke reconciled 2,024 Patra Darpaṇa
+  records / 150 indexed, plus 34 Sanchaya texts / 34 indexed.
+- Runtime image: `sha256:76378aee5cd524fdfb80fa111368b0bd6e5695127a107fceb400ff95f53cb753`.
+  SQL enabled in both bearer and OAuth processes. Only those processes were
+  recreated. Existing backend, entity, lexical/vector, search-feature and bearer
+  SQL protocol smoke checks passed. OAuth discovery and unauthenticated route
+  protection passed; the existing authenticated Sanchaya client successfully
+  called `get_corpus_info` and read `retrieval://catalog-schema`. No fresh Google
+  login was performed; this already-open chat's cached tool list needs a refresh
+  before invoking the newly added `run_sql` through that client.
+- Active release remains `retrieval-jyotisham-all-080b5f6-inc-722eba369e`.
+  Active-release file SHA-256 remains
+  `81ba105f0df7f7e448bd686f720b5f8f533c3842874ec3b6648c8cd69843cbb7`;
+  catalogue SHA-256 remains
+  `c48048a49f536b8d1a8d893b0244a9e7c3102feed54d8388b2b8e51b86156e73`.
+  Qdrant collection remains `sanchaya-inc-080b5f66-722eba369ec06f84`.
+  No catalogue/release rebuild, re-embedding, Zoekt reindex or corpus publication.
+- Rollback image retained as
+  `patra-darpan-retrieval-mcp:pre-catalog-sql-d4926e1`; prior private env retained
+  at `/etc/patra-darpan/retrieval.env.pre-catalog-sql-d4926e1` with mode 600.
+  Ordinary capability rollback is setting `MCP_CATALOG_SQL_ENABLED=false` and
+  recreating only the two MCP processes.
+- `/mnt` remains 90% used with approximately 1.6 GiB available. Cached runtime
+  layers were reused; no image, volume, index or other data cleanup was done.
