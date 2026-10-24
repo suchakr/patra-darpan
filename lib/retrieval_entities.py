@@ -23,8 +23,8 @@ from pathlib import Path
 from typing import Any, Iterable, Iterator
 
 
-ENTITY_EXTRACTOR_VERSION = "starter-gazetteer-0.1.0"
-MENTION_SCHEMA_VERSION = "retrieval.entity-mention.v1"
+ENTITY_EXTRACTOR_VERSION = "starter-gazetteer-0.2.0"
+MENTION_SCHEMA_VERSION = "retrieval.entity-mention.v2"
 REGISTRY_SCHEMA_VERSION = "retrieval.entity-registry.v1"
 BUILD_SCHEMA_VERSION = "retrieval.entity-build.v1"
 
@@ -38,6 +38,7 @@ class AliasTarget:
     preferred_label: str
     alias: str
     normalized_alias: str
+    ambiguous: bool = False
 
 
 @dataclass(frozen=True)
@@ -160,6 +161,8 @@ def load_alias_targets(ontology: dict[str, Any]) -> tuple[dict[str, tuple[AliasT
     casefold = bool(config.get("latin_casefold", True))
     by_alias: dict[str, list[AliasTarget]] = defaultdict(list)
     seen_ids: set[str] = set()
+    ambiguous_alias_count = 0
+    ambiguity_assessment_enabled = False
 
     for raw in entities:
         if not isinstance(raw, dict):
@@ -176,16 +179,45 @@ def load_alias_targets(ontology: dict[str, Any]) -> tuple[dict[str, tuple[AliasT
         if not isinstance(raw_aliases, list):
             raise ValueError(f"aliases must be a list for {entity_id}")
         aliases = [preferred, *(str(alias).strip() for alias in raw_aliases)]
+        attributes = raw.get("attributes") or {}
+        if not isinstance(attributes, dict):
+            raise ValueError(f"attributes must be an object for {entity_id}")
+        has_ambiguity_field = "ambiguous_aliases" in attributes
+        ambiguity_assessment_enabled = ambiguity_assessment_enabled or has_ambiguity_field
+        raw_ambiguous_aliases = attributes.get("ambiguous_aliases", [])
+        if not isinstance(raw_ambiguous_aliases, list):
+            raise ValueError(f"attributes.ambiguous_aliases must be a list for {entity_id}")
+        ambiguous_forms: set[str] = set()
+        declared_forms = {_normal_form(alias, casefold=casefold) for alias in aliases if alias}
+        for item in raw_ambiguous_aliases:
+            if not isinstance(item, dict):
+                raise ValueError(f"ambiguous_aliases entries must be objects for {entity_id}")
+            form = str(item.get("form") or "").strip()
+            if not form:
+                raise ValueError(f"ambiguous_aliases entries require a form for {entity_id}")
+            normalized_form = _normal_form(form, casefold=casefold)
+            if normalized_form not in declared_forms:
+                raise ValueError(f"ambiguous alias is not a declared alias for {entity_id}: {form!r}")
+            if normalized_form in ambiguous_forms:
+                raise ValueError(f"duplicate ambiguous alias for {entity_id}: {form!r}")
+            ambiguous_forms.add(normalized_form)
+            ambiguous_alias_count += 1
         for alias in aliases:
             if not alias:
                 continue
             normalized = _normal_form(alias, casefold=casefold)
-            target = AliasTarget(entity_id, entity_type, preferred, alias, normalized)
+            target = AliasTarget(entity_id, entity_type, preferred, alias, normalized, normalized in ambiguous_forms)
             if target not in by_alias[normalized]:
                 by_alias[normalized].append(target)
 
     targets = {key: tuple(value) for key, value in by_alias.items()}
-    return targets, {"casefold": casefold, "entity_count": len(seen_ids), "alias_count": len(targets)}
+    return targets, {
+        "casefold": casefold,
+        "entity_count": len(seen_ids),
+        "alias_count": len(targets),
+        "ambiguity_assessment_enabled": ambiguity_assessment_enabled,
+        "ambiguous_alias_count": ambiguous_alias_count,
+    }
 
 
 def find_matches(text: str, alias_targets: dict[str, tuple[AliasTarget, ...]], *, casefold: bool = True) -> list[Match]:
@@ -261,6 +293,7 @@ def mention_from_match(
     *,
     corpus_revision: str,
     ontology_version_value: str,
+    ambiguity_assessment_enabled: bool = False,
 ) -> dict[str, Any]:
     """Convert one match into the versioned graph-edge observation."""
 
@@ -319,6 +352,8 @@ def mention_from_match(
         "ontology_version": ontology_version_value,
         "related_chunk_ids": [str(chunk.get("chunk_id") or "")],
     }
+    if ambiguity_assessment_enabled:
+        record["ambiguous"] = any(target.ambiguous for target in match.targets)
     return record
 
 
@@ -342,7 +377,20 @@ def iter_mentions(
                 match,
                 corpus_revision=corpus_revision,
                 ontology_version_value=ontology_version_value,
+                ambiguity_assessment_enabled=bool(config["ambiguity_assessment_enabled"]),
             )
+
+
+def _mention_assessment(mentions: Iterable[dict[str, Any]]) -> dict[str, int]:
+    rows = list(mentions)
+    flagged = sum(row.get("ambiguous") is True for row in rows)
+    unflagged = sum(row.get("ambiguous") is False for row in rows)
+    return {
+        "total": len(rows),
+        "flagged": flagged,
+        "unflagged": unflagged,
+        "unassessed": len(rows) - flagged - unflagged,
+    }
 
 
 def registry_from_mentions(
@@ -392,6 +440,7 @@ def registry_from_mentions(
                 "aliases": [str(alias) for alias in raw.get("aliases") or []],
                 "status": "seed",
                 "mention_count": len(rows),
+                "mention_assessment": _mention_assessment(rows),
                 "document_count": len(document_ids),
                 "document_ids": document_ids,
                 "chunk_ids": chunk_ids,
@@ -421,6 +470,7 @@ def build_summary(
         "corpus_revision": corpus_revision,
         "chunks_seen": chunks_seen,
         "mention_count": len(mentions),
+        "mention_assessment": _mention_assessment(mentions),
         "resolved_mention_count": resolved,
         "candidate_mention_count": candidate,
         "document_count_with_mentions": len(documents),

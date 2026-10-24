@@ -228,6 +228,8 @@ def build_mcp(service: RetrievalService, *, oauth_provider: Any | None = None):
         name="lookup_entity",
         description=("Resolve a name/alias to canonical IDs and corpus occurrence counts; return bounded "
                      "ontology attributes, labelled incoming/outgoing relations, ontology version and curation references. "
+                     "Each result's mention_assessment reports total, flagged, unflagged and unassessed mentions. "
+                     "Unflagged means not listed in attributes.ambiguous_aliases, not contextually verified. "
                      "These are ontology assertions, not passage evidence. Follow related entities using "
                      "target_preferred_label; check knowledge/results truncation flags."),
     )
@@ -301,7 +303,9 @@ def build_mcp(service: RetrievalService, *, oauth_provider: Any | None = None):
 
     @server.tool(
         name="get_corpus_info",
-        description="Report release/index coverage and search capabilities; read retrieval://search-guide for syntax and best practices.",
+        description=("Report release/index coverage and search capabilities. The entity_index includes total, flagged, "
+                     "unflagged and unassessed mention counts; read retrieval://search-guide for their meanings "
+                     "and for syntax and best practices."),
     )
     def get_corpus_info() -> dict[str, Any]:
         try:
@@ -377,7 +381,9 @@ def build_mcp(service: RetrievalService, *, oauth_provider: Any | None = None):
 
     @server.tool(
         name="list_entity_mentions",
-        description="Browse resolved mentions and evidence links for a canonical entity ID.",
+        description=("Browse resolved mentions and evidence links for a canonical entity ID. "
+                     "The response includes total, flagged, unflagged and unassessed counts; unflagged means "
+                     "not listed in attributes.ambiguous_aliases, not contextually verified."),
     )
     def list_entity_mentions(entity_id: str, offset: int = 0, limit: int = 20) -> dict[str, Any]:
         try:

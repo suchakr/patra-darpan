@@ -77,10 +77,16 @@ types, preferred labels, aliases, ontology status, and occurrence statistics
 and document/chunk links needed by the resolver. The current registry builder
 does not copy ontology attributes or relations into this artifact.
 
-`entity-mentions.jsonl` has one resolved occurrence per row. It links an entity
-ID to a document, chunk, matched surface form, character span, and evidence
-context. Mention rows are evidence links; ontology relations are stored in the
-versioned ontology and are not inferred merely from co-occurrence.
+`entity-mentions.jsonl` has one occurrence per row. Resolved rows link a
+canonical entity ID to a document, chunk, matched surface form, character
+span, and evidence context; unresolved collisions retain candidate IDs. New
+rows use `retrieval.entity-mention.v2`. When the ontology has an
+`ambiguous_aliases` assessment list, each new row also carries an `ambiguous`
+boolean. Older rows without that field are unassessed. A false value means
+only that the matched alias is not on the finite marker list, not that its
+contextual sense has been verified. Mention rows are evidence links; ontology
+relations are stored in the versioned ontology and are not inferred merely
+from co-occurrence.
 
 The versioned ontology is the reviewed seed vocabulary and relationship graph.
 MCP reads its knowledge by entity ID alongside the release's occurrence
@@ -140,6 +146,13 @@ the canonical `from_entity_id`/`to_entity_id`, and the related entity's
 entity is the edge's source. Follow its preferred label with `lookup_entity`;
 authorship and composition-location relations remain attached to the work.
 
+Entity lookup and mention browsing include `mention_assessment` with `total`,
+`flagged`, `unflagged`, and `unassessed` counts. In `lookup_entity` the counts
+are for the matched entity's resolved mention rows; in `get_corpus_info` and
+`retrieval://ontology-context` they cover all mention rows in the release.
+Missing flags, including legacy rows, count as unassessed. These are
+alias-level disclosures, not contextual classification.
+
 Knowledge is limited to 20 relations and 8 KiB per entity, including its
 knowledge metadata. Complete attribute values are retained or omitted;
 strings are not cut into partial values. Counts and `attributes_truncated`,
@@ -153,7 +166,9 @@ and `byte_limit_reached` distinguishes the byte cap from the requested limit.
 `retrieval://ontology-context` remains a compact discovery vocabulary with
 `knowledge_lookup` guidance instead of repeated attributes and graph edges.
 It retains `retrieval.ontology-context.v1`; `entity_count` and
-`entities_truncated` describe its 64,000-byte vocabulary limit. Ontology
+`entities_truncated` describe its 64,000-byte vocabulary limit. Each included
+entity carries its mention-assessment counts and the resource carries a
+whole-release count. Ontology
 assertions and coarse entity source references are not passage evidence or
 edge-level citations. Use mention browsing and fetched passages for evidence.
 

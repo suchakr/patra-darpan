@@ -298,6 +298,27 @@ class EntityAdapter:
                 if label:
                     self._aliases.append((str(label), _normal_form(str(label)), entity_id))
 
+    @staticmethod
+    def _mention_assessment(
+        rows: Iterable[dict[str, Any]], *, total_hint: Any = None
+    ) -> dict[str, int]:
+        """Count explicit flags while treating legacy/missing flags as unassessed."""
+
+        mentions = list(rows)
+        flagged = sum(row.get("ambiguous") is True for row in mentions)
+        unflagged = sum(row.get("ambiguous") is False for row in mentions)
+        try:
+            total = max(len(mentions), int(total_hint)) if total_hint is not None else len(mentions)
+        except (TypeError, ValueError):
+            total = len(mentions)
+        unassessed = total - flagged - unflagged
+        return {
+            "total": total,
+            "flagged": flagged,
+            "unflagged": unflagged,
+            "unassessed": unassessed,
+        }
+
     @property
     def ontology_context(self) -> dict[str, Any]:
         entities = self.ontology.get("entities") or []
@@ -311,6 +332,7 @@ class EntityAdapter:
             "entities": [],
             "entity_count": len(entities),
             "entities_truncated": False,
+            "mention_assessment": self._mention_assessment(self.mentions),
             "knowledge_lookup": {
                 "tool": "lookup_entity",
                 "fields": ["attributes", "relations", "ontology", "source_ref", "curation_status"],
@@ -324,6 +346,7 @@ class EntityAdapter:
                 "Knowledge is a curated/pilot ontology assertion, not proof from a corpus passage. Entity source_ref is not an edge-level citation.",
                 "An outgoing edge starts at the queried entity; an incoming edge ends there. target_entity_id and target_preferred_label name the related entity; follow its preferred label with lookup_entity.",
                 "Use list_entity_mentions and fetched passages for corpus evidence. Entity-ID search filters restrict known mentions; they do not expand aliases or imply full-corpus coverage.",
+                "mention_assessment counts alias-level ambiguity flags: flagged is explicitly listed in attributes.ambiguous_aliases; unflagged means not listed, not contextually verified; legacy rows without the flag are unassessed.",
                 "Check attributes_truncated, relations_truncated and results_truncated before assuming complete knowledge. Canonical edges win over a stale node-local projection, reported by relation_projection_consistent.",
             ],
             "corpus_revision": self.release.corpus_revision,
@@ -336,6 +359,11 @@ class EntityAdapter:
             compact = {"id": row.get("id"), "type": row.get("type"),
                        "preferred_label": row.get("preferred_label"),
                        "aliases": list(row.get("aliases") or [])}
+            entity_id = str(row.get("id") or "")
+            registry_row = self._by_id.get(entity_id) or {}
+            compact["mention_assessment"] = self._mention_assessment(
+                self._mentions_by_id.get(entity_id, []), total_hint=registry_row.get("mention_count")
+            )
             result["entities"].append(compact)
             if json_bytes(result) > ONTOLOGY_CONTEXT_BYTE_LIMIT:
                 result["entities"].pop()
@@ -404,13 +432,17 @@ class EntityAdapter:
             seen.add(entity_id)
             source = self._by_id.get(entity_id) or {}
             document_ids = [str(value) for value in source.get("document_ids") or [] if value]
+            mention_assessment = self._mention_assessment(
+                self._mentions_by_id.get(entity_id, []), total_hint=source.get("mention_count")
+            )
             row = {
                 "entity_id": entity_id,
                 "entity_type": source.get("entity_type"),
                 "preferred_label": source.get("preferred_label"),
                 "aliases": list(source.get("aliases") or []),
                 "status": source.get("status"),
-                "mention_count": int(source.get("mention_count") or 0),
+                "mention_count": mention_assessment["total"],
+                "mention_assessment": mention_assessment,
                 "document_count": int(source.get("document_count") or len(document_ids)),
                 "document_ids": document_ids[:25],
                 "document_ids_truncated": len(document_ids) > 25,
@@ -438,6 +470,7 @@ class EntityAdapter:
             "schema_version": "retrieval.entity-mentions.v1",
             "entity_id": entity_id,
             "total": len(rows),
+            "mention_assessment": self._mention_assessment(rows),
             "offset": offset,
             "limit": limit,
             "mentions": rows[offset : offset + limit],
@@ -471,6 +504,7 @@ class EntityAdapter:
         return {
             "registry_entity_count": len(self.registry),
             "mention_count": len(self.mentions),
+            "mention_assessment": self._mention_assessment(self.mentions),
             "document_count": len(document_ids),
             "ontology_version": self.ontology.get("version"),
             "corpus_revision": self.release.corpus_revision,

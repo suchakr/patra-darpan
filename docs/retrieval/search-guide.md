@@ -22,7 +22,12 @@ guide once per conversation; resources need not be reread before every call.
   top-k view. Use lexical mode for match counts and continuation.
 - **Entities:** `lookup_entity` resolves explicit ontology aliases and returns
   bounded attributes, labelled incoming/outgoing relations and curation references.
-  `list_entity_mentions` pages known mentions in the entity projection.
+  `lookup_entity`, `list_entity_mentions`, `get_corpus_info`, and
+  `retrieval://ontology-context` disclose `mention_assessment` counts: total,
+  flagged, unflagged, and unassessed. Flagged forms are explicitly listed in
+  `attributes.ambiguous_aliases`; unflagged means only “not on that finite
+  list,” not contextually verified. Older mention rows without the flag are
+  unassessed. `list_entity_mentions` pages known mentions in the entity projection.
   `entity_ids` filters search to known entity documents/chunks; it does not
   expand aliases or guarantee mentions beyond that subset.
 - **Passages:** only documents with release chunks can be fetched. Check

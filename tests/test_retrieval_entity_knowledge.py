@@ -39,16 +39,18 @@ class EntityKnowledgeTests(unittest.TestCase):
         self.addCleanup(self.directory.cleanup)
         self.root = Path(self.directory.name)
 
-    def adapter(self, ontology=None):
+    def adapter(self, ontology=None, *, mentions=None, mention_count=37):
         ontology = ontology if ontology is not None else ontology_fixture()
         (self.root / "ontology.json").write_text(json.dumps(ontology), encoding="utf-8")
         registry = [{"entity_id": e["id"], "entity_type": e["type"],
                      "preferred_label": e["preferred_label"], "aliases": e.get("aliases", []),
-                     "status": "seed", "mention_count": 37, "document_count": 2,
+                     "status": "seed", "mention_count": mention_count, "document_count": 2,
                      "document_ids": ["doc:a", "doc:b"], "corpus_revision": "revision"}
                     for e in ontology["entities"]]
         (self.root / "registry.jsonl").write_text("\n".join(json.dumps(r) for r in registry), encoding="utf-8")
-        (self.root / "mentions.jsonl").write_text("", encoding="utf-8")
+        (self.root / "mentions.jsonl").write_text(
+            "\n".join(json.dumps(row) for row in (mentions or [])), encoding="utf-8"
+        )
         release = Release(self.root / "active-release.json", {
             "release_id": "test", "source": {"sanchaya_commit": "revision"},
             "pipeline": {"ontology": {"id": "test", "version": "0.3.0"}},
@@ -64,6 +66,9 @@ class EntityKnowledgeTests(unittest.TestCase):
         row = result["results"][0]
         self.assertEqual(row["entity_id"], "test:work")
         self.assertEqual((row["mention_count"], row["document_count"]), (37, 2))
+        self.assertEqual(row["mention_assessment"], {
+            "total": 37, "flagged": 0, "unflagged": 0, "unassessed": 37,
+        })
         self.assertEqual(row["document_ids"], ["doc:a", "doc:b"])
         self.assertEqual(row["attributes"], {"description": "A work"})
         self.assertEqual(row["ontology"], {"id": "test", "version": "0.3.0"})
@@ -167,7 +172,11 @@ class EntityKnowledgeTests(unittest.TestCase):
         context = adapter.ontology_context
         self.assertEqual(context["schema_version"], "retrieval.ontology-context.v1")
         self.assertEqual(context["entities"][0], {"id": "test:work", "type": "work",
-                         "preferred_label": "Śāstra", "aliases": ["शास्त्र", "Shastra"]})
+                         "preferred_label": "Śāstra", "aliases": ["शास्त्र", "Shastra"],
+                         "mention_assessment": {"total": 37, "flagged": 0, "unflagged": 0, "unassessed": 37}})
+        self.assertEqual(context["mention_assessment"], {
+            "total": 0, "flagged": 0, "unflagged": 0, "unassessed": 0,
+        })
         self.assertEqual(context["knowledge_lookup"]["tool"], "lookup_entity")
         self.assertTrue(set(context["knowledge_lookup"]["fields"]) <= set(adapter.lookup("शास्त्र")["results"][0]))
         self.assertNotIn("relations", context["entities"][0])
@@ -194,6 +203,20 @@ class EntityKnowledgeTests(unittest.TestCase):
         self.assertEqual(lookup.outputSchema["type"], "object")
         self.assertIsNot(lookup.outputSchema.get("additionalProperties"), False)
         self.assertEqual(len(tools), 10)
+        self.assertIn("flagged, unflagged and unassessed", lookup.description)
+
+    def test_lookup_list_and_coverage_disclose_flagged_unflagged_and_legacy_rows(self):
+        rows = [
+            {"canonical_entity_id": "test:work", "ambiguous": True, "corpus_revision": "revision"},
+            {"canonical_entity_id": "test:work", "ambiguous": False, "corpus_revision": "revision"},
+            {"canonical_entity_id": "test:work", "corpus_revision": "revision"},
+        ]
+        adapter = self.adapter(mentions=rows, mention_count=3)
+        expected = {"total": 3, "flagged": 1, "unflagged": 1, "unassessed": 1}
+        lookup = adapter.lookup("Śāstra")["results"][0]
+        self.assertEqual(lookup["mention_assessment"], expected)
+        self.assertEqual(adapter.list_mentions("test:work")["mention_assessment"], expected)
+        self.assertEqual(adapter.coverage_info()["mention_assessment"], expected)
 
 
 if __name__ == "__main__":
