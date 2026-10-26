@@ -177,6 +177,29 @@ make mcp-smoke
 Rebuild projections as well if the metadata change affects source selection,
 identity, or provenance referenced by chunks.
 
+### Ontology-only entity candidate
+
+When the corpus, chunks, catalog and vector collection are unchanged but the
+ontology changes, build a standalone candidate from the exact base release:
+
+```bash
+uv run python scripts/build_retrieval_entity_release.py \
+  --base-release /path/to/releases/active-release.json \
+  --ontology ontology/jyotisha-v0.3.1.json \
+  --output-root /tmp/patra-darpan-entity-candidate
+```
+
+The output root must be outside the configured release root. The builder
+verifies every base artifact hash, retains catalog/chunks/vector provenance,
+rebuilds only the ontology snapshot and entity projections, and loads the
+result through the normal release and entity adapters. It never writes an
+`active-release.json` pointer or the configured release root. By default this
+is a file-level candidate check and does not contact Qdrant; add
+`--qdrant-url http://127.0.0.1:6333` for a read-only audit of collection
+dimensions, point IDs and chunk payload keys. Do not stage or activate a
+candidate until the vector inventory has been audited and publication is
+approved.
+
 ### Sanchaya revision with unchanged selected bytes
 
 If a Sanchaya cleanup changes Git history or lexical/catalog provenance but a

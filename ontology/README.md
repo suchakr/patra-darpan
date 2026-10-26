@@ -11,7 +11,7 @@ runtime or build dependencies.
 | `jyotisha-v0.1.json` | Normalized 16-entity seed snapshot with provenance and curation fields. |
 | `jyotisha-v0.2.json` | 143 entities and 632 normalized aliases; no graph edges. |
 | `jyotisha-v0.3.json` | v0.2 plus 147 typed graph edges and local relation projections. |
-| `jyotisha-v0.3.1.json` | v0.3 with 18 alias-level ambiguity markers and three approved data edits; v0.3 remains the active pilot input pending a separate release decision. |
+| `jyotisha-v0.3.1.json` | v0.3 with 16 alias-level ambiguity markers and three approved data edits; v0.3 remains the active pilot input pending a separate release decision. |
 
 The active pilot input is `jyotisha-v0.3.json`. Versioned files are immutable
 snapshots; create a new version when the contract or vocabulary changes.
@@ -28,3 +28,9 @@ approved value reflects the dual Aśvins, and the deviation is recorded in the
 entity's `v031_changes` field. Ambiguity markers identify forms for disclosure;
 they do not establish that an occurrence is a false positive or resolve its
 contextual sense.
+
+The `Node` ambiguity marker on Pāta and `Cancer` marker on Karka were removed
+before v0.3.1 is released. The aliases remain unchanged: corpus evidence shows
+`Node` is predominantly the intended lunar or planetary node, while `Cancer`
+is likely the zodiac sign or Tropic of Cancer in this corpus. This adjusts
+disclosure counts only; it does not filter or delete extractor mentions.

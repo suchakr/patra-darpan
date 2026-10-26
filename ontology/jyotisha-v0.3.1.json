@@ -3,7 +3,7 @@
   "ontology_id": "jyotisha",
   "version": "0.3.1",
   "status": "pilot",
-  "label": "Jyotisha starter ontology with knowledge graph relationships (v0.3.1 corrections and ambiguous-alias markers)",
+  "label": "Jyotisha starter ontology with knowledge graph relationships (v0.3.1 corrections and ambiguity markers)",
   "sources": [
     {
       "id": "cahc_n28_full_meta",
@@ -1689,13 +1689,7 @@
         "order": 4,
         "span_deg": 30.0,
         "start_deg": 90.0,
-        "end_deg": 120.0,
-        "ambiguous_aliases": [
-          {
-            "form": "Cancer",
-            "sense": "also the disease"
-          }
-        ]
+        "end_deg": 120.0
       },
       "curation_status": "source_derived",
       "relations": [
@@ -1705,7 +1699,7 @@
         }
       ],
       "v031_changes": [
-        "attributes.ambiguous_aliases added (aliases unchanged)"
+        "Cancer ambiguity marker removed before release (alias retained)"
       ]
     },
     {
@@ -3763,10 +3757,6 @@
           {
             "form": "पात",
             "sense": "ordinary word: fall, descent"
-          },
-          {
-            "form": "Node",
-            "sense": "ordinary English word"
           }
         ]
       },
@@ -3778,7 +3768,8 @@
         }
       ],
       "v031_changes": [
-        "attributes.ambiguous_aliases added (aliases unchanged)"
+        "attributes.ambiguous_aliases added (aliases unchanged)",
+        "Node ambiguity marker removed before release (alias retained)"
       ]
     },
     {

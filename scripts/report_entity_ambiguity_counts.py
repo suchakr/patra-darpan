@@ -12,6 +12,7 @@ import argparse
 import hashlib
 import json
 import sys
+import subprocess
 import unicodedata
 from pathlib import Path
 from typing import Any
@@ -33,6 +34,17 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--target-ontology", type=Path, default=ROOT / "ontology" / "jyotisha-v0.3.1.json"
+    )
+    parser.add_argument(
+        "--previous-target-ontology",
+        type=Path,
+        default=None,
+        help="optional earlier target snapshot used to report removed ambiguity markers",
+    )
+    parser.add_argument(
+        "--previous-target-git-ref",
+        default=None,
+        help="optional git show ref:path for an earlier target snapshot",
     )
     parser.add_argument("--provisional-ontology", type=Path, required=True)
     parser.add_argument("--output", type=Path, default=None, help="Markdown report path; defaults to stdout")
@@ -94,6 +106,17 @@ def marked_forms(ontology: dict[str, Any]) -> list[tuple[str, str, str]]:
     return result
 
 
+def removed_marker_forms(
+    previous: dict[str, Any], current: dict[str, Any]
+) -> list[tuple[str, str, str]]:
+    current_keys = {(entity_id, form) for entity_id, form, _ in marked_forms(current)}
+    return [
+        row
+        for row in marked_forms(previous)
+        if (row[0], row[1]) not in current_keys
+    ]
+
+
 def provisional_variants(ontology: dict[str, Any]) -> list[tuple[str, str, str]]:
     result = []
     canonicalize = normalizer(ontology)
@@ -136,9 +159,26 @@ def count_rows(
 
 def main() -> int:
     args = parse_args()
+    if args.previous_target_ontology and args.previous_target_git_ref:
+        raise ValueError("choose either --previous-target-ontology or --previous-target-git-ref")
     chunks = list(read_jsonl(args.chunks))
     base = load_json(args.base_ontology)
     target = load_json(args.target_ontology)
+    previous_target_bytes = None
+    if args.previous_target_git_ref:
+        previous_target_bytes = subprocess.run(
+            ["git", "-C", str(ROOT), "show", args.previous_target_git_ref],
+            check=True,
+            capture_output=True,
+        ).stdout
+        previous_target = json.loads(previous_target_bytes.decode("utf-8"))
+        if not isinstance(previous_target, dict):
+            raise ValueError("previous target git ref must contain a JSON object")
+    elif args.previous_target_ontology:
+        previous_target = load_json(args.previous_target_ontology)
+        previous_target_bytes = args.previous_target_ontology.read_bytes()
+    else:
+        previous_target = None
     provisional = load_json(args.provisional_ontology)
     base_mentions = mentions_for(chunks, base, args.corpus_revision)
     target_mentions = mentions_for(chunks, target, args.corpus_revision)
@@ -149,10 +189,15 @@ def main() -> int:
     base_norm, target_norm, provisional_norm = map(normalizer, (base, target, provisional))
 
     markers = marked_forms(target)
+    removed_markers = (
+        removed_marker_forms(previous_target, target)
+        if previous_target is not None
+        else []
+    )
     variants = provisional_variants(provisional)
     removed = removed_aliases(base, target)
-    if len(markers) != 18:
-        raise ValueError(f"expected 18 marked forms, found {len(markers)}")
+    if not markers:
+        raise ValueError("target ontology has no ambiguity-marked forms")
     if len(variants) != 11:
         raise ValueError(f"expected 11 provisional spelling variants, found {len(variants)}")
 
@@ -166,9 +211,14 @@ def main() -> int:
         f"- Chunk SHA-256: `{sha256_file(args.chunks)}`",
         f"- v0.3 SHA-256: `{sha256_file(args.base_ontology)}`",
         f"- v0.3.1 SHA-256: `{sha256_file(args.target_ontology)}`",
+        *(
+            [f"- Previous target SHA-256: `{hashlib.sha256(previous_target_bytes).hexdigest()}`"]
+            if previous_target_bytes is not None
+            else []
+        ),
         f"- provisional ontology SHA-256: `{sha256_file(args.provisional_ontology)}`",
         "",
-        "Counts are extractor mention rows for each exact entity/form on the identical chunk inventory. “Unflagged” means the form is not listed in the finite ambiguity-marker list; it is not contextual or scholarly verification. v0.3 has no ambiguity assessment field, so its matching rows are unassessed. Contextual synonyms are not aliases and are excluded.",
+        "Counts are extractor mention rows for each exact entity/form on the identical chunk inventory. “Unflagged” means the form is not listed in the finite ambiguity-marker list; it is not contextual or scholarly verification. v0.3 has no ambiguity assessment field, so its matching rows are unassessed. Contextual synonyms are not aliases and are excluded. The provisional ontology is reported as supplied; it is not rebased by this script.",
         "",
         "## Ambiguity-marked forms (v0.3 → v0.3.1)",
         "",
@@ -182,6 +232,24 @@ def main() -> int:
         lines.append(
             f"| {label} (`{entity_id}`) | {form} | {len(before)} | {total} | {flagged} | {unflagged} | {unassessed} | {total-len(before):+d} |"
         )
+
+    if previous_target is not None:
+        lines.extend([
+            "",
+            "## Removed ambiguity markers (previous target → v0.3.1)",
+            "",
+            "Marker status is a disclosure label and does not affect matching. Counts remain stable where the aliases are unchanged.",
+            "",
+            "| Entity | Form | Previous flagged | Current total | Current flagged | Current unflagged | Current unassessed |",
+            "| --- | --- | ---: | ---: | ---: | ---: | ---: |",
+        ])
+        for entity_id, form, label in sorted(removed_markers, key=lambda row: (row[0], row[1])):
+            before = count_rows(base_index, entity_id, form, base_norm)
+            after = count_rows(target_index, entity_id, form, target_norm)
+            _, flagged, unflagged, unassessed = assessment(after)
+            lines.append(
+                f"| {label} (`{entity_id}`) | {form} | {len(before)} | {len(after)} | {flagged} | {unflagged} | {unassessed} |"
+            )
 
     lines.extend([
         "",
