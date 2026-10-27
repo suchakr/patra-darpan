@@ -89,7 +89,7 @@ citation. Use `list_entity_mentions` and fetched passages to seek evidence.
 Check `attributes_truncated`, `relations_truncated`, `knowledge_truncated`,
 and `results_truncated`; limits can omit knowledge or results. A false
 `relation_projection_consistent` means the node-local projection is stale;
-the canonical relation table is used. Ontology v0.4 remains deferred.
+the canonical relation table is used.
 
 ## Zoekt queries and filename-only results
 
