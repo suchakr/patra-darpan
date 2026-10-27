@@ -79,6 +79,35 @@ class EntityKnowledgeTests(unittest.TestCase):
         row["attributes"]["description"] = "changed by caller"
         self.assertEqual(adapter.lookup("Shastra")["results"][0]["attributes"]["description"], "A work")
 
+    def test_lookup_returns_item_status_for_provisional_and_approved_annotations(self):
+        ontology = ontology_fixture()
+        ontology["entities"][0]["attributes"].update({
+            "contextual_synonyms": [{"form": "Śāstra-name", "status": "provisional"}],
+            "variant_evidence": [{"form": "Sastra", "status": "approved"}],
+        })
+        adapter = self.adapter(ontology)
+        row = adapter.lookup("Śāstra")["results"][0]
+        self.assertEqual(
+            [item["status"] for item in row["attributes"]["contextual_synonyms"]],
+            ["provisional"],
+        )
+        self.assertEqual(
+            [item["status"] for item in row["attributes"]["variant_evidence"]],
+            ["approved"],
+        )
+        context = adapter.ontology_context
+        self.assertIn("attributes.contextual_synonyms[].status", context["knowledge_lookup"]["fields"])
+        self.assertIn("attributes.variant_evidence[].status", context["knowledge_lookup"]["fields"])
+        self.assertIn("provisional is not expert approval", " ".join(context["guidance"]))
+
+    def test_rejects_annotation_status_outside_provisional_approved_contract(self):
+        ontology = ontology_fixture()
+        ontology["entities"][0]["attributes"]["contextual_synonyms"] = [
+            {"form": "Śāstra-name", "status": "candidate"}
+        ]
+        with self.assertRaisesRegex(RetrievalError, "status provisional or approved"):
+            self.adapter(ontology)
+
     def test_incoming_authorship_does_not_assign_composition_location_to_author(self):
         adapter = self.adapter()
         author = adapter.lookup("Author")["results"][0]
@@ -178,7 +207,9 @@ class EntityKnowledgeTests(unittest.TestCase):
             "total": 0, "flagged": 0, "unflagged": 0, "unassessed": 0,
         })
         self.assertEqual(context["knowledge_lookup"]["tool"], "lookup_entity")
-        self.assertTrue(set(context["knowledge_lookup"]["fields"]) <= set(adapter.lookup("शास्त्र")["results"][0]))
+        lookup_row = adapter.lookup("शास्त्र")["results"][0]
+        self.assertTrue({"attributes", "relations", "ontology", "source_ref", "curation_status"} <= set(lookup_row))
+        self.assertIn("attributes.contextual_synonyms[].status", context["knowledge_lookup"]["fields"])
         self.assertNotIn("relations", context["entities"][0])
         self.assertIn("not proof", " ".join(context["guidance"]))
         self.assertFalse(context["entities_truncated"])
@@ -204,6 +235,7 @@ class EntityKnowledgeTests(unittest.TestCase):
         self.assertIsNot(lookup.outputSchema.get("additionalProperties"), False)
         self.assertEqual(len(tools), 10)
         self.assertIn("flagged, unflagged and unassessed", lookup.description)
+        self.assertIn("provisional or approved only", lookup.description)
 
     def test_lookup_list_and_coverage_disclose_flagged_unflagged_and_legacy_rows(self):
         rows = [

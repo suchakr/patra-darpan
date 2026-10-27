@@ -95,13 +95,35 @@
     const aliases = element("div", undefined, "aliases");
     (entity.aliases || []).forEach(alias => aliases.append(element("span", alias)));
     if (!aliases.childElementCount) aliases.append(element("span", "No additional aliases"));
-    panel.append(aliases, element("h4", "Attributes"));
-    const attrs = Object.entries(entity.attributes || {});
+    panel.append(aliases);
+    const annotations = core.statusAnnotations(entity);
+    if (annotations.length) {
+      panel.append(element("h4", "Curated synonyms and spelling variants"));
+      const annotationList = element("ul", undefined, "annotation-list");
+      annotations.forEach(annotation => {
+        const row = element("li");
+        const label = element("span", annotation.form || "(unnamed form)", "annotation-form");
+        const status = String(annotation.status || "");
+        const badge = element("span", status, `annotation-status annotation-status-${status}`);
+        badge.setAttribute("aria-label", `Curation status: ${status}`);
+        row.append(label, badge, element("small", `${annotation.annotationKind}${annotation.iast ? ` · ${annotation.iast}` : ""}`, "annotation-kind"));
+        const evidence = element("details", undefined, "annotation-evidence");
+        evidence.append(element("summary", "Evidence and review"), element("pre", JSON.stringify(annotation, null, 2)));
+        row.append(evidence);
+        annotationList.append(row);
+      });
+      panel.append(annotationList);
+    }
+    const attrs = Object.entries(entity.attributes || {}).filter(([key]) =>
+      !["contextual_synonyms", "variant_evidence"].includes(key)
+    );
+    if (attrs.length) panel.append(element("h4", "Attributes"));
     const attrList = element("dl", undefined, "attributes");
     attrs.forEach(([key, value]) => {
       const pair = element("div"); pair.append(element("dt", core.humanize(key)), element("dd", typeof value === "object" ? JSON.stringify(value) : String(value))); attrList.append(pair);
     });
-    panel.append(attrs.length ? attrList : element("p", "No attributes recorded in this snapshot.", "small-meta"));
+    if (attrs.length) panel.append(attrList);
+    else if (!annotations.length) panel.append(element("p", "No attributes recorded in this snapshot.", "small-meta"));
     const relations = core.relationships(model, entity.id);
     panel.append(element("h4", `All relationships (${relations.length})`));
     const list = element("ul", undefined, "detail-relations");

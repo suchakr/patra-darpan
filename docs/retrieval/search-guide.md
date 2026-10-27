@@ -22,6 +22,9 @@ guide once per conversation; resources need not be reread before every call.
   top-k view. Use lexical mode for match counts and continuation.
 - **Entities:** `lookup_entity` resolves explicit ontology aliases and returns
   bounded attributes, labelled incoming/outgoing relations and curation references.
+  Under v0.4, item-level `status` on `attributes.contextual_synonyms` and
+  `attributes.variant_evidence` is `provisional` or `approved`; provisional is
+  not expert approval and is distinct from the result's registry status.
   `lookup_entity`, `list_entity_mentions`, `get_corpus_info`, and
   `retrieval://ontology-context` disclose `mention_assessment` counts: total,
   flagged, unflagged, and unassessed. Flagged forms are explicitly listed in

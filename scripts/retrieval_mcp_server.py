@@ -229,6 +229,8 @@ def build_mcp(service: RetrievalService, *, oauth_provider: Any | None = None):
         description=("Resolve a name/alias to canonical IDs and corpus occurrence counts; return bounded "
                      "ontology attributes, labelled incoming/outgoing relations, ontology version and curation references. "
                      "Each result's mention_assessment reports total, flagged, unflagged and unassessed mentions. "
+                     "In attributes.contextual_synonyms and attributes.variant_evidence, each item shows status "
+                     "(provisional or approved only); provisional is not expert approval. "
                      "Unflagged means not listed in attributes.ambiguous_aliases, not contextually verified. "
                      "These are ontology assertions, not passage evidence. Follow related entities using "
                      "target_preferred_label; check knowledge/results truncation flags."),

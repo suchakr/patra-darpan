@@ -24,12 +24,16 @@ embedded chat, mention counts, editing or allowlist administration is included.
 ## Data and provenance
 
 `ops/export_mcp_explorer.py` generates `web/assets/data/mcp-ontology.json` from
-`ontology/jyotisha-v0.3.json`. It validates unique IDs and relation endpoints,
-retains attributes, aliases, curation references and source descriptions, and
+`ontology/jyotisha-v0.4.0.json`. It validates unique IDs, relation endpoints,
+and the item-level status contract for contextual synonyms and spelling variants;
+it retains attributes, aliases, curation references and source descriptions, and
 uses only canonical top-level `relations`. Node-local duplicate edges are omitted.
 The page shows ontology version, source SHA-256 and a pinned GitHub source link
 only when the source bytes match a committed revision. It makes no claim that
 a deployed MCP is currently using the same snapshot.
+Contextual synonyms and spelling variants are shown with `provisional` or
+`approved` badges; “Evidence and review” expands each item's preserved provenance.
+Provisional means not expert-approved.
 
 Generated data is checked in for static hosting. Local, stage and production
 web deployment refresh it automatically; `prepare` also refreshes it. No corpus
@@ -78,4 +82,5 @@ The layout stacks on narrow screens; wide tables scroll within their panels.
   frontend framework/CDN graph dependencies or credential storage.
 - Page/source navigation works in the existing local static-server flow.
 
-Ontology v0.4 curation and live MCP integration remain separate future work.
+This static Explorer previews the v0.4 candidate; it does not imply that a live
+MCP release has been staged or activated.

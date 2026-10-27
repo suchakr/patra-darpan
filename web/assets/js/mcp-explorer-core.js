@@ -56,7 +56,16 @@
       target: model.entities.get(edge.from === id ? edge.to : edge.from)
     }));
   }
-  const api = { index, search, graph, relationships, normalize, humanize };
+  function statusAnnotations(entity) {
+    const attributes = entity.attributes || {};
+    return [
+      ["contextual_synonyms", "contextual synonym"],
+      ["variant_evidence", "spelling variant"]
+    ].flatMap(([field, annotationKind]) => (attributes[field] || []).map(entry => ({
+      ...entry, sourceField: field, annotationKind
+    })));
+  }
+  const api = { index, search, graph, relationships, statusAnnotations, normalize, humanize };
   if (typeof module !== "undefined" && module.exports) module.exports = api;
   else root.McpExplorerCore = api;
 })(typeof globalThis === "undefined" ? this : globalThis);

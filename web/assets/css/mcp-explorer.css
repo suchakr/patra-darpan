@@ -648,6 +648,75 @@ td button:hover {
   margin:0
 }
 
+.annotation-list {
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:grid;
+  gap:8px
+}
+
+.annotation-list li {
+  border:1px solid var(--line);
+  border-radius:7px;
+  padding:9px;
+  display:grid;
+  grid-template-columns:minmax(0, 1fr) auto;
+  align-items:center;
+  gap:5px 9px
+}
+
+.annotation-form {
+  overflow-wrap:anywhere;
+  font-size:.9rem
+}
+
+.annotation-status {
+  border-radius:999px;
+  padding:2px 8px;
+  font-size:.67rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.04em
+}
+
+.annotation-status-provisional {
+  color:#704900;
+  background:#fff0c7;
+  border:1px solid #dfbf72
+}
+
+.annotation-status-approved {
+  color:#175c45;
+  background:#e0f1e9;
+  border:1px solid #9cc7b4
+}
+
+.annotation-kind,
+.annotation-evidence {
+  grid-column:1 / -1
+}
+
+.annotation-kind {
+  color:var(--muted)
+}
+
+.annotation-evidence summary {
+  color:var(--accent);
+  cursor:pointer;
+  font-size:.76rem
+}
+
+.annotation-evidence pre {
+  margin:7px 0 0;
+  padding:8px;
+  background:#f7f7f2;
+  border-radius:5px;
+  white-space:pre-wrap;
+  overflow-wrap:anywhere;
+  font-size:.7rem
+}
+
 .detail-relations {
   padding-left:17px;
   font-size:.81rem

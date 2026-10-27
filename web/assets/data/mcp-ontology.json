@@ -1,11 +1,11 @@
 {
   "schema_version": "mcp-explorer.ontology.v1",
   "ontology_id": "jyotisha",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "status": "pilot",
-  "source_file": "ontology/jyotisha-v0.3.json",
-  "source_sha256": "4b236797419b255913c665dfc9953cf14f71fe1277a1f4146d4b1edddd7f8d2a",
-  "source_commit": "8899f9398200ca5d7aa166433dbbdb40d6257b98",
+  "source_file": "ontology/jyotisha-v0.4.0.json",
+  "source_sha256": "34b7dce163a69180c4ccbb0d18c35cbc811aad0dc81159d075cb61b2375a8689",
+  "source_commit": null,
   "entity_types": [
     {
       "id": "celestial_body",
@@ -193,6 +193,11 @@
       "id": "starter_seed_v0",
       "path": "ontology/jyotisha-v0.1.json#initial-16",
       "description": "Original 16-entry starter vocabulary retained as the pilot seed baseline"
+    },
+    {
+      "id": "proposal_reviewed_batch_012",
+      "path": "agent-handoffs/patra-darpan-mcp/batches/012-claude-attachments/proposal-reviewed.json",
+      "description": "Reviewed candidate source for 39 provisional Jyotiṣa names; copied as provisional pilot data, not expert approval."
     }
   ],
   "entities": [
@@ -224,7 +229,14 @@
         "Soma",
         "सोम"
       ],
-      "attributes": {},
+      "attributes": {
+        "ambiguous_aliases": [
+          {
+            "form": "सोम",
+            "sense": "Soma the plant and deity; Monday"
+          }
+        ]
+      },
       "source_ref": "starter_seed_v0",
       "curation_status": "seed",
       "comment": "Initial v0 seed retained from the original starter vocabulary."
@@ -253,7 +265,14 @@
         "बुध",
         "Budha"
       ],
-      "attributes": {},
+      "attributes": {
+        "ambiguous_aliases": [
+          {
+            "form": "बुध",
+            "sense": "ordinary word: wise; also Buddha"
+          }
+        ]
+      },
       "source_ref": "starter_seed_v0",
       "curation_status": "seed",
       "comment": "Initial v0 seed retained from the original starter vocabulary."
@@ -439,7 +458,7 @@
       "attributes": {
         "nid": "N01-Ash",
         "number_28": 1,
-        "daivata": "Aśvini",
+        "daivata": "Aśvinau",
         "marga": "Madhyama",
         "veethi": "Go",
         "shape": "Horseneck",
@@ -447,7 +466,31 @@
         "stars": "(α,β,γ) Ari",
         "proxy": "β Ari",
         "yogatara_name": "Sheratan",
-        "yogatara_hip": "HIP 8903"
+        "yogatara_hip": "HIP 8903",
+        "contextual_synonyms": [
+          {
+            "form": "दस्रभ",
+            "iast": "dasrabha",
+            "kind": "compound",
+            "derived_from": "daivata",
+            "kosha_source": "Kosha, Lexicon/ganitanamamala.txt:57",
+            "ambiguous_with": [],
+            "evidence": [
+              "Jyotisham/naradasamhita.txt:526",
+              "Puranani/narada purana.txt:17086",
+              "Puranani/naradiya purana.txt:11947"
+            ],
+            "occurrences_in_sense": 3,
+            "confidence": "high",
+            "reason": "kosha_mansion_name_gn; deity Aśvini. 3 in-sense hits in 3 files (Rm×3); 3 raw boundary-clean hits.",
+            "status": "provisional",
+            "review": {
+              "by": "stop rule",
+              "decision": "auto",
+              "comment": "high confidence outside queue; sampled rows accepted"
+            }
+          }
+        ]
       },
       "source_ref": "cahc_n28_full_meta#N01-Ash",
       "curation_status": "source_derived",
@@ -472,7 +515,39 @@
         "stars": "(35,39,41) Ari",
         "proxy": "* 41 Ari",
         "yogatara_name": "Bharani",
-        "yogatara_hip": "HIP 13209"
+        "yogatara_hip": "HIP 13209",
+        "contextual_synonyms": [
+          {
+            "form": "याम्य",
+            "iast": "yāmya",
+            "kind": "taddhita",
+            "derived_from": "daivata",
+            "kosha_source": "Kosha, Lexicon/ganitanamamala.txt:58",
+            "ambiguous_with": [
+              "direction (south)",
+              "of Yama (adjective)"
+            ],
+            "evidence": [
+              "Kosha, Lexicon/vishwanatha, koshakalpataru.txt:1088",
+              "Puranani/brahmanda purana.txt:2152",
+              "Jyotisham/muhurta chintamani.txt:12",
+              "Kavyas, Kavya shastra/bharata, natya shastra.txt:538",
+              "Kavyas, Kavya shastra/natya shastra.txt:523",
+              "Puranani/matsya purana.txt:6985",
+              "Puranani/vayu purana.txt:17649",
+              "Puranani/vishnu dharmottara.txt:63744"
+            ],
+            "occurrences_in_sense": 14,
+            "confidence": "medium",
+            "reason": "taddhita_vrddhi; deity Yama. 14 in-sense hits in 11 files (R1×9, R3×5); 485 raw boundary-clean hits.",
+            "status": "provisional",
+            "review": {
+              "by": "Gemini (AI reviewer; not expert review)",
+              "decision": "accept",
+              "comment": "Canonical taddhita synonym for Bharaṇī (Yama-daivatya) across sidereal catalogues and muhūrta."
+            }
+          }
+        ]
       },
       "source_ref": "cahc_n28_full_meta#N02-Bha",
       "curation_status": "source_derived",
@@ -483,7 +558,6 @@
       "type": "lunar_mansion",
       "preferred_label": "Kṛttikā",
       "aliases": [
-        "क्रित्तिका",
         "कृत्तिका",
         "Krittika"
       ],
@@ -498,7 +572,63 @@
         "stars": "(17,19,20,23,27,η) Tau",
         "proxy": "η Tau",
         "yogatara_name": "Alcyone",
-        "yogatara_hip": "HIP 17702"
+        "yogatara_hip": "HIP 17702",
+        "contextual_synonyms": [
+          {
+            "form": "आग्नेय",
+            "iast": "āgneya",
+            "kind": "taddhita",
+            "derived_from": "daivata",
+            "kosha_source": "Kosha, Lexicon/ganitanamamala.txt:59",
+            "ambiguous_with": [
+              "direction (south-east)",
+              "of fire/Agni (adjective)"
+            ],
+            "evidence": [
+              "Kalpa, Dharmashastra, Prayoga/apararka, yajnavalkya smrti vyakhya.txt:13793",
+              "Itihaasa/Mahabharatam/MB, BORI edition.txt:10150",
+              "Itihaasa/Mahabharatam/MB, Kumbhakona edition.txt:15013",
+              "Vedic texts/AV/atharvaveda parishishta.txt:956",
+              "Jyotisham/vrrddha-gaargiiya-jyotisham.txt:1332",
+              "Jyotisham/parasharatantra ocr.txt:262",
+              "Vedic texts/YV/MAU-text.txt:2",
+              "patra-darpan/papers/01_58_4/document.md:109"
+            ],
+            "occurrences_in_sense": 10,
+            "confidence": "medium",
+            "reason": "taddhita_vrddhi; deity Agni. 10 in-sense hits in 9 files (R1×1, R1s×6, R3×3); 2468 raw boundary-clean hits.",
+            "status": "provisional",
+            "review": {
+              "by": "Gemini (AI reviewer; not expert review)",
+              "decision": "accept",
+              "comment": "Canonical taddhita name for Kṛttikā (Agni-daivatya); ubiquitous in Vedic and classical nakṣatra-cakras."
+            }
+          },
+          {
+            "form": "वह्निभ",
+            "iast": "vahnibha",
+            "kind": "compound",
+            "derived_from": "daivata",
+            "kosha_source": "Kosha, Lexicon/ganitanamamala.txt:60",
+            "ambiguous_with": [],
+            "evidence": [
+              "Jyotisham/naradasamhita.txt:513",
+              "Kosha, Lexicon/ganitanamamala.txt:60",
+              "Puranani/narada purana.txt:16892",
+              "Puranani/naradiya purana.txt:11818",
+              "Jyotisham/naradasamhita.txt:532"
+            ],
+            "occurrences_in_sense": 5,
+            "confidence": "high",
+            "reason": "compound_वह्नि+भ; deity Agni. 5 in-sense hits in 4 files (R1×1, Rm×4); 5 raw boundary-clean hits.",
+            "status": "provisional",
+            "review": {
+              "by": "stop rule",
+              "decision": "auto",
+              "comment": "high confidence outside queue; sampled rows accepted"
+            }
+          }
+        ]
       },
       "source_ref": "cahc_n28_full_meta#N03-Kri",
       "curation_status": "source_derived",
@@ -523,7 +653,39 @@
         "stars": "(α,γ,λ) Ori",
         "proxy": "α Tau",
         "yogatara_name": "Aldebaran",
-        "yogatara_hip": "HIP 21421"
+        "yogatara_hip": "HIP 21421",
+        "contextual_synonyms": [
+          {
+            "form": "ब्राह्म",
+            "iast": "brāhma",
+            "kind": "taddhita",
+            "derived_from": "daivata",
+            "kosha_source": "Kosha, Lexicon/ganitanamamala.txt:61",
+            "ambiguous_with": [
+              "of Brahmā / Veda / Brahmin (common adjective)",
+              "also proposed for Abhijit/Rohiṇī",
+              "also proposed for / belongs to: Abhijit"
+            ],
+            "evidence": [
+              "Jyotisham/muhurta chintamani.txt:20",
+              "Kosha, Lexicon/hemachandra, abhidhana chintamani.txt:284",
+              "Kosha, Lexicon/paramanandiyanamamala.txt:375",
+              "Puranani/brahmanda purana.txt:4512",
+              "Kosha, Lexicon/ganitanamamala.txt:61",
+              "Kosha, Lexicon/siddha shabdarnava.txt:1022",
+              "Kosha, Lexicon/vishwanatha, koshakalpataru.txt:1032"
+            ],
+            "occurrences_in_sense": 7,
+            "confidence": "medium",
+            "reason": "taddhita_vrddhi; deity Prajāpati. 7 in-sense hits in 7 files (R1×4, R3×3); 1356 raw boundary-clean hits.",
+            "status": "provisional",
+            "review": {
+              "by": "Gemini (AI reviewer; not expert review)",
+              "decision": "accept",
+              "comment": "Canonical 27-nakṣatra referent for Brāhma is Rohiṇī (Prajāpati/Brahmā-daivatya); assign uniquely to Rohiṇī."
+            }
+          }
+        ]
       },
       "source_ref": "cahc_n28_full_meta#N04-Roh",
       "curation_status": "source_derived",
@@ -541,7 +703,8 @@
         "Mrigasira",
         "इन्वका",
         "Invakā",
-        "Invaka"
+        "Invaka",
+        "मृगशिर"
       ],
       "attributes": {
         "nid": "N05-Mrg",
@@ -554,7 +717,62 @@
         "stars": "(γ) Gem",
         "proxy": "λ Ori",
         "yogatara_name": "Meissa(Heka)",
-        "yogatara_hip": "HIP 26207"
+        "yogatara_hip": "HIP 26207",
+        "contextual_synonyms": [
+          {
+            "form": "चन्द्रभ",
+            "iast": "candrabha",
+            "kind": "compound",
+            "derived_from": "daivata",
+            "kosha_source": "Kosha, Lexicon/ganitanamamala.txt:63",
+            "ambiguous_with": [],
+            "evidence": [
+              "Jyotisham/naradasamhita.txt:508",
+              "Puranani/narada purana.txt:17086",
+              "Puranani/naradiya purana.txt:11947",
+              "Itihaasa/Mahabharatam/MB, Kumbhakona edition.txt:144498",
+              "Puranani/agnipuranam.txt:7572",
+              "Puranani/लक्ष्मीनारायणसंहिता.txt:47005",
+              "Jyotisham/naradasamhita.txt:532",
+              "Puranani/narada purana.txt:23990"
+            ],
+            "occurrences_in_sense": 9,
+            "confidence": "high",
+            "reason": "compound_चन्द्र+भ; deity Soma. 9 in-sense hits in 6 files (Rm×9); 9 raw boundary-clean hits.",
+            "status": "provisional",
+            "review": {
+              "by": "stop rule",
+              "decision": "auto",
+              "comment": "high confidence outside queue; sampled rows accepted"
+            }
+          }
+        ],
+        "variant_evidence": [
+          {
+            "form": "मृगशिर",
+            "iast": "mṛgaśira",
+            "kind": "spelling_variant",
+            "evidence": [
+              "Jyotisham/naradasamhita.txt:89",
+              "Bauddha/shardula karnavadanam.txt:949",
+              "Vedic texts/AV/atharvaveda parishishta.txt:6",
+              "Bauddha/divyavadanam.txt:10993",
+              "Vedic texts/AV/atharva paippalada samhita viswara.txt:2953",
+              "Jyotisham/naradasamhita.txt:512",
+              "Jyotisham/naradasamhita.txt:513",
+              "Jyotisham/naradasamhita.txt:514"
+            ],
+            "occurrences": 31,
+            "confidence": "high",
+            "reason": "devanagari_counterpart_of_iast from 'Mṛgaśira'. 31 in-sense hits in 5 files (R1×31); 70 raw boundary-clean hits.",
+            "status": "provisional",
+            "review": {
+              "by": "stop rule",
+              "decision": "auto",
+              "comment": "high confidence outside queue; sampled rows accepted"
+            }
+          }
+        ]
       },
       "source_ref": "cahc_n28_full_meta#N05-Mrg",
       "curation_status": "source_derived",
@@ -582,7 +800,38 @@
         "stars": "(α,γ,δ1,ε,θ2) Tau",
         "proxy": "γ Gem",
         "yogatara_name": "Alhena(Almeisan)",
-        "yogatara_hip": "HIP 31681"
+        "yogatara_hip": "HIP 31681",
+        "contextual_synonyms": [
+          {
+            "form": "रौद्र",
+            "iast": "raudra",
+            "kind": "taddhita",
+            "derived_from": "daivata",
+            "kosha_source": "Kosha, Lexicon/ganitanamamala.txt:64",
+            "ambiguous_with": [
+              "terrible, fierce (common adjective)"
+            ],
+            "evidence": [
+              "Jyotisham/Adbhutasagara - मूलम्.csv.txt:94",
+              "Jyotisham/vrrddha-gaargiiya-jyotisham.txt:556",
+              "Kalpa, Dharmashastra, Prayoga/Madhava, parashara samhita.txt:10047",
+              "Kalpa, Dharmashastra, Prayoga/vishnu dharma sutra.txt:1454",
+              "Kosha, Lexicon/paramanandiyanamamala.txt:378",
+              "Kosha, Lexicon/siddha shabdarnava.txt:1025",
+              "Vastu, Shilpa, Iconography/Kamikagama.txt:3015",
+              "Kosha, Lexicon/hemachandra, abhidhana chintamani.txt:287"
+            ],
+            "occurrences_in_sense": 10,
+            "confidence": "medium",
+            "reason": "taddhita_vrddhi; deity Rudra. 10 in-sense hits in 10 files (R1×7, R3×3); 1299 raw boundary-clean hits.",
+            "status": "provisional",
+            "review": {
+              "by": "Gemini (AI reviewer; not expert review)",
+              "decision": "accept",
+              "comment": "Established taddhita form for Ārdrā (Rudra-daivatya) in jyotiṣa texts and Gaṇitanāmamālā."
+            }
+          }
+        ]
       },
       "source_ref": "cahc_n28_full_meta#N06-Ard",
       "curation_status": "source_derived",
@@ -594,7 +843,8 @@
       "preferred_label": "Punarvasu",
       "aliases": [
         "पुनर्वसू",
-        "पुनर्वसु"
+        "पुनर्वसु",
+        "Punarvasū"
       ],
       "attributes": {
         "nid": "N07-Pun",
@@ -607,7 +857,33 @@
         "stars": "(α,β) Gem",
         "proxy": "β Gem",
         "yogatara_name": "Pollux",
-        "yogatara_hip": "HIP 37826"
+        "yogatara_hip": "HIP 37826",
+        "variant_evidence": [
+          {
+            "form": "Punarvasū",
+            "iast": "Punarvasū",
+            "kind": "spelling_variant",
+            "evidence": [
+              "gretil/sa_atharvavedapariziSTas.txt:55",
+              "gretil/sa_garuDapurANa.txt:5381",
+              "gretil/sa_jayAditya-and-vAmana-kAzikAvRtti.txt:1685",
+              "gretil/sa_maJjuzrImUlakalpa.txt:172",
+              "patra-darpan/papers/Vol43_1_1_RNIyengar/document.md:101",
+              "gretil/sa_atharvavedapariziSTas.txt:57",
+              "gretil/sa_atharvavedapariziSTas.txt:61",
+              "gretil/sa_atharvavedapariziSTas.txt:181"
+            ],
+            "occurrences": 11,
+            "confidence": "high",
+            "reason": "iast_counterpart_of_devanagari from 'पुनर्वसू'. 11 in-sense hits in 5 files (R1×11); 39 raw boundary-clean hits.",
+            "status": "provisional",
+            "review": {
+              "by": "stop rule",
+              "decision": "auto",
+              "comment": "high confidence outside queue; sampled rows accepted"
+            }
+          }
+        ]
       },
       "source_ref": "cahc_n28_full_meta#N07-Pun",
       "curation_status": "source_derived",
@@ -620,7 +896,8 @@
       "aliases": [
         "पुष्य",
         "पुष्या",
-        "Pushya"
+        "Pushya",
+        "Puṣyā"
       ],
       "attributes": {
         "nid": "N08-Pus",
@@ -633,7 +910,61 @@
         "stars": "(δ) Cnc",
         "proxy": "δ Cnc",
         "yogatara_name": "Asellus Australis",
-        "yogatara_hip": "HIP 42911"
+        "yogatara_hip": "HIP 42911",
+        "contextual_synonyms": [
+          {
+            "form": "बार्हस्पत्य",
+            "iast": "bārhaspatya",
+            "kind": "taddhita",
+            "derived_from": "daivata",
+            "kosha_source": null,
+            "ambiguous_with": [
+              "of Bṛhaspati / Jupiter-related"
+            ],
+            "evidence": [
+              "Jyotisham/Adbhutasagara - मूलम्.csv.txt:433",
+              "Jyotisham/vrrddha-gaargiiya-jyotisham.txt:3005",
+              "Vedic texts/YV/Kathaka S visvara.txt:2810",
+              "Vedic texts/YV/Maitrayaniya S.txt:7339",
+              "Vedic texts/YV/SB mulam.txt:3187"
+            ],
+            "occurrences_in_sense": 5,
+            "confidence": "medium",
+            "reason": "taddhita_vrddhi; deity Bṛhaspati. 5 in-sense hits in 5 files (R1×2, R3×3); 285 raw boundary-clean hits.",
+            "status": "provisional",
+            "review": {
+              "by": "Gemini (AI reviewer; not expert review)",
+              "decision": "accept",
+              "comment": "Regular taddhita formation for Puṣya (Bṛhaspati-daivatya); well-attested in saṃhitā literature."
+            }
+          }
+        ],
+        "variant_evidence": [
+          {
+            "form": "Puṣyā",
+            "iast": "Puṣyā",
+            "kind": "spelling_variant",
+            "evidence": [
+              "gretil/sa_divyAvadAna.txt:2506",
+              "gretil/sa_garuDapurANa.txt:5378",
+              "gretil/sa_zArdUlakarNAvadAna.txt:717",
+              "patra-darpan/papers/Vol38_1_2_AKBag/document.md:23",
+              "patra-darpan/papers/Vol41_2_1_SBhujle/document.md:81",
+              "patra-darpan/papers/Vol42_2_2_ASule/document.md:90",
+              "patra-darpan/papers/Vol52_4_2017__Art01/document.md:478",
+              "gretil/sa_divyAvadAna.txt:2904"
+            ],
+            "occurrences": 10,
+            "confidence": "high",
+            "reason": "iast_counterpart_of_devanagari from 'पुष्या'. 10 in-sense hits in 7 files (R1×10); 33 raw boundary-clean hits.",
+            "status": "provisional",
+            "review": {
+              "by": "stop rule",
+              "decision": "auto",
+              "comment": "high confidence outside queue; sampled rows accepted"
+            }
+          }
+        ]
       },
       "source_ref": "cahc_n28_full_meta#N08-Pus",
       "curation_status": "source_derived",
@@ -659,7 +990,34 @@
         "stars": "(δ,ε,ζ,η,ρ,σ) Hya",
         "proxy": "ζ Hya",
         "yogatara_name": "Minazal V",
-        "yogatara_hip": "HIP 43813"
+        "yogatara_hip": "HIP 43813",
+        "contextual_synonyms": [
+          {
+            "form": "सार्प",
+            "iast": "sārpa",
+            "kind": "taddhita",
+            "derived_from": "daivata",
+            "kosha_source": null,
+            "ambiguous_with": [
+              "serpent-related adjective"
+            ],
+            "evidence": [
+              "Jyotisham/aryabhatiya with bhashya.txt:215",
+              "Jyotisham/vrrddha-gaargiiya-jyotisham.txt:4704",
+              "Puranani/vamana purana.txt:7923",
+              "Puranani/vishnu dharmottara.txt:63744"
+            ],
+            "occurrences_in_sense": 4,
+            "confidence": "medium",
+            "reason": "taddhita_vrddhi; deity Sarpa. 4 in-sense hits in 4 files (R1×4); 42 raw boundary-clean hits.",
+            "status": "provisional",
+            "review": {
+              "by": "Gemini (AI reviewer; not expert review)",
+              "decision": "accept",
+              "comment": "Canonical taddhita synonym for Āśleṣā (Sarpa-daivatya); attested in Āryabhaṭīyabhāṣya and Gārgīya."
+            }
+          }
+        ]
       },
       "source_ref": "cahc_n28_full_meta#N09-Asl",
       "curation_status": "source_derived",
@@ -684,7 +1042,60 @@
         "stars": "(α,γ1,ε,ζ,η,μ) Leo",
         "proxy": "ζ Leo",
         "yogatara_name": "Adhafera",
-        "yogatara_hip": "HIP 50335"
+        "yogatara_hip": "HIP 50335",
+        "contextual_synonyms": [
+          {
+            "form": "पित्र्य",
+            "iast": "pitrya",
+            "kind": "taddhita",
+            "derived_from": "daivata",
+            "kosha_source": null,
+            "ambiguous_with": [
+              "ancestral (common adjective)"
+            ],
+            "evidence": [
+              "Puranani/vishnu dharmottara.txt:11609",
+              "Kalpa, Dharmashastra, Prayoga/apararka, yajnavalkya smrti vyakhya.txt:10401",
+              "Kalpa, Dharmashastra, Prayoga/devanabhatta, smrtichandrika, shraddhakanda.txt:379",
+              "Itihaasa/Mahabharatam/MB, Kumbhakona edition.txt:217666",
+              "Kosha, Lexicon/hemachandra, abhidhana chintamani.txt:289",
+              "Kosha, Lexicon/siddha shabdarnava.txt:1029",
+              "Kosha, Lexicon/vishwanatha, koshakalpataru.txt:1046",
+              "Puranani/vayu purana.txt:22267"
+            ],
+            "occurrences_in_sense": 10,
+            "confidence": "medium",
+            "reason": "taddhita_vrddhi; deity Pitṛ. 10 in-sense hits in 8 files (R1×1, R3×9); 921 raw boundary-clean hits.",
+            "status": "provisional",
+            "review": {
+              "by": "Gemini (AI reviewer; not expert review)",
+              "decision": "accept",
+              "comment": "Well-attested taddhita synonym for Maghā (Pitṛ-daivatya) across Purāṇic and saṃhitā star lists."
+            }
+          },
+          {
+            "form": "पितृभ",
+            "iast": "pitṛbha",
+            "kind": "compound",
+            "derived_from": "daivata",
+            "kosha_source": "Kosha, Lexicon/ganitanamamala.txt:69",
+            "ambiguous_with": [],
+            "evidence": [
+              "Jyotisham/muhurta chintamani.txt:299",
+              "Jyotisham/parashara hora shastra.txt:7780",
+              "Kosha, Lexicon/ganitanamamala.txt:69"
+            ],
+            "occurrences_in_sense": 3,
+            "confidence": "high",
+            "reason": "compound_पितृ+भ; deity Pitṛ. 3 in-sense hits in 3 files (Rm×3); 3 raw boundary-clean hits.",
+            "status": "provisional",
+            "review": {
+              "by": "stop rule",
+              "decision": "auto",
+              "comment": "high confidence outside queue; sampled rows accepted"
+            }
+          }
+        ]
       },
       "source_ref": "cahc_n28_full_meta#N10-Mag",
       "curation_status": "source_derived",
@@ -724,7 +1135,8 @@
       "aliases": [
         "उत्तरफल्गुनी",
         "U Phalgunī",
-        "Uttara Phalguni"
+        "Uttara Phalguni",
+        "Uttaraphalguni"
       ],
       "attributes": {
         "nid": "N12-UPal",
@@ -737,7 +1149,55 @@
         "stars": "(93,β) Leo",
         "proxy": "β Leo",
         "yogatara_name": "Denebola",
-        "yogatara_hip": "HIP 57632"
+        "yogatara_hip": "HIP 57632",
+        "contextual_synonyms": [
+          {
+            "form": "आर्यम्ण",
+            "iast": "āryamṇa",
+            "kind": "taddhita",
+            "derived_from": "daivata",
+            "kosha_source": null,
+            "ambiguous_with": [
+              "adjective 'of Aryaman' in general use"
+            ],
+            "evidence": [
+              "Jyotisham/muhurta chintamani.txt:12",
+              "Kalpa, Dharmashastra, Prayoga/shankhayana grihya sutra.txt:129",
+              "Kalpa, Dharmashastra, Prayoga/vaikhanasa grihya sutra.txt:174",
+              "Puranani/vishnu dharmottara.txt:63098"
+            ],
+            "occurrences_in_sense": 4,
+            "confidence": "medium",
+            "reason": "taddhita_vrddhi; deity Aryaman. 4 in-sense hits in 4 files (R1s×4); 197 raw boundary-clean hits.",
+            "status": "provisional",
+            "review": {
+              "by": "Gemini (AI reviewer; not expert review)",
+              "decision": "accept",
+              "comment": "Standard taddhita derivative for Uttaraphalgunī (Aryaman-daivatya); seen in Muhūrtacintāmaṇi."
+            }
+          }
+        ],
+        "variant_evidence": [
+          {
+            "form": "Uttaraphalguni",
+            "iast": "Uttaraphalguni",
+            "kind": "spelling_variant",
+            "evidence": [
+              "Jyotisham/Parashara tantra.txt:180",
+              "Jyotisham/parasharatantra ocr.txt:1033",
+              "Puranani/Vettam Mani, Puranic Encyclopedia.txt:27654"
+            ],
+            "occurrences": 3,
+            "confidence": "high",
+            "reason": "vowel_length_swap_iast from 'Uttaraphalgunī'. 3 in-sense hits in 3 files (R1×3); 5 raw boundary-clean hits.",
+            "status": "provisional",
+            "review": {
+              "by": "stop rule",
+              "decision": "auto",
+              "comment": "high confidence outside queue; sampled rows accepted"
+            }
+          }
+        ]
       },
       "source_ref": "cahc_n28_full_meta#N12-UPal",
       "curation_status": "source_derived",
@@ -763,7 +1223,45 @@
         "stars": "(α,β,γ,δ,ε) Crv",
         "proxy": "δ Crv",
         "yogatara_name": "Algorab",
-        "yogatara_hip": "HIP 60965"
+        "yogatara_hip": "HIP 60965",
+        "ambiguous_aliases": [
+          {
+            "form": "हस्त",
+            "sense": "ordinary word: hand, cubit"
+          }
+        ],
+        "contextual_synonyms": [
+          {
+            "form": "सावित्र",
+            "iast": "sāvitra",
+            "kind": "taddhita",
+            "derived_from": "daivata",
+            "kosha_source": null,
+            "ambiguous_with": [
+              "Sāvitrī/Gāyatrī-related",
+              "of the Sun"
+            ],
+            "evidence": [
+              "Puranani/vishnu dharmottara.txt:13333",
+              "Jyotisham/vrrddha-gaargiiya-jyotisham.txt:148",
+              "Kalpa, Dharmashastra, Prayoga/agnivesha grihya sutra.txt:12",
+              "Kalpa, Dharmashastra, Prayoga/agniveshya grihya sutra.txt:26",
+              "Kalpa, Dharmashastra, Prayoga/bodhayana grihya sutra.txt:1585",
+              "Kalpa, Dharmashastra, Prayoga/bodhayana shrauta sutram.txt:7059",
+              "Kalpa, Dharmashastra, Prayoga/varaha grihya sutra copy.txt:208",
+              "Kalpa, Dharmashastra, Prayoga/varaha grihya sutra.txt:240"
+            ],
+            "occurrences_in_sense": 14,
+            "confidence": "medium",
+            "reason": "taddhita_vrddhi; deity Savitṛ. 14 in-sense hits in 12 files (R3×14); 1576 raw boundary-clean hits.",
+            "status": "provisional",
+            "review": {
+              "by": "Gemini (AI reviewer; not expert review)",
+              "decision": "accept",
+              "comment": "Standard taddhita derivative for Hasta (Savitṛ-daivatya) in Bṛhatsaṃhitā and classical jyotiṣa."
+            }
+          }
+        ]
       },
       "source_ref": "cahc_n28_full_meta#N13-Has",
       "curation_status": "source_derived",
@@ -789,7 +1287,38 @@
         "stars": "(α) Vir",
         "proxy": "α Vir",
         "yogatara_name": "Spica",
-        "yogatara_hip": "HIP 65474"
+        "yogatara_hip": "HIP 65474",
+        "contextual_synonyms": [
+          {
+            "form": "त्वाष्ट्र",
+            "iast": "tvāṣṭra",
+            "kind": "taddhita",
+            "derived_from": "daivata",
+            "kosha_source": "Kosha, Lexicon/ganitanamamala.txt:72",
+            "ambiguous_with": [
+              "adjective 'of Tvaṣṭṛ' in general use"
+            ],
+            "evidence": [
+              "Jyotisham/parasharatantra ocr.txt:850",
+              "patra-darpan/papers/Vol43_1_1_RNIyengar/document.md:95",
+              "Jyotisham/Parashara tantra.txt:10",
+              "Jyotisham/muhurta chintamani.txt:12",
+              "Jyotisham/vrrddha-gaargiiya-jyotisham.txt:550",
+              "Puranani/vishnu dharmottara.txt:11027",
+              "Kosha, Lexicon/ganitanamamala.txt:72",
+              "Kosha, Lexicon/hemachandra, abhidhana chintamani.txt:291"
+            ],
+            "occurrences_in_sense": 13,
+            "confidence": "medium",
+            "reason": "taddhita_vrddhi; deity Tvaṣṭṛ. 13 in-sense hits in 9 files (R1×7, R3×6); 225 raw boundary-clean hits.",
+            "status": "provisional",
+            "review": {
+              "by": "Gemini (AI reviewer; not expert review)",
+              "decision": "accept",
+              "comment": "Classical taddhita equivalent for Citrā (Tvaṣṭṛ-daivatya) in Gaṇitanāmamālā and Parāśaratantra."
+            }
+          }
+        ]
       },
       "source_ref": "cahc_n28_full_meta#N14-Chi",
       "curation_status": "source_derived",
@@ -805,7 +1334,9 @@
         "Swati",
         "निष्ठ्या",
         "Niṣṭyā",
-        "Nishtya"
+        "Nishtya",
+        "Svāti",
+        "स्वाति"
       ],
       "attributes": {
         "nid": "N15-Swa",
@@ -818,7 +1349,57 @@
         "stars": "(α) Boo",
         "proxy": "α Boo",
         "yogatara_name": "Arcturus",
-        "yogatara_hip": "HIP 69673"
+        "yogatara_hip": "HIP 69673",
+        "variant_evidence": [
+          {
+            "form": "Svāti",
+            "iast": "Svāti",
+            "kind": "spelling_variant",
+            "evidence": [
+              "gretil/sa_atharvavedapariziSTas.txt:55",
+              "patra-darpan/papers/Vol38_2_1_RNIyengar/document.md:392",
+              "Jyotisham/Parashara tantra.txt:180",
+              "Jyotisham/parasharatantra ocr.txt:852",
+              "gretil/sa_jayAditya-and-vAmana-kAzikAvRtti.txt:18263",
+              "gretil/sa_108-buddhist-stotras.txt:2878",
+              "gretil/sa_gopAlabhaTTa-haribhaktivilAsa-1-11.txt:1032",
+              "gretil/sa_kezava-kauzikapaddhati.txt:2812"
+            ],
+            "occurrences": 28,
+            "confidence": "high",
+            "reason": "vowel_length_swap_iast from 'Svātī'. 28 in-sense hits in 17 files (R1×28); 77 raw boundary-clean hits.",
+            "status": "provisional",
+            "review": {
+              "by": "Gemini (AI reviewer; not expert review)",
+              "decision": "accept",
+              "comment": "Valid IAST orthographic variant with short -i; unambiguous in astronomical context (stop-rule sample)."
+            }
+          },
+          {
+            "form": "स्वाति",
+            "iast": "svāti",
+            "kind": "spelling_variant",
+            "evidence": [
+              "Jyotisham/naradasamhita.txt:512",
+              "Vedic texts/AV/atharvaveda parishishta.txt:6",
+              "Jyotisham/parasharatantra ocr.txt:1872",
+              "Kalpa, Dharmashastra, Prayoga/bharadvaja grihya sutra.txt:180",
+              "Kalpa, Dharmashastra, Prayoga/harita samhita.txt:1942",
+              "Kalpa, Dharmashastra, Prayoga/keshava krta kaushika paddhati.txt:3757",
+              "Kosha, Lexicon/vishwanatha, koshakalpataru.txt:1091",
+              "Puranani/matsya purana.txt:6985"
+            ],
+            "occurrences": 18,
+            "confidence": "high",
+            "reason": "vowel_length_swap from 'स्वाती'. 18 in-sense hits in 11 files (R1×18); 59 raw boundary-clean hits.",
+            "status": "provisional",
+            "review": {
+              "by": "Gemini (AI reviewer; not expert review)",
+              "decision": "accept",
+              "comment": "Standard Devanagari short -i variant (hrasva ikāra); canonical jyotiṣa usage (stop-rule sample)."
+            }
+          }
+        ]
       },
       "source_ref": "cahc_n28_full_meta#N15-Swa",
       "curation_status": "source_derived",
@@ -832,7 +1413,8 @@
         "विशाखे",
         "विशाखा",
         "Visakha",
-        "Vishakha"
+        "Vishakha",
+        "Viśākhe"
       ],
       "attributes": {
         "nid": "N16-Vis",
@@ -845,7 +1427,33 @@
         "stars": "(α1,α2) Lib",
         "proxy": "α2 Lib",
         "yogatara_name": "Zubenelgenubi",
-        "yogatara_hip": "HIP 72622"
+        "yogatara_hip": "HIP 72622",
+        "variant_evidence": [
+          {
+            "form": "Viśākhe",
+            "iast": "Viśākhe",
+            "kind": "spelling_variant",
+            "evidence": [
+              "gretil/sa_atharvavedapariziSTas.txt:55",
+              "patra-darpan/papers/1/document.md:74",
+              "gretil/sa_atharvavedapariziSTas.txt:57",
+              "gretil/sa_atharvavedapariziSTas.txt:61",
+              "gretil/sa_atharvavedapariziSTas.txt:183",
+              "gretil/sa_atharvavedapariziSTas.txt:197",
+              "gretil/sa_atharvavedapariziSTas.txt:317",
+              "gretil/sa_atharvavedapariziSTas.txt:4668"
+            ],
+            "occurrences": 9,
+            "confidence": "high",
+            "reason": "iast_counterpart_of_devanagari from 'विशाखे'. 9 in-sense hits in 2 files (R1×9); 66 raw boundary-clean hits.",
+            "status": "provisional",
+            "review": {
+              "by": "stop rule",
+              "decision": "auto",
+              "comment": "high confidence outside queue; sampled rows accepted"
+            }
+          }
+        ]
       },
       "source_ref": "cahc_n28_full_meta#N16-Vis",
       "curation_status": "source_derived",
@@ -872,7 +1480,85 @@
         "stars": "(β1,δ,π,ω1) Sco",
         "proxy": "δ Sco",
         "yogatara_name": "Dschubba",
-        "yogatara_hip": "HIP 78401"
+        "yogatara_hip": "HIP 78401",
+        "contextual_synonyms": [
+          {
+            "form": "मैत्र",
+            "iast": "maitra",
+            "kind": "taddhita",
+            "derived_from": "daivata",
+            "kosha_source": "Kosha, Lexicon/ganitanamamala.txt:75",
+            "ambiguous_with": [
+              "friendly (common adjective)",
+              "of Mitra"
+            ],
+            "evidence": [
+              "Puranani/skanda-purana copy.txt:286769",
+              "Jyotisham/parasharatantra ocr.txt:588",
+              "Kosha, Lexicon/ganitanamamala.txt:75",
+              "Kosha, Lexicon/siddha shabdarnava.txt:1032",
+              "Kosha, Lexicon/vishwanatha, koshakalpataru.txt:1056",
+              "Puranani/agnipuranam.txt:14799",
+              "Puranani/bhavishya puranam.txt:53404",
+              "Puranani/matsya purana.txt:6990"
+            ],
+            "occurrences_in_sense": 13,
+            "confidence": "medium",
+            "reason": "taddhita_vrddhi; deity Mitra. 13 in-sense hits in 12 files (R1×11, R3×2); 653 raw boundary-clean hits.",
+            "status": "provisional",
+            "review": {
+              "by": "Gemini (AI reviewer; not expert review)",
+              "decision": "accept",
+              "comment": "Standard taddhita synonym for Anurādhā (Mitra-daivatya) in astronomical texts."
+            }
+          },
+          {
+            "form": "मित्रभ",
+            "iast": "mitrabha",
+            "kind": "compound",
+            "derived_from": "daivata",
+            "kosha_source": null,
+            "ambiguous_with": [],
+            "evidence": [
+              "Jyotisham/parashara hora shastra.txt:3164",
+              "Puranani/narada purana.txt:17718",
+              "Puranani/naradiya purana.txt:12372",
+              "Jyotisham/parashara hora shastra.txt:3379",
+              "Puranani/narada purana.txt:18372"
+            ],
+            "occurrences_in_sense": 5,
+            "confidence": "high",
+            "reason": "compound_मित्र+भ; deity Mitra. 5 in-sense hits in 3 files (Rm×5); 5 raw boundary-clean hits.",
+            "status": "provisional",
+            "review": {
+              "by": "stop rule",
+              "decision": "auto",
+              "comment": "high confidence outside queue; sampled rows accepted"
+            }
+          },
+          {
+            "form": "मित्रर्क्ष",
+            "iast": "mitrarkṣa",
+            "kind": "compound",
+            "derived_from": "daivata",
+            "kosha_source": null,
+            "ambiguous_with": [],
+            "evidence": [
+              "Jyotisham/parashara hora shastra.txt:2119",
+              "Jyotisham/parashara hora shastra.txt:5027",
+              "Jyotisham/parashara hora shastra.txt:5718"
+            ],
+            "occurrences_in_sense": 3,
+            "confidence": "medium",
+            "reason": "compound_मित्र+ऋक्ष; deity Mitra. 3 in-sense hits in 1 files (Rm×3); 3 raw boundary-clean hits.",
+            "status": "provisional",
+            "review": {
+              "by": "Gemini (AI reviewer; not expert review)",
+              "decision": "accept",
+              "comment": "Explicit compound with -ṛkṣa unambiguously denoting Anurādhā in Bṛhatparāśarahorāśāstra."
+            }
+          }
+        ]
       },
       "source_ref": "cahc_n28_full_meta#N17-Anu",
       "curation_status": "source_derived",
@@ -898,7 +1584,82 @@
         "stars": "(α,ε,σ,(τ)) Sco",
         "proxy": "ε Sco",
         "yogatara_name": "Larawag",
-        "yogatara_hip": "HIP 82396"
+        "yogatara_hip": "HIP 82396",
+        "contextual_synonyms": [
+          {
+            "form": "ऐन्द्र",
+            "iast": "aindra",
+            "kind": "taddhita",
+            "derived_from": "daivata",
+            "kosha_source": null,
+            "ambiguous_with": [
+              "direction (east)",
+              "of Indra (adjective)"
+            ],
+            "evidence": [
+              "Jyotisham/vrrddha-gaargiiya-jyotisham.txt:776",
+              "Itihaasa/Mahabharatam/MB, BORI edition.txt:60559",
+              "Itihaasa/Mahabharatam/MB, Kumbhakona edition.txt:91527",
+              "Kosha, Lexicon/vishwanatha, koshakalpataru.txt:1057",
+              "Jyotisham/vrrddha-gaargiiya-jyotisham.txt:1223"
+            ],
+            "occurrences_in_sense": 5,
+            "confidence": "medium",
+            "reason": "taddhita_vrddhi; deity Indra. 5 in-sense hits in 4 files (R3×5); 611 raw boundary-clean hits.",
+            "status": "provisional",
+            "review": {
+              "by": "Gemini (AI reviewer; not expert review)",
+              "decision": "accept",
+              "comment": "Standard taddhita designation for Jyeṣṭhā (Indra-daivatya); distinct in nakṣatra contexts."
+            }
+          },
+          {
+            "form": "इन्द्रभ",
+            "iast": "indrabha",
+            "kind": "compound",
+            "derived_from": "daivata",
+            "kosha_source": "Kosha, Lexicon/ganitanamamala.txt:76",
+            "ambiguous_with": [],
+            "evidence": [
+              "Jyotisham/naradasamhita.txt:510",
+              "Kalpa, Dharmashastra, Prayoga/bodhayana grihya sutra.txt:3576",
+              "Puranani/skanda-purana copy.txt:172755"
+            ],
+            "occurrences_in_sense": 3,
+            "confidence": "high",
+            "reason": "compound_इन्द्र+भ; deity Indra. 3 in-sense hits in 3 files (Rm×3); 3 raw boundary-clean hits.",
+            "status": "provisional",
+            "review": {
+              "by": "stop rule",
+              "decision": "auto",
+              "comment": "high confidence outside queue; sampled rows accepted"
+            }
+          },
+          {
+            "form": "शाक्र",
+            "iast": "śākra",
+            "kind": "taddhita",
+            "derived_from": "daivata",
+            "kosha_source": "Kosha, Lexicon/ganitanamamala.txt:76",
+            "ambiguous_with": [
+              "adjective 'of Indra' in general use"
+            ],
+            "evidence": [
+              "Kosha, Lexicon/ganitanamamala.txt:76",
+              "Puranani/garuda purana.txt:4287",
+              "Puranani/vishnu dharmottara.txt:11231"
+            ],
+            "occurrences_in_sense": 3,
+            "confidence": "medium",
+            "reason": "taddhita_vrddhi; deity Indra. 3 in-sense hits in 3 files (R3×3); 57 raw boundary-clean hits.",
+            "status": "provisional",
+            "review": {
+              "by": "Gemini (AI reviewer; not expert review)",
+              "decision": "accept",
+              "comment": "Taddhita patronymic from Śakra (Indra) attested in Gaṇitanāmamālā:76 explicitly for Jyeṣṭhā."
+            }
+          }
+        ]
       },
       "source_ref": "cahc_n28_full_meta#N18-Jye",
       "curation_status": "source_derived",
@@ -913,7 +1674,8 @@
         "मूला",
         "Mula",
         "विचृतौ",
-        "Vicṛtau"
+        "Vicṛtau",
+        "Mūlā"
       ],
       "attributes": {
         "nid": "N19-Mul",
@@ -926,7 +1688,67 @@
         "stars": "(ζ2,θ,ι1,κ,λ,ν) Sco",
         "proxy": "κ Sco",
         "yogatara_name": "Mula",
-        "yogatara_hip": "HIP 86670"
+        "yogatara_hip": "HIP 86670",
+        "ambiguous_aliases": [
+          {
+            "form": "मूल",
+            "sense": "ordinary word: root, base, original text"
+          }
+        ],
+        "contextual_synonyms": [
+          {
+            "form": "नैर्ऋत",
+            "iast": "nairṛta",
+            "kind": "taddhita",
+            "derived_from": "daivata",
+            "kosha_source": null,
+            "ambiguous_with": [
+              "direction (south-west)",
+              "rākṣasa"
+            ],
+            "evidence": [
+              "Puranani/skanda-purana copy.txt:286769",
+              "Jyotisham/Parashara tantra.txt:139",
+              "Jyotisham/parasharatantra ocr.txt:2101",
+              "Jyotisham/vrrddha-gaargiiya-jyotisham.txt:168"
+            ],
+            "occurrences_in_sense": 4,
+            "confidence": "medium",
+            "reason": "taddhita_vrddhi; deity Nirṛti. 4 in-sense hits in 4 files (R1×1, R3×3); 161 raw boundary-clean hits.",
+            "status": "provisional",
+            "review": {
+              "by": "Gemini (AI reviewer; not expert review)",
+              "decision": "accept",
+              "comment": "Established taddhita form for Mūla (Nirṛti-daivatya); standard in classical jyotiṣa."
+            }
+          }
+        ],
+        "variant_evidence": [
+          {
+            "form": "Mūlā",
+            "iast": "Mūlā",
+            "kind": "spelling_variant",
+            "evidence": [
+              "gretil/sa_divyAvadAna.txt:2490",
+              "gretil/sa_zArdUlakarNAvadAna.txt:691",
+              "gretil/sa_maJjuzrImUlakalpa.txt:172",
+              "patra-darpan/papers/Vol38_2_1_RNIyengar/document.md:348",
+              "patra-darpan/papers/Vol41_2_1_SBhujle/document.md:78",
+              "gretil/sa_divyAvadAna.txt:2506",
+              "gretil/sa_divyAvadAna.txt:2606",
+              "gretil/sa_divyAvadAna.txt:2904"
+            ],
+            "occurrences": 12,
+            "confidence": "high",
+            "reason": "iast_counterpart_of_devanagari from 'मूला'. 12 in-sense hits in 5 files (R1×12); 76 raw boundary-clean hits.",
+            "status": "provisional",
+            "review": {
+              "by": "stop rule",
+              "decision": "auto",
+              "comment": "high confidence outside queue; sampled rows accepted"
+            }
+          }
+        ]
       },
       "source_ref": "cahc_n28_full_meta#N19-Mul",
       "curation_status": "source_derived",
@@ -992,12 +1814,13 @@
       "aliases": [
         "अभिजीत",
         "Abhijīt",
-        "अभिजित्"
+        "अभिजित्",
+        "अभिजित"
       ],
       "attributes": {
         "nid": "N22-Abi",
         "number_28": 22,
-        "daivata": "ब्रह्मा",
+        "daivata": "Brahmā",
         "marga": null,
         "veethi": null,
         "shape": null,
@@ -1005,7 +1828,28 @@
         "stars": "(α) Lyr",
         "proxy": "α Lyr",
         "yogatara_name": "Vega",
-        "yogatara_hip": "HIP 91262"
+        "yogatara_hip": "HIP 91262",
+        "variant_evidence": [
+          {
+            "form": "अभिजित",
+            "iast": "abhijita",
+            "kind": "spelling_variant",
+            "evidence": [
+              "Jyotisham/naradasamhita.txt:666",
+              "Jyotisham/vrrddha-gaargiiya-jyotisham.txt:3340",
+              "Kalpa, Dharmashastra, Prayoga/shankhayana grihya sutra.txt:129"
+            ],
+            "occurrences": 3,
+            "confidence": "high",
+            "reason": "vowel_length_swap from 'अभिजीत'. 3 in-sense hits in 3 files (R1×1, R1s×2); 168 raw boundary-clean hits.",
+            "status": "provisional",
+            "review": {
+              "by": "stop rule",
+              "decision": "auto",
+              "comment": "high confidence outside queue; sampled rows accepted"
+            }
+          }
+        ]
       },
       "source_ref": "cahc_n28_full_meta#N22-Abi",
       "curation_status": "source_derived",
@@ -1033,7 +1877,65 @@
         "stars": "(α,β,γ) Aql",
         "proxy": "α Aql",
         "yogatara_name": "Altair",
-        "yogatara_hip": "HIP 97649"
+        "yogatara_hip": "HIP 97649",
+        "contextual_synonyms": [
+          {
+            "form": "वैष्णव",
+            "iast": "vaiṣṇava",
+            "kind": "taddhita",
+            "derived_from": "daivata",
+            "kosha_source": "Kosha, Lexicon/ganitanamamala.txt:80",
+            "ambiguous_with": [
+              "Vaiṣṇava (devotee/adjective)"
+            ],
+            "evidence": [
+              "Jyotisham/vrrddha-gaargiiya-jyotisham.txt:555",
+              "Puranani/vishnu dharmottara.txt:11609",
+              "Jyotisham/parasharatantra ocr.txt:1096",
+              "Vastu, Shilpa, Iconography/Kamikagama.txt:3012",
+              "Puranani/harivamsha purana.txt:4711",
+              "Kosha, Lexicon/ganitanamamala.txt:80",
+              "Puranani/agnipuranam.txt:14689",
+              "Puranani/brahma purana.txt:24725"
+            ],
+            "occurrences_in_sense": 18,
+            "confidence": "medium",
+            "reason": "taddhita_vrddhi; deity Viṣṇu. 18 in-sense hits in 13 files (R1×6, R3×12); 2159 raw boundary-clean hits.",
+            "status": "provisional",
+            "review": {
+              "by": "Gemini (AI reviewer; not expert review)",
+              "decision": "accept",
+              "comment": "Established taddhita designation for Śravaṇa (Viṣṇu-daivatya) in jyotiṣa literature."
+            }
+          },
+          {
+            "form": "विष्णुभ",
+            "iast": "viṣṇubha",
+            "kind": "compound",
+            "derived_from": "daivata",
+            "kosha_source": null,
+            "ambiguous_with": [],
+            "evidence": [
+              "Jyotisham/naradasamhita.txt:511",
+              "Puranani/narada purana.txt:16894",
+              "Puranani/naradiya purana.txt:11819",
+              "Jyotisham/naradasamhita.txt:516",
+              "Jyotisham/naradasamhita.txt:532",
+              "Jyotisham/naradasamhita.txt:541",
+              "Puranani/narada purana.txt:16987",
+              "Puranani/narada purana.txt:17371"
+            ],
+            "occurrences_in_sense": 10,
+            "confidence": "high",
+            "reason": "compound_विष्णु+भ; deity Viṣṇu. 10 in-sense hits in 3 files (Rm×10); 10 raw boundary-clean hits.",
+            "status": "provisional",
+            "review": {
+              "by": "stop rule",
+              "decision": "auto",
+              "comment": "high confidence outside queue; sampled rows accepted"
+            }
+          }
+        ]
       },
       "source_ref": "cahc_n28_full_meta#N23-Shr",
       "curation_status": "source_derived",
@@ -1061,7 +1963,61 @@
         "stars": "(α,β,γ2,δ) Del",
         "proxy": "β Del",
         "yogatara_name": "Rotanev",
-        "yogatara_hip": "HIP 101769"
+        "yogatara_hip": "HIP 101769",
+        "contextual_synonyms": [
+          {
+            "form": "वासव",
+            "iast": "vāsava",
+            "kind": "taddhita",
+            "derived_from": "daivata",
+            "kosha_source": "Kosha, Lexicon/ganitanamamala.txt:77",
+            "ambiguous_with": [
+              "Indra (Vāsava)",
+              "of the Vasus"
+            ],
+            "evidence": [
+              "Jyotisham/vrrddha-gaargiiya-jyotisham.txt:3005",
+              "Puranani/vishnu dharmottara.txt:51423",
+              "Jyotisham/naradasamhita.txt:666",
+              "Kosha, Lexicon/siddha shabdarnava.txt:1035",
+              "Puranani/agnipuranam.txt:16070",
+              "Puranani/harivamsha purana.txt:39257",
+              "Kalpa, Dharmashastra, Prayoga/devanabhatta, smrtichandrika, shraddhakanda.txt:597",
+              "Kosha, Lexicon/ganitanamamala.txt:81"
+            ],
+            "occurrences_in_sense": 10,
+            "confidence": "medium",
+            "reason": "taddhita_vrddhi; deity Vasu. 10 in-sense hits in 8 files (R1×6, R3×4); 915 raw boundary-clean hits.",
+            "status": "provisional",
+            "review": {
+              "by": "Gemini (AI reviewer; not expert review)",
+              "decision": "accept",
+              "comment": "Standard taddhita for Dhaniṣṭhā (Vasu-daivatya); retains clear mansion sense in nakṣatra lists despite Indra epithet."
+            }
+          },
+          {
+            "form": "वसुभ",
+            "iast": "vasubha",
+            "kind": "compound",
+            "derived_from": "daivata",
+            "kosha_source": null,
+            "ambiguous_with": [],
+            "evidence": [
+              "Jyotisham/naradasamhita.txt:511",
+              "Puranani/revakhanda, skanda purana.txt:14178",
+              "Jyotisham/naradasamhita.txt:532"
+            ],
+            "occurrences_in_sense": 3,
+            "confidence": "high",
+            "reason": "compound_वसु+भ; deity Vasu. 3 in-sense hits in 2 files (Rm×3); 3 raw boundary-clean hits.",
+            "status": "provisional",
+            "review": {
+              "by": "stop rule",
+              "decision": "auto",
+              "comment": "high confidence outside queue; sampled rows accepted"
+            }
+          }
+        ]
       },
       "source_ref": "cahc_n28_full_meta#N24-Dha",
       "curation_status": "source_derived",
@@ -1092,7 +2048,39 @@
         "stars": "(λ) Aqr",
         "proxy": "λ Aqr",
         "yogatara_name": "Hydor",
-        "yogatara_hip": "HIP 112961"
+        "yogatara_hip": "HIP 112961",
+        "contextual_synonyms": [
+          {
+            "form": "वारुण",
+            "iast": "vāruṇa",
+            "kind": "taddhita",
+            "derived_from": "daivata",
+            "kosha_source": "Kosha, Lexicon/ganitanamamala.txt:82",
+            "ambiguous_with": [
+              "direction (west)",
+              "of Varuṇa (adjective)"
+            ],
+            "evidence": [
+              "Puranani/agnipuranam.txt:15621",
+              "Puranani/garuda purana.txt:4323",
+              "Puranani/matsya purana.txt:3598",
+              "Vedic texts/AV/atharvaveda parishishta.txt:2770",
+              "Jyotisham/naradasamhita.txt:666",
+              "Jyotisham/parasharatantra ocr.txt:1694",
+              "Jyotisham/vrrddha-gaargiiya-jyotisham.txt:3237",
+              "Vastu, Shilpa, Iconography/Kamikagama.txt:3012"
+            ],
+            "occurrences_in_sense": 16,
+            "confidence": "medium",
+            "reason": "taddhita_vrddhi; deity Varuṇa. 16 in-sense hits in 12 files (R1×11, R3×5); 1104 raw boundary-clean hits.",
+            "status": "provisional",
+            "review": {
+              "by": "Gemini (AI reviewer; not expert review)",
+              "decision": "accept",
+              "comment": "Standard taddhita designation for Śatabhiṣak (Varuṇa-daivatya); well-attested in saṃhitā lists."
+            }
+          }
+        ]
       },
       "source_ref": "cahc_n28_full_meta#N25-Sha",
       "curation_status": "source_derived",
@@ -1107,7 +2095,8 @@
         "P Proṣṭapada",
         "Pūrvaproṣṭhapadā",
         "Purva Bhadrapada",
-        "Poorva Bhadrapada"
+        "Poorva Bhadrapada",
+        "पूर्वभाद्रपदा"
       ],
       "attributes": {
         "nid": "N26-PBha",
@@ -1120,7 +2109,33 @@
         "stars": "(α,β) Peg",
         "proxy": "α Peg",
         "yogatara_name": "Markab",
-        "yogatara_hip": "HIP 113963"
+        "yogatara_hip": "HIP 113963",
+        "variant_evidence": [
+          {
+            "form": "पूर्वभाद्रपदा",
+            "iast": "pūrvabhādrapadā",
+            "kind": "spelling_variant",
+            "evidence": [
+              "Puranani/agnipuranam.txt:15396",
+              "Bauddha/shardula karnavadanam.txt:949",
+              "Bauddha/divyavadanam.txt:10993",
+              "Kosha, Lexicon/siddha shabdarnava.txt:1037",
+              "Puranani/bhavishya puranam.txt:16497",
+              "Puranani/agnipuranam.txt:15425",
+              "Puranani/agnipuranam.txt:15599",
+              "Bauddha/shardula karnavadanam.txt:1241"
+            ],
+            "occurrences": 8,
+            "confidence": "high",
+            "reason": "devanagari_counterpart_of_iast from 'Pūrvabhādrapadā'. 8 in-sense hits in 5 files (R1×8); 14 raw boundary-clean hits.",
+            "status": "provisional",
+            "review": {
+              "by": "stop rule",
+              "decision": "auto",
+              "comment": "high confidence outside queue; sampled rows accepted"
+            }
+          }
+        ]
       },
       "source_ref": "cahc_n28_full_meta#N26-PBha",
       "curation_status": "source_derived",
@@ -1134,7 +2149,8 @@
         "उत्तराभाद्रपदा",
         "U Proṣṭapada",
         "Uttaraproṣṭhapadā",
-        "Uttara Bhadrapada"
+        "Uttara Bhadrapada",
+        "उत्तरभाद्रपदा"
       ],
       "attributes": {
         "nid": "N26-UBha",
@@ -1147,7 +2163,30 @@
         "stars": "γ Peg, α And",
         "proxy": "γ Peg",
         "yogatara_name": "Algenib",
-        "yogatara_hip": "HIP 1067"
+        "yogatara_hip": "HIP 1067",
+        "variant_evidence": [
+          {
+            "form": "उत्तरभाद्रपदा",
+            "iast": "uttarabhādrapadā",
+            "kind": "spelling_variant",
+            "evidence": [
+              "Bauddha/shardula karnavadanam.txt:949",
+              "Bauddha/divyavadanam.txt:10993",
+              "Bauddha/shardula karnavadanam.txt:973",
+              "Bauddha/shardula karnavadanam.txt:1241",
+              "Bauddha/divyavadanam.txt:11030"
+            ],
+            "occurrences": 5,
+            "confidence": "high",
+            "reason": "devanagari_counterpart_of_iast from 'Uttarabhādrapadā'. 5 in-sense hits in 2 files (R1×5); 9 raw boundary-clean hits.",
+            "status": "provisional",
+            "review": {
+              "by": "stop rule",
+              "decision": "auto",
+              "comment": "high confidence outside queue; sampled rows accepted"
+            }
+          }
+        ]
       },
       "source_ref": "cahc_n28_full_meta#N26-UBha",
       "curation_status": "source_derived",
@@ -1172,7 +2211,61 @@
         "stars": "(ε,(α,ζ)) Psc",
         "proxy": "ε Psc",
         "yogatara_name": "epsPsc",
-        "yogatara_hip": "HIP 4906"
+        "yogatara_hip": "HIP 4906",
+        "contextual_synonyms": [
+          {
+            "form": "पौष्ण",
+            "iast": "pauṣṇa",
+            "kind": "taddhita",
+            "derived_from": "daivata",
+            "kosha_source": "Kosha, Lexicon/ganitanamamala.txt:85",
+            "ambiguous_with": [
+              "of Pūṣan"
+            ],
+            "evidence": [
+              "Kalpa, Dharmashastra, Prayoga/Madhava, parashara samhita.txt:10182",
+              "Puranani/harivamsha purana.txt:39257",
+              "Jyotisham/vrrddha-gaargiiya-jyotisham.txt:194",
+              "Kalpa, Dharmashastra, Prayoga/devanabhatta, smrtichandrika, samskarakanda.txt:697",
+              "Kosha, Lexicon/ganitanamamala.txt:85",
+              "Kosha, Lexicon/hemachandra, abhidhana chintamani.txt:298",
+              "Puranani/garuda purana.txt:4294",
+              "Puranani/vishnu dharmottara.txt:11245"
+            ],
+            "occurrences_in_sense": 8,
+            "confidence": "medium",
+            "reason": "taddhita_vrddhi; deity Pūṣan. 8 in-sense hits in 8 files (R1×2, R3×6); 201 raw boundary-clean hits.",
+            "status": "provisional",
+            "review": {
+              "by": "Gemini (AI reviewer; not expert review)",
+              "decision": "accept",
+              "comment": "Canonical taddhita synonym for Revatī (Pūṣan-daivatya); corroborated by Gaṇitanāmamālā and Harivaṃśa."
+            }
+          },
+          {
+            "form": "पौष्णभ",
+            "iast": "pauṣṇabha",
+            "kind": "compound",
+            "derived_from": "daivata",
+            "kosha_source": "Kosha, Lexicon/ganitanamamala.txt:85",
+            "ambiguous_with": [],
+            "evidence": [
+              "Jyotisham/naradasamhita.txt:532",
+              "Jyotisham/muhurta chintamani.txt:669",
+              "Jyotisham/parashara hora shastra.txt:3546",
+              "Jyotisham/naradasamhita.txt:639"
+            ],
+            "occurrences_in_sense": 4,
+            "confidence": "high",
+            "reason": "kosha_mansion_name_gn; deity Pūṣan. 4 in-sense hits in 3 files (Rm×4); 4 raw boundary-clean hits.",
+            "status": "provisional",
+            "review": {
+              "by": "stop rule",
+              "decision": "auto",
+              "comment": "high confidence outside queue; sampled rows accepted"
+            }
+          }
+        ]
       },
       "source_ref": "cahc_n28_full_meta#N28-Rev",
       "curation_status": "source_derived",
@@ -1193,7 +2286,13 @@
         "order": 1,
         "span_deg": 30.0,
         "start_deg": 0.0,
-        "end_deg": 30.0
+        "end_deg": 30.0,
+        "ambiguous_aliases": [
+          {
+            "form": "मेष",
+            "sense": "ordinary word: ram"
+          }
+        ]
       },
       "source_ref": "stel_nakshatras_inc",
       "curation_status": "source_derived",
@@ -1357,7 +2456,13 @@
         "order": 9,
         "span_deg": 30.0,
         "start_deg": 240.0,
-        "end_deg": 270.0
+        "end_deg": 270.0,
+        "ambiguous_aliases": [
+          {
+            "form": "धनु",
+            "sense": "ordinary word: bow"
+          }
+        ]
       },
       "source_ref": "stel_nakshatras_inc",
       "curation_status": "source_derived",
@@ -1376,7 +2481,13 @@
         "order": 10,
         "span_deg": 30.0,
         "start_deg": 270.0,
-        "end_deg": 300.0
+        "end_deg": 300.0,
+        "ambiguous_aliases": [
+          {
+            "form": "मकर",
+            "sense": "ordinary word: crocodile, sea-monster"
+          }
+        ]
       },
       "source_ref": "stel_nakshatras_inc",
       "curation_status": "source_derived",
@@ -1415,7 +2526,13 @@
         "order": 12,
         "span_deg": 30.0,
         "start_deg": 330.0,
-        "end_deg": 360.0
+        "end_deg": 360.0,
+        "ambiguous_aliases": [
+          {
+            "form": "मीन",
+            "sense": "ordinary word: fish"
+          }
+        ]
       },
       "source_ref": "stel_nakshatras_inc",
       "curation_status": "source_derived",
@@ -1687,7 +2804,13 @@
         "Spring"
       ],
       "attributes": {
-        "category": "season"
+        "category": "season",
+        "ambiguous_aliases": [
+          {
+            "form": "Spring",
+            "sense": "ordinary English word"
+          }
+        ]
       },
       "source_ref": "cahc_vgj_explorer",
       "curation_status": "source_derived",
@@ -1703,7 +2826,13 @@
         "Summer"
       ],
       "attributes": {
-        "category": "season"
+        "category": "season",
+        "ambiguous_aliases": [
+          {
+            "form": "Summer",
+            "sense": "ordinary English word"
+          }
+        ]
       },
       "source_ref": "cahc_vgj_explorer",
       "curation_status": "source_derived",
@@ -1738,7 +2867,13 @@
         "Autumn"
       ],
       "attributes": {
-        "category": "season"
+        "category": "season",
+        "ambiguous_aliases": [
+          {
+            "form": "Autumn",
+            "sense": "ordinary English word"
+          }
+        ]
       },
       "source_ref": "cahc_vgj_explorer",
       "curation_status": "source_derived",
@@ -1770,7 +2905,13 @@
         "Winter"
       ],
       "attributes": {
-        "category": "season"
+        "category": "season",
+        "ambiguous_aliases": [
+          {
+            "form": "Winter",
+            "sense": "ordinary English word"
+          }
+        ]
       },
       "source_ref": "cahc_vgj_explorer",
       "curation_status": "source_derived",
@@ -2562,7 +3703,13 @@
       ],
       "attributes": {
         "category": "observational_instrument",
-        "description": "Graduated sighting staff or cross-staff for angular distance measurements"
+        "description": "Graduated sighting staff or cross-staff for angular distance measurements",
+        "ambiguous_aliases": [
+          {
+            "form": "Staff",
+            "sense": "ordinary English word"
+          }
+        ]
       },
       "source_ref": "patra_darpan_corpus",
       "curation_status": "corpus_candidate",
@@ -2661,7 +3808,13 @@
       ],
       "attributes": {
         "category": "mathematical_astronomy",
-        "description": "Parallax in celestial latitude in solar eclipse computation"
+        "description": "Parallax in celestial latitude in solar eclipse computation",
+        "ambiguous_aliases": [
+          {
+            "form": "नति",
+            "sense": "ordinary word: bowing, inclination"
+          }
+        ]
       },
       "source_ref": "patra_darpan_corpus",
       "curation_status": "corpus_candidate",
@@ -2677,7 +3830,13 @@
       ],
       "attributes": {
         "category": "mathematical_astronomy",
-        "description": "Deflection of the ecliptic with respect to the prime vertical, crucial for depicting eclipse phases"
+        "description": "Deflection of the ecliptic with respect to the prime vertical, crucial for depicting eclipse phases",
+        "ambiguous_aliases": [
+          {
+            "form": "वलन",
+            "sense": "ordinary word: turning, bending"
+          }
+        ]
       },
       "source_ref": "patra_darpan_corpus",
       "curation_status": "corpus_candidate",
@@ -2795,7 +3954,13 @@
       ],
       "attributes": {
         "category": "mathematical_astronomy",
-        "description": "Ascending or descending orbital node of the Moon or planets (Rāhu and Ketu)"
+        "description": "Ascending or descending orbital node of the Moon or planets (Rāhu and Ketu)",
+        "ambiguous_aliases": [
+          {
+            "form": "पात",
+            "sense": "ordinary word: fall, descent"
+          }
+        ]
       },
       "source_ref": "patra_darpan_corpus",
       "curation_status": "corpus_candidate",

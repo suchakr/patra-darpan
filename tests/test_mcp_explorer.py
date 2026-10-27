@@ -22,6 +22,16 @@ class McpExplorerProjectionTests(unittest.TestCase):
         dhani = next(entity for entity in actual["entities"] if entity["id"] == "jyotisha:nakshatra_dhanishtha")
         self.assertIn("श्रविष्ठा", dhani["aliases"])
         self.assertEqual(dhani["attributes"]["daivata"], "Vasu")
+        annotations = [
+            (field, entry)
+            for entity in actual["entities"]
+            for field in ("contextual_synonyms", "variant_evidence")
+            for entry in (entity.get("attributes") or {}).get(field, [])
+        ]
+        self.assertEqual(len(annotations), 39)
+        self.assertEqual(sum(field == "contextual_synonyms" for field, _ in annotations), 28)
+        self.assertEqual(sum(field == "variant_evidence" for field, _ in annotations), 11)
+        self.assertTrue(all(entry["status"] == "provisional" for _, entry in annotations))
 
     def test_uncommitted_source_does_not_claim_a_git_revision(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -41,6 +51,18 @@ class McpExplorerProjectionTests(unittest.TestCase):
             data["entities"].append(data["entities"][0])
             source.write_text(json.dumps(data), encoding="utf-8")
             with self.assertRaisesRegex(ValueError, "Duplicate entity"):
+                projection(source)
+
+    def test_invalid_annotation_status_fails_projection(self):
+        with tempfile.TemporaryDirectory() as directory:
+            source = Path(directory) / "ontology.json"
+            data = json.loads(SOURCE.read_text(encoding="utf-8"))
+            mansion = next(entity for entity in data["entities"] if entity["type"] == "lunar_mansion")
+            mansion.setdefault("attributes", {})["contextual_synonyms"] = [
+                {"form": "example", "status": "candidate"}
+            ]
+            source.write_text(json.dumps(data), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "provisional or approved"):
                 projection(source)
 
     def test_stale_projection_is_rejected(self):

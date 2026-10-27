@@ -246,6 +246,20 @@ class EntityAdapter:
             entity_id = str(entity.get("id") or "")
             if not entity_id or entity_id in self._ontology_by_id:
                 raise RetrievalError("ontology entities require unique IDs")
+            attributes = entity.get("attributes") or {}
+            if not isinstance(attributes, dict):
+                raise RetrievalError("ontology entity attributes must be an object")
+            for field in ("contextual_synonyms", "variant_evidence"):
+                entries = attributes.get(field, [])
+                if not isinstance(entries, list):
+                    raise RetrievalError(f"ontology {field} must be a list")
+                for entry in entries:
+                    if not isinstance(entry, dict) or entry.get("status") not in {"provisional", "approved"}:
+                        raise RetrievalError(
+                            f"ontology {field} entries require status provisional or approved"
+                        )
+                    if not str(entry.get("form") or "").strip():
+                        raise RetrievalError(f"ontology {field} entries require a form")
             self._ontology_by_id[entity_id] = entity
         self._relations_by_id: dict[str, list[dict[str, Any]]] = {
             entity_id: [] for entity_id in self._ontology_by_id
@@ -335,7 +349,11 @@ class EntityAdapter:
             "mention_assessment": self._mention_assessment(self.mentions),
             "knowledge_lookup": {
                 "tool": "lookup_entity",
-                "fields": ["attributes", "relations", "ontology", "source_ref", "curation_status"],
+                "fields": [
+                    "attributes", "attributes.contextual_synonyms[].status",
+                    "attributes.variant_evidence[].status", "relations", "ontology",
+                    "source_ref", "curation_status",
+                ],
                 "relation_source": "ontology.relations",
                 "max_relations_per_entity": ENTITY_RELATION_LIMIT,
                 "knowledge_byte_limit": ENTITY_KNOWLEDGE_BYTE_LIMIT,
@@ -347,6 +365,7 @@ class EntityAdapter:
                 "An outgoing edge starts at the queried entity; an incoming edge ends there. target_entity_id and target_preferred_label name the related entity; follow its preferred label with lookup_entity.",
                 "Use list_entity_mentions and fetched passages for corpus evidence. Entity-ID search filters restrict known mentions; they do not expand aliases or imply full-corpus coverage.",
                 "mention_assessment counts alias-level ambiguity flags: flagged is explicitly listed in attributes.ambiguous_aliases; unflagged means not listed, not contextually verified; legacy rows without the flag are unassessed.",
+                "For attributes.contextual_synonyms and attributes.variant_evidence, item-level status is limited to provisional or approved; provisional is not expert approval.",
                 "Check attributes_truncated, relations_truncated and results_truncated before assuming complete knowledge. Canonical edges win over a stale node-local projection, reported by relation_projection_consistent.",
             ],
             "corpus_revision": self.release.corpus_revision,

@@ -145,6 +145,10 @@ the canonical `from_entity_id`/`to_entity_id`, and the related entity's
 `target_entity_id`/`target_preferred_label`. For an incoming relation the related
 entity is the edge's source. Follow its preferred label with `lookup_entity`;
 authorship and composition-location relations remain attached to the work.
+With the v0.4 ontology, `attributes.contextual_synonyms` and
+`attributes.variant_evidence` expose each item's `status`, limited to
+`provisional` or `approved`. This item-level status is distinct from the result's
+registry `status`; `provisional` does not mean expert-approved.
 
 Entity lookup and mention browsing include `mention_assessment` with `total`,
 `flagged`, `unflagged`, and `unassessed` counts. In `lookup_entity` the counts

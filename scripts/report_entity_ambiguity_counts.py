@@ -29,6 +29,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--chunks", type=Path, required=True, help="pinned chunk JSONL")
     parser.add_argument("--corpus-revision", required=True, help="source commit for the chunk inventory")
     parser.add_argument("--release-id", required=True, help="release identifier for the pinned chunk inventory")
+    parser.add_argument("--base-mentions", type=Path, default=None, help="optional verified base entity-mentions JSONL")
+    parser.add_argument("--target-mentions", type=Path, default=None, help="optional verified target entity-mentions JSONL")
+    parser.add_argument("--previous-target-mentions", type=Path, default=None, help="optional earlier-target entity-mentions JSONL")
     parser.add_argument(
         "--base-ontology", type=Path, default=ROOT / "ontology" / "jyotisha-v0.3.json"
     )
@@ -46,7 +49,14 @@ def parse_args() -> argparse.Namespace:
         default=None,
         help="optional git show ref:path for an earlier target snapshot",
     )
-    parser.add_argument("--provisional-ontology", type=Path, required=True)
+    parser.add_argument(
+        "--provisional-ontology", type=Path, default=None,
+        help="optional ontology for spelling-variant counts; defaults to the target ontology",
+    )
+    parser.add_argument(
+        "--expected-provisional-variants", type=int, default=None,
+        help="optional assertion for the number of provisional spelling variants",
+    )
     parser.add_argument("--output", type=Path, default=None, help="Markdown report path; defaults to stdout")
     return parser.parse_args()
 
@@ -81,6 +91,16 @@ def mentions_for(chunks: list[dict[str, Any]], ontology: dict[str, Any], revisio
     # Validate aliases and ambiguity markers before doing the corpus pass.
     load_alias_targets(ontology)
     return list(iter_mentions(chunks, ontology, corpus_revision=revision))
+
+
+def mentions_from_artifact(path: Path, revision: str) -> list[dict[str, Any]]:
+    rows = list(read_jsonl(path))
+    if not rows:
+        raise ValueError(f"mention artifact is empty: {path}")
+    mismatched = sum(str(row.get("corpus_revision") or "") != revision for row in rows)
+    if mismatched:
+        raise ValueError(f"{mismatched} rows in {path} do not match corpus revision {revision}")
+    return rows
 
 
 def keyed_rows(mentions: list[dict[str, Any]]) -> dict[tuple[str, str], list[dict[str, Any]]]:
@@ -179,14 +199,32 @@ def main() -> int:
         previous_target_bytes = args.previous_target_ontology.read_bytes()
     else:
         previous_target = None
-    provisional = load_json(args.provisional_ontology)
-    base_mentions = mentions_for(chunks, base, args.corpus_revision)
-    target_mentions = mentions_for(chunks, target, args.corpus_revision)
-    provisional_mentions = mentions_for(chunks, provisional, args.corpus_revision)
+    provisional = load_json(args.provisional_ontology) if args.provisional_ontology else target
+    base_mentions = (
+        mentions_from_artifact(args.base_mentions, args.corpus_revision)
+        if args.base_mentions else mentions_for(chunks, base, args.corpus_revision)
+    )
+    target_mentions = (
+        mentions_from_artifact(args.target_mentions, args.corpus_revision)
+        if args.target_mentions else mentions_for(chunks, target, args.corpus_revision)
+    )
+    provisional_mentions = target_mentions if provisional is target else mentions_for(
+        chunks, provisional, args.corpus_revision
+    )
+    previous_target_mentions = (
+        mentions_from_artifact(args.previous_target_mentions, args.corpus_revision)
+        if args.previous_target_mentions and previous_target is not None
+        else mentions_for(chunks, previous_target, args.corpus_revision)
+        if previous_target is not None
+        else None
+    )
     base_index, target_index, provisional_index = map(
         keyed_rows, (base_mentions, target_mentions, provisional_mentions)
     )
     base_norm, target_norm, provisional_norm = map(normalizer, (base, target, provisional))
+    base_label = str(base.get("version") or "base")
+    target_label = str(target.get("version") or "target")
+    provisional_label = str(provisional.get("version") or "variant-source")
 
     markers = marked_forms(target)
     removed_markers = (
@@ -198,8 +236,39 @@ def main() -> int:
     removed = removed_aliases(base, target)
     if not markers:
         raise ValueError("target ontology has no ambiguity-marked forms")
-    if len(variants) != 11:
-        raise ValueError(f"expected 11 provisional spelling variants, found {len(variants)}")
+    if args.expected_provisional_variants is not None and len(variants) != args.expected_provisional_variants:
+        raise ValueError(
+            f"expected {args.expected_provisional_variants} provisional spelling variants, found {len(variants)}"
+        )
+    variant_baseline = previous_target if previous_target is not None else target
+    if previous_target is None:
+        variant_baseline_index = target_index
+        variant_baseline_norm = target_norm
+    else:
+        variant_baseline_index = keyed_rows(previous_target_mentions or [])
+        variant_baseline_norm = normalizer(previous_target)
+    contextual_synonym_count = sum(
+        entry.get("status") == "provisional"
+        for entity in target.get("entities") or []
+        for entry in ((entity.get("attributes") or {}).get("contextual_synonyms") or [])
+        if isinstance(entry, dict)
+    )
+    target_annotations = [
+        entry
+        for entity in target.get("entities") or []
+        for field in ("contextual_synonyms", "variant_evidence")
+        for entry in ((entity.get("attributes") or {}).get(field) or [])
+        if isinstance(entry, dict)
+    ]
+    target_status_counts = {
+        status: sum(entry.get("status") == status for entry in target_annotations)
+        for status in ("provisional", "approved")
+    }
+    variant_deltas = [
+        len(count_rows(provisional_index, entity_id, form, provisional_norm))
+        - len(count_rows(variant_baseline_index, entity_id, form, variant_baseline_norm))
+        for entity_id, form, _ in variants
+    ]
 
     lines = [
         "# Jyotiṣa ontology mention-count comparison",
@@ -209,18 +278,22 @@ def main() -> int:
         f"- Chunk windows: {len(chunks):,}",
         f"- Extractor: `{target_mentions[0]['extractor']['version'] if target_mentions else 'starter-gazetteer-0.2.0'}`",
         f"- Chunk SHA-256: `{sha256_file(args.chunks)}`",
-        f"- v0.3 SHA-256: `{sha256_file(args.base_ontology)}`",
-        f"- v0.3.1 SHA-256: `{sha256_file(args.target_ontology)}`",
+        *( [f"- Base mention artifact SHA-256: `{sha256_file(args.base_mentions)}`"] if args.base_mentions else [] ),
+        *( [f"- Target mention artifact SHA-256: `{sha256_file(args.target_mentions)}`"] if args.target_mentions else [] ),
+        *( [f"- Previous-target mention artifact SHA-256: `{sha256_file(args.previous_target_mentions)}`"] if args.previous_target_mentions else [] ),
+        f"- Base ontology (v{base_label}) SHA-256: `{sha256_file(args.base_ontology)}`",
+        f"- Target ontology (v{target_label}) SHA-256: `{sha256_file(args.target_ontology)}`",
         *(
             [f"- Previous target SHA-256: `{hashlib.sha256(previous_target_bytes).hexdigest()}`"]
             if previous_target_bytes is not None
             else []
         ),
-        f"- provisional ontology SHA-256: `{sha256_file(args.provisional_ontology)}`",
+        f"- Variant-source ontology (v{provisional_label}) SHA-256: `{sha256_file(args.provisional_ontology) if args.provisional_ontology else sha256_file(args.target_ontology)}`",
+        f"- Target status-bearing annotations: {target_status_counts['provisional']} provisional, {target_status_counts['approved']} approved",
         "",
-        "Counts are extractor mention rows for each exact entity/form on the identical chunk inventory. “Unflagged” means the form is not listed in the finite ambiguity-marker list; it is not contextual or scholarly verification. v0.3 has no ambiguity assessment field, so its matching rows are unassessed. Contextual synonyms are not aliases and are excluded. The provisional ontology is reported as supplied; it is not rebased by this script.",
+        f"Counts are extractor mention rows for each exact entity/form on the identical chunk inventory. “Unflagged” means the form is not listed in the finite ambiguity-marker list; it is not contextual or scholarly verification. The target contains {contextual_synonym_count} provisional contextual synonyms; these are metadata, not aliases. The {len(variants)} provisional spelling variants add {sum(variant_deltas):+d} matching mention rows against the stated baseline.",
         "",
-        "## Ambiguity-marked forms (v0.3 → v0.3.1)",
+        f"## Ambiguity-marked forms (v{base_label} → v{target_label})",
         "",
         "| Entity | Form | Before total | After total | Flagged | Unflagged | Unassessed | Delta |",
         "| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |",
@@ -233,10 +306,10 @@ def main() -> int:
             f"| {label} (`{entity_id}`) | {form} | {len(before)} | {total} | {flagged} | {unflagged} | {unassessed} | {total-len(before):+d} |"
         )
 
-    if previous_target is not None:
+    if previous_target is not None and removed_markers:
         lines.extend([
             "",
-            "## Removed ambiguity markers (previous target → v0.3.1)",
+            f"## Removed ambiguity markers (v{previous_target.get('version') or 'previous'} → v{target_label})",
             "",
             "Marker status is a disclosure label and does not affect matching. Counts remain stable where the aliases are unchanged.",
             "",
@@ -253,7 +326,7 @@ def main() -> int:
 
     lines.extend([
         "",
-        "## Removed aliases (v0.3 → v0.3.1)",
+        f"## Removed aliases (v{base_label} → v{target_label})",
         "",
         "| Entity | Removed form | Before total | After total | Delta |",
         "| --- | --- | ---: | ---: | ---: |",
@@ -265,13 +338,13 @@ def main() -> int:
 
     lines.extend([
         "",
-        "## Provisional spelling variants (v0.3.1 → v0.4.0-partial)",
+        f"## Provisional spelling variants (v{variant_baseline.get('version') or 'baseline'} → v{provisional_label})",
         "",
-        "| Entity | Variant | Before total | Provisional total | Delta |",
+        "| Entity | Variant | Before total | After total | Delta |",
         "| --- | --- | ---: | ---: | ---: |",
     ])
     for entity_id, form, label in sorted(variants, key=lambda row: (row[0], row[1])):
-        before = count_rows(target_index, entity_id, form, target_norm)
+        before = count_rows(variant_baseline_index, entity_id, form, variant_baseline_norm)
         after = count_rows(provisional_index, entity_id, form, provisional_norm)
         lines.append(f"| {label} (`{entity_id}`) | {form} | {len(before)} | {len(after)} | {len(after)-len(before):+d} |")
 
@@ -282,7 +355,21 @@ def main() -> int:
         "| Ontology | Total | Flagged | Unflagged | Unassessed |",
         "| --- | ---: | ---: | ---: | ---: |",
     ])
-    for label, mentions in (("v0.3", base_mentions), ("v0.3.1", target_mentions), ("v0.4.0-partial", provisional_mentions)):
+    assessment_rows = [(f"v{base_label}", base_mentions)]
+    if previous_target is not None and str(previous_target.get("version")) not in {base_label, target_label}:
+        assessment_rows.append((
+            f"v{previous_target.get('version')}",
+            previous_target_mentions or [],
+        ))
+    assessment_rows.extend([
+        (f"v{target_label}", target_mentions),
+        (f"v{provisional_label}", provisional_mentions),
+    ])
+    seen_assessment_labels: set[str] = set()
+    for label, mentions in assessment_rows:
+        if label in seen_assessment_labels:
+            continue
+        seen_assessment_labels.add(label)
         total, flagged, unflagged, unassessed = assessment(mentions)
         lines.append(f"| {label} | {total} | {flagged} | {unflagged} | {unassessed} |")
     lines.append("")

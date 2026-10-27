@@ -9,7 +9,7 @@ import subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = ROOT / "ontology/jyotisha-v0.3.json"
+SOURCE = ROOT / "ontology/jyotisha-v0.4.0.json"
 OUTPUT = ROOT / "web/assets/data/mcp-ontology.json"
 
 
@@ -30,6 +30,15 @@ def projection(source: Path) -> dict:
             raise ValueError(f"Unresolved relation endpoint: {edge['id']}")
         if edge["type"] not in relation_types:
             raise ValueError(f"Undeclared relation type: {edge['type']}")
+    for entity in ontology["entities"]:
+        attributes = entity.get("attributes") or {}
+        for field in ("contextual_synonyms", "variant_evidence"):
+            entries = attributes.get(field, [])
+            if not isinstance(entries, list):
+                raise ValueError(f"{entity['id']}.{field} must be a list")
+            for entry in entries:
+                if not isinstance(entry, dict) or entry.get("status") not in {"provisional", "approved"}:
+                    raise ValueError(f"{entity['id']}.{field} entries require provisional or approved status")
     source_ref = source.name
     source_commit = None
     try:
