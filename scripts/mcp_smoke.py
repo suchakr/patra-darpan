@@ -100,7 +100,8 @@ async def run(args: argparse.Namespace) -> int:
                         "fetch_passage", {"chunk_id": args.figure_chunk_id},
                     )
                     figure_data = structured(figure_result)
-                    assert not figure_result.isError and figure_data.get("passages"), figure_data
+                    assert not figure_result.isError, figure_result.content
+                    assert figure_data.get("passages"), figure_result.content
                     figures = figure_data["passages"][0].get("figures", [])
                     assert [figure["fig_no"] for figure in figures] == [2, 3], figures
                     shared_page_path = "patra-darpan/papers/02-58_4/media/p10_page.webp"

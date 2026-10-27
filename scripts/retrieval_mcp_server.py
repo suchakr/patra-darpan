@@ -365,16 +365,12 @@ def build_mcp(service: RetrievalService, *, oauth_provider: Any | None = None):
         text_offset: int = 0,
         max_chars: int = 4000,
     ) -> dict[str, Any]:
-        import anyio
-
         try:
-            payload = await anyio.to_thread.run_sync(
-                lambda: service.passages.fetch(
-                    chunk_id=chunk_id or None,
-                    document_id=document_id or None,
-                    repo_path=repo_path or None,
-                    limit=limit, offset=offset, text_offset=text_offset, max_chars=max_chars,
-                )
+            payload = service.passages.fetch(
+                chunk_id=chunk_id or None,
+                document_id=document_id or None,
+                repo_path=repo_path or None,
+                limit=limit, offset=offset, text_offset=text_offset, max_chars=max_chars,
             )
         except RetrievalError as exc:
             return _error(exc)
@@ -397,7 +393,9 @@ def build_mcp(service: RetrievalService, *, oauth_provider: Any | None = None):
         from mcp.types import CallToolResult, ImageContent, TextContent
 
         try:
-            metadata = await anyio.to_thread.run_sync(service.passages.figure_by_path, repo_path)
+            # This lookup also reads the thread-bound SQLite catalogue; keep it
+            # on the service thread and offload only the bounded HTTP image read.
+            metadata = service.passages.figure_by_path(repo_path)
             image_bytes, mime_type = await anyio.to_thread.run_sync(
                 lambda: fetch_figure(
                     {"repo_path": repo_path, "url": metadata["source_url"]},
@@ -426,10 +424,8 @@ def build_mcp(service: RetrievalService, *, oauth_provider: Any | None = None):
                      "render; use get_figure(repo_path) only when image content matters."),
     )
     async def fetch_passages(requests: list[dict[str, Any]]) -> dict[str, Any]:
-        import anyio
-
         try:
-            return await anyio.to_thread.run_sync(lambda: service.fetch_passages(requests))
+            return service.fetch_passages(requests)
         except RetrievalError as exc:
             return _error(exc)
 

@@ -292,6 +292,16 @@ class FigureMCPTests(unittest.IsolatedAsyncioTestCase):
         from scripts.retrieval_mcp_server import build_mcp
 
         service = self.make_service()
+        call_thread_ids = []
+        passage_payload = service.passages.fetch.return_value
+        service.passages.fetch = Mock(side_effect=lambda **_kwargs: (
+            call_thread_ids.append(threading.get_ident()) or copy.deepcopy(passage_payload)
+        ))
+        figure_metadata = service.passages.figure_by_path.return_value
+        service.passages.figure_by_path = Mock(side_effect=lambda _path: (
+            call_thread_ids.append(threading.get_ident()) or figure_metadata
+        ))
+        service_thread_id = threading.get_ident()
         with patch.dict("os.environ", {"MCP_CATALOG_SQL_ENABLED": "false"}):
             server = build_mcp(service)
             async with create_connected_server_and_client_session(server) as client:
@@ -308,16 +318,17 @@ class FigureMCPTests(unittest.IsolatedAsyncioTestCase):
                 text_only = await client.call_tool("fetch_passage", {"chunk_id": "c1"})
                 self.assertFalse(text_only.isError, text_only.content)
                 self.assertFalse(any(getattr(item, "type", None) == "image" for item in text_only.content))
-                self.assertEqual(text_only.structuredContent, service.passages.fetch.return_value)
+                self.assertEqual(text_only.structuredContent, passage_payload)
 
                 with patch("scripts.retrieval_mcp_server.fetch_figure", return_value=(b"image", "image/webp")):
                     result = await client.call_tool("get_figure", {
-                        "repo_path": service.passages.figure_by_path.return_value["repo_path"],
+                        "repo_path": figure_metadata["repo_path"],
                     })
+        self.assertEqual(call_thread_ids, [service_thread_id, service_thread_id])
         self.assertFalse(result.isError, result)
         self.assertEqual(result.content[0].type, "text")
         metadata = json.loads(result.content[0].text)
-        self.assertEqual(metadata, service.passages.figure_by_path.return_value)
+        self.assertEqual(metadata, figure_metadata)
         if result.structuredContent:
             self.assertEqual(result.structuredContent, metadata)
         images = [item for item in result.content if getattr(item, "type", None) == "image"]
