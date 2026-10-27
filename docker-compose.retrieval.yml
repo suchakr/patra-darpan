@@ -44,7 +44,7 @@ services:
     environment:
       RETRIEVAL_RELEASE_ROOT: /var/lib/retrieval/releases
       RETRIEVAL_ACTIVE_RELEASE: /var/lib/retrieval/releases/active-release.json
-      RETRIEVAL_ONTOLOGY_PATH: /app/ontology/jyotisha-v0.3.json
+      RETRIEVAL_ONTOLOGY_PATH: ${RETRIEVAL_ONTOLOGY_PATH:-/app/ontology/jyotisha-v0.3.json}
       QDRANT_URL: ${RETRIEVAL_QDRANT_URL:-http://qdrant:6333}
       ZOEKT_URL: ${RETRIEVAL_ZOEKT_URL:?Set RETRIEVAL_ZOEKT_URL}
       MCP_HOST: 0.0.0.0
@@ -80,7 +80,7 @@ services:
     environment:
       RETRIEVAL_RELEASE_ROOT: /var/lib/retrieval/releases
       RETRIEVAL_ACTIVE_RELEASE: /var/lib/retrieval/releases/active-release.json
-      RETRIEVAL_ONTOLOGY_PATH: /app/ontology/jyotisha-v0.3.json
+      RETRIEVAL_ONTOLOGY_PATH: ${RETRIEVAL_ONTOLOGY_PATH:-/app/ontology/jyotisha-v0.3.json}
       QDRANT_URL: ${RETRIEVAL_QDRANT_URL:-http://qdrant:6333}
       ZOEKT_URL: ${RETRIEVAL_ZOEKT_URL:?Set RETRIEVAL_ZOEKT_URL}
       MCP_HOST: 0.0.0.0
