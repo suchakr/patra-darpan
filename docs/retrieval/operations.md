@@ -248,30 +248,65 @@ changed; use the full corpus/index path below in those cases.
 
 ### Patra Darpan runtime or MCP code change
 
+For tool implementation, name/description, or input-schema changes, add or
+update a test that asserts the advertised tool surface and behavior. Run:
+
 ```bash
 make check
+make test
 make up
 make smoke
 make search-smoke
 make edge-smoke
 ```
 
-This path does not rebuild vectors. For a clean runtime restart after pulling
-a reviewed commit:
+This rebuilds only the runtime image; it does not rebuild the catalog, release,
+or vectors. Existing MCP clients may need to reconnect to refresh their tool
+list. Do not restart Zoekt or its indexer for an MCP-only change.
+
+On production, `RETRIEVAL_MCP_IMAGE` is the stable mutable tag
+`patra-darpan-retrieval-mcp:prod`. After review and push, require a clean
+checkout, pull `main`, retain the current image as `:rollback`, build only the
+runtime service, then recreate only the bearer and OAuth processes:
 
 ```bash
-git pull --ff-only
-make down
-make up
-make smoke
-make search-smoke
+git status --short --branch  # stop if the checkout is dirty
+git pull --ff-only origin main
+df -h /
+sudo docker image tag patra-darpan-retrieval-mcp:prod patra-darpan-retrieval-mcp:rollback
+sudo docker compose --env-file /etc/patra-darpan/retrieval.env \
+  -f docker-compose.retrieval.yml \
+  -f docker-compose.retrieval.prod.yml \
+  --profile runtime build retrieval-mcp
+sudo docker compose --env-file /etc/patra-darpan/retrieval.env \
+  -f docker-compose.retrieval.yml \
+  -f docker-compose.retrieval.prod.yml \
+  --profile runtime --profile oauth \
+  up -d --no-deps --no-build --pull never --force-recreate \
+  retrieval-mcp retrieval-mcp-oauth
+
+sudo docker exec patra-darpan-retrieval-mcp-1 \
+  python scripts/smoke_retrieval.py --require-backends
+sudo docker exec patra-darpan-retrieval-mcp-1 \
+  python scripts/mcp_smoke.py --url http://127.0.0.1:8787/mcp \
+  --search-features --catalog-sql
+sudo docker exec patra-darpan-retrieval-mcp-oauth-1 \
+  python scripts/oauth_smoke.py --base-url https://sanchaya.rasowshi.us
+
+sudo docker inspect patra-darpan-retrieval-mcp-1 \
+  patra-darpan-retrieval-mcp-oauth-1 \
+  --format '{{.Name}} image={{.Config.Image}} status={{.State.Status}} restarts={{.RestartCount}}'
 ```
 
-`down` is optional for a normal update: `up` rebuilds the runtime image and
-Compose recreates changed services. Neither command removes persistent data.
-No first-time setup, catalog build or index build is needed for the search
-interface changes. `make build` remains the target for building both runtime
-and builder images; `make runtime-build` builds only the online runtime.
+Confirm both containers use `:prod`, are running without restart loops, and the
+reported release is unchanged. The OAuth smoke checks discovery/protection;
+verify a real tool call from an intended OAuth client for end-to-end coverage.
+For rollback, retag `:rollback` as `:prod` and repeat the targeted `up` command
+without build/pull. Never run `make index` for a runtime/tool-only change.
+
+Development or local operations may use `make up`; do not run `make down` as a
+routine production update. Production Caddy is managed by Sanchaya-Zoekt and
+does not need recreation when only MCP code changes.
 
 Existing clients retain the same URL, OAuth configuration and tool names.
 Additive tool options/resources appear when the client reconnects or refreshes
