@@ -217,6 +217,7 @@ class FigureMCPTests(unittest.IsolatedAsyncioTestCase):
                     text_only = await client.call_tool("fetch_passage", {"chunk_id": "c1"})
                     self.assertFalse(text_only.isError)
                     self.assertFalse(any(getattr(item, "type", None) == "image" for item in text_only.content))
+                    self.assertEqual(text_only.structuredContent, service.passages.fetch.return_value)
                     fetch.assert_not_called()
 
                 with patch("scripts.retrieval_mcp_server.fetch_figure", side_effect=[

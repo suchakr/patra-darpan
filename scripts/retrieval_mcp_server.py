@@ -364,20 +364,23 @@ def build_mcp(service: RetrievalService, *, oauth_provider: Any | None = None):
         text_offset: int = 0,
         max_chars: int = 4000,
         include_figures: bool = False,
-    ) -> Any:
+    ) -> dict[str, Any]:
+        import anyio
+
         try:
-            payload = service.passages.fetch(
-                chunk_id=chunk_id or None,
-                document_id=document_id or None,
-                repo_path=repo_path or None,
-                limit=limit, offset=offset, text_offset=text_offset, max_chars=max_chars,
+            payload = await anyio.to_thread.run_sync(
+                lambda: service.passages.fetch(
+                    chunk_id=chunk_id or None,
+                    document_id=document_id or None,
+                    repo_path=repo_path or None,
+                    limit=limit, offset=offset, text_offset=text_offset, max_chars=max_chars,
+                )
             )
         except RetrievalError as exc:
             return _error(exc)
         if not include_figures:
             return payload
 
-        import anyio
         import base64
         from mcp.types import CallToolResult, ImageContent, TextContent
 
@@ -418,9 +421,11 @@ def build_mcp(service: RetrievalService, *, oauth_provider: Any | None = None):
                      "figures are whole-page renders. Use fetch_passage(include_figures=true) when image content "
                      "is needed."),
     )
-    def fetch_passages(requests: list[dict[str, Any]]) -> dict[str, Any]:
+    async def fetch_passages(requests: list[dict[str, Any]]) -> dict[str, Any]:
+        import anyio
+
         try:
-            return service.fetch_passages(requests)
+            return await anyio.to_thread.run_sync(lambda: service.fetch_passages(requests))
         except RetrievalError as exc:
             return _error(exc)
 
