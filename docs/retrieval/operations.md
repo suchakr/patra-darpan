@@ -33,10 +33,10 @@ The important host paths are:
 - the allowlist file.
 
 The serving processes must load the ontology snapshot that matches the selected
-release. Their `RETRIEVAL_ONTOLOGY_PATH` defaults to the repository's v0.3
-snapshot for compatibility; for a versioned candidate, override it to that
-release's mounted `ontology.json` artifact when recreating both MCP services.
-Do not change the builder's ontology input as part of a runtime-only activation.
+release. Both MCP services default `RETRIEVAL_ONTOLOGY_PATH` to the repository's
+`ontology/jyotisha-v0.4.0.json`; for a different release, override it with the
+matching mounted ontology snapshot when recreating both services. Do not change
+the builder's ontology input as part of a runtime-only activation.
 
 Secrets and the live allowlist remain outside Git.
 
