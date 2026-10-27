@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import asyncio
+import base64
 import json
 import os
 
@@ -16,7 +17,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--query", default="Maghādi")
     parser.add_argument("--search-features", action="store_true", help="Verify bounded search, filename-only results, expansion, resources and passage paging")
     parser.add_argument("--catalog-sql", action="store_true", help="Require the optional catalogue SQL tool/resource and reconcile SQL coverage with corpus info")
-    parser.add_argument("--figure-chunk-id", help="Verify a specific figure-bearing passage and its MCP image block")
+    parser.add_argument("--figure-chunk-id", help="Verify figure metadata and get_figure images for a known passage")
     return parser.parse_args()
 
 
@@ -93,33 +94,63 @@ async def run(args: argparse.Namespace) -> int:
                     {"query": args.query, "mode": "hybrid", "limit": 3},
                 )
                 if args.figure_chunk_id:
-                    figure_result = await session.call_tool("fetch_passage", {
-                        "chunk_id": args.figure_chunk_id, "include_figures": True,
-                    })
+                    tool_names = {tool.name for tool in tools.tools}
+                    assert "get_figure" in tool_names, "get_figure is not advertised"
+                    figure_result = await session.call_tool(
+                        "fetch_passage", {"chunk_id": args.figure_chunk_id},
+                    )
                     figure_data = structured(figure_result)
                     assert not figure_result.isError and figure_data.get("passages"), figure_data
                     figures = figure_data["passages"][0].get("figures", [])
-                    assert figures, figure_data
-                    assert figures[0]["fig_no"] == 15, figures[0]
-                    assert figures[0]["repo_path"].endswith("/media/p20_page.webp"), figures[0]
-                    image_blocks = [item for item in figure_result.content if getattr(item, "type", None) == "image"]
-                    assert len(image_blocks) == 1, figure_result.content
-                    assert image_blocks[0].mimeType == "image/webp", image_blocks[0]
-                    async with httpx.AsyncClient(timeout=5.0, follow_redirects=False) as image_client:
-                        async with image_client.stream("GET", figures[0]["url"]) as image_response:
-                            status_code = image_response.status_code
-                            content_type = image_response.headers.get("content-type", "")
-                    assert status_code == 200, status_code
-                    assert content_type.split(";", 1)[0].lower() == "image/webp", content_type
+                    assert [figure["fig_no"] for figure in figures] == [2, 3], figures
+                    shared_page_path = "patra-darpan/papers/02-58_4/media/p10_page.webp"
+                    assert all(figure["repo_path"] == shared_page_path for figure in figures), figures
+                    assert len({figure["repo_path"] for figure in figures}) == 1, figures
+                    assert not any(getattr(item, "type", None) == "image" for item in figure_result.content)
+
+                    async def verify_image(path: str, *, page: int, fig_no: int, mime: str) -> dict:
+                        result = await session.call_tool("get_figure", {"repo_path": path})
+                        assert not result.isError, result
+                        text_blocks = [item for item in result.content if getattr(item, "type", None) == "text"]
+                        images = [item for item in result.content if getattr(item, "type", None) == "image"]
+                        assert text_blocks and result.content[0].type == "text", result.content
+                        metadata = json.loads(text_blocks[0].text)
+                        assert len(images) == 1, result.content
+                        assert images[0].mimeType == mime, images[0]
+                        assert base64.b64decode(images[0].data), "empty image block"
+                        assert metadata["page"] == page, metadata
+                        numbers = metadata["fig_no"] if isinstance(metadata["fig_no"], list) else [metadata["fig_no"]]
+                        assert fig_no in numbers, metadata
+                        assert metadata["source_url"].startswith(
+                            "https://raw.githubusercontent.com/cahcblr/sanchaya/"
+                            + figure_data["passages"][0]["corpus_revision"] + "/"
+                        ), metadata
+                        assert metadata.get("citation_url"), metadata
+                        assert metadata["repo_path"] == path
+                        structured_metadata = structured(result)
+                        if structured_metadata:
+                            assert structured_metadata == metadata, structured_metadata
+                        return {"repo_path": path, "page": page, "fig_no": numbers,
+                                "mime_type": images[0].mimeType,
+                                "structured_content": bool(structured_metadata),
+                                "caption": metadata.get("caption")}
+
+                    page_render = await verify_image(
+                        shared_page_path, page=10, fig_no=2, mime="image/webp",
+                    )
+                    extracted_crop = await verify_image(
+                        "patra-darpan/papers/01_58_4/media/p05_fig01.jpg",
+                        page=5, fig_no=2, mime="image/jpeg",
+                    )
                     figure_smoke = {
                         "status": "passed",
                         "chunk_id": args.figure_chunk_id,
-                        "figure_no": figures[0]["fig_no"],
-                        "repo_path": figures[0]["repo_path"],
-                        "url": figures[0]["url"],
-                        "http_status": status_code,
-                        "content_type": content_type,
-                        "image_blocks": len(image_blocks),
+                        "passage_figures": [
+                            {"fig_no": figure["fig_no"], "repo_path": figure["repo_path"]}
+                            for figure in figures
+                        ],
+                        "shared_page_image": page_render,
+                        "extracted_crop": extracted_crop,
                     }
                 if args.search_features:
                     guide = await session.read_resource("retrieval://search-guide")

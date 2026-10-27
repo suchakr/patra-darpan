@@ -188,11 +188,33 @@ Every passage returned by `fetch_passage` and `fetch_passages` includes a
 revision. Entries carry the alt-text caption, resolved repository path, pinned
 raw GitHub URL, source page, figure type, and a parsed figure number when
 present. Figure links are attached by their source block span or by a matching
-`Fig. N` / `Figure N` reference in the chunk. The image assets are whole-page
-renders, not crops. `fetch_passage(include_figures=true)` returns up to three
-image content blocks after the JSON result; this costs about 1.5k tokens per
-image, so request them only when the figure matters. A failed image fetch is
-reported on its figure and does not fail passage retrieval.
+`Fig. N` / `Figure N` reference in the chunk. A figure uses an extracted crop
+when available; otherwise it may point to a whole-page render. Multiple figure
+captions can share the same page-render path. The array is JSON metadata only.
+Use `get_figure(repo_path)` to fetch one image; it returns a JSON metadata text
+block followed by an image block. Some MCP transports omit `structuredContent`
+for mixed text/image results, so read the first text block. This costs about
+1.5k tokens per image; request an image only when it matters.
+
+### Reference analysis (no dedicated tool)
+
+Only full-text papers (`indexed_in_release=1`) carry reference lists; most catalogue
+entries are metadata-only, so never present results as corpus-wide citation statistics.
+
+1. Pick papers with `query_catalog` (`documents_v`: title, year, journal, `indexed_in_release`).
+2. Locate the reference section: lexical search with `file_filter` set to the paper's
+   folder and a plain term (References, Bibliography, REFERENCES). Avoid anchored regex
+   alternations. Then `fetch_passage` by `document_id` from a late offset and page with
+   `next_offset`.
+3. Expect two formats: author–year lists under a References/Bibliography heading, and
+   older IJHS footnotes (`[^n]`, "Ibid"). Ignore publisher boilerplate; diacritics may be
+   damaged in extraction.
+4. Resolve cited IJHS papers with `query_catalog` title LIKE on a distinctive word
+   (lowercase; try ASCII and diacritic spellings); confirm year/volume; list unresolved.
+5. Link cited editions to primary texts (`source_kind='sanchaya'`): most Sañcaya files
+   carry no edition metadata, so mark edition matches as unverified and locate verses
+   by their text via lexical search, not by verse numbers (numbering differs by edition).
+6. Report scope: papers checked, references parsed, resolved vs unresolved.
 
 ## Sanskrit exploration with the LLM
 

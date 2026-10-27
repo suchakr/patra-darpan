@@ -13,7 +13,6 @@ from typing import Any
 RAW_HOST = "raw.githubusercontent.com"
 RAW_REPOSITORY = "cahcblr/sanchaya"
 PAPERS_ROOT = "patra-darpan/papers"
-MAX_FIGURES_PER_CALL = 3
 MAX_FIGURE_BYTES = 2 * 1024 * 1024
 FIGURE_TIMEOUT_SECONDS = 5
 MAX_SOURCE_MARKDOWN_BYTES = 8 * 1024 * 1024
@@ -24,6 +23,15 @@ IMAGE_REFERENCE_RE = re.compile(
 )
 FIGURE_NUMBER_RE = re.compile(r"\bFig(?:ure)?\.?\s*(\d+)\b", re.IGNORECASE)
 FIGURE_META_RE = re.compile(r"<!--\s*figure-meta:\s*(.*?)\s*-->", re.IGNORECASE)
+HIDDEN_PAGE_RENDER_RE = re.compile(
+    r'<!--\s*figure-resolved-page-render-hidden:\s*image=(?P<image>.+?)\s+'
+    r'caption="(?P<caption>.*?)"\s*-->',
+    re.IGNORECASE,
+)
+EXTRACTED_FIGURE_RE = re.compile(
+    r"<!--\s*figure-resolved-extracted:\s*page=(?P<page>\d+)\s+image=(?P<image>.*?)\s*-->",
+    re.IGNORECASE,
+)
 META_FIELD_RE = re.compile(r"([a-z_-]+)\s*=\s*([^,]+)", re.IGNORECASE)
 HEADING_RE = re.compile(r"^#{1,6}\s+.+?\s*$")
 TABLE_RE = re.compile(r"^\s*\|.*\|\s*$")
@@ -100,15 +108,16 @@ def _line_to_block(text: str) -> dict[int, int]:
 
 
 def _parse_meta(lines: list[str], image_line: int) -> dict[str, str]:
-    next_image = next(
+    next_reference = next(
         (number for number in range(image_line + 1, len(lines) + 1)
-         if IMAGE_REFERENCE_RE.search(lines[number - 1])),
+         if IMAGE_REFERENCE_RE.search(lines[number - 1])
+         or HIDDEN_PAGE_RENDER_RE.search(lines[number - 1])),
         len(lines) + 1,
     )
     next_heading = next(
-        (number for number in range(image_line + 1, min(next_image, len(lines) + 1))
+        (number for number in range(image_line + 1, min(next_reference, len(lines) + 1))
          if HEADING_RE.match(lines[number - 1])),
-        next_image,
+        next_reference,
     )
     for line in lines[image_line:next_heading - 1]:
         match = FIGURE_META_RE.search(line)
@@ -121,54 +130,137 @@ def _parse_meta(lines: list[str], image_line: int) -> dict[str, str]:
     return {}
 
 
+def _resolve_image_path(source_path: str, target: str) -> str | None:
+    target = target.strip()
+    if target.startswith("<") and target.endswith(">"):
+        target = target[1:-1].strip()
+    if not target:
+        return None
+    parsed = urllib.parse.urlsplit(target)
+    if parsed.scheme or parsed.netloc or target.startswith("//"):
+        return None
+    try:
+        relative_path = _decode_path(parsed.path)
+    except ValueError:
+        return None
+    if not relative_path or relative_path.startswith("/") or "\\" in relative_path or "\x00" in relative_path:
+        return None
+    resolved = _paper_repo_path(posixpath.join(posixpath.dirname(source_path), relative_path))
+    return resolved
+
+
 def figures_from_document(repo_path: str, markdown: str, corpus_revision: str) -> list[dict[str, Any]]:
-    """Parse source image refs and their nearby figure metadata."""
+    """Parse Markdown refs and resolved-image annotations at one release revision."""
     source_path = _paper_repo_path(repo_path)
     if source_path is None or posixpath.basename(source_path) != "document.md":
         return []
 
     lines = markdown.replace("\r\n", "\n").replace("\r", "\n").split("\n")
     line_blocks = _line_to_block(markdown)
-    figures: list[dict[str, Any]] = []
+    candidates: list[dict[str, Any]] = []
     for line_number, line in enumerate(lines, start=1):
         for match in IMAGE_REFERENCE_RE.finditer(line):
-            target = match.group("target").strip()
-            if target.startswith("<") and target.endswith(">"):
-                target = target[1:-1].strip()
-            if not target:
-                continue
-            parsed = urllib.parse.urlsplit(target)
-            if parsed.scheme or parsed.netloc or target.startswith("//"):
-                continue
-            try:
-                relative_path = _decode_path(parsed.path)
-            except ValueError:
-                continue
-            if not relative_path or relative_path.startswith("/") or "\\" in relative_path or "\x00" in relative_path:
-                continue
-
-            resolved = _paper_repo_path(posixpath.join(posixpath.dirname(source_path), relative_path))
+            resolved = _resolve_image_path(source_path, match.group("target"))
             if resolved is None:
                 continue
-
             meta = _parse_meta(lines, line_number)
-            try:
-                page = int(meta["page"]) if meta.get("page", "").isdigit() else None
-            except ValueError:
-                page = None
             caption = match.group("caption")
             fig_match = FIGURE_NUMBER_RE.search(caption)
-            figures.append({
+            candidates.append({
                 "caption": caption,
                 "repo_path": resolved,
                 "url": raw_url(corpus_revision, resolved),
-                "page": page,
+                "page": int(meta["page"]) if meta.get("page", "").isdigit() else None,
                 "type": meta.get("type"),
                 "fig_no": int(fig_match.group(1)) if fig_match else None,
                 "_source_line": line_number,
                 "_source_block": line_blocks.get(line_number),
+                "_image_kind": "markdown",
             })
-    return figures
+
+        hidden = HIDDEN_PAGE_RENDER_RE.search(line)
+        if hidden:
+            resolved = _resolve_image_path(source_path, hidden.group("image"))
+            caption = hidden.group("caption").strip()
+            if resolved is not None:
+                meta = _parse_meta(lines, line_number)
+                fig_match = FIGURE_NUMBER_RE.search(caption)
+                candidates.append({
+                    "caption": caption,
+                    "repo_path": resolved,
+                    "url": raw_url(corpus_revision, resolved),
+                    "page": int(meta["page"]) if meta.get("page", "").isdigit() else None,
+                    "type": meta.get("type"),
+                    "fig_no": int(fig_match.group(1)) if fig_match else None,
+                    "_source_line": line_number,
+                    "_source_block": line_blocks.get(line_number),
+                    "_image_kind": "page-render",
+                })
+
+        extracted = EXTRACTED_FIGURE_RE.search(line)
+        if extracted:
+            resolved = _resolve_image_path(source_path, extracted.group("image"))
+            if resolved is not None:
+                previous = next(
+                    (candidate for candidate in reversed(candidates)
+                     if candidate.get("fig_no") is not None),
+                    None,
+                )
+                if previous is not None:
+                    meta = _parse_meta(lines, line_number)
+                    candidates.append({
+                        **previous,
+                        "repo_path": resolved,
+                        "url": raw_url(corpus_revision, resolved),
+                        "page": int(extracted.group("page")),
+                        "type": meta.get("type") or previous.get("type"),
+                        "_image_kind": "extracted",
+                    })
+
+    # The same semantic figure can have both a page render and an extracted
+    # crop. Keep the crop, retaining the original source span for chunk mapping.
+    # Different figures may intentionally share one whole-page image.
+    by_identity: dict[tuple[Any, ...], dict[str, Any]] = {}
+    for candidate in candidates:
+        fig_no = candidate.get("fig_no")
+        identity = ("figure", fig_no) if fig_no is not None else (
+            "image", candidate.get("repo_path"), candidate.get("caption"), candidate.get("page"),
+        )
+        current = by_identity.get(identity)
+        if current is None:
+            by_identity[identity] = candidate
+            continue
+        resolution_priority = {"markdown": 0, "page-render": 1, "extracted": 2}
+        keep_candidate = (
+            candidate if resolution_priority.get(str(candidate.get("_image_kind")), 0)
+            > resolution_priority.get(str(current.get("_image_kind")), 0)
+            else current
+        )
+        other = current if keep_candidate is candidate else candidate
+        keep_candidate["_source_line"] = min(
+            value for value in (current.get("_source_line"), candidate.get("_source_line"))
+            if value is not None
+        )
+        keep_candidate["_source_block"] = (
+            current.get("_source_block") if current.get("_source_block") is not None
+            else candidate.get("_source_block")
+        )
+        if not keep_candidate.get("caption"):
+            keep_candidate["caption"] = other.get("caption")
+        if keep_candidate.get("page") is None:
+            keep_candidate["page"] = other.get("page")
+        if not keep_candidate.get("type"):
+            keep_candidate["type"] = other.get("type")
+        by_identity[identity] = keep_candidate
+
+    return sorted(
+        by_identity.values(),
+        key=lambda item: (
+            item["fig_no"] is None,
+            item["fig_no"] if item["fig_no"] is not None else 0,
+            item["repo_path"] or "",
+        ),
+    )
 
 
 def figures_for_chunk(
@@ -179,7 +271,7 @@ def figures_for_chunk(
     block_start, block_end = (int(span.group(1)), int(span.group(2))) if span else (None, None)
     mentioned = {int(value) for value in TEXT_FIGURE_NUMBER_RE.findall(str(chunk_text or ""))}
     selected: list[dict[str, Any]] = []
-    seen: set[str] = set()
+    seen: set[tuple[Any, ...]] = set()
     for figure in document_figures:
         fig_no = figure.get("fig_no")
         block_no = figure.get("_source_block")
@@ -189,7 +281,9 @@ def figures_for_chunk(
         )
         if not in_span and (fig_no is None or fig_no not in mentioned):
             continue
-        identity = str(figure.get("repo_path") or "")
+        # Different figure captions can legitimately share one page render.
+        # Keep those records distinct; identical figure/path pairs are duplicates.
+        identity = (fig_no, str(figure.get("repo_path") or ""))
         if identity in seen:
             continue
         seen.add(identity)

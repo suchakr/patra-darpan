@@ -280,8 +280,9 @@ class CatalogSQLMCPTests(unittest.IsolatedAsyncioTestCase):
             server = build_mcp(self.service)
             async with create_connected_server_and_client_session(server) as client:
                 tools = await client.list_tools()
-                self.assertEqual(len(tools.tools), 11)
+                self.assertEqual(len(tools.tools), 12)
                 tool_names = {tool.name for tool in tools.tools}
+                self.assertIn("get_figure", tool_names)
                 self.assertIn("query_catalog", tool_names)
                 self.assertNotIn("run_sql", tool_names)
                 schema_result = await client.read_resource("retrieval://catalog-schema")
@@ -297,13 +298,14 @@ class CatalogSQLMCPTests(unittest.IsolatedAsyncioTestCase):
         from scripts.retrieval_mcp_server import build_mcp
         with patch.dict("os.environ", {"MCP_CATALOG_SQL_ENABLED": "false"}):
             server = build_mcp(self.service)
-            self.assertEqual(len(await server.list_tools()), 10)
+            self.assertEqual(len(await server.list_tools()), 11)
             self.assertNotIn("retrieval://catalog-schema", [str(r.uri) for r in await server.list_resources()])
         with patch.dict("os.environ", {"MCP_CATALOG_SQL_ENABLED": "true"}):
             server = build_mcp(self.service)
             tools = await server.list_tools()
-            self.assertEqual(len(tools), 11)
+            self.assertEqual(len(tools), 12)
             tool_names = {t.name for t in tools}
+            self.assertIn("get_figure", tool_names)
             self.assertNotIn("run_sql", tool_names)
             tool = next(t for t in tools if t.name == "query_catalog")
             self.assertEqual(set(tool.inputSchema["properties"]), {"query", "max_rows"})

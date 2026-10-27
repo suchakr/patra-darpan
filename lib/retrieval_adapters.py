@@ -13,6 +13,7 @@ import hashlib
 import json
 import math
 import os
+import posixpath
 import re
 import unicodedata
 import base64
@@ -31,7 +32,12 @@ import requests
 from urllib3.exceptions import ReadTimeoutError
 
 from lib.retrieval_catalog import CatalogAdapter, CatalogError
-from lib.retrieval_figures import fetch_document_markdown, figures_for_chunk, figures_from_document
+from lib.retrieval_figures import (
+    fetch_document_markdown,
+    figures_for_chunk,
+    figures_from_document,
+    raw_url,
+)
 from lib.retrieval_query import prepare_lexical_query
 
 
@@ -553,6 +559,17 @@ class PassageStore:
         repo_path = str(chunk.get("repo_path") or "")
         if not repo_path.startswith("patra-darpan/papers/"):
             return [], None
+        document_figures, error = self._document_figures(repo_path)
+        if error:
+            return [], error
+        attached = figures_for_chunk(
+            document_figures,
+            str(chunk.get("logical_location") or ""),
+            str(chunk.get("text") or ""),
+        )
+        return attached, None
+
+    def _document_figures(self, repo_path: str) -> tuple[list[dict[str, Any]], str | None]:
         if not hasattr(self, "_figure_document_cache"):
             self._figure_document_cache = {}
             self._figure_document_cache_lock = threading.Lock()
@@ -568,13 +585,61 @@ class PassageStore:
                 except Exception as exc:
                     cached = ([], f"source document unavailable: {str(exc)[:240]}")
                 self._figure_document_cache[cache_key] = cached
-        document_figures, error = cached
-        attached = figures_for_chunk(
-            document_figures,
-            str(chunk.get("logical_location") or ""),
-            str(chunk.get("text") or ""),
+        return cached
+
+    def figure_by_path(self, repo_path: str) -> dict[str, Any]:
+        """Resolve one image only if it is referenced by a release-chunked paper."""
+        try:
+            image_url = raw_url(self.release.corpus_revision, repo_path)
+        except ValueError as exc:
+            raise RetrievalError(str(exc)) from exc
+
+        # Figure links are expected under their paper's media/ folder. Find the
+        # longest corresponding chunked document directory without probing the
+        # rest of the corpus or accepting an arbitrary in-repository path.
+        candidate_documents = [
+            path for path in self.by_repo_path
+            if path.endswith("/document.md")
+            and repo_path.startswith(posixpath.dirname(path) + "/")
+        ]
+        if not candidate_documents:
+            raise RetrievalError("figure path is not within a release-chunked paper directory")
+        document_path = max(candidate_documents, key=lambda path: len(posixpath.dirname(path)))
+        document_figures, error = self._document_figures(document_path)
+        if error:
+            raise RetrievalError(error)
+        matches = [figure for figure in document_figures if figure.get("repo_path") == repo_path]
+        if not matches:
+            raise RetrievalError("figure path is not referenced by the release-pinned source document")
+
+        document_rows = self.by_repo_path[document_path]
+        document_id = str(document_rows[0].get("document_id") or "")
+        catalog_row = self.catalog.get_document(document_id) or {}
+        citation = source_links(
+            self.release,
+            {"repo_path": document_path},
+            catalog_row.get("source_refs", []),
         )
-        return attached, error
+        unique_captions = list(dict.fromkeys(
+            str(figure.get("caption") or "") for figure in matches if figure.get("caption")
+        ))
+        unique_pages = list(dict.fromkeys(
+            figure.get("page") for figure in matches if figure.get("page") is not None
+        ))
+        unique_numbers = list(dict.fromkeys(
+            figure.get("fig_no") for figure in matches if figure.get("fig_no") is not None
+        ))
+        return {
+            "schema_version": "retrieval.figure.v1",
+            "repo_path": repo_path,
+            "caption": " / ".join(unique_captions) or None,
+            "captions": unique_captions,
+            "page": unique_pages[0] if len(unique_pages) == 1 else unique_pages or None,
+            "fig_no": unique_numbers[0] if len(unique_numbers) == 1 else unique_numbers or None,
+            "source_url": image_url,
+            "citation_url": citation.get("citation_url") or image_url,
+            "corpus_revision": self.release.corpus_revision,
+        }
 
     def _format(self, chunk: dict[str, Any], *, lexical: dict[str, Any] | None = None) -> dict[str, Any]:
         document_id = str(chunk.get("document_id") or "")

@@ -233,7 +233,8 @@ class EntityKnowledgeTests(unittest.TestCase):
         self.assertEqual(lookup.inputSchema["required"], ["name"])
         self.assertEqual(lookup.outputSchema["type"], "object")
         self.assertIsNot(lookup.outputSchema.get("additionalProperties"), False)
-        self.assertEqual(len(tools), 10)
+        self.assertEqual(len(tools), 11)
+        self.assertIn("get_figure", {tool.name for tool in tools})
         self.assertIn("flagged, unflagged and unassessed", lookup.description)
         self.assertIn("provisional or approved only", lookup.description)
 
