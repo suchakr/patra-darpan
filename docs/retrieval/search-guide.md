@@ -183,6 +183,17 @@ For documents, `fetch_passage(offset=..., limit=...)` returns `total_passages`,
 `fetch_passages` accepts these same fields per item. If its byte budget is
 reached, resend the unprocessed requests from `next_request_index`.
 
+Every passage returned by `fetch_passage` and `fetch_passages` includes a
+`figures` array derived from the source `document.md` at the release's Sanchaya
+revision. Entries carry the alt-text caption, resolved repository path, pinned
+raw GitHub URL, source page, figure type, and a parsed figure number when
+present. Figure links are attached by their source block span or by a matching
+`Fig. N` / `Figure N` reference in the chunk. The image assets are whole-page
+renders, not crops. `fetch_passage(include_figures=true)` returns up to three
+image content blocks after the JSON result; this costs about 1.5k tokens per
+image, so request them only when the figure matters. A failed image fetch is
+reported on its figure and does not fail passage retrieval.
+
 ## Sanskrit exploration with the LLM
 
 1. Start with the supplied form and the appropriate script equivalents.

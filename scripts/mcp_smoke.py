@@ -16,6 +16,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--query", default="Maghādi")
     parser.add_argument("--search-features", action="store_true", help="Verify bounded search, filename-only results, expansion, resources and passage paging")
     parser.add_argument("--catalog-sql", action="store_true", help="Require the optional catalogue SQL tool/resource and reconcile SQL coverage with corpus info")
+    parser.add_argument("--figure-chunk-id", help="Verify a specific figure-bearing passage and its MCP image block")
     return parser.parse_args()
 
 
@@ -40,6 +41,7 @@ async def run(args: argparse.Namespace) -> int:
     headers = {"Authorization": f"Bearer {token}"}
     features = {}
     catalog_sql = {}
+    figure_smoke = {}
     async with httpx.AsyncClient(headers=headers, timeout=timeout) as client:
         async with streamable_http_client(args.url, http_client=client) as (read, write, _):
             async with ClientSession(read, write) as session:
@@ -90,6 +92,35 @@ async def run(args: argparse.Namespace) -> int:
                     "search_corpus",
                     {"query": args.query, "mode": "hybrid", "limit": 3},
                 )
+                if args.figure_chunk_id:
+                    figure_result = await session.call_tool("fetch_passage", {
+                        "chunk_id": args.figure_chunk_id, "include_figures": True,
+                    })
+                    figure_data = structured(figure_result)
+                    assert not figure_result.isError and figure_data.get("passages"), figure_data
+                    figures = figure_data["passages"][0].get("figures", [])
+                    assert figures, figure_data
+                    assert figures[0]["fig_no"] == 15, figures[0]
+                    assert figures[0]["repo_path"].endswith("/media/p20_page.webp"), figures[0]
+                    image_blocks = [item for item in figure_result.content if getattr(item, "type", None) == "image"]
+                    assert len(image_blocks) == 1, figure_result.content
+                    assert image_blocks[0].mimeType == "image/webp", image_blocks[0]
+                    async with httpx.AsyncClient(timeout=5.0, follow_redirects=False) as image_client:
+                        async with image_client.stream("GET", figures[0]["url"]) as image_response:
+                            status_code = image_response.status_code
+                            content_type = image_response.headers.get("content-type", "")
+                    assert status_code == 200, status_code
+                    assert content_type.split(";", 1)[0].lower() == "image/webp", content_type
+                    figure_smoke = {
+                        "status": "passed",
+                        "chunk_id": args.figure_chunk_id,
+                        "figure_no": figures[0]["fig_no"],
+                        "repo_path": figures[0]["repo_path"],
+                        "url": figures[0]["url"],
+                        "http_status": status_code,
+                        "content_type": content_type,
+                        "image_blocks": len(image_blocks),
+                    }
                 if args.search_features:
                     guide = await session.read_resource("retrieval://search-guide")
                     guide_text = "\n".join(getattr(item, "text", "") for item in guide.contents)
@@ -152,6 +183,7 @@ async def run(args: argparse.Namespace) -> int:
         },
         "search_features": features,
         "catalog_sql": catalog_sql,
+        "figures": figure_smoke,
         "entity_knowledge": {"lookup": "passed", "context": "passed", "input_schema": "unchanged"},
     }
     print(json.dumps(report, ensure_ascii=False, indent=2))

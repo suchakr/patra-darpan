@@ -23,7 +23,7 @@ import threading
 from collections import OrderedDict
 from copy import deepcopy
 from dataclasses import dataclass
-from pathlib import Path, PurePosixPath
+from pathlib import Path
 from typing import Any, Iterable
 from urllib.parse import urljoin, quote
 
@@ -31,6 +31,7 @@ import requests
 from urllib3.exceptions import ReadTimeoutError
 
 from lib.retrieval_catalog import CatalogAdapter, CatalogError
+from lib.retrieval_figures import fetch_document_markdown, figures_for_chunk, figures_from_document
 from lib.retrieval_query import prepare_lexical_query
 
 
@@ -530,9 +531,6 @@ class EntityAdapter:
         }
 
 
-IMAGE_RE = re.compile(r"!\[[^\]]*\]\(([^)]+)\)")
-
-
 class PassageStore:
     """Bounded passage lookup over the chunk projection plus corpus metadata."""
 
@@ -543,28 +541,45 @@ class PassageStore:
         self.by_id = {str(row.get("chunk_id")): row for row in self.chunks if row.get("chunk_id")}
         self.by_repo_path: dict[str, list[dict[str, Any]]] = {}
         self.by_document: dict[str, list[dict[str, Any]]] = {}
+        self._figure_document_cache: dict[str, tuple[list[dict[str, Any]], str | None]] = {}
+        self._figure_document_cache_lock = threading.Lock()
         for row in self.chunks:
             if row.get("repo_path"):
                 self.by_repo_path.setdefault(str(row["repo_path"]), []).append(row)
             if row.get("document_id"):
                 self.by_document.setdefault(str(row["document_id"]), []).append(row)
 
-    def _media(self, chunk: dict[str, Any]) -> list[dict[str, str]]:
-        repo_path = PurePosixPath(str(chunk.get("repo_path") or ""))
-        result: list[dict[str, str]] = []
-        for target in IMAGE_RE.findall(str(chunk.get("text") or "")):
-            target = target.split("#", 1)[0].split("?", 1)[0].strip()
-            if not target or target.startswith(("/", "//")) or ":" in target.split("/", 1)[0]:
-                continue
-            media_path = PurePosixPath(repo_path.parent, target)
-            if ".." in media_path.parts:
-                continue
-            result.append({"path": str(media_path), "target": target})
-        return result
+    def _figures_for_chunk(self, chunk: dict[str, Any]) -> tuple[list[dict[str, Any]], str | None]:
+        repo_path = str(chunk.get("repo_path") or "")
+        if not repo_path.startswith("patra-darpan/papers/"):
+            return [], None
+        if not hasattr(self, "_figure_document_cache"):
+            self._figure_document_cache = {}
+            self._figure_document_cache_lock = threading.Lock()
+        revision = self.release.corpus_revision
+        cache_key = f"{revision}:{repo_path}"
+        with self._figure_document_cache_lock:
+            cached = self._figure_document_cache.get(cache_key)
+            if cached is None:
+                try:
+                    markdown = fetch_document_markdown(repo_path, revision)
+                    parsed = figures_from_document(repo_path, markdown, revision)
+                    cached = (parsed, None)
+                except Exception as exc:
+                    cached = ([], f"source document unavailable: {str(exc)[:240]}")
+                self._figure_document_cache[cache_key] = cached
+        document_figures, error = cached
+        attached = figures_for_chunk(
+            document_figures,
+            str(chunk.get("logical_location") or ""),
+            str(chunk.get("text") or ""),
+        )
+        return attached, error
 
     def _format(self, chunk: dict[str, Any], *, lexical: dict[str, Any] | None = None) -> dict[str, Any]:
         document_id = str(chunk.get("document_id") or "")
         catalog = self.catalog.get_document(document_id) or {}
+        figures, figures_error = self._figures_for_chunk(chunk)
         result = {
             "chunk_id": chunk.get("chunk_id"),
             "document_id": document_id,
@@ -582,8 +597,11 @@ class PassageStore:
             "source_refs": catalog.get("source_refs", []),
             "metadata_status": catalog.get("metadata_status", "unavailable"),
             "metadata_authority": catalog.get("authority"),
-            "media": self._media(chunk),
+            "media": [],
+            "figures": figures,
         }
+        if figures_error:
+            result["figures_error"] = figures_error
         if catalog.get("authors") is not None:
             result["authors"] = catalog["authors"]
         if catalog.get("year") is not None:

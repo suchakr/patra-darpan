@@ -25,6 +25,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from lib.retrieval_adapters import RetrievalError, RetrievalService, load_release
+from lib.retrieval_figures import MAX_FIGURES_PER_CALL, fetch_figure
 
 
 def ontology_path() -> Path:
@@ -349,9 +350,12 @@ def build_mcp(service: RetrievalService, *, oauth_provider: Any | None = None):
         name="fetch_passage",
         description=("Fetch release passages by chunk, document or repo_path. Page documents with offset/next_offset; "
                      "for shortened text, fetch its chunk_id with text_offset=next_text_offset. "
-                     "Only release-chunked documents are fetchable. Cite citation_url/source_url."),
+                     "Each passage always includes figures[] derived from release-pinned source Markdown; "
+                     "the figures are whole-page renders. Set include_figures=true to return up to 3 image blocks "
+                     "after the JSON result; this costs about 1.5k tokens per image, so use only when the figure "
+                     "matters. Only release-chunked documents are fetchable. Cite citation_url/source_url."),
     )
-    def fetch_passage(
+    async def fetch_passage(
         chunk_id: str | None = None,
         document_id: str | None = None,
         repo_path: str | None = None,
@@ -359,9 +363,10 @@ def build_mcp(service: RetrievalService, *, oauth_provider: Any | None = None):
         offset: int = 0,
         text_offset: int = 0,
         max_chars: int = 4000,
-    ) -> dict[str, Any]:
+        include_figures: bool = False,
+    ) -> Any:
         try:
-            return service.passages.fetch(
+            payload = service.passages.fetch(
                 chunk_id=chunk_id or None,
                 document_id=document_id or None,
                 repo_path=repo_path or None,
@@ -369,10 +374,49 @@ def build_mcp(service: RetrievalService, *, oauth_provider: Any | None = None):
             )
         except RetrievalError as exc:
             return _error(exc)
+        if not include_figures:
+            return payload
+
+        import anyio
+        import base64
+        from mcp.types import CallToolResult, ImageContent, TextContent
+
+        figure_refs = [
+            figure
+            for passage in payload.get("passages", [])
+            for figure in passage.get("figures", [])
+        ]
+        if len(figure_refs) > MAX_FIGURES_PER_CALL:
+            payload["figures_truncated"] = True
+
+        image_blocks = []
+        for figure in figure_refs[:MAX_FIGURES_PER_CALL]:
+            try:
+                image_bytes, mime_type = await anyio.to_thread.run_sync(
+                    fetch_figure, figure, service.release.corpus_revision,
+                )
+                image_blocks.append(ImageContent(
+                    type="image",
+                    data=base64.b64encode(image_bytes).decode("ascii"),
+                    mimeType=mime_type,
+                ))
+            except Exception as exc:
+                figure["error"] = str(exc)[:300] or exc.__class__.__name__
+
+        return CallToolResult(
+            content=[
+                TextContent(type="text", text=json.dumps(payload, ensure_ascii=False)),
+                *image_blocks,
+            ],
+            structuredContent=payload,
+        )
 
     @server.tool(
         name="fetch_passages",
-        description="Fetch several bounded passages in one call using search result references.",
+        description=("Fetch several bounded passages in one call using search result references. "
+                     "Each passage always includes figures[] derived from release-pinned source Markdown; "
+                     "figures are whole-page renders. Use fetch_passage(include_figures=true) when image content "
+                     "is needed."),
     )
     def fetch_passages(requests: list[dict[str, Any]]) -> dict[str, Any]:
         try:
