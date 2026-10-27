@@ -5,7 +5,7 @@
   "status": "pilot",
   "source_file": "ontology/jyotisha-v0.4.0.json",
   "source_sha256": "34b7dce163a69180c4ccbb0d18c35cbc811aad0dc81159d075cb61b2375a8689",
-  "source_commit": null,
+  "source_commit": "b11fe2d1b39a884fdd56c2138b0cf3ddbc04e3d4",
   "entity_types": [
     {
       "id": "celestial_body",

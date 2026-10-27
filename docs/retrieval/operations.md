@@ -56,8 +56,10 @@ It can be expensive because embedding work scales with selected chunks.
 
 ## Optional catalogue SQL
 
-The [catalogue SQL PRD](catalog-sql-prd.md) defines one optional read-only tool
-and schema resource. Existing tools/routes continue unchanged with it disabled.
+The [catalogue SQL PRD](catalog-sql-prd.md) defines the optional read-only
+`query_catalog` tool and `retrieval://catalog-schema` resource. The tool is for
+metadata aggregates; use `search_corpus` for passage search. Existing
+tools/routes continue unchanged with it disabled.
 After local security/regression tests pass, set `MCP_CATALOG_SQL_ENABLED=true`
 in the operator-managed env file and rebuild/recreate the relevant MCP runtime
 processes. The same flag is passed to bearer and OAuth services. Disabling the

@@ -327,6 +327,14 @@ class CatalogSQLService:
         docs, authors, subjects = (self.projection[k] for k in ("documents", "authors", "subjects"))
         return {"schema_version": SCHEMA_VERSION, **self.revisions, "views": VIEW_COLUMNS,
                 "examples": EXAMPLES,
+                "query_tool": {
+                    "name": "query_catalog",
+                    "parameters": {
+                        "query": "SQL SELECT/WITH string",
+                        "max_rows": "optional integer, default 500",
+                    },
+                    "scope": "Read-only catalogue metadata aggregates; not passage search.",
+                },
                 "limits": {"deadline_seconds": DEADLINE_SECONDS, "default_rows": 500,
                            "max_rows": MAX_ROWS, "response_bytes": 64000, "sql_bytes": MAX_SQL_BYTES,
                            "per_token_per_minute": self.per_token_limit,
@@ -368,7 +376,7 @@ class CatalogSQLService:
                 self._tokens.popitem(last=False)
             return True
 
-    def run_sql(self, query: str, max_rows: int = 500, token_id: str = "local") -> dict[str, Any]:
+    def query_catalog(self, query: str, max_rows: int = 500, token_id: str = "local") -> dict[str, Any]:
         started = time.monotonic()
         valid_query = isinstance(query, str) and len(query) <= MAX_SQL_BYTES
         if valid_query:

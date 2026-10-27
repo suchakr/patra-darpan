@@ -1,7 +1,8 @@
 # Catalogue SQL access — PRD and implementation contract
 
-Status: implemented, tested and enabled in production on 2026-10-23.
-The opt-in default remains off for new installations.
+Status: implemented and tested; production still advertises the previous tool
+name until the approved v0.4 activation. The opt-in default remains off for new
+installations.
 
 ## Purpose
 
@@ -19,7 +20,8 @@ the recurring exploratory questions that motivated this work.
 
 - `retrieval://catalog-schema`: JSON schema, view columns/types, revisions,
   normalization rules, known issues with counts, and executable examples.
-- `run_sql(query, max_rows=500)`: one read query over the approved views.
+- `query_catalog(query, max_rows=500)`: one read query over the approved views;
+  it is for metadata aggregates, not passage search (`search_corpus`).
 - Both are absent unless `MCP_CATALOG_SQL_ENABLED=true`. This gate applies to
   OAuth, bearer, and local transports; existing tools/routes remain available.
 - No additional `list_authors` tool in this iteration.
@@ -201,7 +203,8 @@ macOS-only verification is insufficient for this SQL authorization boundary.
   protection passed; the existing authenticated Sanchaya client successfully
   called `get_corpus_info` and read `retrieval://catalog-schema`. No fresh Google
   login was performed; this already-open chat's cached tool list needs a refresh
-  before invoking the newly added `run_sql` through that client.
+  before invoking the then-named `run_sql` through that client. The tool is now
+  named `query_catalog` in source; this paragraph records the historical rollout.
 - Active release remains `retrieval-jyotisham-all-080b5f6-inc-722eba369e`.
   Active-release file SHA-256 remains
   `81ba105f0df7f7e448bd686f720b5f8f533c3842874ec3b6648c8cd69843cbb7`;

@@ -62,7 +62,7 @@ class CatalogSQLTests(unittest.TestCase):
         self.before = self.catalog.path.read_bytes()
 
     def query(self, sql, **kwargs):
-        result = self.sql.run_sql(sql, **kwargs)
+        result = self.sql.query_catalog(sql, **kwargs)
         self.assertNotIn("error", result, result)
         return result
 
@@ -157,7 +157,7 @@ class CatalogSQLTests(unittest.TestCase):
         ]
         for sql in attacks:
             with self.subTest(sql=sql):
-                self.assertIn("error", self.sql.run_sql(sql))
+                self.assertIn("error", self.sql.query_catalog(sql))
         self.assertEqual(self.catalog.path.read_bytes(), self.before)
         self.assertEqual(self.query("SELECT COUNT(*) FROM documents_v")["rows"], [[2058]])
 
@@ -180,7 +180,7 @@ class CatalogSQLTests(unittest.TestCase):
         for sql in ("SELECT COUNT(*) FROM _documents", "SELECT COUNT(*) FROM main.\"_documents\"",
                     "WITH documents_v AS (SELECT * FROM [_documents]) SELECT COUNT(*) FROM documents_v"):
             self.assertTrue(_private_identifier(sql))
-            self.assertIn("error", self.sql.run_sql(sql))
+            self.assertIn("error", self.sql.query_catalog(sql))
 
     def test_row_limit_detects_truncation_without_claiming_total(self):
         result = self.query("SELECT document_id FROM documents_v ORDER BY document_id", max_rows=2)
@@ -201,15 +201,15 @@ class CatalogSQLTests(unittest.TestCase):
 
     def test_large_computed_cells_invalid_numbers_and_validation(self):
         # A huge group_concat is bounded inside SQLite, before serialization.
-        result = self.sql.run_sql("SELECT group_concat(title || title || title) FROM documents_v")
+        result = self.sql.query_catalog("SELECT group_concat(title || title || title) FROM documents_v")
         self.assertIn("error", result)
-        self.assertIn("error", self.sql.run_sql("SELECT 1e999"))
+        self.assertIn("error", self.sql.query_catalog("SELECT 1e999"))
         for limit in (0, -1, MAX_ROWS + 1, True, 2.5):
-            self.assertEqual(self.sql.run_sql("SELECT 1", max_rows=limit)["error"]["code"], "invalid_limit")
-        self.assertEqual(self.sql.run_sql("SELECT '" + "अ" * 3000 + "'")["error"]["code"], "invalid_query")
-        self.assertEqual(self.sql.run_sql("SELECT '" + "अ" * 3000 + "'")["sql"], "")
-        self.assertEqual(self.sql.run_sql("\ud800")["error"]["code"], "invalid_query")
-        escaped = self.sql.run_sql("SELECT '" + "\x01" * 8000 + "'")
+            self.assertEqual(self.sql.query_catalog("SELECT 1", max_rows=limit)["error"]["code"], "invalid_limit")
+        self.assertEqual(self.sql.query_catalog("SELECT '" + "अ" * 3000 + "'")["error"]["code"], "invalid_query")
+        self.assertEqual(self.sql.query_catalog("SELECT '" + "अ" * 3000 + "'")["sql"], "")
+        self.assertEqual(self.sql.query_catalog("\ud800")["error"]["code"], "invalid_query")
+        escaped = self.sql.query_catalog("SELECT '" + "\x01" * 8000 + "'")
         self.assertEqual(escaped["error"]["code"], "invalid_query")
         self.assertEqual(escaped["sql"], "")
         self.assertLess(len(json.dumps(mcp_envelope(escaped)).encode()), 64000)
@@ -218,7 +218,7 @@ class CatalogSQLTests(unittest.TestCase):
         self.sql.deadline_seconds = 0.6
         before = {p.pid for p in multiprocessing.active_children()}
         start = time.monotonic()
-        result = self.sql.run_sql("SELECT COUNT(*) FROM documents_v a CROSS JOIN documents_v b "
+        result = self.sql.query_catalog("SELECT COUNT(*) FROM documents_v a CROSS JOIN documents_v b "
                                   "CROSS JOIN documents_v c")
         self.assertEqual(result["error"]["code"], "timeout", result)
         self.assertLess(time.monotonic() - start, 2.0)
@@ -229,17 +229,17 @@ class CatalogSQLTests(unittest.TestCase):
 
     def test_recursive_query_timeout(self):
         self.sql.deadline_seconds = 0.6
-        result = self.sql.run_sql("WITH RECURSIVE x(n) AS (SELECT 1 UNION ALL SELECT n+1 FROM x) "
+        result = self.sql.query_catalog("WITH RECURSIVE x(n) AS (SELECT 1 UNION ALL SELECT n+1 FROM x) "
                                   "SELECT SUM(n) FROM x")
         self.assertEqual(result["error"]["code"], "timeout", result)
 
     def test_rate_limits_identity_isolation_global_cap_and_expiry(self):
         service = CatalogSQLService(self.catalog, per_token_limit=1, global_limit=2)
         # Invalid queries consume quota too, without spawning workers.
-        self.assertEqual(service.run_sql("DROP TABLE x", token_id="a")["error"]["code"], "query_rejected")
-        self.assertEqual(service.run_sql("SELECT 1", token_id="a")["error"]["code"], "rate_limited")
-        self.assertEqual(service.run_sql("DROP TABLE x", token_id="b")["error"]["code"], "query_rejected")
-        self.assertEqual(service.run_sql("SELECT 1", token_id="c")["error"]["code"], "rate_limited")
+        self.assertEqual(service.query_catalog("DROP TABLE x", token_id="a")["error"]["code"], "query_rejected")
+        self.assertEqual(service.query_catalog("SELECT 1", token_id="a")["error"]["code"], "rate_limited")
+        self.assertEqual(service.query_catalog("DROP TABLE x", token_id="b")["error"]["code"], "query_rejected")
+        self.assertEqual(service.query_catalog("SELECT 1", token_id="c")["error"]["code"], "rate_limited")
         with patch("lib.retrieval_catalog_sql.time.monotonic", return_value=time.monotonic() + 61):
             self.assertTrue(service._admit("a"))
 
@@ -247,12 +247,12 @@ class CatalogSQLTests(unittest.TestCase):
         service = CatalogSQLService(self.catalog, concurrency=1)
         service._slots.acquire()
         try:
-            self.assertEqual(service.run_sql("SELECT 1")["error"]["code"], "busy")
+            self.assertEqual(service.query_catalog("SELECT 1")["error"]["code"], "busy")
         finally:
             service._slots.release()
         credential = "private-bearer-value"
         with self.assertLogs("retrieval.catalog_sql", level="INFO") as logs:
-            service.run_sql("SELECT 'unlogged-result'", token_id=token_identifier(credential))
+            service.query_catalog("SELECT 'unlogged-result'", token_id=token_identifier(credential))
         self.assertNotIn(credential, "".join(logs.output))
         logged = json.loads(logs.records[0].message)
         self.assertEqual(set(logged), {"sql", "token_id", "outcome", "elapsed_ms", "row_count"})
@@ -280,14 +280,17 @@ class CatalogSQLMCPTests(unittest.IsolatedAsyncioTestCase):
             server = build_mcp(self.service)
             async with create_connected_server_and_client_session(server) as client:
                 tools = await client.list_tools()
-                self.assertIn("run_sql", {tool.name for tool in tools.tools})
+                self.assertEqual(len(tools.tools), 11)
+                tool_names = {tool.name for tool in tools.tools}
+                self.assertIn("query_catalog", tool_names)
+                self.assertNotIn("run_sql", tool_names)
                 schema_result = await client.read_resource("retrieval://catalog-schema")
                 schema = json.loads(schema_result.contents[0].text)
-                result = await client.call_tool("run_sql", {"query": "SELECT COUNT(*) FROM documents_v"})
+                result = await client.call_tool("query_catalog", {"query": "SELECT COUNT(*) FROM documents_v"})
                 self.assertFalse(result.isError)
                 self.assertEqual(result.structuredContent["rows"], [[46]])
                 self.assertEqual(result.structuredContent["catalog_revision"], schema["catalog_revision"])
-                rejected = await client.call_tool("run_sql", {"query": "SELECT load_extension('bad')"})
+                rejected = await client.call_tool("query_catalog", {"query": "SELECT load_extension('bad')"})
                 self.assertTrue(rejected.isError)
 
     async def test_surface_default_off_and_enabled_schema_examples(self):
@@ -300,16 +303,24 @@ class CatalogSQLMCPTests(unittest.IsolatedAsyncioTestCase):
             server = build_mcp(self.service)
             tools = await server.list_tools()
             self.assertEqual(len(tools), 11)
-            tool = next(t for t in tools if t.name == "run_sql")
+            tool_names = {t.name for t in tools}
+            self.assertNotIn("run_sql", tool_names)
+            tool = next(t for t in tools if t.name == "query_catalog")
             self.assertEqual(set(tool.inputSchema["properties"]), {"query", "max_rows"})
-            self.assertIn("documents_v", tool.description)
+            self.assertEqual(
+                tool.description,
+                "Read-only SQL over the document catalogue (metadata aggregates). "
+                "Not for passage search; use search_corpus.",
+            )
             resources = await server.read_resource("retrieval://catalog-schema")
             schema = json.loads(list(resources)[0].content)
             self.assertIn("known_issues", schema)
+            self.assertEqual(schema["query_tool"]["name"], "query_catalog")
+            self.assertIn("query", schema["query_tool"]["parameters"])
             identity = BEARER_SQL_ID.set(token_identifier("test-token"))
             try:
                 for example in schema["examples"]:
-                    response = await server.call_tool("run_sql", {"query": example["sql"]})
+                    response = await server.call_tool("query_catalog", {"query": example["sql"]})
                     self.assertFalse(response.isError, response)
                     self.assertIn("catalog_revision", response.structuredContent)
                     self.assertEqual(json.loads(response.content[0].text), response.structuredContent)
@@ -343,12 +354,12 @@ class CatalogSQLMCPTests(unittest.IsolatedAsyncioTestCase):
         with patch.dict("os.environ", {"MCP_CATALOG_SQL_ENABLED": "true", "MCP_AUTH_REQUIRED": "true",
                                        "MCP_TRANSPORT": "streamable-http"}):
             server = build_mcp(self.service)
-            response = await server.call_tool("run_sql", {"query": "SELECT 1"})
+            response = await server.call_tool("query_catalog", {"query": "SELECT 1"})
             self.assertTrue(response.isError)
             self.assertEqual(response.structuredContent["error"]["code"], "authentication_required")
         with patch.dict("os.environ", {"MCP_CATALOG_SQL_ENABLED": "true", "MCP_TRANSPORT": "stdio"}):
             server = build_mcp(self.service)
-            response = await server.call_tool("run_sql", {"query": "SELECT 1"})
+            response = await server.call_tool("query_catalog", {"query": "SELECT 1"})
             self.assertEqual(response.structuredContent["rows"], [[1]])
 
     async def test_oauth_verified_identity_and_actual_response_byte_limit(self):
@@ -369,17 +380,17 @@ class CatalogSQLMCPTests(unittest.IsolatedAsyncioTestCase):
             state_store=OAuthStateStore(root / "oauth.sqlite"))
         with patch.dict("os.environ", {"MCP_CATALOG_SQL_ENABLED": "true"}):
             server = build_mcp(self.service, oauth_provider=provider)
-            denied = await server.call_tool("run_sql", {"query": "SELECT 1"})
+            denied = await server.call_tool("query_catalog", {"query": "SELECT 1"})
             self.assertTrue(denied.isError)
             access = AccessToken(token="oauth-private-token", client_id="client", scopes=["mcp"])
             context = auth_context_var.set(AuthenticatedUser(access))
             try:
-                result = await server.call_tool("run_sql", {"query": "SELECT '" + "अ" * 1000 +
+                result = await server.call_tool("query_catalog", {"query": "SELECT '" + "अ" * 1000 +
                                                            "' FROM documents_v", "max_rows": 1000})
                 self.assertFalse(result.isError, result)
                 self.assertTrue(result.structuredContent["truncated"])
                 self.assertLess(len(result.model_dump_json().encode()), 64000)
-                rejected = await server.call_tool("run_sql", {"query": "SELECT * FROM _documents"})
+                rejected = await server.call_tool("query_catalog", {"query": "SELECT * FROM _documents"})
                 self.assertTrue(rejected.isError)
             finally:
                 auth_context_var.reset(context)

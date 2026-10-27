@@ -111,6 +111,7 @@ All tools are read-only and bounded.
 | `search_documents` | Search the complete metadata catalog with filters |
 | `get_author_works` | List cataloged works for an author |
 | `get_corpus_info` | Report release identity and coverage |
+| `query_catalog` (optional) | Read-only SQL for catalogue metadata aggregates; not passage search |
 
 Metadata-first tools avoid repeated search/fetch orchestration for catalog
 questions. Search results return stable references that can be reused by the
@@ -123,6 +124,7 @@ batch fetch tools.
 | `retrieval://ontology-context` | Compact ontology guidance for query planning |
 | `retrieval://release` | Active release identity and lineage |
 | `retrieval://search-guide` | Index coverage, query syntax, script expansion, continuation and linked evidence |
+| `retrieval://catalog-schema` (optional) | Catalogue SQL views, columns, limits, examples and known issues |
 
 ## Result behavior
 

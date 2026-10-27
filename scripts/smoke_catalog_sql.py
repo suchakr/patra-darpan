@@ -37,7 +37,7 @@ def main() -> int:
         }
         results = {}
         for name, query in queries.items():
-            result = service.run_sql(query)
+            result = service.query_catalog(query)
             if "error" in result or result["truncated"]:
                 raise RuntimeError(f"Incomplete {name} smoke result: {result}")
             if len(json.dumps(mcp_envelope(result), ensure_ascii=False, separators=(",", ":")).encode()) >= 64000:

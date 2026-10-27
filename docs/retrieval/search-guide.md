@@ -7,9 +7,10 @@ guide once per conversation; resources need not be reread before every call.
 
 - **Catalog:** `get_author_works`, `search_documents` and batch metadata lookup
   answer document metadata questions. The full catalogue exceeds content coverage.
-  When `run_sql` is advertised, read `retrieval://catalog-schema` and use grouped
-  SQL for catalogue-wide author/year/coverage aggregates; do not aggregate the
-  first 50 `search_documents` results.
+  When `query_catalog` is advertised, read `retrieval://catalog-schema` and use
+  grouped SQL for catalogue-wide author/year/coverage aggregates; do not
+  aggregate the first 50 `search_documents` results. Use `search_corpus` for
+  passage search, not `query_catalog`.
 - **Lexical:** `search_corpus(mode="lexical")` searches the Zoekt-indexed
   Sanchaya corpus, including files outside the release's chunk scope. Its
   `lexical_revision` is independent of the release `corpus_revision`; when
@@ -38,10 +39,12 @@ guide once per conversation; resources need not be reread before every call.
 
 ## Catalogue aggregates (when enabled)
 
-`run_sql(query, max_rows=500)` queries `documents_v`, `authors_v`, `subjects_v`
-and `coverage_v`. The resource `retrieval://catalog-schema` describes their
-columns, counted data issues, restrictions, and examples. These additions are
-absent when the operator has not enabled catalogue SQL.
+`query_catalog(query, max_rows=500)` queries `documents_v`, `authors_v`,
+`subjects_v` and `coverage_v`. It is read-only and limited to catalogue metadata
+aggregates; it cannot search passages. Use `search_corpus` for passage search.
+The resource `retrieval://catalog-schema` describes the tool, view columns,
+counted data issues, restrictions, and examples. These additions are absent
+when the operator has not enabled catalogue SQL.
 
 For example, “Which authors have the most works, and how many have full text?”:
 

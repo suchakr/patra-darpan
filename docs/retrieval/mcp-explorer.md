@@ -17,6 +17,9 @@ its `.html` extension. The page declares that public URL as canonical.
 Four URL-addressable sections: **Overview**, **Explore ontology**, **Connect
 and try**, and **Coverage and limits**. The connection section gives the
 preferred OAuth URL, explains allowlisted access and offers copyable prompts.
+For catalogue-wide metadata aggregates, the MCP surface may also provide the
+read-only `query_catalog` tool and `retrieval://catalog-schema`; passage search
+uses `search_corpus`.
 Coverage is a dated configuration summary, not a live release inventory. Users
 must ask `get_corpus_info` for actual deployed scope/counts. No live health badge,
 embedded chat, mention counts, editing or allowlist administration is included.

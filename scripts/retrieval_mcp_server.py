@@ -131,8 +131,9 @@ def build_mcp(service: RetrievalService, *, oauth_provider: Any | None = None):
             "or source_url, naming the work/paper and location rather than presenting opaque IDs. "
             "Raw Zoekt syntax is supported in lexical mode, including file:Jyo type:filename सूर्य "
             "for filenames of matching files. Generated Sanskrit forms are search hypotheses. "
-            "If run_sql is advertised, use it for catalogue-wide metadata aggregates after reading "
-            "retrieval://catalog-schema. Never total capped search_documents samples."
+            "If query_catalog is advertised, use it for catalogue-wide metadata aggregates after reading "
+            "retrieval://catalog-schema; use search_corpus for passage search. "
+            "Never total capped search_documents samples."
         ),
         host=host,
         port=port,
@@ -153,25 +154,23 @@ def build_mcp(service: RetrievalService, *, oauth_provider: Any | None = None):
 
         @server.resource(
             "retrieval://catalog-schema", name="catalog_schema",
-            description="Approved catalogue SQL views, columns, revisions, examples and counted metadata limitations.",
+            description=(
+                "The query_catalog contract, approved catalogue SQL views, columns, limits, "
+                "examples and counted metadata limitations."
+            ),
             mime_type="application/json",
         )
         def catalog_schema() -> str:
             return json.dumps(sql_service.schema(), ensure_ascii=False)
 
         @server.tool(
-            name="run_sql",
+            name="query_catalog",
             description=(
-                "Read-only metadata aggregates over documents_v, authors_v, subjects_v, coverage_v. "
-                "Read retrieval://catalog-schema first for columns and missing-data caveats. "
-                "Example: SELECT year, COUNT(*) AS records FROM documents_v "
-                "WHERE source_kind='patra-darpan' GROUP BY year ORDER BY year. "
-                "One SELECT (WITH allowed); 5-second deadline; default 500, maximum 1000 rows; "
-                "response under 64000 bytes. Returns SQL and revisions. Check truncated; "
-                "catalogue records are not necessarily papers, and subjects/authors are incomplete."
+                "Read-only SQL over the document catalogue (metadata aggregates). "
+                "Not for passage search; use search_corpus."
             ),
         )
-        async def run_sql(query: str, max_rows: int = 500) -> Any:
+        async def query_catalog(query: str, max_rows: int = 500) -> Any:
             import anyio
             from mcp.server.auth.middleware.auth_context import get_access_token
 
@@ -188,7 +187,7 @@ def build_mcp(service: RetrievalService, *, oauth_provider: Any | None = None):
                                                  "message": "Catalogue SQL requires an authenticated request."}},
                 )
             result = await anyio.to_thread.run_sync(
-                sql_service.run_sql, query, max_rows, identity or "local",
+                sql_service.query_catalog, query, max_rows, identity or "local",
             )
             return CallToolResult(**mcp_envelope(result))
 

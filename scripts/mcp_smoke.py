@@ -47,10 +47,11 @@ async def run(args: argparse.Namespace) -> int:
                 tools = await session.list_tools()
                 resources = await session.list_resources()
                 if getattr(args, "catalog_sql", False):
-                    assert "run_sql" in {tool.name for tool in tools.tools}, "Catalogue SQL is not enabled"
+                    tool_names = {tool.name for tool in tools.tools}
+                    assert "query_catalog" in tool_names, "Catalogue SQL is not enabled"
                     schema_result = await session.read_resource("retrieval://catalog-schema")
                     schema = json.loads(next(item.text for item in schema_result.contents if getattr(item, "text", None)))
-                    result = await session.call_tool("run_sql", {"query":
+                    result = await session.call_tool("query_catalog", {"query":
                         "SELECT SUM(document_count) AS catalogued, "
                         "SUM(CASE WHEN indexed_in_release=1 THEN document_count ELSE 0 END) AS indexed "
                         "FROM coverage_v"})
