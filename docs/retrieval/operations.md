@@ -40,6 +40,21 @@ the builder's ontology input as part of a runtime-only activation.
 
 Secrets and the live allowlist remain outside Git.
 
+## Production storage
+
+On the Azure production VM, persistent Docker and service data belongs under
+`/srv/docker-data` on the persistent OS disk. Do not use `/mnt` for persistent
+data on this VM: it is the temporary Azure resource disk and may be lost when
+the VM is deallocated or re-provisioned.
+
+The active production paths are in the host-only
+`/etc/patra-darpan/retrieval.env`. Git pulls do not update that file; the
+tracked `retrieval.env.prod.example` is only a first-time template. During a
+storage migration, update the existing host file deliberately, preserving its
+secrets and non-path settings, and verify the resolved Compose configuration
+before recreating services. The Docker daemon's `data-root` is configured
+separately in `/etc/docker/daemon.json`.
+
 ## First complete build
 
 ```bash
