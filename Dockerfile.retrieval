@@ -14,6 +14,10 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 
 WORKDIR /app
 
+# Exact package constraints captured from production image
+# d8c34f792efe71642008c48272c7153d450d4f02e5f749c800c1aeab6276cd38.
+COPY retrieval-runtime.constraints.txt /tmp/retrieval-runtime.constraints.txt
+
 # sentence-transformers is needed at query time to embed vector-search
 # questions. qdrant-client talks to the separate Qdrant service; requests is
 # used by the Zoekt adapter. The x86 production host has no CUDA runtime, so
@@ -21,16 +25,24 @@ WORKDIR /app
 # NVIDIA libraries. Keep the generic package on other architectures, including
 # the ARM64 development container.
 ARG TARGETARCH
-RUN arch="${TARGETARCH}"; \
+RUN set -eux; \
+    arch="${TARGETARCH}"; \
     if [ -z "$arch" ]; then arch="$(dpkg --print-architecture)"; fi; \
+    python -m pip install --no-cache-dir \
+      --constraint /tmp/retrieval-runtime.constraints.txt \
+      "pip==25.0.1" "setuptools==84.2.1"; \
     if [ "$arch" = "amd64" ]; then \
       python -m pip install --no-cache-dir \
+        --constraint /tmp/retrieval-runtime.constraints.txt \
         --extra-index-url https://download.pytorch.org/whl/cpu \
         "torch==2.5.1+cpu"; \
     else \
-      python -m pip install --no-cache-dir "torch==2.5.1"; \
+      python -m pip install --no-cache-dir \
+        --constraint /tmp/retrieval-runtime.constraints.txt \
+        "torch==2.5.1"; \
     fi \
     && python -m pip install --no-cache-dir \
+      --constraint /tmp/retrieval-runtime.constraints.txt \
       "mcp==1.30.0" \
       "qdrant-client==1.14.1" \
       "sentence-transformers==3.4.1" \
